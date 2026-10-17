@@ -1,0 +1,32 @@
+# 协议模板：没有实现绑定，不可视为已经可以运行的训练配置。
+status: draft_requires_team_review
+dataset: sleep_edf_expanded_sc
+channels:
+  eeg: EEG Fpz-Cz
+  eog: EOG horizontal
+baseline_sfreq_hz: 100
+epoch_seconds: 30
+labels: {W: 0, N1: 1, N2: 2, N3: 3, REM: 4}
+split:
+  unit: subject
+  proportions: [0.70, 0.10, 0.20]
+  seed: null # A确认并写入真实划分
+  manifest: manifests/split_subjects.csv
+preprocessing:
+  wake_margin_minutes: 30
+  sleep_boundary_definition: null # A明确首次/末次睡眠与边界处理
+  merge_stage_3_4: true
+  exclude: [Movement, Unknown]
+  normalization_fit_split: train
+training:
+  seed: null
+  label_subject_fraction: 1.0
+  sampling_seed: null
+  checkpoint_selection: val_macro_f1
+analysis_split: val
+test_policy: held_out_in_week1
+eegdm:
+  freeze_backbone: true
+  input_adapter: null # C核对官方实现后填写，不沿用CNN归一化假设
+  channel_condition: null
+  checkpoint_hash: null
