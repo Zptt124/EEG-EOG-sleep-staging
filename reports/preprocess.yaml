@@ -1,0 +1,36 @@
+version: v1
+author: A (实验①)
+channel:
+  eeg: EEG Fpz-Cz
+  eog: EOG horizontal
+  order:
+  - eeg
+  - eog
+sfreq: 100
+epoch_sec: 30
+hypnogram_note: SC hypnograms are variable-length R&K stage runs over 24 h; runs are
+  expanded onto a 30-s grid, epoch k = [30k, 30k+30) s
+trim:
+  before_sleep_onset_min: 30
+  after_final_wake_min: 30
+  sleep_onset: first grid epoch with stage 1/2/3/4/R
+  final_wake: last grid epoch with stage 1/2/3/4/R
+label_map:
+  W: 0
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 3
+  R: 4
+label_order:
+- W
+- N1
+- N2
+- N3
+- REM
+drop_stages:
+- '?'
+- M
+normalization: per-channel z-score, mean/std computed on TRAIN subjects only
+sample_id: record_id + '_' + 4-digit grid epoch index k (0-based)
+note: 3/4 merged into N3; Movement and Unknown epochs dropped entirely
