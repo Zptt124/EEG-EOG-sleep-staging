@@ -1,0 +1,40 @@
+run_id: E1_EOG_label100_seed0_v01
+experiment: E1
+owner: A
+model: SmallCNN (team-doc reference structure)
+channel: eog
+channel_name: EOG horizontal
+n_classes: 5
+input_points: 3000
+lr: 0.001
+batch_size: 128
+epochs: 60
+seed: 0
+device: cuda
+label_frac: 1.0
+code_version: v01
+normalization:
+  method: z-score
+  mean: -2.5959880352020264
+  std: 49.51515579223633
+  computed_on: train subjects only
+n_train_epochs: 132938
+n_val_epochs: 21186
+train_class_counts:
+  W: 43474
+  N1: 14445
+  N2: 47294
+  N3: 9111
+  REM: 18614
+val_class_counts:
+  W: 7456
+  N1: 2623
+  N2: 7735
+  N3: 1101
+  REM: 2271
+torch: 2.13.0+cu126
+cuda: NVIDIA GeForce RTX 4060 Laptop GPU
+early_stopping:
+  monitor: val_macro_f1
+  patience: 10
+epochs_run: 21
