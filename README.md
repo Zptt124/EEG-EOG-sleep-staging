@@ -2,7 +2,7 @@
 
 第一周协作仓库：少标注基线、EEGDM 扩散表征迁移与跨模态融合。
 
-**当前状态：A 的数据管线与两个小 CNN 基线已在分支 `feat/a-data-baseline` 落地**（EEG/EOG 验证集 Macro-F1 0.7645 / 0.6827，暂用 A 临时评估脚本，待 B 官方 evaluate.py 复核；详见 `reports/run_index.md` 与 `reports/结果报告.md`）。B/C/D 的实现与真实成绩尚未提交。
+**当前状态：A 的数据管线与两个小 CNN 基线已在分支 `feat/a-data-baseline` 落地**（EEG/EOG 验证集 Macro-F1 0.7645 / 0.6827，暂用 A 临时评估脚本，待 B 官方 evaluate.py 复核；详见 `reports/run_index.md` 与 `reports/结果报告.md`）。B 的官方 evaluate.py、25% 名单与 25% 少标注 CNN 结果在分支 `feat/b-evaluation`(见 `reports/b_week1_review.md`);C/D 尚未提交。
 
 ## 第一周目标与分工
 

@@ -1,0 +1,67 @@
+run_id: E2_EOG_label25_sseed2024_seed0_v01
+experiment: E2
+owner: B
+model: SmallCNN (team-doc reference structure, A's 05_train_cnn.SmallCNN)
+channel: eog
+channel_name: EOG horizontal
+n_classes: 5
+input_points: 3000
+lr: 0.001
+batch_size: 128
+epochs: 60
+early_stopping:
+  monitor: val_macro_f1
+  patience: 10
+seed: 0
+device: mps
+label_frac: 0.25
+label_budget:
+  unit: subject
+  list_file: manifests/label_subsets_v1.csv
+  column: label25
+  sampling_seed: 2024
+  n_labeled_subjects: 14
+  n_labeled_records: 27
+  labeled_subjects:
+  - SC456
+  - SC421
+  - SC474
+  - SC412
+  - SC403
+  - SC417
+  - SC419
+  - SC436
+  - SC455
+  - SC451
+  - SC429
+  - SC415
+  - SC410
+  - SC427
+  n_unlabeled_train_subjects: 40
+  unlabeled_train_subjects_used: false
+depends_on_run_ids:
+- E1_EOG_label100_seed0_v01
+code_version: v01
+evaluate_version: v1
+normalization:
+  method: z-score
+  mean: -0.6255205869674683
+  std: 40.96424865722656
+  computed_on: labeled train subjects only
+n_train_epochs: 32310
+n_val_epochs: 21186
+train_class_counts:
+  W: 9033
+  N1: 3480
+  N2: 12425
+  N3: 2197
+  REM: 5175
+val_class_counts:
+  W: 7456
+  N1: 2623
+  N2: 7735
+  N3: 1101
+  REM: 2271
+torch: 2.14.1
+accelerator: mps
+epochs_run: 16
