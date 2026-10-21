@@ -14,7 +14,7 @@
 
 补充:另跑抽样种子 2025/2026 的 25% 重复(名单 `label_subsets_v1-s2025/s2026.csv`),仅用于估计名单抽样波动,**主结果是种子 2024**。
 
-## run_id 与预测表(逐段预测 21,186 行,格式同模板;完整 run 在本地 `runs/`,不入库)
+## run_id 与预测表(逐段预测 21,186 行,格式同模板;预测表在 `reports/predictions_E2/`;完整 run 在本地 `runs/`,不入库)
 | run_id | val Macro-F1 | best epoch / 跑了 | predictions_val.csv sha256 |
 |---|---|---|---|
 | E2_EEG_label25_sseed2024_seed0_v01 | 0.7171 | 13 / 23 | `933ce4ea2144a06f8c9479a3dc4cb07a59a4315369f8091b7eb547c6246c60aa` |
