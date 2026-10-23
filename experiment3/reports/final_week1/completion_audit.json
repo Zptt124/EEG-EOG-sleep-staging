@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "scope": "C week1 EEG-only experiment",
+  "completed_runs": [
+    "E3_EEG_label100_seed0_provisional_v01",
+    "E3_EEG_label100_seed0_timeflatten_v01",
+    "E3_EEG_label25_sseed2024_seed0_v01",
+    "E3_EEG_label25_sseed2025_seed0_v01",
+    "E3_EEG_label25_sseed2026_seed0_v01"
+  ],
+  "official_evaluator": "B v1",
+  "adapter_checks_passed": true,
+  "test_used": false,
+  "external_delivery_confirmed": false,
+  "d_eog_and_fusion_not_part_of_c_scope": true
+}

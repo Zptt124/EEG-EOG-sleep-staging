@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "b_branch": "feat/b-evaluation",
+  "b_commit": "6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923",
+  "split_matches_A": true,
+  "label100_matches_previous_E3": true,
+  "subsets": {
+    "2024": {
+      "subjects": [
+        "SC403",
+        "SC410",
+        "SC412",
+        "SC415",
+        "SC417",
+        "SC419",
+        "SC421",
+        "SC427",
+        "SC429",
+        "SC436",
+        "SC451",
+        "SC455",
+        "SC456",
+        "SC474"
+      ],
+      "records": 27,
+      "samples": 32310,
+      "class_counts": {
+        "0": 9033,
+        "1": 3480,
+        "2": 12425,
+        "3": 2197,
+        "4": 5175
+      },
+      "manifest": "label_subsets_v1.csv",
+      "sha256": "cd5e7f5b46256bd01ddc39dee204043fa013e8c26c1384b5f5a40ca6d84416ce"
+    },
+    "2025": {
+      "subjects": [
+        "SC400",
+        "SC403",
+        "SC414",
+        "SC419",
+        "SC425",
+        "SC427",
+        "SC428",
+        "SC430",
+        "SC431",
+        "SC449",
+        "SC451",
+        "SC459",
+        "SC470",
+        "SC476"
+      ],
+      "records": 28,
+      "samples": 33775,
+      "class_counts": {
+        "0": 10377,
+        "1": 3387,
+        "2": 12224,
+        "3": 2701,
+        "4": 5086
+      },
+      "manifest": "label_subsets_v1-s2025.csv",
+      "sha256": "f499c1602e65a1cc9d1130e4475b2d5d95dd201244f472a503d53191fb02a0c1"
+    },
+    "2026": {
+      "subjects": [
+        "SC403",
+        "SC410",
+        "SC411",
+        "SC414",
+        "SC415",
+        "SC418",
+        "SC423",
+        "SC441",
+        "SC450",
+        "SC452",
+        "SC465",
+        "SC470",
+        "SC476",
+        "SC477"
+      ],
+      "records": 27,
+      "samples": 35203,
+      "class_counts": {
+        "0": 12777,
+        "1": 3157,
+        "2": 12051,
+        "3": 2470,
+        "4": 4748
+      },
+      "manifest": "label_subsets_v1-s2026.csv",
+      "sha256": "cce7c8145722418390d6abc2d634a83d2aaf6d0c83699124ec1bccf13c5e6d39"
+    }
+  },
+  "evaluator_sha256": "4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605",
+  "test_used": false
+}

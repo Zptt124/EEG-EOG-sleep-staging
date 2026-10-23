@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "index_rows": 154124,
+  "feature_shapes_checked": 122,
+  "validation_rows": 21186,
+  "split_subjects": {
+    "train": 54,
+    "val": 8,
+    "test": 16
+  },
+  "probabilities": {
+    "A": {
+      "max_sum_error": 2.0000000001685336e-06,
+      "argmax_matches": true
+    },
+    "E3": {
+      "max_sum_error": 2.2503186869471392e-07,
+      "argmax_matches": true
+    }
+  },
+  "all_validation_predictions_reproduced": true,
+  "max_probability_reproduction_error": 0.0,
+  "best_epoch": 37,
+  "metrics_recalculated_match": true,
+  "test_arrays_read": false,
+  "scope": "Checks local delivered artifacts and E3 validation replay; does not retrain A or independently re-extract backbone features."
+}

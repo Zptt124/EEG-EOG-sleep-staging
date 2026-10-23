@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "commit": "02f120ee80c1c7a7822c33746ce92017632f1faa",
+  "subject_counts": {
+    "train": 54,
+    "test": 16,
+    "val": 8
+  },
+  "record_count": 153,
+  "epoch_counts": {
+    "train": 132938,
+    "val": 21186
+  },
+  "training_sample": {
+    "record": "SC4001",
+    "split": "train",
+    "shape": [
+      841,
+      2,
+      3000
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "eeg_std_uv": 23.02145767211914
+  },
+  "prediction_checks": {
+    "EEG": {
+      "rows": 21186,
+      "sample_ids_and_labels_match": true,
+      "probabilities_valid": true,
+      "columns": [
+        "sample_id",
+        "subject_id",
+        "record_id",
+        "epoch_index",
+        "y_true",
+        "y_pred",
+        "p_W",
+        "p_N1",
+        "p_N2",
+        "p_N3",
+        "p_REM"
+      ]
+    },
+    "EOG": {
+      "rows": 21186,
+      "sample_ids_and_labels_match": true,
+      "probabilities_valid": true,
+      "columns": [
+        "sample_id",
+        "subject_id",
+        "record_id",
+        "epoch_index",
+        "y_true",
+        "y_pred",
+        "p_W",
+        "p_N1",
+        "p_N2",
+        "p_N3",
+        "p_REM"
+      ]
+    }
+  },
+  "test_arrays_opened": false,
+  "scope": "All train/val label/index arrays; signal values checked for SC4001 only. No baseline retraining."
+}

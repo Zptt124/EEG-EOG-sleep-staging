@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "samples": 21186,
+  "raw_feature_replay": true,
+  "max_probability_error": 0.0,
+  "same_configuration_fields": [
+    "seed",
+    "training_subjects",
+    "validation_subjects",
+    "optimizer",
+    "lr",
+    "weight_decay",
+    "batch_size",
+    "max_epochs",
+    "patience",
+    "selection",
+    "feature_config"
+  ],
+  "mean_macro_f1": 0.7496527764439526,
+  "flatten_macro_f1": 0.6841545755909013,
+  "A_macro_f1": 0.7644795632702338,
+  "flatten_minus_mean_pp": -6.549820085305125,
+  "test_used": false
+}

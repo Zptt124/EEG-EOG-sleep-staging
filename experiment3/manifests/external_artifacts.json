@@ -1,0 +1,522 @@
+{
+  "full_feature_records": 122,
+  "feature_samples": 154124,
+  "external_files": [
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4001.npy",
+      "bytes": 129177728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4002.npy",
+      "bytes": 173107328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4011.npy",
+      "bytes": 169420928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4012.npy",
+      "bytes": 182169728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4021.npy",
+      "bytes": 157440128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4022.npy",
+      "bytes": 154982528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4031.npy",
+      "bytes": 146227328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4032.npy",
+      "bytes": 139929728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4061.npy",
+      "bytes": 129484928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4062.npy",
+      "bytes": 156057728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4081.npy",
+      "bytes": 174182528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4082.npy",
+      "bytes": 161894528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4091.npy",
+      "bytes": 173875328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4092.npy",
+      "bytes": 169574528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4101.npy",
+      "bytes": 169574528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4102.npy",
+      "bytes": 167731328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4111.npy",
+      "bytes": 142540928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4112.npy",
+      "bytes": 123187328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4121.npy",
+      "bytes": 161587328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4122.npy",
+      "bytes": 150067328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4141.npy",
+      "bytes": 154214528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4142.npy",
+      "bytes": 146227328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4151.npy",
+      "bytes": 146227328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4152.npy",
+      "bytes": 270643328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4161.npy",
+      "bytes": 175718528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4162.npy",
+      "bytes": 154060928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4171.npy",
+      "bytes": 153907328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4172.npy",
+      "bytes": 272332928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4181.npy",
+      "bytes": 148070528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4182.npy",
+      "bytes": 141312128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4191.npy",
+      "bytes": 235776128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4192.npy",
+      "bytes": 195686528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4211.npy",
+      "bytes": 242380928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4212.npy",
+      "bytes": 124108928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4221.npy",
+      "bytes": 168806528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4222.npy",
+      "bytes": 170188928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4231.npy",
+      "bytes": 138854528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4232.npy",
+      "bytes": 265574528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4251.npy",
+      "bytes": 149299328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4252.npy",
+      "bytes": 156672128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4271.npy",
+      "bytes": 161587328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4272.npy",
+      "bytes": 167424128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4281.npy",
+      "bytes": 173107328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4282.npy",
+      "bytes": 164352128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4291.npy",
+      "bytes": 173721728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4292.npy",
+      "bytes": 246528128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4301.npy",
+      "bytes": 142694528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4302.npy",
+      "bytes": 131174528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4311.npy",
+      "bytes": 161894528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4312.npy",
+      "bytes": 181401728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4321.npy",
+      "bytes": 239616128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4322.npy",
+      "bytes": 156825728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4331.npy",
+      "bytes": 289996928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4332.npy",
+      "bytes": 201523328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4341.npy",
+      "bytes": 230553728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4342.npy",
+      "bytes": 242995328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4351.npy",
+      "bytes": 149913728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4352.npy",
+      "bytes": 147916928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4362.npy",
+      "bytes": 126566528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4401.npy",
+      "bytes": 163430528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4402.npy",
+      "bytes": 164659328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4411.npy",
+      "bytes": 165580928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4412.npy",
+      "bytes": 141926528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4421.npy",
+      "bytes": 120576128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4422.npy",
+      "bytes": 135782528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4431.npy",
+      "bytes": 107366528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4432.npy",
+      "bytes": 147763328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4441.npy",
+      "bytes": 183552128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4442.npy",
+      "bytes": 167731328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4481.npy",
+      "bytes": 311347328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4482.npy",
+      "bytes": 293376128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4491.npy",
+      "bytes": 169113728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4492.npy",
+      "bytes": 159744128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4501.npy",
+      "bytes": 203673728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4502.npy",
+      "bytes": 169420928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4511.npy",
+      "bytes": 166963328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4512.npy",
+      "bytes": 146534528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4522.npy",
+      "bytes": 153139328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4531.npy",
+      "bytes": 168345728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4532.npy",
+      "bytes": 162201728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4551.npy",
+      "bytes": 160819328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4552.npy",
+      "bytes": 167424128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4561.npy",
+      "bytes": 190003328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4562.npy",
+      "bytes": 176332928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4571.npy",
+      "bytes": 188467328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4572.npy",
+      "bytes": 168192128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4591.npy",
+      "bytes": 282624128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4592.npy",
+      "bytes": 189081728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4611.npy",
+      "bytes": 253747328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4612.npy",
+      "bytes": 163123328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4621.npy",
+      "bytes": 221952128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4622.npy",
+      "bytes": 280012928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4631.npy",
+      "bytes": 163276928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4632.npy",
+      "bytes": 170035328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4651.npy",
+      "bytes": 406118528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4652.npy",
+      "bytes": 296294528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4661.npy",
+      "bytes": 311193728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4662.npy",
+      "bytes": 306278528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4671.npy",
+      "bytes": 302284928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4672.npy",
+      "bytes": 156825728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4701.npy",
+      "bytes": 263731328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4702.npy",
+      "bytes": 232704128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4711.npy",
+      "bytes": 217036928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4712.npy",
+      "bytes": 190617728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4721.npy",
+      "bytes": 158361728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4722.npy",
+      "bytes": 173568128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4731.npy",
+      "bytes": 409651328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4732.npy",
+      "bytes": 356044928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4741.npy",
+      "bytes": 339456128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4742.npy",
+      "bytes": 163276928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4751.npy",
+      "bytes": 313958528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4752.npy",
+      "bytes": 161126528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4761.npy",
+      "bytes": 258508928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4762.npy",
+      "bytes": 408883328
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4771.npy",
+      "bytes": 203520128
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4772.npy",
+      "bytes": 203366528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4801.npy",
+      "bytes": 190617728
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4802.npy",
+      "bytes": 188774528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4811.npy",
+      "bytes": 198604928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4812.npy",
+      "bytes": 181708928
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4821.npy",
+      "bytes": 261734528
+    },
+    {
+      "relative_path": "features/eeg_cond14_v01/SC4822.npy",
+      "bytes": 209817728
+    },
+    {
+      "relative_path": "runs/E3_EEG_label100_seed0_provisional_v01/best_head.pt",
+      "bytes": 76593,
+      "sha256": "6f96e07ac74a0c230b7e8e6cd7a7557797f50442d15ee19bf8df37cf640b4a1d"
+    },
+    {
+      "relative_path": "runs/E3_EEG_label100_seed0_timeflatten_v01/best_head.pt",
+      "bytes": 2155633,
+      "sha256": "305fe3f352313ba0b1a58e11aba0537ea41b6416a77220329ea252ddf03a63b0"
+    },
+    {
+      "relative_path": "runs/E3_EEG_label25_sseed2024_seed0_v01/best_head.pt",
+      "bytes": 76401,
+      "sha256": "23151b0dd1df95ee231cea779ce9c76579e108007d94ef83734a9a7d34a8de7c"
+    },
+    {
+      "relative_path": "runs/E3_EEG_label25_sseed2025_seed0_v01/best_head.pt",
+      "bytes": 76401,
+      "sha256": "f1a1bdc29cf48b706b4c6d86d71df9e63f6b512b0eb4f24a9115ad6f20e3f0db"
+    },
+    {
+      "relative_path": "runs/E3_EEG_label25_sseed2026_seed0_v01/best_head.pt",
+      "bytes": 76401,
+      "sha256": "90ed6a1c9de56df8e9366b53e47612ed173b44347d0a3f5d237808eececf96bf"
+    }
+  ],
+  "full_package_label": "实验3_交付给D_20261020",
+  "supplement_package_label": "实验3_最终补充交付_20261023",
+  "transfer": "Use the team-authorized shared storage or request the packages from C; no share URL has been published."
+}

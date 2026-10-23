@@ -2,6 +2,8 @@
 
 第一周协作仓库：少标注基线、EEGDM 扩散表征迁移与跨模态融合。
 
+**2026-10-23 C最新交付：** 实验③已完成冻结EEGDM输入适配、100%与三份25%名单分类、统一评估和复盘。入口见[实验③说明](experiment3/README.md)，完整验证预测见[预测目录](experiment3/reports/predictions_E3)。B的评估与名单来自`feat/b-evaluation`固定版本，复现准备脚本支持在该分支尚未合并时获取依赖。下方最初状态段落保留作历史记录。
+
 **当前状态：A 的数据管线与两个小 CNN 基线已在分支 `feat/a-data-baseline` 落地**（EEG/EOG 验证集 Macro-F1 0.7645 / 0.6827，暂用 A 临时评估脚本，待 B 官方 evaluate.py 复核；详见 `reports/run_index.md` 与 `reports/结果报告.md`）。B/C/D 的实现与真实成绩尚未提交。
 
 ## 第一周目标与分工

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "provisional": true,
+  "test_used": false,
+  "train_samples": 132938,
+  "val_samples": 21186,
+  "best_epoch": 6,
+  "val_macro_f1": 0.6841545755909013,
+  "epochs": 16,
+  "training_seconds": 9951.825079775997,
+  "parameter_count": 384005
+}

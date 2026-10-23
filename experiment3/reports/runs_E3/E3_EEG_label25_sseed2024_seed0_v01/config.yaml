@@ -1,0 +1,109 @@
+seed: 0
+sampling_seed: 2024
+label_fraction: 0.25
+training_subjects:
+- SC403
+- SC410
+- SC412
+- SC415
+- SC417
+- SC419
+- SC421
+- SC427
+- SC429
+- SC436
+- SC451
+- SC455
+- SC456
+- SC474
+validation_subjects:
+- SC406
+- SC409
+- SC442
+- SC448
+- SC462
+- SC471
+- SC475
+- SC480
+pooling: mean over 30 time windows, flatten layer/hidden
+input_dim: 2560
+classifier: single affine Linear(2560,5), no hidden layer
+normalization: per-feature mean/std fitted on training only; floor std 1e-6
+optimizer: AdamW
+lr: 0.001
+weight_decay: 0.0001
+batch_size: 128
+max_epochs: 50
+patience: 10
+selection: highest validation macro-F1
+evaluation: B official v1
+b_commit: 6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923
+label_manifest: vendor/experiment2-review-6e7df99/manifests/label_subsets_v1.csv
+train_samples: 32310
+train_class_counts:
+  '0': 9033
+  '1': 3480
+  '2': 12425
+  '3': 2197
+  '4': 5175
+unlabeled_subjects_used: false
+test_used: false
+backbone_frozen: true
+device: cpu
+feature_config:
+  version: E3_features_v01
+  upstream_commit: 003b5a2a016b2f02788ea5693d8b7cd00b6bd969
+  source_commit: 02f120ee80c1c7a7822c33746ce92017632f1faa
+  checkpoint_sha256: 0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef
+  modality: eeg
+  source_unit: uV
+  source_fs: 100
+  target_fs: 200
+  resampling: scipy.signal.resample_poly(up=2,down=1), default filter
+  amplitude: uV / 100 then official staged_mu_law(mu=255), once
+  z_score: false
+  condition: 14
+  diffusion_t: 1
+  random_noise: false
+  query: gate
+  layers:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  reduction: std, torch correction=1
+  window_points: 200
+  stride_points: 200
+  length_points: 6000
+  internal_segments: 6
+  continuous_30s_context: false
+  axes:
+  - sample
+  - layer
+  - time_window
+  - hidden
+  feature_shape:
+  - 20
+  - 30
+  - 128
+  computation_dtype: float32
+  storage_dtype: float16
+  seed: 0
+original_config: run_config.json (preserved historical record)
+checkpoint_alias: best.ckpt is a byte-identical copy of best_head.pt

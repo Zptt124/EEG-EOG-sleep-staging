@@ -1,0 +1,10 @@
+vendor/
+data/
+features/
+checkpoints/
+runs/
+cache/
+.venv/
+__pycache__/
+*.py[cod]
+*.log

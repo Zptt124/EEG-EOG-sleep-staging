@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "evaluation": "B official v1",
+  "test_used": false,
+  "sampling_seed": 2026,
+  "training_subjects": 14,
+  "train_samples": 35203,
+  "val_samples": 21186,
+  "best_epoch": 6,
+  "val_macro_f1": 0.7207463164832717,
+  "training_seconds": 7.974346423000043
+}
