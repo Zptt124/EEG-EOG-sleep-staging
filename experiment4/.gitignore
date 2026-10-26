@@ -1,0 +1,8 @@
+   # 本地工作文件夹：prepare_inputs.py 和分析脚本在这里读写，不入库
+   real_data/
+   # 本地特征、运行和权重，不入库（见 manifests/external_artifacts.md）
+   features/
+   runs/
+   *.pt
+   __pycache__/
+   *.py[cod]
