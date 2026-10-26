@@ -1,0 +1,9 @@
+reference,category,count,denominator,percentage
+EEG,hurt(帮倒忙),979,21186,4.62
+EEG,helped(帮了忙),1160,21186,5.48
+EEG,both_correct(没变-都对),16356,21186,77.2
+EEG,both_wrong(没变-都错),2691,21186,12.7
+EOG,hurt(帮倒忙),354,21186,1.67
+EOG,helped(帮了忙),1431,21186,6.75
+EOG,both_correct(没变-都对),16085,21186,75.92
+EOG,both_wrong(没变-都错),3316,21186,15.65
