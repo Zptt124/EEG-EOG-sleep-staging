@@ -11,6 +11,5 @@
 | 基础 | C | EEGDM提取脚本、输入设置 | D | 待验证 |
 | 结果 | A/B/C | 逐段验证预测、指标、run_id | D | ✅ A部分:run_id `E1_EEG_label100_seed0_v01` / `E1_EOG_label100_seed0_v01`;预测表在交付包`3_验证集预测_给D\`(sha256见 `reports/run_index.md`);指标 `reports/metrics_E1_*.json` |
 | 结果 | C | EEG特征索引与存储位置 | D | 待提取 |
-| 复盘 | D | 融合、N1分析与假设 | 全组 | 待真实结果 |
-
+| 复盘 | D | 融合、N1分析与假设 | 全组 | ✅ 分支 `feat/d-fusion`,`experiment4/`:融合配置 `configs/fusion_config.yaml`、假设 `reports/hypotheses.md`、翻转统计与全组N1对比、官方评估与按人统计;D的9份验证集预测在 `reports/predictions_E4/`,运行编号见 `reports/run_index.csv`;EOG特征23.67GB不入库,见 `manifests/external_artifacts.md` |
 受试者CSV中多条record_ids建议用分号连接，整字段按CSV规则转义。划分和预测模板只包含表头，禁止当作真实数据。
