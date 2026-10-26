@@ -1,0 +1,16 @@
+﻿model,owner,run_id,prediction_file,labels,training_seed,description,macro_F1_official,macro_F1_95CI,N1_F1_official
+CNN_EEG,A,E1_EEG_label100_seed0_v01,main: 交付包/实验①交付包_20261018/3_验证集预测_给D/predictions_val_EEG.csv,100%,0,小 CNN，只用 EEG,0.7645,"[0.7205, 0.7893]",0.4561
+CNN_EOG,A,E1_EOG_label100_seed0_v01,main: 交付包/实验①交付包_20261018/3_验证集预测_给D/predictions_val_EOG.csv,100%,0,小 CNN，只用 EOG,0.6827,"[0.594, 0.7427]",0.3002
+CNN_fused_avg,D,E4_CNN_fusedavg_label100_seed0_v01,experiment4/reports/predictions_E4/predictions_val_E4_CNN_fusedavg_label100_seed0_v01.csv,100%,0,A 的两个 CNN 概率等权平均,0.7557,"[0.697, 0.7949]",0.3878
+EEGDM_EEG_cond14,C,E3_EEG_label100_seed0_provisional_v01,feat/c-eegdm: experiment3/reports/predictions_E3/predictions_val_E3_EEG_label100_seed0_provisional_v01.csv,100%,0,冻结 EEGDM + 线性头，只用 EEG,0.7497,"[0.6954, 0.7876]",0.4668
+EEGDM_EOG_cond14,D,D_EOG_label100_seed0_cond14_v01,experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond14_label100_seed0_v01.csv,100%,0,冻结 EEGDM + 线性头，只用 EOG（条件 14）,0.6835,"[0.6023, 0.7343]",0.3775
+EEGDM_EOG_cond10,D,D_EOG_label100_seed0_cond10_v01,experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond10_label100_seed0_v01.csv,100%,0,同上，条件 10（对照，不进主表）,,,
+EEGDM_fused_avg_cond14,D,E4_EEGDM_fusedavg_cond14_label100_seed0_v01,experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_fusedavg_cond14_label100_seed0_v01.csv,100%,0,C 的 EEG 头 + D 的 EOG 头，概率等权平均,0.7641,"[0.7004, 0.8065]",0.4561
+EEGDM_EEGEOG_cond14,D,D_EEGEOG_label100_seed0_cond14_v01,experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_EEGEOG_cond14_label100_seed0_v01.csv,100%,0,EEG、EOG 特征拼接（5120 维）+ 线性头,0.7766,"[0.7297, 0.805]",0.4913
+CNN_EEG_label25,B,E2_EEG_label25_sseed2024_seed0_v01,feat/b-evaluation: reports/predictions_E2/predictions_val_E2_EEG_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,小 CNN，只用 EEG,0.7171,"[0.6664, 0.7459]",0.3844
+CNN_EOG_label25,B,E2_EOG_label25_sseed2024_seed0_v01,feat/b-evaluation: reports/predictions_E2/predictions_val_E2_EOG_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,小 CNN，只用 EOG,0.6559,"[0.5352, 0.7491]",0.3339
+CNN_fused_avg_label25,D,E4_CNN_fusedavg_label25_sseed2024_seed0_v01,experiment4/reports/predictions_E4/predictions_val_E4_CNN_fusedavg_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,B 的两个 CNN 概率等权平均,0.7344,"[0.6626, 0.7806]",0.3628
+EEGDM_EEG_cond14_label25,C,E3_EEG_label25_sseed2024_seed0_v01,feat/c-eegdm: experiment3/reports/predictions_E3/predictions_val_E3_EEG_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,冻结 EEGDM + 线性头，只用 EEG,0.6971,"[0.647, 0.7313]",0.4011
+EEGDM_EOG_cond14_label25,D,"D_multiseed_label25_cond14_v01（sseed2024, seed0）",experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond14_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,只用 EOG,0.6638,"[0.562, 0.745]",0.3326
+EEGDM_fused_avg_cond14_label25,D,"D_multiseed_label25_cond14_v01（sseed2024, seed0）",experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_fusedavg_cond14_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,EEG、EOG 头概率等权平均,0.7304,"[0.6552, 0.7785]",0.3813
+EEGDM_EEGEOG_cond14_label25,D,"D_multiseed_label25_cond14_v01（sseed2024, seed0）",experiment4/reports/predictions_E4/predictions_val_E4_EEGDM_EEGEOG_cond14_label25_sseed2024_seed0_v01.csv,25%（名单 2024）,0,特征拼接 + 线性头,0.7449,"[0.7003, 0.7683]",0.3634

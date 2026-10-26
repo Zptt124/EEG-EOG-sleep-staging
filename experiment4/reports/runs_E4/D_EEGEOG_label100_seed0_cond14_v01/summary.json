@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "provisional": true,
+  "test_used": false,
+  "input": "EEG cond14 + EOG cond14, mean over 30 windows, concat 5120",
+  "eeg_features": "features/eeg_cond14_v01",
+  "eog_features": "features/eog_cond14_v01",
+  "train_samples": 132938,
+  "val_samples": 21186,
+  "best_epoch": 20,
+  "val_macro_f1": 0.77656983823634,
+  "training_seconds": 27.201410303001467
+}

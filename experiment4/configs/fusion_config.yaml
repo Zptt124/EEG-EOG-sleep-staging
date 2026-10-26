@@ -1,0 +1,121 @@
+# 实验④ D：跨模态与融合 —— 融合配置（第一周）
+# 作用：把本周所有“融合”是怎么做的写成一份可复现的设置表。
+# 别人拿到这份文件 + reports/ 下的预测表，就能知道每个融合结果是用哪些输入、什么方法、什么参数得到的。
+# 规则：只用验证集，测试集未使用；所有预测按 sample_id 对齐。
+
+version: v01
+owner: D
+date: 2026-10-25
+status: complete            # 全部方法均已跑完
+test_used: false            # 测试集一次都没碰
+
+# ---------- 公共设置（全组统一，来自 A 的数据与 B 的划分） ----------
+data:
+  dataset: Sleep-EDF SC
+  split: by_subject          # 按人划分，同一人不会同时出现在训练和验证
+  n_subjects: {train: 54, val: 8, test: 16}
+  val_subjects: [SC406, SC409, SC442, SC448, SC462, SC471, SC475, SC480]
+  val_segments: 21186
+  labels: {0: W, 1: N1, 2: N2, 3: N3, 4: REM}
+  key: sample_id             # 格式 <record_id>_<k:04d>
+  main_metric: macro_f1
+  evaluator: B feat/b-evaluation scripts/evaluation/evaluate.py v1   # 官方评估脚本
+  prediction_columns: [sample_id, subject_id, record_id, epoch_index, y_true, y_pred,
+                       p_W, p_N1, p_N2, p_N3, p_REM]
+
+label_budgets:
+  label100: 全部 54 个训练受试者
+  label25:
+    source: B manifests/label_subsets_v1.csv 的 label25 列
+    n_subjects: 14
+    sampling_seeds: [2024, 2025, 2026]   # 2024 为主名单
+    note: 训练和标准化都只用被选中的 14 人
+
+# ---------- 方法 1：CNN 层面，概率取平均（后期融合，不训练新模型） ----------
+cnn_late_fusion:
+  method: probability_average
+  formula: p_fused = 0.5 * p_EEG + 0.5 * p_EOG ；y_pred = argmax(p_fused)
+  weights: {eeg: 0.5, eog: 0.5}        # 固定等权，没有用验证集调权重（避免偷看答案）
+  code: scripts/fuse_avg.py
+  runs:
+    label100:
+      eeg: A E1_EEG_label100_seed0_v01
+      eog: A E1_EOG_label100_seed0_v01
+      out: reports/predictions_E4/predictions_val_E4_CNN_fusedavg_label100_seed0_v01.csv
+    label25:
+      eeg: B E2_EEG_label25_sseed2024_seed0_v01
+      eog: B E2_EOG_label25_sseed2024_seed0_v01
+      out: reports/predictions_E4/predictions_val_E4_CNN_fusedavg_label25_sseed2024_seed0_v01.csv
+  training_seeds: [0]                  # CNN 只有单次训练（来自 A / B）
+
+# ---------- 方法 2：EEGDM 层面，概率取平均（后期融合） ----------
+eegdm_late_fusion:
+  method: probability_average
+  weights: {eeg: 0.5, eog: 0.5}
+  code: scripts/fuse_avg.py
+  runs:
+    label100:
+      eeg: C E3_EEG_label100_seed0_provisional_v01
+      eog: reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond14_label100_seed0_v01.csv
+      out: reports/predictions_E4/predictions_val_E4_EEGDM_fusedavg_cond14_label100_seed0_v01.csv
+    label25:
+      eeg: C E3_EEG_label25_sseed2024_seed0_v01
+      eog: reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond14_label25_sseed2024_seed0_v01.csv
+      out: reports/predictions_E4/predictions_val_E4_EEGDM_fusedavg_cond14_label25_sseed2024_seed0_v01.csv
+
+# ---------- 方法 3：EEGDM 层面，特征拼接 + 线性分类器（前期 / 特征级融合） ----------
+eegdm_feature_concat:
+  backbone: EEGDM（冻结，不微调）
+  feature_extraction:
+    script: C 的提取脚本（feat/c-eegdm）
+    sampling_rate_hz: 200
+    scaling: µV / 100，分段 mu-law
+    layers: 20 层
+    window: 1 s，30 个窗口/段
+    feature_shape: [20, 30, 128]       # float16
+    condition_code: 14                 # 代理导联编号；10/14/18 已验证无差别
+    eeg_features: C 的 features/eeg_cond14_v01（不入库，见 manifests/external_artifacts.md）
+    eog_features: D 的 features/eog_cond14_v01（不入库，元数据在 manifests/eog_cond14_v01/）
+  pooling: 30 个窗口取平均 → 每个模态 2560 维
+  fusion: concat[EEG 2560, EOG 2560] → 5120 维
+  standardization: 用训练集（被选中的受试者）的均值/标准差，分模态分别做
+  head: Linear(5120, 5)
+  optimizer: {name: AdamW, lr: 1.0e-3, weight_decay: 1.0e-4}
+  batch_size: 128
+  max_epochs: 50                     #上限50轮；实际都因早停提前结束
+  early_stopping: {monitor: val_macro_f1, patience: 10}
+  code: [scripts/train_linear_concat.py, scripts/multiseed_heads.py, scripts/multiseed_budget.py]
+  training_seeds:
+    label100: [0, 1, 2, 3, 4]
+    label25: [0, 1, 2, 3, 4]            # × 3 份名单 = 15 次
+  reported_prediction: 种子 0（label25 为主名单 2024 种子 0）
+  outputs:
+    label100: reports/predictions_E4/predictions_val_E4_EEGDM_EEGEOG_cond14_label100_seed0_v01.csv   # 单次运行 D_EEGEOG_label100_seed0_cond14_v01
+    label25: reports/predictions_E4/predictions_val_E4_EEGDM_EEGEOG_cond14_label25_sseed2024_seed0_v01.csv   # D_multiseed_label25_cond14_v01 中主名单种子 0
+
+# ---------- 只用 EOG 的 EEGDM 线性头（单次运行，种子 0） ----------
+eegdm_eog_only:
+  code: C 的 experiment3/scripts/train_linear100.py（输入换成 EOG 特征，其余不变：2560 维、Linear(2560,5)、超参数同上）
+  runs:
+    cond14: {run_id: D_EOG_label100_seed0_cond14_v01, out: reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond14_label100_seed0_v01.csv}
+    cond10: {run_id: D_EOG_label100_seed0_cond10_v01, out: reports/predictions_E4/predictions_val_E4_EEGDM_EOG_cond10_label100_seed0_v01.csv}
+  label25: D_multiseed_label25_cond14_v01 中主名单 2024、种子 0 的 EOG 头
+
+# ---------- 翻转统计与分析 ----------
+flip_analysis:
+  reference: [EEG, EOG]                # 分别以 EEG 和 EOG 为参照各算一遍
+  categories: [right_to_wrong, wrong_to_right, both_right, both_wrong]
+  denominator: 参照模态在该分组中的全部段数（表中写明）
+  group_by: [stage, subject]
+  code: [scripts/flips.py, scripts/subject_breakdown.py]
+  outputs:
+    - reports/paired_predictions_val.csv
+    - reports/fusion_changes.csv
+    - reports/by_subject_stage.csv
+    - reports/subject/per_subject_flips.csv
+
+uncertainty:
+  training_randomness: 多个训练种子的均值 ± 标准差
+  subject_variability: 官方脚本按受试者 bootstrap，1000 次，95% 区间；配对差用 paired_bootstrap_delta
+  code: scripts/official_eval_all.py
+  outputs: [reports/official/official_metrics.csv, reports/official/official_paired.csv]
