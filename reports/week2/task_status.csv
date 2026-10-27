@@ -1,0 +1,9 @@
+owner,task,status,evidence,next_step
+all,W2 source and entry points,prepared,docs/week2/work_plan_W2_v1.1.pdf;README.md;WEEK2.md,Review against source PDF
+B,v2 nested budgets and counts,generated_pending_review,manifests/label_subsets_v2.csv;manifests/label_counts_v2.csv;docs/week2/budget_provenance.json,Review and publish v2 to team
+B,official evaluator W2 negative cases,not_verified,PR1 contains v1 evaluator and tests,Check W2 duplicate missing label and probability cases
+A,fair CNN matrix and encoder interface,not_verified,WEEK2.md lists 50 planned main CNN slots,Publish priority encoders then register completed or validated reused runs
+B,budget curves and context matrix,not_verified,WEEK2.md defines four budgets and 20 context slots,Register curve runs and length1 length3 matched context
+C,unlabeled adaptation and S0 S1,not_verified,PR2 contains W1 frozen features not W2 adaptation,Verify isolation gradients timing then publish adapted SHA and new features
+D,D0 D1 D2 semi-supervised matrix,not_verified,PR3 contains W1 EOG fusion not W2 semi-supervised evidence,Start original EEGDM label25 D0 D1 and calibrate internally
+all,W2 results and resources,not_verified,reports/week2 CSV headers define interfaces only,Fill actual run evidence and B official rolling evaluation

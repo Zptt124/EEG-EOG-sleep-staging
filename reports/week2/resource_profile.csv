@@ -1,0 +1,1 @@
+run_id,phase,device,gpu_memory_gib,driver,pytorch,cuda,precision,determinism_settings,trainable_parameters,actual_updates,actual_epochs,elapsed_seconds,peak_memory_mib,examples_per_second,labeled_examples,pseudo_candidates,pseudo_accepted,pseudo_training_examples,notes
