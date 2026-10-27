@@ -1,0 +1,52 @@
+{
+  "status": "generated_pending_B_review_and_team_publication",
+  "source_plan_version": "W2 v1.1",
+  "source_plan_revision": "2026-10-26",
+  "audit_date_Asia_Shanghai": "2026-10-27",
+  "source_commits": {
+    "A_main": "02f120ee80c1c7a7822c33746ce92017632f1faa",
+    "B_v1": "6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923",
+    "C_frozen": "b6ee02852d379cc2ee748d817cb421de619cac89",
+    "D_frozen": "f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed"
+  },
+  "v1_import": "Byte-identical Git blob from B_v1:manifests/label_subsets_v1.csv; unchanged legacy columns, row order and flags",
+  "processed_data_source": "A_main:交付包/实验①交付包_20261018/2_预处理数据与脚本_给B和C/data/processed",
+  "counts_rule": "Only 106 NPZ records of 54 train subjects; read labels member only. No validation/test NPZ opened. Counts are budget metadata, excluded from C/D unlabeled training inputs.",
+  "sampling_rule": {
+    "seed": 2024,
+    "shuffle_performed": false,
+    "rank_cutoffs": {
+      "label10": 5,
+      "label25": 14,
+      "label50": 27,
+      "label100": 54
+    }
+  },
+  "training_performed": false,
+  "file_sha256": {
+    "docs/week2/work_plan_W2_v1.1.pdf": "ccfa9e6a932788e2cec6d15be5631ac02fc078fcff4c286c426b05de2d54c269",
+    "manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+    "manifests/label_subsets_v1.csv": "478c59db7a66c547e1a961119ef40828380cb5b67ad36a432b4cd6d1d930b5e6",
+    "manifests/label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+    "manifests/label_counts_v2.csv": "947223ff0c0384166c2241ca3e3d17baaf671e19143c357b7a7850ad3d084c35",
+    "manifests/label_record_counts_v2.csv": "cb7ab7703a7efff0a55f70476347d9a8c8cc9eb009a76066e54244046918f7c8"
+  },
+  "verification": {
+    "v1_byte_identical": true,
+    "fixed_split_byte_identical": true,
+    "npz_vs_count_table_rebuild_byte_identical": true,
+    "unit_tests_passed": 6,
+    "train_subjects": 54,
+    "train_records": 106,
+    "train_epochs": 132938,
+    "label10_subjects": [
+      "SC456",
+      "SC421",
+      "SC474",
+      "SC412",
+      "SC403"
+    ],
+    "label10_epochs": 11936,
+    "label10_N1": 1719
+  }
+}
