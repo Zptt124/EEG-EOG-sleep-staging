@@ -40,7 +40,8 @@ PAIR_FIELDS = ["comparison_id", "reference_run_id", "comparison_run_id", "nomina
                "delta_macro_f1_ci_low", "delta_macro_f1_ci_high", "delta_N1_f1_ci_low", "delta_N1_f1_ci_high",
                "training_seed_summary", "by_subject_path", "limitations"]
 LIMITS = "8人开发集探索性证据;区间含0不代表等效;训练种子波动另见seed_summary,不与按人区间混合"
-GROUP_KEYS = ["representation", "modalities", "context_length", "nominal_budget", "labeled_subjects",
+# head 必须分组:线性头与长度 1 的 BiGRU 头 context_length 都是 1,但不是同一种模型
+GROUP_KEYS = ["head", "representation", "modalities", "context_length", "nominal_budget", "labeled_subjects",
               "unlabeled_signal_subjects", "adaptation_version", "adaptation_seed", "teacher_id"]
 
 
@@ -124,6 +125,7 @@ def paired_row(ref, comp, out_dir, n_boot=1000):
 
 def seed_summary(rows):
     df = pd.DataFrame(rows)
+    df["head"] = ["bigru_context" if "_CTX" in r else "linear" for r in df["run_id"]]
     for c in ("macro_f1", "N1_precision", "N1_recall", "N1_f1", "REM_f1"):
         df[c] = df[c].astype(float)
     g = df.groupby(GROUP_KEYS, dropna=False)
