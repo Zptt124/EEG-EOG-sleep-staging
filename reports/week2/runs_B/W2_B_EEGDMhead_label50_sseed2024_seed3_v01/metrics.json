@@ -1,0 +1,88 @@
+{
+  "accuracy": 0.8167185877466251,
+  "macro_f1": 0.7666055359462419,
+  "per_class_f1": {
+    "W": 0.922722181961921,
+    "N1": 0.46563706563706564,
+    "N2": 0.8404715127701375,
+    "N3": 0.8270412642669008,
+    "REM": 0.7771556550951848
+  },
+  "per_class_precision": {
+    "W": 0.9067719798005957,
+    "N1": 0.47164646069612826,
+    "N2": 0.8516257465162574,
+    "N3": 0.800339847068819,
+    "REM": 0.7907930720145853
+  },
+  "per_class_recall": {
+    "W": 0.9392435622317596,
+    "N1": 0.459778879146016,
+    "N2": 0.8296056884292179,
+    "N3": 0.8555858310626703,
+    "REM": 0.7639806252752092
+  },
+  "per_class_support": {
+    "W": 7456,
+    "N1": 2623,
+    "N2": 7735,
+    "N3": 1101,
+    "REM": 2271
+  },
+  "n1_precision": 0.47164646069612826,
+  "n1_recall": 0.459778879146016,
+  "n1_f1": 0.46563706563706564,
+  "confusion_matrix": [
+    [
+      7003,
+      368,
+      37,
+      14,
+      34
+    ],
+    [
+      552,
+      1206,
+      663,
+      5,
+      197
+    ],
+    [
+      71,
+      803,
+      6417,
+      216,
+      228
+    ],
+    [
+      2,
+      1,
+      156,
+      942,
+      0
+    ],
+    [
+      95,
+      179,
+      262,
+      0,
+      1735
+    ]
+  ],
+  "n_epochs": 21186,
+  "n_subjects": 8,
+  "class_order": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "evaluate_version": "v1",
+  "source": "/Users/jolin/EEG-EOG-sleep-staging/runs/W2_B_EEGDMhead_label50_sseed2024_seed3_v01/predictions_val.csv",
+  "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43",
+  "sample_set_reference": "/Users/jolin/EEG-EOG-sleep-staging/manifests/val_reference_v1.csv",
+  "run_id": "W2_B_EEGDMhead_label50_sseed2024_seed3_v01",
+  "best_epoch": 12,
+  "best_val_macro_f1_during_training": 0.7666055359462419
+}
