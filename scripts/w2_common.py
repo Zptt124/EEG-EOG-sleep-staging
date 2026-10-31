@@ -109,19 +109,47 @@ def align_modalities(rows_eeg, rows_eog):
     return rows_eeg, [by_id[i] for i in ids]
 
 
-def load_eegdm_pair(eeg_dir, eog_dir, chosen):
-    """返回 (train_rows, val_rows, x_train[N,5120], x_val[N,5120]);只读被选中的行。"""
-    eeg_rows = read_csv_rows(Path(eeg_dir) / "feature_index.csv")
-    eog_rows = read_csv_rows(Path(eog_dir) / "feature_index.csv")
-    eeg_rows, eog_rows = align_modalities(eeg_rows, eog_rows)
+def add_feature_args(ap):
+    """两种输入方式二选一:原始 [N,20,30,128] 特征目录,或已池化的 npz(sample_id、x[N,2560],未标准化)。"""
+    ap.add_argument("--eeg-dir"); ap.add_argument("--eog-dir")
+    ap.add_argument("--eeg-pooled", help="EEG 池化特征 npz:sample_id[str]、x[N,2560] float32,未标准化")
+    ap.add_argument("--eog-pooled", help="EOG 池化特征 npz,格式同上")
+    ap.add_argument("--eeg-index", help="池化模式下 EEG 的 feature_index.csv(取 split/y_true 等元数据)")
+    ap.add_argument("--eog-index", help="池化模式下 EOG 的 feature_index.csv;缺省同 --eeg-index")
+
+
+def feature_inputs(args):
+    """校验并整理输入来源,返回 (eeg_src, eog_src, eeg_index_path, eog_index_path, pooled?)。"""
+    pooled = bool(args.eeg_pooled or args.eog_pooled)
+    if pooled:
+        if not (args.eeg_pooled and args.eog_pooled and args.eeg_index):
+            raise ValueError("池化模式需要 --eeg-pooled、--eog-pooled 与 --eeg-index")
+        return args.eeg_pooled, args.eog_pooled, args.eeg_index, args.eog_index or args.eeg_index, True
+    if not (args.eeg_dir and args.eog_dir):
+        raise ValueError("需要 --eeg-dir 与 --eog-dir,或使用池化输入(--eeg-pooled/--eog-pooled/--eeg-index)")
+    return args.eeg_dir, args.eog_dir, str(Path(args.eeg_dir) / "feature_index.csv"), \
+        str(Path(args.eog_dir) / "feature_index.csv"), False
+
+
+def load_eegdm_pair(eeg_src, eog_src, chosen, eeg_index=None, eog_index=None, pooled=False):
+    """返回 (train_rows, val_rows, x_train[N,5120], x_val[N,5120]);只读被选中的行。
+    pooled=False:src 为特征目录(读原始 npy 并均值池化);pooled=True:src 为池化 npz 文件。"""
+    eeg_index = eeg_index or str(Path(eeg_src) / "feature_index.csv")
+    eog_index = eog_index or str(Path(eog_src) / "feature_index.csv")
+    eeg_rows, eog_rows = align_modalities(read_csv_rows(eeg_index), read_csv_rows(eog_index))
     train, val = select_rows(eeg_rows, chosen)
     keep = {r["sample_id"] for r in train + val}
     eog_by_id = {r["sample_id"]: r for r in eog_rows if r["sample_id"] in keep}
     out = []
     for rows in (train, val):
-        x = np.concatenate([load_pooled(eeg_dir, rows),
-                            load_pooled(eog_dir, [eog_by_id[r["sample_id"]] for r in rows])], axis=1)
-        out.append(x)
+        eog = [eog_by_id[r["sample_id"]] for r in rows]
+        if pooled:
+            xe, xo = load_encoder_features(eeg_src, rows), load_encoder_features(eog_src, eog)
+            if xe.shape[1] != POOLED_DIM or xo.shape[1] != POOLED_DIM:
+                raise ValueError(f"池化特征维度应为 {POOLED_DIM},实际 EEG {xe.shape[1]} / EOG {xo.shape[1]}")
+        else:
+            xe, xo = load_pooled(eeg_src, rows), load_pooled(eog_src, eog)
+        out.append(np.concatenate([xe, xo], axis=1))
     return train, val, out[0], out[1]
 
 
@@ -160,13 +188,22 @@ def pick_device(name="auto"):
     return "cpu"
 
 
-def fit(model, fwd_train, y_train, fwd_val, y_val, seed, device="cpu", lr=1e-3, weight_decay=1e-4,
-        batch=128, max_epochs=50, patience=10):
-    """AdamW + 交叉熵;按验证 Macro-F1 保留最佳权重;patience 轮无提升即停。
-    fwd_*: (索引 LongTensor -> 模型输入) 的函数,便于线性头与窗口头共用。"""
+def seed_everything(seed, deterministic=False):
+    """必须在**创建模型之前**调用:初始权重、每轮 randperm、dropout 都从这一条随机流取值
+    (与 D 的 train_linear_concat.py 相同顺序:先设种子,再建模型,再训练)。"""
     import torch
     torch.manual_seed(seed)
     np.random.seed(seed)
+    if deterministic:
+        torch.use_deterministic_algorithms(True)
+
+
+def fit(model, fwd_train, y_train, fwd_val, y_val, device="cpu", lr=1e-3, weight_decay=1e-4,
+        batch=128, max_epochs=50, patience=10):
+    """AdamW + 交叉熵;按验证 Macro-F1 保留最佳权重;patience 轮无提升即停。
+    不在内部设种子——调用方须先 seed_everything(seed) 再建模型,否则初始化不受种子控制。
+    fwd_*: (索引 LongTensor -> 模型输入) 的函数,便于线性头与窗口头共用。"""
+    import torch
     model.to(device)
     opt = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     y_tr = torch.as_tensor(y_train, dtype=torch.long)

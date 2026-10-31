@@ -202,6 +202,49 @@ def test_aggregate_rebuilds_tables_pairs_context_and_updates_only_b_rows(tmp_pat
         raise AssertionError("样本集合不同必须拒绝配对")
 
 
+def test_pooled_npz_input_matches_raw_dir_input_exactly(tmp_path=None):
+    import tempfile
+    tmp = Path(tmp_path or tempfile.mkdtemp())
+    _, _, _, common, ctx_args, store = run_all(tmp)
+    ids = np.array(sorted(store))
+    np.savez(tmp / "eeg_pooled.npz", sample_id=ids, x=np.stack([store[i][:2560] for i in ids]))
+    np.savez(tmp / "eog_pooled.npz", sample_id=ids, x=np.stack([store[i][2560:] for i in ids]))
+    idx = str(tmp / "eeg" / "feature_index.csv")
+    pooled = ["--eeg-pooled", str(tmp / "eeg_pooled.npz"), "--eog-pooled", str(tmp / "eog_pooled.npz"),
+              "--eeg-index", idx, "--subsets", str(tmp / "subsets.csv")]
+    budget_head.main(common + ["--budget", "label25", "--seed", "0"])                       # 原始目录
+    budget_head.main(pooled + ["--budget", "label25", "--seed", "1", "--runs-root", str(tmp / "runs")])
+    budget_head.main(common + ["--budget", "label25", "--seed", "1", "--runs-root", str(tmp / "runs_raw")])
+    a = pd.read_csv(tmp / "runs" / "W2_B_EEGDMhead_label25_sseed2024_seed1_v01" / "predictions_val.csv")
+    b = pd.read_csv(tmp / "runs_raw" / "W2_B_EEGDMhead_label25_sseed2024_seed1_v01" / "predictions_val.csv")
+    assert np.allclose(a[ev_cols()].to_numpy(), b[ev_cols()].to_numpy())
+    cfg = (tmp / "runs" / "W2_B_EEGDMhead_label25_sseed2024_seed1_v01" / "config.yaml").read_text(encoding="utf-8")
+    assert "feature_input: pooled_npz" in cfg and "eeg_source_sha256" in cfg
+    ctx_head.main(["--repr", "eegdm", "--eeg-pooled", str(tmp / "eeg_pooled.npz"), "--eog-pooled", str(tmp / "eog_pooled.npz"),
+                   "--eeg-index", idx, "--subsets", str(tmp / "subsets.csv"), "--window-index", str(tmp / "window_index.csv"),
+                   "--runs-root", str(tmp / "runs"), "--device", "cpu", "--context", "3", "--seed", "0"])
+    bad = tmp / "eog_missing.npz"                                                           # 缺 sample_id 应报错
+    np.savez(bad, sample_id=ids[1:], x=np.stack([store[i][2560:] for i in ids[1:]]))
+    try:
+        budget_head.main(pooled[:2] + ["--eog-pooled", str(bad)] + pooled[4:] + ["--budget", "label25", "--seed", "2",
+                         "--runs-root", str(tmp / "runs")])
+    except ValueError as e:
+        assert "缺" in str(e)
+    else:
+        raise AssertionError("池化文件缺样本应报错")
+    try:
+        budget_head.main(["--eeg-pooled", str(tmp / "eeg_pooled.npz"), "--budget", "label25", "--seed", "3",
+                          "--subsets", str(tmp / "subsets.csv"), "--runs-root", str(tmp / "runs")])
+    except ValueError as e:
+        assert "池化模式" in str(e)
+    else:
+        raise AssertionError("参数不全应报错")
+
+
+def ev_cols():
+    return ["p_W", "p_N1", "p_N2", "p_N3", "p_REM"]
+
+
 def test_window_neighbors_never_cross_gap_and_mismatched_centers_fail(tmp_path=None):
     import tempfile
     tmp = Path(tmp_path or tempfile.mkdtemp())

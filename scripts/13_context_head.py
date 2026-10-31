@@ -13,6 +13,7 @@
 
 用法:
   python scripts/13_context_head.py --repr eegdm --eeg-dir <eeg> --eog-dir <eog> --context 3 --seed 0
+  python scripts/13_context_head.py --repr eegdm --eeg-pooled e.npz --eog-pooled o.npz --eeg-index idx.csv --context 3 --seed 0
   python scripts/13_context_head.py --repr cnn --cnn-features <npz> --context 1 --seed 0
 """
 import argparse
@@ -64,7 +65,8 @@ def labels_from_processed(centers, processed):
 def build_inputs(args, chosen, windows):
     """返回 (train_rows, val_rows, x_train[N,D], x_val[M,D]);行序与窗口索引一致性已校验。"""
     if args.repr == "eegdm":
-        train, val, x_tr, x_va = w.load_eegdm_pair(args.eeg_dir, args.eog_dir, chosen)
+        eeg_src, eog_src, eeg_idx, eog_idx, pooled = w.feature_inputs(args)
+        train, val, x_tr, x_va = w.load_eegdm_pair(eeg_src, eog_src, chosen, eeg_idx, eog_idx, pooled)
     else:
         centers = list(windows.values())
         labels = labels_from_processed(centers, args.processed)
@@ -93,7 +95,8 @@ def window_ids(rows, windows, pos, length):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("--repr", required=True, choices=["eegdm", "cnn"])
-    ap.add_argument("--eeg-dir"); ap.add_argument("--eog-dir"); ap.add_argument("--cnn-features")
+    w.add_feature_args(ap)
+    ap.add_argument("--cnn-features")
     ap.add_argument("--context", type=int, required=True, choices=[1, 3])
     ap.add_argument("--budget", default="label25", choices=["label25"])
     ap.add_argument("--subsets", default=str(SPLIT / "label_subsets_v2.csv"))
@@ -104,8 +107,11 @@ def main(argv=None):
     ap.add_argument("--device", default="auto")
     ap.add_argument("--runs-root", default=str(RUNS))
     args = ap.parse_args(argv)
-    if args.repr == "eegdm" and not (args.eeg_dir and args.eog_dir):
-        sys.exit("错误: eegdm 需要 --eeg-dir 与 --eog-dir")
+    if args.repr == "eegdm":
+        try:
+            w.feature_inputs(args)
+        except ValueError as e:
+            sys.exit(f"错误: {e}")
     if args.repr == "cnn" and not args.cnn_features:
         sys.exit("错误: cnn 需要 --cnn-features")
 
@@ -127,10 +133,11 @@ def main(argv=None):
     y_va = np.array([int(r["y_true"]) for r in val])
 
     device = w.pick_device(args.device)
+    w.seed_everything(args.seed)                           # 先设种子再建模型
     model = ContextHead(x_tr.shape[1])
     f_tr = lambda ids: x_tr_t[idx_tr[ids]]
     f_va = lambda ids: x_va_t[idx_va[ids]]
-    result = w.fit(model, f_tr, y_tr, f_va, y_va, seed=args.seed, device=device)
+    result = w.fit(model, f_tr, y_tr, f_va, y_va, device=device)
     probs = w.predict_probs(model, f_va, len(y_va), device)
 
     pad_tr = sum(windows[r["sample_id"]]["boundary_rule"] != "real" for r in train)
@@ -145,7 +152,9 @@ def main(argv=None):
                   selection="val macro-F1", padded_train_windows=int(pad_tr), train_windows=len(train),
                   val_windows=len(val), neighbor_labels_used=False, test_used=False, device=device,
                   torch=str(torch.__version__), deterministic_algorithms=False,
-                  encoder_features=args.cnn_features, eeg_dir=args.eeg_dir, eog_dir=args.eog_dir)
+                  encoder_features=args.cnn_features, eeg_source=args.eeg_pooled or args.eeg_dir,
+                  eog_source=args.eog_pooled or args.eog_dir,
+                  feature_input="pooled_npz" if args.eeg_pooled else ("raw_npy_dir" if args.eeg_dir else "NA"))
     m = w.finish_run(run_dir, run_id, config, result, val, probs, chosen, (mean, std),
                      "上下文对照:长度 1 与长度 3 共用同一头、同一中心样本集合;邻居缺失处中心复制(window_index.csv 记录 mask)。")
     print(f"{run_id}: macro-F1 {m['macro_f1']:.4f}  N1 F1 {m['n1_f1']:.3f}  -> {run_dir}")

@@ -33,6 +33,7 @@ CNN 特征文件格式(写给 A):`np.savez(path, sample_id=<str 数组>, x=<floa
 # 10%/50% 监督头(label25/100 仅在严格匹配时才复用 D 的旧结果,否则同样重跑)
 for b in label10 label50; do for s in 0 1 2 3 4; do
   python scripts/12_eegdm_budget_head.py --eeg-dir <eeg_cond14_v01> --eog-dir <eog_cond14_v01> --budget $b --seed $s
+  # 或池化输入:--eeg-pooled e.npz --eog-pooled o.npz --eeg-index <feature_index.csv>
 done; done
 # 上下文:两表征 × 长度 1/3 × seed 0-4
 for L in 1 3; do for s in 0 1 2 3 4; do
@@ -56,3 +57,19 @@ python scripts/16_audit_predictions.py <各组分支引用> --out reports/week2/
 - 10% 是 5 人(9.26% 受试者),不是严格 10% 的片段;图表横轴为人数。
 - 5 seed × 8 人不是 40 个独立样本;seed_summary 与 paired_comparison 分开报告。
 - `run_registry.csv` 目前没有任何 B 的真实 run 行。
+
+## 更新:C 的第二周结果到货后(2026-10-31)
+
+| 事项 | 产物 | 结果 |
+| --- | --- | --- |
+| 并入 C 的 80 个 run | `scripts/17_ingest_external_runs.py`、`reports/week2/external_C/`(metrics_summary、seed_summary、paired_comparison 60 组、by_subject、mismatch_vs_reported) | 80 份预测全部通过严格检查并覆盖同一 21186 段;与 C 登记的 Macro-F1/N1/REM 指标 **0 项不一致**;S1 减 S0 的均值差都在约 ±0.7 个百分点内(10% EEG+EOG 的 N1 F1 为 −0.69pp,其余接近 0);按人区间多数含 0 |
+| 缺项表 | `scripts/18_gap_table.py`、`reports/week2/b_gap_table.csv` | B 40 个格子 0 个完成;C 80/80;A 0/50、D 0/60 在各分支里未找到(不代表对方本地没有) |
+| 池化特征输入 | `--eeg-pooled/--eog-pooled/--eeg-index`(`w2_common.py`) | 只需每模态约 1.6 GB 的池化特征,不必传 13.5 GB 原始文件;与原始目录输入的预测逐位相同(有测试) |
+| 按人 CV 草案 | `reports/week2/b_cv_draft.md` | 仅讨论,不改变划分 |
+| **修复**:种子顺序 | `w2_common.seed_everything` | 之前种子在建模型之后才设,同一 `--seed` 两次结果不同(测试发现);现在先设种子再建模型,与 D 的脚本顺序一致 |
+
+池化特征文件格式:`np.savez(path, sample_id=<str 数组>, x=<float32 [N,2560]>)`,为 `[20,30,128]` 在 30 个窗上取均值后拉平的**未标准化**特征;
+`--eeg-index` 指向对应的 `feature_index.csv`(提供 split、y_true)。
+
+C 的 EEGDM EEG+EOG S0 头在 10%/25% 各有 seed 0–4(EOG 是 C 的本地重建,非 D 缓存)。要登记为 B 的 10% 头复用,还需逐项核对
+名单、标准化、特征 SHA、头、种子、更新预算、选模,**目前没有登记**。
