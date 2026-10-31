@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "C_80_predictions",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "B_evaluator_v1",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "B_evaluator_w2",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "shared_budgets",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "B_window_index",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "B_heads_integration",
+      "exit_code": 0,
+      "passed": true
+    }
+  ]
+}

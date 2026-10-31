@@ -11,7 +11,7 @@ labels: {W: 0, N1: 1, N2: 2, N3: 3, REM: 4}
 split:
   unit: subject
   proportions: [0.70, 0.10, 0.20]
-  seed: null # A确认并写入真实划分
+  seed: 42 # A 的 v1 划分(2026-10-18)
   manifest: manifests/split_subjects.csv
 preprocessing:
   wake_margin_minutes: 30
@@ -21,8 +21,9 @@ preprocessing:
   normalization_fit_split: train
 training:
   seed: null
-  label_subject_fraction: 1.0
-  sampling_seed: null
+  label_subject_fraction: 1.0   # 25% 档为 0.25,见 manifests/label_subsets_v1.csv
+  sampling_seed: 2024           # B:标签名单抽样种子(与训练 seed 分开)
+  label_subsets_manifest: manifests/label_subsets_v1.csv
   checkpoint_selection: val_macro_f1
 analysis_split: val
 test_policy: held_out_in_week1

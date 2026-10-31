@@ -668,8 +668,8 @@
   "manifests/week2_c_adaptation_v01/trainable_parameters.csv": "d71488728191e4870af03eb4ae7e97e8f72fefa1736e1d8078c90069586fa0fd",
   "manifests/week2_c_adaptation_v01/trainable_parameters.txt": "89b95cc9483779963176fdabf91c9c2dd6fbc329901b8b3c557ce66d0d49cd1a",
   "publication_prediction_audit.json": "85ea60fc47a3ee7810157d4c59c32ae29003e148321ac3ae17576a974959a31d",
-  "publication_status.json": "e22108edf1b826870c5549b7a5405347387393cbf0ee3bf05e5433e1452493cf",
-  "README.md": "fcb9dc480169f36c91b99d19e6efd567c40b3a902a82319e91535d8d7841d17a",
+  "publication_status.json": "6299564dc19937be3831ca8b1812ef59d419491728a7fe7f7e91fd8860c7f461",
+  "README.md": "f5fbcfa642232ac1f0c14848e93f00e1ce27da4fbaa7a1d332759c0847cb4cee",
   "reports/week2_adaptation_lock_20261027/adapt_W2_C_S1_pilot_v01.lock.json": "dc24a369f08ecf2e13caf99b7915ff1e9f0a204c878424fb8fa492f8619098ba",
   "reports/week2_adaptation_lock_20261027/adapt_W2_C_S1_pilot_v01.yaml": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
   "reports/week2_adaptation_lock_20261027/downstream_run_plan.csv": "a6767ec7ae031cc1e2714be72a3415977a43ca4ab9ddc17d55fc54b726a450f4",
@@ -1876,5 +1876,16 @@
   "tests/test_replication_features_heads.py": "482afdcbda548ce82dd3ec08c0de8f536b4d0912e3e1b18fa05addc552e78893",
   "tests/test_s0_s1_eeg_comparison.py": "0f10a7dbd157dbd37be1374f2ef0fbed9156251d372590756e8cde94b35840a2",
   "tests/test_train_sleep_adaptation.py": "828a0abafff130fe9ce16c87a2bedee7f0c52408c77d445e29ce34403e77a205",
-  "tests/test_week2_error_analysis.py": "ed959411a634362a3b26f6e097588ced86975dc29189685d3dd646a587bab61a"
+  "tests/test_week2_error_analysis.py": "ed959411a634362a3b26f6e097588ced86975dc29189685d3dd646a587bab61a",
+  "verification/main_merge_20261031/B_evaluator_v1.log": "f95907df152538e0e5d3be1fe44895470aeda8a5ac9c6b3e14be6a799982a89b",
+  "verification/main_merge_20261031/B_evaluator_w2.log": "8fd4fe45dd8fbcba210bc5cc2e1bed417ec6201ff539969f00fd958db2cbbc8d",
+  "verification/main_merge_20261031/B_heads_integration.log": "34ee4f2635d32adef9a8d9be3401c17b2143aa83fdc16a56dce65f5c6b7a4e93",
+  "verification/main_merge_20261031/B_window_index.log": "cab9bb3c09c431009f24009abb17743b69582e29cd14bb01701d17bc0142b5f5",
+  "verification/main_merge_20261031/C_80_predictions.log": "f4b6133599f847eb269e4e7b805bf6becbf8067e2dfdb3beb61b27d0a0882ff4",
+  "verification/main_merge_20261031/checks.json": "b363e20d6f7c1d1f620951ff1f835b443f2d4973ecace4395abb68581181e3ee",
+  "verification/main_merge_20261031/prediction_audit.json": "85ea60fc47a3ee7810157d4c59c32ae29003e148321ac3ae17576a974959a31d",
+  "verification/main_merge_20261031/README.md": "b6b22ac8f5a18e17cd8c3369d26f88ce7c24f989b8025c3648202ac5a3ec4ee1",
+  "verification/main_merge_20261031/release_reverification.json": "f28aef0c314d88487e576a10a489f137de24842967f58b785e7b9731d5cad83a",
+  "verification/main_merge_20261031/shared_budgets.log": "1aa59be93e8debbd3583b155f22b05a8a8b5bd29acec323c963271d09788645f",
+  "verification/main_merge_20261031/source_integrity.json": "8589727c445a3424c689d0af946355ce9fb0d884836b71ebd71156ae8c57a979"
 }

@@ -1,0 +1,21 @@
+# E2_EEG_label25_sseed2026_seed0_v01
+
+- run_id:E2_EEG_label25_sseed2026_seed0_v01
+- 负责人/日期:B / 2026-10-22
+- 状态:成功(真实实验,验证集)
+- 实验问题:只给 25% 训练受试者的标签时,小 CNN(EEG Fpz-Cz)比 100% 标签掉多少?
+- Git提交号与未提交修改说明:基于 main `02f120e`(A 的 02f120e);训练时 `src/evaluation/`、`scripts/06–08` 为未提交的新增文件,提交后以 `feat/b-evaluation` 为准
+- 数据版本、划分版本、预处理版本:预处理 npz(A,交付包 20261018,153 晚);split_subjects.csv v1(种子 42);名单 `manifests/label_subsets_v1-s2026.csv`
+- 输入模态、模型、权重来源与hash:EEG Fpz-Cz;SmallCNN(A 的 05_train_cnn.SmallCNN,84,837 参数),从头训练,无外部权重
+- 标签预算与实际有标签人数:25%;14 人 / 27 晚 / 35,203 段;未标注训练受试者 40 人,标签与信号均未使用
+- 训练种子/标签抽样种子:0 / 2026
+- 完整命令:`.venv/bin/python scripts/07_train_cnn_fewlabel.py --channel eeg --sampling-seed 2026 --seed 0 --subset-file manifests/label_subsets_v1-s2026.csv`
+- Python及依赖版本:Python 3.14.6,torch 2.14.1,numpy/pandas/sklearn 见本机 .venv(system-site-packages 继承 conda)
+- GPU、峰值显存、耗时、缓存大小:Apple MPS(未记录峰值显存);训练+评估 1.43 min;共训练 34 轮;无特征缓存
+- 最佳权重选择规则:验证集 Macro-F1(best epoch 24);早停 patience 10
+- 结果文件位置:本地 `runs/E2_EEG_label25_sseed2026_seed0_v01/`(config.yaml, history.csv, best.ckpt, metrics.json, predictions_val.csv);小文件副本 `reports/runs_E2/`;predictions_val.csv sha256 `b239d55decbe517e9d6f2aa04c127abc722a069fd98f98878962c120c577e368`
+- 依赖的其他run_id:E1_EEG_label100_seed0_v01(A,100% 对照)
+- 评估:官方 `src/evaluation/evaluate.py` v1
+- 结果:val Macro-F1 0.6915(95% 受试者 bootstrap [0.6452, 0.7169]),N1 F1 0.3188,accuracy 0.7739
+- 初步观察与限制:见 `reports/b_summary.md` 第 6 节;验证集仅 8 人;设备与 A 的 CUDA 基线不同;只训练 1 次(训练种子 0);归一化统计仅用有标签受试者
+- 失败时最后成功步骤、报错与下一步:无失败

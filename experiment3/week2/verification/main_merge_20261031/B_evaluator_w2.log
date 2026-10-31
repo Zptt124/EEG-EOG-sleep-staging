@@ -1,0 +1,25 @@
+accuracy : 0.7000
+macro-F1 : 0.7267   <- main metric
+  W    P 0.6667  R 0.6667  F1 0.6667  support 3
+  N1   P 0.5000  R 0.5000  F1 0.5000  support 2
+  N2   P 0.6667  R 1.0000  F1 0.8000  support 2
+  N3   P 1.0000  R 1.0000  F1 1.0000  support 1
+  REM  P 1.0000  R 0.5000  F1 0.6667  support 2
+N1 precision: 0.5000   N1 recall: 0.5000   N1 F1: 0.5000
+confusion matrix (rows=true, cols=pred):
+              W     N1     N2     N3    REM
+  W           2      1      0      0      0
+  N1          0      1      1      0      0
+  N2          0      0      2      0      0
+  N3          0      0      0      1      0
+  REM         1      0      0      0      1
+
+wrote /tmp/tmpqo7acbs1/m.json
+PASS test_cli_with_reference_writes_set_hash_and_fails_on_missing
+PASS test_metrics_unchanged_by_reference_check
+PASS test_probability_anomalies_are_errors
+PASS test_reference_accepts_exact_set_in_any_order
+PASS test_reference_rejects_missing_extra_and_wrong_labels
+PASS test_set_sha_changes_with_set_not_with_order
+
+6 tests passed

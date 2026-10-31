@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "original_files_byte_identical": 1861,
+  "predictions_verified": 80,
+  "conflicts_remaining": 0,
+  "weights_and_raw_arrays_not_committed": true,
+  "fixed50_completed_results_included": false,
+  "source_snapshot_report_is_historical": true
+}

@@ -2,7 +2,7 @@
 
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
 
-**2026-10-31 C第二周交付：** [实验③结果与复评入口](experiment3/week2/README.md)已备妥3轮适配、80份验证预测、配置/历史/指标及N1分析；10%双模态平均退步、25%基本持平，未证明稳定适配收益。B协议/统一复评和D共同EOG来源认可仍待确认；测试集封存。第一周C材料保留在[原目录](experiment3/README.md)。
+**2026-10-31 C第二周交付：** [实验③结果与复评入口](experiment3/week2/README.md)已备妥3轮适配、80份验证预测、配置/历史/指标及N1分析；10%双模态平均退步、25%基本持平，未证明稳定适配收益。B已发布v2名单核验和80份预测复评；D共同EOG来源认可及实际接收验收仍待补；测试集封存。第一周C材料保留在[原目录](experiment3/README.md)。
 
 
 利用预训练EEG表征与未标注EEG/EOG，研究少标签睡眠分期和N1识别。
@@ -14,7 +14,7 @@
 - [WEEK2.md](WEEK2.md)：A/B/C/D任务矩阵、推进顺序与完成标准。
 - [公共协议v2](docs/week2/protocol_v2.md)：数据权限、预算、选模、上下文和评价规则。
 - [交接登记](HANDOFF.md)、[运行模板](RUN_TEMPLATE.md)与[协作规则](CONTRIBUTING.md)。
-- [预算名单](manifests/label_subsets_v2.csv)、[人数/片段/类别统计](manifests/label_counts_v2.csv)：沿用B的seed2024排序，仅新增前5人的label10；[来源与复核说明](docs/week2/budget_provenance.json)。名单由既有产物生成，供B在本PR中核验发布；名单待B确认；C已完成的本地实验见上方交付入口。
+- [预算名单](manifests/label_subsets_v2.csv)、[人数/片段/类别统计](manifests/label_counts_v2.csv)：沿用B的seed2024排序，仅新增前5人的label10；[来源与复核说明](docs/week2/budget_provenance.json)。名单已由B完成21项核验，见[核验记录](reports/week2/b_v2_verification.md)；C已完成的本地实验见上方交付入口。
 - [GitHub核查与更新记录](docs/week2/github_audit.md)、[任务状态](reports/week2/task_status.csv)、[运行登记](reports/week2/run_registry.csv)。公共主表待B统一登记；C的80份运行索引见交付入口。
 
 | 成员 | 第二周职责 | 优先产物 |
