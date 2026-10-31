@@ -1,0 +1,40 @@
+experiment: W2 实验② 时间上下文(25%)
+representation: eegdm_raw_frozen_eegeog_5120
+context_length: 1
+nominal_budget: label25
+labeled_subjects: 14
+unlabeled_signal_subjects: 0
+sampling_seed: 2024
+downstream_seed: 1
+window_index: /Users/jolin/EEG-EOG-sleep-staging/reports/week2/window_index.csv
+window_index_sha256: ee0be88c78029b095cddea2194b3d4576450c753a9bff2ba04349eb7549f84db
+subset_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+head: proj128+ReLU+Dropout0.2 -> BiGRU(h64,1 layer) -> center step -> Linear(128,5)
+optimizer: AdamW lr=1e-3 wd=1e-4
+batch_size: 128
+max_epochs: 50
+patience: 10
+selection: val macro-F1
+padded_train_windows: 114
+train_windows: 32310
+val_windows: 21186
+neighbor_labels_used: false
+test_used: false
+device: cpu
+torch: 2.15.0
+deterministic_algorithms: false
+encoder_features: null
+eeg_source: features/c_pooled_v01/EEG_S0_pooled_154124x2560_unstandardized_v01.npz
+eog_source: features/c_pooled_v01/EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz
+feature_input: pooled_npz
+run_id: W2_B_CTX1_EEGDM_label25_sseed2024_seed1_v01
+status: completed
+evaluate_version: v1
+evaluate_sha256: 0a5bb7f358d4e09d0bdd6f9311b7532c479ce96f9e6927d4b2bbf9fb6732372c
+code_commit: 2e99dc2dcb09ee611edd34b39ba8a6ce98da6f2f
+best_ckpt_sha256: 3e8a59308449347071b5c8e691ac6d45d49e6eac4103477f5df0c30fa9c9c7a0
+predictions_sha256: a24d69b6fa341584be789bc687c3c3616ebb5192123ee69fdb1b101838433add
+val_reference_sha256: 9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de
+actual_updates: 4807
+actual_epochs: 19
+elapsed_seconds: 7.53

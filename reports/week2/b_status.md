@@ -1,5 +1,34 @@
 # B 第二周进度与待办(实验②)
 
+## 最新状态(2026-10-31)
+
+**B 的 40 个 run 完成 30 个:EEGDM 四档线性头 20 个、EEGDM 上下文 10 个。** 还差 CNN 上下文 10 个,以及预算曲线的 CNN 部分,都在等 A。
+本节优先于下文较早的记录;下文"被什么挡住"、"已知问题"里关于等 C/D 特征、不登记复用的内容已过时。
+
+- **输入**:C 的 Release `c-pooled-features-v01-20261031`,EEG 与 C 本地重建的 EOG 各 154124×2560,SHA256 全部通过。
+  EOG 不是 D 的原始缓存;配置与索引一致,但未证明逐字节相同。`b_feature_request_files.txt` 不再使用。
+- **核对**:10%/25% 与 C 的 S0 一致,100% 与 D 的多 seed 结果一致(各 5 个 seed)。本批为 B 重新训练,未登记 reused。
+- **设备**:线性头与上下文头均在 CPU 上运行,设备固定,结果可比。
+- **产物**:`seed_summary.csv`、`metrics_summary.csv`、`paired_comparison.csv`、`run_registry.csv`、`budget_curves.png`、`budget_curves_n1_table.csv`、`b_gap_table.csv`。
+- **run 小文件**:`reports/week2/runs_B/`;`best.ckpt` 与 `normalization.npz` 只在 B 本地 `runs/`,SHA 见各 config.yaml。汇总表中的 `runs/...` 路径对应这里的同名目录。
+
+| 监督线性头(5 seed 均值) | Macro-F1 | N1 F1 |
+| --- | --- | --- |
+| 5 人 | 0.7321 | 0.3845 |
+| 14 人 | 0.7456 | 0.4066 |
+| 27 人 | 0.7684 | 0.4655 |
+| 54 人 | 0.7740 | 0.4901 |
+
+| 25% 上下文(BiGRU 头,5 seed 均值) | Macro-F1 | N1 F1 | REM F1 |
+| --- | --- | --- | --- |
+| 长度 1 | 0.7544 | 0.4298 | 0.7137 |
+| 长度 3 | 0.7719 | 0.4686 | 0.7500 |
+
+长度 3 减长度 1:Macro-F1 +1.75pp,N1 F1 +3.88pp,REM F1 +3.63pp。5 个 seed 的按人区间中,Macro-F1 与 N1 F1 各有 2 个含 0,seed 3 的 N1 F1 为负;
+这是 8 人开发集的探索性证据。BiGRU 长度 1 与线性头不是同一模型,不能互相替代。
+
+## 较早记录
+
 截至本记录,B 的**工具链与核验已完成**,**真实实验尚未开始**:缺冻结特征与 A 的编码器。
 下表的"已验证"只指合成数据或现有第一周产物上的检查,不代表任何第二周成绩。
 

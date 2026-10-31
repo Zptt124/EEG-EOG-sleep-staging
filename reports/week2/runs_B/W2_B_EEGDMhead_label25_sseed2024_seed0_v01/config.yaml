@@ -1,0 +1,41 @@
+experiment: W2 实验② 监督预算曲线(原始冻结 EEGDM 头)
+representation: eegdm_raw_frozen_eegeog_5120
+modalities: EEG+EOG
+context_length: 1
+nominal_budget: label25
+labeled_subjects: 14
+unlabeled_signal_subjects: 0
+subset_file: /Users/jolin/EEG-EOG-sleep-staging/manifests/label_subsets_v2.csv
+subset_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+sampling_seed: 2024
+downstream_seed: 0
+train_samples: 32310
+val_samples: 21186
+standardization: fit on labeled train subjects only
+head: Linear(5120,5)
+optimizer: AdamW lr=1e-3 wd=1e-4
+batch_size: 128
+max_epochs: 50
+patience: 10
+selection: val macro-F1
+feature_input: pooled_npz
+eeg_source: features/c_pooled_v01/EEG_S0_pooled_154124x2560_unstandardized_v01.npz
+eog_source: features/c_pooled_v01/EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz
+eeg_source_sha256: 047bafc735d64297648b173447ec5d8425063a25b3f85562a7dbf12295800fb7
+eog_source_sha256: e444e819be3936b7f11b80daff873b227e34547886c91118f06924ed36654590
+eeg_index_sha256: 0892c6f61807ac6316791530b24a44da33026fcaf73ff1c1d984c7a3cab62f49
+eog_index_sha256: 0892c6f61807ac6316791530b24a44da33026fcaf73ff1c1d984c7a3cab62f49
+device: cpu
+torch: 2.15.0
+test_used: false
+run_id: W2_B_EEGDMhead_label25_sseed2024_seed0_v01
+status: completed
+evaluate_version: v1
+evaluate_sha256: 0a5bb7f358d4e09d0bdd6f9311b7532c479ce96f9e6927d4b2bbf9fb6732372c
+code_commit: 2e99dc2dcb09ee611edd34b39ba8a6ce98da6f2f
+best_ckpt_sha256: 5a681675843a1d732f876a093cd2781cf0b3fbb30f8c04943d997f4d422c43a8
+predictions_sha256: cccffe72abc490c40ebd932b5aa19ddb06d5615e18d0938349178d06b7fc6a6a
+val_reference_sha256: 9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de
+actual_updates: 5313
+actual_epochs: 21
+elapsed_seconds: 2.05

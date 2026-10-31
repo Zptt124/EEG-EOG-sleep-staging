@@ -187,6 +187,7 @@ def test_aggregate_rebuilds_tables_pairs_context_and_updates_only_b_rows(tmp_pat
     assert len(pc) == 2 and (pc.uncertainty_unit == "subject").all() and pc.comparison_run_id.str.contains("CTX3").all()
     ss = pd.read_csv(out / "seed_summary.csv")
     assert (ss.n_seeds == 2).all() and ss.macro_f1_std.notna().all()
+    assert len(ss) == 3 and set(ss["head"]) == {"linear", "bigru_context"}             # 线性头不与长度 1 BiGRU 混组
     r = pd.read_csv(reg)
     assert list(r.owner).count("A") == 1 and (r.owner == "B").sum() == 6               # 他人的行保留
     assert (tmp / "runs" / "W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01" / "n1_errors.csv").exists()

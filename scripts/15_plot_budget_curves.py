@@ -24,7 +24,7 @@ def main(argv=None):
     ap.add_argument("--context-length", type=int, default=1, help="监督曲线用长度 1(无上下文)的结果")
     args = ap.parse_args(argv)
     df = pd.read_csv(args.summary)
-    df = df[df.context_length == args.context_length]
+    df = df[(df["head"] == "linear") & (df.context_length == args.context_length)]   # 预算曲线只用线性头
     if df.empty:
         raise SystemExit("没有符合条件的行")
     fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharex=True)

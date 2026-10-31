@@ -1,0 +1,7 @@
+head,representation,modalities,context_length,nominal_budget,labeled_subjects,unlabeled_signal_subjects,adaptation_version,adaptation_seed,teacher_id,n_seeds,seeds,macro_f1_mean,N1_precision_mean,N1_recall_mean,N1_f1_mean,REM_f1_mean,macro_f1_std,N1_f1_std,note
+bigru_context,eegdm_raw_frozen_eegeog_5120,EEG+EOG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.754419,0.447821,0.41464,0.429827,0.713668,0.001803,0.016163,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+bigru_context,eegdm_raw_frozen_eegeog_5120,EEG+EOG,3,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.771874,0.477606,0.465192,0.468601,0.749953,0.00256,0.018667,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,eegdm_raw_frozen_eegeog_5120,EEG+EOG,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.732092,0.390676,0.378879,0.384536,0.703375,0.002991,0.012157,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,eegdm_raw_frozen_eegeog_5120,EEG+EOG,1,label100,54,0,NA,NA,NA,5,0;1;2;3;4,0.774045,0.475643,0.516965,0.490065,0.783378,0.001881,0.021173,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,eegdm_raw_frozen_eegeog_5120,EEG+EOG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.74558,0.445113,0.38231,0.406554,0.723615,0.003105,0.034954,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,eegdm_raw_frozen_eegeog_5120,EEG+EOG,1,label50,27,0,NA,NA,NA,5,0;1;2;3;4,0.768353,0.480066,0.457263,0.4655,0.77146,0.003499,0.013281,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
