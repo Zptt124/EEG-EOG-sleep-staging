@@ -1,0 +1,90 @@
+# semisupervised_config.yaml —— 第二周 实验④（D）跨模态半监督 N1：全实验固定设置
+# 每个 run 的具体配置见 runs/<run_id>/config.yaml；本文件描述所有 run 共用、事先锁定的规则
+experiment: "W2 Experiment 4 (D): cross-modal semi-supervised sleep staging, focus on N1"
+version: v01
+date_locked: "2026-10-31"
+
+data:
+  dataset: Sleep-EDF Expanded, SC subset, A's preprocessed data (week 1)
+  channels: {EEG: Fpz-Cz, EOG: horizontal}
+  epoch: 30 s, 100 Hz
+  labels: {0: W, 1: N1, 2: N2, 3: N3, 4: REM}
+  split: split_subjects.csv (54 train / 8 val / 16 test); test not extracted, not used
+  evaluation: validation set only, official evaluate.py v1 (B)
+
+label_budgets:
+  source: "B label_subsets_v2.csv (sampling_seed 2024); R1 runs used v1_provisional roles, identical to v2 for every subject (manifests/roles_v1_vs_v2_note.md)"
+  label25: {labeled_subjects: 14, labeled_epochs: 32310, unlabeled_subjects: 40, unlabeled_epochs: 100628}
+  label10: {labeled_subjects: 5, labeled_epochs: 11936, unlabeled_subjects: 49, unlabeled_epochs: 121002}
+  roles_file: {R1: manifests/v1_provisional/labeled_unlabeled_subjects.csv, R2: manifests/v2/labeled_unlabeled_subjects.csv}
+  label_hiding: "label_guard.py sets y = -1 for all unlabeled training subjects; asserted before training and pseudo-labeling"
+  validation_and_test_in_pseudo_pool: false
+
+representations:
+  R1:
+    name: EEGDM raw frozen features (week-1 EMA backbone, condition 14, t=1)
+    features: "EEG and EOG [20,30,128] float16 -> mean over 30 windows -> 2560 each -> concat 5120"
+    cache: <D_local_cache>/R1_eegdm_cond14_pooled_v01 (sha256 in cache_manifest.json)
+    status: done
+  R2:
+    name: "A's budget-matched EEG-only + EOG-only SmallCNN encoder features, concatenated (NOT A's dual-channel encoder)"
+    features: "128 (EEG) + 128 (EOG) = 256 per epoch; encoder of downstream seed k used for seed k; eval mode, no_grad"
+    source: "A release a-cnn-w2-v01-20261031, w2_a_runs_v01.zip; encoder_index.csv on main"
+    checks: "SHA256 vs encoder_index.csv and SHA256SUMS.txt; A's validation predictions reproduced with A's classifier layer (max prob diff 2.8e-3, 48 argmax changes of 423720, all explained by float noise)"
+    cache: <D_local_cache>/R2_cnn_<budget>_seed<k>_v01 (sha256 in each cache_manifest.json)
+    known_issue_in_A_export: "normalization.json names the single channel 'EEG Fpz-Cz' even for EOG encoders; modality taken from config.yaml instead"
+    status: done
+
+standardization: "per modality mean/std fitted on labeled training samples of the budget only (all methods)"
+
+student_head:
+  model: Linear(5120, 5)
+  optimizer: {name: AdamW, lr: 0.001, weight_decay: 0.0001}
+  labeled_batch_size: 128
+  max_epochs: 50
+  early_stopping: "validation macro-F1, strictly better to update, patience 10 (team rule)"
+  device: cpu, torch threads 4, deterministic algorithms
+  downstream_seeds: [0, 1, 2, 3, 4]
+
+methods:
+  D0: "student on true labels of labeled subjects only (identical to week-1 linear head; reproduces week-1 25% results exactly)"
+  D1: "one round of self-training: dual-modal teacher pseudo-labels unlabeled pool; accept per predicted class the top-p by teacher confidence"
+  D2: "same candidates as D1, additionally EEG-only and EOG-only teachers must predict the same class as the dual teacher"
+
+teachers:
+  dual: "the D0 head of the same seed (same features, same training)"
+  eeg_only: "Linear(2560,5) on standardized EEG part, same training rule"
+  eog_only: "Linear(2560,5) on standardized EOG part, same training rule"
+  trained_on: labeled subjects of the budget only
+
+pseudo_labels:
+  type: hard (teacher argmax)
+  weight: 1.0
+  rounds: 1
+  threshold_form: per predicted class top-p (chosen over a global threshold so N1 is not excluded)
+  student_mixing: "each step = 128 labeled + 384 pseudo samples; loss = CE_labeled + 1.0 * CE_pseudo; steps per epoch = labeled batches (same as D0); pseudo stream has its own RNG (seed + 100003)"
+
+calibration:
+  procedure: "leave-one-labeled-subject-out among the 5/14 labeled subjects; fold teachers trained on remaining labeled subjects (standardization refit per fold), predict the held-out subject; pooled held-out predictions simulate the unlabeled pool"
+  r2_fold_encoders: "R2 folds use SmallCNN encoders retrained without the held-out subject (run_fold_cnns.py -> A's train_cnn_w2.py --subjects, seed 0); 38 encoders, 20.8 min"
+  teacher_seed: 0 (chosen p used for all downstream seeds)
+  candidates_p: [0.2, 0.4, 0.6]
+  selection_rule: "largest p with D1 macro pseudo-label precision >= 0.85; if none, smallest p (fixed before seeing any result)"
+  forbidden: "validation scores and unlabeled subjects' true labels are never used to choose p"
+  results:
+    R1_label25: {chosen_p: 0.4, rule_satisfied: true, file: calibration/label25_sseed2024_v01/calibration_decision.json}
+    R1_label10: {chosen_p: 0.2, rule_satisfied: true, file: calibration/label10_sseed2024_v01/calibration_decision.json}
+    R2_label25: {chosen_p: 0.4, rule_satisfied: true, file: calibration/R2_label25_v01/calibration_decision.json}
+    R2_label10: {chosen_p: 0.2, rule_satisfied: false, file: calibration/R2_label10_v01/calibration_decision.json, note: "no candidate reached 0.85, fallback to smallest p as pre-registered"}
+
+analysis:
+  comparison: "analysis/R1_<budget>_v01/ssl_comparison.csv: mean +- std over 5 seeds; paired per-seed D1-D0, D2-D1, D2-D0"
+  subject_bootstrap: "confusion matrices summed over 5 seeds per subject; 1000 subject resamples (rng 0); exploratory (validation also used for early stopping)"
+  n1_direction: analysis/R1_<budget>_v01/n1_direction.csv
+  mechanism_check: "threshold_control.csv: D0 with N1 probability scaled to match D1/D2 N1 recall (alpha matched on validation, analysis only) + threshold-free N1 AP/AUROC"
+
+outputs_per_run: [README.md, config.yaml, history.csv, best.ckpt, metrics.json, predictions_val.csv, "pseudo_label_trace.csv (D1/D2)", "pseudo_label_stats.csv (D1/D2)"]
+registries: [runs/run_index.csv, runs/teacher_index.csv]
+
+code: "src/: label_guard.py, make_label_roles.py, ssl_common.py, build_pooled_cache.py, build_r2_cache.py, run_fold_cnns.py, calibrate_threshold.py, calibrate_threshold_r2.py, run_ssl.py, compare_ssl.py, threshold_control.py, aggregate_pseudo_stats.py (sha256 recorded in every run config); snapshot of the code used for R1 runs: src_snapshots/before_r2_20261031"
+matrix_status: "complete: 2 representations x 2 budgets x 3 methods x 5 seeds = 60 student runs (runs/run_index.csv), teachers in runs/teacher_index.csv"
