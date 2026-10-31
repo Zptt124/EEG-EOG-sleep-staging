@@ -263,6 +263,40 @@ def test_window_neighbors_never_cross_gap_and_mismatched_centers_fail(tmp_path=N
         raise AssertionError("中心样本集合不一致应报错")
 
 
+def _prediction_check_case(p_w, y_pred, tmp_path):
+    """分类层恒等:特征就是 logits,预测表写入给定概率,检查还原 A 预测时的判定。"""
+    import torch
+    run = Path(tmp_path)
+    torch.save({"state_dict": {"classifier.weight": torch.eye(5), "classifier.bias": torch.zeros(5)}}, run / "best.ckpt")
+    pd.DataFrame([dict(sample_id="R_0000", y_pred=y_pred, p_W=p_w, p_N1=1 - p_w, p_N2=0, p_N3=0, p_REM=0)]).to_csv(
+        run / "predictions_val.csv", index=False)
+    x = np.log(np.array([[0.5, 0.5, 1e-12, 1e-12, 1e-12]], dtype=np.float32))     # 自己算出的前两类打平
+    x[0, 1] += 2e-4                                                                # 让本地 argmax 落在 N1
+    return load_script("extract", "19_extract_cnn_features.py").check_against_predictions(run, np.array(["R_0000"]), x)
+
+
+def test_extraction_check_allows_only_near_ties():
+    import tempfile
+    n, differ, _ = _prediction_check_case(0.5003, 0, tempfile.mkdtemp())     # A 判 W,差距 6e-4 < TIE_MARGIN
+    assert (n, differ) == (1, 1)
+    try:
+        _prediction_check_case(0.51, 0, tempfile.mkdtemp())                  # 差距 0.02,不是打平
+    except ValueError as e:
+        assert "无法还原" in str(e)
+    else:
+        raise AssertionError("非打平段类别不同应报错")
+
+
+def test_gap_registry_maps_reused_e1_runs_and_skips_failed(tmp_path=None):
+    import tempfile
+    path = Path(tmp_path or tempfile.mkdtemp()) / "r.csv"
+    pd.DataFrame([dict(run_id="E1_EEG_label100_seed0_v01", status="reused"),
+                  dict(run_id="W2_A_EEG_label10_sseed2024_seed0_v01", status="completed"),
+                  dict(run_id="W2_A_EOG_label10_sseed2024_seed0_v01", status="failed")]).to_csv(path, index=False)
+    names = load_script("gap", "18_gap_table.py").names_in_registry(path)
+    assert names == {"W2_A_EEG_label100_sseed2024_seed0_v01", "W2_A_EEG_label10_sseed2024_seed0_v01"}
+
+
 if __name__ == "__main__":
     for k, v in sorted(globals().items()):
         if k.startswith("test_"):

@@ -1,4 +1,8 @@
 representation,labeled_subjects,unlabeled_signal_subjects,n_seeds,N1_precision_mean,N1_recall_mean,N1_f1_mean
+A_CNN_dual_channel,5,0,5,0.351629,0.403965,0.372395
+A_CNN_dual_channel,14,0,5,0.432921,0.374762,0.386188
+A_CNN_dual_channel,27,0,5,0.477254,0.475867,0.474729
+A_CNN_dual_channel,54,0,5,0.484801,0.502936,0.490387
 eegdm_raw_frozen_eegeog_5120,5,0,5,0.390676,0.378879,0.384536
 eegdm_raw_frozen_eegeog_5120,14,0,5,0.445113,0.38231,0.406554
 eegdm_raw_frozen_eegeog_5120,27,0,5,0.480066,0.457263,0.4655
