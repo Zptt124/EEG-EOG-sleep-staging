@@ -1,79 +1,57 @@
 # EEG–EOG 睡眠分期研究
 
-第一周协作仓库：少标注基线、EEGDM 扩散表征迁移与跨模态融合。
+利用预训练EEG表征与未标注EEG/EOG，研究少标签睡眠分期和N1识别。
 
-**当前状态：A 的数据管线与两个小 CNN 基线已在分支 `feat/a-data-baseline` 落地**（EEG/EOG 验证集 Macro-F1 0.7645 / 0.6827，暂用 A 临时评估脚本，待 B 官方 evaluate.py 复核；详见 `reports/run_index.md` 与 `reports/结果报告.md`）。B 的官方 evaluate.py、25% 名单与 25% 少标注 CNN 结果在分支 `feat/b-evaluation`(见 `reports/b_week1_review.md`);C/D 尚未提交。
+## 当前阶段：第二周 W2 v1.1
 
-## 第一周目标与分工
+本轮依据2026-10-26修订的[第二周工作文档](docs/week2/work_plan_W2_v1.1.pdf)，按阶段与交接条件推进，不对应固定日期。第一周已经得到冻结特征及融合的初步结果；尚未证明EEGDM稳定优于公平CNN，也未解决N1的稳定识别。
 
-| 成员 | 负责范围 | 优先交接 |
+- [WEEK2.md](WEEK2.md)：A/B/C/D任务矩阵、推进顺序与完成标准。
+- [公共协议v2](docs/week2/protocol_v2.md)：数据权限、预算、选模、上下文和评价规则。
+- [交接登记](HANDOFF.md)、[运行模板](RUN_TEMPLATE.md)与[协作规则](CONTRIBUTING.md)。
+- [预算名单](manifests/label_subsets_v2.csv)、[人数/片段/类别统计](manifests/label_counts_v2.csv)：沿用B的seed2024排序，仅新增前5人的label10；[来源与复核说明](docs/week2/budget_provenance.json)。名单由既有产物生成，供B在本PR中核验发布；未将任何第二周训练标记为完成。
+- [GitHub核查与更新记录](docs/week2/github_audit.md)、[任务状态](reports/week2/task_status.csv)、[运行登记](reports/week2/run_registry.csv)。空表仅定义接口，不代表已有实验成绩。
+
+| 成员 | 第二周职责 | 优先产物 |
 | --- | --- | --- |
-| A | Sleep-EDF SC 数据、按人划分、预处理、小 CNN 的 EEG/EOG 基线 | 首先发布真实 `split_subjects.csv`，再交读取/训练代码及验证集预测 |
-| B | 公共 `evaluate.py`、25% 标签子集、少标注 CNN | 先用假数据验证评估脚本；收到 A 划分后发布标签名单 |
-| C | 冻结 EEGDM 主干、EEG 输入适配、特征提取、线性分类 | 先跑小样本；把通用提取脚本与设置交给 D |
-| D | CNN 概率融合、EEGDM 的 EOG 探索和特征融合、N1 错误分析 | 先用假预测验证对齐/翻转统计，真实结果到达后分析 |
+| A | 公平监督CNN：双通道四预算、单模态三预算，各seed0–4 | 10%/25%单模态及25%双通道seed0编码器与标准化接口 |
+| B | 四档监督曲线、25%长度1/3上下文、全组统一评估 | v2名单、统计、协议，随后滚动核验预测 |
+| C | 训练池无标签睡眠域适配：S0/S1、10%/25%、两模态设置 | 数据隔离、主干梯度与测速，再交适配权重和新特征 |
+| D | 两表征、两预算的D0监督/D1普通自训练/D2跨模态自训练 | 原始冻结EEGDM的25% D0/D1先启动，不等待C |
 
-具体步骤见 [WEEK1.md](WEEK1.md)，交接要求见 [HANDOFF.md](HANDOFF.md)，协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+共享划分为**54训练/8开发验证/16封存测试**；预算按人计数：5/14/27/54。正式下游种子0–4，按验证Macro-F1选同一权重并报告N1 precision/recall/F1，早停patience=10。监督仅使用预算内人员信号；C/D额外使用无标签信号时单列人数。详情以公共协议为准。
 
-## 共同实验协议
+## 第一周交付在哪里
 
-- 第一周只使用 Sleep-EDF Expanded 的 SC 部分。EEG：Fpz-Cz；EOG：水平 EOG；基线按 100 Hz、30 秒片段处理。
-- 按受试者划分训练/验证/测试，约 70%/10%/20%；以实际清单为准。同一人的所有夜晚必须属于同一集合。
-- A 发布的 `split_subjects.csv` 是唯一依据，种子与版本写入记录。模板只含表头，不是真实划分。
-- 标签：`0=W, 1=N1, 2=N2, 3=N3, 4=REM`；旧3/4期合并N3，Movement/Unknown按协议排除。
-- 基线的归一化统计量只从训练集计算。本周只在验证集调参和分析，测试集封存。
-- 主指标 Macro-F1；另存每类 precision/recall/F1/support、N1 指标、混淆矩阵（行真实、列预测）。
-- 25%标签按训练受试者抽样，名单嵌套于100%；训练种子和抽样种子分开记录。
-- EEGDM 输入缩放、重采样、通道条件、长度、取层及噪声设置必须单独记录并核查。EOG 迁移是待验证假设，不能预设有效。
+截至2026-10-27核查，main含A的交付；B/C/D已在独立分支和PR交付，仍未合并。分支有交付不等于第二周矩阵已完成，旧结果须逐项匹配后登记复用。
 
-## 现有文件
+| 成员 | 固定交付commit | 入口 | PR状态（核查快照） |
+| --- | --- | --- | --- |
+| A | `02f120ee80c1c7a7822c33746ce92017632f1faa` | [数据与运行记录](reports/run_index.md) | 已在main；A分支也保留第一周交付，不自动替换共同划分 |
+| B | `6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923` | [官方评估、名单与复盘](https://github.com/Zptt124/EEG-EOG-sleep-staging/tree/6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923) | [PR #1](https://github.com/Zptt124/EEG-EOG-sleep-staging/pull/1)，open |
+| C | `b6ee02852d379cc2ee748d817cb421de619cac89` | [冻结EEG表征与结果](https://github.com/Zptt124/EEG-EOG-sleep-staging/tree/b6ee02852d379cc2ee748d817cb421de619cac89/experiment3) | [PR #2](https://github.com/Zptt124/EEG-EOG-sleep-staging/pull/2)，draft |
+| D | `f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed` | [EOG、融合、多种子与错误分析](https://github.com/Zptt124/EEG-EOG-sleep-staging/tree/f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed/experiment4) | [PR #3](https://github.com/Zptt124/EEG-EOG-sleep-staging/pull/3)，open |
 
-- `protocol.example.yaml`：待团队确认的配置模板，不能直接当作完成的训练配置。
-- `predictions_val.template.csv`：统一验证集预测表头。
-- `split_subjects.template.csv`：受试者划分表头。
-- `RUN_TEMPLATE.md`：每次运行的记录模板。
-- `文件清单.md`：全仓库每个文件的用途与收件人速查。
-- `交付包/实验①交付包_20261018/`：A 的完整分发版（含预处理数据、运行记录、预测表，
-  每个子文件夹带说明），供无网盘环境直接获取；团队开发仍按下方目录约定工作。
-- `.gitignore`：排除原始数据、权重、缓存、运行大文件与密钥（交付包内成品除外）。
+[WEEK1.md](WEEK1.md)保留第一周清单；旧勾选与“待交付”是当时记录，当前入口以上表为准。历史数据及结果见[第一周报告](reports/结果报告.md)和[文件清单](文件清单.md)。
 
-## 开发时采用的目录约定
-
-成员提交实现时按以下路径新增文件；这些是约定，不表示已经实现：
-
-```text
-src/data/          # A：数据读取和预处理
-src/models/        # A：SmallCNN；C/D：线性分类器
-src/evaluation/    # B：公共指标
-src/features/      # C：EEGDM适配；与D共享
-src/fusion/        # D：融合与错误分析
-scripts/          # 各实验运行入口
-configs/          # 可复现配置（不用绝对私人路径）
-manifests/        # 版本化划分与标签名单
-reports/          # 小体积汇总和研究假设
-data/             # 本地原始/处理数据，不入Git
-checkpoints/      # 本地模型，不入Git
-features/         # 本地特征缓存，不入Git
-runs/             # 本地完整运行记录，不入Git
-```
-
-`runs/` 虽被Git忽略，仍须本地完整保存并通过团队约定的存储方式交接。小体积配置、指标及运行索引整理到 `reports/`，逐片段大表通过运行编号及存储路径交接。
-
-## 开始协作
+## 获取与复核预算
 
 ```bash
-git clone https://github.com/Zptt124/eeg-eog-sleep-staging.git
-cd eeg-eog-sleep-staging
-git switch -c feat/a-data-baseline
+git clone https://github.com/Zptt124/EEG-EOG-sleep-staging.git
+cd EEG-EOG-sleep-staging
+python scripts/build_week2_budgets.py --output-dir /tmp/w2-budget-check
+python -m unittest discover -s tests -p 'test_week2_budgets.py'
 ```
 
-私有仓库需要先获得访问权限。当前没有安装命令和训练命令；环境、依赖版本和运行入口由成员在实现后补充并验证。C 可单独维护 EEGDM 环境，避免把所有依赖混在一起。
+脚本默认仅使用仓库内受试者清单及训练夜晚类别计数，不访问信号或测试标签。需从A已核验NPZ重建计数时，安装NumPy并使用`--processed <NPZ目录>`，只读取54人训练记录的`labels`。输出目录不可已有同名文件；比较CSV后交B核验。完整说明见[协议](docs/week2/protocol_v2.md)。Windows将输出路径换成空目录。训练仍由各组在独立设备实施，不因同步协作文档而启动训练。
+
+## 文件与大产物
+
+`manifests/`保存划分和名单；`scripts/`保存入口；`reports/week2/`保存小表及登记。完整run在团队存储保存六件套；权重、原始信号及特征不新增进Git，仅登记位置、SHA256、索引及版本。第一周已有分发包保留，新适配缓存不能覆盖S0。
 
 ## 资料
 
-- 数据：https://physionet.org/content/sleep-edfx/1.0.0/
-- EEGDM：https://github.com/jhpuah/EEGDM
-- 权重：https://huggingface.co/jhpuah/eegdm
-- 后续参考：https://github.com/Ben1001409/SleepDIFFormer
+- [Sleep-EDF Expanded](https://physionet.org/content/sleep-edfx/1.0.0/)
+- [EEGDM代码](https://github.com/jhpuah/EEGDM)与[权重](https://huggingface.co/jhpuah/eegdm)：使用已核验版本，不自动追随上游。
 
-基于团队《睡眠分期课题·第一周工作文档》整理。本文规定协作流程，不声称文档中每项 EEGDM 技术细节已实测。引用外部代码前核查其许可，保留来源；当前未指定开源许可证。
+本轮不启动HMC/ISRUC，不切换62人CV。尚未指定开源许可证；第三方代码须核查许可并保留来源。

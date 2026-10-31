@@ -1,0 +1,5 @@
+# Preserve the byte-identical B v1 snapshot and reproducible W2 CSV hashes.
+/manifests/label_subsets_v1.csv -text
+/manifests/label_subsets_v2.csv text eol=lf
+/manifests/label_counts_v2.csv text eol=lf
+/manifests/label_record_counts_v2.csv text eol=lf

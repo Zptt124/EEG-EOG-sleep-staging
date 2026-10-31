@@ -1,4 +1,5 @@
-# 协议模板：没有实现绑定，不可视为已经可以运行的训练配置。
+# 第一周历史协议模板：第二周公共规则见 docs/week2/protocol_v2.md。
+# 没有实现绑定，不可视为已经可以运行的训练配置。
 status: draft_requires_team_review
 dataset: sleep_edf_expanded_sc
 channels:
