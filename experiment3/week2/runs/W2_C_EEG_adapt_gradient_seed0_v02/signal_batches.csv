@@ -1,0 +1,3 @@
+step,sample_id,subject_id,record_id,epoch_index,row_index,segment_index,target_points,source_split,y_hidden
+1,SC4441_1010,SC444,SC4441,1010,100,2,1000,train,-1
+1,SC4441_1360,SC444,SC4441,1360,450,4,1000,train,-1

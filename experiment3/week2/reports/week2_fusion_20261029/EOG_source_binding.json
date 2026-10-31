@@ -1,0 +1,13 @@
+{
+  "input_sha256": {
+    "scripts/extract_features.py": "d660cd5768fb4e90e0e713423ab0bfb054837b26670119e13e2f9e8cf447a235",
+    "checkpoints/backbone.ckpt": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+    "vendor/experiment1-review/manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+    "vendor/d-review-f00a16b/experiment4/manifests/eog_cond14_v01/feature_config.json": "a3f935e15a969568dd50d1fe9df0e4c967a9f5b153856035c7de71ea1ea16b3b",
+    "vendor/d-review-f00a16b/experiment4/manifests/eog_cond14_v01/feature_index.csv": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+    "reports/week2_fusion_20261029/EOG_protocol_preflight.json": "622946225dcd9b67087d1852bbae2f7e05b2ff9609273836d246ca91cf464f51",
+    "reports/week2_fusion_20261029/EOG_probe/probe_audit.json": "010b1bae413fdce68acaefa7d9b20d8c71c527af993a981ec6fb14257ff52530"
+  },
+  "D_full_cache_received": false,
+  "source": "local_frozen_EOG_regeneration"
+}

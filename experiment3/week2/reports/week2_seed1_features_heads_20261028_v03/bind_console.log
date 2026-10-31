@@ -1,0 +1,13 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+Traceback (most recent call last):
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_replication_features_heads.py", line 287, in <module>
+    main()
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_replication_features_heads.py", line 280, in main
+    result = bind(args.config, args.report)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_replication_features_heads.py", line 146, in bind
+    require('Ran 10 tests' in tests and '\nOK\n' in tests, 'Repeat pipeline tests have not passed')
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/validate_adapt_lock.py", line 21, in require
+    raise ValueError(message)
+ValueError: Repeat pipeline tests have not passed

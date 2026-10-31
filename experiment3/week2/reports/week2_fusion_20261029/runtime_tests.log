@@ -1,0 +1,26 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+test_all_40_positions_and_three_adaptations_are_unconditional (test_primary_fusion.PrimaryFusionChecks.test_all_40_positions_and_three_adaptations_are_unconditional) ... ok
+test_concatenation_dimension_order_and_dtype (test_primary_fusion.PrimaryFusionChecks.test_concatenation_dimension_order_and_dtype) ... ok
+test_hyperparameter_or_budget_drift_rejected (test_primary_fusion.PrimaryFusionChecks.test_hyperparameter_or_budget_drift_rejected) ... ok
+test_local_cache_cannot_be_mislabeled_as_received_D_bytes (test_primary_fusion.PrimaryFusionChecks.test_local_cache_cannot_be_mislabeled_as_received_D_bytes) ... ok
+test_normalization_is_per_feature_across_modalities (test_primary_fusion.PrimaryFusionChecks.test_normalization_is_per_feature_across_modalities) ... ok
+test_registered_numerical_source_preserved (test_primary_fusion.PrimaryFusionChecks.test_registered_numerical_source_preserved) ... ok
+test_runtime_dependencies_are_bound (test_primary_fusion.PrimaryFusionChecks.test_runtime_dependencies_are_bound) ... ok
+test_synthetic_head_executes_with_5120_columns_and_primary_metadata (test_primary_fusion.PrimaryFusionChecks.test_synthetic_head_executes_with_5120_columns_and_primary_metadata) ... {"stage": "train_head", "run_id": "synthetic_primary", "epoch": 1, "train_loss": 1.603599190711975, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 2, "train_loss": 1.6020017862319946, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 3, "train_loss": 1.6004050970077515, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 4, "train_loss": 1.5988091230392456, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 5, "train_loss": 1.5972137451171875, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 6, "train_loss": 1.5956192016601562, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 7, "train_loss": 1.5940252542495728, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 8, "train_loss": 1.5924321413040161, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 9, "train_loss": 1.5908396244049072, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 10, "train_loss": 1.5892479419708252, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_primary", "epoch": 11, "train_loss": 1.5876569747924805, "val_macro_f1": 0.2}
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.069s
+
+OK

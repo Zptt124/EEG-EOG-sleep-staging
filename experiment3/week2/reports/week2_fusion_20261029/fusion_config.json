@@ -1,0 +1,83 @@
+{
+  "config_id": "W2_primary_fusion_localEOG_v01",
+  "parent_config": "configs/adapt_W2_C_S1_pilot_v01.yaml",
+  "parent_config_sha256": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
+  "D_reference_commit": "f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed",
+  "D_metadata": "vendor/d-review-f00a16b/experiment4/manifests/eog_cond14_v01",
+  "D_full_cache_received": false,
+  "EOG_source": "local_regeneration_using_identical_D_reference_configuration",
+  "D_raw_file_byte_equivalence_unverified": true,
+  "EOG_root": "features/eog_cond14_local_Dprotocol_v01",
+  "EOG_original_checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+  "EEG_sources": [
+    {
+      "key": "S0",
+      "adaptation_seed": null,
+      "representation": "S0",
+      "feature_root": "features/eeg_cond14_v01",
+      "pooled": "reports/week2_eeg_comparison_20261028/execution/S0_pooled.npy",
+      "audit": "reports/week2_eeg_comparison_20261028/execution/S0_feature_audit.json"
+    },
+    {
+      "key": "S1_aseed0",
+      "adaptation_seed": 0,
+      "representation": "S1",
+      "feature_root": "features/eeg_cond14_S1_aseed0_steps10000_v01",
+      "pooled": "reports/week2_eeg_comparison_20261028/execution/S1_pooled.npy",
+      "audit": "reports/week2_eeg_comparison_20261028/execution/S1_feature_audit.json"
+    },
+    {
+      "key": "S1_aseed1",
+      "adaptation_seed": 1,
+      "representation": "S1",
+      "feature_root": "features/eeg_cond14_S1_aseed1_steps10000_v02",
+      "pooled": "reports/week2_seed1_features_heads_20261028_v04/execution/S1_pooled.npy",
+      "audit": "reports/week2_seed1_features_heads_20261028_v04/execution/S1_feature_audit.json"
+    },
+    {
+      "key": "S1_aseed2",
+      "adaptation_seed": 2,
+      "representation": "S1",
+      "feature_root": "features/eeg_cond14_S1_aseed2_steps10000_v01",
+      "pooled": "reports/week2_seed2_features_heads_20261029/execution/S1_pooled.npy",
+      "audit": "reports/week2_seed2_features_heads_20261029/execution/S1_feature_audit.json"
+    }
+  ],
+  "budgets": [
+    "label10",
+    "label25"
+  ],
+  "downstream_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "sampling_seed": 2024,
+  "adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "input_dim": 5120,
+  "feature_order": [
+    "EEG",
+    "EOG"
+  ],
+  "classifier": {
+    "name": "Linear(5120,5)",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "max_epochs": 50,
+    "patience": 10,
+    "loss": "unweighted_cross_entropy",
+    "selection": "strictly highest development validation macro-F1",
+    "normalization": "per-feature fitted only current labeled training subjects",
+    "std_floor": 1e-06
+  },
+  "planned_new_heads": 40,
+  "test_used": false
+}

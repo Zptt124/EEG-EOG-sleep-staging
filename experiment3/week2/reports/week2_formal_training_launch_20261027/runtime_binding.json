@@ -1,0 +1,21 @@
+{
+  "status": "implemented_tested_bound_before_formal_update_1",
+  "bound_at_Asia_Shanghai": "2026-10-27T22:59:09.666371+08:00",
+  "config_id": "W2_C_S1_pilot_v01",
+  "config_sha256": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
+  "trainer_sha256": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+  "unit_tests_passed": 8,
+  "initialization_report": "reports/week2_formal_training_launch_20261027/initialization_validation.json",
+  "file_sha256": {
+    "scripts/train_sleep_adaptation.py": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+    "scripts/adapt_preflight.py": "7a3a4f4e639951050228d526c9e2b33c562936340982a3cd09b1fa4ad20426db",
+    "scripts/validate_adapt_lock.py": "f13d99b67ece2227a43b3427a5bf5e684f58d49e5f0c2d9015319cc169d70f53",
+    "tests/test_train_sleep_adaptation.py": "828a0abafff130fe9ce16c87a2bedee7f0c52408c77d445e29ce34403e77a205",
+    "configs/adapt_W2_C_S1_pilot_v01.yaml": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
+    "configs/adapt_W2_C_S1_pilot_v01.lock.json": "dc24a369f08ecf2e13caf99b7915ff1e9f0a204c878424fb8fa492f8619098ba",
+    "reports/week2_formal_training_launch_20261027/initialization_validation.json": "17a5ccc16264bf83a1eb74edb8abad9f0d8b7bfc9a5b92d2c7e28947f2b91f89",
+    "reports/week2_formal_training_launch_20261027/runtime_tests.log": "760c7e91acf85a9ca54b96871c12307ae7f68f17f1fd8485709180ae30b69a65"
+  },
+  "formal_optimizer_updates_at_binding": 0,
+  "synthetic_CPU_tests_are_not_real_EEG_updates": true
+}

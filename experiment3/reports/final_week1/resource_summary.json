@@ -1,0 +1,11 @@
+{
+  "samples": 154124,
+  "records": 122,
+  "feature_bytes": 23673462016,
+  "extraction_compute_and_write_seconds": 5024.659180571003,
+  "throughput_samples_per_second": 30.67352321048078,
+  "peak_gpu_mb": 591.32763671875,
+  "raw_float32_bytes_without_headers": 47346892800,
+  "stored_float16_bytes_without_headers": 23673446400,
+  "cost_of_mean_pooled_float32_bytes": 1578229760
+}

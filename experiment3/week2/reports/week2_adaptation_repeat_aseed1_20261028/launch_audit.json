@@ -1,0 +1,22 @@
+{
+  "status": "running_verified",
+  "verified_at": "2026-10-28T20:10:47.601997+08:00",
+  "pid": 404,
+  "detached_session_leader": true,
+  "verified_updates": 100,
+  "verified_EMA_updates": 100,
+  "all_100_losses_and_gradients_finite": true,
+  "steps_contiguous": true,
+  "frozen_check_reported_passed": true,
+  "data_access_members": [
+    "epoch_index.npy",
+    "signal.npy"
+  ],
+  "first100_sampled_subjects": 54,
+  "first_batch_differs_from_seed0": true,
+  "original_EMA_initial_parameter_sha256": "5c0ee148d419face7a403677362fe3a8358328cbd8a905b7ea468a28e1f370f5",
+  "inherited_seed0_weights": false,
+  "test_used": false,
+  "estimated_remaining_minutes_at_step100": 100.23740819730001,
+  "source_config_sha256": "6d04861ba9fab8237fd12e492c9f797cdff5685ded8f7185ff98e512f686e9d2"
+}

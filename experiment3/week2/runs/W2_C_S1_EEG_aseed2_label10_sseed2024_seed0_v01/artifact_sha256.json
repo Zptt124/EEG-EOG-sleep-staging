@@ -1,0 +1,11 @@
+{
+  "best_head.pt": "47dfe01130c0720799f7516a9a5461cf2722fd7de679e78ab60c1bb44f936f29",
+  "config.yaml": "d24a0fe445941cdb87ad341311c29fc0e64b723b61093ee92d7460b76eb60384",
+  "confusion_matrix.csv": "bfb0025304687d3a471817f6ee9dc8de467cb40310ef3791b942aa51b119d054",
+  "history.json": "72bca155eb6eb0548f6b5cfb960166fecf814fca128dd9abc6575339bbcc582e",
+  "metrics.json": "3798e87563cfb2c2940174f89fc6f6a56d03fce116ff496a350bd6ca42ba9cda",
+  "per_subject_metrics.csv": "3f613fc5e735083a18abec7b5437a39eaf33f5343ad14bc3d57599a2653c7689",
+  "predictions_val.csv": "5f538453e338ca5ad2a66d9459e95c3a5f9923007f3c87774f92f76f2c29b392",
+  "resource_profile.csv": "ba95fc5cec72d15bd84b12e34d6d2f341a70c6efab8ec4dac95ec653351081c1",
+  "run_summary.md": "ac614461e421ba55aab54676440b6a7c5c3b56b63955d52b01cf410bb0a40896"
+}

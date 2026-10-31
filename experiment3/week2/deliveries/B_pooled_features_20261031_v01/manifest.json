@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "release_tag": "c-pooled-features-v01-20261031",
+  "requested_by": "B via user",
+  "EEG_is_original_S0_not_adapted_S1": true,
+  "shape": [
+    154124,
+    2560
+  ],
+  "dtype": "float32",
+  "keys": [
+    "sample_id",
+    "x"
+  ],
+  "normalization_applied": false,
+  "feature_normalization": "none; downstream statistics must be fitted on permitted labeled training subjects only",
+  "pooling": "raw float16 gate [N,20,30,128] converted to float32, mean over 30 time windows, flatten layer-major",
+  "train_samples": 132938,
+  "validation_samples": 21186,
+  "test_samples": 0,
+  "train_subjects": 54,
+  "validation_subjects": 8,
+  "original_checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+  "EOG_source": "C local regeneration using D original frozen reference protocol",
+  "D_full_cache_received": false,
+  "D_raw_file_byte_equivalence_unverified": true,
+  "B_receipt_or_acceptance_confirmed": false,
+  "packaging_script_sha256": "5ba6e268667072fd2f1f2c35a77da3bb743650759428e8aff775f0c2c4db02f9",
+  "files": [
+    {
+      "modality": "EEG",
+      "representation": "S0_original_frozen",
+      "pool": "reports/week2_eeg_comparison_20261028/execution/S0_pooled.npy",
+      "audit": "reports/week2_eeg_comparison_20261028/execution/S0_feature_audit.json",
+      "features": "features/eeg_cond14_v01",
+      "filename": "EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "bytes": 1319013782,
+      "sha256": "047bafc735d64297648b173447ec5d8425063a25b3f85562a7dbf12295800fb7",
+      "shape": [
+        154124,
+        2560
+      ],
+      "dtype": "float32",
+      "sample_id_dtype": "<U11",
+      "unique_sample_ids": 154124,
+      "source_pooled_sha256": "da1dc03bf94f43b76b4a6f45098838f5eadebd4009433c11452df2b123fa3ddf",
+      "source_index_sha256": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+      "source_config_sha256": "d2e3e70d71945e0a6ca673f800508f56a885588954876626d47fcfed691411a0",
+      "roundtrip_x_bitwise_equal": true,
+      "roundtrip_sample_id_order_exact": true,
+      "finite": true,
+      "normalization_applied": false,
+      "packaging_seconds": 129.46845489996485
+    },
+    {
+      "modality": "EOG",
+      "representation": "S0_original_frozen_C_local_reconstruction",
+      "pool": "reports/week2_fusion_20261029/execution/EOG_audit/S0_pooled.npy",
+      "audit": "reports/week2_fusion_20261029/execution/EOG_audit/S0_feature_audit.json",
+      "features": "features/eog_cond14_local_Dprotocol_v01",
+      "filename": "EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "bytes": 1320542159,
+      "sha256": "e444e819be3936b7f11b80daff873b227e34547886c91118f06924ed36654590",
+      "shape": [
+        154124,
+        2560
+      ],
+      "dtype": "float32",
+      "sample_id_dtype": "<U11",
+      "unique_sample_ids": 154124,
+      "source_pooled_sha256": "f5234b5f7731e77f1b4d9304567da7284ea9d13b123c41c759a6931d5daf8ad0",
+      "source_index_sha256": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+      "source_config_sha256": "e95b12224ef751a39226ef8998521fcd3f20bd51eb1c0c5509a3d272aa2de48a",
+      "roundtrip_x_bitwise_equal": true,
+      "roundtrip_sample_id_order_exact": true,
+      "finite": true,
+      "normalization_applied": false,
+      "packaging_seconds": 135.36016320018098
+    }
+  ],
+  "sample_index_sha256": "0892c6f61807ac6316791530b24a44da33026fcaf73ff1c1d984c7a3cab62f49"
+}

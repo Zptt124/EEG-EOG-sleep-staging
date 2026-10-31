@@ -1,0 +1,2 @@
+step,loss,gradient_norm_before_clip,data_seconds,compute_seconds,step_seconds,peak_allocated_mib,peak_reserved_mib,timesteps
+1,0.05675681307911873,0.6555789113044739,0.5110216960000002,2.8702759239999978,3.381863801999998,749.517578125,850.0,14;30

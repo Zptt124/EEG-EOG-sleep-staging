@@ -1,0 +1,13 @@
+{
+  "record_id": "SC4362",
+  "split": "train",
+  "n_samples": 824,
+  "seconds": 26.972838980999768,
+  "samples_per_second": 30.54924995401644,
+  "peak_gpu_mb": 603.20361328125,
+  "bytes": 126566528,
+  "batch_size": 4,
+  "cache_frozen_kernels": true,
+  "weight_sha256": "1c49356e56350ca886dd3e765ebaa28ea3a8db094c2265d82a64d9becda2c426",
+  "sha256": "ec1d8000b72e36284ccfb153074495e97ba3cf13897c49ca3baa47f0bda6910c"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed2_v01",
+  "representation": "S1",
+  "budget": "label10",
+  "seed": 2,
+  "epochs": 34,
+  "best_epoch": 24,
+  "val_macro_f1": 0.6763009961605654,
+  "n1_f1": 0.29574374725756913,
+  "rem_f1": 0.5318584070796459,
+  "seconds": 7.29046425100023,
+  "test_used": false
+}

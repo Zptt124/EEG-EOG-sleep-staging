@@ -1,0 +1,37 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+test_audit_and_pool_math_identical_to_pilot (test_replication_features_heads.RepeatFeatureHeadChecks.test_audit_and_pool_math_identical_to_pilot) ... ok
+test_baseline_full_match_rejects_normalization_seed_or_lr_drift (test_replication_features_heads.RepeatFeatureHeadChecks.test_baseline_full_match_rejects_normalization_seed_or_lr_drift) ... ok
+test_bound_input_tampering_is_rejected (test_replication_features_heads.RepeatFeatureHeadChecks.test_bound_input_tampering_is_rejected) ... ok
+test_exact_registered_feature_derivation (test_replication_features_heads.RepeatFeatureHeadChecks.test_exact_registered_feature_derivation) ... ok
+test_extraction_math_and_loop_source_identical_to_pilot (test_replication_features_heads.RepeatFeatureHeadChecks.test_extraction_math_and_loop_source_identical_to_pilot) ... ok
+test_head_math_rng_and_selection_source_identical_to_pilot (test_replication_features_heads.RepeatFeatureHeadChecks.test_head_math_rng_and_selection_source_identical_to_pilot) ... ok
+test_reject_selected_checkpoint_from_wrong_adaptation_seed (test_replication_features_heads.RepeatFeatureHeadChecks.test_reject_selected_checkpoint_from_wrong_adaptation_seed) ... ok
+test_reject_transform_drift_and_seed0_cache_destination (test_replication_features_heads.RepeatFeatureHeadChecks.test_reject_transform_drift_and_seed0_cache_destination) ... ok
+test_synthetic_head_executes_and_saves_correct_seed_metadata (test_replication_features_heads.RepeatFeatureHeadChecks.test_synthetic_head_executes_and_saves_correct_seed_metadata) ... {"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 1, "train_loss": 1.6115857362747192, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 2, "train_loss": 1.6099852323532104, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 3, "train_loss": 1.6083853244781494, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 4, "train_loss": 1.6067861318588257, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 5, "train_loss": 1.6051875352859497, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 6, "train_loss": 1.6035897731781006, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 7, "train_loss": 1.6019924879074097, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 8, "train_loss": 1.6003961563110352, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 9, "train_loss": 1.5988004207611084, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 10, "train_loss": 1.597205638885498, "val_macro_f1": 0.0}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 11, "train_loss": 1.595611333847046, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 12, "train_loss": 1.5940178632736206, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 13, "train_loss": 1.5924251079559326, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 14, "train_loss": 1.590833306312561, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 15, "train_loss": 1.5892421007156372, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 16, "train_loss": 1.5876518487930298, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 17, "train_loss": 1.5860623121261597, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 18, "train_loss": 1.584473729133606, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 19, "train_loss": 1.5828858613967896, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 20, "train_loss": 1.581298828125, "val_macro_f1": 0.2}
+{"stage": "train_head", "run_id": "synthetic_seed1", "epoch": 21, "train_loss": 1.5797126293182373, "val_macro_f1": 0.2}
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.213s
+
+OK

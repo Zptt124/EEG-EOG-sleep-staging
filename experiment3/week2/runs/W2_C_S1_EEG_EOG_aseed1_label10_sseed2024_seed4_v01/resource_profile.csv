@@ -1,0 +1,2 @@
+device,threads,seconds,epochs,train_samples,val_samples,test_used
+cpu,4,6.9011227959999815,20,11936,21186,False

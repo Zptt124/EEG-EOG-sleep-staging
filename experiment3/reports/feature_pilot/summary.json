@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "subjects": [
+    "SC4001",
+    "SC4011",
+    "SC4021",
+    "SC4031",
+    "SC4081",
+    "SC4101"
+  ],
+  "n_samples": 296,
+  "class_counts": {
+    "0": 60,
+    "1": 60,
+    "2": 60,
+    "3": 56,
+    "4": 60
+  },
+  "input_shape": [
+    296,
+    3000
+  ],
+  "transformed_shape": [
+    296,
+    1,
+    6000
+  ],
+  "original_unit": "uV",
+  "transformed_min": -1.0963802337646484,
+  "transformed_max": 1.0950502157211304,
+  "conditions_tested": [
+    14,
+    18,
+    10
+  ],
+  "primary_condition": 14,
+  "selection_basis": "Preselected engineering default FP1-F3; no claim of best accuracy",
+  "test_used": false,
+  "validation_used": false,
+  "config": {
+    "version": "E3_features_v01",
+    "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969",
+    "source_commit": "02f120ee80c1c7a7822c33746ce92017632f1faa",
+    "checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+    "modality": "eeg",
+    "source_unit": "uV",
+    "source_fs": 100,
+    "target_fs": 200,
+    "resampling": "scipy.signal.resample_poly(up=2,down=1), default filter",
+    "amplitude": "uV / 100 then official staged_mu_law(mu=255), once",
+    "z_score": false,
+    "condition": 14,
+    "diffusion_t": 1,
+    "random_noise": false,
+    "query": "gate",
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "reduction": "std, torch correction=1",
+    "window_points": 200,
+    "stride_points": 200,
+    "length_points": 6000,
+    "internal_segments": 6,
+    "continuous_30s_context": false,
+    "axes": [
+      "sample",
+      "layer",
+      "time_window",
+      "hidden"
+    ],
+    "feature_shape": [
+      20,
+      30,
+      128
+    ],
+    "computation_dtype": "float32",
+    "storage_dtype": "float16",
+    "seed": 0
+  }
+}

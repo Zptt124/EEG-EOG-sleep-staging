@@ -1,0 +1,11 @@
+test_contract_and_actual_files (test_adapt_lock.AdaptLockChecks.test_contract_and_actual_files) ... ok
+test_reject_changed_ema_policy_or_s0_overwrite (test_adapt_lock.AdaptLockChecks.test_reject_changed_ema_policy_or_s0_overwrite) ... ok
+test_reject_hidden_updates_and_budget_changes (test_adapt_lock.AdaptLockChecks.test_reject_hidden_updates_and_budget_changes) ... ok
+test_reject_label_or_external_signal_access (test_adapt_lock.AdaptLockChecks.test_reject_label_or_external_signal_access) ... ok
+test_reject_posthoc_backbone_selection (test_adapt_lock.AdaptLockChecks.test_reject_posthoc_backbone_selection) ... ok
+test_reject_tampered_config_bytes (test_adapt_lock.AdaptLockChecks.test_reject_tampered_config_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.856s
+
+OK

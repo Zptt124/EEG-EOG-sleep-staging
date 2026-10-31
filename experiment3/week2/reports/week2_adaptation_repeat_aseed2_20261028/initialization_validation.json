@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "optimizer_updates": 0,
+  "ema_updates": 0,
+  "stage_labels_or_npz_read": false,
+  "config_sha256": "db16fe27723690db1af0fc5b330da6cda5428709d2028e8ab5ec3781c6748546",
+  "trainer_sha256": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+  "initial_parameter_sha256": "5c0ee148d419face7a403677362fe3a8358328cbd8a905b7ea468a28e1f370f5",
+  "new_ema_initial_parameter_sha256": "5c0ee148d419face7a403677362fe3a8358328cbd8a905b7ea468a28e1f370f5",
+  "frozen_parameter_sha256": "5639fe62da24126cd5e199cf86de81e42bb35fd9a5e00d91257a419d1cb1d63c",
+  "trainable_tensors": 34,
+  "trainable_parameters": 527233,
+  "environment": {
+    "python": "3.11.17",
+    "packages": {
+      "torch": "2.7.1+cu126",
+      "numpy": "1.26.4",
+      "scipy": "1.15.3",
+      "diffusers": "0.33.1",
+      "PyYAML": "6.0.2",
+      "einops": "0.8.1",
+      "ema-pytorch": "0.7.7"
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_gpu_bytes": 8585216000,
+    "nvidia_smi": "NVIDIA GeForce RTX 4060 Laptop GPU, 566.26, 8188 MiB, 942 MiB, 40"
+  },
+  "time_Asia_Shanghai": "2026-10-29T00:11:54+08:00"
+}

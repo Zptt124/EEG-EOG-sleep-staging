@@ -1,0 +1,30 @@
+{
+  "status": "running_verified",
+  "pid": 397,
+  "launched_at_Asia_Shanghai": "2026-10-28T13:48:00+08:00",
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/extract_adapted_features.py",
+    "--mode",
+    "extract",
+    "--config",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/configs/features_W2_C_S1_pilot_v01.yaml",
+    "--binding",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/reports/week2_next_stage_20261028/extraction_binding.json"
+  ],
+  "detached_session": true,
+  "log": "extraction_console.log",
+  "output_root": "features/eeg_cond14_S1_aseed0_steps10000_v01",
+  "expected_records": 122,
+  "expected_samples": 154124,
+  "selected_weight_sha256": "4bf8d441e2c061db5662e42740d8ff742827c07062cb7965d7961ab1c502d385",
+  "extractor_script_sha256": "225de39c94846f3c81b8a9628d50896c88f0a6d5ec1fee8eef82c34e0ba0efa7",
+  "preparation_binding_sha256": "e09755457b0fd9833c0c7e4ad9fa1d369a8cc19aee5d9349b11ff1e9c2ffddc9",
+  "probe_sha256": "fcc055480dd0f8543fb31b13980f75e3ad1120860cce0a9993af2ab383e335ea",
+  "S0_overwritten": false,
+  "test_signals_used": false,
+  "verified_at_Asia_Shanghai": "2026-10-28T13:49:48+08:00",
+  "verified_records": 2,
+  "verified_samples": 1968
+}

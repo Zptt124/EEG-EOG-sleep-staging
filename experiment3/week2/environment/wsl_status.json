@@ -1,0 +1,17 @@
+{
+  "wsl.exe --version": {
+    "returncode": 0,
+    "stdout": "WSL 版本: 3.0.3.0\r\n内核版本: 6.18.54.1-1\r\nWSLg 版本: 1.0.79\r\nMSRDC 版本: 1.2.7391\r\nDirect3D 版本: 1.611.1-81528511\r\nDXCore 版本: 10.0.26100.1-240331-1435.ge-release\r\nWindows 版本: 10.0.26200.9711\r\n",
+    "stderr": ""
+  },
+  "wsl.exe --status": {
+    "returncode": 0,
+    "stdout": "默认分发: Ubuntu-24.04\r\n默认版本: 2\r\n当前计算机配置不支持 WSL1。\r\n若要使用 WSL1，请启用“Windows Subsystem for Linux”可选组件。\r\n",
+    "stderr": ""
+  },
+  "wsl.exe --list --verbose": {
+    "returncode": 0,
+    "stdout": "  NAME            STATE           VERSION\r\n* Ubuntu-24.04    Stopped         2\r\n",
+    "stderr": ""
+  }
+}

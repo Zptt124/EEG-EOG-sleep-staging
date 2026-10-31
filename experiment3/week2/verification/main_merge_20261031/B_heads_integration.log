@@ -1,0 +1,21 @@
+W2_B_EEGDMhead_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 P/R/F1 1.000/1.000/1.000  -> /tmp/tmp8gt_oy8x/runs/W2_B_EEGDMhead_label25_sseed2024_seed0_v01
+W2_B_CTX1_EEGDM_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmp8gt_oy8x/runs/W2_B_CTX1_EEGDM_label25_sseed2024_seed0_v01
+W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmp8gt_oy8x/runs/W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01
+W2_B_EEGDMhead_label25_sseed2024_seed1_v01: macro-F1 1.0000  N1 P/R/F1 1.000/1.000/1.000  -> /tmp/tmp8gt_oy8x/runs/W2_B_EEGDMhead_label25_sseed2024_seed1_v01
+W2_B_CTX1_EEGDM_label25_sseed2024_seed1_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmp8gt_oy8x/runs/W2_B_CTX1_EEGDM_label25_sseed2024_seed1_v01
+W2_B_CTX3_EEGDM_label25_sseed2024_seed1_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmp8gt_oy8x/runs/W2_B_CTX3_EEGDM_label25_sseed2024_seed1_v01
+6 个 run -> metrics_summary.csv;2 组配对 -> paired_comparison.csv;evaluator=untracked-sha256:3c645536d46d
+PASS test_aggregate_rebuilds_tables_pairs_context_and_updates_only_b_rows
+W2_B_EEGDMhead_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 P/R/F1 1.000/1.000/1.000  -> /tmp/tmprswtuyqe/runs/W2_B_EEGDMhead_label25_sseed2024_seed0_v01
+PASS test_budget_head_trains_reads_only_selected_people_and_writes_six_files
+W2_B_CTX3_CNN_label25_sseed2024_seed0_v01: macro-F1 0.9051  N1 F1 0.957  -> /tmp/tmprx3adl3k/runs/W2_B_CTX3_CNN_label25_sseed2024_seed0_v01
+PASS test_context_head_cnn_representation_reads_encoder_npz
+W2_B_CTX1_EEGDM_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmpi6yubgnt/runs/W2_B_CTX1_EEGDM_label25_sseed2024_seed0_v01
+W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmpi6yubgnt/runs/W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01
+PASS test_context_heads_share_center_set_and_length3_runs
+W2_B_EEGDMhead_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 P/R/F1 1.000/1.000/1.000  -> /tmp/tmp3b5jubek/runs/W2_B_EEGDMhead_label25_sseed2024_seed0_v01
+W2_B_EEGDMhead_label25_sseed2024_seed1_v01: macro-F1 1.0000  N1 P/R/F1 1.000/1.000/1.000  -> /tmp/tmp3b5jubek/runs/W2_B_EEGDMhead_label25_sseed2024_seed1_v01
+W2_B_EEGDMhead_label25_sseed2024_seed1_v01: macro-F1 1.0000  N1 P/R/F1 1.000/1.000/1.000  -> /tmp/tmp3b5jubek/runs_raw/W2_B_EEGDMhead_label25_sseed2024_seed1_v01
+W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01: macro-F1 1.0000  N1 F1 1.000  -> /tmp/tmp3b5jubek/runs/W2_B_CTX3_EEGDM_label25_sseed2024_seed0_v01
+PASS test_pooled_npz_input_matches_raw_dir_input_exactly
+PASS test_window_neighbors_never_cross_gap_and_mismatched_centers_fail

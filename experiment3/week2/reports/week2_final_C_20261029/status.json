@@ -1,0 +1,30 @@
+{
+  "status": "local_experiments_complete_team_acceptance_pending",
+  "stage": "team_review_and_handoff_pending",
+  "completed_at": "2026-10-29T16:42:43.824023+08:00",
+  "independent_adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "EEG_diagnostic_runs": 40,
+  "primary_fusion_runs": 40,
+  "paired_contrasts": 60,
+  "N1_change_records": 17284,
+  "handoff_index_entries": 352,
+  "main_report": "实验3_第二周最终报告.md",
+  "test_used": false,
+  "D_full_cache_received": false,
+  "next_workflow_stage": "team_review_and_handoff",
+  "new_unregistered_training_started": false,
+  "local_training_complete": true,
+  "local_analysis_complete": true,
+  "team_acceptance_complete": false,
+  "A_verified_data_received": true,
+  "A_week2_CNN_is_C_adaptation_prerequisite": false,
+  "B_v2_protocol_signoff_received": false,
+  "B_independent_team_evaluation_received": false,
+  "D_EOG_common_baseline_signoff_received": false,
+  "week2_C_results_published_to_GitHub": false,
+  "dependency_checklist": "A_B_D依赖与交接待办.md"
+}

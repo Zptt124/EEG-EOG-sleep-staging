@@ -1,0 +1,64 @@
+training_subjects:
+- SC403
+- SC410
+- SC412
+- SC415
+- SC417
+- SC419
+- SC421
+- SC427
+- SC429
+- SC436
+- SC451
+- SC455
+- SC456
+- SC474
+training_samples: 32310
+validation_subjects:
+- SC406
+- SC409
+- SC442
+- SC448
+- SC462
+- SC471
+- SC475
+- SC480
+validation_samples: 21186
+train_class_counts:
+  0: 9033
+  1: 3480
+  2: 12425
+  3: 2197
+  4: 5175
+feature_audit_sha256: aeb452a84ed22636ca1a5437272d6c0b3108fcb19d592ca3d54878c1d4d7680f
+runtime_binding_sha256: 928a028d1d7626358071aae40283326071ba4a6346a697fdd6a6605edd58167e
+trainer_sha256: 7d36538f9307c9bad5fb6e1123a0eed1efec2687c6181d2d4880ab229f08cbb9
+evaluator_sha256: 4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605
+label_manifest_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+local_unlabeled_adaptation_subjects: 54
+run_id: W2_C_S1_EEG_aseed0_label25_sseed2024_seed1_v01
+representation: S1
+adaptation_seed: 0
+downstream_seed: 1
+sampling_seed: 2024
+budget: label25
+modality: EEG
+role: diagnostic
+input_dim: 2560
+classifier: Linear(2560,5)
+optimizer: AdamW
+learning_rate: 0.001
+weight_decay: 0.0001
+batch_size: 128
+max_epochs: 50
+patience: 10
+loss: unweighted_cross_entropy
+selection: strictly highest development validation macro-F1
+normalization: fit only current budget labeled train subjects, independently for S0/S1
+std_floor: 1.0e-06
+backbone_frozen: true
+test_used: false
+device: cpu
+cpu_threads: 4
+deterministic: true
+N1_REM_from_same_selected_head: true

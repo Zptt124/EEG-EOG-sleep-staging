@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "public": true,
+  "assets": [
+    {
+      "name": "EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "bytes": 1319013782,
+      "remote_sha256_match": true
+    },
+    {
+      "name": "EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "bytes": 1320542159,
+      "remote_sha256_match": true
+    },
+    {
+      "name": "sample_index.csv",
+      "bytes": 5940882,
+      "remote_sha256_match": true
+    },
+    {
+      "name": "manifest.json",
+      "bytes": 3536,
+      "remote_sha256_match": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 484,
+      "remote_sha256_match": true
+    },
+    {
+      "name": "README.md",
+      "bytes": 3443,
+      "remote_sha256_match": true
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "test_used": false,
+  "validation_used": false,
+  "samples": 296,
+  "training_subjects": 6,
+  "length_comparisons": [
+    {
+      "condition": 14,
+      "samples": 296,
+      "native_seconds": 8.821281455000005,
+      "explicit_seconds": 13.129751189999993,
+      "max_abs_difference": 5.066394805908203e-07,
+      "max_abs_difference_vs_stored_fp16": 0.0001220703125,
+      "allclose": true,
+      "shape": [
+        296,
+        20,
+        30,
+        128
+      ]
+    },
+    {
+      "condition": 18,
+      "samples": 296,
+      "native_seconds": 8.86296160099998,
+      "explicit_seconds": 12.875632198999995,
+      "max_abs_difference": 3.5762786865234375e-07,
+      "max_abs_difference_vs_stored_fp16": 0.0001220703125,
+      "allclose": true,
+      "shape": [
+        296,
+        20,
+        30,
+        128
+      ]
+    },
+    {
+      "condition": 10,
+      "samples": 296,
+      "native_seconds": 8.947418628999998,
+      "explicit_seconds": 13.163589342999984,
+      "max_abs_difference": 5.662441253662109e-07,
+      "max_abs_difference_vs_stored_fp16": 0.0001220703125,
+      "allclose": true,
+      "shape": [
+        296,
+        20,
+        30,
+        128
+      ]
+    }
+  ],
+  "channel_comparison": [
+    {
+      "condition": 14,
+      "pooled_oof_macro_f1": 0.7059148097634429,
+      "mean_subject_macro_f1": 0.6870504607739768
+    },
+    {
+      "condition": 18,
+      "pooled_oof_macro_f1": 0.6942527601709096,
+      "mean_subject_macro_f1": 0.6736176919715421
+    },
+    {
+      "condition": 10,
+      "pooled_oof_macro_f1": 0.7033680842210546,
+      "mean_subject_macro_f1": 0.6858585326819274
+    }
+  ],
+  "best_on_this_pilot": 14,
+  "official_condition_unchanged": 14,
+  "probe": "Training-only leave-one-subject-out; train-fold StandardScaler + LogisticRegression C=1 lbfgs",
+  "warning": "Pilot is deliberately class-balanced and uses only 6 training subjects. Descriptive post-hoc check; does not establish optimal channel or replace official runs."
+}

@@ -1,0 +1,3 @@
+PASS test_every_epoch_is_a_center_exactly_once_and_neighbors_are_real_ids
+PASS test_gap_is_not_bridged_and_edges_are_padded
+PASS test_unsorted_or_duplicated_epoch_index_is_rejected

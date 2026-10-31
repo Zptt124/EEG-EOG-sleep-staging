@@ -1,0 +1,36 @@
+{
+  "status": "published_team_acceptance_pending",
+  "date": "2026-10-31",
+  "branch": "feat/c-eegdm",
+  "pull_request": "https://github.com/Zptt124/EEG-EOG-sleep-staging/pull/2",
+  "local_experiments_complete": true,
+  "team_acceptance_complete": false,
+  "B_v2_protocol_signoff_received": false,
+  "B_independent_team_evaluation_received": true,
+  "D_EOG_common_baseline_signoff_received": false,
+  "D_full_cache_received": false,
+  "test_used": false,
+  "classifier_runs": 80,
+  "independent_adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "historical_status_note": "reports/** and runs/** are unmodified experimental snapshots. Their not-published statements describe 2026-10-29; this file records the current publication stage.",
+  "publication_scope": "C W2 delivery through PR #2, including GitHub Release pooled feature assets",
+  "pooled_feature_release": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031",
+  "B_requested_NPZ_files_published": true,
+  "pooled_features_B_loader_compatibility_verified": true,
+  "B_feature_download_or_acceptance_confirmed": false,
+  "default_entry_branch": "main",
+  "B_v2_label_manifest_verification_published": true,
+  "B_evidence_commit": "c703927d2d60e7555e1b5d7ca855fa3f86e48e55",
+  "B_evidence_paths": [
+    "reports/week2/b_v2_verification.md",
+    "reports/week2/external_C/metrics_summary.csv",
+    "reports/week2/external_C/mismatch_vs_reported.csv"
+  ],
+  "B_recomputed_C_runs": 80,
+  "B_reported_metric_mismatches": 0,
+  "exploratory_fixed50_completed_results_included": false
+}

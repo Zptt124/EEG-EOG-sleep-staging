@@ -1,0 +1,26 @@
+[
+  {
+    "batch_size": 4,
+    "seconds": 1.8815094739999836,
+    "samples_per_second": 34.01524195567274,
+    "peak_gpu_mb": 579.20361328125,
+    "estimated_full_hours": 1.258618776782871,
+    "difference_from_uncached": 0.0
+  },
+  {
+    "batch_size": 16,
+    "seconds": 1.892182986999984,
+    "samples_per_second": 33.82336721115469,
+    "peak_gpu_mb": 2094.576171875,
+    "estimated_full_hours": 1.265758726946118,
+    "difference_from_uncached": 2.086162567138672e-07
+  },
+  {
+    "batch_size": 32,
+    "seconds": 2.9547924999999964,
+    "samples_per_second": 21.659727375103355,
+    "peak_gpu_mb": 4112.36474609375,
+    "estimated_full_hours": 1.9765817676649282,
+    "difference_from_uncached": 2.086162567138672e-07
+  }
+]

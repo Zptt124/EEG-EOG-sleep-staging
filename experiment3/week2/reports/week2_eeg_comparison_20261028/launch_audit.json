@@ -1,0 +1,24 @@
+{
+  "status": "running_verified",
+  "verified_at": "2026-10-28T19:22:06.031437+08:00",
+  "pid": 448,
+  "detached_session_leader": true,
+  "progress": {
+    "status": "running",
+    "stage": "audit_and_pool",
+    "completed_heads": 0,
+    "expected_heads": 20,
+    "test_used": false,
+    "EOG_status": "waiting_for_D_original_cache",
+    "pid": 448
+  },
+  "last_console_event": {
+    "stage": "audit_pool",
+    "representation": "S0",
+    "record": "SC4152",
+    "records_done": 24,
+    "records_total": 122
+  },
+  "pandas_version": "1.5.3",
+  "test_used": false
+}

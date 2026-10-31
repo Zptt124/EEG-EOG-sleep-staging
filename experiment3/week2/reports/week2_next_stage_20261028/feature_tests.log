@@ -1,0 +1,15 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+test_feature_contract_rejects_noise_or_changed_layer_query (test_extract_adapted_features.S1FeatureChecks.test_feature_contract_rejects_noise_or_changed_layer_query) ... ok
+test_float32_pooling_and_nonfinite_guard (test_extract_adapted_features.S1FeatureChecks.test_float32_pooling_and_nonfinite_guard) ... ok
+test_index_rejects_duplicate_ids_and_row_reordering (test_extract_adapted_features.S1FeatureChecks.test_index_rejects_duplicate_ids_and_row_reordering) ... ok
+test_index_rejects_test_and_unsafe_feature_paths (test_extract_adapted_features.S1FeatureChecks.test_index_rejects_test_and_unsafe_feature_paths) ... ok
+test_reject_online_intermediate_or_wrong_checkpoint (test_extract_adapted_features.S1FeatureChecks.test_reject_online_intermediate_or_wrong_checkpoint) ... ok
+test_reject_running_or_incomplete_adaptation (test_extract_adapted_features.S1FeatureChecks.test_reject_running_or_incomplete_adaptation) ... ok
+test_s0_cache_overwrite_and_descendant_rejected (test_extract_adapted_features.S1FeatureChecks.test_s0_cache_overwrite_and_descendant_rejected) ... ok
+test_signal_reader_never_reads_npz_labels_and_checks_epochs (test_extract_adapted_features.S1FeatureChecks.test_signal_reader_never_reads_npz_labels_and_checks_epochs) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.194s
+
+OK

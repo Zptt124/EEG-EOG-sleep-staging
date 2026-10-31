@@ -1,0 +1,18 @@
+{
+  "status": "running_verified",
+  "config_sha256": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
+  "trainer_sha256": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+  "unit_tests_passed": 8,
+  "verified_formal_updates": 200,
+  "new_ema_updates": 200,
+  "fresh_original_initialization": true,
+  "diagnostic_optimizer_updates_inherited": 0,
+  "first_100_losses_match_reinitialized_reference": true,
+  "frozen_parameters_unchanged": true,
+  "sampled_training_subjects": 54,
+  "stage_labels_read": false,
+  "validation_or_test_signals_read": false,
+  "pid": 427,
+  "state_snapshot_at": "2026-10-27T23:01:25+08:00",
+  "completion_claimed": false
+}

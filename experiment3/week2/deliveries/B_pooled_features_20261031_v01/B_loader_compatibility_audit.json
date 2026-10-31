@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "B_main_commit": "c703927d2d60e7555e1b5d7ca855fa3f86e48e55",
+  "B_interface_path": "scripts/w2_common.py",
+  "B_interface_file_sha256": "cb75388cd9e49786f85efefb33660a380c9e1454abba339cf7d11770ae33b614",
+  "B_function": "load_encoder_features",
+  "B_function_executed_without_changes": true,
+  "val_metadata_matches_B_reference": true,
+  "val_samples": 21186,
+  "full_npz_roundtrip_bitwise_verification": "See manifest.json; all 154124 rows verified for both files",
+  "checks": [
+    {
+      "filename": "EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "B_loader_passed": true,
+      "reordered_sample_id_lookup_exact": true,
+      "probe_rows": 8
+    },
+    {
+      "filename": "EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "B_loader_passed": true,
+      "reordered_sample_id_lookup_exact": true,
+      "probe_rows": 8
+    }
+  ]
+}

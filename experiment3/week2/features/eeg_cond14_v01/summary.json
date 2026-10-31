@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "records": 122,
+  "samples": 154124,
+  "test_used": false,
+  "split_counts": {
+    "train": 132938,
+    "val": 21186
+  },
+  "total_feature_bytes": 23673462016
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-28T21:32:38.570078+08:00",
+  "completed_at": "2026-10-28T21:31:41+08:00",
+  "completed_updates": 10000,
+  "EMA_updates": 10000,
+  "weight_file_sha256_verified": {
+    "selected_weight": "c344b5f31f68f89d6f19b31b244770f1c5b02ebdec6507f3d65a94b886b9a94b",
+    "online_last_weight": "b162c5c8c0b9858afd9b0ca0e65e5d45c6c063cd255cc92c83a0617efe7a47c9"
+  },
+  "all_steps_contiguous": true,
+  "all_losses_and_gradient_norms_finite": true,
+  "training_subjects": 54,
+  "sample_occurrences": 20000,
+  "frozen_online_parameter_digest_matches_original": true,
+  "stage_labels_read": false,
+  "validation_signals_read": false,
+  "test_signals_read": false,
+  "seed1_full_features_started": false,
+  "seed1_downstream_heads_started": false
+}

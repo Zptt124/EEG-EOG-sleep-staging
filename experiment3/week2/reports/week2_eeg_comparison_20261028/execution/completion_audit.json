@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-28T20:03:38.263402+08:00",
+  "completed_at": "2026-10-28T19:48:59.342210+08:00",
+  "completed_heads": 20,
+  "expected_heads": 20,
+  "per_run_checks": [
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "validation_rows": 21186,
+      "metrics_recomputed": true
+    }
+  ],
+  "all_validation_sample_metadata_match": true,
+  "official_point_metrics_recomputed": true,
+  "S0_label25_seed0_exact_prediction_reproduction": true,
+  "test_used": false,
+  "EOG_cache_received": false,
+  "raw_feature_audits": "S0_feature_audit.json and S1_feature_audit.json; not repeated"
+}

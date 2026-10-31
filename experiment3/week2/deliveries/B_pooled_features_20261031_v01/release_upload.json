@@ -1,0 +1,62 @@
+{
+  "release_id": 429802019,
+  "tag": "c-pooled-features-v01-20261031",
+  "status": "published_and_verified",
+  "draft": false,
+  "created_at": "2026-10-31T16:05:32.264624+08:00",
+  "target_commit": "0867d1a87e3de9ffba219910ac75221bbc6a96e7",
+  "assets": [
+    {
+      "name": "EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "bytes": 1319013782,
+      "sha256": "047bafc735d64297648b173447ec5d8425063a25b3f85562a7dbf12295800fb7",
+      "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "id": 694782555,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "bytes": 1320542159,
+      "sha256": "e444e819be3936b7f11b80daff873b227e34547886c91118f06924ed36654590",
+      "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "id": 694782554,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "sample_index.csv",
+      "bytes": 5940882,
+      "sha256": "0892c6f61807ac6316791530b24a44da33026fcaf73ff1c1d984c7a3cab62f49",
+      "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/sample_index.csv",
+      "id": 694786525,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "manifest.json",
+      "bytes": 3536,
+      "sha256": "aeac2a2c385ab929ba9a03d6d9cfff6de69606c63ef7882748aa3578550cd4ec",
+      "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/manifest.json",
+      "id": 694786569,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 484,
+      "sha256": "3b542f85746864fb242ee93f29ed49d94b2070ee1f209d4d6a5c8b9c3ce0b241",
+      "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/SHA256SUMS.txt",
+      "id": 694786625,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "README.md",
+      "bytes": 3443,
+      "sha256": "5fa619295ff11ef96de2dd599581a5c3966b4bb448d1d1ec5a1ea95e177da8d6",
+      "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/README.md",
+      "id": 694786657,
+      "remote_digest_verified": true
+    }
+  ],
+  "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031",
+  "published_at": "2026-10-31T08:07:38Z",
+  "verified_at": "2026-10-31T16:08:38.208494+08:00",
+  "B_receipt_or_acceptance_confirmed": false
+}

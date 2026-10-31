@@ -1,0 +1,15 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+test_audit_and_pool_math_identical_to_pilot (test_replication_features_heads.RepeatFeatureHeadChecks.test_audit_and_pool_math_identical_to_pilot) ... ok
+test_baseline_full_match_rejects_normalization_seed_or_lr_drift (test_replication_features_heads.RepeatFeatureHeadChecks.test_baseline_full_match_rejects_normalization_seed_or_lr_drift) ... ok
+test_bound_input_tampering_is_rejected (test_replication_features_heads.RepeatFeatureHeadChecks.test_bound_input_tampering_is_rejected) ... ok
+test_exact_registered_feature_derivation (test_replication_features_heads.RepeatFeatureHeadChecks.test_exact_registered_feature_derivation) ... ok
+test_extraction_math_and_loop_source_identical_to_pilot (test_replication_features_heads.RepeatFeatureHeadChecks.test_extraction_math_and_loop_source_identical_to_pilot) ... ok
+test_head_math_rng_and_selection_source_identical_to_pilot (test_replication_features_heads.RepeatFeatureHeadChecks.test_head_math_rng_and_selection_source_identical_to_pilot) ... ok
+test_reject_selected_checkpoint_from_wrong_adaptation_seed (test_replication_features_heads.RepeatFeatureHeadChecks.test_reject_selected_checkpoint_from_wrong_adaptation_seed) ... ok
+test_reject_transform_drift_and_seed0_cache_destination (test_replication_features_heads.RepeatFeatureHeadChecks.test_reject_transform_drift_and_seed0_cache_destination) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.346s
+
+OK

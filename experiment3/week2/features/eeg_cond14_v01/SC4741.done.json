@@ -1,0 +1,11 @@
+{
+  "record_id": "SC4741",
+  "split": "train",
+  "n_samples": 2210,
+  "seconds": 70.7810428570001,
+  "samples_per_second": 31.22304943238676,
+  "peak_gpu_mb": 579.20361328125,
+  "bytes": 339456128,
+  "batch_size": 4,
+  "cache_frozen_kernels": true
+}

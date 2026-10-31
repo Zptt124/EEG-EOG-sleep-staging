@@ -1,0 +1,7 @@
+{
+  "source_index_sha256": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+  "source_S0_config_sha256": "e95b12224ef751a39226ef8998521fcd3f20bd51eb1c0c5509a3d272aa2de48a",
+  "modality": "EOG",
+  "weight_role": "original_frozen_EMA",
+  "D_full_cache_received": false
+}

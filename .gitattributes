@@ -3,3 +3,6 @@
 /manifests/label_subsets_v2.csv text eol=lf
 /manifests/label_counts_v2.csv text eol=lf
 /manifests/label_record_counts_v2.csv text eol=lf
+
+# Archived W2 locks and SHA receipts bind exact bytes.
+/experiment3/week2/** -text

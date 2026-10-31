@@ -1,0 +1,27 @@
+{
+  "status": "implemented_tested_bound_before_formal_update_1",
+  "bound_at_Asia_Shanghai": "2026-10-28T20:08:51.343963+08:00",
+  "config_id": "W2_C_S1_aseed1_v01",
+  "config_sha256": "6d04861ba9fab8237fd12e492c9f797cdff5685ded8f7185ff98e512f686e9d2",
+  "trainer_sha256": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+  "unit_tests_passed": 8,
+  "unchanged_runtime_tests_reused": true,
+  "derivation_tests_passed": 6,
+  "initialization_report": "reports/week2_adaptation_repeat_aseed1_20261028/initialization_validation.json",
+  "file_sha256": {
+    "scripts/train_sleep_adaptation.py": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+    "scripts/adapt_preflight.py": "7a3a4f4e639951050228d526c9e2b33c562936340982a3cd09b1fa4ad20426db",
+    "scripts/validate_adapt_lock.py": "f13d99b67ece2227a43b3427a5bf5e684f58d49e5f0c2d9015319cc169d70f53",
+    "scripts/prepare_adaptation_replication.py": "f35e4dfa2e6fa487b8c3e8fcb4bf3046eed12dea41bf074ec874eafb5f20d77d",
+    "tests/test_adaptation_replication.py": "cd688426d039f7e8e9c38e66cb8a6d60bae74361a12d6957a81e51a8998adb5a",
+    "tests/test_train_sleep_adaptation.py": "828a0abafff130fe9ce16c87a2bedee7f0c52408c77d445e29ce34403e77a205",
+    "reports/week2_formal_training_launch_20261027/runtime_tests.log": "760c7e91acf85a9ca54b96871c12307ae7f68f17f1fd8485709180ae30b69a65",
+    "configs/adapt_W2_C_S1_aseed1_v01.yaml": "6d04861ba9fab8237fd12e492c9f797cdff5685ded8f7185ff98e512f686e9d2",
+    "configs/adapt_W2_C_S1_aseed1_v01.lock.json": "29d3caa2013888410986edcc4fa6b5fd1665dd4373915fed3f6a58b6dc6f1672",
+    "reports/week2_adaptation_repeat_aseed1_20261028/initialization_validation.json": "6da145607c8e47f207c32ba01d6dee6c6a96709fcb700f9024d3fa9991f4484d",
+    "reports/week2_adaptation_repeat_aseed1_20261028/derivation_tests.log": "903496abbd7907c96d3b05d410a61abadf0b629bffb9a40d31dcbb155f1acbae",
+    "reports/week2_adaptation_repeat_aseed1_20261028/derivation_audit.json": "20c452d05ed364be1258dfc48e75e45526cb8ea6b827e66a27f130d86323bd72"
+  },
+  "formal_optimizer_updates_at_binding": 0,
+  "inherited_seed0_weights": false
+}

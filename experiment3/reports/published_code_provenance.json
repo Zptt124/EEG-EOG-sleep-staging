@@ -1,0 +1,92 @@
+[
+  {
+    "file": "scripts/extract_features.py",
+    "original_sha256": "d660cd5768fb4e90e0e713423ab0bfb054837b26670119e13e2f9e8cf447a235",
+    "published_sha256": "58a885fc372d8a9797a0fbc2a0df15a66f36648125a214960175a5f5c5cf8fb6",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/train_linear100.py",
+    "original_sha256": "5c93a05e9368896ad0487162227c0beee16abc9f3f09d4539c3eb73908c99f66",
+    "published_sha256": "d2f659e4c6887da1a3b8a3a06e6e5986b271e01fa394150ac785b136059ef701",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/train_linear_budget.py",
+    "original_sha256": "c95e139161e7c0202e50e0caae34a41b5b791a45521b1f772c89907d29ab81ae",
+    "published_sha256": "3d9ca13ad6b2eab6980f519aa6b1713be7e7dfd6d962a88302bbf829e1e875f8",
+    "portable_path_adaptation": false
+  },
+  {
+    "file": "scripts/train_timeflatten.py",
+    "original_sha256": "70defc1d62aa3543bc16c421b0873bb86447b98e6415358a5d49f84b5b3dc975",
+    "published_sha256": "6abc51432f98a72a80697ccd5f981e147c3640ba7929fbddc0f1ae178f10da24",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/verify_backbone.py",
+    "original_sha256": "a533eab7ad5a6443304b1fea424e4e192c51b291fb502d3449f6654dfba74623",
+    "published_sha256": "d8e8a7b7e6361a86c53d521c4c4af4588e7721d1bfb2fd04130b4ccdd152c370",
+    "portable_path_adaptation": false
+  },
+  {
+    "file": "scripts/pilot_features.py",
+    "original_sha256": "0aaa1bce8e768c3d67ef0694e4681babe988ce6a54a1ef70a018b281230a848a",
+    "published_sha256": "97f3d99f431f8e314fc1d7f40101fee424942f22844f6e35881233c11e191ebf",
+    "portable_path_adaptation": false
+  },
+  {
+    "file": "scripts/benchmark_extraction.py",
+    "original_sha256": "dc4f71d5d05d29af54deb98419e760e22feda0540e34fffd7d08966769440a59",
+    "published_sha256": "76ccdaf19be9706ef05fccc4cbd9f5b14caecb660310c00d034a80303438f077",
+    "portable_path_adaptation": false
+  },
+  {
+    "file": "scripts/audit_a_delivery.py",
+    "original_sha256": "00e4e02e78339b03d8751791fc1638adc3a3f0d5f890dfb2823d608188ccbf09",
+    "published_sha256": "524151c2f41b91d28cfa31f33a5cf939bafa7bd1b8289355d2808ed4002d4279",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/audit_results.py",
+    "original_sha256": "a394d39777da0c18e69548f72c9811220eb5325b4a95cd2df933f5cb537b3504",
+    "published_sha256": "be6c30a7a00b433e7c50ba8b98d3ee8a8eb872f1c27ae35d2ffaeb805fd13282",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/compare_timeflatten.py",
+    "original_sha256": "ab0a5f63d62498acbde3c0d866da26c0f494d139b01e8e2d6e51ff6cb0b7d6b1",
+    "published_sha256": "b80aa1880c0883b73a7c88b6ff1c20cd8a4fa6346a182a6b7cb93d7e153ea231",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/run_b_followup.py",
+    "original_sha256": "9ef1fae017526fd7d5c60676732ba9b0bb54b05abe50cef0ce1693ffd8eaa3d2",
+    "published_sha256": "b31e2c6719c85bd47ba5723683a95129250a089964c6fa002141d0875537839c",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/complete_adapter_checks.py",
+    "original_sha256": "63b4b4210b5670ca1ba11074d123f656a07760c3e76a4307ed0a456841095115",
+    "published_sha256": "de48b9cf5d77bf57be7748bf1437828651ca40e337c72beb44c2f005f29166f3",
+    "portable_path_adaptation": false
+  },
+  {
+    "file": "scripts/finalize_week1.py",
+    "original_sha256": "cd4d883b0fad6a7c1668ac2d79c4b646214c5fa1a9025ca3b359ab02dcdfc886",
+    "published_sha256": "0c6f813ba8499e8b1bfea556108b78e15a864f6174b2bf014157c133f39a18d9",
+    "portable_path_adaptation": true
+  },
+  {
+    "file": "scripts/prepare_sources.py",
+    "original_sha256": null,
+    "portable_path_adaptation": false,
+    "published_sha256": "6c506571c2fc9ce31f40b46afd3b2d344807a7e27e312c7a02a7561f6973c64f"
+  },
+  {
+    "file": "scripts/verify_published_results.py",
+    "original_sha256": null,
+    "portable_path_adaptation": false,
+    "published_sha256": "33c68e58b97b8c53c4db574a1711c4482ef5c4ba6ed27791b7302488764f7729"
+  }
+]

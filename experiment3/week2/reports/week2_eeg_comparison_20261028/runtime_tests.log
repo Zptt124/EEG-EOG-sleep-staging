@@ -1,0 +1,15 @@
+test_budget_and_normalization_exclude_unlabeled_and_validation (test_s0_s1_eeg_comparison.ComparisonChecks.test_budget_and_normalization_exclude_unlabeled_and_validation) ... ok
+test_budget_cannot_include_val_subject (test_s0_s1_eeg_comparison.ComparisonChecks.test_budget_cannot_include_val_subject) ... ok
+test_fixed_float32_pool_matches_reference (test_s0_s1_eeg_comparison.ComparisonChecks.test_fixed_float32_pool_matches_reference) ... ok
+test_paired_seed_initialization_and_rng_order (test_s0_s1_eeg_comparison.ComparisonChecks.test_paired_seed_initialization_and_rng_order) ... ok
+test_reject_duplicate_test_and_path_traversal (test_s0_s1_eeg_comparison.ComparisonChecks.test_reject_duplicate_test_and_path_traversal) ... ok
+test_reject_incomplete_index (test_s0_s1_eeg_comparison.ComparisonChecks.test_reject_incomplete_index) ... ok
+test_reject_misaligned_labels_and_order (test_s0_s1_eeg_comparison.ComparisonChecks.test_reject_misaligned_labels_and_order) ... ok
+test_runtime_binding_refuses_changed_code (test_s0_s1_eeg_comparison.ComparisonChecks.test_runtime_binding_refuses_changed_code) ... ok
+test_s1_corrupt_raw_sha_is_rejected (test_s0_s1_eeg_comparison.ComparisonChecks.test_s1_corrupt_raw_sha_is_rejected) ... ok
+test_tied_score_does_not_replace_best (test_s0_s1_eeg_comparison.ComparisonChecks.test_tied_score_does_not_replace_best) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.730s
+
+OK

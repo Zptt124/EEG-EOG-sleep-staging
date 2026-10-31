@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "stage": "seed_repeat_EEG_comparison_complete",
+  "adaptation_seed": 1,
+  "pid": 705,
+  "completed_new_heads": 10,
+  "expected_new_heads": 10,
+  "reused_S0_heads": 10,
+  "feature_summary": "features/eeg_cond14_S1_aseed1_steps10000_v02/summary.json",
+  "test_used": false,
+  "current_run": null,
+  "independently_adapted_backbones_in_this_job": 1,
+  "adaptation_seeds_available": [
+    0,
+    1
+  ]
+}

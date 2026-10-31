@@ -1,0 +1,3 @@
+sample_id,subject_id,record_id,epoch_index,split,y_true,feature_path,row_index,config_id
+SC4001_0961,SC400,SC4001,961,train,0,SC4001.npy,0,E3_features_v01
+SC4061_0875,SC406,SC4061,875,val,0,SC4061.npy,0,E3_features_v01

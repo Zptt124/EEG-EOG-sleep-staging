@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "stage": "primary_fusion_matrix_complete",
+  "coordinator_pid": 703,
+  "EOG_records": 122,
+  "EOG_samples": 154124,
+  "expected_records": 122,
+  "expected_samples": 154124,
+  "completed_heads": 40,
+  "expected_heads": 40,
+  "test_used": false,
+  "D_full_cache_received": false,
+  "current_run": null,
+  "independent_adaptation_repeats": 3,
+  "downstream_seeds_per_cell": 5
+}

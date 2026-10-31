@@ -1,0 +1,11 @@
+test_parent_is_never_mutated (test_adaptation_replication.ReplicationChecks.test_parent_is_never_mutated) ... ok
+test_preregistered_seed_one_and_two_exact_changes (test_adaptation_replication.ReplicationChecks.test_preregistered_seed_one_and_two_exact_changes) ... ok
+test_reject_hyperparameter_or_budget_drift (test_adaptation_replication.ReplicationChecks.test_reject_hyperparameter_or_budget_drift) ... ok
+test_reject_seed0_output_collision (test_adaptation_replication.ReplicationChecks.test_reject_seed0_output_collision) ... ok
+test_reject_unregistered_seed (test_adaptation_replication.ReplicationChecks.test_reject_unregistered_seed) ... ok
+test_reject_weight_inheritance_or_validation_access (test_adaptation_replication.ReplicationChecks.test_reject_weight_inheritance_or_validation_access) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.155s
+
+OK

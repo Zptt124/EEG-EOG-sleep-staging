@@ -1,0 +1,27 @@
+{
+  "status": "running_first_record_verified",
+  "verified_at_Asia_Shanghai": "2026-10-28T13:49:48+08:00",
+  "pid": 397,
+  "detached_session_leader": true,
+  "records_in_latest_summary": 2,
+  "samples_in_latest_summary": 1968,
+  "first_record": "SC4001",
+  "first_record_samples": 841,
+  "first_record_shape": [
+    841,
+    20,
+    30,
+    128
+  ],
+  "dtype": "float16",
+  "first_record_all_finite": true,
+  "first_record_SHA_verified": true,
+  "index_identity_verified": true,
+  "selected_weight_sha256": "4bf8d441e2c061db5662e42740d8ff742827c07062cb7965d7961ab1c502d385",
+  "S0_metadata_SHA_unchanged": true,
+  "test_used": false,
+  "expected_records": 122,
+  "expected_samples": 154124,
+  "estimated_remaining_minutes_from_completed_records": 81.06182296832006,
+  "full_extraction_completed": false
+}

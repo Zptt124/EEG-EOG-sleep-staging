@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "gradient_updates": 1,
+  "benchmark_updates": 100,
+  "original_weights_preserved": true,
+  "exact_reset_between_phases": true,
+  "first_batch_and_loss_match": true,
+  "frozen_parameters_unchanged": true,
+  "gradient_gate_layers": [
+    18,
+    19
+  ],
+  "changed_trainable_tensors": 34,
+  "all_54_training_subjects_sampled": true,
+  "stage_labels_read": false,
+  "validation_or_test_signals_read": false,
+  "all_losses_and_norms_finite": true,
+  "report": "\u5b9e\u9a8c3_\u4e3b\u5e72\u68af\u5ea6\u68c0\u67e5\u4e0e100\u6b65\u6d4b\u901f\u62a5\u544a.md",
+  "source_sha256": "7a3a4f4e639951050228d526c9e2b33c562936340982a3cd09b1fa4ad20426db",
+  "unit_tests_passed": 6,
+  "unit_test_log": "unit_tests.log"
+}

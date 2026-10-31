@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-29T08:39:30+08:00",
+  "completed_at": "2026-10-29T08:39:10+08:00",
+  "completed_updates": 10000,
+  "EMA_updates": 10000,
+  "history_contiguous": true,
+  "losses_and_gradient_norms_finite": true,
+  "final_weight_sha256_verified": true,
+  "frozen_online_digest_matches_original": true,
+  "stage_labels_read": false,
+  "validation_signals_read": false,
+  "test_signals_read": false
+}

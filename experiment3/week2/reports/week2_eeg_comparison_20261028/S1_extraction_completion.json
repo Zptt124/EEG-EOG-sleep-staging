@@ -1,0 +1,25 @@
+{
+  "status": "extraction_complete_pending_independent_full_cache_audit",
+  "verified_at": "2026-10-28T19:20:26.595461+08:00",
+  "summary": {
+    "status": "complete",
+    "records": 122,
+    "samples": 154124,
+    "test_used": false,
+    "full_extraction_started": true,
+    "expected_records": 122,
+    "expected_samples": 154124,
+    "selected_weight_sha256": "4bf8d441e2c061db5662e42740d8ff742827c07062cb7965d7961ab1c502d385",
+    "split_counts": {
+      "train": 132938,
+      "val": 21186
+    },
+    "total_feature_bytes": 23673462016,
+    "S0_overwritten": false,
+    "NPZ_labels_read": false
+  },
+  "completed_record_receipts": 122,
+  "sum_record_samples": 154124,
+  "active_compute_seconds": 4955.517073674002,
+  "independent_full_audit": "execution/S1_feature_audit.json"
+}
