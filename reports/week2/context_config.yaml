@@ -1,0 +1,45 @@
+# 实验② B 时间上下文对照:锁定配置(W2 v1.1 第 7 页第 9 步)
+# 一旦开始正式 seed 0-4,以下任一项都不得根据 8 人验证成绩修改;如需改动须升版并重跑全部格。
+version: ctx_v01
+status: locked_before_any_real_feature_run   # 目前只在合成数据上验证了代码路径;尚无真实特征结果
+owner: B
+budget: label25                 # 14 人有标签,主名单 sampling_seed=2024
+data_rules:
+  training_windows_from: 14 个 label25 选中者的同人同夜连续片段
+  other_training_subjects_used: false         # 其余 40 人的信号与标签都不进入主实验
+  neighbor_true_labels_as_input: false
+  bidirectional_context: 仅适合离线分期
+  validation_windows: 8 名开发验证者自己的相邻信号;测试集不使用
+window_rule:
+  index_file: reports/week2/window_index.csv   # scripts/11_make_window_index.py 生成
+  lengths: [1, 3]                              # 长度 1 = 同一头、序列长度 1;长度 3 = 前一段/当前段/后一段,预测中心段
+  gap_rule: 不跨人、不跨夜、不跨预处理造成的 epoch_index 缺口
+  boundary_rule: 缺邻居时用中心段复制填充,*_is_real=0 记录 mask;mask 不作为模型输入
+  center_samples: 每条记录的全部保留片段;长度 1 与长度 3、两种表征共用同一中心集合
+representations:
+  eegdm: 原始冻结 EEGDM 双模态 EEG 2560 + EOG 2560 = 5120 维(30 个 1 秒窗均值池化,C/D 第一周特征)
+  cnn: A 的 25% 双通道 CNN 编码器逐段特征(同一 downstream seed 的编码器;eval 模式导出;待 A 交付)
+head:                           # 两种表征、两种长度完全相同,只有输入维度不同
+  standardization: 只拟合 14 名有标签者的中心样本
+  projection: Linear(D,128) + ReLU + Dropout(0.2)
+  temporal: 1 层 BiGRU,hidden 64,取中心步输出
+  classifier: Linear(128,5)
+training:
+  optimizer: AdamW
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  batch_size: 128
+  max_epochs: 50
+  early_stopping: {monitor: val_macro_f1, patience: 10}   # 与协议一致;N1 F1 在同一权重上报告
+  downstream_seeds: [0, 1, 2, 3, 4]
+  selection: 验证 Macro-F1 最佳权重;不另挑 N1 最高轮次
+grid:                           # 2 表征 × 2 长度 × 5 seed = 20 个头部 run
+  runs: 20
+  naming: W2_B_CTX{1|3}_{EEGDM|CNN}_label25_sseed2024_seed{0-4}_v01
+comparison:
+  primary: 三段减单段的 Macro-F1、N1 F1、REM F1,同一 sample_set_sha256 下计算
+  uncertainty: 训练种子波动(seed_summary.csv)与按人配对区间(paired_comparison.csv)分别报告
+  note: 5 seed × 8 人不是 40 个独立样本;区间含 0 不代表等效;8 人仅为开发集探索性证据
+entry_points:
+  code: scripts/13_context_head.py
+  aggregate: scripts/14_w2_aggregate.py --pair-context

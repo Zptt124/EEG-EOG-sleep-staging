@@ -14,10 +14,16 @@ tests/test_evaluate.py 用人工可算的假预测和 sklearn 交叉检查。
   python src/evaluation/evaluate.py pred.csv --out metrics.json --bootstrap 1000
   python src/evaluation/evaluate.py pred_a.csv --compare pred_b.csv   # 配对 bootstrap:a 减 b
 
+第二周追加(指标定义未变,v1 数值不变):--reference 核对"应有样本清单"。预测表必须与清单
+样本集合完全一致(缺样本/多样本/y_true 与真值不一致均报错),并在 metrics.json 写入
+sample_set_sha256(按 sample_id 排序后的清单哈希),供配对比较先核对同一集合。
+  python src/evaluation/evaluate.py pred.csv --reference manifests/val_reference_v1.csv
+
 变更说明:本脚本取代 A 的临时版 scripts/evaluate.py。与 A 的 metrics.py 数值一致
 (见 reports/b_recompute_check.md);若以后修改指标定义,需注明哪些结果要重算。
 """
 import argparse
+import hashlib
 import json
 import sys
 
@@ -62,6 +68,39 @@ def load_predictions(path) -> pd.DataFrame:
     df = pd.read_csv(path)
     validate_predictions(df)
     return df
+
+
+def sample_set_sha256(sample_ids) -> str:
+    """按 sample_id 排序后逐行(\\n 结尾)的 SHA256;不同机器上同一集合得到同一值。"""
+    text = "".join(f"{s}\n" for s in sorted(map(str, sample_ids)))
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def check_against_reference(df: pd.DataFrame, ref: pd.DataFrame) -> str:
+    """预测表必须恰好覆盖清单;若清单含 y_true 还须逐段一致。返回 sample_set_sha256。"""
+    if "sample_id" not in ref.columns:
+        raise ValueError("参考清单缺少 sample_id 列")
+    if not ref["sample_id"].is_unique:
+        raise ValueError("参考清单 sample_id 不唯一")
+    pred_ids, ref_ids = set(df["sample_id"]), set(ref["sample_id"])
+    missing, extra = ref_ids - pred_ids, pred_ids - ref_ids
+    if missing:
+        raise ValueError(f"缺样本: 清单中有 {len(missing)} 个 sample_id 不在预测表中,例如 {sorted(missing)[:3]}")
+    if extra:
+        raise ValueError(f"多样本: 预测表有 {len(extra)} 个 sample_id 不在清单中,例如 {sorted(extra)[:3]}")
+    if "y_true" in ref.columns:
+        merged = df[["sample_id", "y_true"]].merge(ref[["sample_id", "y_true"]], on="sample_id",
+                                                   suffixes=("", "_ref"))
+        bad = merged[merged["y_true"] != merged["y_true_ref"]]
+        if len(bad):
+            raise ValueError(f"y_true 与清单真值不一致: {len(bad)} 段,例如 {bad['sample_id'].iloc[0]}")
+    for col in ("subject_id", "record_id", "epoch_index"):
+        if col in ref.columns:
+            merged = df[["sample_id", col]].merge(ref[["sample_id", col]], on="sample_id",
+                                                  suffixes=("", "_ref"))
+            if (merged[col].astype(str) != merged[f"{col}_ref"].astype(str)).any():
+                raise ValueError(f"{col} 与清单不一致")
+    return sample_set_sha256(ref["sample_id"])
 
 
 # --------------------------------------------------------------------------- 指标
@@ -197,14 +236,18 @@ def metrics_table(m: dict) -> str:
     return "\n".join(lines)
 
 
-def evaluate(path, n_boot: int = 0, seed: int = 0) -> dict:
+def evaluate(path, n_boot: int = 0, seed: int = 0, reference=None) -> dict:
     df = load_predictions(path)
+    set_sha = check_against_reference(df, pd.read_csv(reference)) if reference else None
     m = compute_metrics(df["y_true"], df["y_pred"])
     m["n_epochs"] = int(len(df))
     m["n_subjects"] = int(df["subject_id"].nunique())
     m["class_order"] = STAGE_NAMES
     m["evaluate_version"] = EVALUATE_VERSION
     m["source"] = str(path)
+    if set_sha:
+        m["sample_set_sha256"] = set_sha
+        m["sample_set_reference"] = str(reference)
     if n_boot:
         m["bootstrap_subjects"] = bootstrap_subjects(df, n_boot, seed)
     return m
@@ -216,11 +259,13 @@ def main(argv=None):
     ap.add_argument("--out", default=None, help="写出 metrics.json")
     ap.add_argument("--bootstrap", type=int, default=0, help="按受试者 bootstrap 次数(0=不做)")
     ap.add_argument("--seed", type=int, default=0, help="bootstrap 种子")
+    ap.add_argument("--reference", default=None,
+                    help="应有样本清单 CSV(sample_id[, y_true...]);不一致则报错并记录 sample_set_sha256")
     ap.add_argument("--compare", default=None, help="另一张预测表,输出 本表-对方 的配对差")
     args = ap.parse_args(argv)
 
     try:
-        m = evaluate(args.predictions_csv, args.bootstrap, args.seed)
+        m = evaluate(args.predictions_csv, args.bootstrap, args.seed, args.reference)
         print(metrics_table(m))
         if "bootstrap_subjects" in m:
             b = m["bootstrap_subjects"]
