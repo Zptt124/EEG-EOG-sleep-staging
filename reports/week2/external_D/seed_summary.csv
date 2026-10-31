@@ -1,0 +1,13 @@
+head,representation,modalities,context_length,nominal_budget,labeled_subjects,unlabeled_signal_subjects,adaptation_version,adaptation_seed,teacher_id,n_seeds,seeds,macro_f1_mean,N1_precision_mean,N1_recall_mean,N1_f1_mean,REM_f1_mean,macro_f1_std,N1_f1_std,note
+linear,D_R1_D0,EEG+EOG,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.729081,0.392091,0.349447,0.367387,0.699301,0.00524,0.029842,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R1_D0,EEG+EOG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.74558,0.445113,0.38231,0.406554,0.723615,0.003105,0.034954,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R1_D1,EEG+EOG,1,label10,5,49,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.735258,0.397058,0.398094,0.395228,0.712165,0.005148,0.028596,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R1_D1,EEG+EOG,1,label25,14,40,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.751131,0.424566,0.46382,0.439919,0.730583,0.00321,0.023677,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R1_D2,EEG+EOG,1,label10,5,49,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.732424,0.423124,0.356081,0.380809,0.705917,0.003259,0.035279,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R1_D2,EEG+EOG,1,label25,14,40,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.751082,0.445954,0.405871,0.422556,0.743532,0.004061,0.021696,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R2_D0,EEG+EOG,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.704108,0.397488,0.183683,0.24712,0.723353,0.013535,0.05027,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R2_D0,EEG+EOG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.741967,0.432009,0.38353,0.404339,0.73825,0.006492,0.016075,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R2_D1,EEG+EOG,1,label10,5,49,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.706571,0.397559,0.190316,0.256267,0.722415,0.01218,0.038525,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R2_D1,EEG+EOG,1,label25,14,40,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.745494,0.413817,0.439344,0.425488,0.731857,0.005057,0.003904,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R2_D2,EEG+EOG,1,label10,5,49,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.703654,0.399734,0.178422,0.244855,0.721079,0.013933,0.041005,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,D_R2_D2,EEG+EOG,1,label25,14,40,NA,NA,dual_D0_same_seed,5,0;1;2;3;4,0.745032,0.432727,0.397102,0.413664,0.735051,0.007111,0.008243,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
