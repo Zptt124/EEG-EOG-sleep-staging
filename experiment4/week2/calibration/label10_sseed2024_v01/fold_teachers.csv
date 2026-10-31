@@ -1,0 +1,6 @@
+fold,heldout_subject,n_train_subjects,n_train_samples,n_heldout_samples,dual_best_epoch,dual_val_macro_f1,eeg_best_epoch,eeg_val_macro_f1,eog_best_epoch,eog_val_macro_f1,heldout_teacher_accuracy
+0,SC403,4,10073,1863,10,0.7148,6,0.6591,17,0.6095,0.8132
+1,SC412,4,9907,2029,6,0.7374,16,0.6577,9,0.6302,0.7782
+2,SC421,4,9550,2386,14,0.7317,14,0.6799,6,0.6179,0.8277
+3,SC456,4,9551,2385,3,0.7147,8,0.6911,8,0.634,0.6403
+4,SC474,4,8663,3273,5,0.7206,11,0.677,3,0.5999,0.6153

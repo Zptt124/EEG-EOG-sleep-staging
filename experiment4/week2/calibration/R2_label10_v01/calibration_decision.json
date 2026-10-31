@@ -1,0 +1,31 @@
+{
+  "representation": "R2",
+  "budget": "label10",
+  "sampling_seed": "2024",
+  "chosen_p": 0.2,
+  "rule": "largest p in [0.2, 0.4, 0.6] with D1 macro pseudo-label precision >= 0.85; otherwise smallest p",
+  "rule_satisfied": false,
+  "teacher_seed": 0,
+  "fold_encoder_seed": 0,
+  "teacher_early_stopping": "validation macro-F1, patience 10 (same as formal teachers); validation scores NOT used to choose p",
+  "fold_encoders": "A's train_cnn_w2.py --subjects (labeled minus held-out), see fold_teachers.csv",
+  "n_folds": 5,
+  "n_pool": 11936,
+  "roles_sha256": "ef81a35a660946f3f236c9ee6ab6bede546cb7fd0bc9e6a6be2b3a742bc47582",
+  "fold_index_sha256": "5c12bcb3e3471efecf45dde062b6414f3e2a30db06f854bedd05ea1055c5b33e",
+  "code_sha256": {
+    "aggregate_pseudo_stats.py": "54e06a6b7a9d7ccda30f1ef85a0c0f04f043deb112eb7fc3684f1563f710db6b",
+    "build_pooled_cache.py": "33e486a34a971662f568da7c7dfbab6d9c466b86e2da544fb52ed2433d417fd4",
+    "build_r2_cache.py": "2ec64e6c1065fc9750ceee7b25d4e59709ffa0eaeea1c6761c837e2e689439af",
+    "calibrate_threshold.py": "a19ba1efef55c9e5be2d446f8b5311c565940ce1ae06fc56c54185dca4634663",
+    "calibrate_threshold_r2.py": "f40b5180f4165357e115b1364eec25c2f07c4e837fe0ee6cbe991e93ebed8b9a",
+    "compare_ssl.py": "9a815b4b676e0228fd2947d871b9ef3a8ed79b7d9c4a0609a7df719a530df4df",
+    "label_guard.py": "34a722da4c6a8bf5812f75714fd4b02c1178fb53cb2cbe78b252d3cdebbae31d",
+    "make_label_roles.py": "9097e56891dd8e9d145eb889258041f8c5eacecc878218da0f26ee98b77a97d8",
+    "run_fold_cnns.py": "e64004a35565381505cc886018f3fbba393fbfb3b92ac77e42f01f1d89e9c1bd",
+    "run_ssl.py": "0d77ecc5c4fe42d4f0e16c13e7170fd665db1e369525bdbf75d23a49c9f2d170",
+    "ssl_common.py": "e58971eafbf6c10b202c1dcf203b5e7255187b48961600f4d566df24537705cc",
+    "threshold_control.py": "53462fbe4c5fa3a04e97c224b957389478b88db261d93fe1f255b2d27b207f13"
+  },
+  "minutes": 0.3
+}

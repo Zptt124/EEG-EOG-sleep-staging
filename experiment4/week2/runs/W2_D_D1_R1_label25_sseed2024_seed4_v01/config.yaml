@@ -1,0 +1,82 @@
+run_id: W2_D_D1_R1_label25_sseed2024_seed4_v01
+method: D1
+method_description: 'self-training: dual-modal teacher pseudo-labels, per-predicted-class
+  top-p confidence'
+representation: 'R1: R1_EEGDM_raw_frozen_cond14_timepooled (EEG 2560 + EOG 2560 =
+  5120, concat)'
+budget: label25
+sampling_seed: '2024'
+seed: 4
+n_labeled_subjects: 14
+n_labeled_samples: 32310
+n_unlabeled_subjects_used: 40
+n_unlabeled_pool_samples: 100628
+n_pseudo_labels_used: 40256
+labeled_subjects:
+- SC403
+- SC410
+- SC412
+- SC415
+- SC417
+- SC419
+- SC421
+- SC427
+- SC429
+- SC436
+- SC451
+- SC455
+- SC456
+- SC474
+standardization: per-modality mean/std fitted on labeled training samples only
+student_head:
+  type: Linear(5120,5)
+  optimizer: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+  labeled_batch: 128
+  max_epochs: 50
+  early_stop: val macro-F1, patience 10
+roles_file: experiment4/week2/manifests/v1_provisional/labeled_unlabeled_subjects.csv
+roles_sha256: 6f9882e9444d544dd2b709fd325dc2cc0231ff93360738bc886dac80d1a73173
+cache: <D_local_cache>/R1_eegdm_cond14_pooled_v01
+cache_files_sha256:
+  sample_index.csv: a2214f979168361482eb0f71ec15794b8bb66584313799f49d156f9a947ee867
+  eeg_pooled.npy: da1dc03bf94f43b76b4a6f45098838f5eadebd4009433c11452df2b123fa3ddf
+  eog_pooled.npy: 1b6142b99513d73e4798045e943dd1abb31bb77f0a16ad0fe19d7a396133be8b
+evaluate_path: <B_feat-b-evaluation>/src/evaluation/evaluate.py
+evaluate_version: v1
+code_sha256:
+  build_pooled_cache.py: 33e486a34a971662f568da7c7dfbab6d9c466b86e2da544fb52ed2433d417fd4
+  calibrate_threshold.py: a19ba1efef55c9e5be2d446f8b5311c565940ce1ae06fc56c54185dca4634663
+  label_guard.py: 34a722da4c6a8bf5812f75714fd4b02c1178fb53cb2cbe78b252d3cdebbae31d
+  make_label_roles.py: 9097e56891dd8e9d145eb889258041f8c5eacecc878218da0f26ee98b77a97d8
+  run_ssl.py: ab7b5376070b38eedb5108939f2eb151a102a77858be6730fa2daeafdc44a723
+  ssl_common.py: e58971eafbf6c10b202c1dcf203b5e7255187b48961600f4d566df24537705cc
+env:
+  python: 3.11.17
+  torch: 2.7.1+cu126
+  numpy: 1.26.4
+  device: cpu
+  torch_threads: 4
+  deterministic: true
+pseudo_labeling:
+  teacher_dir: experiment4/week2/runs/teachers/W2_D_teachers_R1_label25_sseed2024_seed4_v01
+  teacher: dual-modal head of the same seed (identical to D0)
+  rule: per predicted class, accept top-p by dual-teacher confidence
+  p: 0.4
+  calibration_file: experiment4/week2/calibration/label25_sseed2024_v01/calibration_decision.json
+  calibration_sha256: 51c81ccd1064408151f82f0d243bc99d4b73056f7bdb37a7b6a1fe5a5cd6a670
+  class_thresholds:
+    W: 0.999971
+    N1: 0.702549
+    N2: 0.966672
+    N3: 0.995014
+    REM: 0.914196
+  label_type: hard
+  weight: 1.0
+  rounds: 1
+  student_mixing:
+    pseudo_per_step: 384
+    lambda: 1.0
+    pseudo_stream_seed: 100007
+    steps_per_epoch: same as D0 (number of labeled batches)
