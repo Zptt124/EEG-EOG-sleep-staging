@@ -1,0 +1,13 @@
+{
+  "config.yaml": "cc64bea3aee2435eacd1c6cc48ab3c14b699eb4f6eada1ada65efed779c95c77",
+  "confusion_matrix.csv": "0e059f3c6aac13b02d108e699efa0130c2bdc7637d4d6fa9c812d047f10a4d18",
+  "final_head_epoch50.pt": "112a2b0c711b634b2106b844bbcdc21ce5843ba34afdac9eef2a2579ff64e4f1",
+  "history.json": "9cdc63486524423329ebfe885d998811e7fdbd4fd26af1d0e604d7550be564c0",
+  "metrics.json": "449f2e832fa9a888f4cb087590d901c51e93a3079e7a126b1ac73cbb3bbd4698",
+  "paired_design_audit.json": "9f60fdc46fb52550ab4f350bc161ee4106b9c44df618132997729f2dad7f1a2a",
+  "per_subject_metrics.csv": "a73a8927cb4c6a90ef924e754d66d698962749cb29bf3c8d237db8f3045cf14b",
+  "predictions_val.csv": "f91969adc9f055ab91ee1be1c014acac4daa75991295a0ce66bb51f5932470a4",
+  "resource_profile.csv": "603844f3184bb30f89f897bd5846f8fc104a4c2742ae3d86eef2f34b3d03b132",
+  "run_summary.md": "0fb91ca6628f3c865021b5a3e9befbbe20572684ba187388ccacb2e663a233ce",
+  "summary.json": "3f2103e566b7ccba5656c4c77b01b49f7784dfc9ab30f4df1e9a0b18984f50d9"
+}

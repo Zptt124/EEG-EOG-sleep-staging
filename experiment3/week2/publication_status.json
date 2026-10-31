@@ -17,7 +17,7 @@
     2
   ],
   "historical_status_note": "reports/** and runs/** are unmodified experimental snapshots. Their not-published statements describe 2026-10-29; this file records the current publication stage.",
-  "publication_scope": "C W2 delivery through PR #2, including GitHub Release pooled feature assets",
+  "publication_scope": "Original C W2 results, feature Release and three completed exploratory supplements on main",
   "pooled_feature_release": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031",
   "B_requested_NPZ_files_published": true,
   "pooled_features_B_loader_compatibility_verified": true,
@@ -32,5 +32,28 @@
   ],
   "B_recomputed_C_runs": 80,
   "B_reported_metric_mismatches": 0,
-  "exploratory_fixed50_completed_results_included": false
+  "exploratory_fixed50_completed_results_included": true,
+  "classifier_runs_scope": "Original preregistered classifier runs only",
+  "original_formal_classifier_runs": 80,
+  "supplement_unique_classifier_runs": 160,
+  "supplement_results_published": true,
+  "supplement_experiments": [
+    {
+      "report": "week2_fixed50_20261031_v01",
+      "new_heads": 40,
+      "completed_at": "2026-10-31T16:22:26.176700+08:00"
+    },
+    {
+      "report": "week2_weighted50_20261031_v01",
+      "new_heads": 40,
+      "completed_at": "2026-10-31T17:06:31.932805+08:00"
+    },
+    {
+      "report": "week2_layer_ablation_20261031_v01",
+      "new_heads": 80,
+      "completed_at": "2026-10-31T18:09:55.157447+08:00"
+    }
+  ],
+  "supplement_summary": "reports/week2_supplement_summary_20261031/三个补充实验结论汇总.md",
+  "new_training_started_by_publication": false
 }

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "normalization_matches_unweighted_exactly": true,
+  "class_counts": [
+    3777,
+    1719,
+    4121,
+    545,
+    1774
+  ],
+  "class_weights": [
+    0.6638931632041931,
+    0.9840876460075378,
+    0.6355802416801453,
+    1.7477264404296875,
+    0.9687125086784363
+  ],
+  "class_weights_train_only": true,
+  "initial_model_sha256": "5108986e433693b94e1ff2392e7d59ad12f57d33494ee586572a10687b13f455",
+  "minibatch_order_sha256": "53d96a84f0bb7f82475e974164605a1cea3e9130f164cd6ab4940c8312f8a394",
+  "matches_locked_unweighted_initializer_and_rng_recipe": true,
+  "reference_batch_order_recomputed_from_source_not_claimed_as_archived_trace": true,
+  "selected_epoch": 50,
+  "weighted_objective_is_only_training_change": true
+}

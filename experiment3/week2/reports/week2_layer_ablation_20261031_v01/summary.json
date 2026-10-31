@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "stage": "layer_ablation_and_analysis_complete",
+  "pid": 566,
+  "started_at": "2026-10-31T17:17:44.335060+08:00",
+  "completed_heads": 80,
+  "expected_heads": 80,
+  "reused_all20_heads": 40,
+  "test_used": false,
+  "current_run": null,
+  "current_layer_group": "last2",
+  "completed_at": "2026-10-31T18:09:55.157447+08:00"
+}

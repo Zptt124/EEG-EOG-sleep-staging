@@ -1,0 +1,13 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+test_inverse_sqrt_formula_and_all_five_classes (test_weighted50_fusion.WeightedBudgetChecks.test_inverse_sqrt_formula_and_all_five_classes) ... ok
+test_matrix_has_forty_new_runs_and_forty_matched_references (test_weighted50_fusion.WeightedBudgetChecks.test_matrix_has_forty_new_runs_and_forty_matched_references) ... ok
+test_missing_or_invalid_training_classes_are_rejected (test_weighted50_fusion.WeightedBudgetChecks.test_missing_or_invalid_training_classes_are_rejected) ... ok
+test_optimizer_arithmetic_changes_only_the_loss_weights (test_weighted50_fusion.WeightedBudgetChecks.test_optimizer_arithmetic_changes_only_the_loss_weights) ... ok
+test_uniform_weights_replay_unweighted_training_and_declining_validation_still_runs_50 (test_weighted50_fusion.WeightedBudgetChecks.test_uniform_weights_replay_unweighted_training_and_declining_validation_still_runs_50) ... ok
+test_weighted_mean_and_gradient_match_analytical_objective (test_weighted50_fusion.WeightedBudgetChecks.test_weighted_mean_and_gradient_match_analytical_objective) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.982s
+
+OK

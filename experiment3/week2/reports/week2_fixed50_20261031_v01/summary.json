@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "stage": "fixed50_matrix_and_analysis_complete",
+  "pid": 541,
+  "started_at": "2026-10-31T15:55:13.466513+08:00",
+  "completed_heads": 40,
+  "expected_heads": 40,
+  "test_used": false,
+  "current_run": null,
+  "completed_at": "2026-10-31T16:22:26.176700+08:00",
+  "original_prefix_exact_runs": 40,
+  "selected_epoch_all_runs": 50
+}

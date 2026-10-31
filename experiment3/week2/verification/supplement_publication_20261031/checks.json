@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "supplement_160_predictions_and_local_checkpoints",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "fixed50_tests",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "weighted50_tests",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "layer_ablation_tests",
+      "exit_code": 0,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "new_unique_heads": 160,
+  "experiments": [
+    {
+      "experiment": "week2_fixed50_20261031_v01",
+      "new_heads": 40,
+      "completed_at": "2026-10-31T16:22:26.176700+08:00",
+      "audit": "passed"
+    },
+    {
+      "experiment": "week2_weighted50_20261031_v01",
+      "new_heads": 40,
+      "completed_at": "2026-10-31T17:06:31.932805+08:00",
+      "audit": "passed"
+    },
+    {
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "new_heads": 80,
+      "completed_at": "2026-10-31T18:09:55.157447+08:00",
+      "audit": "passed"
+    }
+  ],
+  "weighted_N1_F1_positive_pairs": 40,
+  "weighted_total_pairs": 40,
+  "train_feature_drift_changed_layers_one_based": [
+    19,
+    20
+  ],
+  "test_used": false,
+  "GitHub_supplement_results_published": false,
+  "no_new_training_started": true
+}

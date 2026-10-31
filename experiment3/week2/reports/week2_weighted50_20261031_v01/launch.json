@@ -1,0 +1,10 @@
+{
+  "pid": 480,
+  "launched_at": "2026-10-31T16:39:51.930008+08:00",
+  "expected_new_heads": 40,
+  "reused_unweighted_final50_heads": 40,
+  "epochs_per_head": 50,
+  "selection": "final_epoch_50",
+  "class_weights": "inverse_sqrt_training_class_count_normalized_mean1",
+  "status": "launched"
+}

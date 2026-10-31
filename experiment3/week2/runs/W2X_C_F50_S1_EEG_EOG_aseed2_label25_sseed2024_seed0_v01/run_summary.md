@@ -1,0 +1,3 @@
+# W2X_C_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01
+
+Exploratory fixed 50-epoch final head. Macro-F1 0.71308359; N1 F1 0.33923177. Original optimization prefix reproduced exactly. No validation selection or test use.

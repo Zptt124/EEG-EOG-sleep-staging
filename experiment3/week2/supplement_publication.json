@@ -1,0 +1,17 @@
+{
+  "status": "verified_for_direct_main_publication",
+  "date": "2026-10-31",
+  "publication_target": "main",
+  "base_commit": "eddb10177abf45f4c69955b4e2b6c6b80287ec16",
+  "source_files_copied": 2083,
+  "new_unique_predictions": 160,
+  "selected_epoch_all_runs": 50,
+  "external_local_checkpoints_verified": 160,
+  "tests_passed": 17,
+  "code_test_groups": 3,
+  "model_weights_and_large_arrays_committed": false,
+  "training_started_by_publication": false,
+  "test_used": false,
+  "original_reports_retained_byte_identical": true,
+  "entry": "SUPPLEMENTS.md"
+}

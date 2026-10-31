@@ -1,0 +1,15 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+test_all20_identity_replays_unweighted_final50_exactly (test_layer_ablation.LayerAblationChecks.test_all20_identity_replays_unweighted_final50_exactly) ... ok
+test_dropped_EEG_coordinates_have_zero_data_gradient (test_layer_ablation.LayerAblationChecks.test_dropped_EEG_coordinates_have_zero_data_gradient) ... ok
+test_eighty_new_runs_and_forty_shared_all20_references (test_layer_ablation.LayerAblationChecks.test_eighty_new_runs_and_forty_shared_all20_references) ... ok
+test_invalid_or_nonfinite_features_are_not_silently_hidden (test_layer_ablation.LayerAblationChecks.test_invalid_or_nonfinite_features_are_not_silently_hidden) ... ok
+test_mask_changes_only_unselected_EEG_and_preserves_EOG (test_layer_ablation.LayerAblationChecks.test_mask_changes_only_unselected_EEG_and_preserves_EOG) ... ok
+test_predefined_layers_and_flattened_coordinates (test_layer_ablation.LayerAblationChecks.test_predefined_layers_and_flattened_coordinates) ... ok
+test_runtime_global_dependencies_are_bound (test_layer_ablation.LayerAblationChecks.test_runtime_global_dependencies_are_bound) ... ok
+test_selection_from_existing_pool_equals_selection_before_time_pooling (test_layer_ablation.LayerAblationChecks.test_selection_from_existing_pool_equals_selection_before_time_pooling) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.040s
+
+OK

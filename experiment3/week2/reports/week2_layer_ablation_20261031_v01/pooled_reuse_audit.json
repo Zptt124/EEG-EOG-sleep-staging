@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "sources": [
+    {
+      "source": "S0",
+      "path": "reports/week2_eeg_comparison_20261028/execution/S0_pooled.npy",
+      "sha256": "da1dc03bf94f43b76b4a6f45098838f5eadebd4009433c11452df2b123fa3ddf",
+      "prior_full_finite_audit_verified_by_cache_SHA": true,
+      "sha_reverified": true
+    },
+    {
+      "source": "S1_aseed0",
+      "path": "reports/week2_eeg_comparison_20261028/execution/S1_pooled.npy",
+      "sha256": "63d8ec867d446cf8f13fc35f34da6625ade1b068828ae5494f1c0ec97a23a627",
+      "prior_full_finite_audit_verified_by_cache_SHA": true,
+      "sha_reverified": true
+    },
+    {
+      "source": "S1_aseed1",
+      "path": "reports/week2_seed1_features_heads_20261028_v04/execution/S1_pooled.npy",
+      "sha256": "94dc9344ba79fcd83e7c0115cb5e7dcdf4bb6c298e4a3475c3f97e693eaee8c8",
+      "prior_full_finite_audit_verified_by_cache_SHA": true,
+      "sha_reverified": true
+    },
+    {
+      "source": "S1_aseed2",
+      "path": "reports/week2_seed2_features_heads_20261029/execution/S1_pooled.npy",
+      "sha256": "fa3026411a27eca7624e86ea8ec7378cd41421112c66b2cfd4884f0f10bab4a9",
+      "prior_full_finite_audit_verified_by_cache_SHA": true,
+      "sha_reverified": true
+    },
+    {
+      "source": "EOG",
+      "path": "reports/week2_fusion_20261029/execution/EOG_audit/S0_pooled.npy",
+      "sha256": "f5234b5f7731e77f1b4d9304567da7284ea9d13b123c41c759a6931d5daf8ad0",
+      "prior_full_finite_audit_verified_by_cache_SHA": true,
+      "sha_reverified": true
+    }
+  ],
+  "layer_major_order_verified": true
+}

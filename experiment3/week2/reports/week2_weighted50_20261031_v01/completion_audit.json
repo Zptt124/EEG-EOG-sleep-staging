@@ -1,0 +1,407 @@
+{
+  "status": "passed",
+  "runs": 40,
+  "checks": [
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 11,
+      "epochs": 50,
+      "selected_epoch": 50,
+      "weights_train_only": true,
+      "validation_identity_verified": true,
+      "official_metrics_match": true,
+      "paired_design_verified": true
+    }
+  ],
+  "test_used": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+  "original_run_id": "W2_C_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+  "representation": "S1",
+  "adaptation_seed": 2,
+  "source_key": "S1_aseed2",
+  "budget": "label10",
+  "seed": 0,
+  "epochs": 50,
+  "selected_epoch": 50,
+  "val_macro_f1": 0.7139928902035952,
+  "n1_f1": 0.3046602340381852,
+  "n1_precision": 0.3300711743772242,
+  "n1_recall": 0.2828821959588258,
+  "rem_f1": 0.714351215038973,
+  "accuracy": 0.7794770131218729,
+  "seconds": 16.411774689000026,
+  "original_selected_epoch": 30,
+  "original_trained_epochs": 40,
+  "original_history_and_selected_weights_reproduced": true,
+  "test_used": false
+}

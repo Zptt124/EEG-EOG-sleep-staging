@@ -1,0 +1,94 @@
+training_subjects:
+- SC403
+- SC412
+- SC421
+- SC456
+- SC474
+training_samples: 11936
+validation_subjects:
+- SC406
+- SC409
+- SC442
+- SC448
+- SC462
+- SC471
+- SC475
+- SC480
+validation_samples: 21186
+train_class_counts:
+  0: 3777
+  1: 1719
+  2: 4121
+  3: 545
+  4: 1774
+EEG_feature_audit_sha256: 025265375c0efd10b386f3d7be1305251f74f2bf2baadaf44c5611141f6e7c50
+EOG_feature_audit_sha256: d45bdc231123e1e18c7016b2d51fe7c18492aa18509e95f52fabd1a8b77083c6
+runtime_binding_sha256: 344af30c425d403bd09d41d99280fd4ac9704b5c1be8df33dac34cb28d54d496
+trainer_sha256: a6d6a359a81be713608699c703e473cbc350527294872028718f31881f3b5363
+evaluator_sha256: 4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605
+label_manifest_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+local_unlabeled_adaptation_subjects: 0
+EOG_source: local_regeneration_using_identical_D_reference_configuration
+D_full_cache_received: false
+feature_order:
+- EEG
+- EOG
+run_id: W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed4_v01
+representation: S0
+adaptation_seed: null
+downstream_seed: 4
+sampling_seed: 2024
+budget: label10
+modality: EEG_EOG
+role: exploratory_class_weighted_final50
+input_dim: 5120
+classifier: Linear(5120,5)
+optimizer: AdamW
+learning_rate: 0.001
+weight_decay: 0.0001
+batch_size: 128
+max_epochs: 50
+patience: null
+loss: inverse_sqrt_class_weighted_cross_entropy
+selection: fixed final epoch 50; validation never selects weights
+normalization: fit only current budget labeled train subjects, independently for S0/S1
+std_floor: 1.0e-06
+backbone_frozen: true
+test_used: false
+device: cpu
+cpu_threads: 4
+deterministic: true
+N1_REM_from_same_selected_head: true
+original_run_id: W2_C_S0_EEG_EOG_label10_sseed2024_seed4_v01
+early_stopping: false
+selected_epoch: 50
+original_runtime_binding_sha256: 33c6fa42d0bf99e8e55ea80ef07d9a80655462ddd6b158e8412e84e093fc87a2
+declared_after_original_validation_results: true
+optimizer_updates: 4700
+unweighted_fixed50_run_id: W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed4_v01
+class_order:
+- W
+- N1
+- N2
+- N3
+- REM
+class_counts_labeled_train:
+- 3777
+- 1719
+- 4121
+- 545
+- 1774
+class_weights:
+- 0.6638931632041931
+- 0.9840876460075378
+- 0.6355802416801453
+- 1.7477264404296875
+- 0.9687125086784363
+class_weight_formula: (1/sqrt(n_c))/mean_c(1/sqrt(n_c))
+class_weight_dtype: float32
+class_weight_source: current budget labeled training labels only
+loss_reduction: 'PyTorch weighted mean: sum(w_y * CE)/sum(w_y) in each minibatch'
+train_loss_logging: sample-count-weighted mean of per-minibatch weighted-mean losses
+unweighted_runtime_binding_sha256: 38d759acc22e3ff7ad2aab1a5e3d17aa12a883859d9b996e5ce51b34666fead7
+declared_after_fixed50_results: true
+weight_search_performed: false
