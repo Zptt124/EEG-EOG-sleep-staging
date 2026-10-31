@@ -1,0 +1,16 @@
+{
+  "status": "protocol_and_index_match",
+  "reference_D_commit": "f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed",
+  "D_config_sha256": "a3f935e15a969568dd50d1fe9df0e4c967a9f5b153856035c7de71ea1ea16b3b",
+  "D_index_sha256": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+  "legacy_extractor_sha256": "d660cd5768fb4e90e0e713423ab0bfb054837b26670119e13e2f9e8cf447a235",
+  "checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+  "parsed_D_configuration_exact_match": true,
+  "all_D_sample_metadata_match_EEG": true,
+  "samples": 154124,
+  "records": 122,
+  "D_full_cache_received": false,
+  "cache_source": "local_regeneration_from_original_EOG_using_D_reference_protocol",
+  "D_raw_file_byte_equivalence_unverified": true,
+  "test_used": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "dispatched",
+  "pid": 557,
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/continue_seed2_after_training.py"
+  ],
+  "detached_session": true,
+  "adaptation_seed": 2,
+  "automatic_feature_and_head_continuation": true,
+  "binding_sha256": "c6211136f8d6f9256f34b1f9133599cc4b3700d0238707a0de62820a8944664d"
+}

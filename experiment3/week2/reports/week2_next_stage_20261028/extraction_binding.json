@@ -1,0 +1,27 @@
+{
+  "status": "ready_not_extracted",
+  "config_id": "W2_C_S1_features_v01",
+  "feature_config_sha256": "77911d38b6f0cf8b96ce2e03ce10ab917f9b229fb2b8d8cd41c69233a63d6834",
+  "adaptation_config_sha256": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
+  "adaptation_run": "W2_C_EEG_S1_aseed0_steps10000_v01",
+  "completed_adaptation_updates": 10000,
+  "selected_weight_path": "runs/W2_C_EEG_S1_aseed0_steps10000_v01/selected_ema_step10000.pt",
+  "selected_weight_sha256": "4bf8d441e2c061db5662e42740d8ff742827c07062cb7965d7961ab1c502d385",
+  "selected_weight_role": "selected_new_ema",
+  "selected_parameter_sha256": "ba1479b88fb38f36f5b1a13713aac7962eceed5184e60b1aa04b7bf1a80f62ce",
+  "source_index_sha256": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+  "source_S0_config_sha256": "d2e3e70d71945e0a6ca673f800508f56a885588954876626d47fcfed691411a0",
+  "extractor_script_sha256": "225de39c94846f3c81b8a9628d50896c88f0a6d5ec1fee8eef82c34e0ba0efa7",
+  "legacy_extractor_sha256": "d660cd5768fb4e90e0e713423ab0bfb054837b26670119e13e2f9e8cf447a235",
+  "records": 122,
+  "samples": 154124,
+  "split_counts": {
+    "train": 132938,
+    "val": 21186
+  },
+  "raw_feature_bytes_estimate": 23673462016,
+  "pooled_feature_bytes_estimate": 1578229888,
+  "full_extraction_started": false,
+  "S0_overwritten": false,
+  "test_signals_used": false
+}

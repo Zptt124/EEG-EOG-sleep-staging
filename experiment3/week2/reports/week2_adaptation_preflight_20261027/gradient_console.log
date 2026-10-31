@@ -1,0 +1,11 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+{"status": "failed", "mode": "gradient", "script_sha256": "0cca8e7094257bc221fbf31c3e71eec588c4f6d60a9b87381380059e3309db7b", "batch_size": 2, "lr": 1e-05, "seed": 0, "formal_adaptation": false, "downstream_evaluation": false, "completed_updates": 0, "error": "Traceback (most recent call last):\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/adapt_preflight.py\", line 232, in main\n    require(not subprocess.check_output(['git', '-C', str(UPSTREAM), 'status', '--porcelain'], text=True).strip(),\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/adapt_preflight.py\", line 35, in require\n    raise ValueError(message)\nValueError: Upstream source has untracked or modified files\n"}
+Traceback (most recent call last):
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/adapt_preflight.py", line 441, in <module>
+    main()
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/adapt_preflight.py", line 232, in main
+    require(not subprocess.check_output(['git', '-C', str(UPSTREAM), 'status', '--porcelain'], text=True).strip(),
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/adapt_preflight.py", line 35, in require
+    raise ValueError(message)
+ValueError: Upstream source has untracked or modified files

@@ -1,0 +1,13 @@
+{
+  "record_id": "SC4061",
+  "split": "val",
+  "n_samples": 843,
+  "seconds": 29.866989185999955,
+  "samples_per_second": 28.225141635473364,
+  "peak_gpu_mb": 603.20361328125,
+  "bytes": 129484928,
+  "batch_size": 4,
+  "cache_frozen_kernels": true,
+  "weight_sha256": "1c49356e56350ca886dd3e765ebaa28ea3a8db094c2265d82a64d9becda2c426",
+  "sha256": "6f04f5e6ebf06fda004d43f122c1a5accc089061d8c743a4c343176998a092b5"
+}

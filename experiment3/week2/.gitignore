@@ -1,0 +1,10 @@
+vendor/
+checkpoints/
+cache/
+*.npy
+*.npz
+*.pt
+*.ckpt
+*.safetensors
+__pycache__/
+*.py[cod]

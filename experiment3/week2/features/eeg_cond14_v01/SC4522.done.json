@@ -1,0 +1,11 @@
+{
+  "record_id": "SC4522",
+  "split": "train",
+  "n_samples": 997,
+  "seconds": 33.184462409999924,
+  "samples_per_second": 30.044181149656367,
+  "peak_gpu_mb": 579.20361328125,
+  "bytes": 153139328,
+  "batch_size": 4,
+  "cache_frozen_kernels": true
+}

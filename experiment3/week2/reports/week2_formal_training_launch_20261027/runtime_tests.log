@@ -1,0 +1,23 @@
+test_actual_reference_sampler_roundtrip (test_train_sleep_adaptation.TrainRuntimeChecks.test_actual_reference_sampler_roundtrip) ... /opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_binding_rejects_untested_or_changed_runtime (test_train_sleep_adaptation.TrainRuntimeChecks.test_binding_rejects_untested_or_changed_runtime) ... ok
+test_cpu_checkpoint_resume_matches_uninterrupted_training_bitwise (test_train_sleep_adaptation.TrainRuntimeChecks.test_cpu_checkpoint_resume_matches_uninterrupted_training_bitwise) ... ok
+test_ema_initializes_exactly_and_never_averages_frozen_state (test_train_sleep_adaptation.TrainRuntimeChecks.test_ema_initializes_exactly_and_never_averages_frozen_state) ... ok
+test_fixed_ema_equation_and_counter (test_train_sleep_adaptation.TrainRuntimeChecks.test_fixed_ema_equation_and_counter) ... ok
+test_frozen_buffer_changes_are_rejected (test_train_sleep_adaptation.TrainRuntimeChecks.test_frozen_buffer_changes_are_rejected) ... ok
+test_global_rng_roundtrip (test_train_sleep_adaptation.TrainRuntimeChecks.test_global_rng_roundtrip) ... ok
+test_recovery_rejects_wrong_config_or_counter (test_train_sleep_adaptation.TrainRuntimeChecks.test_recovery_rejects_wrong_config_or_counter) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 6.004s
+
+OK

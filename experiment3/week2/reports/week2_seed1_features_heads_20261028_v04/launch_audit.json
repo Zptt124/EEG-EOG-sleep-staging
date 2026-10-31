@@ -1,0 +1,29 @@
+{
+  "status": "running_verified",
+  "verified_at": "2026-10-28T21:53:57.146794+08:00",
+  "pid": 705,
+  "detached_session_leader": true,
+  "pipeline_stage": "full_feature_extraction",
+  "observed_completed_records": 2,
+  "observed_completed_samples": 1968,
+  "first_record": {
+    "record_id": "SC4001",
+    "samples": 841,
+    "shape": [
+      841,
+      20,
+      30,
+      128
+    ],
+    "dtype": "float16",
+    "all_finite": true,
+    "sha256": "5f2aaf66bcf8d39d8f84e6c1b21d7bf0a008a4835e864da150554b5a685b56ed",
+    "selected_weight_sha256": "c344b5f31f68f89d6f19b31b244770f1c5b02ebdec6507f3d65a94b886b9a94b",
+    "adaptation_seed": 1
+  },
+  "S0_reuse_full_match_passed": 10,
+  "automatic_head_continuation": true,
+  "new_heads_expected": 10,
+  "test_used": false,
+  "estimated_extraction_remaining_minutes": 84.59145524192334
+}

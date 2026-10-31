@@ -1,0 +1,13 @@
+{
+  "record_id": "SC4722",
+  "split": "train",
+  "n_samples": 1130,
+  "seconds": 36.017198432999976,
+  "samples_per_second": 31.37390050206298,
+  "peak_gpu_mb": 603.20361328125,
+  "bytes": 173568128,
+  "batch_size": 4,
+  "cache_frozen_kernels": true,
+  "weight_sha256": "c344b5f31f68f89d6f19b31b244770f1c5b02ebdec6507f3d65a94b886b9a94b",
+  "sha256": "c281e8be4058bdf92a8da0c4ac56416393098382d0de35f1f3ea34c015103a9e"
+}

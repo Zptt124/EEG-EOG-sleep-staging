@@ -8,3 +8,7 @@ cache/
 __pycache__/
 *.py[cod]
 *.log
+
+# W2 evidence snapshot has its own binary exclusions.
+!week2/
+!week2/**

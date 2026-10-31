@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "records": 122,
+  "samples": 154124,
+  "test_used": false,
+  "full_extraction_started": true,
+  "expected_records": 122,
+  "expected_samples": 154124,
+  "selected_weight_sha256": "c344b5f31f68f89d6f19b31b244770f1c5b02ebdec6507f3d65a94b886b9a94b",
+  "split_counts": {
+    "train": 132938,
+    "val": 21186
+  },
+  "total_feature_bytes": 23673462016,
+  "S0_overwritten": false,
+  "NPZ_labels_read": false
+}

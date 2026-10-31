@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "stage": "seed2_full_repeat_complete",
+  "pid": 557,
+  "started_at": "2026-10-29T00:14:22+08:00",
+  "adaptation_seed": 2,
+  "completed_updates": 10000,
+  "target_updates": 10000,
+  "subsequent_new_heads": 10,
+  "reused_S0_heads": 10,
+  "test_used": false,
+  "feature_report": "reports/week2_seed2_features_heads_20261029",
+  "training_eta_seconds": 0.0,
+  "updated_at": "2026-10-29T08:40:34+08:00",
+  "completed_at": "2026-10-29T10:45:40+08:00",
+  "completed_new_heads": 10
+}

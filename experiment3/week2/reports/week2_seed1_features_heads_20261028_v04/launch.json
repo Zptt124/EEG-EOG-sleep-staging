@@ -1,0 +1,26 @@
+{
+  "status": "dispatched_awaiting_real_features",
+  "pid": 705,
+  "adaptation_seed": 1,
+  "launched_at_Asia_Shanghai": "2026-10-28T21:52:25.879736+08:00",
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_replication_features_heads.py",
+    "--mode",
+    "run",
+    "--config",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/configs/features_W2_C_S1_aseed1_v02.yaml",
+    "--report",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/reports/week2_seed1_features_heads_20261028_v04"
+  ],
+  "detached_session": true,
+  "launcher_sha256": "4e2f60549ffd85f5ec9ed93dfa528e240db62decfdbbb877a4506fd27c091b6e",
+  "pipeline_binding_sha256": "337bd8932317307f2a94fd1674450859f0e6e5a3d64d6058775a24540978b144",
+  "expected_feature_records": 122,
+  "expected_feature_samples": 154124,
+  "new_heads": 10,
+  "reused_S0_heads": 10,
+  "downstream_continuation_automatic": true,
+  "test_used": false
+}

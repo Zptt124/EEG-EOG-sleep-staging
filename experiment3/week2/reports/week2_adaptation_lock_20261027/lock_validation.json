@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "config_id": "W2_C_S1_pilot_v01",
+  "config_sha256": "85ee4e17a978abdb9e614420afe9bf1a668839a534b58b758cf173daadb6f8f4",
+  "locked_input_count": 23,
+  "adaptation_subjects": 54,
+  "trainable_parameters": 527233,
+  "planned_updates": 10000,
+  "formal_training_started": false,
+  "runtime_binding_required": true,
+  "stage_labels_or_npz_read": false
+}

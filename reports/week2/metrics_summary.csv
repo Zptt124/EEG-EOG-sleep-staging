@@ -1,0 +1,1 @@
+run_id,representation,modalities,context_length,nominal_budget,labeled_subjects,unlabeled_signal_subjects,adaptation_version,adaptation_seed,teacher_id,downstream_seed,best_epoch,macro_f1,W_f1,N1_precision,N1_recall,N1_f1,N2_f1,N3_f1,REM_f1,sample_count,subject_count,metrics_path,predictions_path,predictions_sha256,by_subject_path,n1_errors_path,evaluator_commit,sample_set_sha256

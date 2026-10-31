@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "mode": "gradient",
+  "script_sha256": "7a3a4f4e639951050228d526c9e2b33c562936340982a3cd09b1fa4ad20426db",
+  "batch_size": 2,
+  "lr": 1e-05,
+  "seed": 0,
+  "formal_adaptation": false,
+  "downstream_evaluation": false,
+  "completed_updates": 1,
+  "checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+  "initial_parameter_sha256": "5c0ee148d419face7a403677362fe3a8358328cbd8a905b7ea468a28e1f370f5",
+  "final_parameter_sha256": "0605f8aa50edbfd6fb76d286fb77eb1a1ff3e74e54539c131b227c0632067232",
+  "frozen_parameter_sha256_before": "5639fe62da24126cd5e199cf86de81e42bb35fd9a5e00d91257a419d1cb1d63c",
+  "frozen_parameter_sha256_after": "5639fe62da24126cd5e199cf86de81e42bb35fd9a5e00d91257a419d1cb1d63c",
+  "frozen_parameters_unchanged": true,
+  "frozen_parameter_gradients_absent": true,
+  "trainable_parameter_count": 527233,
+  "total_parameter_count": 5931649,
+  "trainable_tensor_count": 34,
+  "changed_trainable_tensors": 34,
+  "gate_checks": [
+    {
+      "layer": 18,
+      "gate_pre_sigmoid_gradient_l2": 0.00011192585225217044,
+      "gate_pre_sigmoid_gradient_abs_max": 5.2236259762139525e-06,
+      "gate_pre_sigmoid_gradient_nonzero": 256000
+    },
+    {
+      "layer": 19,
+      "gate_pre_sigmoid_gradient_l2": 0.00011470771278254688,
+      "gate_pre_sigmoid_gradient_abs_max": 4.460124728211667e-06,
+      "gate_pre_sigmoid_gradient_nonzero": 256000
+    }
+  ],
+  "all_trainable_gradients_finite": true,
+  "loss_first": 0.05675681307911873,
+  "loss_last": 0.05675681307911873,
+  "prediction_type": "v_prediction",
+  "train_subject_pool": 54,
+  "sampled_subject_count": 1,
+  "sampled_subjects": [
+    "SC444"
+  ],
+  "sampled_record_count": 1,
+  "samples_processed": 2,
+  "signal_member_reads": 2,
+  "stage_labels_read": false,
+  "validation_signals_read": false,
+  "test_signals_read": false,
+  "fresh_original_initialization": true,
+  "new_ema_updated": false,
+  "mixed_precision": false,
+  "loop_wall_seconds": 3.388645076000003,
+  "peak_allocated_mib": 749.517578125,
+  "peak_reserved_mib": 850.0,
+  "mean_compute_seconds": 2.8702759239999978,
+  "mean_data_seconds": 0.5110216960000002,
+  "mean_step_seconds": 3.381863801999998,
+  "diagnostic_checkpoint_sha256": "d44666decc73a9d96df10146f87f16f0a2bfc4b87e73ef977b836f013680765c",
+  "diagnostic_checkpoint_bytes": 28084001
+}

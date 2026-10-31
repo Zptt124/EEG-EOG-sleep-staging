@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-29T00:10:17.233991+08:00",
+  "completed_at": "2026-10-28T23:35:50.536298+08:00",
+  "new_seed1_heads": 10,
+  "reused_S0_heads": 10,
+  "feature_records": 122,
+  "feature_samples": 154124,
+  "per_run_checks": [
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "prediction_rows": 21186,
+      "metrics_recomputed": true,
+      "adaptation_seed": 1
+    }
+  ],
+  "all_validation_metadata_match": true,
+  "official_point_metrics_recomputed": true,
+  "test_used": false
+}

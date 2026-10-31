@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "sources": [
+    {
+      "source_key": "S0",
+      "pooled_sha256": "da1dc03bf94f43b76b4a6f45098838f5eadebd4009433c11452df2b123fa3ddf",
+      "samples": 154124,
+      "source_metadata_match": true,
+      "previous_full_finite_audit_verified_by_cache_SHA": true
+    },
+    {
+      "source_key": "S1_aseed0",
+      "pooled_sha256": "63d8ec867d446cf8f13fc35f34da6625ade1b068828ae5494f1c0ec97a23a627",
+      "samples": 154124,
+      "source_metadata_match": true,
+      "previous_full_finite_audit_verified_by_cache_SHA": true
+    },
+    {
+      "source_key": "S1_aseed1",
+      "pooled_sha256": "94dc9344ba79fcd83e7c0115cb5e7dcdf4bb6c298e4a3475c3f97e693eaee8c8",
+      "samples": 154124,
+      "source_metadata_match": true,
+      "previous_full_finite_audit_verified_by_cache_SHA": true
+    },
+    {
+      "source_key": "S1_aseed2",
+      "pooled_sha256": "fa3026411a27eca7624e86ea8ec7378cd41421112c66b2cfd4884f0f10bab4a9",
+      "samples": 154124,
+      "source_metadata_match": true,
+      "previous_full_finite_audit_verified_by_cache_SHA": true
+    }
+  ]
+}

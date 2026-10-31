@@ -1,0 +1,11 @@
+{
+  "record_id": "SC4752",
+  "split": "val",
+  "n_samples": 1049,
+  "seconds": 33.353524073999324,
+  "samples_per_second": 31.450949461071968,
+  "peak_gpu_mb": 579.20361328125,
+  "bytes": 161126528,
+  "batch_size": 4,
+  "cache_frozen_kernels": true
+}

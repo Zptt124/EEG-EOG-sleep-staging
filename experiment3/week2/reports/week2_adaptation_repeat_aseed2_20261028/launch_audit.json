@@ -1,0 +1,17 @@
+{
+  "status": "running_verified",
+  "verified_at": "2026-10-29T00:16:07.748654+08:00",
+  "trainer_pid": 407,
+  "continuation_pid": 557,
+  "both_detached_sessions": true,
+  "verified_real_training_updates": 100,
+  "verified_EMA_updates": 100,
+  "first100_losses_and_gradient_norms_finite": true,
+  "history_contiguous": true,
+  "frozen_check_reported_passed": true,
+  "training_signal_only_access": true,
+  "automatic_full_feature_and_classifier_continuation": true,
+  "new_downstream_heads_expected": 10,
+  "test_used": false,
+  "current_reported_training_step": 200
+}

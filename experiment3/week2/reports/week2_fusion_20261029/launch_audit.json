@@ -1,0 +1,28 @@
+{
+  "status": "running_verified",
+  "verified_at": "2026-10-29T11:14:47.229478+08:00",
+  "EOG_pid": 474,
+  "coordinator_pid": 703,
+  "both_detached_sessions": true,
+  "completed_EOG_records": 15,
+  "completed_EOG_samples": 15541,
+  "expected_records": 122,
+  "expected_samples": 154124,
+  "first_record": {
+    "record_id": "SC4001",
+    "shape": [
+      841,
+      20,
+      30,
+      128
+    ],
+    "dtype": "float16",
+    "all_finite": true,
+    "sha256": "5fafb8018f228e6ee304e3e97445fb29494921b1181b9e1d61931f26cefbf045"
+  },
+  "D_parsed_config_exact_match": true,
+  "D_full_cache_received": false,
+  "EOG_source": "local_regeneration_using_D_protocol",
+  "automatic_primary_heads": 40,
+  "test_used": false
+}

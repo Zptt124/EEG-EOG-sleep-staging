@@ -1,0 +1,23 @@
+test_data_sampling_reproducible (test_adapt_preflight.AdaptGuards.test_data_sampling_reproducible) ... /opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /opt/eegdm/venv/lib/python3.11/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_diffusion_target_matches_upstream_training_method (test_adapt_preflight.AdaptGuards.test_diffusion_target_matches_upstream_training_method) ... CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+ok
+test_real_batch_uses_only_whitelisted_members_and_hidden_labels (test_adapt_preflight.AdaptGuards.test_real_batch_uses_only_whitelisted_members_and_hidden_labels) ... ok
+test_reject_labels_and_val_test_before_open (test_adapt_preflight.AdaptGuards.test_reject_labels_and_val_test_before_open) ... ok
+test_split_rejects_overlap_and_changed_partition (test_adapt_preflight.AdaptGuards.test_split_rejects_overlap_and_changed_partition) ... ok
+test_transform_exactly_matches_w1_full_epoch_then_crop (test_adapt_preflight.AdaptGuards.test_transform_exactly_matches_w1_full_epoch_then_crop) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 11.516s
+
+OK

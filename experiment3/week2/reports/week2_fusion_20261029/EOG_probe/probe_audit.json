@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "samples": 2,
+  "source_channel": 1,
+  "modality": "eog",
+  "condition": 14,
+  "original_EMA_parameter_sha256": "5c0ee148d419face7a403677362fe3a8358328cbd8a905b7ea468a28e1f370f5",
+  "all_parameters_frozen": true,
+  "cached_uncached_max_abs_diff": 0.0,
+  "shape": [
+    2,
+    20,
+    30,
+    128
+  ],
+  "dtype": "float16",
+  "all_finite": true,
+  "test_used": false,
+  "D_full_cache_received": false
+}

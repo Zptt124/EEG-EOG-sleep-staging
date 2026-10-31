@@ -1,0 +1,15 @@
+{
+  "python": "3.11.17",
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "diffusers": "0.33.1",
+    "PyYAML": "6.0.2",
+    "einops": "0.8.1",
+    "ema-pytorch": "0.7.7"
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "total_gpu_bytes": 8585216000,
+  "nvidia_smi": "NVIDIA GeForce RTX 4060 Laptop GPU, 566.26, 8188 MiB, 633 MiB, 39"
+}

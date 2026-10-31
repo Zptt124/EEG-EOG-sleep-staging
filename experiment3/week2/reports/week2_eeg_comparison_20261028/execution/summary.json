@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "stage": "EEG_diagnostic_matrix_complete",
+  "completed_heads": 20,
+  "expected_heads": 20,
+  "test_used": false,
+  "EOG_status": "waiting_for_D_original_cache",
+  "pid": 448,
+  "current_run": null,
+  "independent_adaptation_repeats": 1,
+  "downstream_seeds_per_cell": 5
+}

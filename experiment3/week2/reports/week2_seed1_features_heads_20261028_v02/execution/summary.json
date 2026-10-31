@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "stage": "full_feature_extraction",
+  "adaptation_seed": 1,
+  "pid": 559,
+  "completed_new_heads": 0,
+  "expected_new_heads": 10,
+  "reused_S0_heads": 10,
+  "feature_summary": "features/eeg_cond14_S1_aseed1_steps10000_v01/summary.json",
+  "test_used": false,
+  "error": "Traceback (most recent call last):\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_replication_features_heads.py\", line 190, in run\n    runtime.extract_locked(cfg, preparation, model, rows, grouped, partitions, feature_root, resume)\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/replication_feature_head_runtime.py\", line 63, in extract_locked\n    signals=load_signal_record(contract.resolve_path(config['source_data_root']),rec,partitions,expected)\n            ^^^^^^^^^^^^^^^^^^\nNameError: name 'load_signal_record' is not defined\n"
+}

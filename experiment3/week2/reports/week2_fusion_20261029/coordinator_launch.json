@@ -1,0 +1,16 @@
+{
+  "status": "dispatched",
+  "pid": 703,
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_primary_fusion.py",
+    "--mode",
+    "run"
+  ],
+  "started_at": "2026-10-29T11:11:30.133416+08:00",
+  "detached_session": true,
+  "automatic_primary_comparison": true,
+  "expected_heads": 40,
+  "D_full_cache_received": false
+}

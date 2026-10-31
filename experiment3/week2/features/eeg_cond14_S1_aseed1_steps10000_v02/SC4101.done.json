@@ -1,0 +1,13 @@
+{
+  "record_id": "SC4101",
+  "split": "train",
+  "n_samples": 1104,
+  "seconds": 35.089547951999975,
+  "samples_per_second": 31.462360287747053,
+  "peak_gpu_mb": 603.20361328125,
+  "bytes": 169574528,
+  "batch_size": 4,
+  "cache_frozen_kernels": true,
+  "weight_sha256": "c344b5f31f68f89d6f19b31b244770f1c5b02ebdec6507f3d65a94b886b9a94b",
+  "sha256": "acc2c7670c29c0ab052d09f8e6fbe31edfa9f548581b4ac5af20970a751381db"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "incomplete",
+  "records": 0,
+  "samples": 0,
+  "test_used": false,
+  "full_extraction_started": true,
+  "expected_records": 122,
+  "expected_samples": 154124,
+  "selected_weight_sha256": "c344b5f31f68f89d6f19b31b244770f1c5b02ebdec6507f3d65a94b886b9a94b",
+  "error": "Traceback (most recent call last):\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/replication_feature_head_runtime.py\", line 63, in extract_locked\n    signals=load_signal_record(contract.resolve_path(config['source_data_root']),rec,partitions,expected)\n            ^^^^^^^^^^^^^^^^^^\nNameError: name 'load_signal_record' is not defined\n"
+}

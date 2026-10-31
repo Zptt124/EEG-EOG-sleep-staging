@@ -1,0 +1,5 @@
+{
+  "status": "superseded_without_full_extraction_or_real_head_training",
+  "reason": "Added missing YAML dependency and synthetic head execution check before launch",
+  "active_report": "reports/week2_seed1_features_heads_20261028_v02"
+}

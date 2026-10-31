@@ -1,0 +1,15 @@
+stage,task,status,dependency,evidence
+1,10000-step adaptation and final EMA,completed_verified,none,training_completion_audit.json
+2,selected weight binding and extraction code,completed_verified,stage1,extraction_binding.json
+3,two-sample numerical and fresh-kernel probe,passed,stage2,probe/probe_audit.json
+4,122-record full S1 EEG extraction,completed_verified,stage3,../week2_eeg_comparison_20261028/execution/completion_audit.json
+5,pooling and S0/S1 index alignment,completed_verified,full S1 cache complete,../week2_eeg_comparison_20261028/execution/completion_audit.json
+6,20 EEG-only S0/S1 downstream runs,completed_verified,S0/S1 EEG features,../week2_eeg_comparison_20261028/execution/completion_audit.json
+7,20 EEG-EOG S0/S1 downstream runs,completed_with_local_D_protocol_EOG,D original EOG full cache SHA and alignment,../week2_fusion_20261029/execution/completion_audit.json
+8,B official evaluation and paired comparisons,C_local_official_evaluation_complete,per-run 11-column predictions,../week2_final_C_20261029/completion_audit.json
+9,preregistered independent adaptation repeat seed1,completed_verified,pilot EEG artifacts verified and resources available,../week2_adaptation_repeat_aseed1_20261028/training_completion_audit.json
+10,seed1 full EEG extraction and 10 new heads with reused S0 baselines,completed_verified,seed1 final EMA verified and S0 full configuration match,../week2_seed1_features_heads_20261028_v04/execution/completion_audit.json
+11,seed2 adaptation plus automatic EEG features and classifier comparison,completed_verified,preregistered seed2 and verified pilot artifacts,../week2_seed2_features_heads_20261029/execution/completion_audit.json
+12,original EOG local reconstruction and 40 primary fusion heads,completed_verified,three EEG backbones complete and D protocol equivalence checked,../week2_fusion_20261029/execution/completion_audit.json
+13,80-run audit N1 error analysis and reproducible local delivery,completed_verified,all preregistered C runs complete,../week2_final_C_20261029/实验3_第二周最终报告.md
+14,B protocol confirmation D baseline acceptance and formal team delivery,pending_team_acceptance,B official confirmation and D common EOG source acceptance,../week2_final_C_20261029/A_B_D依赖与交接待办.md

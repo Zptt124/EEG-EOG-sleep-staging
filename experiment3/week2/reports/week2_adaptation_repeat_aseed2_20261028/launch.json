@@ -1,0 +1,19 @@
+{
+  "status": "dispatched_awaiting_real_updates",
+  "pid": 407,
+  "adaptation_seed": 2,
+  "launched_at_Asia_Shanghai": "2026-10-29T00:12:52.722486+08:00",
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/train_sleep_adaptation.py",
+    "--config",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/configs/adapt_W2_C_S1_aseed2_v01.yaml",
+    "--binding",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/reports/week2_adaptation_repeat_aseed2_20261028/runtime_binding.json"
+  ],
+  "detached_session": true,
+  "launcher_sha256": "ef790f53bf0fe764996bcecc13d7aaeed14e172ad1b8a425963e27030bf32ebe",
+  "config_sha256": "db16fe27723690db1af0fc5b330da6cda5428709d2028e8ab5ec3781c6748546",
+  "binding_sha256": "5624c1e74bf8cb2fcee19d8c7bae3762543f93abd4b2ecf71de200e9187f22d7"
+}

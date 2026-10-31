@@ -1,0 +1,663 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-29T16:33:27.976151+08:00",
+  "unique_runs": 80,
+  "primary_fusion_runs": 40,
+  "EEG_diagnostic_runs": 40,
+  "independent_adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "paired_contrasts": 60,
+  "validation_subjects": 8,
+  "validation_samples": 21186,
+  "test_used": false,
+  "D_full_cache_received": false,
+  "EOG_source": "local_regeneration_using_D_reference_protocol",
+  "all_artifact_SHA_and_point_metric_checks": [
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed0_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed1_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_aseed2_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label10_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label10_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label10_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label10_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label25_sseed2024_seed1_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label25_sseed2024_seed2_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label25_sseed2024_seed3_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S0_EEG_EOG_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed0_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed1_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    },
+    {
+      "run_id": "W2_C_S1_EEG_EOG_aseed2_label25_sseed2024_seed4_v01",
+      "artifact_files_verified": 9,
+      "config_and_checkpoint_match": true,
+      "strict_selection_verified": true,
+      "predictions_match_A_validation": true,
+      "official_metrics_recomputed": true
+    }
+  ],
+  "analysis_source_sha256": "dc7be1327781559ab387c33246f70ce7517419cbcddfd2ff6c9b3abf7eb6a8f0",
+  "analysis_fits_models": false,
+  "analysis_selects_new_checkpoints": false
+}

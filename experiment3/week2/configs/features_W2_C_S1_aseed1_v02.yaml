@@ -1,0 +1,65 @@
+schema_version: 1
+config_id: W2_C_S1_aseed1_features_v02
+prepared_date: '2026-10-28'
+status: prepared_not_extracted
+adaptation_config: configs/adapt_W2_C_S1_aseed1_v01.yaml
+adaptation_config_sha256: 6d04861ba9fab8237fd12e492c9f797cdff5685ded8f7185ff98e512f686e9d2
+adaptation_run: runs/W2_C_EEG_S1_aseed1_steps10000_v01
+required_training_status: completed
+required_optimizer_and_ema_updates: 10000
+selected_filename: selected_ema_step10000.pt
+selected_weight_role: selected_new_ema
+original_checkpoint: checkpoints/backbone.ckpt
+original_checkpoint_sha256: 0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef
+source_data_root: vendor/experiment1-review/交付包/实验①交付包_20261018/2_预处理数据与脚本_给B和C/data/processed
+source_split: vendor/experiment1-review/manifests/split_subjects.csv
+S0_feature_root: features/eeg_cond14_v01
+S1_feature_root: features/eeg_cond14_S1_aseed1_steps10000_v02
+S0_feature_config_sha256_from_adaptation_lock: true
+reference_index: features/eeg_cond14_v01/feature_index.csv
+accepted_splits:
+- train
+- val
+test_signals_or_features: false
+model_receives_sleep_labels: false
+feature_index_labels: copied_unchanged_from_S0_metadata_after_backbone_selection_only
+source_npz_members_read:
+- signal.npy
+- epoch_index.npy
+expected_subjects:
+  train: 54
+  val: 8
+expected_records: 122
+expected_samples:
+  train: 132938
+  val: 21186
+batch_size: 4
+device: cuda
+precision: float32
+storage_dtype: float16
+source_channel: 0
+source_hz: 100
+target_hz: 200
+amplitude: uV_div100_then_official_staged_mu_law_once
+lead_condition: 14
+diffusion_t: 1
+random_input_noise: false
+query: gate
+feature_shape:
+- 20
+- 30
+- 128
+window_points: 200
+window_step: 200
+reduction: std_torch_correction1
+pooling: float32_mean_over_30_time_windows_then_flatten_to_2560
+frozen_kernel_cache: new_instance_after_selected_weights_loaded_only
+reuse_S0_kernel_cache: false
+overwrite_S0: false
+create_new_output_directory: true
+resume: same_weight_config_code_and_completed_file_sha256_only
+readiness_check_starts_extraction: false
+probe_policy: one_first_training_epoch_and_one_first_validation_epoch_after_final_weight_selection
+full_extraction_requires_explicit_command: true
+adaptation_seed: 1
+feature_revision: 2

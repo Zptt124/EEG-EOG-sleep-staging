@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-29T17:50:41.017424+08:00",
+  "source": "read-only GitHub REST branch/pull listing",
+  "repository": "Zptt124/EEG-EOG-sleep-staging",
+  "branches": {
+    "feat/a-data-baseline": "2952b91e81bfd28e15f5c4d593ac6be6e393c0f9",
+    "feat/b-evaluation": "6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923",
+    "feat/c-eegdm": "b6ee02852d379cc2ee748d817cb421de619cac89",
+    "feat/d-fusion": "f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed",
+    "main": "a63e5c021d8bbf79733def693654d17f8096cfde"
+  },
+  "pull_requests": {
+    "1": "open",
+    "2": "open",
+    "3": "open",
+    "4": "merged"
+  },
+  "does_not_prove_members_have_no_local_W2_work": true
+}

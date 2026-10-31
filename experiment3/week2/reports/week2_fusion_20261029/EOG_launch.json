@@ -1,0 +1,22 @@
+{
+  "status": "dispatched",
+  "pid": 474,
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/extract_features.py",
+    "--modality",
+    "eog",
+    "--condition",
+    "14",
+    "--batch-size",
+    "4",
+    "--cache-kernels",
+    "--output",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/features/eog_cond14_local_Dprotocol_v01"
+  ],
+  "started_at": "2026-10-29T11:05:45.868703+08:00",
+  "detached_session": true,
+  "source_binding_sha256": "45caaa9c1d5085b768bc63eed065dd8f7f7f602da5ea2b216860318078e79b18",
+  "D_full_cache_received": false
+}

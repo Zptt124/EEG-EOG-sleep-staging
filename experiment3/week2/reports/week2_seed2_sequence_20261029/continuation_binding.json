@@ -1,0 +1,19 @@
+{
+  "status": "bound_before_continuation",
+  "adaptation_seed": 2,
+  "input_sha256": {
+    "scripts/continue_seed2_after_training.py": "95b106f2d6c40a4a4090e1a70c2e2d5e0fc3a76a14ce78303694bf977b92b76a",
+    "configs/features_W2_C_S1_aseed2_v01.yaml": "720122bb777ab01b56f0703e11dce3d8e83856ab1651d6db91c75565dbc27b3c",
+    "configs/adapt_W2_C_S1_aseed2_v01.yaml": "db16fe27723690db1af0fc5b330da6cda5428709d2028e8ab5ec3781c6748546",
+    "configs/adapt_W2_C_S1_aseed2_v01.lock.json": "f8167a0617b710d850747259d684727f6ce3290966cb0492b2a279a428d037db",
+    "scripts/run_replication_features_heads.py": "6d4918705afa19e8223cbea5aedea35b7b6a462dddab00c1cc1e3cf8a1fb06a6",
+    "scripts/replication_feature_head_runtime.py": "4e88fb2f9e012a42465550ce0062906546d640a00dbdd28d0906de3a091a4e42",
+    "scripts/extract_adapted_features.py": "225de39c94846f3c81b8a9628d50896c88f0a6d5ec1fee8eef82c34e0ba0efa7",
+    "scripts/run_s0_s1_eeg_comparison.py": "7d36538f9307c9bad5fb6e1123a0eed1efec2687c6181d2d4880ab229f08cbb9",
+    "scripts/train_sleep_adaptation.py": "a3f8e87b1632a88507c8968c9c19cf0c46f16d066b51e2f7ad0aa402d07445f2",
+    "tests/test_replication_features_heads.py": "482afdcbda548ce82dd3ec08c0de8f536b4d0912e3e1b18fa05addc552e78893",
+    "reports/week2_seed1_features_heads_20261028_v04/runtime_tests.log": "c34864af346cec3c9b016e59973219e1a8c0e18e12ed74f1638ea96f0b23d9e5",
+    "reports/week2_adaptation_repeat_aseed2_20261028/launch.json": "b3e10d13f13f7d51d41052b9733da34194fbbc8c61aad0aa386e60651df4101c"
+  },
+  "test_used": false
+}

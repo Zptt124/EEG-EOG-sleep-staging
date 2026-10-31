@@ -1,0 +1,18 @@
+{
+  "status": "launched",
+  "pid": 448,
+  "command": [
+    "/opt/eegdm/venv/bin/python",
+    "-u",
+    "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_s0_s1_eeg_comparison.py",
+    "--mode",
+    "run"
+  ],
+  "started_at": "2026-10-28T19:19:55.688601+08:00",
+  "script_sha256": "7d36538f9307c9bad5fb6e1123a0eed1efec2687c6181d2d4880ab229f08cbb9",
+  "binding_sha256": "928a028d1d7626358071aae40283326071ba4a6346a697fdd6a6605edd58167e",
+  "test_log_sha256": "d16fc664ef77538cc173edbf684643e265354f217f63c317cb1de375fe6692a5",
+  "planned_heads": 20,
+  "EOG_cache_received": false,
+  "test_used": false
+}

@@ -1,0 +1,280 @@
+schema_version: 1
+config_id: W2_C_S1_aseed1_v01
+lock_date: '2026-10-27'
+timezone: Asia/Shanghai
+status: locked_training_not_started
+objective: unlabeled_sleep_EEG_domain_adaptation
+run_id: W2_C_EEG_S1_aseed1_steps10000_v01
+initialization:
+  checkpoint: checkpoints/backbone.ckpt
+  checkpoint_sha256: 0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef
+  state_dict_prefix: ema.ema_model.
+  upstream_commit: 003b5a2a016b2f02788ea5693d8b7cd00b6bd969
+  source_data_commit: 02f120ee80c1c7a7822c33746ce92017632f1faa
+  reload_original_before_update_1: true
+  inherit_diagnostic_weights: false
+  inherit_optimizer_or_ema_counters: false
+  expected_initial_parameter_sha256: 5c0ee148d419face7a403677362fe3a8358328cbd8a905b7ea468a28e1f370f5
+data:
+  dataset: Sleep_EDF_Expanded_SC_A_verified_v1
+  processed_root: vendor/experiment1-review/交付包/实验①交付包_20261018/2_预处理数据与脚本_给B和C/data/processed
+  split: vendor/experiment1-review/manifests/split_subjects.csv
+  split_sha256: 1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f
+  adaptation_subjects: manifests/week2_c_adaptation_v01/adapt_subjects.csv
+  n_subjects: 54
+  n_records: 106
+  allowed_split: train
+  allowed_npz_members:
+  - signal.npy
+  - epoch_index.npy
+  sleep_stage_labels_visible: false
+  y_placeholder: -1
+  read_validation_signals: false
+  read_test_signals: false
+  class_balanced_sampling: false
+  normalization: none
+input:
+  modality: EEG
+  channel_index: 0
+  source_hz: 100
+  source_epoch_seconds: 30
+  source_unit: uV
+  target_hz: 200
+  resampling: scipy.signal.resample_poly_up2_down1_default_filter
+  amplitude_divisor: 100
+  nonlinearity: official_staged_mu_law_mu255_once
+  transform_full_30s_before_crop: true
+  z_score: false
+  crop_seconds: 5
+  crop_points: 1000
+  crop_candidates:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  lead_condition: 14
+  local_condition: null
+sampling:
+  policy: shuffled_subject_cycles_uniform_night_uniform_epoch_uniform_crop
+  different_subject_per_batch: false
+  one_subject_one_random_record_per_batch: true
+  epoch_rows_without_replacement_within_batch: true
+  small_record_row_replacement_only_if_rows_less_than_batch: true
+  adaptation_seed: 1
+  data_seed: 1
+  noise_seed: 1
+  reference_provider_script: scripts/adapt_preflight.py
+  reference_provider_script_sha256: 7a3a4f4e639951050228d526c9e2b33c562936340982a3cd09b1fa4ad20426db
+  io_pipeline: measured_signal_only_reader_no_new_cache_or_prefetch
+model:
+  trainable_prefixes:
+  - layers.18.
+  - layers.19.
+  - out_layer.
+  exact_parameter_names: manifests/week2_c_adaptation_v01/trainable_parameters.txt
+  exact_parameter_table: manifests/week2_c_adaptation_v01/trainable_parameters.csv
+  trainable_parameter_count: 527233
+  trainable_tensor_count: 34
+  total_parameter_count: 5931649
+  freeze_other_parameters: true
+  freeze_time_and_lead_embeddings: true
+  frozen_parameter_sha256: 5639fe62da24126cd5e199cf86de81e42bb35fd9a5e00d91257a419d1cb1d63c
+  backbone_mode: train
+  s4_backend: original_pytorch_differentiable_fallback
+  frozen_inference_kernel_memoization: false
+diffusion:
+  scheduler: diffusers.DDPMScheduler
+  num_train_timesteps: 50
+  beta_start: 0.0001
+  beta_end: 0.05
+  beta_schedule: squaredcos_cap_v2
+  prediction_type: v_prediction
+  timesteps: uniform_integer_0_through_49_per_crop
+  input_noise: independent_standard_normal_per_crop
+  loss: mean_squared_error
+training:
+  optimizer: torch.optim.AdamW
+  learning_rate: 1.0e-05
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+  foreach: false
+  amsgrad: false
+  lr_schedule: constant
+  optimizer_only_trainable_parameters: true
+  preserve_s4_optim_metadata: true
+  special_lr_upper_bound: 1.0e-05
+  gradient_clip_norm: 1.0
+  gradient_clip_error_if_nonfinite: true
+  batch_size: 2
+  accumulation_steps: 1
+  max_successful_optimizer_updates: 10000
+  crops_per_update: 2
+  total_crop_occurrences: 20000
+  unique_crops_or_full_epochs_guaranteed: false
+  precision: float32
+  autocast: false
+  grad_scaler: false
+  tf32: false
+  deterministic_algorithms: true
+  cudnn_benchmark: false
+  cudnn_deterministic: true
+  cpu_threads: 4
+  cublas_workspace_config: :4096:8
+  extra_warmup_updates: 0
+  diagnostic_updates_inherited: 0
+ema:
+  enabled: true
+  implementation: explicit_fixed_decay_update_not_ema_pytorch_default_warmup
+  initialization: exact_copy_of_original_EMA_initialized_online_model_before_update_1
+  beta: 0.999
+  update_after_successful_optimizer_step: true
+  update_every: 1
+  first_update_step: 1
+  adaptive_decay_or_warmup: false
+  equation: ema_new=0.999*ema_old+0.001*online_after_optimizer_step
+  averaged_parameters: exact_trainable_parameter_names_only
+  frozen_parameters_and_buffers: immutable_original_copy_no_repeated_weighted_rounding
+  compute_dtype: float32
+  saved_state: full_model_state_plus_successful_update_counter
+  differs_from_original_pretraining_ema_update_schedule: true
+  eog_ema_updated: false
+stopping_and_selection:
+  stop_rule: fixed_successful_optimizer_update_10000
+  early_stopping: false
+  adaptation_validation_split: none
+  external_validation_used_for_backbone_selection: false
+  choose_by_adaptation_loss: false
+  choose_by_N1_or_macro_f1: false
+  selected_step: 10000
+  selected_state: new_EMA_after_step_10000_update
+  online_last_state_role: recovery_and_diagnostics_only
+  intermediate_snapshot_role: recovery_only_not_downstream_candidates
+  failure_conditions:
+  - nonfinite_loss
+  - missing_or_nonfinite_gradient
+  - nonfinite_parameters
+  - frozen_parameter_change
+  - forbidden_data_access
+  - source_or_config_hash_mismatch
+  failure_action: abort_preserve_logs_no_automatic_hyperparameter_change
+checkpoints:
+  run_root: runs/W2_C_EEG_S1_aseed1_steps10000_v01
+  create_new_run_directory_only: true
+  recovery_every_updates: 1000
+  keep_latest_recovery_count: 2
+  selected_final_filename: selected_ema_step10000.pt
+  online_final_filename: online_last_step10000.pt
+  exact_resume_state:
+  - online_model
+  - new_ema_full_state
+  - optimizer
+  - successful_update_counter
+  - python_rng
+  - numpy_rng
+  - torch_cpu_rng
+  - torch_cuda_rng
+  - subject_cycle_order
+  - batch_sampler_rng
+  - config_sha256
+  - runtime_source_sha256
+  resume_only_same_config_and_code: true
+  resume_policy: hardware_interruption_from_full_recovery_state_only
+  reexecuted_lost_updates_logged_as_extra_compute: true
+  resume_from_nonfinite_failure: false
+  new_run_for_changed_configuration: true
+feature_extraction_after_adaptation:
+  S0_EEG: original_EMA_existing_cache
+  S1_EEG: selected_new_EMA_step10000
+  EOG_both_comparisons: original_frozen_EMA_only
+  feature_root_S1: features/eeg_cond14_S1_aseed1_steps10000_v01
+  overwrite_S0: false
+  create_new_feature_directory_only: true
+  record_selected_weight_sha256: true
+  stale_s4_kernel_cache_allowed: false
+  diffusion_t: 1
+  random_input_noise: false
+  query: gate
+  layers: all_original_20_layers
+  reduction: 1s_window_std_torch_correction1
+  raw_feature_shape:
+  - 20
+  - 30
+  - 128
+  raw_feature_storage_dtype: float16
+  pooling: float32_mean_over_30_time_windows_then_flatten
+  eeg_dimension: 2560
+  concatenated_dimension: 5120
+  accepted_splits:
+  - train
+  - val
+  test_features_extracted: false
+downstream_comparison:
+  manifest: manifests/week2_c_adaptation_v01/label_subsets_v2.csv
+  sampling_seed: 2024
+  budgets:
+  - label10
+  - label25
+  labeled_subject_counts:
+  - 5
+  - 14
+  downstream_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  representation_versions:
+  - S0
+  - S1
+  modalities:
+  - EEG
+  - EEG_EOG
+  primary_comparison: adapted_EEG_plus_original_EOG_vs_original_EEG_plus_original_EOG
+  EEG_only_role: diagnostic
+  normalization: per_feature_mean_std_fit_only_budget_labeled_subjects_separately_for_S0_S1
+  std_floor: 1.0e-06
+  classifier: Linear_inputdim_to_5
+  classifier_optimizer:
+    name: AdamW
+    learning_rate: 0.001
+    weight_decay: 0.0001
+  classifier_loss: unweighted_cross_entropy
+  classifier_batch_size: 128
+  classifier_max_epochs: 50
+  classifier_selection: highest_development_validation_macro_f1_strict_improvement
+  classifier_early_stopping_patience: 10
+  N1_and_REM_from_same_selected_classifier: true
+  classifier_reference_source_commit: f00a16ba73bdabed65c819a9bfd2d9e7fe6198ed
+  evaluator_source_commit: 6e7df9978c48c84bbef4d2f7e9d66e9ccd93b923
+  formal_eog_feature_dependency: D_original_frozen_EOG_cache_sha_and_sample_id_alignment
+  eog_dependency_received: false
+  reuse_old_runs_only_after_full_configuration_match: true
+  formal_heads_planned_before_reuse_audit: 40
+replication:
+  current_adaptation_seed: 1
+  extension_seeds_preregistered:
+  - 1
+  - 2
+  extension_trigger: pilot_artifacts_complete_and_resources_available_not_positive_score
+  extension_changes: random_seed_and_unique_artifact_paths_only
+  report_all_completed_seeds_including_declines: true
+  downstream_seeds_are_not_independent_backbone_repeats: true
+runtime_binding:
+  trainer_implementation_state: pending_separate_implementation_and_verification
+  bind_formal_trainer_sha_before_first_update: true
+  require_lock_validator_success_before_first_update: true
+  do_not_launch_preflight_script_as_formal_trainer: true
+  this_lock_operation_starts_training: false
+environment:
+  constraints: manifests/week2_c_adaptation_v01/runtime_constraints.json
+  target_gpu: NVIDIA_GeForce_RTX_4060_Laptop_8GiB
+  python: 3.11.17
+  torch: 2.7.1+cu126
+  diffusers: 0.33.1
+  numpy: 1.26.4
+  scipy: 1.15.3

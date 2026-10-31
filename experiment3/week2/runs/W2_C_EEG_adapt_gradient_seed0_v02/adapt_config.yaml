@@ -1,0 +1,51 @@
+mode: gradient
+batch_size: 2
+seed: 0
+checkpoint_sha256: 0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef
+upstream_commit: 003b5a2a016b2f02788ea5693d8b7cd00b6bd969
+split_sha256: 1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f
+script_sha256: 7a3a4f4e639951050228d526c9e2b33c562936340982a3cd09b1fa4ad20426db
+train_subjects: 54
+val_signals_used: false
+test_signals_used: false
+stage_labels_read: false
+source_channel: 0
+source_unit: uV
+source_hz: 100
+target_hz: 200
+preprocessing: 30s resample_poly(2,1); uV/100; staged_mu_law once; uniform 5s crop
+input_shape:
+- 2
+- 1
+- 1000
+lead_condition: 14
+noise_scheduler:
+  num_train_timesteps: 50
+  beta_start: 0.0001
+  beta_end: 0.05
+  beta_schedule: squaredcos_cap_v2
+  prediction_type: v_prediction
+original_ema_config:
+  beta: 0.999
+  update_after_step: 100
+  update_every: 10
+ema_policy: No new EMA for diagnostics. Original EMA initializes online model; formal
+  training must reset and explicitly configure its own EMA.
+optimizer: AdamW
+learning_rate: 1.0e-05
+weight_decay: 0.0
+gradient_clip_norm: 1.0
+trainable_prefixes:
+- layers.18.
+- layers.19.
+- out_layer.
+precision: float32; autocast disabled; TF32 disabled
+s4_backend: official fallback; no frozen inference kernel memoization
+deterministic_algorithms: true
+benchmark_updates: 1
+benchmark_warmup_policy: First 10 of 100 actual updates reported separately, no hidden
+  warmup updates
+reset_policy: Gradient check and benchmark run in separate processes, both load original
+  EMA; formal training must reload original again
+sample_policy: Cycle shuffled training subjects; uniform night, epoch row and 5s crop;
+  no stage-based selection
