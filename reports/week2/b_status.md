@@ -48,9 +48,6 @@ python scripts/16_audit_predictions.py <各组分支引用> --out reports/week2/
 
 ## 已知问题与口径提醒
 
-- **D 的 `official_metrics.csv` 疑似列错位**:`EEGDM_EEGEOG_cond14` 点估计 Macro-F1 0.7766,区间却是
-  [0.8237, 0.9161],N1 F1 点估计 0.4913 而区间下限 0.8604,点估计落在区间外。预测表本身通过核验、
-  重算的点估计与 D 一致,问题在区间列。需 D 复核后再引用该文件的区间。
 - 旧的 25%/100% EEGDM 头要复用,须核对名单、标准化、特征 SHA、头、种子、更新预算、选模和评价样本。
   D 的 `train_linear_concat.py` 固定了 `torch.manual_seed(0)` 与确定性算法(多 seed 脚本我没读过);`12_eegdm_budget_head.py` 沿用同一配方,
   但**尚未用真实特征做过逐位复现**,所以现阶段不把任何旧结果登记为 reused。
@@ -73,3 +70,9 @@ python scripts/16_audit_predictions.py <各组分支引用> --out reports/week2/
 
 C 的 EEGDM EEG+EOG S0 头在 10%/25% 各有 seed 0–4(EOG 是 C 的本地重建,非 D 缓存)。要登记为 B 的 10% 头复用,还需逐项核对
 名单、标准化、特征 SHA、头、种子、更新预算、选模,**目前没有登记**。
+
+## 更正
+
+此前版本曾写"D 的 `official_metrics.csv` 疑似列错位"。**该说法是错的,已删除。** 我把 `models_summary.csv` 里相邻的
+`accuracy`、`F1_W`、`F1_N2` 列误读成了区间。`official_metrics.csv` 14 行的点估计都落在各自 95% 区间内
+(例:EEGDM_EEGEOG_cond14 Macro-F1 0.7766 [0.7297, 0.8050],N1 F1 0.4913 [0.4483, 0.5341]),D 的文件无需复核。
