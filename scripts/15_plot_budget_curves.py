@@ -1,12 +1,13 @@
 """Step W2-B7: 监督预算曲线(Macro-F1 与 N1 F1,并附 N1 precision/recall 表)。
 
-读 seed_summary.csv(由 14_w2_aggregate.py 生成)。横轴是"有标签受试者人数"(5/14/27/54),不是片段比例;
+读 seed_summary.csv(由 14_w2_aggregate.py 生成)与 --extra-summary(A/D 的同结构表)。横轴是"有标签受试者人数"(5/14/27/54),不是片段比例;
 误差条是训练种子间标准差,**不含**受试者不确定性(8 人开发集)。缺失预算(没有跑)留空,不插值;
 单一 seed 的点不画误差条并在图例标注。半监督(D)带 unlabeled_signal_subjects>0 的点用空心标记另列,
 不与只用有标签者信号的监督点混称。
 
 用法:
-  python scripts/15_plot_budget_curves.py --summary reports/week2/seed_summary.csv --out reports/week2/budget_curves
+  python scripts/15_plot_budget_curves.py --summary reports/week2/seed_summary.csv \
+      --extra-summary reports/week2/external_A/seed_summary.csv --out reports/week2/budget_curves
 """
 import argparse
 from pathlib import Path
@@ -20,11 +21,13 @@ import pandas as pd
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("--summary", default="reports/week2/seed_summary.csv")
+    ap.add_argument("--extra-summary", nargs="*", default=[], help="其他成员的 seed_summary.csv")
     ap.add_argument("--out", default="reports/week2/budget_curves")
     ap.add_argument("--context-length", type=int, default=1, help="监督曲线用长度 1(无上下文)的结果")
     args = ap.parse_args(argv)
-    df = pd.read_csv(args.summary)
-    df = df[(df["head"] == "linear") & (df.context_length == args.context_length)]   # 预算曲线只用线性头
+    df = pd.concat([pd.read_csv(p) for p in [args.summary, *args.extra_summary]], ignore_index=True)
+    df = df[(df["head"] == "linear") & (df.context_length == args.context_length)    # 预算曲线只用线性头
+            & (df.modalities == "EEG+EOG")]                                          # 单模态与概率平均不进曲线
     if df.empty:
         raise SystemExit("没有符合条件的行")
     fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharex=True)

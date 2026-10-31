@@ -1,22 +1,22 @@
 owner,cell,expected_runs,found_runs,status,blocker_or_note
-A,CNN EEGEOG label10 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EEGEOG label25 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EEGEOG label50 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EEGEOG label100 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EEG label10 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EEG label25 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EEG label100 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EOG label10 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EOG label25 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
-A,CNN EOG label100 seed0-4,5,0,missing,命名按文档示例计数;未找到不代表 A 本地没有
+A,CNN EEGEOG label10 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EEGEOG label25 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EEGEOG label50 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EEGEOG label100 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EEG label10 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EEG label25 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EEG label100 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EOG label10 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EOG label25 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
+A,CNN EOG label100 seed0-4,5,5,complete,B 已用官方 evaluate v1 重算(reports/week2/external_A);复用的 2 个 E1 run 核验见 a_reuse_check_w1.md
 B,EEGDM EEG+EOG 线性头 label10 seed0-4,5,5,complete,需要 EEG/EOG 冻结(池化)特征;25%/100% 旧结果须逐项核对后才可登记复用
 B,EEGDM EEG+EOG 线性头 label25 seed0-4,5,5,complete,需要 EEG/EOG 冻结(池化)特征;25%/100% 旧结果须逐项核对后才可登记复用
 B,EEGDM EEG+EOG 线性头 label50 seed0-4,5,5,complete,需要 EEG/EOG 冻结(池化)特征;25%/100% 旧结果须逐项核对后才可登记复用
 B,EEGDM EEG+EOG 线性头 label100 seed0-4,5,5,complete,需要 EEG/EOG 冻结(池化)特征;25%/100% 旧结果须逐项核对后才可登记复用
 B,上下文 长度1 EEGDM label25 seed0-4,5,5,complete,需要 EEGDM 特征
 B,上下文 长度3 EEGDM label25 seed0-4,5,5,complete,需要 EEGDM 特征
-B,上下文 长度1 CNN label25 seed0-4,5,0,missing,需要 A 的 25% 双通道 CNN 编码器特征
-B,上下文 长度3 CNN label25 seed0-4,5,0,missing,需要 A 的 25% 双通道 CNN 编码器特征
+B,上下文 长度1 CNN label25 seed0-4,5,5,complete,需要 A 的 25% 双通道 CNN 编码器特征
+B,上下文 长度3 CNN label25 seed0-4,5,5,complete,需要 A 的 25% 双通道 CNN 编码器特征
 C,S0 原始冻结 10%/25% × EEG、EEG+EOG × 下游 seed0-4,20,20,complete,"已由 B 用官方 evaluate v1 重算复评;C 的 EOG 为本地重建,待与 D 的来源对齐"
 C,S1 适配(3 个适配 seed) 10%/25% × EEG、EEG+EOG × 下游 seed0-4,60,60,complete,"已由 B 用官方 evaluate v1 重算复评;C 的 EOG 为本地重建,待与 D 的来源对齐"
 D,D0 2 表征 × 2 预算 × seed0-4,20,0,missing,"D 尚未发布第二周结果;命名未知,按名字含 D0/D1/D2 计数"

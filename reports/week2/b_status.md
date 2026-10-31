@@ -1,31 +1,37 @@
 # B 第二周进度与待办(实验②)
 
-## 最新状态(2026-10-31)
+## 最新状态(2026-10-31,CNN 补齐后)
 
-**B 的 40 个 run 完成 30 个:EEGDM 四档线性头 20 个、EEGDM 上下文 10 个。** 还差 CNN 上下文 10 个,以及预算曲线的 CNN 部分,都在等 A。
-本节优先于下文较早的记录;下文"被什么挡住"、"已知问题"里关于等 C/D 特征、不登记复用的内容已过时。
+**B 的 40 个 run 全部完成:EEGDM 四档线性头 20 个、EEGDM 上下文 10 个、CNN 上下文 10 个。** A 的 50 格矩阵已并入统一口径,缺项表 A 50/50、B 40/40、C 80/80、D 0/60。
+本节优先于下文所有较早记录。还差两件:B 的权重包上传团队位置并写入 `artifact_index.csv`;D 的 D0/D1/D2 预测进来后,做半监督曲线与全组最终汇总。
 
-- **输入**:C 的 Release `c-pooled-features-v01-20261031`,EEG 与 C 本地重建的 EOG 各 154124×2560,SHA256 全部通过。
-  EOG 不是 D 的原始缓存;配置与索引一致,但未证明逐字节相同。`b_feature_request_files.txt` 不再使用。
-- **核对**:10%/25% 与 C 的 S0 一致,100% 与 D 的多 seed 结果一致(各 5 个 seed)。本批为 B 重新训练,未登记 reused。
-- **设备**:线性头与上下文头均在 CPU 上运行,设备固定,结果可比。
-- **产物**:`seed_summary.csv`、`metrics_summary.csv`、`paired_comparison.csv`、`run_registry.csv`、`budget_curves.png`、`budget_curves_n1_table.csv`、`b_gap_table.csv`。
-- **run 小文件**:`reports/week2/runs_B/`;`best.ckpt` 与 `normalization.npz` 只在 B 本地 `runs/`,SHA 见各 config.yaml。汇总表中的 `runs/...` 路径对应这里的同名目录。
+- **按人分析**:见 `b_by_subject_analysis.md`。EEGDM 与 CNN 的优势落在不同的人身上,总体差值小是方向相反的差异相互抵消,不代表两者在每个人身上都接近。
 
-| 监督线性头(5 seed 均值) | Macro-F1 | N1 F1 |
-| --- | --- | --- |
-| 5 人 | 0.7321 | 0.3845 |
-| 14 人 | 0.7456 | 0.4066 |
-| 27 人 | 0.7684 | 0.4655 |
-| 54 人 | 0.7740 | 0.4901 |
+- **A 的输入**:Release `a-cnn-w2-v01-20261031`。63 个预测表全部通过官方 evaluate v1 + 验证参考清单,样本集合相同,重算值与 `a_supervised_comparison.csv` 不一致 0 项(`external_A/`)。复用的 2 个 E1 run 预测不在 Release 内,本次未重算,核验见 `a_reuse_check_w1.md`。
+- **CNN 特征**:`scripts/19_extract_cnn_features.py` 用同 seed 的 25% 双通道编码器在 CPU 上提取,53496 段×128 维;权重与标准化 SHA 与 `encoder_index.csv` 一致。用 A 的分类层接特征还原验证预测,类别不同的段每 seed 0–4 段(21186 段中),全部是前两类概率差小于 1e-3 的打平段,概率最大偏差 1.23e-3,来自 CPU 与 A 的 GPU 的浮点差(`b_cnn_extraction_check.csv`)。
+- **设备**:上下文头均在 CPU 上运行。
 
-| 25% 上下文(BiGRU 头,5 seed 均值) | Macro-F1 | N1 F1 | REM F1 |
-| --- | --- | --- | --- |
-| 长度 1 | 0.7544 | 0.4298 | 0.7137 |
-| 长度 3 | 0.7719 | 0.4686 | 0.7500 |
+| 25% 上下文(BiGRU 头,5 seed 均值) | Macro-F1 | Macro-F1 种子标准差 | N1 F1 | REM F1 |
+| --- | --- | --- | --- | --- |
+| EEGDM 长度 1 | 0.7544 | 0.0018 | 0.4298 | 0.7137 |
+| EEGDM 长度 3 | 0.7719 | 0.0026 | 0.4686 | 0.7500 |
+| CNN 长度 1 | 0.7382 | 0.0102 | 0.3947 | 0.7222 |
+| CNN 长度 3 | 0.7597 | 0.0141 | 0.4275 | 0.7743 |
 
-长度 3 减长度 1:Macro-F1 +1.75pp,N1 F1 +3.88pp,REM F1 +3.63pp。5 个 seed 的按人区间中,Macro-F1 与 N1 F1 各有 2 个含 0,seed 3 的 N1 F1 为负;
-这是 8 人开发集的探索性证据。BiGRU 长度 1 与线性头不是同一模型,不能互相替代。
+- **长度 3 减长度 1**:EEGDM 的 Macro-F1 +1.75pp、N1 F1 +3.88pp、REM F1 +3.63pp;CNN 的 Macro-F1 +2.14pp、N1 F1 +3.28pp、REM F1 +5.21pp。CNN 的 Macro-F1 按人区间 5 个 seed 都不含 0,N1 F1 有 2 个含 0,seed 4 为负。
+- **EEGDM 减 CNN(25%,上下文头)**:长度 1 为 Macro-F1 +1.62pp、N1 F1 +3.51pp;长度 3 为 +1.22pp、+4.11pp。Macro-F1 按人区间在长度 1、3 各有 4 个 seed 含 0,不能据此说 EEGDM 更好。REM F1 反而是 CNN 高(长度 3 差 2.44pp)。
+
+| 监督预算曲线(5 seed 均值) | 5 人 | 14 人 | 27 人 | 54 人 |
+| --- | --- | --- | --- | --- |
+| EEGDM 线性头 Macro-F1 | 0.7321 | 0.7456 | 0.7684 | 0.7740 |
+| CNN 双通道 Macro-F1 | 0.7183 | 0.7420 | 0.7710 | 0.7788 |
+| EEGDM 线性头 N1 F1 | 0.3845 | 0.4066 | 0.4655 | 0.4901 |
+| CNN 双通道 N1 F1 | 0.3724 | 0.3862 | 0.4747 | 0.4904 |
+
+- **EEGDM 减 CNN(预算曲线)**:20 组配对的 Macro-F1 按人区间全部含 0。名义上 EEGDM 在标签少时高,CNN 在标签多时高,这个方向只是开发集线索,不是结论(`external_A/paired_comparison.csv`)。
+- **比较口径**:EEGDM 主干由外部数据预训练,CNN 只见过本预算有标签者,这是表征比较,不是纯架构比较。上下文头的 CNN 特征来自已在同 14 人上训练过的编码器,而 EEGDM 主干没见过这些人的标签,两者的训练特征并不等价。BiGRU 长度 1 与线性头、A 的端到端 CNN 都不是同一模型,不能互相替代。8 人仅为开发集探索性证据。
+- **run 文件**:小文件在 `reports/week2/runs_B/`;`best.ckpt` 与 `normalization.npz` 暂时只在 B 本地 `runs/`,尚未上传,所以 `artifact_index.csv` 还没有 B 的行。资源表未记录内存峰值,写 NA。提取特征只在本地 `features/a_w2_v01/`,可由步骤 W2-B11 重新生成。
+- **EEGDM 输入**:C 的 Release `c-pooled-features-v01-20261031`,EOG 是 C 本地重建,不是 D 的原始缓存;10%/25% 与 C 的 S0 一致,100% 与 D 的多 seed 结果一致。
 
 ## 较早记录
 

@@ -11,6 +11,9 @@
 | resource_profile.csv | 各组 | 独立设备/精度/参数/耗时/显存/更新数，教师和校准单独计费 |
 | encoder_index.csv | A | 预算/seed匹配编码器、标准化、维度、权重和存储 |
 | a_supervised_comparison.csv | A | 监督比较主表:trained/reused/prob_avg 行,Macro-F1、各类F1、N1三指标、REM、来源run |
+| external_A/ | B | A的63个run经官方评估重算的指标、按人表、与A登记值比对、EEGDM减CNN配对 |
+| b_cnn_extraction_check.csv | B | CNN特征提取核对：还原A验证预测的结果与特征SHA |
+| b_by_subject_analysis.md | B | 25%按人分析结论，数据见b_by_subject_summary.csv、b_by_subject_delta.csv、b_n1_error_direction.csv |
 | artifact_index.csv | 各组 | 原始/适配主干、教师、特征、运行大产物的团队位置与SHA |
 | window_index.template.csv | B | 中心与前后sample_id、mask、原epoch_index；模板无真实窗口 |
 | pseudo_label_trace.template.csv | D | 所有候选、拒绝项及权重；没有真实未标注标签字段 |
