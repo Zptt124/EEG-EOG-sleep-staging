@@ -356,7 +356,9 @@ def main():
     ap.add_argument("--data-dir", default=None, help="复用核验用 NPZ 目录(登记复用必填)")
     ap.add_argument("--overwrite", action="store_true")
     ap.add_argument("--storage-prefix", default=None,
-                    help="团队存储 URI 前缀(必填,如 team-storage://w2-a)")
+                    help="团队存储 URI 前缀(必填,如 Release 下载 URL + #片段)")
+    ap.add_argument("--reuse-storage-prefix", default="交付包/实验①交付包_20261018",
+                    help="第一周复用 run 的位置前缀(仓库相对路径,默认交付包)")
     ap.add_argument("--repo-root", default=str(Path(__file__).resolve().parent.parent))
     args = ap.parse_args()
 
@@ -376,7 +378,7 @@ def main():
     for rd in args.run_dir:
         register_run(Path(rd), repo_root, args.storage_prefix, tables, args.overwrite)
     for rd in args.reuse_run_dir:
-        register_reuse(Path(rd), repo_root, args.storage_prefix,
+        register_reuse(Path(rd), repo_root, args.reuse_storage_prefix,
                        Path(args.data_dir), tables, args.overwrite)
     for pd_ in args.probavg_dir:
         register_probavg(Path(pd_), repo_root, tables, args.overwrite)
