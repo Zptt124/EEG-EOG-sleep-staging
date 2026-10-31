@@ -3,7 +3,7 @@
 ## 最新状态(2026-10-31,CNN 补齐后)
 
 **B 的 40 个 run 全部完成:EEGDM 四档线性头 20 个、EEGDM 上下文 10 个、CNN 上下文 10 个。** A 的 50 格矩阵已并入统一口径,缺项表 A 50/50、B 40/40、C 80/80、D 0/60。
-本节优先于下文所有较早记录。还差两件:B 的权重包上传团队位置并写入 `artifact_index.csv`;D 的 D0/D1/D2 预测进来后,做半监督曲线与全组最终汇总。
+本节优先于下文所有较早记录。还差一件:D 的 D0/D1/D2 预测进来后,做半监督曲线与全组最终汇总。
 
 - **按人分析**:见 `b_by_subject_analysis.md`。EEGDM 与 CNN 的优势落在不同的人身上,总体差值小是方向相反的差异相互抵消,不代表两者在每个人身上都接近。
 
@@ -30,7 +30,7 @@
 
 - **EEGDM 减 CNN(预算曲线)**:20 组配对的 Macro-F1 按人区间全部含 0。名义上 EEGDM 在标签少时高,CNN 在标签多时高,这个方向只是开发集线索,不是结论(`external_A/paired_comparison.csv`)。
 - **比较口径**:EEGDM 主干由外部数据预训练,CNN 只见过本预算有标签者,这是表征比较,不是纯架构比较。上下文头的 CNN 特征来自已在同 14 人上训练过的编码器,而 EEGDM 主干没见过这些人的标签,两者的训练特征并不等价。BiGRU 长度 1 与线性头、A 的端到端 CNN 都不是同一模型,不能互相替代。8 人仅为开发集探索性证据。
-- **run 文件**:小文件在 `reports/week2/runs_B/`;`best.ckpt` 与 `normalization.npz` 暂时只在 B 本地 `runs/`,尚未上传,所以 `artifact_index.csv` 还没有 B 的行。资源表未记录内存峰值,写 NA。提取特征只在本地 `features/a_w2_v01/`,可由步骤 W2-B11 重新生成。
+- **run 文件**:小文件在 `reports/week2/runs_B/`;`best.ckpt` 与 `normalization.npz` 在 Release `b-week2-runs-v01-20261031`,SHA 见 `artifact_index.csv`。汇总表中的 `runs/...` 路径对应这两处的同名目录。资源表未记录内存峰值,写 NA。提取特征只在本地 `features/a_w2_v01/`,可由步骤 W2-B11 重新生成。
 - **EEGDM 输入**:C 的 Release `c-pooled-features-v01-20261031`,EOG 是 C 本地重建,不是 D 的原始缓存;10%/25% 与 C 的 S0 一致,100% 与 D 的多 seed 结果一致。
 
 ## 较早记录
