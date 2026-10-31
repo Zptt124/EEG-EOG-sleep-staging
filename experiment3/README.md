@@ -1,5 +1,7 @@
 # 实验③：第一周档案与第二周交付
 
+**C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
+
 2026-10-31：最新结果见[第二周交付入口](week2/README.md)。本地实验已完成，B/D团队验收待确认。下文保留第一周发布记录。
 
 # 实验③：冻结EEGDM的EEG表征迁移

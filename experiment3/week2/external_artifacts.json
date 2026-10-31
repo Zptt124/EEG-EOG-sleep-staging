@@ -1,8 +1,8 @@
 {
   "raw_signals_uploaded": false,
   "model_weights_uploaded": false,
-  "feature_arrays_uploaded": false,
-  "storage": "Retained by C; request through team-approved storage. No public download URL exists.",
+  "feature_arrays_uploaded": true,
+  "storage": "Two original frozen pooled arrays are available in the linked GitHub Release. Remaining weights/caches stay with C; use team-approved storage.",
   "feature_raw_bytes_per_full_cache": 23673462016,
   "note": "Original artifact manifests also reference omitted model files; see source_snapshot.json for uploaded files.",
   "artifacts": [
@@ -58,7 +58,14 @@
       "kind": "pooled_feature_cache",
       "path": "reports/week2_eeg_comparison_20261028/execution/S0_pooled.npy",
       "bytes": 1578229888,
-      "delivery_status": "external_not_uploaded"
+      "delivery_status": "same_unstandardized_values_available_as_NPZ_Release",
+      "release_asset_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "release_npz_sha256": "047bafc735d64297648b173447ec5d8425063a25b3f85562a7dbf12295800fb7",
+      "release_npz_contains": [
+        "sample_id",
+        "x"
+      ],
+      "x_matches_original_pooled_npy_bitwise": true
     },
     {
       "kind": "pooled_feature_cache",
@@ -70,7 +77,14 @@
       "kind": "pooled_feature_cache",
       "path": "reports/week2_fusion_20261029/execution/EOG_audit/S0_pooled.npy",
       "bytes": 1578229888,
-      "delivery_status": "external_not_uploaded"
+      "delivery_status": "same_unstandardized_values_available_as_NPZ_Release",
+      "release_asset_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-pooled-features-v01-20261031/EOG_C_rebuilt_S0_pooled_154124x2560_unstandardized_v01.npz",
+      "release_npz_sha256": "e444e819be3936b7f11b80daff873b227e34547886c91118f06924ed36654590",
+      "release_npz_contains": [
+        "sample_id",
+        "x"
+      ],
+      "x_matches_original_pooled_npy_bitwise": true
     },
     {
       "kind": "pooled_feature_cache",
@@ -680,5 +694,8 @@
       "bytes": 147889,
       "delivery_status": "external_not_uploaded"
     }
-  ]
+  ],
+  "feature_arrays_committed_to_git": false,
+  "released_arrays": "Original S0 EEG pool and C-reconstructed original EOG pool only; other arrays remain external",
+  "pooled_feature_release_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031"
 }

@@ -1,5 +1,7 @@
 # 实验③第二周：无标签 EEG 睡眠域适配
 
+**C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
+
 2026-10-31 GitHub交付。C的3轮独立主干适配、40个EEG诊断分类头、40个EEG+EOG主对照分类头，以及N1错误分析已经完成。**B正式协议/统一复评、D共同EOG来源认可仍待验收。测试集未使用。**
 
 | 标注预算 | Macro-F1：S0 → S1 | N1 F1：S0 → S1 |

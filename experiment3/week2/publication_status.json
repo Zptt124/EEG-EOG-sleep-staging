@@ -17,5 +17,9 @@
     2
   ],
   "historical_status_note": "reports/** and runs/** are unmodified experimental snapshots. Their not-published statements describe 2026-10-29; this file records the current publication stage.",
-  "publication_scope": "feat/c-eegdm branch and draft PR #2; not merged into main"
+  "publication_scope": "feat/c-eegdm branch and draft PR #2; not merged into main",
+  "pooled_feature_release": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031",
+  "B_requested_NPZ_files_published": true,
+  "pooled_features_B_loader_compatibility_verified": true,
+  "B_feature_download_or_acceptance_confirmed": false
 }

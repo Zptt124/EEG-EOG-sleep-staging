@@ -1,0 +1,12 @@
+{
+  "status": "packaged_published_and_verified",
+  "completed_files": 2,
+  "expected_files": 2,
+  "normalization_applied": false,
+  "test_used": false,
+  "current_modality": "EOG",
+  "stage": "B_download_and_receipt_pending",
+  "rows_written": 154124,
+  "release_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031",
+  "B_receipt_or_acceptance_confirmed": false
+}
