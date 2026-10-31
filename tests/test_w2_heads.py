@@ -297,6 +297,35 @@ def test_gap_registry_maps_reused_e1_runs_and_skips_failed(tmp_path=None):
     assert names == {"W2_A_EEG_label100_sseed2024_seed0_v01", "W2_A_EEG_label10_sseed2024_seed0_v01"}
 
 
+def _trace_case():
+    roles = {"SC400": "unlabeled", "SC401": "unlabeled", "SC403": "labeled"}
+    trace = pd.DataFrame(dict(sample_id=["SC4001_0001", "SC4011_0001"], method="D2", budget="label25", seed=0, teacher_id="t",
+                              pseudo_label=[0, 1], confidence=[1.0, 0.5], eeg_prediction=[0, 2], eog_prediction=[0, 1],
+                              accepted=[1, 0], weight=[1.0, 0.0]))
+    return trace, pd.DataFrame(dict(n_accepted=[1])), roles
+
+
+def _rejected(mutate):
+    check = load_script("ingest_d", "23_ingest_d_runs.py").check_trace
+    trace, stats, roles = _trace_case()
+    trace = mutate(trace)
+    try:
+        check(trace, stats, roles, "D2", "label25", 0)
+    except ValueError:
+        return True
+    return False
+
+
+def test_pseudo_trace_check_catches_leaks_and_bad_acceptance():
+    check = load_script("ingest_d", "23_ingest_d_runs.py").check_trace
+    assert check(*_trace_case(), "D2", "label25", 0) == (2, 1)
+    assert _rejected(lambda t: t.assign(y_true=0))                                       # 真标签列
+    assert _rejected(lambda t: t.assign(sample_id=["SC4001_0001", "SC4031_0001"]))       # 有标签者混入
+    assert _rejected(lambda t: t.assign(eog_prediction=[3, 1]))                          # D2 接收项教师不一致
+    assert _rejected(lambda t: t.assign(accepted=[1, 1], weight=[1.0, 1.0]))             # 接收数与统计不符
+    assert _rejected(lambda t: t.assign(weight=[1.0, 0.5]))                              # 拒绝项有权重
+
+
 if __name__ == "__main__":
     for k, v in sorted(globals().items()):
         if k.startswith("test_"):

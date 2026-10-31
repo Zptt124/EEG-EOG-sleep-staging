@@ -17,8 +17,8 @@ B,上下文 长度1 EEGDM label25 seed0-4,5,5,complete,需要 EEGDM 特征
 B,上下文 长度3 EEGDM label25 seed0-4,5,5,complete,需要 EEGDM 特征
 B,上下文 长度1 CNN label25 seed0-4,5,5,complete,需要 A 的 25% 双通道 CNN 编码器特征
 B,上下文 长度3 CNN label25 seed0-4,5,5,complete,需要 A 的 25% 双通道 CNN 编码器特征
-C,S0 原始冻结 10%/25% × EEG、EEG+EOG × 下游 seed0-4,20,20,complete,"已由 B 用官方 evaluate v1 重算复评;C 的 EOG 为本地重建,待与 D 的来源对齐"
-C,S1 适配(3 个适配 seed) 10%/25% × EEG、EEG+EOG × 下游 seed0-4,60,60,complete,"已由 B 用官方 evaluate v1 重算复评;C 的 EOG 为本地重建,待与 D 的来源对齐"
-D,D0 2 表征 × 2 预算 × seed0-4,20,0,missing,"D 尚未发布第二周结果;命名未知,按名字含 D0/D1/D2 计数"
-D,D1 2 表征 × 2 预算 × seed0-4,20,0,missing,"D 尚未发布第二周结果;命名未知,按名字含 D0/D1/D2 计数"
-D,D2 2 表征 × 2 预算 × seed0-4,20,0,missing,"D 尚未发布第二周结果;命名未知,按名字含 D0/D1/D2 计数"
+C,S0 原始冻结 10%/25% × EEG、EEG+EOG × 下游 seed0-4,20,20,complete,"已由 B 用官方 evaluate v1 重算;C 重建的 EOG 与 D 的 EOG 在 25%/10% 线性头上结果一致,未做逐值比对"
+C,S1 适配(3 个适配 seed) 10%/25% × EEG、EEG+EOG × 下游 seed0-4,60,60,complete,"已由 B 用官方 evaluate v1 重算;C 重建的 EOG 与 D 的 EOG 在 25%/10% 线性头上结果一致,未做逐值比对"
+D,D0 2 表征 × 2 预算 × seed0-4,20,20,complete,B 已用官方 evaluate v1 重算并检查伪标签表(reports/week2/external_D)
+D,D1 2 表征 × 2 预算 × seed0-4,20,20,complete,B 已用官方 evaluate v1 重算并检查伪标签表(reports/week2/external_D)
+D,D2 2 表征 × 2 预算 × seed0-4,20,20,complete,B 已用官方 evaluate v1 重算并检查伪标签表(reports/week2/external_D)

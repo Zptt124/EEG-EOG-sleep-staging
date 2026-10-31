@@ -2,7 +2,7 @@
 
 "找到"的依据有三类:本机 runs/ 下的 W2_* 目录、指定 git 引用里名字含 W2_<成员>_ 的 run 目录,以及
 run_registry.csv 里状态为 completed/reused 的行。复用的 run 按 W2 矩阵格计入(A 的两个 E1 run 占
-label100 seed0)。D 的命名未知,按名字里的 D0/D1/D2 计数,计数为 0 就如实写 0;不推断"可能在对方本地"。
+label100 seed0)。D 按名字里的 D0/D1/D2 计数;计数为 0 就如实写 0,不推断"可能在对方本地"。
 C 的 80 个 run 来自 reports/week2/external_C。
 
 用法:
@@ -87,11 +87,11 @@ def main(argv=None):
     c = pd.read_csv(args.external_c) if Path(args.external_c).exists() else pd.DataFrame(columns=["run_id", "representation"])
     for rep, label, exp in (("C_S0_EEGDM_raw", "S0 原始冻结", 20), ("C_S1_EEGDM_adapted", "S1 适配(3 个适配 seed)", 60)):
         add("C", f"{label} 10%/25% × EEG、EEG+EOG × 下游 seed0-4", exp, int((c.representation == rep).sum()),
-            "已由 B 用官方 evaluate v1 重算复评;C 的 EOG 为本地重建,待与 D 的来源对齐")
+            "已由 B 用官方 evaluate v1 重算;C 重建的 EOG 与 D 的 EOG 在 25%/10% 线性头上结果一致,未做逐值比对")
     # --- D:半监督 D0/D1/D2
     for setting in ("D0", "D1", "D2"):
         add("D", f"{setting} 2 表征 × 2 预算 × seed0-4", 20, count(names, rf"W2_D_.*{setting}.*seed\d+_v\d+"),
-            "D 尚未发布第二周结果;命名未知,按名字含 D0/D1/D2 计数")
+            "B 已用官方 evaluate v1 重算并检查伪标签表(reports/week2/external_D)")
 
     out = Path(args.out)
     pd.DataFrame(rows, columns=FIELDS).to_csv(out, index=False)

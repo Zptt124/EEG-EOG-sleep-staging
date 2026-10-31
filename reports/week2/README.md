@@ -14,6 +14,8 @@
 | external_A/ | B | A的63个run经官方评估重算的指标、按人表、与A登记值比对、EEGDM减CNN配对 |
 | b_cnn_extraction_check.csv | B | CNN特征提取核对：还原A验证预测的结果与特征SHA |
 | b_by_subject_analysis.md | B | 25%按人分析结论，数据见b_by_subject_summary.csv、b_by_subject_delta.csv、b_n1_error_direction.csv |
+| b_final_summary.md | B | 全组第二周汇总：主表、配对差、核验范围与结论边界 |
+| external_D/ | B | D的60个run重算指标、配对、伪标签表检查、D0早停敏感性 |
 | artifact_index.csv | 各组 | 原始/适配主干、教师、特征、运行大产物的团队位置与SHA |
 | window_index.template.csv | B | 中心与前后sample_id、mask、原epoch_index；模板无真实窗口 |
 | pseudo_label_trace.template.csv | D | 所有候选、拒绝项及权重；没有真实未标注标签字段 |
