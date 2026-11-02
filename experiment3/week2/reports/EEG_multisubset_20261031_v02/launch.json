@@ -1,0 +1,18 @@
+{
+  "pid": 621,
+  "launched_at": "2026-10-31T23:45:17.983801+08:00",
+  "version": "v02",
+  "solver_iterations_per_pass": 10000,
+  "solver_maxfun_per_pass": 25000,
+  "expected_CV_fits": 54,
+  "expected_final_models": 24,
+  "roster_seeds": [
+    2024,
+    4101,
+    4102
+  ],
+  "modality": "EEG only",
+  "gradient_tolerance": 1e-05,
+  "status": "launched",
+  "previous_attempt": "/mnt/d/Develop/SK EEG-EOG/experiment3/reports/EEG_multisubset_20261031_v01"
+}

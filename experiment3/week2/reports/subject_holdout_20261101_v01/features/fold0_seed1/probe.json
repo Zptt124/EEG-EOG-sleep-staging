@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "cached_uncached_bitwise_equal": true,
+  "frozen_first18_layers_equal_S0": true,
+  "weight_sha256": "d5019e163770c7d0b84b5a5595259b536c6b108ab56b3e99306a47bbcebb8c41",
+  "fold": 0,
+  "seed": 1
+}

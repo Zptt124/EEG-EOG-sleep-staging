@@ -1,0 +1,17 @@
+test_all_nights_of_a_person_use_same_outer_fold (__main__.SubjectHoldoutTests.test_all_nights_of_a_person_use_same_outer_fold) ... ok
+test_all_runtime_global_names_exist (__main__.SubjectHoldoutTests.test_all_runtime_global_names_exist) ... ok
+test_allowed_signal_checks_hash_and_delegates_whitelist (__main__.SubjectHoldoutTests.test_allowed_signal_checks_hash_and_delegates_whitelist) ... ok
+test_array_digest_detects_mutation_and_chunk_order (__main__.SubjectHoldoutTests.test_array_digest_detects_mutation_and_chunk_order) ... ok
+test_direct_pool_matches_old_store_FP16_then_mean_path_exactly (__main__.SubjectHoldoutTests.test_direct_pool_matches_old_store_FP16_then_mean_path_exactly) ... ok
+test_filter_prior_orders_preserves_order_and_nested_budgets (__main__.SubjectHoldoutTests.test_filter_prior_orders_preserves_order_and_nested_budgets) ... ok
+test_final_matrix_is72_with_matched_baselines (__main__.SubjectHoldoutTests.test_final_matrix_is72_with_matched_baselines) ... ok
+test_fold_reader_rejects_heldout_even_when_original_split_train (__main__.SubjectHoldoutTests.test_fold_reader_rejects_heldout_even_when_original_split_train) ... ok
+test_full_provider_cannot_have_been_used_before_restriction (__main__.SubjectHoldoutTests.test_full_provider_cannot_have_been_used_before_restriction) ... ok
+test_new_provider_is_exact36_and_cannot_sample_outer18 (__main__.SubjectHoldoutTests.test_new_provider_is_exact36_and_cannot_sample_outer18) ... ok
+test_stage_labels_rejected_before_any_zip_access (__main__.SubjectHoldoutTests.test_stage_labels_rejected_before_any_zip_access) ... ok
+test_three_complete_disjoint_outer_folds_are_deterministic (__main__.SubjectHoldoutTests.test_three_complete_disjoint_outer_folds_are_deterministic) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.096s
+
+OK

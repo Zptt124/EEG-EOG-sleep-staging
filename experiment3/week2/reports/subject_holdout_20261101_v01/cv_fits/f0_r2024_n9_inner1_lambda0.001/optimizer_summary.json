@@ -1,0 +1,22 @@
+{
+  "converged": true,
+  "gradient_inf": 9.22244623346217e-06,
+  "gradient_tolerance": 1e-05,
+  "objective": 0.32502365489764995,
+  "iterations": 1852,
+  "function_calls": 2011,
+  "seconds": 104.00775119999889,
+  "refinement_passes": [
+    {
+      "pass_number": 1,
+      "scipy_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "iterations": 1852,
+      "objective": 0.32502365489764995,
+      "gradient_inf": 9.22244623346217e-06
+    }
+  ],
+  "normalization_dtype": "float64",
+  "optimizer": "SciPy L-BFGS-B",
+  "zero_initialization": true
+}

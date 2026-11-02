@@ -1,0 +1,17 @@
+{
+  "pid": 391,
+  "launched_at": "2026-11-01T02:38:11.779299+08:00",
+  "status": "launched_preflight_then_automatic_formal_training",
+  "outer_folds": 3,
+  "adaptations": 9,
+  "adaptation_steps_each": 10000,
+  "rosters": 3,
+  "labeled_people": [
+    4,
+    9
+  ],
+  "inner_fits": 162,
+  "final_models": 72,
+  "original_dev8_read": false,
+  "test_used": false
+}

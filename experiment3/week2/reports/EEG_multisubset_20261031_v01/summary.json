@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "stage": "train_only_S0_grouped_regularization_selection",
+  "pid": 473,
+  "started_at": "2026-10-31T23:38:04.404882+08:00",
+  "completed_cv_fits": 2,
+  "expected_cv_fits": 54,
+  "completed_final_models": 0,
+  "expected_final_models": 24,
+  "validation_evaluations": 0,
+  "test_used": false,
+  "current_fit": "roster2024_label10_fold0_lambda0.0001",
+  "completed_optimizer_fits": 2,
+  "failed_at": "2026-10-31T23:42:42.750579+08:00",
+  "error": "Traceback (most recent call last):\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py\", line 353, in run\n    chosen,scores,records,oof=regularization_search(x,y,subject,LAMBDAS,fit_cv,official.compute_metrics)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py\", line 304, in regularization_search\n    theta,info=fit_callback(tx,y[train],mean,std,value,f,sorted(set(subjects[train])),sorted(set(subjects[val])))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py\", line 347, in fit_cv\n    theta,info=save_fit(REPORT/'cv_fits'/key,tx,ty,mean,std,value,cfg,status)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py\", line 283, in save_fit\n    theta,info,trace=solve(x,y,regularization,progress=progress)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py\", line 167, in solve\n    require(converged,'Optimizer failed declared gradient tolerance: '+json.dumps(info))\n  File \"/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py\", line 50, in require\n    if not condition:raise ValueError(message)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Optimizer failed declared gradient tolerance: {\"converged\": false, \"gradient_inf\": 2.8542793781732546e-05, \"gradient_tolerance\": 1e-05, \"objective\": 0.10393379129433716, \"iterations\": 2000, \"function_calls\": 2171, \"seconds\": 66.79263435499999, \"refinement_passes\": [{\"pass_number\": 1, \"scipy_success\": false, \"message\": \"STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT\", \"iterations\": 1000, \"objective\": 0.10421046116604718, \"gradient_inf\": 0.000155687795602342}, {\"pass_number\": 2, \"scipy_success\": false, \"message\": \"STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT\", \"iterations\": 1000, \"objective\": 0.10393379129433716, \"gradient_inf\": 2.8542793781732546e-05}], \"normalization_dtype\": \"float64\", \"optimizer\": \"SciPy L-BFGS-B\", \"zero_initialization\": true}\n"
+}

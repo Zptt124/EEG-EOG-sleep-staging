@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4432",
+  "fold": 0,
+  "seed": 0,
+  "samples": 962,
+  "outer_role": "heldout_frozen_inference_only",
+  "seconds": 28.490157094000097,
+  "pooled_sha256": "c3ccb54b676b385b4df38c84a144ea7a8e19fc0074193793b2c5cbac9b260a6c",
+  "weight_sha256": "b952ed5930e0c6edcaca6e0cd240d9305a6792085c6f415fd39b53c8daf50153"
+}

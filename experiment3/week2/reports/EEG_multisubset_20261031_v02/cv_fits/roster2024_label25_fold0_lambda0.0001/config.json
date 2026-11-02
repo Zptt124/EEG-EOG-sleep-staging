@@ -1,0 +1,30 @@
+{
+  "fit_id": "roster2024_label25_fold0_lambda0.0001",
+  "role": "training_only_S0_inner_fit",
+  "roster_seed": 2024,
+  "budget": "label25",
+  "source_key": "S0",
+  "regularization": 0.0001,
+  "normalization_fitted_subjects": [
+    "SC403",
+    "SC415",
+    "SC417",
+    "SC421",
+    "SC427",
+    "SC429",
+    "SC436",
+    "SC455",
+    "SC474"
+  ],
+  "inner_heldout_subjects": [
+    "SC410",
+    "SC412",
+    "SC419",
+    "SC451",
+    "SC456"
+  ],
+  "training_samples": 20850,
+  "test_used": false,
+  "development_validation_used": false,
+  "binding_sha256": "74ce6b7ffc73b143223ae11913b7738de02333158c88cd04c768616abdec731c"
+}

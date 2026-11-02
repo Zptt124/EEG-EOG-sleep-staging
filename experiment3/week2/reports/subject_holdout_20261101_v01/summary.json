@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "stage": "subject_holdout_analysis_complete",
+  "pid": 391,
+  "started_at": "2026-11-01T02:41:41.118922+08:00",
+  "completed_adaptations": 9,
+  "expected_adaptations": 9,
+  "completed_caches": 9,
+  "expected_caches": 9,
+  "completed_cv_fits": 162,
+  "expected_cv_fits": 162,
+  "completed_final_models": 72,
+  "expected_final_models": 72,
+  "outer_evaluations": 72,
+  "test_used": false,
+  "current_fold": 2,
+  "current_seed": 2,
+  "current_progress": null,
+  "current_fit": null,
+  "completed_optimizer_fits": 234,
+  "completed_at": "2026-11-02T06:42:06.554465+08:00"
+}

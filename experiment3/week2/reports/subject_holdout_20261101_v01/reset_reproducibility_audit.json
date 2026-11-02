@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "compared_steps": 100,
+  "keys": [
+    "step",
+    "loss",
+    "gradient_norm_before_clip",
+    "ema_updates"
+  ],
+  "first100_formal_steps_equal_reset_benchmark": true,
+  "diagnostic_updates_inherited": false
+}

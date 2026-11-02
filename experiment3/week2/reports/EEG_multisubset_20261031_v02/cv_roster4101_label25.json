@@ -1,0 +1,10 @@
+{
+  "selected_lambda": 0.001,
+  "OOF_macro_f1": {
+    "0.01": 0.6655145903361859,
+    "0.001": 0.6682335314696293,
+    "0.0001": 0.6517418326166463
+  },
+  "selected_only_from_labeled_training_subjects": true,
+  "normalization_fitted_per_inner_training_fold": true
+}

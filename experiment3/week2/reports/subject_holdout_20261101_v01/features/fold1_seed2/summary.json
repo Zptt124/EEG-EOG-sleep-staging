@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "fold": 1,
+  "seed": 2,
+  "records": 106,
+  "samples": 132938,
+  "expected_records": 106,
+  "expected_samples": 132938,
+  "weight_sha256": "fe65da8adf837efc253dd61209c7d091f7a1001898e8d4024d0b18b77cfdb3f1",
+  "test_used": false,
+  "original_dev8_read": false,
+  "started_at": "2026-11-01T16:41:19.368461+08:00",
+  "updated_at": "2026-11-01T17:49:13.271179+08:00",
+  "completed_at": "2026-11-01T17:49:17.183911+08:00",
+  "pooled_sha256": "b471e0e5c776a76b99f57ca3c1c01bd1c671e9d1f29874824ddeaa26b407df83",
+  "NPZ_labels_read": false
+}

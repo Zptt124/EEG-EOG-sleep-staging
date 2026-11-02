@@ -1,0 +1,39 @@
+{
+  "fit_id": "f0_r2024_n4_inner2_lambda0.0001",
+  "role": "train_only_S0_inner",
+  "fold": 0,
+  "roster_seed": 2024,
+  "budget": "n4",
+  "regularization": 0.0001,
+  "training_subjects": [
+    "SC403",
+    "SC421",
+    "SC456"
+  ],
+  "inner_validation_subjects": [
+    "SC474"
+  ],
+  "outer_heldout_subjects": [
+    "SC401",
+    "SC408",
+    "SC412",
+    "SC414",
+    "SC423",
+    "SC428",
+    "SC429",
+    "SC431",
+    "SC434",
+    "SC440",
+    "SC443",
+    "SC444",
+    "SC449",
+    "SC450",
+    "SC457",
+    "SC459",
+    "SC463",
+    "SC477"
+  ],
+  "outer_labels_used": false,
+  "binding_sha256": "9c039b977089c283a92f326520d13e2fa95153c95098887088404c8973a39d0a",
+  "source_pool_sha256": "da1dc03bf94f43b76b4a6f45098838f5eadebd4009433c11452df2b123fa3ddf"
+}

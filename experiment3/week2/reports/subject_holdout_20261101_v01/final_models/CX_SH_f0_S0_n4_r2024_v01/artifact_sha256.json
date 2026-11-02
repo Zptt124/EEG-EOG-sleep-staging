@@ -1,0 +1,6 @@
+{
+  "config.json": "e58fb49ac2cd120cd7ba102617a69aba932ae37ade158859378934c0db983f50",
+  "model.npz": "b239ea1ece78bb22ad01802b0a007cc62f04a84ad3637ae81ac15c1803e4904a",
+  "optimizer_history.csv": "0d74cc405841bd1adee6af137a71053906ded0052d5c26a7fe47d674198574b7",
+  "optimizer_summary.json": "dc0fcc8ca091fdbfaa562c492a68e3919bea1d73113fbf15678f249387adb5a0"
+}

@@ -1,0 +1,2 @@
+step,loss,gradient_norm_before_clip,data_seconds,step_seconds,ema_updates
+1,0.016753066331148148,0.297444611787796,1.2057644610000011,3.0730803990000197,1

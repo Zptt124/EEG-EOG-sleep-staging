@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "main_source_files_verified": 2628,
+  "release_members_sha_verified": 452,
+  "final_prediction_tables": 96,
+  "merged_OOF_tables": 24,
+  "official_point_metric_recomputations": 120,
+  "paired_bootstrap_recomputations": 36,
+  "converged_classifier_fits": 312,
+  "failed_v01_models_archived_separately": 2,
+  "classifier_NPZ_verified": 314,
+  "fold_adaptations_verified": 9,
+  "backbone_metadata_inspected": true,
+  "outer_people_excluded_from_adaptation": true,
+  "original_dev8_excluded_from_holdout": true,
+  "test_used": false,
+  "raw_signals_read": false,
+  "training_started": false,
+  "large_feature_arrays_verified": false
+}

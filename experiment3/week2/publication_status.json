@@ -55,5 +55,17 @@
     }
   ],
   "supplement_summary": "reports/week2_supplement_summary_20261031/三个补充实验结论汇总.md",
-  "new_training_started_by_publication": false
+  "new_training_started_by_publication": false,
+  "additional_validation_results_published": true,
+  "additional_validation_entry": "ADDITIONAL_VALIDATION.md",
+  "additional_validation_release": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-additional-validation-v01-20261102",
+  "additional_validation_final_models": 96,
+  "additional_validation_inner_fits": 216,
+  "additional_validation_new_backbones": 9,
+  "additional_validation_B_independent_review_received": false,
+  "additional_validation_completed_at": [
+    "2026-11-01T02:16:12+08:00",
+    "2026-11-02T06:42:06+08:00"
+  ],
+  "additional_validation_publication_date": "2026-11-02"
 }

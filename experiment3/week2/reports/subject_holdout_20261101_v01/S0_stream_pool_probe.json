@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "record_id": "SC4001",
+  "samples": 4,
+  "feature_dimension": 2560,
+  "cached_uncached_bitwise_equal": true,
+  "new_stream_pool_matches_archived_S0_bitwise": true,
+  "NPZ_labels_read": false,
+  "original_dev8_read": false,
+  "test_used": false,
+  "verified_at": "2026-11-01T02:42:34.407949+08:00"
+}

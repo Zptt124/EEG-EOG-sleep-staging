@@ -1818,5 +1818,7 @@
   "feature_arrays_committed_to_git": false,
   "released_arrays": "Original S0 EEG pool and C-reconstructed original EOG pool only; other arrays remain external",
   "pooled_feature_release_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031",
-  "supplement_classifier_weights_external": 160
+  "supplement_classifier_weights_external": 160,
+  "additional_validation_artifact_index": "additional_external_artifacts.json",
+  "scope": "Original W2 and first three supplements only. New validation weights are separately published per additional_external_artifacts.json."
 }

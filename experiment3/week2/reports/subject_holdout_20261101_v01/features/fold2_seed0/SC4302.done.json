@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4302",
+  "fold": 2,
+  "seed": 0,
+  "samples": 854,
+  "outer_role": "outer_train",
+  "seconds": 25.486143709997123,
+  "pooled_sha256": "c4b806e3587c92f1aca2fa0f385b6ccf497f29f79ddbd84e381dffa98f58701c",
+  "weight_sha256": "cd2f685000a860391c9bc22c6678f982915f73274c29aa057f1719429a343a47"
+}

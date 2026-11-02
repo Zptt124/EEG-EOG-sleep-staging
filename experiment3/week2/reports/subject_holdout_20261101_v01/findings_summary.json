@@ -1,0 +1,66 @@
+{
+  "completed_at": "2026-11-02T06:42:06.554465+08:00",
+  "budget_descriptive_means": [
+    {
+      "budget": "n4",
+      "labeled_subjects": 4,
+      "fraction_of_train36": 0.1111111111111111,
+      "S0_macro_f1_percent": 61.00765035741292,
+      "S1_macro_f1_percent": 60.93862404478304,
+      "delta_macro_f1_pp": -0.06902631262988043,
+      "S0_N1_F1_percent": 24.510292538545592,
+      "S1_N1_F1_percent": 24.178793836379313,
+      "delta_N1_F1_pp": -0.3314987021662805,
+      "delta_N1_recall_pp": -0.499211568785816,
+      "delta_N1_precision_pp": 0.06688590886290147
+    },
+    {
+      "budget": "n9",
+      "labeled_subjects": 9,
+      "fraction_of_train36": 0.25,
+      "S0_macro_f1_percent": 64.67218233999577,
+      "S1_macro_f1_percent": 64.65624796472629,
+      "delta_macro_f1_pp": -0.015934375269490954,
+      "S0_N1_F1_percent": 26.428515003043046,
+      "S1_N1_F1_percent": 26.36723509195561,
+      "delta_N1_F1_pp": -0.06127991108743563,
+      "delta_N1_recall_pp": -0.11691858005461371,
+      "delta_N1_precision_pp": 0.13733675653595018
+    }
+  ],
+  "counts": {
+    "macro_positive": 4,
+    "macro_negative": 14,
+    "macro_CI_entirely_positive": 0,
+    "macro_CI_entirely_negative": 3,
+    "N1_F1_positive": 3
+  },
+  "fold_descriptive_means": [
+    {
+      "fold": 0,
+      "macro_delta_mean_pp": -0.17006369709914562,
+      "positive_contrasts": 0
+    },
+    {
+      "fold": 1,
+      "macro_delta_mean_pp": 0.06617162234273789,
+      "positive_contrasts": 12
+    },
+    {
+      "fold": 2,
+      "macro_delta_mean_pp": -0.04990421680552723,
+      "positive_contrasts": 9
+    }
+  ],
+  "overall_descriptive_delta_macro_pp": -0.042480343949685695,
+  "prior_fixed8_descriptive_delta_macro_pp": 0.1357882062741881,
+  "means_not_independent_inferential_samples": true,
+  "useful_effect_reference_pp": 0.5,
+  "test_used": false,
+  "source_sha256": {
+    "OOF54_paired_deltas.csv": "c51560dcf8a8301501e41e48039233cc6518adc60a22f41fc98146826eb21631",
+    "fold_pairs.csv": "4b63de21ec109919a93972fb29afe4f8186b1ba2383b6741bfb23246ca5b4409",
+    "completion_audit.json": "0db8911a696761acfc89463576ad6110c98d2c56192d462ebf10c8584118610b",
+    "summary.json": "4ab1313cef47c95f0c78ad5ace9121d7396c63d145d6a5e6b2afebe26155af82"
+  }
+}

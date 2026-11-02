@@ -1,0 +1,31 @@
+{"stage": "verify_existing_EEG_pool", "source": "S0"}
+{"stage": "verify_existing_EEG_pool", "source": "S1_aseed0"}
+{"stage": "verify_existing_EEG_pool", "source": "S1_aseed1"}
+{"stage": "verify_existing_EEG_pool", "source": "S1_aseed2"}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold0_lambda0.01", "iterations": 1333, "gradient_inf": 9.31502211087392e-06, "seconds": 45.29864797299999}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold0_lambda0.001", "iterations": 1892, "gradient_inf": 9.505801116169372e-06, "seconds": 63.89483325699999}
+Traceback (most recent call last):
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 491, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 488, in main
+    else:run()
+         ^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 353, in run
+    chosen,scores,records,oof=regularization_search(x,y,subject,LAMBDAS,fit_cv,official.compute_metrics)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 304, in regularization_search
+    theta,info=fit_callback(tx,y[train],mean,std,value,f,sorted(set(subjects[train])),sorted(set(subjects[val])))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 347, in fit_cv
+    theta,info=save_fit(REPORT/'cv_fits'/key,tx,ty,mean,std,value,cfg,status)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 283, in save_fit
+    theta,info,trace=solve(x,y,regularization,progress=progress)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 167, in solve
+    require(converged,'Optimizer failed declared gradient tolerance: '+json.dumps(info))
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/scripts/run_eeg_multisubset.py", line 50, in require
+    if not condition:raise ValueError(message)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Optimizer failed declared gradient tolerance: {"converged": false, "gradient_inf": 2.8542793781732546e-05, "gradient_tolerance": 1e-05, "objective": 0.10393379129433716, "iterations": 2000, "function_calls": 2171, "seconds": 66.79263435499999, "refinement_passes": [{"pass_number": 1, "scipy_success": false, "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT", "iterations": 1000, "objective": 0.10421046116604718, "gradient_inf": 0.000155687795602342}, {"pass_number": 2, "scipy_success": false, "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT", "iterations": 1000, "objective": 0.10393379129433716, "gradient_inf": 2.8542793781732546e-05}], "normalization_dtype": "float64", "optimizer": "SciPy L-BFGS-B", "zero_initialization": true}

@@ -1,0 +1,31 @@
+test_all_nights_of_a_person_use_same_outer_fold (test_subject_holdout.SubjectHoldoutTests.test_all_nights_of_a_person_use_same_outer_fold) ... ok
+test_all_runtime_global_names_exist (test_subject_holdout.SubjectHoldoutTests.test_all_runtime_global_names_exist) ... ok
+test_allowed_signal_checks_hash_and_delegates_whitelist (test_subject_holdout.SubjectHoldoutTests.test_allowed_signal_checks_hash_and_delegates_whitelist) ... ok
+test_array_digest_detects_mutation_and_chunk_order (test_subject_holdout.SubjectHoldoutTests.test_array_digest_detects_mutation_and_chunk_order) ... ok
+test_direct_pool_matches_old_store_FP16_then_mean_path_exactly (test_subject_holdout.SubjectHoldoutTests.test_direct_pool_matches_old_store_FP16_then_mean_path_exactly) ... ok
+test_filter_prior_orders_preserves_order_and_nested_budgets (test_subject_holdout.SubjectHoldoutTests.test_filter_prior_orders_preserves_order_and_nested_budgets) ... ok
+test_final_matrix_is72_with_matched_baselines (test_subject_holdout.SubjectHoldoutTests.test_final_matrix_is72_with_matched_baselines) ... ok
+test_fold_reader_rejects_heldout_even_when_original_split_train (test_subject_holdout.SubjectHoldoutTests.test_fold_reader_rejects_heldout_even_when_original_split_train) ... ok
+test_full_provider_cannot_have_been_used_before_restriction (test_subject_holdout.SubjectHoldoutTests.test_full_provider_cannot_have_been_used_before_restriction) ... ok
+test_new_provider_is_exact36_and_cannot_sample_outer18 (test_subject_holdout.SubjectHoldoutTests.test_new_provider_is_exact36_and_cannot_sample_outer18) ... ok
+test_stage_labels_rejected_before_any_zip_access (test_subject_holdout.SubjectHoldoutTests.test_stage_labels_rejected_before_any_zip_access) ... ok
+test_three_complete_disjoint_outer_folds_are_deterministic (test_subject_holdout.SubjectHoldoutTests.test_three_complete_disjoint_outer_folds_are_deterministic) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.101s
+
+OK
+test_CV_normalization_excludes_inner_holdout_and_ties_use_stronger_L2 (__main__.EEGMultiSubsetChecks.test_CV_normalization_excludes_inner_holdout_and_ties_use_stronger_L2) ... ok
+test_analytic_softmax_gradient_matches_finite_differences (__main__.EEGMultiSubsetChecks.test_analytic_softmax_gradient_matches_finite_differences) ... ok
+test_complete_final_matrix_and_bound_runtime_names (__main__.EEGMultiSubsetChecks.test_complete_final_matrix_and_bound_runtime_names) ... ok
+test_inner_subject_partitions_never_overlap (__main__.EEGMultiSubsetChecks.test_inner_subject_partitions_never_overlap) ... ok
+test_labeled_positions_cannot_include_development_validation (__main__.EEGMultiSubsetChecks.test_labeled_positions_cannot_include_development_validation) ... ok
+test_optimizer_converges_and_zero_start_is_reproducible (__main__.EEGMultiSubsetChecks.test_optimizer_converges_and_zero_start_is_reproducible) ... ok
+test_rosters_preserve_reference_train_only_uniqueness_and_nesting (__main__.EEGMultiSubsetChecks.test_rosters_preserve_reference_train_only_uniqueness_and_nesting) ... ok
+test_scipy_success_without_gradient_convergence_is_rejected (__main__.EEGMultiSubsetChecks.test_scipy_success_without_gradient_convergence_is_rejected) ... ok
+test_stable_probabilities_for_extreme_scores (__main__.EEGMultiSubsetChecks.test_stable_probabilities_for_extreme_scores) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.073s
+
+OK

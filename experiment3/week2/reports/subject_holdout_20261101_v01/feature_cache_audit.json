@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "fold": 0,
+      "seed": 0,
+      "samples": 132938,
+      "pooled_sha256": "85680d929cbe93a4c78c72616ce3791d541e984e15e53906b1dc215e83567f81",
+      "probe_passed": true
+    },
+    {
+      "fold": 0,
+      "seed": 1,
+      "samples": 132938,
+      "pooled_sha256": "c6eee3c573e82f449795e83e7002d920e3ead3aad8940f4f4a9be9f84849a992",
+      "probe_passed": true
+    },
+    {
+      "fold": 0,
+      "seed": 2,
+      "samples": 132938,
+      "pooled_sha256": "cacd34b76fd604e7c94252de0600a322c0087be45a5bd885ae3ecf953afbdf5d",
+      "probe_passed": true
+    },
+    {
+      "fold": 1,
+      "seed": 0,
+      "samples": 132938,
+      "pooled_sha256": "4f1301bf7094be62a7224cc22549c0fd1dc22cb4681c3de6e3cf22dc18f66ad4",
+      "probe_passed": true
+    },
+    {
+      "fold": 1,
+      "seed": 1,
+      "samples": 132938,
+      "pooled_sha256": "c732331590f36480ebe352732a661ef9a0aedd6a5932a8dcb21e648f0c87610e",
+      "probe_passed": true
+    },
+    {
+      "fold": 1,
+      "seed": 2,
+      "samples": 132938,
+      "pooled_sha256": "b471e0e5c776a76b99f57ca3c1c01bd1c671e9d1f29874824ddeaa26b407df83",
+      "probe_passed": true
+    },
+    {
+      "fold": 2,
+      "seed": 0,
+      "samples": 132938,
+      "pooled_sha256": "1d6158242198856be506130d3b3159c886ef9afe3d05594672aeeaf5e0815282",
+      "probe_passed": true
+    },
+    {
+      "fold": 2,
+      "seed": 1,
+      "samples": 132938,
+      "pooled_sha256": "40674a7befca3a42500718b5fd25f4ec602bdcdc1cf6cc50de4e2d5f441b1261",
+      "probe_passed": true
+    },
+    {
+      "fold": 2,
+      "seed": 2,
+      "samples": 132938,
+      "pooled_sha256": "e10f7a404d25fa79abe0269575570a4764ac75f8f7d521dff8d5628506f40925",
+      "probe_passed": true
+    }
+  ],
+  "FP16_rounding_before_pooling": true
+}

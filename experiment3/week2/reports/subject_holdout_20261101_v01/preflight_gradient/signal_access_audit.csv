@@ -1,0 +1,3 @@
+record_id,split,member
+SC4732,train,signal.npy
+SC4732,train,epoch_index.npy

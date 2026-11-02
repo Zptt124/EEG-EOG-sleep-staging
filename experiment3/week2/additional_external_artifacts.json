@@ -1,0 +1,2332 @@
+{
+  "release_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-additional-validation-v01-20261102",
+  "selected_backbone_and_classifier_weights": [
+    {
+      "path": "reports/EEG_multisubset_20261031_v01/cv_fits/roster2024_label10_fold0_lambda0.001/model.npz",
+      "bytes": 137337,
+      "sha256": "2de417f55c4252f64ed7c47b4fb69ef1fb91d95d9c446124547f421826c80024",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v01/cv_fits/roster2024_label10_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v01/cv_fits/roster2024_label10_fold0_lambda0.01/model.npz",
+      "bytes": 137407,
+      "sha256": "cdd10e0f7c0e36e53860eb75bf4c7cc84ac5a36e5be7bbe82bf9101bb56e87b3",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v01/cv_fits/roster2024_label10_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold0_lambda0.0001/model.npz",
+      "bytes": 137350,
+      "sha256": "c9e45605a776530947a7fc85556ba05903e2fa9a7deb0094dfb41c8d7402cc0e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold0_lambda0.001/model.npz",
+      "bytes": 137333,
+      "sha256": "addaec5af734609386f3d6c74aa586bf6a05786a9e7758ebeaa1b5f9451c76fa",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold0_lambda0.01/model.npz",
+      "bytes": 137404,
+      "sha256": "1e687a775d23a41ea5a0d69a0d6223372e59d1631a1b16de01c7b85464b24308",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold1_lambda0.0001/model.npz",
+      "bytes": 137660,
+      "sha256": "7e7c92efceb8ea0d120a9d22a0839d1c6a6d01bebebafbd5d293327121c91b15",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold1_lambda0.001/model.npz",
+      "bytes": 137626,
+      "sha256": "cd3122b2c977870ffac20c25f6d17b72f5e1857ad6e1c48834a3640a52cbe266",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold1_lambda0.01/model.npz",
+      "bytes": 137715,
+      "sha256": "9eed7b053dcd157c87182d606bf113a682eef32426166d55f3c9f8e5f086c0af",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold2_lambda0.0001/model.npz",
+      "bytes": 137661,
+      "sha256": "c7ba7456566a9117b32605be48740fa9541ffc67f31b93d825b70cdb052512fa",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold2_lambda0.001/model.npz",
+      "bytes": 137634,
+      "sha256": "3825351d4c4cb9875f28158303f47e3c3ab0db44826de3fec450d70cdba85ab6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold2_lambda0.01/model.npz",
+      "bytes": 137738,
+      "sha256": "1f7a02513a4b6d5620d4fd505dd84c4e4888210d183e219259e45062fb19402a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label10_fold2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold0_lambda0.0001/model.npz",
+      "bytes": 137735,
+      "sha256": "0d5ee733d5b699205005bbb34d00ad731814b55a73a08faebdc4a58cf1a970f1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold0_lambda0.001/model.npz",
+      "bytes": 137755,
+      "sha256": "a88b5fe88e75dcfcb3a06c7327a44d26bc6eda4aa747fc1f799d9729abe0ab63",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold0_lambda0.01/model.npz",
+      "bytes": 137809,
+      "sha256": "55a9fa9c2bcfa14c21d19a5ab316db83f6b13f06dc2b9085fd825a505da0ceff",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold1_lambda0.0001/model.npz",
+      "bytes": 137847,
+      "sha256": "b1792e9fa371f3d5022e28e1ec96c924eb44f497f6f13a875853cd5ea1abdafc",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold1_lambda0.001/model.npz",
+      "bytes": 137877,
+      "sha256": "71481cfd5bdb43fef1e3a6a96523781a4a3aca01b8185f14eacfdaf13f845c52",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold1_lambda0.01/model.npz",
+      "bytes": 137915,
+      "sha256": "d5b9086cbb87709934f55d5068b58dca8a681c0c24da720a14a7bcb725f63186",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold2_lambda0.0001/model.npz",
+      "bytes": 137834,
+      "sha256": "d0ecb46d3bddada636e87ea04d82f77dfe3c180f036e9f05ae964857eca2ea08",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold2_lambda0.001/model.npz",
+      "bytes": 137872,
+      "sha256": "df92de5dc64fac136b63b9091a6d09108286f87a084192e9b56d6828919f0901",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold2_lambda0.01/model.npz",
+      "bytes": 137921,
+      "sha256": "6b4a697e024c890713b0afcd008b7ec95b2c7a7d854c8f062a3a8495b418c934",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster2024_label25_fold2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold0_lambda0.0001/model.npz",
+      "bytes": 137733,
+      "sha256": "628c47facae3da1766bb3bb4fc855da49dbd6f002a5a1a2e33a32c0e01bfb59b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold0_lambda0.001/model.npz",
+      "bytes": 137779,
+      "sha256": "43068e42dd0805e92515a90288365656310cb3f33b3ea7e6d8443f27e45dea22",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold0_lambda0.01/model.npz",
+      "bytes": 137809,
+      "sha256": "0c1aefe94f2718532bb9fd46eb4baa09d4c795652ab3373e5164151d7a530907",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold1_lambda0.0001/model.npz",
+      "bytes": 137697,
+      "sha256": "9e7b4c63cf287607fc54f11073554e9f60b7f4525fda9bad050cc2a448b3d291",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold1_lambda0.001/model.npz",
+      "bytes": 137698,
+      "sha256": "a66e18932e9f8efe481f2f649f3e35b2fe498ce825caf2718b4ef2fc5115f8be",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold1_lambda0.01/model.npz",
+      "bytes": 137737,
+      "sha256": "8a0409a9e3fa494bd6b77aa31de01efea9beecd5fae0c44684c00471cca0881d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold2_lambda0.0001/model.npz",
+      "bytes": 137542,
+      "sha256": "9b7f59cc64b2dbadc6e004e741d197eb8494257fabd10ff9199fadcefc71bc74",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold2_lambda0.001/model.npz",
+      "bytes": 137564,
+      "sha256": "c50d25c7183aaaad5e748d7560a22103411adf5442f9bf7c0307ee5154a78482",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold2_lambda0.01/model.npz",
+      "bytes": 137580,
+      "sha256": "d2cd315b7e4606b355fe43be74fec48fea485fc47c98a1f13021934e9d430827",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label10_fold2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold0_lambda0.0001/model.npz",
+      "bytes": 137652,
+      "sha256": "85ceaf5b2e4f7d4a92b1958574f70d081c02315230d96d97e586436759920132",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold0_lambda0.001/model.npz",
+      "bytes": 137661,
+      "sha256": "4ab1fc756532dcc4c999bd291cb9a276dec16e56b6f3a867fd070b3bd66e93bb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold0_lambda0.01/model.npz",
+      "bytes": 137708,
+      "sha256": "27ed2b54431fdd29d8e751badc7f87756d563600e210bb6eb6a32bf96290494f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold1_lambda0.0001/model.npz",
+      "bytes": 137855,
+      "sha256": "80e12c10f12f010719e26546064e4001b1c47321ca67d3d380ef4540a62178c3",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold1_lambda0.001/model.npz",
+      "bytes": 137854,
+      "sha256": "a52d74bd909ea85b6917d49dfb6e20afd69fb1b6427c1589c8a7ef68a2c9702d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold1_lambda0.01/model.npz",
+      "bytes": 137942,
+      "sha256": "58153a36384da34ff9cb767a4cd3fcd8ae89afd18f413efcff07651a12e4c3e2",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold2_lambda0.0001/model.npz",
+      "bytes": 137872,
+      "sha256": "cbbeb249dcb373951c518f067146b3b5b0dc07cdb37d9498ba4c0ee232fb1a57",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold2_lambda0.001/model.npz",
+      "bytes": 137888,
+      "sha256": "f65a46bbf7d4765acf0d3581ff8027d4e976bc021d4af95a1854b68217a6a6ba",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold2_lambda0.01/model.npz",
+      "bytes": 137915,
+      "sha256": "7911aaea68b358f2c27f0e507247e219e66884e4e2465e34881d64bce01eede4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4101_label25_fold2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold0_lambda0.0001/model.npz",
+      "bytes": 137609,
+      "sha256": "64408dcdb80d52ed312c02bdab44c13fed24d20740153e554abf9dcb826dd19d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold0_lambda0.001/model.npz",
+      "bytes": 137585,
+      "sha256": "8ad1f6495eec79c463e5ffc3aa3fd4a1d1791cfceece9332532b2ef95a7cc1f0",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold0_lambda0.01/model.npz",
+      "bytes": 137612,
+      "sha256": "d761141e5b6703f8b8bf97ddccd6c76f24366d76efbd01c40dd473e56c7f3262",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold1_lambda0.0001/model.npz",
+      "bytes": 137172,
+      "sha256": "2103c2f1f5b2702c8e2b386e90fbd789cbe60e4768a087d3b49470af96f6262b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold1_lambda0.001/model.npz",
+      "bytes": 137199,
+      "sha256": "876c82c59667d8a20bfa2db39b9d6d29db93da215e5c8d0f5972aa24333b188b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold1_lambda0.01/model.npz",
+      "bytes": 137264,
+      "sha256": "6e139a032189b031a897a25a6c15e8c44026a7c10075043f0e9cdff0623361e7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold2_lambda0.0001/model.npz",
+      "bytes": 137679,
+      "sha256": "7dddd386baa2a2440ee9b33a926b31dd46fd31ec8eb85f180fa33f111c753f66",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold2_lambda0.001/model.npz",
+      "bytes": 137662,
+      "sha256": "2901850f8eccabe6faf42b3f731f34abbcc755ca276176de2ea0ade9cf575dc4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold2_lambda0.01/model.npz",
+      "bytes": 137734,
+      "sha256": "5b2fa3160c8af4a0f54095128b90e50641df1ac9336a23c51cd9625f34bcd93b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label10_fold2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold0_lambda0.0001/model.npz",
+      "bytes": 137345,
+      "sha256": "352313589d4457e8c160a562e0c010268e0d077b0c88fc1115d948f60f76ce07",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold0_lambda0.001/model.npz",
+      "bytes": 137370,
+      "sha256": "0cb9d3512a70d63c2402f60565a55d0f44cd2b2c4e5fedf5862fb43340d3decb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold0_lambda0.01/model.npz",
+      "bytes": 137428,
+      "sha256": "9415e700baecc55cf96db09c622d87d7e071d64805a6e47c9bc5a511d802f878",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold1_lambda0.0001/model.npz",
+      "bytes": 137725,
+      "sha256": "092071007a83234254467d5c75e1b852cba4ece263831834965fd998b01f0d58",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold1_lambda0.001/model.npz",
+      "bytes": 137724,
+      "sha256": "3c408e43ce55210743002e243bb2c453d2e77680fce9551e0f7c3ebe3b3c18ca",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold1_lambda0.01/model.npz",
+      "bytes": 137818,
+      "sha256": "6d8841c9125ad985af0c13c0c48c84f900822896409f295524c067a74992d9e8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold2_lambda0.0001/model.npz",
+      "bytes": 137188,
+      "sha256": "421ab66b6c73ef9dd2a77949883f0fa3314a97075e93287e35cdb2c5d60ac4da",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold2_lambda0.001/model.npz",
+      "bytes": 137190,
+      "sha256": "562c21ecfb9fa32406d997f36d5b7ded75d6b3dce3031439f1d8ff7a459069ea",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold2_lambda0.01/model.npz",
+      "bytes": 137248,
+      "sha256": "a9b0aa196c4e2b8a374878a35c68967d1a9213543deed4e47e07393da2f7103b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/cv_fits/roster4102_label25_fold2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label10_roster2024_v02/model.npz",
+      "bytes": 136246,
+      "sha256": "47469d04484b72d0ae17fbec2034ed12873d33b8416d0cdae48a6cec8ce1469d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label10_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label10_roster4101_v02/model.npz",
+      "bytes": 137893,
+      "sha256": "d19c6874698cab1d43784ca06ff6ade668586aa433d50169e827503774c89085",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label10_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label10_roster4102_v02/model.npz",
+      "bytes": 137553,
+      "sha256": "8d4d517c4493c102b1221c09fdb3624a03cce9779fcab8d440fef7cca77ae072",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label10_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label25_roster2024_v02/model.npz",
+      "bytes": 137845,
+      "sha256": "e5da99971a3498f1c096df71f6c8dc832836a42f10459e49b7d279adddca5fe5",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label25_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label25_roster4101_v02/model.npz",
+      "bytes": 137833,
+      "sha256": "f7b800a4225187824d2f92926d6733b0c46c2f184f0cbd062799ea950fb8d4ce",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label25_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label25_roster4102_v02/model.npz",
+      "bytes": 137950,
+      "sha256": "80ffb6eb99d9de7868a24235f168f63a47fd237e062d92894a2abb99c7492cc0",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S0_label25_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label10_roster2024_v02/model.npz",
+      "bytes": 136238,
+      "sha256": "647f29cde71142ca8c257881d10cd45fd53097c35384543aad8a2daf2ae0fbf7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label10_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label10_roster4101_v02/model.npz",
+      "bytes": 137882,
+      "sha256": "434d5f60a0d0a1e21b9dd6b2d9451532f1fe4ac72c81d550f5c6e6250869e6ac",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label10_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label10_roster4102_v02/model.npz",
+      "bytes": 137527,
+      "sha256": "63502bc0d9add66b3f168191ac0be321fa0a5c9ee42985ec2e29e5268c91b07c",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label10_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label25_roster2024_v02/model.npz",
+      "bytes": 137840,
+      "sha256": "7205eee3e01f31ff52a348fc8f0b7d6e7df9ec1f90c70f03ded371114780ecb6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label25_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label25_roster4101_v02/model.npz",
+      "bytes": 137814,
+      "sha256": "b9b695d984523801437b2a2e962708c09b0c3017af2df59f7c329ce01a14adf7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label25_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label25_roster4102_v02/model.npz",
+      "bytes": 137953,
+      "sha256": "d29b15c13aec0eeff755192fcc5a60b08f45db98ef1a219bef6b31567983dc91",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed0_label25_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label10_roster2024_v02/model.npz",
+      "bytes": 136249,
+      "sha256": "9b7549b222791599bdf4473b0f8b62bae9f179102c7a9b88ceccc2819ab09d7d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label10_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label10_roster4101_v02/model.npz",
+      "bytes": 137859,
+      "sha256": "06daa9a7f7e2886239f885fe7b85eb0498f3eff2038fb78d798defcd87517989",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label10_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label10_roster4102_v02/model.npz",
+      "bytes": 137527,
+      "sha256": "c1ea6cd8594063afd72c21488d7377a137d7e2461401f9d121dda6d2708782d7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label10_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label25_roster2024_v02/model.npz",
+      "bytes": 137869,
+      "sha256": "189bd86bc586116b145f9b21e60c17e4112d7331636196ee6610a91e4925921f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label25_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label25_roster4101_v02/model.npz",
+      "bytes": 137862,
+      "sha256": "bdb05ff8742cfff4ec217d95ee57095c053e49e029691e00f47a4c1abdcc0977",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label25_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label25_roster4102_v02/model.npz",
+      "bytes": 137923,
+      "sha256": "21781fb6050b9eb404784bfbbbfce6b0e71ecf516d7e95135245fd826d602e07",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed1_label25_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label10_roster2024_v02/model.npz",
+      "bytes": 136200,
+      "sha256": "653099d662e0e1a7608c3a1ed0df6f52b0351e2d104e43a7b193216df0e84e0b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label10_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label10_roster4101_v02/model.npz",
+      "bytes": 137847,
+      "sha256": "d05ac6494f6c2592466d79972ca260e2023c109a98445c53c1ae1c907195c0ab",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label10_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label10_roster4102_v02/model.npz",
+      "bytes": 137510,
+      "sha256": "c5f0cd7fa181108206729e0bea7d75cf0384ef4fa047f8ff4433adefadc66fc9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label10_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label25_roster2024_v02/model.npz",
+      "bytes": 137863,
+      "sha256": "2378c39f6d9aa6fd1837e745a8b81ce69bc3589543a585daf52577db535be696",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label25_roster2024_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label25_roster4101_v02/model.npz",
+      "bytes": 137821,
+      "sha256": "1edfb5352ded8e6bc79c15e0ddaea317643b20b3805edcc94345e6a144fd59c2",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label25_roster4101_v02/model.npz"
+    },
+    {
+      "path": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label25_roster4102_v02/model.npz",
+      "bytes": 137977,
+      "sha256": "d102ea5dd836332beb7f35fa8fd8a664f609a2a162fed8525ceb3a6344cb1666",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/EEG_multisubset_20261031_v02/final_models/CX_EEG_LR_S1_aseed2_label25_roster4102_v02/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold0_seed0/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "b952ed5930e0c6edcaca6e0cd240d9305a6792085c6f415fd39b53c8daf50153",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold0_seed0/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold0_seed1/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "d5019e163770c7d0b84b5a5595259b536c6b108ab56b3e99306a47bbcebb8c41",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold0_seed1/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold0_seed2/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "661dcf5944ca82f96554477c667625ce555d608993b6859222821973457e8146",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold0_seed2/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold1_seed0/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "6af98c265dad60d96ac4c05f814c45bcb454c9ffc155262d02a41e2d2b4af2b9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold1_seed0/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold1_seed1/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "9bb95d3ab8bc9ef0f015b7f5a7a3f5d54271d371cdfaea193e4ea658424478f1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold1_seed1/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold1_seed2/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "fe65da8adf837efc253dd61209c7d091f7a1001898e8d4024d0b18b77cfdb3f1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold1_seed2/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold2_seed0/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "cd2f685000a860391c9bc22c6678f982915f73274c29aa057f1719429a343a47",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold2_seed0/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold2_seed1/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "1c59a02b489e892e38aadb2ec68c0a45ee5e261dbc71f9052fe6f68ef963f99e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold2_seed1/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/adaptations/fold2_seed2/selected_ema_step10000.pt",
+      "bytes": 23828389,
+      "sha256": "80697d5c91134ecba32473b5b030920c2e908e9f5902f8a52b77e6d3a7361af5",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/adaptations/fold2_seed2/selected_ema_step10000.pt"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137509,
+      "sha256": "f5d1c2ea70711b29767120b2e82235aee428a1aea017edae2b8699fccf950535",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137512,
+      "sha256": "c71f91344cc77c7c81b00386583fc12c579555e63a8a706327e94065c79e7715",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137589,
+      "sha256": "0fd2b9d4abb6c44bd6f9881075fe1c4c1660a402377e1925ff0bac1460b4e8d2",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137616,
+      "sha256": "da4fbaf06d6a447c0daa53567d9eab43d8e69e3e8b72ae2a454cfa624bf1cff1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137613,
+      "sha256": "98f5be2520aa5c09dd4765e303701a9ab29b856284752ddf5819de5bcd0594c6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137697,
+      "sha256": "d7f5728bc0422b6a4afc96cbb1981993f856582b75ade95e3dde6388e3b335ce",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137288,
+      "sha256": "2d1f439dad23df11bbe1a9f6cff332f7c2562627e8c5c5af3e8e6c74ba434973",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137276,
+      "sha256": "9505dc6d64d18997ef9a94b50dea584c6848950f1cff28e7040ec18163ecc92b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137351,
+      "sha256": "69c09eba244d3ed8cfe2d09b73712079d0436f9e384774cdfe3b676db6e38ebb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137815,
+      "sha256": "40a16dd9603a3548f9e81124622f8f64b693ccfe21afe8c665a8eb289a4af1e4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137829,
+      "sha256": "3e1c320864b6a76310095a011f82a6716ad5c0057d5df734eff977599e4611aa",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137882,
+      "sha256": "ee09a7cbf49fa258c8da8b46a990e0cce377f6fe2afe7af1872b69dbff24acf9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137768,
+      "sha256": "d1424b9114dbf4bb9d66879095a7a537509b62d270fc2bc2dd835c07b4c7e8bf",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137770,
+      "sha256": "30ca6918293770ba759e4c86fcbd469410706612899e1a74ea28267389146b40",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137858,
+      "sha256": "130bbe8ab77c5024ad1df12c709829c728053cb270b4821e2165bb645e8899dc",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137612,
+      "sha256": "dda1ff099199426b6699833dc516fad0e225e00586a3e37231a7c6fb45afc965",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137562,
+      "sha256": "775f91b32f8355ba58408746f563dc49cd7fd4c2f8d41897e06cc1573ffc3671",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137651,
+      "sha256": "7f4028dfa4cd942d8bf985116a3493f68798ef93e807adf0a2853587b513404d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r2024_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 136693,
+      "sha256": "7db4a38d1e47ecb859d3b7d9da8b3b1e7d606037273cd1f6454c45a9a2751e61",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner0_lambda0.001/model.npz",
+      "bytes": 136695,
+      "sha256": "106b3a121371274cf1c156a76b397753d6abf68afb4d4d227e1dd5996c4c6353",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner0_lambda0.01/model.npz",
+      "bytes": 136773,
+      "sha256": "033fa7329c8c2138036b45b59eb8c4caf638ac50fd9ab330f38df9b1c0edd0cd",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137692,
+      "sha256": "de63bee415815130561a8f8ee92809640089dfaf0c0c240d6698911712e1e5d0",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137687,
+      "sha256": "bd42c75f3fa5b237fe4d98a9408deb80125d416118620ef3c0c5fe19debc865a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137751,
+      "sha256": "ef85131d296e5d95019a2d5093be333f8d5fe6f57e69e3d986c8664917da24fe",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137733,
+      "sha256": "628c47facae3da1766bb3bb4fc855da49dbd6f002a5a1a2e33a32c0e01bfb59b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137779,
+      "sha256": "43068e42dd0805e92515a90288365656310cb3f33b3ea7e6d8443f27e45dea22",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137809,
+      "sha256": "0c1aefe94f2718532bb9fd46eb4baa09d4c795652ab3373e5164151d7a530907",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137383,
+      "sha256": "6f3f7e09d75d7fdd6ebc8a3dad5c30ca20f592a8eca919dee91bfbf604a7844c",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137396,
+      "sha256": "96809f5a74e0d010f947d6794cbca74d32bbe67d6312f6a42ff90a735588bfaf",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137479,
+      "sha256": "848b0561ef21683122f2f6f4de4bd53ced15456a68dca47fdb577ca755999a5a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137138,
+      "sha256": "a5c8e283bd701399b83512672391a0e6392fa1b96ace563df25d108df01eb46d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137162,
+      "sha256": "7f246026178350277ca0f12edef28fed2a7b5cbc7328f71cac2e98261926bd4a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137210,
+      "sha256": "68e03b200d1cc295d2cf5ce7a75831cbe8a397528df1afef9de8dd5a7dbad96b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 136770,
+      "sha256": "015ee11df049156a8b156b1dc020306faaf3d5aae4a531ac6ae769693aa06203",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner2_lambda0.001/model.npz",
+      "bytes": 136825,
+      "sha256": "d2a15f20d83c827c535f68c07f8fb68969263aa4f79d9195fa2d0492d70e8ce6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner2_lambda0.01/model.npz",
+      "bytes": 136916,
+      "sha256": "8795c462abfb0cc138a740f461cf160a50806fd07be072c5825219b66736fbed",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4101_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137420,
+      "sha256": "e2be878017c4d01ec55b91907d879a36713ae1fc89070318c9ef74dbbc992722",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137427,
+      "sha256": "4fa63d811fe96232926f599ad1cf7ffe4194a58596f2be8cae07b62be51d48f3",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137431,
+      "sha256": "9a125293ce5bdebf766f4a0367e9334cd83cf33f94cade2b65510039e9371212",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137597,
+      "sha256": "2201c469a70048839b4f046753a2f09f60bb1958a22743f7338250b0db2aba40",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137594,
+      "sha256": "3a956455c09efc30d761f8fedae06b0c3b417fb98a8c8857e8831a3841a6c470",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137695,
+      "sha256": "1ea3830f99b734abbe7c4ca3128e19a763562824f779c0c9bdb0302a1065b761",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 136148,
+      "sha256": "dcfbddb4cff2d890f0429cc2f958a63b5feefec8f564762cc10c8b249229d17b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner2_lambda0.001/model.npz",
+      "bytes": 136151,
+      "sha256": "7012165799eb7a5fa79433baf3fdcc479726db4737bb01eca9944b4a576052a7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner2_lambda0.01/model.npz",
+      "bytes": 136239,
+      "sha256": "5d9387ed9fded40bed1c461f024f632eb8b21856038c220f40bafdb94d91f64e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137123,
+      "sha256": "11288f660f0ca0e61c2bbe47d13cd0c35d0f4adf92f327331a2aba272df8e756",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137142,
+      "sha256": "30d0f4f444e56ef2013ccecfe9cde26bf2b00d1e233c39e9a8610c9ab97e13ba",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137141,
+      "sha256": "5bf65d6a19ee267807ae9e35ceb967308ccbcbe988f760d418bb84d18f0c0c62",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137812,
+      "sha256": "ec8081034c40fa908226a1979d2771be3ea979edf4dc741eada2083db4a206b8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137804,
+      "sha256": "eb7caad24e84d8c9dd4d242c6b990234685da59133c43d266ceaef48242df4ea",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137910,
+      "sha256": "363821b60bab75357afbc6bd5a2fd9541147cdceb480654df281d5529e660d95",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137756,
+      "sha256": "c8e72eaa203aa26ef9dbadbbcb6990353bb6b5085c12c79fd5d96e5da52fc75f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137775,
+      "sha256": "d44bd6d9c52e68b96d6178e3556669cae07d993f756b0847eefecb8c9e86726e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137824,
+      "sha256": "4848ff76ca3c6004f671169be9a18693d7a29a5b797d5d0591bfc253250f8183",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f0_r4102_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 136067,
+      "sha256": "0516eea9670ba82716b77891fa1a75dd1622e0f51383a97f225c37ee25f82664",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner0_lambda0.001/model.npz",
+      "bytes": 136065,
+      "sha256": "90f4d7e47d9babf6a85b67053807c567f8e8b9f32bf0d06054ba0eb94dc9c784",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner0_lambda0.01/model.npz",
+      "bytes": 136135,
+      "sha256": "5c63f563c641090102ed52db8d4a21c8c9160ef8e8f38aa21702bf63279a48a1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137707,
+      "sha256": "efc4fff74182dda44ee6e435e401516fb82afa3c0da75d344ac39a4b4e5a4b0f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137662,
+      "sha256": "333f90bdfd96da1332ee400c4061481ada7feb04a8ad4a30c5e257a55182f11e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137772,
+      "sha256": "574b157d2839677d03459602bf601e36ccd5f328867e7b138b13d428e156ee63",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137658,
+      "sha256": "dfda6111513266d451707212b38e619c7b03582a35770b45452a4bacf6bdcccf",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137646,
+      "sha256": "e84cc242fbaf8f2e37787fd20ca1ffeb1847942d81c89c7c454ba66e4d6ad56e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137739,
+      "sha256": "d4fe634b3156d5761361c78cf1ad482d773dc45f9731c42dd96eb138cacc05eb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137302,
+      "sha256": "eb5c6695758a57a59dca535252df755984e87d057409ee5442a27f3095cfb5b9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137306,
+      "sha256": "905472950ac0c18118f8d44b7523bb02992aac59e4483197d08b6d4d48d91cf6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137337,
+      "sha256": "f59f76fd9c12069b929154804d2e12f0335bf0cef8b51cf6c1487f46ee194cbd",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137614,
+      "sha256": "baffbd294c935dc6b9c59ce1c98519590d772006a8f67dac526a961313183c01",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137619,
+      "sha256": "f3f4621c4bf6017b15231ac197c73e8849afa20a811c7ab9a8a985bcb54376cd",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137701,
+      "sha256": "a0b5a12e97bdacb8990f25573c5427313195746408122985a241a2a25935f7b9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137658,
+      "sha256": "7eeeef3380c85513515cd4344815e016e5c7046cc34f6415f3eef4d738230677",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137675,
+      "sha256": "7372b9afb696ae78edb68e18069eb00486dabf9339428b3b24e3e47948f4ce70",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137750,
+      "sha256": "7f8edbb6a40fd421c933a670dfbbaad88fafa321bb8408fcd0bd1563142b80e3",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r2024_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137352,
+      "sha256": "bcc48b4e862fb344e524b0dd48e99011ff4e0d7dc1eca789e57ef26342c5feb8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137327,
+      "sha256": "57635d87f17efb328476177dad9ad2ea17748e758c816ad57ed07b47dcca2e4c",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137471,
+      "sha256": "1a86e0b8101fc0288791775612c95e835d92c340966058dc6586277d5420111c",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137634,
+      "sha256": "8b28581de0b9220ea22b6bc9eba29a6d3e299f71425ea490b5f08ca49857c8f4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137621,
+      "sha256": "44b172423f457e6caeec0b54a231f4fcaa99ed3717638d1c62b1552c21ec1cd1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137680,
+      "sha256": "7324b4ee00398f49ffec0e7051298c9a66a2201b3ce2f5fdad2b9d434000b7fa",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 136882,
+      "sha256": "e98b255a9f5ab74e52d2f3f7e2a9908cca91aea098b5a296540a9987093b6f03",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner2_lambda0.001/model.npz",
+      "bytes": 136918,
+      "sha256": "93e125e3eaa50e193b729b42ac188072d15699635832748e51f00b4bafaaba0e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner2_lambda0.01/model.npz",
+      "bytes": 136944,
+      "sha256": "da9137f551c5e9cc8a73a84838355f9f855f3f5ecd1ec0784b0ae489b8fce863",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137619,
+      "sha256": "1ea22112d91857abbbe290fa49b297edc910128567978f41b5505ba8dd921c23",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137593,
+      "sha256": "405e89ffda75ece55f0f678ca68f0c792d454ec5a298b1bfa58f185f3bf149bb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137667,
+      "sha256": "d9b89ba99fe88d89c07cbdeb85d79b99894f5d081a465ff5d9f9325cbd25061d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137739,
+      "sha256": "3770f2aa4a63301425af91142833657a09128b1a8660956dcc08a96b5d6b7cf6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137715,
+      "sha256": "238336d9af36bc139a7cde9dc7f6cad3b20c83f772f02836e4858fd1b2e1bcac",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137830,
+      "sha256": "834172698695049cf4d6e8646128d11145f02b9553b395d8a880c417ca2845cf",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137785,
+      "sha256": "231b26dee34b963c2e91adabe6fb04697196ce96ae803ca944e8736dcfdb55d7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137768,
+      "sha256": "dab50e6ef35872e6c5aa6e80c30979f71042c2c0578544fff538deee1b768c2f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137852,
+      "sha256": "20feb9da95be18880f0cf676cf1db30f7f88dfa5b05984556c76bfcbd9d86c1d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4101_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137420,
+      "sha256": "e2be878017c4d01ec55b91907d879a36713ae1fc89070318c9ef74dbbc992722",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137427,
+      "sha256": "4fa63d811fe96232926f599ad1cf7ffe4194a58596f2be8cae07b62be51d48f3",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137431,
+      "sha256": "9a125293ce5bdebf766f4a0367e9334cd83cf33f94cade2b65510039e9371212",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137172,
+      "sha256": "2103c2f1f5b2702c8e2b386e90fbd789cbe60e4768a087d3b49470af96f6262b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137199,
+      "sha256": "876c82c59667d8a20bfa2db39b9d6d29db93da215e5c8d0f5972aa24333b188b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137264,
+      "sha256": "6e139a032189b031a897a25a6c15e8c44026a7c10075043f0e9cdff0623361e7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137516,
+      "sha256": "70814bc21b0a07d0fe9d6f9c3ad307fa8dfffacc87f64674a7f50e4a8d9ec311",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137544,
+      "sha256": "58069e1538c75ad969740d27c42e33f3adf6db7e6bc5ebe7099465f93fe825b4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137616,
+      "sha256": "fd899ef24eb3bd93cff1cd745742fd943b14fccd3230e6b2b7ee088519ca9114",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137768,
+      "sha256": "4e434c71c800bafc01650104d56072261cf2e2fbce823fd2fbca2fb9a5c3992d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137821,
+      "sha256": "d9ee1ce09843bb1e76bf03b60d1387ee05ac694ec7b5196c487ea9e3a0e65e19",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137844,
+      "sha256": "9be2d174e1c1af4765f750ee0786c3f443b8bce419d0b1608fa5a14de11fee30",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137803,
+      "sha256": "0d34690d4f47e885c04503172f0e4bf1e8ac15ef5ff2eb2328dfc956b4755119",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137772,
+      "sha256": "e5deb065cc4fb47f64358d2a307745831909cced412c91a90c0dd5235ca4506a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137812,
+      "sha256": "b14a920334af5a138c8f19783c08ed6da1bf93df41940d6b1ecf31492811027b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137304,
+      "sha256": "e6f4d0605405f913692565f23c652cf39686dd38e7bee796b96b4f117e526435",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137335,
+      "sha256": "7bde647cca5116cbdd50693e9ac4e156ca786af09c753583bf352c8659e117f6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137411,
+      "sha256": "94f1ac6a6dfbd0321ad25e06214ec0dd1e5dcd8d528563aedf7c67b1adf73c58",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f1_r4102_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137444,
+      "sha256": "364c3f5508aa90b3292b448e0b686311193d2d5d62b97034262bae842ccc248b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137428,
+      "sha256": "957d27c647b8a83919cfbbe381b7b3257aca510f1b5dfdb0ca41ed9e953964b4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137476,
+      "sha256": "d58a1ee998f9c70b95d7e292f1ac28cd1e937cfbfeb772e2ae446d98cfa64752",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137624,
+      "sha256": "92a5ae0e4698ad14ab21e9900a92344e5e1fbc19f6a5c511489202886eff13bd",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137613,
+      "sha256": "98201b89a5c3becb16b6066d83b30a74f3cbad66a5522d193f7815dfb7fe0282",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137686,
+      "sha256": "09c3bad3f288a12ae98f707006b6ab8c87d6e90ff6423792f87eefebfd8f89f1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137366,
+      "sha256": "43cc574c58d646b8c4c07c3a482d5e061e8074e5595a1f34f60e279f5104e256",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137338,
+      "sha256": "ab5a023d90b3c510e55a52bcf3340ffcd9002d9c16c07b4cb2e67f449a20e213",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137412,
+      "sha256": "688f2e28e633ea392118b06fc8803327cd70d6e4c5541db93547d54c0455a4f9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 136184,
+      "sha256": "8ba60dccf7180f77563c646ceecbbf573f71056721335782cba8cb7e5107f281",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner0_lambda0.001/model.npz",
+      "bytes": 136139,
+      "sha256": "a4e14fd151bb4b8e4ebdda47b91b2de66aa6411cd7cb254e6ef15bc7c7608bf7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner0_lambda0.01/model.npz",
+      "bytes": 136243,
+      "sha256": "0b532ff1c326e37a9e14b8902af902cfa1e16b87fc8319ecee2dad98a2c5189f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137763,
+      "sha256": "b9f14f4a152d68b83abf944a93184fe2006dd3a1e85da1b300539645b8bdb386",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137794,
+      "sha256": "3cb2758e81da11b2be4183e10981c2fa841340173076f36efe7011f4427942c0",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137862,
+      "sha256": "fc0ed3454656e459dfc935cec044ed565184be8e57d2f4c372e526d2001821cb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137822,
+      "sha256": "03d9d0a070bc8d01f4596e61c8fa2771a5a2b09fe66e37a746f6ebf2b6da4c1a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137827,
+      "sha256": "112115774355dc3319691765275fb700e01d2173c8ba38fa8aee71bf1ff26914",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137914,
+      "sha256": "611586b3fe5600601d4ceab7d465a3f4e9736461ef0779ea76e2e2c30d4d6567",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r2024_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137648,
+      "sha256": "7620b97faa2dfee5c47adc5fd8b603360ffe916794eedf9624709d0e710afdfc",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137712,
+      "sha256": "8dbab1abcae1b4ca39fc98a043825b9ec7b7e0dfc95528142aac6029e0866477",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137713,
+      "sha256": "3e379df953ea3c7098d17f49c2b52cf48eea26f7cf29fa8a646b9c9ca88a1695",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 136466,
+      "sha256": "4ac10263cdd3f6c070bf8e526d8e570f2a930d26784ba62d3736e979fee85126",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner1_lambda0.001/model.npz",
+      "bytes": 136458,
+      "sha256": "5169a688b71976789fe7f204c1391fbd90386831f865c5689b2dddc6adf2b96b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner1_lambda0.01/model.npz",
+      "bytes": 136543,
+      "sha256": "e03325c13bfe18dc7e39878b44b66cce8acf08b67f4f525776c39e530e46d47f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137715,
+      "sha256": "af3b19277d52ce1f7fe90df05987abcb2b1eba8e02444ae40a4f2dff7457d1cd",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137725,
+      "sha256": "ebef216321c88d73baf6c52e4697093252f796f0995d414fd910be31ef77ebe2",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137775,
+      "sha256": "5fd58f3d6314e6ded0a972f2f90d382728f44f784b89eb0c491540f385de6d1a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137827,
+      "sha256": "9bb0885e56d6720f667d6579c3a3d47fe250a1100d9ddd0d738a29df27ee4901",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137827,
+      "sha256": "1f3015a3a2cc1d24fe3a81e69a0d137d893a76dca38e9eb099d1cc3de77af6f8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137907,
+      "sha256": "18a72db75b35807ece2c2c3e86592654de3b425e7a5febdbca3249c1b2264543",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 137767,
+      "sha256": "71ea4ea0f72cc4ebb1692715b467d0fea0a20b338b6a185a5f8b032494421ff5",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner1_lambda0.001/model.npz",
+      "bytes": 137805,
+      "sha256": "2161b7f837293269afb2af955c726b541bcad4fa5090d43adbf439deacceaaa0",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137883,
+      "sha256": "5728e309778536ac3c4773a0f865663d7391b5c7d495f9493cc36ec084313f69",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137660,
+      "sha256": "7fb98efba8f9b64d21d461f22fa5a2e474f39e58316e0aa4f47f34b872eae2f9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137624,
+      "sha256": "3aa9905af503bfd3572763c0c5bc73712175ef65728cbfa49d2fd1e62b4497ac",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137712,
+      "sha256": "675defde4eb8dfe9479a35a2eaccb0a02e43368ff5539bd0a587dff0d652c496",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4101_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner0_lambda0.0001/model.npz",
+      "bytes": 137099,
+      "sha256": "d9d2ab1d225517a84022bc643ab5897db1ea10241fb301fefe16a323776abe70",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner0_lambda0.001/model.npz",
+      "bytes": 137156,
+      "sha256": "8b3a7e4395aa95971ef692c221b88a54cbf4e2da70cb4287d6e257638429b868",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner0_lambda0.01/model.npz",
+      "bytes": 137209,
+      "sha256": "7e1f4c9a6628d6f5753e77f0c33876669e94ef806924292c3a3844d175d7493d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner1_lambda0.0001/model.npz",
+      "bytes": 137692,
+      "sha256": "3be7fc3294013fc8eb5173e9441f78e790c182b42b01a3f40c6d9114c795b1cc",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner1_lambda0.001/model.npz",
+      "bytes": 137704,
+      "sha256": "9b5b8408612a19fed4eb92391f35ced9ce2bc2626926c9af5936d23402b358ba",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner1_lambda0.01/model.npz",
+      "bytes": 137756,
+      "sha256": "0dc9e29d0dd821a595bbf0a7e83f3b8538e208109f5a6cfbdb2a2373b957dc93",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner2_lambda0.0001/model.npz",
+      "bytes": 137637,
+      "sha256": "dcfe85051bede20206528fc9021758ac9df483451d8244ec349dc84f7addf175",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner2_lambda0.001/model.npz",
+      "bytes": 137633,
+      "sha256": "70710b891b4cc27dd2417a7626899c2d68ff65a0e764325141a61ebdfa808647",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner2_lambda0.01/model.npz",
+      "bytes": 137718,
+      "sha256": "3a01227a3131c89fb96a6ee9c350d935c501d115b09e9fc3861323cfecf4e8b1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n4_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner0_lambda0.0001/model.npz",
+      "bytes": 137828,
+      "sha256": "b3658a773658e0ce969fdef57913eccd2d44cf0e26a0318df71ee7df51a8ad3f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner0_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner0_lambda0.001/model.npz",
+      "bytes": 137800,
+      "sha256": "fccfd04d452705557e1bcffd7b38848198a963a3ff8670809a9b6bf94fae52ff",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner0_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner0_lambda0.01/model.npz",
+      "bytes": 137867,
+      "sha256": "1f7d800a6d1b903f88f5b08b1a8278f3d959b485f41eeaae4715ee29a806e18a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner0_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner1_lambda0.0001/model.npz",
+      "bytes": 136999,
+      "sha256": "883a38a1e26075cc3b58874669673fca763707a47e3081229d9b62d5edd9a8a8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner1_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner1_lambda0.001/model.npz",
+      "bytes": 136949,
+      "sha256": "2a0f88790cf5cbff7a62ce05e3abc70f97fcf05927a111ec935f7cb99755ec76",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner1_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner1_lambda0.01/model.npz",
+      "bytes": 137043,
+      "sha256": "b8956eaa05a8a595ea1f035f899a7f90ac864df23d11d6de7b0a5ab2f48bb6b1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner1_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner2_lambda0.0001/model.npz",
+      "bytes": 137804,
+      "sha256": "cfda1fd250ce6f39eba64f41fdd11bef7407e7199587ecdb012a350329a6e5ff",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner2_lambda0.0001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner2_lambda0.001/model.npz",
+      "bytes": 137802,
+      "sha256": "526fd5515cfd7be6724c9b0e0ec8776e2728fd9938e78c7d4cb953fede08abee",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner2_lambda0.001/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner2_lambda0.01/model.npz",
+      "bytes": 137878,
+      "sha256": "eccf556cd421c86ad45ed9c31cb0872cafdf88fa380b30c41545e33629553428",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/cv_fits/f2_r4102_n9_inner2_lambda0.01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n4_r2024_v01/model.npz",
+      "bytes": 137781,
+      "sha256": "b239ea1ece78bb22ad01802b0a007cc62f04a84ad3637ae81ac15c1803e4904a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n4_r4101_v01/model.npz",
+      "bytes": 136127,
+      "sha256": "8f20e9b3e0edcdf0b83ab3c328f201051b4367d476ff6451e9eb5f1dac85615d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n4_r4102_v01/model.npz",
+      "bytes": 137678,
+      "sha256": "539fea96273c91edc66a405ae775a08dfa3e644bba1d808cc2275f7c1796a589",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n9_r2024_v01/model.npz",
+      "bytes": 137921,
+      "sha256": "48e43e0808df7496fe8699c70ad52594d33a46db60cd7867ab541eba562ce803",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n9_r4101_v01/model.npz",
+      "bytes": 137839,
+      "sha256": "7590de00b3d7f66c05c9ce974e6195e73e002a3bf1bbde72742e3675223c127c",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n9_r4102_v01/model.npz",
+      "bytes": 137929,
+      "sha256": "4ef51e9cb5b0e72964fca703e1812ff02a34fcf2b32d8f17a80f034050e0e1bc",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S0_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n4_r2024_v01/model.npz",
+      "bytes": 137766,
+      "sha256": "e11fedd50cfcca7596d0a058f5e9904fd521db6cd0eb217603540423ebe90b24",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n4_r4101_v01/model.npz",
+      "bytes": 136170,
+      "sha256": "7df042c0cc6b0a3ed1c0bd9bc92a20b4b0478304cade4e1d3c57d282899f1fa7",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n4_r4102_v01/model.npz",
+      "bytes": 137683,
+      "sha256": "d9775c4af862258ce9772988c013be669395308b422742ac1bf930d961cc02a5",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n9_r2024_v01/model.npz",
+      "bytes": 137945,
+      "sha256": "cab1fa973fc5076c3db57a89421a370ee8588a1ffc1b94f0ade025094160b1b9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n9_r4101_v01/model.npz",
+      "bytes": 137909,
+      "sha256": "27ece2f443912399dc6ef4cee44d80825f750109f38f79169ad60deadc9a78a8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n9_r4102_v01/model.npz",
+      "bytes": 137921,
+      "sha256": "159857f1de3e03e223e8b2df64560e5b8d2114c8defcc0f77ee0cd69947ef941",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed0_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n4_r2024_v01/model.npz",
+      "bytes": 137785,
+      "sha256": "64aeaf2fc8073a19ca530bdec5e2de7347a57b7dccbe0cf384e644f333db8d33",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n4_r4101_v01/model.npz",
+      "bytes": 136146,
+      "sha256": "cc5f0dc562151b13cd51d229b0f0dc239b6e5b8a9887e1c7812491091069dc7f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n4_r4102_v01/model.npz",
+      "bytes": 137705,
+      "sha256": "bf46dc12235a77f6a638e0b1b3f543df07713b7af489acfe975f8628647a12a8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n9_r2024_v01/model.npz",
+      "bytes": 137951,
+      "sha256": "e2a32c6a6daf4a2023a4905c0e7499f2cc198eabf9edac8353043d7cb6112f86",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n9_r4101_v01/model.npz",
+      "bytes": 137866,
+      "sha256": "47aff44a54461aabc5e4631c60ab7ddc3e9ff84d8e145d1bc1c77a6340693180",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n9_r4102_v01/model.npz",
+      "bytes": 137938,
+      "sha256": "668312d24e3d9ff5aa8c82ec048a3e26f8995b6b6ff830b4dec99d7a24e7e986",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed1_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n4_r2024_v01/model.npz",
+      "bytes": 137791,
+      "sha256": "0226819db3e6a24db79c3cc3108c3a4543593779ded05b425c2d085fe56b60aa",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n4_r4101_v01/model.npz",
+      "bytes": 136154,
+      "sha256": "205d8c26949741e941635c80a32156d2c45044b718d83321964ef2d8e39d95f2",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n4_r4102_v01/model.npz",
+      "bytes": 137659,
+      "sha256": "f283c67c68fd8cc66dc094853477af784a5dc948ce8de5327c3724699f4fa962",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n9_r2024_v01/model.npz",
+      "bytes": 137876,
+      "sha256": "bc5e66ef59a15aaa6da4f0f7f4eccd619ad4a7bb74cdecf78a1519a744d37dcb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n9_r4101_v01/model.npz",
+      "bytes": 137867,
+      "sha256": "914fb17bfbfed4363dff12a5461fef02e5e8339374b35e9e89e89fff75ee2099",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n9_r4102_v01/model.npz",
+      "bytes": 137875,
+      "sha256": "b80e48f185074dd0b6a5e3e7a38849b713c21ffe0b4e501502b5f2f7cc1226ea",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f0_S1_aseed2_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n4_r2024_v01/model.npz",
+      "bytes": 137561,
+      "sha256": "1cda01f233236e4cd3e03ef21b97ef335525c17583d7203c2145232dfc32128c",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n4_r4101_v01/model.npz",
+      "bytes": 137759,
+      "sha256": "f611036afc0d02eb0395a416694c7e5af37b86295066a4c7402c4b8f97134d46",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n4_r4102_v01/model.npz",
+      "bytes": 137099,
+      "sha256": "f0c445319817d6ee9ed601a7813ef71d6f5573ac9a2afe1990e873fccbea5a62",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n9_r2024_v01/model.npz",
+      "bytes": 137859,
+      "sha256": "e0cf788001d284bf2ca02493be2d1250fc72b9b241cd93d27e50a3724201cf69",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n9_r4101_v01/model.npz",
+      "bytes": 137943,
+      "sha256": "c74149d3662ad610a1cc6a4bad628abf08b87219eaa7f3f6c707365da5aa1a10",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n9_r4102_v01/model.npz",
+      "bytes": 137724,
+      "sha256": "72a4f21819eebd764e5a52291022f15c6f1e3990e850cee17dc27392f8c80013",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S0_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n4_r2024_v01/model.npz",
+      "bytes": 137566,
+      "sha256": "10440d7f5e9c277eb10eba3629de7c4b154dfec94e671434c622d5cce764d2e2",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n4_r4101_v01/model.npz",
+      "bytes": 137739,
+      "sha256": "425e8afd5a36c2c3b8192220a38f569de8841cd6b23eaa257682391f4558d045",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n4_r4102_v01/model.npz",
+      "bytes": 137099,
+      "sha256": "124dfd7940695cab5125633f811309ab03796a51f93456f1a12ac61433c4842a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n9_r2024_v01/model.npz",
+      "bytes": 137876,
+      "sha256": "08902ae51239c7a80b60e12f0eb00ddc3b772ce97eb4933432d638fa93b41dca",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n9_r4101_v01/model.npz",
+      "bytes": 137913,
+      "sha256": "0ecbec474090fbf38f5fd488563e0b7a7bb7c7ce694acc717410e26da429a6cb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n9_r4102_v01/model.npz",
+      "bytes": 137749,
+      "sha256": "4bab3f56b8196b2e20741bcb4e36c048f2ba28ae8e3800ed7b6b9407e5056cd5",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed0_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n4_r2024_v01/model.npz",
+      "bytes": 137565,
+      "sha256": "74d0b05ee1c7b770c20635aaa9928115087a28a14be6b5780578b696144eea8d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n4_r4101_v01/model.npz",
+      "bytes": 137750,
+      "sha256": "45f36439b80b01529128b8c61a0982e214412aafa8921991d0a3f47a984b9cf9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n4_r4102_v01/model.npz",
+      "bytes": 137078,
+      "sha256": "14553f83afc34498fe4abf8cba906b6d0939e499b4f80c0d1506e117571d2fd4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n9_r2024_v01/model.npz",
+      "bytes": 137860,
+      "sha256": "fb8a90772fcbc3a11e14952fc46b081a2765476bf8bda9aad762176e3b0538e8",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n9_r4101_v01/model.npz",
+      "bytes": 137922,
+      "sha256": "5f6a3360c9c91417cb0aecb0bd96462909cca86a631e9001a7a6b5dd6ffca662",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n9_r4102_v01/model.npz",
+      "bytes": 137719,
+      "sha256": "53bb97b09185f660335333f23a4d18c4875a50d52ba6d2579bfbd54a0be089b1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed1_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n4_r2024_v01/model.npz",
+      "bytes": 137606,
+      "sha256": "f7681f218299ad4d960ea4f44b3bf067e15de633398fae1d7fb5dd6ebe6f68e1",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n4_r4101_v01/model.npz",
+      "bytes": 137754,
+      "sha256": "9834a0dbd622992bcfa482b5fba68e702fe467e21b5cd5d3bb45b8e49366a13f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n4_r4102_v01/model.npz",
+      "bytes": 137095,
+      "sha256": "923b3f347c4ba204c67ccfe5e7ff9fc2d3cc3e11add19ab8133f64123558ba97",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n9_r2024_v01/model.npz",
+      "bytes": 137843,
+      "sha256": "0cb74e1c727bc162fff2b5508146c7b8ed9d615d1aa630797312d61b453db91d",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n9_r4101_v01/model.npz",
+      "bytes": 137905,
+      "sha256": "a30fd6d5bdd68f098ac4ec8c28f7ced4825fb202f90ff94633e4460f5503406b",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n9_r4102_v01/model.npz",
+      "bytes": 137737,
+      "sha256": "2487fbb7b09375adbf9d5d9330c9869c973e469539ef7857d26ccaff844df34f",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f1_S1_aseed2_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n4_r2024_v01/model.npz",
+      "bytes": 137815,
+      "sha256": "6539ba45b0f5afad4d040d73ae10c8ad00ff1994e67b772ee0791dcada5ebe45",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n4_r4101_v01/model.npz",
+      "bytes": 137759,
+      "sha256": "7da8810b9be0e9c281bd2f8306689ca685293fd9fecf9b4cc18b8e0a3dcdd600",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n4_r4102_v01/model.npz",
+      "bytes": 137791,
+      "sha256": "5143b13bbeca61c3f1d7e5486ca1bdb254b0c9e551f24482dfe7fa8e5fbc6aca",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n9_r2024_v01/model.npz",
+      "bytes": 137931,
+      "sha256": "e9ecf0e3697f822ef4650189eded1add58c10b74c4d3dec90d22a350c6c082a9",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n9_r4101_v01/model.npz",
+      "bytes": 137930,
+      "sha256": "90c2459daadc4b4b4577c06b74d3137d8dd87da39d7c5116f4bd1709dfd009d6",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n9_r4102_v01/model.npz",
+      "bytes": 137719,
+      "sha256": "50c7d41540df5c806255561e36ea0cfa726ff98089c2f108eb91598345ff8910",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S0_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n4_r2024_v01/model.npz",
+      "bytes": 137781,
+      "sha256": "a3fb3a9ea9726f45d260cd5aa1e4746b5527e3378277b337225fb5287d5192ce",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n4_r4101_v01/model.npz",
+      "bytes": 137792,
+      "sha256": "8ba20bf37f93d17d6f8dbd98c9b175ba121b98b6a5fcf371b4d61fd1fe7a2a35",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n4_r4102_v01/model.npz",
+      "bytes": 137812,
+      "sha256": "bc48593135a22392c2f3c2cd781e3062905daed863ca54ae36cb63365759c75a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n9_r2024_v01/model.npz",
+      "bytes": 137905,
+      "sha256": "a4daab8aefd9937f558893fd9029a391b41786472e5ac35353ebcd5542e70338",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n9_r4101_v01/model.npz",
+      "bytes": 137935,
+      "sha256": "e21d0322f609b2f520ccaff33b38330795e8c5bcd171c7d7a548b312a307c8ca",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n9_r4102_v01/model.npz",
+      "bytes": 137681,
+      "sha256": "4668ce03d724a3936761260bfbe33ba63deb57ddbd6365c851d407a951783c91",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed0_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n4_r2024_v01/model.npz",
+      "bytes": 137781,
+      "sha256": "79e0b573cbfc5aeeb3f4a25c804d1d98711065907c7c8a4048a57e848331bf59",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n4_r4101_v01/model.npz",
+      "bytes": 137780,
+      "sha256": "c5c0b0d2c245472233fea9967af42cf7d336264a8af2f21d72c59004a415d902",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n4_r4102_v01/model.npz",
+      "bytes": 137808,
+      "sha256": "25030077b7e8744e8877920cf53fafd0f24a008794450556e829a16ee52efd94",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n9_r2024_v01/model.npz",
+      "bytes": 137938,
+      "sha256": "85cff10a96bf5cda794ee1264fea3fd645dbb5dfffcea2664fa96cebc1d3236a",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n9_r4101_v01/model.npz",
+      "bytes": 137945,
+      "sha256": "51755fd4c0b96c3fb572bbf895d0d5b4d2a62f557a16901114e6f456e5a8553e",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n9_r4102_v01/model.npz",
+      "bytes": 137687,
+      "sha256": "c705e151a9560a9194a09e0bd30eb0f04415e107d0df415cceb3b63c1651bd91",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed1_n9_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n4_r2024_v01/model.npz",
+      "bytes": 137796,
+      "sha256": "3ed9777a7e33b67b7c67b03db222d83e08419abb392546adfae6f02a92357452",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n4_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n4_r4101_v01/model.npz",
+      "bytes": 137790,
+      "sha256": "0292a352afbab72de2fd5882765dc5b495a348243bb7a1fff1fac88b67008245",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n4_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n4_r4102_v01/model.npz",
+      "bytes": 137815,
+      "sha256": "08ce57919e435951f761dc97d27b6364d7bbc17c9642120db7589ddb1e1e14cb",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n4_r4102_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n9_r2024_v01/model.npz",
+      "bytes": 137913,
+      "sha256": "d83769cee1841a54001d0c5de1c0218c522b8c083b567afe0a403281929b5670",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n9_r2024_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n9_r4101_v01/model.npz",
+      "bytes": 137961,
+      "sha256": "7ab21d5ea80bc49b5d1936de7afe81e0884915befeda71f603e541f958665b16",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n9_r4101_v01/model.npz"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n9_r4102_v01/model.npz",
+      "bytes": 137704,
+      "sha256": "57848cb2b55fb426303379fe35596dc384dcf4cf3c0f7d031b5b1c81b510e4e4",
+      "asset": "C_additional_selected_models_v01.zip",
+      "member": "reports/subject_holdout_20261101_v01/final_models/CX_SH_f2_S1_aseed2_n9_r4102_v01/model.npz"
+    }
+  ],
+  "local_only_arrays": [
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold0_seed0/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "85680d929cbe93a4c78c72616ce3791d541e984e15e53906b1dc215e83567f81",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold0_seed1/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "c6eee3c573e82f449795e83e7002d920e3ead3aad8940f4f4a9be9f84849a992",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold0_seed2/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "cacd34b76fd604e7c94252de0600a322c0087be45a5bd885ae3ecf953afbdf5d",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold1_seed0/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "4f1301bf7094be62a7224cc22549c0fd1dc22cb4681c3de6e3cf22dc18f66ad4",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold1_seed1/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "c732331590f36480ebe352732a661ef9a0aedd6a5932a8dcb21e648f0c87610e",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold1_seed2/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "b471e0e5c776a76b99f57ca3c1c01bd1c671e9d1f29874824ddeaa26b407df83",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold2_seed0/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "1d6158242198856be506130d3b3159c886ef9afe3d05594672aeeaf5e0815282",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold2_seed1/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "40674a7befca3a42500718b5fd25f4ec602bdcdc1cf6cc50de4e2d5f441b1261",
+      "delivery_status": "local_external_not_uploaded"
+    },
+    {
+      "path": "reports/subject_holdout_20261101_v01/features/fold2_seed2/pooled.npy",
+      "kind": "pooled_feature_array",
+      "bytes": 1361285248,
+      "sha256": "e10f7a404d25fa79abe0269575570a4764ac75f8f7d521dff8d5628506f40925",
+      "delivery_status": "local_external_not_uploaded"
+    }
+  ],
+  "recovery_optimizer_states": "retained locally; not selected evaluation models"
+}
