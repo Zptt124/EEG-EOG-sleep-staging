@@ -326,6 +326,20 @@ def test_pseudo_trace_check_catches_leaks_and_bad_acceptance():
     assert _rejected(lambda t: t.assign(weight=[1.0, 0.5]))                              # 拒绝项有权重
 
 
+def test_threshold_recheck_scores_and_alpha_match_recall():
+    tr = load_script("thr", "25_threshold_recheck.py")
+    y = np.array([0, 0, 1, 1, 2, 3, 4])
+    p = np.full((7, 5), 0.05)
+    p[np.arange(7), [0, 0, 0, 1, 2, 3, 4]] = 0.8               # 一个真 N1 被判成 W
+    p[2, [0, 1]] = [0.5, 0.3]                                  # 放大 N1 后这一段才翻成 N1
+    s = tr.scores(tr.cm_of(y, p.argmax(1)))
+    assert s["n1_precision"] == 1.0 and s["n1_recall"] == 0.5 and abs(s["n1_f1"] - 2 / 3) < 1e-12
+    alpha = tr.match_alpha(y, p, 1.0)
+    assert 0.5 / 0.3 < alpha and tr.scores(tr.cm_of(y, (p * np.array([1, alpha, 1, 1, 1])).argmax(1)))["n1_recall"] == 1.0
+    total, part, resid = tr.decompose([dict(d0_n1_f1=0.3, d1_n1_f1=0.5, shift_n1_f1=0.45)], "n1_f1")
+    assert abs(total - 0.2) < 1e-12 and abs(part + resid - total) < 1e-12
+
+
 if __name__ == "__main__":
     for k, v in sorted(globals().items()):
         if k.startswith("test_"):

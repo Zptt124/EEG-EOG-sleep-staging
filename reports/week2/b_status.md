@@ -7,6 +7,7 @@
 - **全组预测**:仓库内 353 份不同内容的预测表全部通过官方评估;A 的 63 份在 Release 中,此前已重算。D 的 60 份、C 的 160 份补充与各自报告不一致 0 项。
 - **D 的伪标签**:40 份 `pseudo_label_trace.csv` 全部通过(`external_D/pseudo_trace_check.csv`)。这项检查看的是表内容,不能替代对 D 代码的审查。
 - **D0 与 B 线性头**:10 组里 9 组逐段相同;10% seed0 因 7e-5 的验证分差触发不同早停,结果不同,敏感性见 `external_D/sensitivity_D0_label10_seed0.csv`。
+- **D 的门槛分析**:B 独立复算,与 `threshold_control.csv` 比对 260 项不一致 0 项。门槛移动解释 D1 的 N1 F1 提升的 82%,只解释 Macro-F1 提升的 39%(`external_D/threshold_recheck_summary.csv`)。
 - **EOG 来源**:B 用 C 重建的 EOG,D 用自己提取的 EOG,9 组逐段预测相同,说明两者在这些线性头上等效,但没有做逐值比对。
 
 ## 2026-10-31 记录(CNN 补齐后,D 的部分已过时)
