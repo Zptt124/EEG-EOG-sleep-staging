@@ -8,6 +8,8 @@
 
 ## 共用接口
 
+第三周使用 [WEEK3.md](WEEK3.md) 与[四天方案 PDF](docs/week3/work_plan_W3.pdf)中的分工、数据权限和选模规则。[RUN_TEMPLATE.md](RUN_TEMPLATE.md) 中的第二周专用字段按实际适用性填写。第三周配置在训练侧确定后，再使用开发集汇总结果。
+
 第二周具体约束以[公共协议v2](docs/week2/protocol_v2.md)及[WEEK2.md](WEEK2.md)为准。第一周交付分支固定commit见[README](README.md)，不要把未合入main的评估或训练代码当作main已提供的接口。
 
 - A发布真实划分后，所有成员读取相同文件；改动必须升版本并通知全组。
