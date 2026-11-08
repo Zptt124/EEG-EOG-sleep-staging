@@ -11,6 +11,13 @@
 | B → D | 线性探针、训练侧标准化、特征与数据权限核查、统一评分入口 |
 | A、C、D → B | 固定配置、模型来源与逐段预测，由 B 核对 `sample_id` 并统一复评 |
 
+**2026-11-09 B第三周进展与选模口径提醒：** 详见 [reports/week3/b_status_w3.md](reports/week3/b_status_w3.md)。
+B 的线性读出改为训练侧选模（预算内按受试者内层交叉验证选轮次，开发集只评估一次，`scripts/27_b_w3_linear_probe.py`）。
+按此重跑的 std 6 格与第二周开发集早停相比：5 人预算 Macro-F1 −0.032、N1 F1 −0.120，14 人 −0.004 / −0.027，开发集早停结果偏乐观。
+A 第三周 21 份预测已由 B 复评，sample_id 覆盖与 18 格均值逐位一致；但 A 的 CNN/ContraWR 仍按开发集 Macro-F1 早停，
+B 与 A 的 5 人比较结论随选模口径翻转，需全组统一口径后再做跨组比较。C 的 C0/C1 与 D 的探针建议直接使用训练侧选模。
+mean pooling 与 t=10/25 特征待 C 按 [reports/week3/b_w3_extraction.md](reports/week3/b_w3_extraction.md) 提取。
+
 **2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查
 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
 W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)(12/12 通过);
