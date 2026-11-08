@@ -1,6 +1,6 @@
 # EEG–EOG 睡眠分期研究
 
-**2026-11-08 A第三周交付(分支 feat/a-week3-baselines):** 实验A基线比较完成——选定 ContraWR(上游重实现,许可核查在案)为主比较基线,SleepTransformer 完成协议与实现核查(TF1不可运行,L=21上下文冲突);18 格主矩阵(5/14/54人 × CNN/ContraWR × seed0-2)完成,CNN 侧 9 格复用 W2 且 12/12 逐项核查通过;14 人 EOG 对照 6 格复用;结果与配对 CI 见 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md),执行清单见 [WEEK3.md](WEEK3.md)。
+**2026-11-08 A第三周交付(分支 feat/a-week3-baselines,PR #15):** 实验A基线比较完成——选定 ContraWR(上游重实现,许可核查在案)为主比较基线,SleepTransformer 完成协议与实现核查(TF1不可运行,L=21上下文冲突);18 格主矩阵(5/14/54人 × CNN/ContraWR × seed0-2)完成,CNN 侧 9 格复用 W2 且 12/12 逐项核查通过;14 人 EOG 对照 6 格复用;结果与配对 CI 见 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md),执行清单见 [WEEK3.md](WEEK3.md)。9 个 ContraWR run 六件套已发布 Release [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)。
 
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
 

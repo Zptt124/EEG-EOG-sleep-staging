@@ -1,11 +1,12 @@
 # 阶段交接登记
 
-**2026-11-08 A第三周交付:** 实验A 基线比较完成(分支 feat/a-week3-baselines,待 PR)。
+**2026-11-08 A第三周交付:** 实验A 基线比较完成(分支 feat/a-week3-baselines,PR #15)。
 交付物:基线选择与核查 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
 W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)(12/12 通过);
-9 个 ContraWR run + 18 格主矩阵/配对差/EOG 对照/错误去向/曲线/资源表见
-[reports/week3/a_w3_results.md](reports/week3/a_w3_results.md);
-9 个新 run 六件套在本地 exp1/runs,Release 待发布。
+9 个 ContraWR run 六件套已发布 Release
+[a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108);
+18 格主矩阵/配对差/EOG 对照/错误去向/曲线/资源表见
+[reports/week3/a_w3_results.md](reports/week3/a_w3_results.md)。
 A → B:登记表 reports/week3/{run_registry,metrics_summary,resource_profile,paired_comparison}.csv
 与逐段预测(新 run 六件套内),请 B 按 sample_id 核对覆盖并汇总;第三周四档曲线 CNN
 部分含 5/14/54 三档(27 人 label50 沿用 W2)。

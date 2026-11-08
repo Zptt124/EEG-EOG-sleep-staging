@@ -13,7 +13,7 @@
 | A4 | 14 人 EEG-only vs EEG+EOG 对照(3 配对 seeds) | 复用 W2 双侧(0 新 run),见 [a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md) |
 | A5 | 5/14/54 人 Macro-F1 与 N1 F1 曲线 | [budget_curves_w3.png](reports/week3/budget_curves_w3.png) |
 | A6 | 文献协议与资源成本表 | 见 [a_baseline_selection.md](reports/week3/a_baseline_selection.md) 第 4 节 + [resource_profile.csv](reports/week3/resource_profile.csv) |
-| A7 | 结果表与逐段预测 | [a_w3_results.md](reports/week3/a_w3_results.md)、run 六件套(本地 exp1/runs,Release 待发布) |
+| A7 | 结果表与逐段预测 | [a_w3_results.md](reports/week3/a_w3_results.md)、run 六件套(Release [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)) |
 
 ## 关键记录
 
