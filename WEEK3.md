@@ -43,3 +43,29 @@
 | 第 4 天 | A 汇总基线、错误与成本。B 完成 N1 分析和统一复评。 | C 核对同特征比较。D 完成随机权重/短训权重的配对探针。各组交结果表和简短结论。 |
 
 如需共享 GPU，第 1 天根据实测耗时锁定时段。A 优先 5/14 人比较，B 优先 14 人 pooling 对照，C 优先 t=1 配对，D 为第 4 天探针预留时间。扩展任务按剩余预算安排。本文为计划，实际运行与接收状态以交付记录为准。
+
+---
+
+## 附录:A 交付状态(2026-11-08,分支 feat/a-week3-baselines 已并入)
+
+实验A 已完成,结果与证据:
+
+- 基线选择与核查:[reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md)
+  (选定 ContraWR;SleepTransformer 只做协议与实现核查)
+- W2 CNN run 复用核查(主矩阵 CNN 侧 9 格 + EOG 对照 6 格):12/12 通过
+  [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)
+- 9 个 ContraWR run 六件套:Release
+  [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)
+- 18 格主矩阵、配对差、EOG 对照、N1/REM 错误去向、曲线、资源表:
+  [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md) 与
+  reports/week3/{a_w3_main_grid,a_w3_paired_deltas,a_w3_eog_contrast,
+  a_w3_n1_rem_errors,run_registry,metrics_summary,resource_profile,
+  paired_comparison}.csv
+- 代码:scripts/{contrawr_model,train_contrawr_w3,a_w3_reuse_check,a_w3_results,
+  a_w3_benchmark}.py
+
+主要结论(8 人开发集,按受试者配对 CI):
+14 人预算两模型 Macro-F1 持平(0.7416 vs 0.7415),ContraWR 的 N1 F1 更高
+(0.399 vs 0.363);54 人预算 CNN 高 0.008 Macro-F1(N1 差 3 seed 配对 CI 均不含 0);
+5 人预算 CNN 明显更强。EOG 贡献(14 人):Macro-F1 +0.019~0.030(CI 均不含 0),
+REM F1 +0.077~0.114,N1 精度升召回降。
