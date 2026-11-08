@@ -1,0 +1,3 @@
+fit_id,role,roster_seed,budget,source_key,regularization,iterations,gradient_inf,seconds
+roster2024_label10_fold0_lambda0.01,inner_CV,2024,label10,S0,0.01,1333,9.31502211087392e-06,45.29864797299999
+roster2024_label10_fold0_lambda0.001,inner_CV,2024,label10,S0,0.001,1892,9.505801116169372e-06,63.89483325699999

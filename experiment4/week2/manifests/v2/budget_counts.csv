@@ -1,0 +1,6 @@
+budget,role,n_subjects,n_epochs,n_W,n_N1,n_N2,n_N3,n_REM
+label10,labeled,5,11936,3777,1719,4121,545,1774
+label10,unlabeled,49,121002,hidden,hidden,hidden,hidden,hidden
+label25,labeled,14,32310,9033,3480,12425,2197,5175
+label25,unlabeled,40,100628,hidden,hidden,hidden,hidden,hidden
+-,val,8,21186,7456,2623,7735,1101,2271

@@ -1,0 +1,14 @@
+test_CV_normalization_excludes_inner_holdout_and_ties_use_stronger_L2 (__main__.EEGMultiSubsetChecks.test_CV_normalization_excludes_inner_holdout_and_ties_use_stronger_L2) ... ok
+test_analytic_softmax_gradient_matches_finite_differences (__main__.EEGMultiSubsetChecks.test_analytic_softmax_gradient_matches_finite_differences) ... ok
+test_complete_final_matrix_and_bound_runtime_names (__main__.EEGMultiSubsetChecks.test_complete_final_matrix_and_bound_runtime_names) ... ok
+test_inner_subject_partitions_never_overlap (__main__.EEGMultiSubsetChecks.test_inner_subject_partitions_never_overlap) ... ok
+test_labeled_positions_cannot_include_development_validation (__main__.EEGMultiSubsetChecks.test_labeled_positions_cannot_include_development_validation) ... ok
+test_optimizer_converges_and_zero_start_is_reproducible (__main__.EEGMultiSubsetChecks.test_optimizer_converges_and_zero_start_is_reproducible) ... ok
+test_rosters_preserve_reference_train_only_uniqueness_and_nesting (__main__.EEGMultiSubsetChecks.test_rosters_preserve_reference_train_only_uniqueness_and_nesting) ... ok
+test_scipy_success_without_gradient_convergence_is_rejected (__main__.EEGMultiSubsetChecks.test_scipy_success_without_gradient_convergence_is_rejected) ... ok
+test_stable_probabilities_for_extreme_scores (__main__.EEGMultiSubsetChecks.test_stable_probabilities_for_extreme_scores) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.090s
+
+OK

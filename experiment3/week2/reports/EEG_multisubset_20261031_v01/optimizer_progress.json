@@ -1,0 +1,7 @@
+{
+  "fit": "roster2024_label10_fold0_lambda0.0001",
+  "iteration": 1963,
+  "objective": 0.10393633976464603,
+  "gradient_inf": 3.22036099477676e-05,
+  "seconds": 65.489488539
+}

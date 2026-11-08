@@ -1,0 +1,30 @@
+{
+  "fit_id": "roster4101_label25_fold1_lambda0.01",
+  "role": "training_only_S0_inner_fit",
+  "roster_seed": 4101,
+  "budget": "label25",
+  "source_key": "S0",
+  "regularization": 0.01,
+  "normalization_fitted_subjects": [
+    "SC403",
+    "SC414",
+    "SC419",
+    "SC431",
+    "SC444",
+    "SC449",
+    "SC457",
+    "SC465",
+    "SC477"
+  ],
+  "inner_heldout_subjects": [
+    "SC421",
+    "SC451",
+    "SC453",
+    "SC466",
+    "SC481"
+  ],
+  "training_samples": 22835,
+  "test_used": false,
+  "development_validation_used": false,
+  "binding_sha256": "74ce6b7ffc73b143223ae11913b7738de02333158c88cd04c768616abdec731c"
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "CX_EEG_LR_S1_aseed0_label10_roster4101_v02",
+  "source_key": "S1_aseed0",
+  "adaptation_seed": 0,
+  "representation": "S1",
+  "roster_seed": 4101,
+  "budget": "label10",
+  "labeled_subjects": 5,
+  "fit_id": "CX_EEG_LR_S1_aseed0_label10_roster4101_v02",
+  "role": "final_fit_not_yet_evaluated",
+  "regularization": 0.01,
+  "input_dim": 2560,
+  "classifier": "LinearLogistic(2560,5)",
+  "normalization_dtype": "float64",
+  "normalization_fitted_subjects": [
+    "SC403",
+    "SC431",
+    "SC453",
+    "SC465",
+    "SC466"
+  ],
+  "training_samples": 14843,
+  "test_used": false,
+  "development_validation_used": false,
+  "unlabeled_adaptation_subjects": 54,
+  "binding_sha256": "74ce6b7ffc73b143223ae11913b7738de02333158c88cd04c768616abdec731c"
+}

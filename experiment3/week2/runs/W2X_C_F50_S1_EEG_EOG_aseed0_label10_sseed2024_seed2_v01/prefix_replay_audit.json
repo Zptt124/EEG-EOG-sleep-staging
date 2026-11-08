@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "original_run_id": "W2_C_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+  "original_history_epochs": 14,
+  "all_original_history_rows_exact": true,
+  "original_selected_epoch": 4,
+  "original_selected_model_tensors_exact": true,
+  "original_normalization_exact": true,
+  "new_selected_epoch": 50
+}

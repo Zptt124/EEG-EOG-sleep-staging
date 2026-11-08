@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "CV_fits": 54,
+  "final_models": 24,
+  "paired_contrasts": 18,
+  "per_subject_pairs": 144,
+  "all_78_fits_meet_gradient_tolerance": true,
+  "lambda_selection_training_only": true,
+  "validation_evaluated_only_after_all_fits": true,
+  "EOG_read": false,
+  "test_used": false
+}

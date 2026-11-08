@@ -1,0 +1,16 @@
+{
+  "pid": 566,
+  "launched_at": "2026-10-31T17:17:29.523620+08:00",
+  "planned_new_heads": 80,
+  "reused_all20_heads": 40,
+  "EEG_groups": [
+    "all20",
+    "last5",
+    "last2"
+  ],
+  "EOG": "all20 unchanged",
+  "epochs": 50,
+  "selection": "final_epoch_50",
+  "class_weighting": false,
+  "status": "launched"
+}

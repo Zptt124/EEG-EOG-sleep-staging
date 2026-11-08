@@ -1,0 +1,9 @@
+{
+  "pid": 541,
+  "launched_at": "2026-10-31T15:55:02.393956+08:00",
+  "expected_heads": 40,
+  "epochs_per_head": 50,
+  "selection": "final_epoch_50",
+  "status": "launched",
+  "log": "console.log"
+}

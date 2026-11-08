@@ -1,0 +1,7 @@
+roster_seed,budget,regularization,selection_source
+2024,label10,0.01,S0 train-only OOF Macro-F1
+2024,label25,0.001,S0 train-only OOF Macro-F1
+4101,label10,0.01,S0 train-only OOF Macro-F1
+4101,label25,0.001,S0 train-only OOF Macro-F1
+4102,label10,0.001,S0 train-only OOF Macro-F1
+4102,label25,0.01,S0 train-only OOF Macro-F1

@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+  "reference_run_id": "W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+  "layer_group": "last5",
+  "representation": "S0",
+  "adaptation_seed": null,
+  "source_key": "S0",
+  "budget": "label10",
+  "seed": 2,
+  "epochs": 50,
+  "selected_epoch": 50,
+  "val_macro_f1": 0.7031049430508791,
+  "n1_precision": 0.3959731543624161,
+  "n1_recall": 0.2249332825009531,
+  "n1_f1": 0.286895210308777,
+  "rem_f1": 0.7216216216216216,
+  "accuracy": 0.7941565184555839,
+  "seconds": 16.141560401999982,
+  "paired_design_verified": true,
+  "test_used": false
+}

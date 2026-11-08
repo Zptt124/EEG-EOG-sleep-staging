@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "new_fold_adaptations": 9,
+  "inner_fits": 162,
+  "final_models": 72,
+  "OOF54_contrasts": 18,
+  "subject_pairs": 972,
+  "fold_pairs": 54,
+  "outer_heldout_excluded_from_local_adaptation": true,
+  "original_dev8_read": false,
+  "test_used": false,
+  "all_fits_converged": true
+}

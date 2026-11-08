@@ -1,0 +1,9 @@
+# W2_D_D0_R1_label25_sseed2024_seed1_v01
+
+- status: success
+- last successful step: metrics.json written
+- method: D0 (supervised student head on true labels of labeled subjects only)
+- representation: R1: R1_EEGDM_raw_frozen_cond14_timepooled (EEG 2560 + EOG 2560 = 5120, concat)
+- budget: label25 (14 labeled subjects, 32310 labeled samples; unlabeled subjects used: 0)
+- sampling_seed: 2024, downstream seed: 1
+- evaluation: validation set only (8 subjects), official evaluate.py v1

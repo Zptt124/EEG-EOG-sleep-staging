@@ -1,0 +1,6 @@
+method,budget,seed,pseudo_class,n_predicted,n_candidates,n_accepted,mean_conf_accepted,threshold,frac_eeg_disagree,frac_eog_disagree,frac_both_agree_among_candidates
+D2,label25,1,W,34273,13709,13509,0.9999,0.99965,0.0753,0.107,0.9854
+D2,label25,1,N1,9762,3905,733,0.8379,0.691422,0.4967,0.742,0.1877
+D2,label25,1,N2,39178,15671,14355,0.9847,0.957135,0.2027,0.166,0.916
+D2,label25,1,N3,5920,2368,2092,0.9983,0.990252,0.0704,0.2799,0.8834
+D2,label25,1,REM,11495,4598,3396,0.9566,0.867896,0.2813,0.2288,0.7386

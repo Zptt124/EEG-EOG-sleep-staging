@@ -1,0 +1,73 @@
+{
+  "version": "subject_holdout_20261101_v01",
+  "registered_at": "2026-11-01T02:36:05.291257+08:00",
+  "outer_seed": 5101,
+  "outer_assignment": "PCG64 permutation of sorted original train54, rank modulo3; no label stratification",
+  "outer_folds": 3,
+  "train_subjects_per_fold": 36,
+  "heldout_subjects_per_fold": 18,
+  "adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "roster_seeds": [
+    2024,
+    4101,
+    4102
+  ],
+  "roster_policy": "filter prior fixed54 orders to outer train36",
+  "absolute_label_budgets": {
+    "n4": 4,
+    "n9": 9
+  },
+  "actual_label_fractions": [
+    0.1111111111111111,
+    0.25
+  ],
+  "new_adaptations": 9,
+  "steps_per_adaptation": 10000,
+  "parent_numerical_config": "configs/adapt_W2_C_S1_pilot_v01.yaml",
+  "adaptation_changes": "only allowed subject pool, seed, output paths; all other numerical settings inherited",
+  "selection": "new EMA at10000; no outer/inner score selects backbone",
+  "trainable_parameters": 527233,
+  "classifier": "float64 converged logistic, mean CE+lambda/2*W_squared, unregularized bias",
+  "lambda_grid": [
+    0.01,
+    0.001,
+    0.0001
+  ],
+  "lambda_selection": "S0-only 3fold subject OOF within current labeled outer training subjects",
+  "one_lambda_shared_with_three_S1": true,
+  "tie_rule": "larger lambda",
+  "gradient_inf_tolerance": 1e-05,
+  "solver_passes": [
+    {
+      "maxiter": 10000,
+      "maxfun": 25000,
+      "ftol": 1e-15
+    },
+    {
+      "maxiter": 10000,
+      "maxfun": 25000,
+      "ftol": 0.0
+    }
+  ],
+  "inner_fits": 162,
+  "final_models": 72,
+  "normalization": "only current inner/final labeled training people; float64; std_floor1e-6",
+  "EEG_only": true,
+  "EOG_read": false,
+  "original_dev8_read": false,
+  "original_test16_read": false,
+  "features": "t1 gate std correction1 20layers; FP32 forward -> FP16 rounding -> FP32 time-mean2560",
+  "extraction_batch_size": 4,
+  "extraction_subjects": "original train54, frozen inference only; outer heldout excluded from learning",
+  "outer_prediction_embargo": "all9 adaptations,9 caches,162 inner fits,72 final models complete before outer predictions",
+  "primary_metric": "pooled out-of-fold Macro-F1 delta S1-S0, by roster and adaptation seed",
+  "useful_effect_reference_pp": 0.5,
+  "reference_threshold_is_not_clinical_standard": true,
+  "uncertainty": "subject-paired bootstrap54,1000 resamples; shared models/folds imply residual dependence",
+  "interpretation": "new foldwise local adaptation exclusion; previously used development corpus, not independent external data; S0 pretraining overlap unaudited",
+  "no_hyperparameter_changes_based_on_outer_results": true
+}

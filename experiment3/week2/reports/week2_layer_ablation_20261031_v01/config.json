@@ -1,0 +1,103 @@
+{
+  "experiment": "exploratory_EEG_layer_masking_final50_v01",
+  "registered_at": "2026-10-31T17:15:50.336670+08:00",
+  "selected_after_previous_results": true,
+  "groups_fixed_before_layer_shift_analysis": true,
+  "layer_groups_zero_based": {
+    "all20": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "last5": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "last2": [
+      18,
+      19
+    ]
+  },
+  "new_groups": [
+    "last5",
+    "last2"
+  ],
+  "reference_group": "all20",
+  "planned_new_heads": 80,
+  "reused_all20_heads": 40,
+  "adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "downstream_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "budgets": [
+    "label10",
+    "label25"
+  ],
+  "mask_modality": "EEG only",
+  "EOG_layers": "all20 unchanged",
+  "implementation": "zero excluded EEG coordinates after fitting/applying training-only per-feature normalization",
+  "physical_head_dim": 5120,
+  "nominal_head_parameters": 25605,
+  "active_EEG_dimensions": {
+    "all20": 2560,
+    "last5": 640,
+    "last2": 256
+  },
+  "active_input_dimensions": {
+    "all20": 5120,
+    "last5": 3200,
+    "last2": 2816
+  },
+  "classifier": {
+    "name": "Linear(5120,5)",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "epochs": 50,
+    "early_stopping": false,
+    "selection": "final_epoch_50",
+    "loss": "unweighted_cross_entropy"
+  },
+  "layer_feature_layout": "layer-major flattened [20,128], float32 mean over 30 time windows within each layer",
+  "drift_analysis": {
+    "subjects": "all54 training subjects only",
+    "labels_used": false,
+    "statistics_fit_classifier": false
+  },
+  "original_features_were_concatenated_not_averaged_across_layers": true,
+  "interpretation": "Masks reduce effective EEG capacity despite constant nominal head dimension; effects do not by themselves establish hidden adaptation information",
+  "test_used": false,
+  "new_backbone_training": false,
+  "new_feature_extraction": false,
+  "EOG_source": "C local reconstruction using original D frozen protocol",
+  "D_full_cache_received": false
+}

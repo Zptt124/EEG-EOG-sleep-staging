@@ -1,0 +1,21 @@
+{
+  "fit_id": "roster4102_label10_fold1_lambda0.0001",
+  "role": "training_only_S0_inner_fit",
+  "roster_seed": 4102,
+  "budget": "label10",
+  "source_key": "S0",
+  "regularization": 0.0001,
+  "normalization_fitted_subjects": [
+    "SC425",
+    "SC443",
+    "SC472"
+  ],
+  "inner_heldout_subjects": [
+    "SC421",
+    "SC427"
+  ],
+  "training_samples": 5814,
+  "test_used": false,
+  "development_validation_used": false,
+  "binding_sha256": "74ce6b7ffc73b143223ae11913b7738de02333158c88cd04c768616abdec731c"
+}

@@ -1,0 +1,104 @@
+{
+  "experiment": "exploratory_inverse_sqrt_class_weighted_final50_v01",
+  "registered_at": "2026-10-31T16:38:29.053479+08:00",
+  "declared_after_original_and_fixed50_results": true,
+  "locked_before_any_new_training": true,
+  "planned_new_heads": 40,
+  "reused_unweighted_final50_heads": 40,
+  "budgets": [
+    "label10",
+    "label25"
+  ],
+  "adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "downstream_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "weighting": {
+    "formula": "(1/sqrt(n_c))/mean_c(1/sqrt(n_c))",
+    "dtype": "float32",
+    "counts_source": "current labeled training subset only",
+    "weight_search": false,
+    "all_five_classes": true
+  },
+  "weights_by_budget": {
+    "label10": {
+      "subjects": [
+        "SC403",
+        "SC412",
+        "SC421",
+        "SC456",
+        "SC474"
+      ],
+      "training_samples": 11936,
+      "counts": [
+        3777,
+        1719,
+        4121,
+        545,
+        1774
+      ],
+      "weights": [
+        0.6638931632041931,
+        0.9840876460075378,
+        0.6355802416801453,
+        1.7477264404296875,
+        0.9687125086784363
+      ]
+    },
+    "label25": {
+      "subjects": [
+        "SC403",
+        "SC410",
+        "SC412",
+        "SC415",
+        "SC417",
+        "SC419",
+        "SC421",
+        "SC427",
+        "SC429",
+        "SC436",
+        "SC451",
+        "SC455",
+        "SC456",
+        "SC474"
+      ],
+      "training_samples": 32310,
+      "counts": [
+        9033,
+        3480,
+        12425,
+        2197,
+        5175
+      ],
+      "weights": [
+        0.7339317798614502,
+        1.1824480295181274,
+        0.6257826089859009,
+        1.4881840944290161,
+        0.9696533679962158
+      ]
+    }
+  },
+  "epochs": 50,
+  "selection": "final_epoch_50",
+  "early_stopping": false,
+  "optimizer": "AdamW lr0.001 wd0.0001",
+  "batch_size": 128,
+  "input_dim": 5120,
+  "loss_reduction": "PyTorch weighted-mean cross_entropy in each batch",
+  "comparator": "locked unweighted final50, never original earlystop when attributing loss effect",
+  "test_used": false,
+  "new_backbone_training": false,
+  "new_feature_extraction": false,
+  "EOG_source": "C local reconstruction using original D frozen protocol",
+  "D_full_cache_received": false,
+  "interpretation": "Loss sensitivity and precision/recall tradeoffs; gain alone does not prove the former model ignored N1"
+}

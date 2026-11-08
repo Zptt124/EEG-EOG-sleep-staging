@@ -1,6 +1,14 @@
 # EEG–EOG 睡眠分期研究
 
-**2026-11-08 A第三周交付(分支 feat/a-week3-baselines,PR #15):** 实验A基线比较完成——选定 ContraWR(上游重实现,许可核查在案)为主比较基线,SleepTransformer 完成协议与实现核查(TF1不可运行,L=21上下文冲突);18 格主矩阵(5/14/54人 × CNN/ContraWR × seed0-2)完成,CNN 侧 9 格复用 W2 且 12/12 逐项核查通过;14 人 EOG 对照 6 格复用;结果与配对 CI 见 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md),执行清单见 [WEEK3.md](WEEK3.md)。9 个 ContraWR run 六件套已发布 Release [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)。
+## 当前阶段：第三周 W3
+
+[第三周工作安排](WEEK3.md) · [四天方案 PDF](docs/week3/work_plan_W3.pdf) · [交接登记](HANDOFF.md#第三周交接)
+
+A 比较睡眠分期基线、标签效率与 EEG/EOG 输入。B 检验 pooling、diffusion step 与 N1 判别表现。C 比较相同特征下的 linear head 与 LFT。D 在 Sleep-EDF 训练池上开展从零扩散预训练 pilot。四项实验沿用按人划分，核心比较使用 14 位有标签受试者，16 位测试受试者继续封存。
+
+**2026-11-08 A第三周交付(PR #15):** 实验A基线比较完成——选定 ContraWR(上游重实现,许可核查在案)为主比较基线,SleepTransformer 完成协议与实现核查(TF1不可运行,L=21上下文冲突);18 格主矩阵(5/14/54人 × CNN/ContraWR × seed0-2)完成,CNN 侧 9 格复用 W2 且 12/12 逐项核查通过;14 人 EOG 对照 6 格复用;结果与配对 CI 见 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md)。9 个 ContraWR run 六件套已发布 Release [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)。
+
+**2026-11-02 C追加两项验证已完成：** [EEG-only多名单与按受试者留出：报告、完整预测和模型下载](experiment3/week2/ADDITIONAL_VALIDATION.md)。前者固定8人上平均+0.136pp，后者按折重训9个主干后平均−0.042pp，尚未确认稳定跨人适配收益；新增96份最终预测、216次内层拟合，全部本地审计通过。新结果独立于原W2全组登记，等待B独立复评；测试集封存。
 
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
 
@@ -9,9 +17,9 @@
 
 利用预训练EEG表征与未标注EEG/EOG，研究少标签睡眠分期和N1识别。
 
-## 当前阶段：第二周 W2 v1.1
+## 第二周 W2 v1.1
 
-本轮依据2026-10-26修订的[第二周工作文档](docs/week2/work_plan_W2_v1.1.pdf)，按阶段与交接条件推进，不对应固定日期。第一周已经得到冻结特征及融合的初步结果；尚未证明EEGDM稳定优于公平CNN，也未解决N1的稳定识别。
+第二周依据2026-10-26修订的[第二周工作文档](docs/week2/work_plan_W2_v1.1.pdf)，按阶段与交接条件推进，不对应固定日期。第一周已经得到冻结特征及融合的初步结果；尚未证明EEGDM稳定优于公平CNN，也未解决N1的稳定识别。
 
 - [WEEK2.md](WEEK2.md)：A/B/C/D任务矩阵、推进顺序与完成标准。
 - [公共协议v2](docs/week2/protocol_v2.md)：数据权限、预算、选模、上下文和评价规则。

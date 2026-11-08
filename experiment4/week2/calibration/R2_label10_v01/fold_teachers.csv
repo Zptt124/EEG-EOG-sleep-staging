@@ -1,0 +1,6 @@
+fold,heldout_subject,n_train_subjects,n_train_samples,n_heldout_samples,eeg_encoder,eog_encoder,dual_best_epoch,dual_val_macro_f1,eeg_best_epoch,eeg_val_macro_f1,eog_best_epoch,eog_val_macro_f1,heldout_teacher_accuracy
+0,SC403,4,10073,1863,W2_A_EEG_custome025aad4_sseed2024_seed0_v01,W2_A_EOG_custome025aad4_sseed2024_seed0_v01,2,0.6968,5,0.6962,27,0.5558,0.8315
+1,SC412,4,9907,2029,W2_A_EEG_customac669fa8_sseed2024_seed0_v01,W2_A_EOG_customac669fa8_sseed2024_seed0_v01,48,0.7113,13,0.6725,2,0.6255,0.8211
+2,SC421,4,9550,2386,W2_A_EEG_custom24241d45_sseed2024_seed0_v01,W2_A_EOG_custom24241d45_sseed2024_seed0_v01,6,0.7084,2,0.676,13,0.5903,0.8336
+3,SC456,4,9551,2385,W2_A_EEG_custom1d375cf8_sseed2024_seed0_v01,W2_A_EOG_custom1d375cf8_sseed2024_seed0_v01,6,0.7066,30,0.6803,3,0.5945,0.621
+4,SC474,4,8663,3273,W2_A_EEG_custom7828f58f_sseed2024_seed0_v01,W2_A_EOG_custom7828f58f_sseed2024_seed0_v01,32,0.69,16,0.6547,21,0.6101,0.5787

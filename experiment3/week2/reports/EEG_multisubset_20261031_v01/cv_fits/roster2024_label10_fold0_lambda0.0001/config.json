@@ -1,0 +1,21 @@
+{
+  "fit_id": "roster2024_label10_fold0_lambda0.0001",
+  "role": "training_only_S0_inner_fit",
+  "roster_seed": 2024,
+  "budget": "label10",
+  "source_key": "S0",
+  "regularization": 0.0001,
+  "normalization_fitted_subjects": [
+    "SC403",
+    "SC421",
+    "SC474"
+  ],
+  "inner_heldout_subjects": [
+    "SC412",
+    "SC456"
+  ],
+  "training_samples": 7522,
+  "test_used": false,
+  "development_validation_used": false,
+  "binding_sha256": "e55413bf79b63b26bb4f3bf5ea814587298468a5cf3335398106cc08a71016d3"
+}

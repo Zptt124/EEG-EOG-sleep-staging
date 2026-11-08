@@ -1,0 +1,27 @@
+{
+  "run_id": "CX_EEG_LR_S0_label10_roster2024_v02",
+  "source_key": "S0",
+  "adaptation_seed": null,
+  "representation": "S0",
+  "roster_seed": 2024,
+  "budget": "label10",
+  "labeled_subjects": 5,
+  "fit_id": "CX_EEG_LR_S0_label10_roster2024_v02",
+  "role": "final_fit_not_yet_evaluated",
+  "regularization": 0.01,
+  "input_dim": 2560,
+  "classifier": "LinearLogistic(2560,5)",
+  "normalization_dtype": "float64",
+  "normalization_fitted_subjects": [
+    "SC403",
+    "SC412",
+    "SC421",
+    "SC456",
+    "SC474"
+  ],
+  "training_samples": 11936,
+  "test_used": false,
+  "development_validation_used": false,
+  "unlabeled_adaptation_subjects": 0,
+  "binding_sha256": "74ce6b7ffc73b143223ae11913b7738de02333158c88cd04c768616abdec731c"
+}

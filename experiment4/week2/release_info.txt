@@ -1,0 +1,5 @@
+release_tag: d-ssl-w2-v01-20261101
+asset: w2_d_artifacts_v01.zip
+asset_sha256: 3769737cd9eb4ac40b9f95a144de80cb50eacd61b7a047fa26fed6ebd7c2125b
+asset_size_bytes: 112775853
+files_in_asset: 246 (per-file sha256 in artifact_index_D.csv)

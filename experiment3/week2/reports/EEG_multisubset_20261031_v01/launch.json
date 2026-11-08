@@ -1,0 +1,17 @@
+{
+  "pid": 473,
+  "launched_at": "2026-10-31T23:38:03.214035+08:00",
+  "expected_CV_fits": 54,
+  "expected_final_models": 24,
+  "roster_seeds": [
+    2024,
+    4101,
+    4102
+  ],
+  "modality": "EEG only",
+  "optimizer": "float64 L-BFGS-B",
+  "gradient_tolerance": 1e-05,
+  "new_backbone_training": false,
+  "new_feature_extraction": false,
+  "status": "launched"
+}

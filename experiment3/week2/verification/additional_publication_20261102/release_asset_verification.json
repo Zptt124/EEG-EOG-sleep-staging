@@ -1,0 +1,42 @@
+{
+  "status": "all_uploaded_assets_server_sha_verified_before_release_publication",
+  "release_id": 431069188,
+  "release_tag": "c-additional-validation-v01-20261102",
+  "assets": [
+    {
+      "name": "C_additional_full_predictions_and_indices_v01.zip",
+      "bytes": 386440362,
+      "sha256": "7db194186f9d961d4fe5ca63af7eb471028e2da7af3964987eb59892fd68d7a4",
+      "id": 700494513,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "C_additional_selected_models_v01.zip",
+      "bytes": 239929706,
+      "sha256": "d96eac65bd1e500962220d27a5d0f9f6babd12d3cec6a9f37342e52be341e4cb",
+      "id": 700494512,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "manifest.json",
+      "bytes": 771742,
+      "sha256": "4576473158ddf778454899afabb34cd8c3ff9c92efb89a68ffb0eff44cd201dd",
+      "id": 700495479,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "README.md",
+      "bytes": 1271,
+      "sha256": "a0397c774e4a4b72abf96307392dd908f2a4fc64eb3ac4f54d0e08604dcf816a",
+      "id": 700495517,
+      "remote_digest_verified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 379,
+      "sha256": "a12edb3b45451813f913ac867b6141c54f44ca32f85965f7860a12874ede6c50",
+      "id": 700495553,
+      "remote_digest_verified": true
+    }
+  ]
+}

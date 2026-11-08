@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "stage": "EEG_multisubset_analysis_complete",
+  "pid": 621,
+  "started_at": "2026-10-31T23:45:19.157882+08:00",
+  "completed_cv_fits": 54,
+  "expected_cv_fits": 54,
+  "completed_final_models": 24,
+  "expected_final_models": 24,
+  "validation_evaluations": 24,
+  "test_used": false,
+  "current_fit": null,
+  "completed_optimizer_fits": 78,
+  "completed_at": "2026-11-01T02:16:12.665894+08:00"
+}

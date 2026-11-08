@@ -1,7 +1,7 @@
 # 实验A 第三周:额外基线选择与核查(ContraWR / ST-Transformer)
 
 - 负责人/日期:A / 2026-11-08
-- 依据:第三周工作文档(修订版 2026-11-06,`docs/week3/work_plan_W3_v1.pdf`)实验A
+- 依据:第三周工作文档(修订版 2026-11-06,`docs/week3/work_plan_W3.pdf`)实验A
   "选择并核查基线:核对现有 CNN 的配置和结果。检查 ContraWR 与 ST-Transformer 的
   实现、输入模态、划分和预处理,按可运行性选择一个额外模型完成主比较。另一个模型
   完成协议和实现核查。"

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "total_tests": 30,
+  "checks": [
+    {
+      "script": "test_eeg_multisubset.py",
+      "expected_tests": 9,
+      "passed": true
+    },
+    {
+      "script": "test_eeg_multisubset_v02.py",
+      "expected_tests": 9,
+      "passed": true
+    },
+    {
+      "script": "test_subject_holdout.py",
+      "expected_tests": 12,
+      "passed": true
+    }
+  ]
+}

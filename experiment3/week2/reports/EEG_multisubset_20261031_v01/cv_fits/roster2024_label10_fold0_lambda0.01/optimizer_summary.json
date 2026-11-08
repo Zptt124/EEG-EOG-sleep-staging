@@ -1,0 +1,30 @@
+{
+  "converged": true,
+  "gradient_inf": 9.31502211087392e-06,
+  "gradient_tolerance": 1e-05,
+  "objective": 0.3427368257940528,
+  "iterations": 1333,
+  "function_calls": 1453,
+  "seconds": 45.29864797299999,
+  "refinement_passes": [
+    {
+      "pass_number": 1,
+      "scipy_success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 1000,
+      "objective": 0.3427385474471693,
+      "gradient_inf": 2.122893069735358e-05
+    },
+    {
+      "pass_number": 2,
+      "scipy_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "iterations": 333,
+      "objective": 0.3427368257940528,
+      "gradient_inf": 9.31502211087392e-06
+    }
+  ],
+  "normalization_dtype": "float64",
+  "optimizer": "SciPy L-BFGS-B",
+  "zero_initialization": true
+}

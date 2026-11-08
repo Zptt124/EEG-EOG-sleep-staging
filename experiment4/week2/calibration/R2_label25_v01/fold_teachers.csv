@@ -1,0 +1,15 @@
+fold,heldout_subject,n_train_subjects,n_train_samples,n_heldout_samples,eeg_encoder,eog_encoder,dual_best_epoch,dual_val_macro_f1,eeg_best_epoch,eeg_val_macro_f1,eog_best_epoch,eog_val_macro_f1,heldout_teacher_accuracy
+0,SC403,13,30447,1863,W2_A_EEG_customc2babbe4_sseed2024_seed0_v01,W2_A_EOG_customc2babbe4_sseed2024_seed0_v01,7,0.7394,6,0.7093,11,0.652,0.8798
+1,SC410,13,30114,2196,W2_A_EEG_customcb7362f5_sseed2024_seed0_v01,W2_A_EOG_customcb7362f5_sseed2024_seed0_v01,9,0.7451,2,0.709,2,0.6437,0.8547
+2,SC412,13,30281,2029,W2_A_EEG_custom33d5f0c6_sseed2024_seed0_v01,W2_A_EOG_custom33d5f0c6_sseed2024_seed0_v01,23,0.7585,15,0.7277,1,0.6489,0.8423
+3,SC415,13,29596,2714,W2_A_EEG_customeca5b6ce_sseed2024_seed0_v01,W2_A_EOG_customeca5b6ce_sseed2024_seed0_v01,13,0.7452,10,0.7088,1,0.6424,0.9149
+4,SC417,13,29535,2775,W2_A_EEG_customedbd893c_sseed2024_seed0_v01,W2_A_EOG_customedbd893c_sseed2024_seed0_v01,10,0.7533,12,0.7097,7,0.6492,0.7672
+5,SC419,13,29501,2809,W2_A_EEG_customb3074487_sseed2024_seed0_v01,W2_A_EOG_customb3074487_sseed2024_seed0_v01,8,0.7542,3,0.7163,1,0.6436,0.811
+6,SC421,13,29924,2386,W2_A_EEG_custom31a8d23c_sseed2024_seed0_v01,W2_A_EOG_custom31a8d23c_sseed2024_seed0_v01,10,0.7427,17,0.7077,9,0.6509,0.8403
+7,SC427,13,30168,2142,W2_A_EEG_custom60ee4218_sseed2024_seed0_v01,W2_A_EOG_custom60ee4218_sseed2024_seed0_v01,9,0.7434,2,0.7088,1,0.6425,0.7362
+8,SC429,13,29574,2736,W2_A_EEG_custom436d18ee_sseed2024_seed0_v01,W2_A_EOG_custom436d18ee_sseed2024_seed0_v01,12,0.7535,5,0.7175,5,0.6398,0.8651
+9,SC436,13,31486,824,W2_A_EEG_custom18f7a75e_sseed2024_seed0_v01,W2_A_EOG_custom18f7a75e_sseed2024_seed0_v01,3,0.7426,2,0.7135,1,0.6498,0.7888
+10,SC451,13,30269,2041,W2_A_EEG_custom8e391e3b_sseed2024_seed0_v01,W2_A_EOG_custom8e391e3b_sseed2024_seed0_v01,2,0.7245,2,0.6983,8,0.632,0.7153
+11,SC455,13,30173,2137,W2_A_EEG_customdf79a3b0_sseed2024_seed0_v01,W2_A_EOG_customdf79a3b0_sseed2024_seed0_v01,3,0.7517,12,0.7157,5,0.6547,0.7815
+12,SC456,13,29925,2385,W2_A_EEG_custom59fb59c2_sseed2024_seed0_v01,W2_A_EOG_custom59fb59c2_sseed2024_seed0_v01,3,0.7618,3,0.7235,9,0.6395,0.6117
+13,SC474,13,29037,3273,W2_A_EEG_custom8b231409_sseed2024_seed0_v01,W2_A_EOG_custom8b231409_sseed2024_seed0_v01,13,0.738,14,0.701,21,0.6416,0.6309

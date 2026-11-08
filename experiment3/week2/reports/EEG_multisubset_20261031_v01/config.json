@@ -1,0 +1,90 @@
+{
+  "experiment": "EEG_only_multisubset_converged_logistic_v01",
+  "registered_at": "2026-10-31T23:36:24.836920+08:00",
+  "roster_seeds": [
+    2024,
+    4101,
+    4102
+  ],
+  "new_roster_rng": "NumPy PCG64 permutation of sorted 54 train IDs; seed2024 rank retained exactly",
+  "budgets": {
+    "label10": 5,
+    "label25": 14
+  },
+  "sources": [
+    {
+      "key": "S0",
+      "adaptation_seed": null,
+      "feature_root": "features/eeg_cond14_v01",
+      "pool": "reports/week2_eeg_comparison_20261028/execution/S0_pooled.npy",
+      "audit": "reports/week2_eeg_comparison_20261028/execution/S0_feature_audit.json"
+    },
+    {
+      "key": "S1_aseed0",
+      "adaptation_seed": 0,
+      "feature_root": "features/eeg_cond14_S1_aseed0_steps10000_v01",
+      "pool": "reports/week2_eeg_comparison_20261028/execution/S1_pooled.npy",
+      "audit": "reports/week2_eeg_comparison_20261028/execution/S1_feature_audit.json"
+    },
+    {
+      "key": "S1_aseed1",
+      "adaptation_seed": 1,
+      "feature_root": "features/eeg_cond14_S1_aseed1_steps10000_v02",
+      "pool": "reports/week2_seed1_features_heads_20261028_v04/execution/S1_pooled.npy",
+      "audit": "reports/week2_seed1_features_heads_20261028_v04/execution/S1_feature_audit.json"
+    },
+    {
+      "key": "S1_aseed2",
+      "adaptation_seed": 2,
+      "feature_root": "features/eeg_cond14_S1_aseed2_steps10000_v01",
+      "pool": "reports/week2_seed2_features_heads_20261029/execution/S1_pooled.npy",
+      "audit": "reports/week2_seed2_features_heads_20261029/execution/S1_feature_audit.json"
+    }
+  ],
+  "planned_final_models": 24,
+  "planned_CV_fits": 54,
+  "adaptation_seeds": [
+    0,
+    1,
+    2
+  ],
+  "new_backbone_training": false,
+  "new_feature_extraction": false,
+  "EOG_features_read": false,
+  "features": "all20 gate, existing float32 mean30 time pooling to2560",
+  "classifier": "five-class float64 multinomial logistic regression",
+  "objective": "mean cross_entropy + lambda/2 * sum(W**2); bias unregularized",
+  "lambda_grid": [
+    0.01,
+    0.001,
+    0.0001
+  ],
+  "lambda_selection": "S0-only 3-fold subject-grouped OOF pooled Macro-F1 within current labeled subjects",
+  "lambda_shared_by_all_four_representations": true,
+  "tie_rule": "larger lambda",
+  "inner_fold_rule": "rank within selected roster modulo3",
+  "normalization": "fit only each inner training fold; final fit only selected labeled train subjects",
+  "normalization_dtype": "float64",
+  "std_floor": 1e-06,
+  "gradient_inf_tolerance": 1e-05,
+  "max_iterations_per_pass": 1000,
+  "predetermined_solver_passes": [
+    {
+      "ftol": 1e-15,
+      "maxfun": 5000
+    },
+    {
+      "ftol": 0.0,
+      "maxfun": 5000
+    }
+  ],
+  "only_refine_same_objective_if_needed": true,
+  "zero_initialization": true,
+  "CPU_threads": 4,
+  "development_validation_embargo": "all54 CV fits and24 final fits converged before any final validation predictions",
+  "development_validation_subjects": 8,
+  "test_used": false,
+  "adaptation_unlabeled_subjects": 54,
+  "adapted_backbones_have_seen_all54_training_subject_signals": true,
+  "interpretation": "Repeated label rosters on same8 development subjects; not new unseen-subject validation or unique diffusion-objective evidence"
+}

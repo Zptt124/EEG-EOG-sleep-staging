@@ -1,0 +1,48 @@
+{
+  "run_id": "CX_SH_f1_S1_aseed2_n4_r4102_v01",
+  "fold": 1,
+  "source_key": "S1_aseed2",
+  "adaptation_seed": 2,
+  "roster_seed": 4102,
+  "budget": "n4",
+  "labeled_subjects": 4,
+  "fit_id": "CX_SH_f1_S1_aseed2_n4_r4102_v01",
+  "role": "outer_training_final",
+  "training_subjects": [
+    "SC425",
+    "SC427",
+    "SC443",
+    "SC472"
+  ],
+  "training_samples": 7956,
+  "outer_heldout_subjects": [
+    "SC402",
+    "SC416",
+    "SC417",
+    "SC418",
+    "SC421",
+    "SC422",
+    "SC430",
+    "SC433",
+    "SC436",
+    "SC452",
+    "SC456",
+    "SC461",
+    "SC465",
+    "SC466",
+    "SC467",
+    "SC470",
+    "SC473",
+    "SC476"
+  ],
+  "normalization_fitted_subjects": [
+    "SC425",
+    "SC427",
+    "SC443",
+    "SC472"
+  ],
+  "outer_labels_used": false,
+  "regularization": 0.01,
+  "binding_sha256": "9c039b977089c283a92f326520d13e2fa95153c95098887088404c8973a39d0a",
+  "source_pool_sha256": "b471e0e5c776a76b99f57ca3c1c01bd1c671e9d1f29874824ddeaa26b407df83"
+}

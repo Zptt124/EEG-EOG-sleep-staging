@@ -263,6 +263,83 @@ def test_window_neighbors_never_cross_gap_and_mismatched_centers_fail(tmp_path=N
         raise AssertionError("中心样本集合不一致应报错")
 
 
+def _prediction_check_case(p_w, y_pred, tmp_path):
+    """分类层恒等:特征就是 logits,预测表写入给定概率,检查还原 A 预测时的判定。"""
+    import torch
+    run = Path(tmp_path)
+    torch.save({"state_dict": {"classifier.weight": torch.eye(5), "classifier.bias": torch.zeros(5)}}, run / "best.ckpt")
+    pd.DataFrame([dict(sample_id="R_0000", y_pred=y_pred, p_W=p_w, p_N1=1 - p_w, p_N2=0, p_N3=0, p_REM=0)]).to_csv(
+        run / "predictions_val.csv", index=False)
+    x = np.log(np.array([[0.5, 0.5, 1e-12, 1e-12, 1e-12]], dtype=np.float32))     # 自己算出的前两类打平
+    x[0, 1] += 2e-4                                                                # 让本地 argmax 落在 N1
+    return load_script("extract", "19_extract_cnn_features.py").check_against_predictions(run, np.array(["R_0000"]), x)
+
+
+def test_extraction_check_allows_only_near_ties():
+    import tempfile
+    n, differ, _ = _prediction_check_case(0.5003, 0, tempfile.mkdtemp())     # A 判 W,差距 6e-4 < TIE_MARGIN
+    assert (n, differ) == (1, 1)
+    try:
+        _prediction_check_case(0.51, 0, tempfile.mkdtemp())                  # 差距 0.02,不是打平
+    except ValueError as e:
+        assert "无法还原" in str(e)
+    else:
+        raise AssertionError("非打平段类别不同应报错")
+
+
+def test_gap_registry_maps_reused_e1_runs_and_skips_failed(tmp_path=None):
+    import tempfile
+    path = Path(tmp_path or tempfile.mkdtemp()) / "r.csv"
+    pd.DataFrame([dict(run_id="E1_EEG_label100_seed0_v01", status="reused"),
+                  dict(run_id="W2_A_EEG_label10_sseed2024_seed0_v01", status="completed"),
+                  dict(run_id="W2_A_EOG_label10_sseed2024_seed0_v01", status="failed")]).to_csv(path, index=False)
+    names = load_script("gap", "18_gap_table.py").names_in_registry(path)
+    assert names == {"W2_A_EEG_label100_sseed2024_seed0_v01", "W2_A_EEG_label10_sseed2024_seed0_v01"}
+
+
+def _trace_case():
+    roles = {"SC400": "unlabeled", "SC401": "unlabeled", "SC403": "labeled"}
+    trace = pd.DataFrame(dict(sample_id=["SC4001_0001", "SC4011_0001"], method="D2", budget="label25", seed=0, teacher_id="t",
+                              pseudo_label=[0, 1], confidence=[1.0, 0.5], eeg_prediction=[0, 2], eog_prediction=[0, 1],
+                              accepted=[1, 0], weight=[1.0, 0.0]))
+    return trace, pd.DataFrame(dict(n_accepted=[1])), roles
+
+
+def _rejected(mutate):
+    check = load_script("ingest_d", "23_ingest_d_runs.py").check_trace
+    trace, stats, roles = _trace_case()
+    trace = mutate(trace)
+    try:
+        check(trace, stats, roles, "D2", "label25", 0)
+    except ValueError:
+        return True
+    return False
+
+
+def test_pseudo_trace_check_catches_leaks_and_bad_acceptance():
+    check = load_script("ingest_d", "23_ingest_d_runs.py").check_trace
+    assert check(*_trace_case(), "D2", "label25", 0) == (2, 1)
+    assert _rejected(lambda t: t.assign(y_true=0))                                       # 真标签列
+    assert _rejected(lambda t: t.assign(sample_id=["SC4001_0001", "SC4031_0001"]))       # 有标签者混入
+    assert _rejected(lambda t: t.assign(eog_prediction=[3, 1]))                          # D2 接收项教师不一致
+    assert _rejected(lambda t: t.assign(accepted=[1, 1], weight=[1.0, 1.0]))             # 接收数与统计不符
+    assert _rejected(lambda t: t.assign(weight=[1.0, 0.5]))                              # 拒绝项有权重
+
+
+def test_threshold_recheck_scores_and_alpha_match_recall():
+    tr = load_script("thr", "25_threshold_recheck.py")
+    y = np.array([0, 0, 1, 1, 2, 3, 4])
+    p = np.full((7, 5), 0.05)
+    p[np.arange(7), [0, 0, 0, 1, 2, 3, 4]] = 0.8               # 一个真 N1 被判成 W
+    p[2, [0, 1]] = [0.5, 0.3]                                  # 放大 N1 后这一段才翻成 N1
+    s = tr.scores(tr.cm_of(y, p.argmax(1)))
+    assert s["n1_precision"] == 1.0 and s["n1_recall"] == 0.5 and abs(s["n1_f1"] - 2 / 3) < 1e-12
+    alpha = tr.match_alpha(y, p, 1.0)
+    assert 0.5 / 0.3 < alpha and tr.scores(tr.cm_of(y, (p * np.array([1, alpha, 1, 1, 1])).argmax(1)))["n1_recall"] == 1.0
+    total, part, resid = tr.decompose([dict(d0_n1_f1=0.3, d1_n1_f1=0.5, shift_n1_f1=0.45)], "n1_f1")
+    assert abs(total - 0.2) < 1e-12 and abs(part + resid - total) < 1e-12
+
+
 if __name__ == "__main__":
     for k, v in sorted(globals().items()):
         if k.startswith("test_"):

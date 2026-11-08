@@ -1,0 +1,9 @@
+{
+  "released_at": "2026-11-02T06:28:25.310991+08:00",
+  "inner_fits": 162,
+  "final_models": 72,
+  "all_fits_converged": true,
+  "outer_evaluations_before_release": 0,
+  "original_dev8_read": false,
+  "test_used": false
+}

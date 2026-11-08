@@ -1,0 +1,102 @@
+training_subjects:
+- SC403
+- SC412
+- SC421
+- SC456
+- SC474
+training_samples: 11936
+validation_subjects:
+- SC406
+- SC409
+- SC442
+- SC448
+- SC462
+- SC471
+- SC475
+- SC480
+validation_samples: 21186
+train_class_counts:
+  0: 3777
+  1: 1719
+  2: 4121
+  3: 545
+  4: 1774
+EEG_feature_audit_sha256: 025265375c0efd10b386f3d7be1305251f74f2bf2baadaf44c5611141f6e7c50
+EOG_feature_audit_sha256: d45bdc231123e1e18c7016b2d51fe7c18492aa18509e95f52fabd1a8b77083c6
+runtime_binding_sha256: 4dba32779107af411026bc0bd421ea6d45b551ffd92b27388a3a8e4a39699246
+trainer_sha256: 0a382831ea43b1a026d45e2f3a5ff995cdee6b13f2a7e5b2436f39b902491bb5
+evaluator_sha256: 4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605
+label_manifest_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+local_unlabeled_adaptation_subjects: 0
+EOG_source: local_regeneration_using_identical_D_reference_configuration
+D_full_cache_received: false
+feature_order:
+- EEG
+- EOG
+run_id: W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed4_v01
+representation: S0
+adaptation_seed: null
+downstream_seed: 4
+sampling_seed: 2024
+budget: label10
+modality: EEG_EOG
+role: exploratory_EEG_layer_masking_final50
+input_dim: 5120
+classifier: Linear(5120,5)
+optimizer: AdamW
+learning_rate: 0.001
+weight_decay: 0.0001
+batch_size: 128
+max_epochs: 50
+patience: null
+loss: unweighted_cross_entropy
+selection: fixed final epoch 50; validation never selects weights
+normalization: fit only current budget labeled train subjects, independently for S0/S1
+std_floor: 1.0e-06
+backbone_frozen: true
+test_used: false
+device: cpu
+cpu_threads: 4
+deterministic: true
+N1_REM_from_same_selected_head: true
+original_run_id: W2_C_S0_EEG_EOG_label10_sseed2024_seed4_v01
+early_stopping: false
+selected_epoch: 50
+original_runtime_binding_sha256: 33c6fa42d0bf99e8e55ea80ef07d9a80655462ddd6b158e8412e84e093fc87a2
+declared_after_original_validation_results: true
+optimizer_updates: 4700
+all20_reference_run_id: W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed4_v01
+layer_group: last5
+EEG_layers_zero_based:
+- 15
+- 16
+- 17
+- 18
+- 19
+EOG_layers_zero_based:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+active_EEG_dim: 640
+active_input_dim: 3200
+physical_input_dim: 5120
+mask_location: after training-only per-feature normalization
+nominal_head_parameters: 25605
+all20_runtime_binding_sha256: 38d759acc22e3ff7ad2aab1a5e3d17aa12a883859d9b996e5ce51b34666fead7

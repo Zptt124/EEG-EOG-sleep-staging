@@ -1,0 +1,26 @@
+{
+  "budget": "label25",
+  "sampling_seed": "2024",
+  "chosen_p": 0.4,
+  "rule": "largest p in [0.2, 0.4, 0.6] with D1 macro pseudo-label precision >= 0.85; otherwise smallest p",
+  "rule_satisfied": true,
+  "teacher_seed": 0,
+  "teacher_early_stopping": "validation macro-F1, patience 10 (same as formal teachers); validation scores NOT used to choose p",
+  "n_folds": 14,
+  "n_pool": 32310,
+  "roles_sha256": "6f9882e9444d544dd2b709fd325dc2cc0231ff93360738bc886dac80d1a73173",
+  "cache_files_sha256": {
+    "sample_index.csv": "a2214f979168361482eb0f71ec15794b8bb66584313799f49d156f9a947ee867",
+    "eeg_pooled.npy": "da1dc03bf94f43b76b4a6f45098838f5eadebd4009433c11452df2b123fa3ddf",
+    "eog_pooled.npy": "1b6142b99513d73e4798045e943dd1abb31bb77f0a16ad0fe19d7a396133be8b"
+  },
+  "code_sha256": {
+    "build_pooled_cache.py": "33e486a34a971662f568da7c7dfbab6d9c466b86e2da544fb52ed2433d417fd4",
+    "calibrate_threshold.py": "a19ba1efef55c9e5be2d446f8b5311c565940ce1ae06fc56c54185dca4634663",
+    "label_guard.py": "34a722da4c6a8bf5812f75714fd4b02c1178fb53cb2cbe78b252d3cdebbae31d",
+    "make_label_roles.py": "9097e56891dd8e9d145eb889258041f8c5eacecc878218da0f26ee98b77a97d8",
+    "run_ssl.py": "b83128075b6f07d9441f82059e25c3bd780c73a38feba13042d690c9a781ed7a",
+    "ssl_common.py": "eddb5708f92277fdddd8bd0f18d5aa5f69cfa7e54906b30df0457791992f64f9"
+  },
+  "minutes": 2.7
+}

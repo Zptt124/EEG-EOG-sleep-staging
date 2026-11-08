@@ -1,0 +1,35 @@
+{
+  "status": "bound_before_new_fitting",
+  "bound_at": "2026-10-31T23:38:02.293031+08:00",
+  "input_sha256": {
+    "scripts/run_eeg_multisubset.py": "480752f088535cf45f1274a92661da22cc97f834ade9c935e6ad0bc1515a6686",
+    "tests/test_eeg_multisubset.py": "8662a723b6b621e82ff9bb586e3ecd480500ecf0db06e5a6fd71be0d72f3a4d0",
+    "manifests/week2_c_adaptation_v01/label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+    "vendor/experiment1-review/manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+    "vendor/experiment2-review-6e7df99/src/evaluation/evaluate.py": "4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605",
+    "reports/EEG_multisubset_20261031_v01/runtime_tests.log": "2d8314b4379b0e8947cfe433371db1ad8be792c13fb6693d832837148ee5c7de",
+    "reports/EEG_multisubset_20261031_v01/config.json": "2bd2b527ae38ffd4806e17614de82e2c2fbc5f8be49f130c4a91ce401e41dc77",
+    "reports/EEG_multisubset_20261031_v01/label_subsets.csv": "67c88a171fc1a2c668df7a3672de901d0a1cfb114e66a1db915e311a0d8f642b",
+    "reports/EEG_multisubset_20261031_v01/budget_profiles.csv": "5599c2cb143fdd1b4968a741c1507f039efa35444160a19d251b0ae1dc4eaebe",
+    "reports/EEG_multisubset_20261031_v01/inner_fold_subjects.csv": "7fe2e36d0c0cb82ddb3b50c06b627abcb3b3d92f5719f4b7814df307691456a6",
+    "reports/EEG_multisubset_20261031_v01/run_plan.csv": "86f5d73e0441db0afccf6e58172c924dc33193e8a062acfd75ad0e7079bbaeeb",
+    "reports/EEG_multisubset_20261031_v01/实验方案.md": "cff403e6d100a6b9b754deee166f439e38f0d8a2e6779dcd02cc736c43668d4a",
+    "reports/week2_eeg_comparison_20261028/execution/S0_feature_audit.json": "025265375c0efd10b386f3d7be1305251f74f2bf2baadaf44c5611141f6e7c50",
+    "features/eeg_cond14_v01/feature_config.json": "d2e3e70d71945e0a6ca673f800508f56a885588954876626d47fcfed691411a0",
+    "features/eeg_cond14_v01/feature_index.csv": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+    "reports/week2_eeg_comparison_20261028/execution/S1_feature_audit.json": "aeb452a84ed22636ca1a5437272d6c0b3108fcb19d592ca3d54878c1d4d7680f",
+    "features/eeg_cond14_S1_aseed0_steps10000_v01/feature_config.json": "4373c7fd080088399342d6a75835652aa1be8fb344851499f67b06334a985b62",
+    "features/eeg_cond14_S1_aseed0_steps10000_v01/feature_index.csv": "58689b5c6ba36c7ebe5245cc843c3c0d77ecea9fa2ea6b6e8c4bbd8a5cfc387c",
+    "reports/week2_seed1_features_heads_20261028_v04/execution/S1_feature_audit.json": "4c8c728800b0e1914cc13e5a5b8ccb4804d868061e6c455c112ad1740493afd8",
+    "features/eeg_cond14_S1_aseed1_steps10000_v02/feature_config.json": "3cb77624682f00712c5ea728372b3fdac4f260a6c4bde11746bea530c980f312",
+    "features/eeg_cond14_S1_aseed1_steps10000_v02/feature_index.csv": "9a2fd44a09973205124f574b4dacc86e20c88cb23ad790a02648cc3e43ec0a89",
+    "reports/week2_seed2_features_heads_20261029/execution/S1_feature_audit.json": "3ba2cdbbbe6ca7fa380c1776703c85a70dbc90a44287aa2490dff702dd801576",
+    "features/eeg_cond14_S1_aseed2_steps10000_v01/feature_config.json": "80bb7d7a0b79f320d8ba16752006874cb895968752e677e35a456fc68555aac6",
+    "features/eeg_cond14_S1_aseed2_steps10000_v01/feature_index.csv": "dcd57856a5c7ea1ecabad56f0b8ac551d7c55b7db973a028e9d0159c398aa924"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3"
+  },
+  "test_used": false
+}

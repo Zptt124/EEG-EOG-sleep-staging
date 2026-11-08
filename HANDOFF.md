@@ -1,7 +1,18 @@
 # 阶段交接登记
 
-**2026-11-08 A第三周交付:** 实验A 基线比较完成(分支 feat/a-week3-baselines,PR #15)。
-交付物:基线选择与核查 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
+## 第三周交接
+
+以[第三周工作安排](WEEK3.md)和[四天方案 PDF](docs/week3/work_plan_W3.pdf)为准。交付时记录配置、模型来源、run ID、样本索引与接收核验。
+
+| 交付方 → 接收方 | 第三周产物 |
+| --- | --- |
+| B → C | t=1 的 std/mean 特征索引、`sample_id`、模态与层轴定义及兼容的 linear head 基线 |
+| C → B | LFT 入口、官方 extractor 的适配说明和输入加噪设置 |
+| B → D | 线性探针、训练侧标准化、特征与数据权限核查、统一评分入口 |
+| A、C、D → B | 固定配置、模型来源与逐段预测，由 B 核对 `sample_id` 并统一复评 |
+
+**2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查
+[reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
 W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)(12/12 通过);
 9 个 ContraWR run 六件套已发布 Release
 [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108);
@@ -10,6 +21,8 @@ W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_che
 A → B:登记表 reports/week3/{run_registry,metrics_summary,resource_profile,paired_comparison}.csv
 与逐段预测(新 run 六件套内),请 B 按 sample_id 核对覆盖并汇总;第三周四档曲线 CNN
 部分含 5/14/54 三档(27 人 label50 沿用 W2)。
+
+**2026-11-02 C追加两项验证已完成：** [EEG-only多名单与按受试者留出：报告、完整预测和模型下载](experiment3/week2/ADDITIONAL_VALIDATION.md)。前者固定8人上平均+0.136pp，后者按折重训9个主干后平均−0.042pp，尚未确认稳定跨人适配收益；新增96份最终预测、216次内层拟合，全部本地审计通过。新结果独立于原W2全组登记，等待B独立复评；测试集封存。
 
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
 

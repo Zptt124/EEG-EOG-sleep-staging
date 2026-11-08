@@ -1,0 +1,14 @@
+head,representation,modalities,context_length,nominal_budget,labeled_subjects,unlabeled_signal_subjects,adaptation_version,adaptation_seed,teacher_id,n_seeds,seeds,macro_f1_mean,N1_precision_mean,N1_recall_mean,N1_f1_mean,REM_f1_mean,macro_f1_std,N1_f1_std,note
+linear,A_CNN_EEG,EEG,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.679093,0.345536,0.327106,0.335491,0.545651,0.008658,0.025447,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_EEG,EEG,1,label100,54,0,NA,NA,NA,4,1;2;3;4,0.754415,0.446354,0.427659,0.433751,0.729745,0.00284,0.014763,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_EEG,EEG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.712796,0.381454,0.388639,0.382409,0.616822,0.008186,0.020934,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_EOG,EOG,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.606477,0.305228,0.241479,0.26096,0.603504,0.005099,0.029523,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_EOG,EOG,1,label100,54,0,NA,NA,NA,4,1;2;3;4,0.693902,0.387547,0.389249,0.38727,0.713178,0.007265,0.015369,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_EOG,EOG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.651552,0.381648,0.286923,0.323158,0.643609,0.009496,0.035662,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_dual_channel,EEG+EOG,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.718309,0.351629,0.403965,0.372395,0.671153,0.009802,0.032599,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_dual_channel,EEG+EOG,1,label100,54,0,NA,NA,NA,5,0;1;2;3;4,0.778826,0.484801,0.502936,0.490387,0.782682,0.004265,0.01268,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_dual_channel,EEG+EOG,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.742046,0.432921,0.374762,0.386188,0.723986,0.003797,0.041447,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_dual_channel,EEG+EOG,1,label50,27,0,NA,NA,NA,5,0;1;2;3;4,0.770978,0.477254,0.475867,0.474729,0.761215,0.003219,0.019244,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_prob_avg,prob_avg,1,label10,5,0,NA,NA,NA,5,0;1;2;3;4,0.677806,0.362169,0.187343,0.243805,0.663,0.007551,0.032256,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_prob_avg,prob_avg,1,label100,54,0,NA,NA,NA,5,0;1;2;3;4,0.766192,0.515418,0.375905,0.43169,0.79882,0.00744,0.028651,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性
+linear,A_CNN_prob_avg,prob_avg,1,label25,14,0,NA,NA,NA,5,0;1;2;3;4,0.727868,0.465454,0.287152,0.350089,0.724202,0.010768,0.043446,std 为训练种子间样本标准差(ddof=1);只有 1 个种子时为 NaN;不含受试者不确定性

@@ -1,0 +1,106 @@
+{"stage": "verify_existing_EEG_pool", "source": "S0"}
+{"stage": "verify_existing_EEG_pool", "source": "S1_aseed0"}
+{"stage": "verify_existing_EEG_pool", "source": "S1_aseed1"}
+{"stage": "verify_existing_EEG_pool", "source": "S1_aseed2"}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold0_lambda0.01", "iterations": 1198, "gradient_inf": 9.622744997779273e-06, "seconds": 40.109923638}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold0_lambda0.001", "iterations": 2112, "gradient_inf": 9.503378904464045e-06, "seconds": 69.20858232}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold0_lambda0.0001", "iterations": 2561, "gradient_inf": 9.874728606627618e-06, "seconds": 83.176040135}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold1_lambda0.01", "iterations": 1347, "gradient_inf": 9.861012652879693e-06, "seconds": 44.32229269000004}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold1_lambda0.001", "iterations": 2187, "gradient_inf": 9.722598949882244e-06, "seconds": 71.998484808}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold1_lambda0.0001", "iterations": 2795, "gradient_inf": 8.864995227314394e-06, "seconds": 92.41574828299997}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold2_lambda0.01", "iterations": 784, "gradient_inf": 9.154033421551619e-06, "seconds": 29.347391039999934}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold2_lambda0.001", "iterations": 1360, "gradient_inf": 8.563880342135987e-06, "seconds": 50.291739603999986}
+{"stage": "fit_converged", "fit": "roster2024_label10_fold2_lambda0.0001", "iterations": 2346, "gradient_inf": 8.948870576548788e-06, "seconds": 88.07431316399993}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold0_lambda0.01", "iterations": 735, "gradient_inf": 9.398057440763751e-06, "seconds": 65.00571412}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold0_lambda0.001", "iterations": 1491, "gradient_inf": 8.997255471550993e-06, "seconds": 136.04481812200004}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold0_lambda0.0001", "iterations": 2759, "gradient_inf": 9.206994103534645e-06, "seconds": 247.3676770389999}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold1_lambda0.01", "iterations": 672, "gradient_inf": 9.909867010823114e-06, "seconds": 65.84808795699996}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold1_lambda0.001", "iterations": 1250, "gradient_inf": 9.976316433863434e-06, "seconds": 121.18821185299998}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold1_lambda0.0001", "iterations": 2259, "gradient_inf": 9.088713859569467e-06, "seconds": 218.1270217570002}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold2_lambda0.01", "iterations": 890, "gradient_inf": 9.241376537223117e-06, "seconds": 81.29851609899993}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold2_lambda0.001", "iterations": 1583, "gradient_inf": 9.10882325108252e-06, "seconds": 145.30572901000005}
+{"stage": "fit_converged", "fit": "roster2024_label25_fold2_lambda0.0001", "iterations": 2665, "gradient_inf": 9.228451722838484e-06, "seconds": 242.09114793699996}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold0_lambda0.01", "iterations": 983, "gradient_inf": 9.840299339844098e-06, "seconds": 44.6397126559998}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold0_lambda0.001", "iterations": 1627, "gradient_inf": 9.840571533765085e-06, "seconds": 74.3734948350002}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold0_lambda0.0001", "iterations": 1966, "gradient_inf": 9.441119402299635e-06, "seconds": 89.97576521499968}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold1_lambda0.01", "iterations": 818, "gradient_inf": 9.159933965945559e-06, "seconds": 29.48073337599999}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold1_lambda0.001", "iterations": 1184, "gradient_inf": 9.784460517537664e-06, "seconds": 43.56316617700031}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold1_lambda0.0001", "iterations": 1979, "gradient_inf": 9.2440305254472e-06, "seconds": 73.33066529999996}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold2_lambda0.01", "iterations": 1069, "gradient_inf": 8.676621425430587e-06, "seconds": 47.64507204000029}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold2_lambda0.001", "iterations": 1720, "gradient_inf": 9.022808545451784e-06, "seconds": 75.24386929899993}
+{"stage": "fit_converged", "fit": "roster4101_label10_fold2_lambda0.0001", "iterations": 2532, "gradient_inf": 9.992558902965204e-06, "seconds": 111.62696293499994}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold0_lambda0.01", "iterations": 703, "gradient_inf": 9.325377525861226e-06, "seconds": 77.2776731240001}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold0_lambda0.001", "iterations": 1355, "gradient_inf": 9.969939125805742e-06, "seconds": 146.68040760299982}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold0_lambda0.0001", "iterations": 2459, "gradient_inf": 8.802859439565211e-06, "seconds": 266.79140027099993}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold1_lambda0.01", "iterations": 742, "gradient_inf": 7.983301489850698e-06, "seconds": 72.57528993999995}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold1_lambda0.001", "iterations": 1057, "gradient_inf": 9.3181275319621e-06, "seconds": 102.72279841699992}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold1_lambda0.0001", "iterations": 2019, "gradient_inf": 9.378779386754017e-06, "seconds": 197.5105999719999}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold2_lambda0.01", "iterations": 962, "gradient_inf": 9.852734138516893e-06, "seconds": 96.5556091149997}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold2_lambda0.001", "iterations": 1186, "gradient_inf": 9.902033358297769e-06, "seconds": 119.41231614699973}
+{"stage": "fit_converged", "fit": "roster4101_label25_fold2_lambda0.0001", "iterations": 2262, "gradient_inf": 8.311655965765896e-06, "seconds": 226.37807065200013}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold0_lambda0.01", "iterations": 1242, "gradient_inf": 8.944184646115712e-06, "seconds": 35.31899706000013}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold0_lambda0.001", "iterations": 1791, "gradient_inf": 8.953395017447216e-06, "seconds": 51.86894400400024}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold0_lambda0.0001", "iterations": 3345, "gradient_inf": 9.482655582625e-06, "seconds": 97.42439614400018}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold1_lambda0.01", "iterations": 876, "gradient_inf": 9.858450120846935e-06, "seconds": 22.718914961000337}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold1_lambda0.001", "iterations": 1848, "gradient_inf": 9.754574850212674e-06, "seconds": 46.525181169999996}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold1_lambda0.0001", "iterations": 2495, "gradient_inf": 9.482625598621621e-06, "seconds": 63.47785986799954}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold2_lambda0.01", "iterations": 917, "gradient_inf": 8.730165940124397e-06, "seconds": 32.15027761300007}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold2_lambda0.001", "iterations": 1481, "gradient_inf": 9.757123897562033e-06, "seconds": 53.23554532600065}
+{"stage": "fit_converged", "fit": "roster4102_label10_fold2_lambda0.0001", "iterations": 2369, "gradient_inf": 9.734169402711367e-06, "seconds": 83.7960579720002}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold0_lambda0.01", "iterations": 1022, "gradient_inf": 6.877694721640752e-06, "seconds": 104.43212638299974}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold0_lambda0.001", "iterations": 1781, "gradient_inf": 9.148568330230345e-06, "seconds": 185.9686446630003}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold0_lambda0.0001", "iterations": 3337, "gradient_inf": 8.98214813296262e-06, "seconds": 345.228750409}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold1_lambda0.01", "iterations": 806, "gradient_inf": 8.905853764404087e-06, "seconds": 71.90766420700038}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold1_lambda0.001", "iterations": 1711, "gradient_inf": 9.736036332433752e-06, "seconds": 147.90094554500047}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold1_lambda0.0001", "iterations": 3080, "gradient_inf": 9.880262607279897e-06, "seconds": 273.44390265900074}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold2_lambda0.01", "iterations": 808, "gradient_inf": 9.054314918435967e-06, "seconds": 83.25384201399993}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold2_lambda0.001", "iterations": 1295, "gradient_inf": 9.943439370050362e-06, "seconds": 129.60365294199983}
+{"stage": "fit_converged", "fit": "roster4102_label25_fold2_lambda0.0001", "iterations": 2511, "gradient_inf": 9.060262150956797e-06, "seconds": 253.20307006799976}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S0_label10_roster2024_v02", "iterations": 1060, "gradient_inf": 8.894379885816494e-06, "seconds": 55.41667625399987}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed0_label10_roster2024_v02", "iterations": 1218, "gradient_inf": 9.093858583330762e-06, "seconds": 62.91746769800011}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed1_label10_roster2024_v02", "iterations": 1299, "gradient_inf": 9.549656276816834e-06, "seconds": 67.05174381799952}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed2_label10_roster2024_v02", "iterations": 913, "gradient_inf": 8.406943369217615e-06, "seconds": 47.40345313800026}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S0_label25_roster2024_v02", "iterations": 1463, "gradient_inf": 9.1455419557502e-06, "seconds": 206.8948330609992}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed0_label25_roster2024_v02", "iterations": 1548, "gradient_inf": 9.406984511378764e-06, "seconds": 217.77954969799976}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed1_label25_roster2024_v02", "iterations": 1166, "gradient_inf": 9.963407781538502e-06, "seconds": 163.35792553800002}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed2_label25_roster2024_v02", "iterations": 1484, "gradient_inf": 9.826502364181762e-06, "seconds": 210.4012465400001}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S0_label10_roster4101_v02", "iterations": 1089, "gradient_inf": 9.088464050409608e-06, "seconds": 70.03057152199926}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed0_label10_roster4101_v02", "iterations": 800, "gradient_inf": 8.740949148672087e-06, "seconds": 52.014544183}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed1_label10_roster4101_v02", "iterations": 782, "gradient_inf": 9.909433617252369e-06, "seconds": 50.964756555999884}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed2_label10_roster4101_v02", "iterations": 790, "gradient_inf": 9.623950519045394e-06, "seconds": 51.193917415000215}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S0_label25_roster4101_v02", "iterations": 1191, "gradient_inf": 9.855505585381987e-06, "seconds": 184.14146200200048}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed0_label25_roster4101_v02", "iterations": 1099, "gradient_inf": 9.05647019105286e-06, "seconds": 171.67987959499987}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed1_label25_roster4101_v02", "iterations": 1122, "gradient_inf": 9.255262972231561e-06, "seconds": 173.2991055149996}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed2_label25_roster4101_v02", "iterations": 1136, "gradient_inf": 9.891107393364212e-06, "seconds": 181.6414811779996}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S0_label10_roster4102_v02", "iterations": 1961, "gradient_inf": 9.921023867575155e-06, "seconds": 91.1021784530003}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed0_label10_roster4102_v02", "iterations": 2102, "gradient_inf": 9.89224554194344e-06, "seconds": 100.04213581499971}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed1_label10_roster4102_v02", "iterations": 2078, "gradient_inf": 9.544753627307078e-06, "seconds": 92.89527042100053}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed2_label10_roster4102_v02", "iterations": 1562, "gradient_inf": 9.811813298501506e-06, "seconds": 74.87860522099982}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S0_label25_roster4102_v02", "iterations": 978, "gradient_inf": 9.978935035211628e-06, "seconds": 149.06357086000025}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed0_label25_roster4102_v02", "iterations": 631, "gradient_inf": 9.161971113097711e-06, "seconds": 92.6418612030011}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed1_label25_roster4102_v02", "iterations": 994, "gradient_inf": 9.514036295376607e-06, "seconds": 146.56146966800043}
+{"stage": "fit_converged", "fit": "CX_EEG_LR_S1_aseed2_label25_roster4102_v02", "iterations": 625, "gradient_inf": 9.660808282721664e-06, "seconds": 93.53506894199927}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S0_label10_roster2024_v02", "macro_f1": 0.6744332709073938, "n1_f1": 0.25011622501162245}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed0_label10_roster2024_v02", "macro_f1": 0.6763601983928431, "n1_f1": 0.2560185185185185}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed1_label10_roster2024_v02", "macro_f1": 0.6761621872300534, "n1_f1": 0.25503355704697983}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed2_label10_roster2024_v02", "macro_f1": 0.6756450230379324, "n1_f1": 0.25463821892393323}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S0_label25_roster2024_v02", "macro_f1": 0.6896414705205873, "n1_f1": 0.30610045268376807}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed0_label25_roster2024_v02", "macro_f1": 0.6913645895316874, "n1_f1": 0.3072939145446698}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed1_label25_roster2024_v02", "macro_f1": 0.6910119309028081, "n1_f1": 0.3102338553958378}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed2_label25_roster2024_v02", "macro_f1": 0.6919968462066981, "n1_f1": 0.31355750696080537}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S0_label10_roster4101_v02", "macro_f1": 0.6992012984696948, "n1_f1": 0.3183888755694078}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed0_label10_roster4101_v02", "macro_f1": 0.6998718975710915, "n1_f1": 0.3229516051748922}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed1_label10_roster4101_v02", "macro_f1": 0.7003376233264507, "n1_f1": 0.32464738226153483}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed2_label10_roster4101_v02", "macro_f1": 0.6996902227618869, "n1_f1": 0.3240785064624222}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S0_label25_roster4101_v02", "macro_f1": 0.7165313083913863, "n1_f1": 0.3527045149754135}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed0_label25_roster4101_v02", "macro_f1": 0.7168781751210516, "n1_f1": 0.35228539576365664}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed1_label25_roster4101_v02", "macro_f1": 0.7173099580464554, "n1_f1": 0.35430611334225787}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed2_label25_roster4101_v02", "macro_f1": 0.7176370364855248, "n1_f1": 0.35527783976790894}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S0_label10_roster4102_v02", "macro_f1": 0.6627220306297762, "n1_f1": 0.27239797150446754}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed0_label10_roster4102_v02", "macro_f1": 0.6639775719500929, "n1_f1": 0.27226890756302524}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed1_label10_roster4102_v02", "macro_f1": 0.6650793078708164, "n1_f1": 0.27115384615384613}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed2_label10_roster4102_v02", "macro_f1": 0.6638481144962631, "n1_f1": 0.27038729853259563}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S0_label25_roster4102_v02", "macro_f1": 0.7096404232691322, "n1_f1": 0.28186813186813187}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed0_label25_roster4102_v02", "macro_f1": 0.710931535780251, "n1_f1": 0.28423349699945444}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed1_label25_roster4102_v02", "macro_f1": 0.7112347843582149, "n1_f1": 0.28485511208310554}
+{"stage": "evaluated_final_model", "run_id": "CX_EEG_LR_S1_aseed2_label25_roster4102_v02", "macro_f1": 0.7116142806231445, "n1_f1": 0.28897959183673466}

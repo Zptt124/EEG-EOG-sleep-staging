@@ -1,0 +1,14 @@
+test_CV_normalization_excludes_inner_holdout_and_ties_use_stronger_L2 (test_eeg_multisubset.EEGMultiSubsetChecks.test_CV_normalization_excludes_inner_holdout_and_ties_use_stronger_L2) ... ok
+test_analytic_softmax_gradient_matches_finite_differences (test_eeg_multisubset.EEGMultiSubsetChecks.test_analytic_softmax_gradient_matches_finite_differences) ... ok
+test_complete_final_matrix_and_bound_runtime_names (test_eeg_multisubset.EEGMultiSubsetChecks.test_complete_final_matrix_and_bound_runtime_names) ... ok
+test_inner_subject_partitions_never_overlap (test_eeg_multisubset.EEGMultiSubsetChecks.test_inner_subject_partitions_never_overlap) ... ok
+test_labeled_positions_cannot_include_development_validation (test_eeg_multisubset.EEGMultiSubsetChecks.test_labeled_positions_cannot_include_development_validation) ... ok
+test_optimizer_converges_and_zero_start_is_reproducible (test_eeg_multisubset.EEGMultiSubsetChecks.test_optimizer_converges_and_zero_start_is_reproducible) ... ok
+test_rosters_preserve_reference_train_only_uniqueness_and_nesting (test_eeg_multisubset.EEGMultiSubsetChecks.test_rosters_preserve_reference_train_only_uniqueness_and_nesting) ... ok
+test_scipy_success_without_gradient_convergence_is_rejected (test_eeg_multisubset.EEGMultiSubsetChecks.test_scipy_success_without_gradient_convergence_is_rejected) ... ok
+test_stable_probabilities_for_extreme_scores (test_eeg_multisubset.EEGMultiSubsetChecks.test_stable_probabilities_for_extreme_scores) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.069s
+
+OK

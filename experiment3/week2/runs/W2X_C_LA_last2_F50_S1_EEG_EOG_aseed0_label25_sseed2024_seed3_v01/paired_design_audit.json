@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "normalization_matches_all20_exactly": true,
+  "nominal_head_parameters": 25605,
+  "layer_group": "last2",
+  "excluded_EEG_coordinates_zero": true,
+  "initial_model_sha256": "dffc012ec701af6e97e7b2aad6f9e031bd4c3d4428a96d0b43325e8201ab15dd",
+  "minibatch_order_sha256": "943f5fa53d9d14a935a930f1aae29e0289351510c3b8d5d1295f7bddcd902ec3",
+  "matches_locked_unweighted_initializer_and_rng_recipe": true,
+  "reference_batch_order_is_recomputed_recipe": true,
+  "selected_epoch": 50,
+  "class_weighting_used": false
+}

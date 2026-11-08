@@ -151,7 +151,7 @@ def registry_row(run_dir, cfg, m):
             "backbone_sha256": na_, "encoder_sha256": (w.sha256_file(cfg["encoder_features"]) if cfg.get("encoder_features")
                                                        and Path(cfg["encoder_features"]).exists() else na_),
             "feature_version": cfg.get("eeg_index_sha256", na_), "sample_set_path": rel(w.VAL_REFERENCE),
-            "sample_set_sha256": m["sample_set_sha256"], "artifact_index_path": na_, "run_storage_uri": rel(run_dir),
+            "sample_set_sha256": m["sample_set_sha256"], "artifact_index_path": "reports/week2/artifact_index.csv", "run_storage_uri": rel(run_dir),
             "reused_from_run_id": na_, "reuse_check_path": na_,
             "evaluation_status": "evaluate_v1_with_reference_passed", "last_successful_step": "predictions_val.csv evaluated",
             "failure_reason": na_}

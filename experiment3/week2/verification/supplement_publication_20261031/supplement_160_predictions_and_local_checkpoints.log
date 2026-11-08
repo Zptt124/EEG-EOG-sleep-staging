@@ -1,0 +1,1 @@
+{"status": "passed", "scope": "160 supplemental predictions, histories, configs and exact source snapshots", "new_unique_runs": 160, "reused_reference_runs_not_counted_as_new": 40, "validation_samples_per_run": 21186, "validation_subjects": 8, "selected_epoch_all_runs": 50, "test_used": false, "external_model_checkpoints_verified": 160, "training_performed": false}

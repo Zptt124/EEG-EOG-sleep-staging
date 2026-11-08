@@ -1,0 +1,1294 @@
+{
+  "status": "passed",
+  "scope": "160 supplemental predictions, histories, configs and exact source snapshots",
+  "new_unique_runs": 160,
+  "reused_reference_runs_not_counted_as_new": 40,
+  "validation_samples_per_run": 21186,
+  "validation_subjects": 8,
+  "selected_epoch_all_runs": 50,
+  "test_used": false,
+  "external_model_checkpoints_verified": 160,
+  "training_performed": false,
+  "checks": [
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label10_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label25_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label25_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed1_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label25_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed2_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label25_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed3_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S0_EEG_EOG_label25_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed4_v01",
+      "experiment": "week2_fixed50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label10_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label10_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label10_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label10_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed1_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed2_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed3_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S0_EEG_EOG_label25_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed0_label25_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed1_label25_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_WCE50_S1_EEG_EOG_aseed2_label25_sseed2024_seed4_v01",
+      "experiment": "week2_weighted50_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S0_EEG_EOG_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last5_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label10_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed0_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed1_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed2_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed3_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S0_EEG_EOG_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed0_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed1_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    },
+    {
+      "run_id": "W2X_C_LA_last2_F50_S1_EEG_EOG_aseed2_label25_sseed2024_seed4_v01",
+      "experiment": "week2_layer_ablation_20261031_v01",
+      "uploaded_artifact_SHA_verified": 10,
+      "selected_epoch": 50,
+      "validation_samples": 21186,
+      "official_metrics_match": true
+    }
+  ]
+}

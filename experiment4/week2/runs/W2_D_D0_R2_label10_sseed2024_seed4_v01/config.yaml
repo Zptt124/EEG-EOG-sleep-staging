@@ -1,0 +1,57 @@
+run_id: W2_D_D0_R2_label10_sseed2024_seed4_v01
+method: D0
+method_description: supervised student head on true labels of labeled subjects only
+representation: 'R2: R2_A_cnn_label10_seed4: A''s EEG-only + EOG-only SmallCNN encoders
+  (128 + 128), eval mode (EEG 128 + EOG 128 = 256, concat)'
+budget: label10
+sampling_seed: '2024'
+seed: 4
+n_labeled_subjects: 5
+n_labeled_samples: 11936
+n_unlabeled_subjects_used: 0
+n_unlabeled_pool_samples: 0
+n_pseudo_labels_used: 0
+labeled_subjects:
+- SC403
+- SC412
+- SC421
+- SC456
+- SC474
+standardization: per-modality mean/std fitted on labeled training samples only
+student_head:
+  type: Linear(256,5)
+  optimizer: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+  labeled_batch: 128
+  max_epochs: 50
+  early_stop: val macro-F1, patience 10
+roles_file: experiment4/week2/manifests/v2/labeled_unlabeled_subjects.csv
+roles_sha256: ef81a35a660946f3f236c9ee6ab6bede546cb7fd0bc9e6a6be2b3a742bc47582
+cache: <D_local_cache>/R2_cnn_label10_seed4_v01
+cache_files_sha256:
+  sample_index.csv: a2214f979168361482eb0f71ec15794b8bb66584313799f49d156f9a947ee867
+  eeg_feat.npy: c9aeb2409bbd643ec88efb7039fc0687c54f887e278cd772a75704c5e7a1cb64
+  eog_feat.npy: f0e98cb4bbaf884760d01402bc84ea4c39c49032939a08b9eff9f87070f4f7a5
+evaluate_path: <B_feat-b-evaluation>/src/evaluation/evaluate.py
+evaluate_version: v1
+code_sha256:
+  aggregate_pseudo_stats.py: 54e06a6b7a9d7ccda30f1ef85a0c0f04f043deb112eb7fc3684f1563f710db6b
+  build_pooled_cache.py: 33e486a34a971662f568da7c7dfbab6d9c466b86e2da544fb52ed2433d417fd4
+  build_r2_cache.py: 2ec64e6c1065fc9750ceee7b25d4e59709ffa0eaeea1c6761c837e2e689439af
+  calibrate_threshold.py: a19ba1efef55c9e5be2d446f8b5311c565940ce1ae06fc56c54185dca4634663
+  calibrate_threshold_r2.py: f40b5180f4165357e115b1364eec25c2f07c4e837fe0ee6cbe991e93ebed8b9a
+  compare_ssl.py: 9a815b4b676e0228fd2947d871b9ef3a8ed79b7d9c4a0609a7df719a530df4df
+  label_guard.py: 34a722da4c6a8bf5812f75714fd4b02c1178fb53cb2cbe78b252d3cdebbae31d
+  make_label_roles.py: 9097e56891dd8e9d145eb889258041f8c5eacecc878218da0f26ee98b77a97d8
+  run_fold_cnns.py: e64004a35565381505cc886018f3fbba393fbfb3b92ac77e42f01f1d89e9c1bd
+  run_ssl.py: 0d77ecc5c4fe42d4f0e16c13e7170fd665db1e369525bdbf75d23a49c9f2d170
+  ssl_common.py: e58971eafbf6c10b202c1dcf203b5e7255187b48961600f4d566df24537705cc
+  threshold_control.py: 53462fbe4c5fa3a04e97c224b957389478b88db261d93fe1f255b2d27b207f13
+env:
+  python: 3.11.17
+  torch: 2.7.1+cu126
+  numpy: 1.26.4
+  device: cpu
+  torch_threads: 4
+  deterministic: true

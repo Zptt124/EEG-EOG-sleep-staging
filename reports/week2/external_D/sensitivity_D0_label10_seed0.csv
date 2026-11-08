@@ -1,0 +1,5 @@
+comparison,metric,original_5seed,without_seed0,d0_seed0_from_B
+D1-D0,macro_f1,0.006178,0.006277,0.003166
+D1-D0,n1_f1,0.027841,0.020458,0.010692
+D2-D0,macro_f1,0.003343,0.002633,0.000332
+D2-D0,n1_f1,0.013422,0.013817,-0.003726
