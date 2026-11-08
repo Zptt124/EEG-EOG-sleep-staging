@@ -105,7 +105,7 @@ def main():
     else:
         cw = ContraWRSleepNet().to(device)
         ckpt = torch.load(cw_dir / "best.ckpt", map_location=device, weights_only=True)
-        cw.load_state_dict(ckpt["state_dict"])
+        cw.load_state_dict(ckpt["state_dict"], strict=False)   # norm 缓冲随后从 JSON 注入
         cw_norm = json.loads((cw_dir / "normalization.json").read_text(encoding="utf-8"))
         means = torch.tensor(cw_norm["bins"]["means"], dtype=torch.float32, device=device)
         stds = torch.tensor(cw_norm["bins"]["stds"], dtype=torch.float32, device=device)

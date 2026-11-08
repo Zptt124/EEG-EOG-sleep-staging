@@ -6,6 +6,7 @@
   - a_w3_main_grid.csv        18 格主矩阵(方法×预算×seed,Macro-F1/N1 F1 等)
   - a_w3_paired_deltas.csv    配对差(ContraWR − CNN,官方 --compare 按人配对 bootstrap)
   - a_w3_eog_contrast.csv     EOG 对照(dual − eeg,label25,seed0-2)
+  - a_w3_n1_rem_errors.csv    N1/REM 错误去向(逐 seed 混淆行占比)
   - by_subject/*.csv          逐人宏F1(每对比较)
   - budget_curves_w3.png      5/14/54 人 Macro-F1 与 N1 F1 曲线(3 seed 均值±seed 散布)
   - run_registry.csv / metrics_summary.csv / resource_profile.csv / paired_comparison.csv
@@ -85,6 +86,12 @@ def per_subject_macro_f1(preds: Path) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def best_epoch_of(run_dir: Path) -> int:
+    """history.csv 中 val_macro_f1 峰值 epoch(1 起)。"""
+    h = pd.read_csv(run_dir / "history.csv")
+    return int(h["val_macro_f1"].values.argmax()) + 1
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--runs-dir", required=True, help="本地 run 根目录(含 W2 复用与 W3 ContraWR)")
@@ -115,7 +122,7 @@ def main():
                 "method": "ContraWR", "modality": "dual", "budget": b,
                 "n_people": BUDGET_PEOPLE[b], "seed": s,
                 "run_id": CONTRAWR_ID(b, s),
-                "best_epoch": yaml.safe_load((cw / "config.yaml").read_text(encoding="utf-8"))["epochs_run"],
+                "best_epoch": best_epoch_of(cw),
                 "macro_f1": mc["macro_f1"], "n1_f1": mc["n1_f1"],
                 "n1_precision": mc["n1_precision"], "n1_recall": mc["n1_recall"],
                 "f1_W": mc["per_class_f1"]["W"], "f1_N2": mc["per_class_f1"]["N2"],
@@ -126,7 +133,7 @@ def main():
                 "method": "CNN(复用W2)", "modality": "dual", "budget": b,
                 "n_people": BUDGET_PEOPLE[b], "seed": s,
                 "run_id": CNN_DUAL_ID(b, s),
-                "best_epoch": yaml.safe_load((cn / "config.yaml").read_text(encoding="utf-8"))["epochs_run"],
+                "best_epoch": best_epoch_of(cn),
                 "macro_f1": mn["macro_f1"], "n1_f1": mn["n1_f1"],
                 "n1_precision": mn["n1_precision"], "n1_recall": mn["n1_recall"],
                 "f1_W": mn["per_class_f1"]["W"], "f1_N2": mn["per_class_f1"]["N2"],
@@ -219,6 +226,36 @@ def main():
         })
         tmp.unlink(missing_ok=True)
 
+    # ---------------- N1/REM 错误去向(EOG 对照与主矩阵配对) ----------------
+    err_rows = []
+
+    def error_row(cid, side, seed, preds: Path):
+        df = pd.read_csv(preds)
+        cm = np.zeros((5, 5), dtype=np.int64)
+        np.add.at(cm, (df["y_true"].values.astype(int), df["y_pred"].values.astype(int)), 1)
+        for stage, idx in (("N1", 1), ("REM", 4)):
+            row = cm[idx].astype(float)
+            support = row.sum()
+            err_rows.append({
+                "comparison_id": cid, "side": side, "seed": seed, "stage": stage,
+                "support": int(support),
+                "to_W": round(row[0] / support, 4) if support else "",
+                "to_N1": round(row[1] / support, 4) if support else "",
+                "to_N2": round(row[2] / support, 4) if support else "",
+                "to_N3": round(row[3] / support, 4) if support else "",
+                "to_REM": round(row[4] / support, 4) if support else "",
+            })
+
+    for b in BUDGETS:
+        for s in SEEDS:
+            cid = f"W3_CONTRAWR_dual_minus_CNN_dual_{b}_seed{s}"
+            error_row(cid, "ContraWR", s, runs / CONTRAWR_ID(b, s) / "predictions_val.csv")
+            error_row(cid, "CNN(复用W2)", s, runs / CNN_DUAL_ID(b, s) / "predictions_val.csv")
+    for s in SEEDS:
+        cid = f"W3_EOG_dual_minus_eeg_label25_seed{s}"
+        error_row(cid, "dual", s, runs / CNN_DUAL_ID("label25", s) / "predictions_val.csv")
+        error_row(cid, "eeg", s, runs / CNN_EEG_ID("label25", s) / "predictions_val.csv")
+
     # ---------------- 曲线 ----------------
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.6))
     people = [BUDGET_PEOPLE[b] for b in BUDGETS]
@@ -309,7 +346,7 @@ def main():
                     "adaptation_version": "NA", "adaptation_seed": "NA",
                     "teacher_id": "NA",
                     "downstream_seed": cfg["downstream_seed"],
-                    "best_epoch": cfg.get("epochs_run", ""),
+                    "best_epoch": best_epoch_of(d),
                     "macro_f1": m["macro_f1"],
                     "W_f1": m["per_class_f1"]["W"],
                     "N1_precision": m["n1_precision"], "N1_recall": m["n1_recall"],
@@ -358,6 +395,7 @@ def main():
     write_csv("a_w3_main_grid.csv", grid_rows)
     write_csv("a_w3_paired_deltas.csv", paired_rows)
     write_csv("a_w3_eog_contrast.csv", eog_rows)
+    write_csv("a_w3_n1_rem_errors.csv", err_rows)
     write_csv("run_registry.csv", reg_rows)
     write_csv("metrics_summary.csv", ms_rows)
     write_csv("resource_profile.csv", rp_rows)

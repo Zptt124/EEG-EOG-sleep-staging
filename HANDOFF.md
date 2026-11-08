@@ -1,5 +1,15 @@
 # 阶段交接登记
 
+**2026-11-08 A第三周交付:** 实验A 基线比较完成(分支 feat/a-week3-baselines,待 PR)。
+交付物:基线选择与核查 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
+W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)(12/12 通过);
+9 个 ContraWR run + 18 格主矩阵/配对差/EOG 对照/错误去向/曲线/资源表见
+[reports/week3/a_w3_results.md](reports/week3/a_w3_results.md);
+9 个新 run 六件套在本地 exp1/runs,Release 待发布。
+A → B:登记表 reports/week3/{run_registry,metrics_summary,resource_profile,paired_comparison}.csv
+与逐段预测(新 run 六件套内),请 B 按 sample_id 核对覆盖并汇总;第三周四档曲线 CNN
+部分含 5/14/54 三档(27 人 label50 沿用 W2)。
+
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
 
 **2026-10-31 C第二周交付：** [实验③结果与复评入口](experiment3/week2/README.md)已备妥3轮适配、80份验证预测、配置/历史/指标及N1分析；10%双模态平均退步、25%基本持平，未证明稳定适配收益。B已发布v2名单核验和80份预测复评；D共同EOG来源认可及实际接收验收仍待补；测试集封存。第一周C材料保留在[原目录](experiment3/README.md)。

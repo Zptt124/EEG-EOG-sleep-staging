@@ -14,6 +14,7 @@
 | [a_w3_main_grid.csv](a_w3_main_grid.csv) | 18 格主矩阵:方法×预算(5/14/54人)×seed(0-2),Macro-F1/N1 F1/各类 F1/N1 P/R |
 | [a_w3_paired_deltas.csv](a_w3_paired_deltas.csv) | 配对差 ContraWR − CNN(逐 seed + 按人配对 CI) |
 | [a_w3_eog_contrast.csv](a_w3_eog_contrast.csv) | EOG 对照 dual − eeg(label25,seed0-2) |
+| [a_w3_n1_rem_errors.csv](a_w3_n1_rem_errors.csv) | N1/REM 错误去向(逐 seed 混淆行占比,主矩阵与 EOG 对照两侧) |
 | [by_subject/](by_subject/) | 每个比较的逐人 Macro-F1 与差值 |
 | [budget_curves_w3.png](budget_curves_w3.png) | 5/14/54 人 Macro-F1 与 N1 F1 曲线(3 seed 均值,竖线=seed 范围) |
 | [run_registry.csv](run_registry.csv) | 9 个 W3 ContraWR run(completed)+ 12 个复用 W2 run(reused);列同 reports/week2/run_registry.csv |
