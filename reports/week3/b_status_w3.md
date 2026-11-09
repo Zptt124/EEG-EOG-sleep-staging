@@ -33,6 +33,7 @@ std 一组因此按新协议重跑，第二周结果只作对照。两者的配�
 | C 复评 | 32 份预测完成 | 见下文 |
 | B → D 探针交接 | 探针脚本已支持任意特征维度与 `--group D` | [b_probe_for_D.md](b_probe_for_D.md) |
 | D 复评 | 待 D 交付 | |
+| run 文件夹发布 | 14 个 run（逐段预测、配置、内层曲线、留出预测、权重）打包为 Release [`b-week3-runs-v01-20261110`](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-week3-runs-v01-20261110)，`w3_b_runs_v01.zip` SHA256 `c7582e7a…b79d`；解压到 `runs/` 后可用统一评估复评 | |
 | 补齐脚本 | 2026-11-10 已运行 `scripts/30_b_w3_finish.py`（下载自 Release `c-b-w3-pooled-features-20261109`，本地 `features/b_w3_v01/release/`） | |
 
 ## B 的结论（训练侧选模，EEG+EOG，官方 checkpoint、cond14、20 层）
