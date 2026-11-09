@@ -43,9 +43,9 @@ BUDGET_PEOPLE = {"label10": 5, "label25": 14, "label100": 54}
 SEEDS = [0, 1, 2]
 STAGE_NAMES = ["W", "N1", "N2", "N3", "REM"]
 
-CONTRAWR_ID = lambda b, s: f"W3_A_CONTRAWR_{b}_sseed2024_seed{s}_v01"
-CNN_DUAL_ID = lambda b, s: f"W2_A_EEGEOG_{b}_sseed2024_seed{s}_v01"
-CNN_EEG_ID = lambda b, s: f"W2_A_EEG_{b}_sseed2024_seed{s}_v01"
+CONTRAWR_ID = lambda b, s: f"W3_A_CONTRAWR_{b}_sseed2024_seed{s}_v02"
+CNN_DUAL_ID = lambda b, s: f"W3_A_EEGEOG_{b}_sseed2024_seed{s}_v01"
+CNN_EEG_ID = lambda b, s: f"W3_A_EEG_{b}_sseed2024_seed{s}_v01"
 
 
 def sha256_file(p: Path) -> str:
@@ -87,9 +87,9 @@ def per_subject_macro_f1(preds: Path) -> pd.DataFrame:
 
 
 def best_epoch_of(run_dir: Path) -> int:
-    """history.csv 中 val_macro_f1 峰值 epoch(1 起)。"""
-    h = pd.read_csv(run_dir / "history.csv")
-    return int(h["val_macro_f1"].values.argmax()) + 1
+    """最终模型轮数 E*(训练侧选轮;config.yaml selected_epoch)。"""
+    cfg = yaml.safe_load((run_dir / "config.yaml").read_text(encoding="utf-8"))
+    return int(cfg["selected_epoch"])
 
 
 def main():
@@ -130,7 +130,7 @@ def main():
                 "accuracy": mc["accuracy"],
             })
             grid_rows.append({
-                "method": "CNN(复用W2)", "modality": "dual", "budget": b,
+                "method": "CNN(W3 训练侧选轮)", "modality": "dual", "budget": b,
                 "n_people": BUDGET_PEOPLE[b], "seed": s,
                 "run_id": CNN_DUAL_ID(b, s),
                 "best_epoch": best_epoch_of(cn),
@@ -250,7 +250,7 @@ def main():
         for s in SEEDS:
             cid = f"W3_CONTRAWR_dual_minus_CNN_dual_{b}_seed{s}"
             error_row(cid, "ContraWR", s, runs / CONTRAWR_ID(b, s) / "predictions_val.csv")
-            error_row(cid, "CNN(复用W2)", s, runs / CNN_DUAL_ID(b, s) / "predictions_val.csv")
+            error_row(cid, "CNN(W3 训练侧选轮)", s, runs / CNN_DUAL_ID(b, s) / "predictions_val.csv")
     for s in SEEDS:
         cid = f"W3_EOG_dual_minus_eeg_label25_seed{s}"
         error_row(cid, "dual", s, runs / CNN_DUAL_ID("label25", s) / "predictions_val.csv")
@@ -294,10 +294,10 @@ def main():
     rp_rows = []
     for b in BUDGETS:
         for s in SEEDS:
-            for rid, rep, kind in ((CONTRAWR_ID(b, s), "ContraWR STFT CNN (W3 external baseline)", "trained"),
-                                   (CNN_DUAL_ID(b, s), "fair supervised SmallCNN", "reused"),
-                                   (CNN_EEG_ID(b, s) if b == "label25" else None,
-                                    "fair supervised SmallCNN", "reused")):
+            for rid, rep in ((CONTRAWR_ID(b, s), "ContraWR STFT CNN (W3 external baseline)"),
+                             (CNN_DUAL_ID(b, s), "fair supervised SmallCNN"),
+                             (CNN_EEG_ID(b, s) if b == "label25" else None,
+                              "fair supervised SmallCNN")):
                 if rid is None:
                     continue
                 d = runs / rid
@@ -307,8 +307,8 @@ def main():
                 pred_p = d / "predictions_val.csv"
                 reg_rows.append({
                     "run_id": rid, "owner": "A",
-                    "status": "completed" if kind == "trained" else "reused",
-                    "experiment": "W3_E1" if kind == "trained" else "W2_E1",
+                    "status": "completed",
+                    "experiment": "W3_E1",
                     "representation": rep,
                     "modalities": "dual" if "EEGEOG" in rid or "CONTRAWR" in rid else "eeg",
                     "context_length": 1,
@@ -329,10 +329,10 @@ def main():
                     "sample_set_sha256": m["sample_set_sha256"],
                     "artifact_index_path": "",
                     "run_storage_uri": "",
-                    "reused_from_run_id": "" if kind == "trained" else rid,
-                    "reuse_check_path": "" if kind == "trained" else "reports/week3/a_w3_reuse_check.md",
+                    "reused_from_run_id": "",
+                    "reuse_check_path": "",
                     "evaluation_status": "official_v1_with_reference",
-                    "last_successful_step": "six-piece set + official metrics + val predictions",
+                    "last_successful_step": "six-piece set + inner CV + official metrics + val predictions",
                     "failure_reason": "",
                 })
                 ms_rows.append({
@@ -371,15 +371,15 @@ def main():
                     "precision": res["precision"],
                     "determinism_settings": res["determinism"],
                     "trainable_parameters": res["trainable_parameters"],
-                    "actual_updates": res["actual_updates"],
-                    "actual_epochs": res["actual_epochs"],
+                    "actual_updates": res["fold_updates"] + res["final_updates"],
+                    "actual_epochs": 5 * cfg.get("fold_scan_epochs", 60) + res["selected_epoch"],
                     "elapsed_seconds": res["elapsed_seconds"],
                     "peak_memory_mib": res["peak_memory_mib"],
-                    "examples_per_second": res.get("inference_val_epochs_per_second", ""),
+                    "examples_per_second": "",
                     "labeled_examples": res["labeled_examples"],
                     "pseudo_candidates": "", "pseudo_accepted": "",
                     "pseudo_training_examples": "",
-                    "notes": "W2 复用" if kind == "reused" else "ContraWR 监督,W3",
+                    "notes": f"训练侧选轮 E*={res['selected_epoch']}",
                 })
 
     def write_csv(name, rows, fieldnames=None):
