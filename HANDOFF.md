@@ -14,8 +14,10 @@
 **2026-11-09 B第三周进展与选模口径提醒：** 详见 [reports/week3/b_status_w3.md](reports/week3/b_status_w3.md)。
 B 的线性读出改为训练侧选模（预算内按受试者内层交叉验证选轮次，开发集只评估一次，`scripts/27_b_w3_linear_probe.py`）。
 按此重跑的 std 6 格与第二周开发集早停相比：5 人预算 Macro-F1 −0.032、N1 F1 −0.120，14 人 −0.004 / −0.027，开发集早停结果偏乐观。
-A 第三周 21 份预测已由 B 复评，sample_id 覆盖与 18 格均值逐位一致；但 A 的 CNN/ContraWR 仍按开发集 Macro-F1 早停，
-B 与 A 的 5 人比较结论随选模口径翻转，需全组统一口径后再做跨组比较。C 的 C0/C1 与 D 的探针建议直接使用训练侧选模。
+A 已按同一协议重训 21 格（PR #17，Release `a-w3-baselines-v02-20261109`），v01 开发集早停结果废止。
+B 已复评 A v02 的 21 份与 C 的 32 份去重预测，sample_id 覆盖与各自报告的均值一致，结论见 b_status_w3.md。
+D 的配对探针请用 B 的探针脚本，用法见 [reports/week3/b_probe_for_D.md](reports/week3/b_probe_for_D.md)。
+C 的 6 个特征 NPZ 到位后，B 用 `scripts/30_b_w3_finish.py` 校验 SHA256 并补齐 mean 与 t=10/25。
 **2026-11-09 C 第三周交付。** [已完成的固定 20 轮实验](experiment3/week3/README.md)包含 18 组配对、36 份逐段预测和复评入口。C 已完成 B 要求的 std 核验、mean pooling 与 t=10/25 六组特征。[交付索引与 SHA256](experiment3/week3/deliveries/B_week3_features/README.md)已入库，完整 NPZ 由 C 保管。
 
 **2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查
