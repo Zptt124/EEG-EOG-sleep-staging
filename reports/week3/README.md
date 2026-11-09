@@ -38,12 +38,15 @@
 | --- | --- |
 | [b_status_w3.md](b_status_w3.md) | 进度、选模协议变更、std 结果、N1 分数调整、A 交付复评与选模口径提醒 |
 | [b_w3_extraction.md](b_w3_extraction.md) | mean pooling 与 t 扫描特征提取说明(C 在 CUDA 机器上运行) |
+| [b_probe_for_D.md](b_probe_for_D.md) | B → D 线性探针与统一评分入口用法 |
 | [b_eval_registry_w3.csv](b_eval_registry_w3.csv) | 统一评估登记(B 自动登记 + 下列外部登记) |
-| [b_a_w3_registry.csv](b_a_w3_registry.csv) | A 的 21 份预测登记;ContraWR 预测来自 Release `a-contrawr-w3-v01-20261108`,解压到本地 `features/a_w3_v01/extracted/` |
+| [b_a_w3_registry.csv](b_a_w3_registry.csv) | A v02(训练侧选轮)21 份预测登记;来自 Release `a-w3-baselines-v02-20261109`,解压到本地 `features/a_w3_v02/extracted/` |
+| [b_a_w3_v01devsel_registry.csv](b_a_w3_v01devsel_registry.csv) | A v01(开发集早停,已废止)21 份预测登记,仅作对照;ContraWR 来自 Release `a-contrawr-w3-v01-20261108` |
+| [b_c_w3_registry.csv](b_c_w3_registry.csv) | C 第三周 32 份去重预测登记,路径指向 `experiment3/week3/` |
 | [b_w2_devselected_registry.csv](b_w2_devselected_registry.csv) | 第二周按开发集选模的 std 线性头(对照用) |
 | [b_w3_metrics.csv](b_w3_metrics.csv) | 每个 run:Macro-F1、各阶段 F1、N1 P/R/F1、N1 AP/AUROC、N1 去向与来源 |
 | [b_w3_summary.csv](b_w3_summary.csv) | group×arm×budget 的 seed 数与均值/最小/最大 |
 | [b_w3_paired.csv](b_w3_paired.csv) / [b_w3_paired_by_subject.csv](b_w3_paired_by_subject.csv) | 配对差(seed 合并、按受试者 bootstrap)与逐人差 |
 | [b_n1_adjust_summary.csv](b_n1_adjust_summary.csv) / [b_n1_adjust_by_subject.csv](b_n1_adjust_by_subject.csv) | N1 分数调整对照(14 人,seed 0) |
 
-脚本:`scripts/26_b_extract_eegdm_w3.py`(提取)、`27_b_w3_linear_probe.py`(线性探针)、`28_b_n1_score_adjust.py`(N1 分数调整)、`29_b_w3_evaluate.py`(统一评估)。B 的 run 为 `W3_B_<arm>_<budget>_sseed2024_seed<N>_v01`,arm 如 `std_t1`、`mean_t1`、`std_t10`。
+脚本:`scripts/26_b_extract_eegdm_w3.py`(提取)、`27_b_w3_linear_probe.py`(线性探针)、`28_b_n1_score_adjust.py`(N1 分数调整)、`29_b_w3_evaluate.py`(统一评估)、`30_b_w3_finish.py`(C 的 NPZ 到位后一次补齐并复评)。B 的 run 为 `W3_B_<arm>_<budget>_sseed2024_seed<N>_v01`,arm 如 `std_t1`、`mean_t1`、`std_t10`。

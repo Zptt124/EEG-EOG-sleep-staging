@@ -1,4 +1,6 @@
-"""Step W3-B2: 冻结 EEGDM 双模态池化特征的线性探针(第三周协议:选轮次只用训练侧)。
+"""Step W3-B2: 冻结表征双模态池化特征的线性探针(第三周协议:选轮次只用训练侧)。
+
+每模态维度不限(EEGDM 为 2560;D 的小 backbone 可不同),EEG/EOG 按 sample_id 对齐后拼接。
 
 与第二周 12_eegdm_budget_head.py 同一配方(标准化 → Linear(5120,5),AdamW lr=1e-3 wd=1e-4,batch 128),
 区别在选模:第二周按开发集 Macro-F1 早停;第三周开发集只用于最终评估一次。
@@ -63,6 +65,19 @@ def train_head(x_tr, y_tr, seed, epochs, x_eval=None):
     return model, per_epoch, updates
 
 
+def load_pair(eeg_src, eog_src, chosen, eeg_index, eog_index):
+    """同 w.load_eegdm_pair(pooled=True),但不限定每模态 2560 维(D 的小 backbone 维度不同)。"""
+    eeg_rows, eog_rows = w.align_modalities(w.read_csv_rows(eeg_index), w.read_csv_rows(eog_index))
+    train, val = w.select_rows(eeg_rows, chosen)
+    eog_by_id = {r["sample_id"]: r for r in eog_rows}
+    out = []
+    for rows in (train, val):
+        xe = w.load_encoder_features(eeg_src, rows)
+        xo = w.load_encoder_features(eog_src, [eog_by_id[r["sample_id"]] for r in rows])
+        out.append(np.concatenate([xe, xo], axis=1))
+    return train, val, out[0], out[1], (xe.shape[1], xo.shape[1])
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("--arm", required=True, help="条件标签,如 std_t1、mean_t1、std_t10;写入 run_id")
@@ -74,16 +89,16 @@ def main(argv=None):
     ap.add_argument("--subsets", default=str(SPLIT / "label_subsets_v2.csv"))
     ap.add_argument("--seed", type=int, required=True)
     ap.add_argument("--runs-root", default=str(RUNS))
+    ap.add_argument("--group", default="B", help="写入 run_id 的组别,如 D 用自己的特征时填 D")
     args = ap.parse_args(argv)
 
     chosen, meta = w.selected_subjects(args.subsets, args.budget)
     if {meta[s]["sampling_seed"] for s in chosen} != {"2024"}:
         sys.exit("错误: 名单 sampling_seed 应为 2024")
-    run_id = f"W3_B_{args.arm}_{args.budget}_sseed2024_seed{args.seed}_{CODE_VERSION}"
+    run_id = f"W3_{args.group}_{args.arm}_{args.budget}_sseed2024_seed{args.seed}_{CODE_VERSION}"
     run_dir = w.make_run_dir(run_id, args.runs_root)
     eog_index = args.eog_index or args.eeg_index
-    train, val, x_tr, x_va = w.load_eegdm_pair(args.eeg_pooled, args.eog_pooled, chosen,
-                                               args.eeg_index, eog_index, pooled=True)
+    train, val, x_tr, x_va, dims = load_pair(args.eeg_pooled, args.eog_pooled, chosen, args.eeg_index, eog_index)
     y_tr = np.array([int(r["y_true"]) for r in train])
     subj = np.array([r["subject_id"] for r in train])
     torch.set_num_threads(4)
@@ -127,10 +142,10 @@ def main(argv=None):
     np.savez(run_dir / "normalization.npz", mean=mean, std=std)
     pd.DataFrame({"subject_id": chosen}).to_csv(run_dir / "labeled_subjects.csv", index=False)
 
-    config = dict(experiment="W3 实验B 线性读出(冻结 EEGDM,EEG+EOG)", arm=args.arm, run_id=run_id,
+    config = dict(experiment="W3 实验B 线性读出(冻结表征,EEG+EOG)", group=args.group, arm=args.arm, run_id=run_id,
                   nominal_budget=args.budget, labeled_subjects=len(chosen), sampling_seed=2024, downstream_seed=args.seed,
                   subset_sha256=w.sha256_file(args.subsets), train_samples=len(y_tr), val_samples=len(val),
-                  head="Linear(5120,5)", optimizer="AdamW lr=1e-3 wd=1e-4", batch_size=128,
+                  feature_dims=dict(eeg=dims[0], eog=dims[1]), head=f"Linear({sum(dims)},5)", optimizer="AdamW lr=1e-3 wd=1e-4", batch_size=128,
                   standardization="fit on training-side subjects only (fold-train in inner CV, all budget subjects for final)",
                   selection=f"inner subject-wise CV on budget subjects, K={len(folds)}, fold_seed={FOLD_SEED}, "
                             f"fixed {MAX_EPOCHS} epochs per fold, epoch = argmax pooled OOF macro-F1 (ties -> earliest)",
