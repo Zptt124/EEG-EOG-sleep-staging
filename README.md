@@ -8,8 +8,7 @@
 
 A 比较睡眠分期基线、标签效率与 EEG/EOG 输入。B 检验 pooling、diffusion step 与 N1 判别表现。C 比较相同特征下的 linear head 与 LFT。D 在 Sleep-EDF 训练池上开展从零扩散预训练 pilot。四项实验沿用按人划分，核心比较使用 14 位有标签受试者，16 位测试受试者继续封存。
 
-**2026-11-08 A第三周交付(PR #15):** 实验A基线比较完成——选定 ContraWR(上游重实现,许可核查在案)为主比较基线,SleepTransformer 完成协议与实现核查(TF1不可运行,L=21上下文冲突);18 格主矩阵(5/14/54人 × CNN/ContraWR × seed0-2)完成,CNN 侧 9 格复用 W2 且 12/12 逐项核查通过;14 人 EOG 对照 6 格复用;结果与配对 CI 见 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md)。9 个 ContraWR run 六件套已发布 Release [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)。
-
+**2026-11-09 A第三周交付 v02(PR 待开):** 实验A基线比较完成并按第三周选模协议(训练侧按人 5 折留出选轮,开发集只最终评估一次)全部重训——选定 ContraWR(上游重实现,许可核查在案)为主比较基线,SleepTransformer 完成协议与实现核查(TF1不可运行,L=21上下文冲突);21 个 run(ContraWR v02 + CNN dual + CNN EEG-only)六件套已发布 Release [a-w3-baselines-v02-20261109](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-w3-baselines-v02-20261109);训练侧选轮下 ContraWR 三档 Macro-F1 均不低于 CNN(14 人档 N1 F1 明显更高,配对 CI 不含 0),CNN 低预算种子不稳;结果与配对 CI 见 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md)。旧口径(开发集早停)Release 与 W2 复用已废止。
 **2026-11-02 C追加两项验证已完成：** [EEG-only多名单与按受试者留出：报告、完整预测和模型下载](experiment3/week2/ADDITIONAL_VALIDATION.md)。前者固定8人上平均+0.136pp，后者按折重训9个主干后平均−0.042pp，尚未确认稳定跨人适配收益；新增96份最终预测、216次内层拟合，全部本地审计通过。新结果独立于原W2全组登记，等待B独立复评；测试集封存。
 
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。
