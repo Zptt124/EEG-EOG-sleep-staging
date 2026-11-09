@@ -1,0 +1,20 @@
+{
+  "budget": "label10",
+  "labeled_subjects": 5,
+  "pooling": "std",
+  "diffusion_t": 1,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "completed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "test_used": false,
+  "train_samples": 11936,
+  "dev_samples": 21186,
+  "stage": "complete"
+}

@@ -1,0 +1,22 @@
+{
+  "EEG": {
+    "shape": [
+      4,
+      20,
+      30,
+      128
+    ],
+    "record_id": "SC4031",
+    "historical_std_max_abs": 0.0
+  },
+  "EOG": {
+    "shape": [
+      4,
+      20,
+      30,
+      128
+    ],
+    "record_id": "SC4031",
+    "historical_std_max_abs": 0.0
+  }
+}

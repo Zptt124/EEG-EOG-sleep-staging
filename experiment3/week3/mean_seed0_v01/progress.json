@@ -1,0 +1,9 @@
+{
+  "seed": 0,
+  "pooling": "mean",
+  "test_used": false,
+  "records": 43,
+  "train_samples": 32310,
+  "dev_samples": 21186,
+  "stage": "complete"
+}

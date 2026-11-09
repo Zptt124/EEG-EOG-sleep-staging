@@ -1,0 +1,11 @@
+{
+  "seed": 0,
+  "pooling": "std",
+  "diffusion_t": 3,
+  "random_noise": false,
+  "test_used": false,
+  "records": 43,
+  "train_samples": 32310,
+  "dev_samples": 21186,
+  "stage": "complete"
+}

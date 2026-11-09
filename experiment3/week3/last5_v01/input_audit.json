@@ -1,0 +1,106 @@
+{
+  "samples": 154124,
+  "records": 122,
+  "split_counts": {
+    "train": 132938,
+    "val": 21186
+  },
+  "split_subject_counts": {
+    "train": 54,
+    "test": 16,
+    "val": 8
+  },
+  "labeled_subjects": [
+    "SC403",
+    "SC410",
+    "SC412",
+    "SC415",
+    "SC417",
+    "SC419",
+    "SC421",
+    "SC427",
+    "SC429",
+    "SC436",
+    "SC451",
+    "SC455",
+    "SC456",
+    "SC474"
+  ],
+  "labeled_epochs": 32310,
+  "dev_epochs": 21186,
+  "feature_protocol": {
+    "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969",
+    "checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+    "condition": 14,
+    "diffusion_t": 1,
+    "random_noise": false,
+    "query": "gate",
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "reduction": "std, torch correction=1",
+    "axes": [
+      "sample",
+      "layer",
+      "time_window",
+      "hidden"
+    ],
+    "feature_shape": [
+      20,
+      30,
+      128
+    ],
+    "storage_dtype": "float16",
+    "internal_segments": 6,
+    "continuous_30s_context": false,
+    "target_fs": 200,
+    "window_points": 200,
+    "stride_points": 200
+  },
+  "modality_order": [
+    "EEG",
+    "EOG"
+  ],
+  "test_used": false,
+  "eog_provenance": "local regeneration under prior D reference protocol",
+  "input_sha256": {
+    "vendor/experiment1-review/manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+    "manifests/week2_c_adaptation_v01/label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+    "vendor/experiment2-review-6e7df99/src/evaluation/evaluate.py": "4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605",
+    "vendor/EEGDM/model/classifier.py": "47648c097f24bcf5b1c6bc1022bf086dfc655fe1b75ff0b82a111a4c66f6b2bd",
+    "scripts/run_week3_c_readout.py": "50448e052f808e119f5b96082785290b7152fcbe9e6c969fba859add5c08f843",
+    "configs/week3_c_readout.json": "56fd133f6be96fc7ef5f901ec10f5890b80f9766bf9416aedd2f5db9602d92f2",
+    "features/eeg_cond14_v01/feature_index.csv": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+    "features/eeg_cond14_v01/feature_config.json": "d2e3e70d71945e0a6ca673f800508f56a885588954876626d47fcfed691411a0",
+    "features/eog_cond14_local_Dprotocol_v01/feature_index.csv": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+    "features/eog_cond14_local_Dprotocol_v01/feature_config.json": "e95b12224ef751a39226ef8998521fcd3f20bd51eb1c0c5509a3d272aa2de48a"
+  },
+  "development_reference_sha256": "0f71748d782e400a2c0c398db0d66b60fe81b59dfc7e32d439dc350e4adb66e2",
+  "layers_used": [
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "variant_runner_sha256": "a16ea2d24c5b5cf3ee2d60a23dcc1df16f586f2970b9ede047acf081fd141004"
+}

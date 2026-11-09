@@ -6,3 +6,6 @@
 
 # Archived W2 locks and SHA receipts bind exact bytes.
 /experiment3/week2/** -text
+
+# Archived W3 predictions and provenance receipts bind exact bytes.
+/experiment3/week3/** -text

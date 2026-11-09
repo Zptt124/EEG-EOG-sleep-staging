@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "records": 43,
+  "samples": 53496,
+  "subjects": [
+    "SC403",
+    "SC406",
+    "SC409",
+    "SC410",
+    "SC412",
+    "SC415",
+    "SC417",
+    "SC419",
+    "SC421",
+    "SC427",
+    "SC429",
+    "SC436",
+    "SC442",
+    "SC448",
+    "SC451",
+    "SC455",
+    "SC456",
+    "SC462",
+    "SC471",
+    "SC474",
+    "SC475",
+    "SC480"
+  ],
+  "test_used": false,
+  "split_counts": {
+    "train": 32310,
+    "val": 21186
+  },
+  "total_seconds": 1628.415287589999,
+  "npz": "EEG_std_t25_cond14_label25_pooled_53496x2560_unstandardized.npz",
+  "reference_check": null
+}

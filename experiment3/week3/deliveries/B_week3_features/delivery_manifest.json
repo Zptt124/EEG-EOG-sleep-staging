@@ -1,0 +1,92 @@
+{
+  "revision": "8d218342c6ad6c8afa649824c1a18ccd189f9d07",
+  "scope": {
+    "records": 43,
+    "train": 32310,
+    "dev": 21186
+  },
+  "test_used": false,
+  "checkpoint_timestep_fields": [],
+  "official_scheduler_timesteps": 50,
+  "official_scheduler_config_sha256": "92e200653a4e2f717fcf8462918910c05353b58f1bfa141fb2d3debc69b16a17",
+  "bundles": {
+    "eeg_mean_t1_cond14_label25": {
+      "sha256": {
+        "EEG_mean_t1_cond14_label25_pooled_53496x2560_unstandardized.npz": "99449ed26afe0c10a9561c12953704b8e4c1c59f76f29ab7e1baf395ccb9cd37",
+        "sample_index.csv": "bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017",
+        "feature_config.json": "e9d9573a9fbddf9eb784a3e16998d5fd61ccf50121e253b2c5808392808fb813",
+        "resource_profile.csv": "3ae87e145fa9f7b42be521819a810fe0d52c154fa40da68fb43bec80ef21e134",
+        "summary.json": "16d7c4180541abfd195d1372651e572467e38777cf1bc99824f8512c1a0ecaa0",
+        "SHA256SUMS.txt": "b12867cbbaf1d4a4df0a5209f51a18a286c14dcd99ba978ffa214ab32db90f00"
+      },
+      "mean_cache_reuse": {
+        "source": "<workspace>/experiment3/reports/week3_c_readout_20261107/mean_seed0_v01/features/eeg",
+        "replay_record": "SC4031",
+        "replay_samples": 4,
+        "replay_max_abs_diff": 0,
+        "full_cache": "hardlinked to the original mean arrays"
+      }
+    },
+    "eog_mean_t1_cond14_label25": {
+      "sha256": {
+        "EOG_mean_t1_cond14_label25_pooled_53496x2560_unstandardized.npz": "c1cd738e4a0d0f5650334ce3903b89eaded71552d35188bed86bb239bfce70b2",
+        "sample_index.csv": "bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017",
+        "feature_config.json": "085ec68b5448f99cd72435ca73e6358226a197a32bea298293bf171fb6973ea5",
+        "resource_profile.csv": "df6dbdbdbf9dc31612a34ed0e80a237547a475e0bfaa5840bf0b68a167dc4834",
+        "summary.json": "b0916b4963631e26e0447cc8d4668a6335f6b457fccbd30d848e1d99fff4fd69",
+        "SHA256SUMS.txt": "522afef889b25d93a23be38d27ab1e5ca66e4adc27d9a3d484147314cc382769"
+      },
+      "mean_cache_reuse": {
+        "source": "<workspace>/experiment3/reports/week3_c_readout_20261107/mean_seed0_v01/features/eog",
+        "replay_record": "SC4031",
+        "replay_samples": 4,
+        "replay_max_abs_diff": 0,
+        "full_cache": "hardlinked to the original mean arrays"
+      }
+    },
+    "eeg_std_t10_cond14_label25": {
+      "sha256": {
+        "EEG_std_t10_cond14_label25_pooled_53496x2560_unstandardized.npz": "5e43bcb9b874a58cc644e2331a0003115e701301274cba18a98e8277c62b76c4",
+        "sample_index.csv": "bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017",
+        "feature_config.json": "cc0e4e955e282c71f595708f84d2dec3f86eae27df8b374923b7c215622b6742",
+        "resource_profile.csv": "4fbf8862f1f18b003f7274ef63e04b86cbc280ca5f563335d36a6c885aa22086",
+        "summary.json": "5274b8d36d507eec555228c445a3580ae9a66e28456b1da78d90d055b5643815",
+        "SHA256SUMS.txt": "a437abedd64a68c8dfc90c6f1d94ae10ccaf427743f5fc96eab840d3890d2c5b"
+      },
+      "mean_cache_reuse": null
+    },
+    "eog_std_t10_cond14_label25": {
+      "sha256": {
+        "EOG_std_t10_cond14_label25_pooled_53496x2560_unstandardized.npz": "7159391d10eb3c920f67bd80e3f5426c3b468207db7f0c14d201d4b06bf7225d",
+        "sample_index.csv": "bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017",
+        "feature_config.json": "03c6d15da6eabfefc00d5595dba316748e2552bf7b914fec904a0278ac134b29",
+        "resource_profile.csv": "802385b8714ce9703c64fa15a54af937c0a3141054113a23681d1e08dd20a278",
+        "summary.json": "ca70664d880ef284eaaf687e941058192edc17b741ddd23f60729948e5e1249a",
+        "SHA256SUMS.txt": "9b9ebcf99a29c33daabcba9a83e932f8e293907bf0a4c48eccd5dbbdeb885aab"
+      },
+      "mean_cache_reuse": null
+    },
+    "eeg_std_t25_cond14_label25": {
+      "sha256": {
+        "EEG_std_t25_cond14_label25_pooled_53496x2560_unstandardized.npz": "a96a1cd1de13146bcc7feda4b7ba2aec58ae2a044d916fcc7cd48f793afd9a2a",
+        "sample_index.csv": "bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017",
+        "feature_config.json": "e7f0316f489131cbfdcb1d6e8e5d95f4b255588a881f28a4db7b9f3474b71ad7",
+        "resource_profile.csv": "a00ef61af2f1361d7c4dfd6ff3b2b2c66db7f0838cd60877d014c1b0870b6ab5",
+        "summary.json": "66fd027e3d9ace0512fe732f1314510b6582250b3ae9b5d86c30d09d88ff782a",
+        "SHA256SUMS.txt": "42cddaf7c7cbe4362e8c3f8e9d049f32d876c05d6ddefda3542b225345443787"
+      },
+      "mean_cache_reuse": null
+    },
+    "eog_std_t25_cond14_label25": {
+      "sha256": {
+        "EOG_std_t25_cond14_label25_pooled_53496x2560_unstandardized.npz": "202de2017a4a229626fe36dad18ff292b02e25e4a6f2d05a6b736f005f6f4a3b",
+        "sample_index.csv": "bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017",
+        "feature_config.json": "ac5a54ee7c62e52ad07ecfd260629972e3b1c5f192806fc8fef6171a5aeb9111",
+        "resource_profile.csv": "ae7553a16a88ca3c97dfa4e835c4ff9a40a3c71a0d13bec36042b15e186c0520",
+        "summary.json": "a765001113859d1e43b61b6a6edbcba8afc18c4bdfbb0e4d62b2d6d4e77e628b",
+        "SHA256SUMS.txt": "6f2f6d388dde1b822555163960cb656bfa57988e85c68ba6899c47e226592cf8"
+      },
+      "mean_cache_reuse": null
+    }
+  }
+}

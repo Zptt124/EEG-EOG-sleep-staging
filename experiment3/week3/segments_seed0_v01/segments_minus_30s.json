@@ -1,0 +1,55 @@
+{
+  "seed": 0,
+  "primary": "C1",
+  "paired": {
+    "C0": {
+      "n_boot": 2000,
+      "seed": 0,
+      "n_subjects": 8,
+      "level": 0.95,
+      "macro_f1": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "frac_boot_positive": 0.0
+      },
+      "n1_f1": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "frac_boot_positive": 0.0
+      },
+      "accuracy": {
+        "point": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "frac_boot_positive": 0.0
+      }
+    },
+    "C1": {
+      "n_boot": 2000,
+      "seed": 0,
+      "n_subjects": 8,
+      "level": 0.95,
+      "macro_f1": {
+        "point": 0.00800435802435373,
+        "lo": 0.0014064567801684554,
+        "hi": 0.01320763478778789,
+        "frac_boot_positive": 0.9875
+      },
+      "n1_f1": {
+        "point": 0.01818525195340126,
+        "lo": 0.006256036970655155,
+        "hi": 0.027851481897423504,
+        "frac_boot_positive": 0.9965
+      },
+      "accuracy": {
+        "point": 0.010950627773057775,
+        "lo": 0.006080374624971463,
+        "hi": 0.01495492829322443,
+        "frac_boot_positive": 1.0
+      }
+    }
+  },
+  "test_used": false
+}

@@ -1,0 +1,16 @@
+{
+  "seed": 0,
+  "baseline_t": 1,
+  "timesteps": [
+    2,
+    3
+  ],
+  "pooling": "std",
+  "random_noise": false,
+  "test_used": false,
+  "stage": "complete",
+  "completed_t": [
+    2,
+    3
+  ]
+}

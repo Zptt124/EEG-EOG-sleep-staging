@@ -1,0 +1,42 @@
+{
+  "seed": 2,
+  "epochs_planned": 20,
+  "train_samples": 32310,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.7.1+cu126",
+  "parameters": {
+    "C0": 25605,
+    "C1": 6090629
+  },
+  "test_used": false,
+  "normalization_seconds": 176.06674354799907,
+  "training_seconds": 7942.554788027999,
+  "stage": "complete",
+  "updated_at": "2026-11-09T01:26:21+08:00",
+  "elapsed_seconds": 8266.956537227998,
+  "dev_samples": 21186,
+  "paired_C1_minus_C0": {
+    "n_boot": 2000,
+    "seed": 0,
+    "n_subjects": 8,
+    "level": 0.95,
+    "macro_f1": {
+      "point": -0.004507114011909286,
+      "lo": -0.016321095149409933,
+      "hi": 0.005958816150684674,
+      "frac_boot_positive": 0.2215
+    },
+    "n1_f1": {
+      "point": -0.017400405472172753,
+      "lo": -0.06656337123383183,
+      "hi": 0.027065797375041573,
+      "frac_boot_positive": 0.227
+    },
+    "accuracy": {
+      "point": 0.0016520343623147582,
+      "lo": -0.004869786152868927,
+      "hi": 0.007001179133532218,
+      "frac_boot_positive": 0.7135
+    }
+  }
+}

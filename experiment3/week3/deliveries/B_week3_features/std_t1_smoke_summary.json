@@ -1,0 +1,22 @@
+{
+  "status": "smoke",
+  "records": 2,
+  "samples": 1863,
+  "subjects": [
+    "SC403"
+  ],
+  "test_used": false,
+  "split_counts": {
+    "train": 1863,
+    "val": 0
+  },
+  "total_seconds": 59.787761178,
+  "npz": "EEG_std_t1_cond14_label25_pooled_1863x2560_unstandardized.npz",
+  "reference_check": {
+    "reference": "<workspace>/experiment3/deliveries/B_pooled_features_20261031_v01/EEG_S0_pooled_154124x2560_unstandardized_v01.npz",
+    "reference_sha256": "047bafc735d64297648b173447ec5d8425063a25b3f85562a7dbf12295800fb7",
+    "rows": 1863,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0
+  }
+}
