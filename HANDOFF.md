@@ -17,7 +17,9 @@ B 的线性读出改为训练侧选模（预算内按受试者内层交叉验证
 A 已按同一协议重训 21 格（PR #17，Release `a-w3-baselines-v02-20261109`），v01 开发集早停结果废止。
 B 已复评 A v02 的 21 份与 C 的 32 份去重预测，sample_id 覆盖与各自报告的均值一致，结论见 b_status_w3.md。
 D 的配对探针请用 B 的探针脚本，用法见 [reports/week3/b_probe_for_D.md](reports/week3/b_probe_for_D.md)。
-C 的 6 个特征 NPZ 到位后，B 用 `scripts/30_b_w3_finish.py` 校验 SHA256 并补齐 mean 与 t=10/25。
+**2026-11-10 B 主实验完成：** C 的 6 个 NPZ 按交付清单 SHA256 校验通过，B 已补齐 mean 6 格、t=10/25 与 mean 的 N1 调整。
+mean − std 的 Macro-F1 在 5/14 人分别为 −0.020 / −0.025（区间不含 0，8 名验证者全部下降），14 人 N1 F1 −0.070；
+mean 的 N1 损失主要在判定门槛（N1 AP 仅 −0.018）。t=10/25 的 Macro-F1 低于 t=1。结论见 [reports/week3/b_status_w3.md](reports/week3/b_status_w3.md)。
 **2026-11-09 C 第三周交付。** [已完成的固定 20 轮实验](experiment3/week3/README.md)包含 18 组配对、36 份逐段预测和复评入口。C 已完成 B 要求的 std 核验、mean pooling 与 t=10/25 六组特征。[交付索引与 SHA256](experiment3/week3/deliveries/B_week3_features/README.md)已入库，[六个池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-b-w3-pooled-features-20261109)可从 GitHub Release 下载。
 
 **2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查

@@ -49,4 +49,4 @@
 | [b_w3_paired.csv](b_w3_paired.csv) / [b_w3_paired_by_subject.csv](b_w3_paired_by_subject.csv) | 配对差(seed 合并、按受试者 bootstrap)与逐人差 |
 | [b_n1_adjust_summary.csv](b_n1_adjust_summary.csv) / [b_n1_adjust_by_subject.csv](b_n1_adjust_by_subject.csv) | N1 分数调整对照(14 人,seed 0) |
 
-脚本:`scripts/26_b_extract_eegdm_w3.py`(提取)、`27_b_w3_linear_probe.py`(线性探针)、`28_b_n1_score_adjust.py`(N1 分数调整)、`29_b_w3_evaluate.py`(统一评估)、`30_b_w3_finish.py`(C 的 NPZ 到位后一次补齐并复评)。B 的 run 为 `W3_B_<arm>_<budget>_sseed2024_seed<N>_v01`,arm 如 `std_t1`、`mean_t1`、`std_t10`。
+脚本:`scripts/26_b_extract_eegdm_w3.py`(提取)、`27_b_w3_linear_probe.py`(线性探针)、`28_b_n1_score_adjust.py`(N1 分数调整)、`29_b_w3_evaluate.py`(统一评估)、`30_b_w3_finish.py`(C 的 NPZ 到位后一次补齐并复评)。B 的 14 个 run 发布于 Release [`b-week3-runs-v01-20261110`](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-week3-runs-v01-20261110),解压到 `runs/` 即可复评;run 名为 `W3_B_<arm>_<budget>_sseed2024_seed<N>_v01`,arm 如 `std_t1`、`mean_t1`、`std_t10`。
