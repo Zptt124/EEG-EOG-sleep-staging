@@ -24,7 +24,7 @@ std 一组因此按新协议重跑，第二周结果只作对照。两者的配�
 | 项目 | 状态 | 结果位置 |
 | --- | --- | --- |
 | std、t=1，5/14 人 × seed 0–2（6 格） | 完成 | `runs/W3_B_std_t1_*`，[b_w3_summary.csv](b_w3_summary.csv) |
-| mean t=1、std t=10/25 特征提取 | C 已提取（冒烟与共同 std NPZ 逐值一致），6 个 NPZ 待 C 传交 | [C 交付索引](../../experiment3/week3/deliveries/B_week3_features/README.md) |
+| mean t=1、std t=10/25 特征提取 | C 已提取，冒烟与共同 std NPZ 逐值一致，六个 NPZ 可下载 | [GitHub Release](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-b-w3-pooled-features-20261109) · [C 交付索引](../../experiment3/week3/deliveries/B_week3_features/README.md) |
 | mean、t=1，5/14 人 × seed 0–2（6 格） | 待 NPZ | |
 | t 扫描（std，t=1/10/25，14 人，seed 0） | t=1 完成，t=10/25 待 NPZ | |
 | N1 分数调整（14 人，预先固定 seed 0） | std 完成，mean 待 NPZ | [b_n1_adjust_summary.csv](b_n1_adjust_summary.csv) |

@@ -18,7 +18,7 @@ A 已按同一协议重训 21 格（PR #17，Release `a-w3-baselines-v02-2026110
 B 已复评 A v02 的 21 份与 C 的 32 份去重预测，sample_id 覆盖与各自报告的均值一致，结论见 b_status_w3.md。
 D 的配对探针请用 B 的探针脚本，用法见 [reports/week3/b_probe_for_D.md](reports/week3/b_probe_for_D.md)。
 C 的 6 个特征 NPZ 到位后，B 用 `scripts/30_b_w3_finish.py` 校验 SHA256 并补齐 mean 与 t=10/25。
-**2026-11-09 C 第三周交付。** [已完成的固定 20 轮实验](experiment3/week3/README.md)包含 18 组配对、36 份逐段预测和复评入口。C 已完成 B 要求的 std 核验、mean pooling 与 t=10/25 六组特征。[交付索引与 SHA256](experiment3/week3/deliveries/B_week3_features/README.md)已入库，完整 NPZ 由 C 保管。
+**2026-11-09 C 第三周交付。** [已完成的固定 20 轮实验](experiment3/week3/README.md)包含 18 组配对、36 份逐段预测和复评入口。C 已完成 B 要求的 std 核验、mean pooling 与 t=10/25 六组特征。[交付索引与 SHA256](experiment3/week3/deliveries/B_week3_features/README.md)已入库，[六个池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-b-w3-pooled-features-20261109)可从 GitHub Release 下载。
 
 **2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查
 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
