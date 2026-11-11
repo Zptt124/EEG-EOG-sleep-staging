@@ -4,7 +4,7 @@
 
 [第三周工作安排](WEEK3.md) · [四天方案 PDF](docs/week3/work_plan_W3.pdf) · [交接登记](HANDOFF.md#第三周交接)
 
-**2026-11-09 C 第三周交付。** [实验 C 的固定 20 轮结果、逐段预测与复评入口](experiment3/week3/README.md)涵盖主对照及已完成扩展。训练侧五折选轮补跑单独登记。
+**C 第三周交付。** [固定 20 轮主对照与扩展](experiment3/week3/README.md)于 11 月 9 日入库。[训练侧五折选轮主对照](experiment3/week3/inner_cv_v01/README.md)于 11 月 12 日完成并补充三组 C1 与 B 线性头的配对结果。
 
 A 比较睡眠分期基线、标签效率与 EEG/EOG 输入。B 检验 pooling、diffusion step 与 N1 判别表现。C 比较相同特征下的 linear head 与 LFT。D 在 Sleep-EDF 训练池上开展从零扩散预训练 pilot。四项实验沿用按人划分，核心比较使用 14 位有标签受试者，16 位测试受试者继续封存。
 

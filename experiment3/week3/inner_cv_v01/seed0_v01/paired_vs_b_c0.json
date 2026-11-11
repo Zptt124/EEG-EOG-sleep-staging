@@ -1,0 +1,29 @@
+{
+  "seed": 0,
+  "b_run": "W3_B_std_t1_label25_sseed2024_seed0_v01",
+  "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43",
+  "paired_C1_minus_B_C0": {
+    "n_boot": 2000,
+    "seed": 0,
+    "n_subjects": 8,
+    "level": 0.95,
+    "macro_f1": {
+      "point": -0.004561658947922487,
+      "lo": -0.02528199982377272,
+      "hi": 0.01594520471063718,
+      "frac_boot_positive": 0.335
+    },
+    "n1_f1": {
+      "point": 0.020617797089495404,
+      "lo": -0.06063396313805953,
+      "hi": 0.11612220540783928,
+      "frac_boot_positive": 0.656
+    },
+    "accuracy": {
+      "point": -0.009345794392523366,
+      "lo": -0.024964028257258807,
+      "hi": 0.003219292307858364,
+      "frac_boot_positive": 0.088
+    }
+  }
+}

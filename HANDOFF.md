@@ -22,6 +22,8 @@ mean − std 的 Macro-F1 在 5/14 人分别为 −0.020 / −0.025（区间不�
 mean 的 N1 损失主要在判定门槛（N1 AP 仅 −0.018）。t=10/25 的 Macro-F1 低于 t=1。结论见 [reports/week3/b_status_w3.md](reports/week3/b_status_w3.md)。
 **2026-11-09 C 第三周交付。** [已完成的固定 20 轮实验](experiment3/week3/README.md)包含 18 组配对、36 份逐段预测和复评入口。C 已完成 B 要求的 std 核验、mean pooling 与 t=10/25 六组特征。[交付索引与 SHA256](experiment3/week3/deliveries/B_week3_features/README.md)已入库，[六个池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-b-w3-pooled-features-20261109)可从 GitHub Release 下载。
 
+**2026-11-12 C 主对照补跑完成。** [训练侧五折结果](experiment3/week3/inner_cv_v01/README.md)提供三组 C1 的选轮曲线、折外与开发预测，以及与 B Release 中三个同 seed C0 的逐样本配对。
+
 **2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查
 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
 W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)(12/12 通过);

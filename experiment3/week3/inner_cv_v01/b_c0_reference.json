@@ -1,0 +1,25 @@
+{
+  "release": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-week3-runs-v01-20261110",
+  "filename": "w3_b_runs_v01.zip",
+  "sha256": "c7582e7aa56eb96bed2d356750282096c2129957445d64adb0dce407b5a9b79d",
+  "runs": {
+    "W3_B_std_t1_label25_sseed2024_seed0_v01": {
+      "predictions_sha256": "cccffe72abc490c40ebd932b5aa19ddb06d5615e18d0938349178d06b7fc6a6a",
+      "selected_epoch": 11,
+      "code_commit": "5bd9c8d045b36c3082545280c2471e6a086bb4d3",
+      "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43"
+    },
+    "W3_B_std_t1_label25_sseed2024_seed1_v01": {
+      "predictions_sha256": "5804b1a3532d82c23e2facaa7111e7f6ba1e4205631b88826b76f0144ff57d0f",
+      "selected_epoch": 24,
+      "code_commit": "5bd9c8d045b36c3082545280c2471e6a086bb4d3",
+      "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43"
+    },
+    "W3_B_std_t1_label25_sseed2024_seed2_v01": {
+      "predictions_sha256": "f0041b8af28f1c9f372cea761842a4465faa504b30ef6d6c219bf6b60a697ea5",
+      "selected_epoch": 16,
+      "code_commit": "5bd9c8d045b36c3082545280c2471e6a086bb4d3",
+      "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43"
+    }
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "config": {
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "lft_tokens_per_second": 4,
+    "batch_size": 32,
+    "blocks_per_group": 8,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 3.0,
+    "epochs": 50,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "budget": "label25",
+    "sampling_seed": 2024,
+    "normalization": "per modality/layer/hidden shared across time; fitted on each fold's training subjects, then all 14 for the final refit",
+    "checkpoint_selection": "B subject-wise five-fold pooled OOF macro-F1; ties choose earliest",
+    "loss": "unweighted cross entropy",
+    "precision": "bfloat16 autocast, float32 weights and optimizer state"
+  },
+  "folds": [
+    [
+      "SC403",
+      "SC412",
+      "SC415"
+    ],
+    [
+      "SC417",
+      "SC419",
+      "SC427"
+    ],
+    [
+      "SC451",
+      "SC455",
+      "SC474"
+    ],
+    [
+      "SC421",
+      "SC436",
+      "SC456"
+    ],
+    [
+      "SC410",
+      "SC429"
+    ]
+  ],
+  "input_audit": {
+    "samples": 154124,
+    "records": 122,
+    "split_counts": {
+      "train": 132938,
+      "val": 21186
+    },
+    "split_subject_counts": {
+      "train": 54,
+      "test": 16,
+      "val": 8
+    },
+    "labeled_subjects": [
+      "SC403",
+      "SC410",
+      "SC412",
+      "SC415",
+      "SC417",
+      "SC419",
+      "SC421",
+      "SC427",
+      "SC429",
+      "SC436",
+      "SC451",
+      "SC455",
+      "SC456",
+      "SC474"
+    ],
+    "labeled_epochs": 32310,
+    "dev_epochs": 21186,
+    "feature_protocol": {
+      "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969",
+      "checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+      "condition": 14,
+      "diffusion_t": 1,
+      "random_noise": false,
+      "query": "gate",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "reduction": "std, torch correction=1",
+      "axes": [
+        "sample",
+        "layer",
+        "time_window",
+        "hidden"
+      ],
+      "feature_shape": [
+        20,
+        30,
+        128
+      ],
+      "storage_dtype": "float16",
+      "internal_segments": 6,
+      "continuous_30s_context": false,
+      "target_fs": 200,
+      "window_points": 200,
+      "stride_points": 200
+    },
+    "modality_order": [
+      "EEG",
+      "EOG"
+    ],
+    "test_used": false,
+    "eog_provenance": "local regeneration under prior D reference protocol",
+    "input_sha256": {
+      "vendor/experiment1-review/manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+      "manifests/week2_c_adaptation_v01/label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+      "vendor/experiment2-review-6e7df99/src/evaluation/evaluate.py": "4168c650b154f2c2a2c4ff26e8acd8466a41d3f6823dbaeabfa6eb07ab7f7605",
+      "vendor/EEGDM/model/classifier.py": "47648c097f24bcf5b1c6bc1022bf086dfc655fe1b75ff0b82a111a4c66f6b2bd",
+      "scripts/run_week3_c_readout.py": "218a4002ebcaf6ae44139a406f5efed1f3fa40fa93a39bb4fa7fbf640b3f2bc2",
+      "configs/week3_c_readout.json": "56fd133f6be96fc7ef5f901ec10f5890b80f9766bf9416aedd2f5db9602d92f2",
+      "features/eeg_cond14_v01/feature_index.csv": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+      "features/eeg_cond14_v01/feature_config.json": "d2e3e70d71945e0a6ca673f800508f56a885588954876626d47fcfed691411a0",
+      "features/eog_cond14_local_Dprotocol_v01/feature_index.csv": "94d8f64f7abe5abfd57b4768e9095a30f387344a35010514d0f219ca95f157cd",
+      "features/eog_cond14_local_Dprotocol_v01/feature_config.json": "e95b12224ef751a39226ef8998521fcd3f20bd51eb1c0c5509a3d272aa2de48a"
+    },
+    "development_reference_sha256": "0f71748d782e400a2c0c398db0d66b60fe81b59dfc7e32d439dc350e4adb66e2"
+  },
+  "b_probe_sha256": "c7e8ce018e71d4168664720529fb76bd7f42d254f5e7a6029eff4355cdb8c726",
+  "b_evaluator_sha256": "3c645536d46dbd5dd8c531e75ddbde8dbf5432f441f7dea8ae76f3023d7ce35f",
+  "cv_runner_sha256": "5db156e6571ce7b2c4b887ed9898d2776d12a3a7dfc38a429de011cefd8a6991",
+  "staged_features": {
+    "EEG/SC4031.npy": {
+      "size": 146227328,
+      "mtime_ns": 1792425695818875000,
+      "sha256": "bc97614dc247fb01750c363f82e3750be84bd92d6cb88bed08995a2a4904d679"
+    },
+    "EEG/SC4032.npy": {
+      "size": 139929728,
+      "mtime_ns": 1792425727230489200,
+      "sha256": "8829f299bd4f4ed7a71337435152c384c9ede7b2254488f0a27bb4b2d81f46d1"
+    },
+    "EEG/SC4101.npy": {
+      "size": 169574528,
+      "mtime_ns": 1792425972882871900,
+      "sha256": "36dfa4d985252ade8f5f035f9f66934b6d73f8eb52fda8e25653cb47df16a9f3"
+    },
+    "EEG/SC4102.npy": {
+      "size": 167731328,
+      "mtime_ns": 1792426008450127100,
+      "sha256": "3cb7e1d7cf5e3a04a010627222dc7baa3265e7e27987dd27791fda0720072f87"
+    },
+    "EEG/SC4121.npy": {
+      "size": 161587328,
+      "mtime_ns": 1792426101381775800,
+      "sha256": "28a29d4768f3e419065f8077b817d16ef33031918078c2892ca2b162df89dbbb"
+    },
+    "EEG/SC4122.npy": {
+      "size": 150067328,
+      "mtime_ns": 1792426133733951000,
+      "sha256": "b935bde82d124ef4fe07791f6ec55e1dbf1177ae9980ee3c23dda559b30cec92"
+    },
+    "EEG/SC4151.npy": {
+      "size": 146227328,
+      "mtime_ns": 1792426230159342300,
+      "sha256": "11fd32e834bf38e8718cf45f2a729e4da0c4625b2b716f452b1658b3f84cd8fe"
+    },
+    "EEG/SC4152.npy": {
+      "size": 270643328,
+      "mtime_ns": 1792426287579594000,
+      "sha256": "33fff72d6598e75c83649316083eae6116adca2d32da8957bf1f1c3bf21952b0"
+    },
+    "EEG/SC4171.npy": {
+      "size": 153907328,
+      "mtime_ns": 1792426390724334800,
+      "sha256": "4d129a3887c417ab4bfeea8ed1d0980556b4f1b9d1983e21987f367a8ca7d681"
+    },
+    "EEG/SC4172.npy": {
+      "size": 272332928,
+      "mtime_ns": 1792426448458641200,
+      "sha256": "b67beccd20b62f456d355ae2cc67fed24b2caab1f326a364de2cbb0ac576878d"
+    },
+    "EEG/SC4191.npy": {
+      "size": 235776128,
+      "mtime_ns": 1792426564023877400,
+      "sha256": "978dffb9fc2dc6be0b354db8722f1cc4b64c0ad8a4e13e49440cb84f3bf6e756"
+    },
+    "EEG/SC4192.npy": {
+      "size": 195686528,
+      "mtime_ns": 1792426605919613100,
+      "sha256": "4b51d424d3d5ae7489a9545a54602b79968802dce8f75012419cca318cf29889"
+    },
+    "EEG/SC4211.npy": {
+      "size": 242380928,
+      "mtime_ns": 1792426657856714100,
+      "sha256": "15e20dff1f25193ebd0e015255cbb396ea90f141f5ea3530d562195965a0aaf0"
+    },
+    "EEG/SC4212.npy": {
+      "size": 124108928,
+      "mtime_ns": 1792426685137913900,
+      "sha256": "d7e6d8bf2e2e3dd63e95ae37ab9306df067e900330dc19c43a2a10b1d7b46cd3"
+    },
+    "EEG/SC4271.npy": {
+      "size": 161587328,
+      "mtime_ns": 1792426949813641300,
+      "sha256": "1a077493cffc583c85428400173b515cb53f0d2530b476e5a2f09fac1e3be18d"
+    },
+    "EEG/SC4272.npy": {
+      "size": 167424128,
+      "mtime_ns": 1792426989152002200,
+      "sha256": "55f7107e6339188f50f009bd639c8d8e61f2fa0391b8600c7263392dad74f98a"
+    },
+    "EEG/SC4291.npy": {
+      "size": 173721728,
+      "mtime_ns": 1792427106838206400,
+      "sha256": "ea94db1c4bd5439e619b406d2d5031ba5d10cd3431a42d0a52dbf2f29e659863"
+    },
+    "EEG/SC4292.npy": {
+      "size": 246528128,
+      "mtime_ns": 1792427161982581000,
+      "sha256": "92ba445542cf9871ae7389a64e4387f08ee5ccafd208497101c01e96f0194c80"
+    },
+    "EEG/SC4362.npy": {
+      "size": 126566528,
+      "mtime_ns": 1792427695638845200,
+      "sha256": "e17255a5fe4e48e7c51f87e57589afe59015a8111880a886f784a34f996c43f8"
+    },
+    "EEG/SC4511.npy": {
+      "size": 166963328,
+      "mtime_ns": 1792428352422047600,
+      "sha256": "d2776c49d0cb5dec9213756fef8d42665808bb35998db1823a588c0798e4edc3"
+    },
+    "EEG/SC4512.npy": {
+      "size": 146534528,
+      "mtime_ns": 1792428385549832000,
+      "sha256": "be94967db8a202f30f62f8082b8fcf440b1127bfd81c4ceea9bb89ca5410fd00"
+    },
+    "EEG/SC4551.npy": {
+      "size": 160819328,
+      "mtime_ns": 1792428528935072700,
+      "sha256": "1be68862bccd44de6ed5a340c40f08483598acc8f1a0abe2564d47cf9876efeb"
+    },
+    "EEG/SC4552.npy": {
+      "size": 167424128,
+      "mtime_ns": 1792428566608207700,
+      "sha256": "81a0a307f6b44a5661c2fbf73bdcbbc22bcd227ef44c3001ca9244465d7ea7cd"
+    },
+    "EEG/SC4561.npy": {
+      "size": 190003328,
+      "mtime_ns": 1792428608350282600,
+      "sha256": "a9d6050280bf1bf05c5d94fe0fe2e07c9eb90fe4c67a9d8b5f74e64d7aa70baf"
+    },
+    "EEG/SC4562.npy": {
+      "size": 176332928,
+      "mtime_ns": 1792428647436363100,
+      "sha256": "0af9c8524e0f9b394606546978db485a07d5bcd8a878606d2d4597a664754673"
+    },
+    "EEG/SC4741.npy": {
+      "size": 339456128,
+      "mtime_ns": 1792430003554369900,
+      "sha256": "470639f84389bde93dfcaf7696ddcb445533091550e032e460ee91ec7e2b4ca5"
+    },
+    "EEG/SC4742.npy": {
+      "size": 163276928,
+      "mtime_ns": 1792430040963102700,
+      "sha256": "cac3f4bd4a873c800d802db4396e6137afb9711aceceba8784802a17cf7ab9b5"
+    },
+    "EOG/SC4031.npy": {
+      "size": 146227328,
+      "mtime_ns": 1793243400998412700,
+      "sha256": "40187c062961510c51074b662835543ea5c747ef1232bab8636befd504024abe"
+    },
+    "EOG/SC4032.npy": {
+      "size": 139929728,
+      "mtime_ns": 1793243432259397500,
+      "sha256": "8d6eeaf47b6ec4618dedd030b03cdf80d6fa938f384ff856e87fe9a7c15a88e7"
+    },
+    "EOG/SC4101.npy": {
+      "size": 169574528,
+      "mtime_ns": 1793243675276438000,
+      "sha256": "2c95dfd031055b00814619db0277c2150acd180b440cc661eb1460c66c2638c4"
+    },
+    "EOG/SC4102.npy": {
+      "size": 167731328,
+      "mtime_ns": 1793243711122356400,
+      "sha256": "753e4c4ef94f5109f0d305db4a7be1186b0b5cab7861aca3fdad4f68be3366f6"
+    },
+    "EOG/SC4121.npy": {
+      "size": 161587328,
+      "mtime_ns": 1793243802288425700,
+      "sha256": "dd0ecc926102fd3ee963a7ba85f7ef833c6573859ca1bb86e0aa49688ff6585e"
+    },
+    "EOG/SC4122.npy": {
+      "size": 150067328,
+      "mtime_ns": 1793243833997905100,
+      "sha256": "715b56b31b8eb4672cd8e4e4b7c7fb8486b83e5bb8c4512316448f5761c2118a"
+    },
+    "EOG/SC4151.npy": {
+      "size": 146227328,
+      "mtime_ns": 1793243928743937000,
+      "sha256": "32800115daee9b62c1a70ef2c861dfa93a86d1eb6501779340f3160af0533e03"
+    },
+    "EOG/SC4152.npy": {
+      "size": 270643328,
+      "mtime_ns": 1793243985302555200,
+      "sha256": "0831e8aa7f56ccc37f6f9f435ef44295c5c1aad94ace14de6b2132fe3732cc8d"
+    },
+    "EOG/SC4171.npy": {
+      "size": 153907328,
+      "mtime_ns": 1793244085864453400,
+      "sha256": "fa22f529fcd6fe5c8c360883f83b00b70b4648945533ea4a7bce8cf0460d82a8"
+    },
+    "EOG/SC4172.npy": {
+      "size": 272332928,
+      "mtime_ns": 1793244142713054700,
+      "sha256": "ad69fc8bd34ec748b8b9da3df34d0927e6280b3b311ed3d1c250141c72ba2020"
+    },
+    "EOG/SC4191.npy": {
+      "size": 235776128,
+      "mtime_ns": 1793244253330028000,
+      "sha256": "e43c84f9d756e04289ef08c0aef4a24858802f003941c0425b7ed6f5c4cfa635"
+    },
+    "EOG/SC4192.npy": {
+      "size": 195686528,
+      "mtime_ns": 1793244294110607300,
+      "sha256": "89b4108842df00ac5dd543dc63a6cb9bdcc256d66e9f46973413aec6a71f65b4"
+    },
+    "EOG/SC4211.npy": {
+      "size": 242380928,
+      "mtime_ns": 1793244344485292200,
+      "sha256": "87703f0af6a9b07eff9dd8ee983dae2a7e6ec0a8c3bb40aa7cf89493f6cb0895"
+    },
+    "EOG/SC4212.npy": {
+      "size": 124108928,
+      "mtime_ns": 1793244370739304400,
+      "sha256": "09a4d046264c413c7e89770fef4e5e0e7fbe846c3ddd36626b9cc1f96b1c4743"
+    },
+    "EOG/SC4271.npy": {
+      "size": 161587328,
+      "mtime_ns": 1793244624531636300,
+      "sha256": "1f3e3eb97fd80e5856bbf26b3fa644afecdf2257e6e073eb65deae18bb88900e"
+    },
+    "EOG/SC4272.npy": {
+      "size": 167424128,
+      "mtime_ns": 1793244659328881600,
+      "sha256": "936eb98ae1d212a40902eae3f90ee23baba901c45a21a76d6cebfba2340343cc"
+    },
+    "EOG/SC4291.npy": {
+      "size": 173721728,
+      "mtime_ns": 1793244766336077000,
+      "sha256": "e97a1504da3b9aa773ad5c367a1e0210e4edefb9f4c06a52eae36ba323b02b51"
+    },
+    "EOG/SC4292.npy": {
+      "size": 246528128,
+      "mtime_ns": 1793244818042961300,
+      "sha256": "05503c7673a6a77f3c1ca87269f402507bb93da7d0f85fba381fc6ef150f500d"
+    },
+    "EOG/SC4362.npy": {
+      "size": 126566528,
+      "mtime_ns": 1793245325272622400,
+      "sha256": "3c64f6c613a9defdd8517419714a8f6900eb90035e581b856d55bf492d9538c9"
+    },
+    "EOG/SC4511.npy": {
+      "size": 166963328,
+      "mtime_ns": 1793253917482594600,
+      "sha256": "8103218eaac4b1cc4031681aae19a5832e023d8cd553a1462ede03210a116958"
+    },
+    "EOG/SC4512.npy": {
+      "size": 146534528,
+      "mtime_ns": 1793253949568717200,
+      "sha256": "af631eb4808a13c9ea31b2cf33c554d4779880f9e5bc0267886248b2bbd70391"
+    },
+    "EOG/SC4551.npy": {
+      "size": 160819328,
+      "mtime_ns": 1793254087260026300,
+      "sha256": "24c6230701321d6fe93ecb6eaa116a5610ddef9ce164e9c19fe1c8041ea50bc9"
+    },
+    "EOG/SC4552.npy": {
+      "size": 167424128,
+      "mtime_ns": 1793254122803598600,
+      "sha256": "5338159acdcaa593f19de7ed8a30ac538d4a61340efdab9d628b317fd62408cf"
+    },
+    "EOG/SC4561.npy": {
+      "size": 190003328,
+      "mtime_ns": 1793254163297508000,
+      "sha256": "6a12059102a40d2e7e10fb810a653fbae7bdd8d6592504414957d10b4050874b"
+    },
+    "EOG/SC4562.npy": {
+      "size": 176332928,
+      "mtime_ns": 1793254200845531600,
+      "sha256": "cd4cddbf5fecd8c310490222ed0787fcdb314fc0ffee7b0b0c57c44323bdbeb5"
+    },
+    "EOG/SC4741.npy": {
+      "size": 339456128,
+      "mtime_ns": 1793255543079069700,
+      "sha256": "d38aedb50605705c7d53b9b50562a698a21a386f03e1a64f907ec5711add433f"
+    },
+    "EOG/SC4742.npy": {
+      "size": 163276928,
+      "mtime_ns": 1793255579995159900,
+      "sha256": "caba1687416ffd20df176474e1121e8ca8551a1bbd78238f8bb89ead909082c0"
+    }
+  }
+}
