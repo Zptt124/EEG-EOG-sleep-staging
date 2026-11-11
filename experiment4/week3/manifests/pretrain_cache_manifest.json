@@ -1,0 +1,27 @@
+{
+  "version": "W3_D_pretrain_cache_v01",
+  "team_main_commit": "fe0a9aaa264047575cdd5e1e15e2ada4462653d3",
+  "split_sha256": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+  "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969",
+  "data_dir": "~/data/sleepedf_sc_processed",
+  "split_used": "train only (54 subjects)",
+  "labels_read": false,
+  "n_records": 106,
+  "n_subjects": 54,
+  "n_epochs": 132938,
+  "n_units": 1595256,
+  "unit_definition": "(row, modality, 5s window k); u=(row*2+m)*6+k",
+  "modalities": {
+    "0": "EEG Fpz-Cz",
+    "1": "EOG horizontal"
+  },
+  "transform": "resample_poly(up=2,down=1) 100->200 Hz; uV/100; official staged_mu_law(mu=255)",
+  "storage_dtype": "float16",
+  "float16_max_abs_error": 0.00048828125,
+  "value_min": -1.4123404026031494,
+  "value_max": 1.372857928276062,
+  "fraction_abs_gt_1": 0.030551621808662686,
+  "sha256_signals": "baa935f751d3483a7437eb87293d221368b716743cb4249a960ad12634c58c61",
+  "sha256_epoch_index": "e3632bce543a90b64c19dc1f1884c2f56a85eed7ce13062f6ce15f70239baa24",
+  "build_seconds": 66.906153654
+}

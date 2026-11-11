@@ -1,0 +1,96 @@
+B code commit 8d218342c6ad6c8afa649824c1a18ccd189f9d07; evaluate v1
+[ 1/16] W3_D_d_rand_label25_sseed2024_seed0_v01: E*=49 dev macroF1 0.7134 N1 P/R/F1 0.456/0.215/0.292 (47s, total 0.8 min)
+[ 1/16] W3_D_d_rand_label25_sseed2024_seed1_v01: E*=44 dev macroF1 0.7111 N1 P/R/F1 0.415/0.293/0.343 (41s, total 1.5 min)
+[ 1/16] W3_D_d_rand_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7171 N1 P/R/F1 0.435/0.250/0.318 (46s, total 2.2 min)
+[ 2/16] W3_D_d_rand_label10_sseed2024_seed0_v01: E*=47 dev macroF1 0.6624 N1 P/R/F1 0.335/0.081/0.130 (19s, total 2.5 min)
+[ 2/16] W3_D_d_rand_label10_sseed2024_seed1_v01: E*=34 dev macroF1 0.6767 N1 P/R/F1 0.379/0.137/0.202 (16s, total 2.8 min)
+[ 2/16] W3_D_d_rand_label10_sseed2024_seed2_v01: E*=47 dev macroF1 0.6700 N1 P/R/F1 0.377/0.096/0.154 (15s, total 3.1 min)
+[ 3/16] W3_D_d_pre240k_label25_sseed2024_seed0_v01: E*=45 dev macroF1 0.7623 N1 P/R/F1 0.452/0.435/0.443 (40s, total 3.7 min)
+[ 3/16] W3_D_d_pre240k_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.7324 N1 P/R/F1 0.487/0.225/0.307 (49s, total 4.5 min)
+[ 3/16] W3_D_d_pre240k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7502 N1 P/R/F1 0.443/0.383/0.411 (63s, total 5.6 min)
+[ 4/16] W3_D_d_pre240k_label10_sseed2024_seed0_v01: E*=36 dev macroF1 0.7304 N1 P/R/F1 0.386/0.313/0.346 (21s, total 5.9 min)
+[ 4/16] W3_D_d_pre240k_label10_sseed2024_seed1_v01: E*=23 dev macroF1 0.7334 N1 P/R/F1 0.412/0.284/0.336 (16s, total 6.2 min)
+[ 4/16] W3_D_d_pre240k_label10_sseed2024_seed2_v01: E*=24 dev macroF1 0.7265 N1 P/R/F1 0.384/0.300/0.337 (16s, total 6.5 min)
+[ 5/16] W3_D_eegdm_official_label25_sseed2024_seed0_v01: E*=11 dev macroF1 0.7449 N1 P/R/F1 0.441/0.309/0.363 (77s, total 7.8 min)
+[ 5/16] W3_D_eegdm_official_label25_sseed2024_seed1_v01: E*=24 dev macroF1 0.7485 N1 P/R/F1 0.403/0.453/0.427 (79s, total 9.1 min)
+[ 5/16] W3_D_eegdm_official_label25_sseed2024_seed2_v01: E*=16 dev macroF1 0.7289 N1 P/R/F1 0.430/0.308/0.359 (70s, total 10.2 min)
+[ 6/16] W3_D_eegdm_official_label10_sseed2024_seed0_v01: E*=40 dev macroF1 0.7087 N1 P/R/F1 0.345/0.244/0.286 (30s, total 10.7 min)
+[ 6/16] W3_D_eegdm_official_label10_sseed2024_seed1_v01: E*=36 dev macroF1 0.7102 N1 P/R/F1 0.331/0.278/0.302 (27s, total 11.2 min)
+[ 6/16] W3_D_eegdm_official_label10_sseed2024_seed2_v01: E*=41 dev macroF1 0.6849 N1 P/R/F1 0.329/0.163/0.218 (30s, total 11.7 min)
+[ 7/16] W3_D_d_pre015k_label25_sseed2024_seed0_v01: E*=45 dev macroF1 0.7354 N1 P/R/F1 0.487/0.271/0.348 (46s, total 12.4 min)
+[ 7/16] W3_D_d_pre015k_label25_sseed2024_seed1_v01: E*=44 dev macroF1 0.7366 N1 P/R/F1 0.449/0.309/0.366 (41s, total 13.1 min)
+[ 7/16] W3_D_d_pre015k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7169 N1 P/R/F1 0.430/0.227/0.297 (41s, total 13.8 min)
+[ 8/16] W3_D_d_pre030k_label25_sseed2024_seed0_v01: E*=45 dev macroF1 0.7474 N1 P/R/F1 0.492/0.320/0.388 (42s, total 14.5 min)
+[ 8/16] W3_D_d_pre030k_label25_sseed2024_seed1_v01: E*=44 dev macroF1 0.7457 N1 P/R/F1 0.463/0.346/0.396 (49s, total 15.3 min)
+[ 8/16] W3_D_d_pre030k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7315 N1 P/R/F1 0.454/0.301/0.362 (41s, total 16.0 min)
+[ 9/16] W3_D_d_pre060k_label25_sseed2024_seed0_v01: E*=37 dev macroF1 0.7416 N1 P/R/F1 0.488/0.275/0.352 (39s, total 16.6 min)
+[ 9/16] W3_D_d_pre060k_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.7288 N1 P/R/F1 0.508/0.215/0.302 (40s, total 17.3 min)
+[ 9/16] W3_D_d_pre060k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7445 N1 P/R/F1 0.480/0.313/0.379 (40s, total 18.0 min)
+[10/16] W3_D_d_pre120k_label25_sseed2024_seed0_v01: E*=37 dev macroF1 0.7461 N1 P/R/F1 0.500/0.277/0.356 (40s, total 18.6 min)
+[10/16] W3_D_d_pre120k_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.7282 N1 P/R/F1 0.493/0.210/0.294 (42s, total 19.3 min)
+[10/16] W3_D_d_pre120k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7476 N1 P/R/F1 0.468/0.330/0.387 (43s, total 20.1 min)
+[11/16] W3_D_d_rand_eeg_label25_sseed2024_seed0_v01: E*=48 dev macroF1 0.6574 N1 P/R/F1 0.369/0.202/0.261 (42s, total 20.8 min)
+[11/16] W3_D_d_rand_eeg_label25_sseed2024_seed1_v01: E*=37 dev macroF1 0.6419 N1 P/R/F1 0.384/0.077/0.128 (41s, total 21.4 min)
+[11/16] W3_D_d_rand_eeg_label25_sseed2024_seed2_v01: E*=37 dev macroF1 0.6662 N1 P/R/F1 0.369/0.336/0.351 (41s, total 22.1 min)
+[12/16] W3_D_d_pre240k_eeg_label25_sseed2024_seed0_v01: E*=37 dev macroF1 0.6915 N1 P/R/F1 0.348/0.338/0.343 (40s, total 22.8 min)
+[12/16] W3_D_d_pre240k_eeg_label25_sseed2024_seed1_v01: E*=30 dev macroF1 0.7062 N1 P/R/F1 0.362/0.407/0.383 (34s, total 23.4 min)
+[12/16] W3_D_d_pre240k_eeg_label25_sseed2024_seed2_v01: E*=37 dev macroF1 0.6878 N1 P/R/F1 0.341/0.335/0.338 (33s, total 23.9 min)
+[13/16] W3_D_d_rand_eog_label25_sseed2024_seed0_v01: E*=45 dev macroF1 0.6129 N1 P/R/F1 0.398/0.172/0.240 (35s, total 24.5 min)
+[13/16] W3_D_d_rand_eog_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.6185 N1 P/R/F1 0.392/0.187/0.253 (37s, total 25.1 min)
+[13/16] W3_D_d_rand_eog_label25_sseed2024_seed2_v01: E*=45 dev macroF1 0.6023 N1 P/R/F1 0.385/0.162/0.228 (79s, total 26.4 min)
+[14/16] W3_D_d_pre240k_eog_label25_sseed2024_seed0_v01: E*=44 dev macroF1 0.6375 N1 P/R/F1 0.418/0.172/0.244 (44s, total 27.2 min)
+[14/16] W3_D_d_pre240k_eog_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.6401 N1 P/R/F1 0.415/0.162/0.233 (38s, total 27.8 min)
+[14/16] W3_D_d_pre240k_eog_label25_sseed2024_seed2_v01: E*=45 dev macroF1 0.6357 N1 P/R/F1 0.398/0.165/0.233 (35s, total 28.4 min)
+[15/16] W3_D_d_rand_mean_label25_sseed2024_seed0_v01: E*=39 dev macroF1 0.6809 N1 P/R/F1 0.387/0.272/0.319 (46s, total 29.2 min)
+[15/16] W3_D_d_rand_mean_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.6382 N1 P/R/F1 0.366/0.052/0.091 (47s, total 29.9 min)
+[15/16] W3_D_d_rand_mean_label25_sseed2024_seed2_v01: E*=40 dev macroF1 0.6512 N1 P/R/F1 0.417/0.203/0.273 (42s, total 30.6 min)
+[16/16] W3_D_d_pre240k_mean_label25_sseed2024_seed0_v01: E*=34 dev macroF1 0.7294 N1 P/R/F1 0.410/0.368/0.388 (42s, total 31.3 min)
+[16/16] W3_D_d_pre240k_mean_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.6941 N1 P/R/F1 0.443/0.173/0.249 (42s, total 32.0 min)
+[16/16] W3_D_d_pre240k_mean_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7221 N1 P/R/F1 0.389/0.324/0.353 (46s, total 32.8 min)
+                        macro_f1   n1_f1  n1_precision  n1_recall   n1_ap  f1_REM  n1_true_to_W  n1_true_to_N2
+arm            budget                                                                                         
+d_pre015k      label25    0.7297  0.3371        0.4551     0.2690  0.3803  0.7177        0.2659         0.3410
+d_pre030k      label25    0.7415  0.3820        0.4698     0.3224  0.3993  0.7231        0.2328         0.3169
+d_pre060k      label25    0.7383  0.3443        0.4919     0.2678  0.4063  0.7383        0.2962         0.3337
+d_pre120k      label25    0.7406  0.3458        0.4868     0.2721  0.4041  0.7436        0.2740         0.3651
+d_pre240k      label10    0.7301  0.3396        0.3940     0.2990  0.3334  0.7245        0.3279         0.3033
+               label25    0.7483  0.3873        0.4606     0.3477  0.4093  0.7501        0.2442         0.3309
+d_pre240k_eeg  label25    0.6952  0.3547        0.3503     0.3601  0.3267  0.5491        0.2623         0.3049
+d_pre240k_eog  label25    0.6378  0.2370        0.4106     0.1666  0.3056  0.6876        0.2812         0.4123
+d_pre240k_mean label25    0.7152  0.3299        0.4142     0.2880  0.3702  0.6723        0.3052         0.3244
+d_rand         label10    0.6697  0.1618        0.3638     0.1048  0.2702  0.6386        0.4124         0.3992
+               label25    0.7139  0.3177        0.4352     0.2526  0.3690  0.6790        0.2355         0.4501
+d_rand_eeg     label25    0.6552  0.2466        0.3736     0.2047  0.3108  0.5041        0.3669         0.3180
+d_rand_eog     label25    0.6113  0.2403        0.3918     0.1735  0.2904  0.6132        0.2312         0.4880
+d_rand_mean    label25    0.6567  0.2280        0.3901     0.1758  0.3021  0.5814        0.2529         0.4637
+eegdm_official label10    0.7013  0.2686        0.3349     0.2284  0.2752  0.7090        0.3299         0.3668
+               label25    0.7408  0.3829        0.4248     0.3566  0.3826  0.7387        0.2486         0.3227
+Reproduction of B std_t1 with week-2 R1 cache:
+ budget  seed  d_macro_f1  b_macro_f1  diff_macro_f1  d_n1_f1  b_n1_f1  diff_n1_f1
+label25     0      0.7449      0.7449        -0.0000   0.3634   0.3634     -0.0000
+label25     1      0.7485      0.7484         0.0001   0.4266   0.4263      0.0003
+label25     2      0.7289      0.7289         0.0000   0.3587   0.3587     -0.0000
+label10     0      0.7087      0.7087         0.0000   0.2860   0.2860      0.0000
+label10     1      0.7102      0.7102         0.0000   0.3021   0.3021     -0.0000
+label10     2      0.6849      0.6850        -0.0001   0.2179   0.2183     -0.0005
+    comparison      reference  budget  delta_macro_f1  delta_macro_f1_lo  delta_macro_f1_hi  delta_n1_f1  delta_n1_f1_lo  delta_n1_f1_hi  delta_n1_ap  delta_n1_ap_lo  delta_n1_ap_hi
+     d_pre240k         d_rand label10          0.0601             0.0466             0.0713       0.1767          0.0877          0.2412       0.0627          0.0381          0.0857
+     d_pre240k         d_rand label25          0.0355             0.0189             0.0493       0.0755          0.0045          0.1380       0.0362          0.0008          0.0672
+     d_pre240k eegdm_official label10          0.0282             0.0197             0.0374       0.0680          0.0370          0.0882       0.0581          0.0442          0.0733
+     d_pre240k eegdm_official label25          0.0083            -0.0007             0.0175       0.0082         -0.0102          0.0343       0.0254          0.0036          0.0563
+        d_rand eegdm_official label10         -0.0319            -0.0445            -0.0189      -0.1087         -0.1677         -0.0370      -0.0046         -0.0286          0.0170
+        d_rand eegdm_official label25         -0.0272            -0.0347            -0.0166      -0.0672         -0.1289          0.0235      -0.0108         -0.0387          0.0398
+     d_pre015k         d_rand label25          0.0155             0.0040             0.0307       0.0192         -0.0395          0.0799       0.0112         -0.0326          0.0565
+     d_pre030k         d_rand label25          0.0272             0.0125             0.0427       0.0633          0.0074          0.1240       0.0297         -0.0044          0.0628
+     d_pre060k         d_rand label25          0.0245             0.0172             0.0331       0.0273         -0.0166          0.0629       0.0367          0.0071          0.0602
+     d_pre120k         d_rand label25          0.0270             0.0159             0.0389       0.0296         -0.0395          0.0846       0.0338         -0.0069          0.0658
+ d_pre240k_eeg     d_rand_eeg label25          0.0358             0.0269             0.0427       0.0917          0.0544          0.1227       0.0198          0.0046          0.0430
+ d_pre240k_eog     d_rand_eog label25          0.0266             0.0105             0.0468      -0.0035         -0.0640          0.0438       0.0147         -0.0579          0.0493
+d_pre240k_mean    d_rand_mean label25          0.0572             0.0288             0.0816       0.0943         -0.0019          0.1638       0.0668          0.0034          0.1377
+     d_pre240k  d_pre240k_eeg label25          0.0544             0.0154             0.0987       0.0390         -0.0157          0.0966       0.0772          0.0466          0.1183
+        d_rand     d_rand_eeg label25          0.0546             0.0203             0.0880       0.0552         -0.0349          0.1510       0.0609          0.0131          0.1389
+N1 adjust d_rand: alpha=4.039 dev N1 P/R/F1 0.456/0.215/0.292 -> 0.352/0.565/0.434 macroF1 0.7134 -> 0.7222
+N1 adjust d_pre240k: alpha=3.523 dev N1 P/R/F1 0.452/0.435/0.443 -> 0.342/0.725/0.465 macroF1 0.7623 -> 0.7397
+N1 adjust eegdm_official: alpha=3.523 dev N1 P/R/F1 0.441/0.309/0.363 -> 0.335/0.580/0.424 macroF1 0.7449 -> 0.7391
+total 37.0 min
+BPROTOCOL DONE

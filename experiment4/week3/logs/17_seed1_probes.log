@@ -1,0 +1,57 @@
+B code commit 8d218342c6ad6c8afa649824c1a18ccd189f9d07
+W3_D_s1_rand_label25_sseed2024_seed0_v01: E*=50 dev macroF1 0.7001 N1-F1 0.262 (42s, total 0.7 min)
+W3_D_s1_rand_label25_sseed2024_seed1_v01: E*=44 dev macroF1 0.7167 N1-F1 0.380 (38s, total 1.3 min)
+W3_D_s1_rand_label25_sseed2024_seed2_v01: E*=22 dev macroF1 0.7010 N1-F1 0.296 (35s, total 1.9 min)
+W3_D_s1_rand_label10_sseed2024_seed0_v01: E*=47 dev macroF1 0.6597 N1-F1 0.134 (16s, total 2.2 min)
+W3_D_s1_rand_label10_sseed2024_seed1_v01: E*=49 dev macroF1 0.6826 N1-F1 0.223 (16s, total 2.5 min)
+W3_D_s1_rand_label10_sseed2024_seed2_v01: E*=47 dev macroF1 0.6670 N1-F1 0.167 (16s, total 2.7 min)
+W3_D_s1_pre030k_label25_sseed2024_seed0_v01: E*=45 dev macroF1 0.7505 N1-F1 0.392 (40s, total 3.4 min)
+W3_D_s1_pre030k_label25_sseed2024_seed1_v01: E*=48 dev macroF1 0.7249 N1-F1 0.297 (39s, total 4.1 min)
+W3_D_s1_pre030k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7341 N1-F1 0.336 (39s, total 4.7 min)
+W3_D_s1_pre030k_label10_sseed2024_seed0_v01: E*=36 dev macroF1 0.7111 N1-F1 0.279 (15s, total 5.0 min)
+W3_D_s1_pre030k_label10_sseed2024_seed1_v01: E*=34 dev macroF1 0.7113 N1-F1 0.274 (15s, total 5.2 min)
+W3_D_s1_pre030k_label10_sseed2024_seed2_v01: E*=37 dev macroF1 0.7073 N1-F1 0.267 (15s, total 5.4 min)
+W3_D_d_rand_label25_sseed2024_seed0_v01: E*=49 dev macroF1 0.7134 N1-F1 0.292 (0s, total 5.4 min)
+W3_D_d_rand_label25_sseed2024_seed1_v01: E*=44 dev macroF1 0.7111 N1-F1 0.343 (0s, total 5.4 min)
+W3_D_d_rand_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7171 N1-F1 0.318 (0s, total 5.4 min)
+W3_D_d_rand_label10_sseed2024_seed0_v01: E*=47 dev macroF1 0.6624 N1-F1 0.130 (0s, total 5.4 min)
+W3_D_d_rand_label10_sseed2024_seed1_v01: E*=34 dev macroF1 0.6767 N1-F1 0.202 (0s, total 5.4 min)
+W3_D_d_rand_label10_sseed2024_seed2_v01: E*=47 dev macroF1 0.6700 N1-F1 0.154 (0s, total 5.4 min)
+W3_D_d_pre030k_label25_sseed2024_seed0_v01: E*=45 dev macroF1 0.7474 N1-F1 0.388 (0s, total 5.4 min)
+W3_D_d_pre030k_label25_sseed2024_seed1_v01: E*=44 dev macroF1 0.7457 N1-F1 0.396 (0s, total 5.4 min)
+W3_D_d_pre030k_label25_sseed2024_seed2_v01: E*=49 dev macroF1 0.7315 N1-F1 0.362 (0s, total 5.4 min)
+W3_D_d_pre030k_label10_sseed2024_seed0_v01: E*=36 dev macroF1 0.7055 N1-F1 0.282 (15s, total 5.7 min)
+W3_D_d_pre030k_label10_sseed2024_seed1_v01: E*=35 dev macroF1 0.6992 N1-F1 0.223 (16s, total 6.0 min)
+W3_D_d_pre030k_label10_sseed2024_seed2_v01: E*=37 dev macroF1 0.7005 N1-F1 0.254 (16s, total 6.2 min)
+W3_D_eegdm_official_label25_sseed2024_seed0_v01: E*=11 dev macroF1 0.7449 N1-F1 0.363 (0s, total 6.2 min)
+W3_D_eegdm_official_label25_sseed2024_seed1_v01: E*=24 dev macroF1 0.7485 N1-F1 0.427 (0s, total 6.2 min)
+W3_D_eegdm_official_label25_sseed2024_seed2_v01: E*=16 dev macroF1 0.7289 N1-F1 0.359 (0s, total 6.2 min)
+W3_D_eegdm_official_label10_sseed2024_seed0_v01: E*=40 dev macroF1 0.7087 N1-F1 0.286 (0s, total 6.2 min)
+W3_D_eegdm_official_label10_sseed2024_seed1_v01: E*=36 dev macroF1 0.7102 N1-F1 0.302 (0s, total 6.2 min)
+W3_D_eegdm_official_label10_sseed2024_seed2_v01: E*=41 dev macroF1 0.6849 N1-F1 0.218 (0s, total 6.2 min)
+                        macro_f1   n1_f1  n1_precision  n1_recall   n1_ap  f1_REM
+arm            budget                                                            
+d_pre030k      label10    0.7017  0.2531        0.4116     0.1844  0.3210  0.6975
+               label25    0.7415  0.3820        0.4698     0.3224  0.3993  0.7231
+d_rand         label10    0.6697  0.1618        0.3638     0.1048  0.2702  0.6386
+               label25    0.7139  0.3177        0.4352     0.2526  0.3690  0.6790
+eegdm_official label10    0.7013  0.2686        0.3349     0.2284  0.2752  0.7090
+               label25    0.7408  0.3829        0.4248     0.3566  0.3826  0.7387
+s1_pre030k     label10    0.7099  0.2735        0.4059     0.2063  0.3276  0.7119
+               label25    0.7365  0.3415        0.4507     0.2772  0.3793  0.7369
+s1_rand        label10    0.6697  0.1747        0.3779     0.1160  0.2812  0.6495
+               label25    0.7059  0.3127        0.4327     0.2539  0.3561  0.6703
+comparison      reference  budget  delta_macro_f1  delta_macro_f1_lo  delta_macro_f1_hi  delta_n1_f1  delta_n1_f1_lo  delta_n1_f1_hi  delta_n1_ap  delta_n1_ap_lo  delta_n1_ap_hi
+s1_pre030k        s1_rand label10          0.0397             0.0230             0.0580       0.0962          0.0676          0.1277       0.0470          0.0299          0.0742
+s1_pre030k        s1_rand label25          0.0297             0.0078             0.0516       0.0250         -0.0098          0.0646       0.0255         -0.0061          0.0673
+ d_pre030k         d_rand label10          0.0319             0.0225             0.0434       0.0913          0.0595          0.1247       0.0494          0.0225          0.0874
+ d_pre030k         d_rand label25          0.0272             0.0125             0.0427       0.0633          0.0074          0.1240       0.0297         -0.0044          0.0628
+s1_pre030k      d_pre030k label10          0.0080             0.0017             0.0131       0.0192          0.0008          0.0374       0.0077         -0.0076          0.0263
+s1_pre030k      d_pre030k label25         -0.0045            -0.0113             0.0035      -0.0386         -0.0683         -0.0002      -0.0196         -0.0389          0.0046
+   s1_rand         d_rand label10          0.0002            -0.0073             0.0063       0.0143          0.0019          0.0229       0.0101         -0.0049          0.0285
+   s1_rand         d_rand label25         -0.0070            -0.0249             0.0101      -0.0003         -0.0273          0.0314      -0.0154         -0.0509          0.0098
+s1_pre030k eegdm_official label10          0.0080            -0.0056             0.0238       0.0018         -0.0659          0.0808       0.0525          0.0224          0.0890
+s1_pre030k eegdm_official label25         -0.0045            -0.0141             0.0064      -0.0425         -0.0855          0.0260      -0.0007         -0.0304          0.0590
+ d_pre030k eegdm_official label10          0.0000            -0.0134             0.0164      -0.0174         -0.0772          0.0595       0.0448          0.0246          0.0742
+ d_pre030k eegdm_official label25          0.0000            -0.0124             0.0133      -0.0039         -0.0369          0.0477       0.0189         -0.0142          0.0621
+SEED1 PROBES DONE

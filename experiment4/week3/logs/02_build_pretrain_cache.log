@@ -1,0 +1,116 @@
+train records 106, epochs 132938, 5s windows x 2 modalities = 1595256
+[  1/106] SC4001 epochs=841 elapsed=5s
+[  2/106] SC4002 epochs=1127 elapsed=5s
+[  3/106] SC4011 epochs=1103 elapsed=6s
+[  4/106] SC4012 epochs=1186 elapsed=6s
+[  5/106] SC4021 epochs=1025 elapsed=7s
+[  6/106] SC4022 epochs=1009 elapsed=7s
+[  7/106] SC4031 epochs=952 elapsed=8s
+[  8/106] SC4032 epochs=911 elapsed=8s
+[  9/106] SC4081 epochs=1134 elapsed=9s
+[ 10/106] SC4082 epochs=1054 elapsed=9s
+[ 11/106] SC4101 epochs=1104 elapsed=10s
+[ 12/106] SC4102 epochs=1092 elapsed=10s
+[ 13/106] SC4111 epochs=928 elapsed=11s
+[ 14/106] SC4112 epochs=802 elapsed=11s
+[ 15/106] SC4121 epochs=1052 elapsed=12s
+[ 16/106] SC4122 epochs=977 elapsed=12s
+[ 17/106] SC4141 epochs=1004 elapsed=13s
+[ 18/106] SC4142 epochs=952 elapsed=13s
+[ 19/106] SC4151 epochs=952 elapsed=13s
+[ 20/106] SC4152 epochs=1762 elapsed=14s
+[ 21/106] SC4161 epochs=1144 elapsed=15s
+[ 22/106] SC4162 epochs=1003 elapsed=15s
+[ 23/106] SC4171 epochs=1002 elapsed=16s
+[ 24/106] SC4172 epochs=1773 elapsed=16s
+[ 25/106] SC4181 epochs=964 elapsed=17s
+[ 26/106] SC4182 epochs=920 elapsed=17s
+[ 27/106] SC4191 epochs=1535 elapsed=18s
+[ 28/106] SC4192 epochs=1274 elapsed=19s
+[ 29/106] SC4211 epochs=1578 elapsed=20s
+[ 30/106] SC4212 epochs=808 elapsed=20s
+[ 31/106] SC4221 epochs=1099 elapsed=21s
+[ 32/106] SC4222 epochs=1108 elapsed=21s
+[ 33/106] SC4231 epochs=904 elapsed=21s
+[ 34/106] SC4232 epochs=1729 elapsed=22s
+[ 35/106] SC4251 epochs=972 elapsed=23s
+[ 36/106] SC4252 epochs=1020 elapsed=23s
+[ 37/106] SC4271 epochs=1052 elapsed=24s
+[ 38/106] SC4272 epochs=1090 elapsed=24s
+[ 39/106] SC4281 epochs=1127 elapsed=24s
+[ 40/106] SC4282 epochs=1070 elapsed=25s
+[ 41/106] SC4291 epochs=1131 elapsed=25s
+[ 42/106] SC4292 epochs=1605 elapsed=26s
+[ 43/106] SC4301 epochs=929 elapsed=27s
+[ 44/106] SC4302 epochs=854 elapsed=27s
+[ 45/106] SC4311 epochs=1054 elapsed=27s
+[ 46/106] SC4312 epochs=1181 elapsed=28s
+[ 47/106] SC4321 epochs=1560 elapsed=28s
+[ 48/106] SC4322 epochs=1021 elapsed=29s
+[ 49/106] SC4331 epochs=1888 elapsed=30s
+[ 50/106] SC4332 epochs=1312 elapsed=30s
+[ 51/106] SC4341 epochs=1501 elapsed=31s
+[ 52/106] SC4342 epochs=1582 elapsed=32s
+[ 53/106] SC4351 epochs=976 elapsed=32s
+[ 54/106] SC4352 epochs=963 elapsed=33s
+[ 55/106] SC4362 epochs=824 elapsed=33s
+[ 56/106] SC4401 epochs=1064 elapsed=33s
+[ 57/106] SC4402 epochs=1072 elapsed=34s
+[ 58/106] SC4411 epochs=1078 elapsed=34s
+[ 59/106] SC4412 epochs=924 elapsed=35s
+[ 60/106] SC4431 epochs=699 elapsed=35s
+[ 61/106] SC4432 epochs=962 elapsed=35s
+[ 62/106] SC4441 epochs=1195 elapsed=36s
+[ 63/106] SC4442 epochs=1092 elapsed=36s
+[ 64/106] SC4491 epochs=1101 elapsed=37s
+[ 65/106] SC4492 epochs=1040 elapsed=37s
+[ 66/106] SC4501 epochs=1326 elapsed=38s
+[ 67/106] SC4502 epochs=1103 elapsed=38s
+[ 68/106] SC4511 epochs=1087 elapsed=38s
+[ 69/106] SC4512 epochs=954 elapsed=39s
+[ 70/106] SC4522 epochs=997 elapsed=39s
+[ 71/106] SC4531 epochs=1096 elapsed=40s
+[ 72/106] SC4532 epochs=1056 elapsed=40s
+[ 73/106] SC4551 epochs=1047 elapsed=40s
+[ 74/106] SC4552 epochs=1090 elapsed=41s
+[ 75/106] SC4561 epochs=1237 elapsed=41s
+[ 76/106] SC4562 epochs=1148 elapsed=42s
+[ 77/106] SC4571 epochs=1227 elapsed=42s
+[ 78/106] SC4572 epochs=1095 elapsed=43s
+[ 79/106] SC4591 epochs=1840 elapsed=44s
+[ 80/106] SC4592 epochs=1231 elapsed=44s
+[ 81/106] SC4611 epochs=1652 elapsed=45s
+[ 82/106] SC4612 epochs=1062 elapsed=45s
+[ 83/106] SC4631 epochs=1063 elapsed=46s
+[ 84/106] SC4632 epochs=1107 elapsed=46s
+[ 85/106] SC4651 epochs=2644 elapsed=48s
+[ 86/106] SC4652 epochs=1929 elapsed=49s
+[ 87/106] SC4661 epochs=2026 elapsed=50s
+[ 88/106] SC4662 epochs=1994 elapsed=51s
+[ 89/106] SC4671 epochs=1968 elapsed=52s
+[ 90/106] SC4672 epochs=1021 elapsed=52s
+[ 91/106] SC4701 epochs=1717 elapsed=53s
+[ 92/106] SC4702 epochs=1515 elapsed=54s
+[ 93/106] SC4721 epochs=1031 elapsed=54s
+[ 94/106] SC4722 epochs=1130 elapsed=55s
+[ 95/106] SC4731 epochs=2667 elapsed=56s
+[ 96/106] SC4732 epochs=2318 elapsed=57s
+[ 97/106] SC4741 epochs=2210 elapsed=58s
+[ 98/106] SC4742 epochs=1063 elapsed=59s
+[ 99/106] SC4761 epochs=1683 elapsed=59s
+[100/106] SC4762 epochs=2662 elapsed=61s
+[101/106] SC4771 epochs=1325 elapsed=61s
+[102/106] SC4772 epochs=1324 elapsed=62s
+[103/106] SC4811 epochs=1293 elapsed=62s
+[104/106] SC4812 epochs=1183 elapsed=63s
+[105/106] SC4821 epochs=1704 elapsed=64s
+[106/106] SC4822 epochs=1366 elapsed=64s
+computing SHA256 ...
+n_subjects: 54
+n_epochs: 132938
+n_units: 1595256
+float16_max_abs_error: 0.00048828125
+value_min: -1.4123404026031494
+value_max: 1.372857928276062
+fraction_abs_gt_1: 0.030551621808662686
+CACHE DONE
