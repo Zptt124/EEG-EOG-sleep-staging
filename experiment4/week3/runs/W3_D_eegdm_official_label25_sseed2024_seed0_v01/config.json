@@ -1,0 +1,58 @@
+{
+  "experiment": "W3 experiment D: linear probe on frozen features (B week-3 protocol)",
+  "arm": "eegdm_official",
+  "run_id": "W3_D_eegdm_official_label25_sseed2024_seed0_v01",
+  "features": "official EEGDM frozen (week-2 R1 cache: EEG Fpz-Cz cond14 + EOG cond14), std, 2560+2560",
+  "feature_files": [
+    "~/week2/cache/R1_eegdm_cond14_pooled_v01/eeg_pooled.npy",
+    "~/week2/cache/R1_eegdm_cond14_pooled_v01/eog_pooled.npy"
+  ],
+  "feature_index": "~/week2/cache/R1_eegdm_cond14_pooled_v01/sample_index.csv",
+  "feature_dim": 5120,
+  "nominal_budget": "label25",
+  "labeled_subjects": 14,
+  "sampling_seed": 2024,
+  "downstream_seed": 0,
+  "train_samples": 32310,
+  "val_samples": 21186,
+  "head": "Linear(5120,5)",
+  "optimizer": "AdamW lr=1e-3 wd=1e-4",
+  "batch_size": 128,
+  "standardization": "fit on training-side subjects only (fold-train in inner CV, all budget subjects for final)",
+  "selection": "B 27_b_w3_linear_probe: subject-wise CV K=5 fold_seed=0, 50 epochs per fold, epoch=argmax pooled OOF macro-F1 (ties -> earliest)",
+  "folds": [
+    [
+      "SC403",
+      "SC412",
+      "SC415"
+    ],
+    [
+      "SC417",
+      "SC419",
+      "SC427"
+    ],
+    [
+      "SC451",
+      "SC455",
+      "SC474"
+    ],
+    [
+      "SC421",
+      "SC436",
+      "SC456"
+    ],
+    [
+      "SC410",
+      "SC429"
+    ]
+  ],
+  "selected_epoch": 11,
+  "dev_used_for": "final evaluation only",
+  "test_used": false,
+  "b_code_commit": "8d218342c6ad6c8afa649824c1a18ccd189f9d07",
+  "evaluate_version": "v1",
+  "val_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de",
+  "predictions_sha256": "3392ae80a705db4f9ac482149c3e4e830d2d4c4c57a6a3b0a7a0998dd0b2fde9",
+  "final_updates": 2783,
+  "elapsed_seconds": 72.63
+}

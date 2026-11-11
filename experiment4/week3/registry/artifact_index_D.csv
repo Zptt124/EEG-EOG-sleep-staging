@@ -1,0 +1,3 @@
+artifact,release_tag,url,sha256,bytes,contents
+w3_d_pretrain_checkpoints_v01.zip,d-pretrain-w3-v01-20261112,https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/d-pretrain-w3-v01-20261112/w3_d_pretrain_checkpoints_v01.zip,56a506d04f6243c395f9fb5b557c70761f0f247c374c70d40dfc706b994d6122,60490101,"ckpt_step*.pt of W3_D_pretrain_m64x12_bs108_seed0_v01 (0/15k/30k/60k/120k/240k) and seed1_v01 (0/15k/30k); keys model, ema_model, model_kwargs"
+w3_d_probe_extras_v01.zip,d-pretrain-w3-v01-20261112,https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/d-pretrain-w3-v01-20261112/w3_d_probe_extras_v01.zip,a00bebd24bf73893ae41f90e012c96741fdbafbd851254220ebbcf8ac6ffac78,59478190,"oof_train.csv and final.ckpt of the 63 probe runs in experiment4/week3/runs"

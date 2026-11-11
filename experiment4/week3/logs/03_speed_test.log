@@ -1,0 +1,21 @@
+pool loaded: epochs=132938 units=1595256 (0s)
+data gather+copy per batch: 0.7 ms
+=== m64x12 {'d_model': 64, 'd_state': 64, 'n_layer': 12, 'd_cond': 256} batch=108 ===
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+Optimizer group 0 | 145 tensors | weight_decay 0.0
+Optimizer group 1 | 12 tensors | weight_decay 0.0
+Optimizer group 2 | 48 tensors | weight_decay 0.0
+  step     30 loss 0.4932 grad 2.481 step_time 458 ms
+  step     80 loss 0.2948 grad 2.376 step_time 466 ms
+  step    130 loss 0.1507 grad 1.040 step_time 480 ms
+  step    180 loss 0.1161 grad 1.267 step_time 498 ms
+  step    230 loss 0.1084 grad 0.920 step_time 512 ms
+  step    280 loss 0.0986 grad 0.847 step_time 516 ms
+  step    330 loss 0.0971 grad 0.887 step_time 518 ms
+  params=992,961 step=490 ms  windows/s=220  peak=5908 MiB  param_rel_change=6.91e-04
+  diag loss 0.5417 -> 0.0934; one full epoch = 14770 steps = 2.01 h (50%: 1.01 h)
+=== m64x16 {'d_model': 64, 'd_state': 64, 'n_layer': 16, 'd_cond': 256} batch=108 ===
+Optimizer group 0 | 189 tensors | weight_decay 0.0
+Optimizer group 1 | 16 tensors | weight_decay 0.0
+Optimizer group 2 | 64 tensors | weight_decay 0.0
