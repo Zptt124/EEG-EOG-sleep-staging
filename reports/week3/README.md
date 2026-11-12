@@ -10,25 +10,28 @@
 | 文件 | 内容 |
 | --- | --- |
 | [a_baseline_selection.md](a_baseline_selection.md) | ContraWR / ST-Transformer 核查、选择依据、适配决定、文献协议对照 |
-| [a_w3_reuse_check.md](a_w3_reuse_check.md) / .csv | 12 个 W2 CNN run 复用逐项核查(官方重跑比对) |
+| [a_w3_reuse_check.md](a_w3_reuse_check.md) / .csv | 12 个 W2 CNN run 复用核查(保留为 W2 交付核验记录;第三周因选模口径不同不再复用) |
 | [a_w3_main_grid.csv](a_w3_main_grid.csv) | 18 格主矩阵:方法×预算(5/14/54人)×seed(0-2),Macro-F1/N1 F1/各类 F1/N1 P/R |
 | [a_w3_paired_deltas.csv](a_w3_paired_deltas.csv) | 配对差 ContraWR − CNN(逐 seed + 按人配对 CI) |
 | [a_w3_eog_contrast.csv](a_w3_eog_contrast.csv) | EOG 对照 dual − eeg(label25,seed0-2) |
 | [a_w3_n1_rem_errors.csv](a_w3_n1_rem_errors.csv) | N1/REM 错误去向(逐 seed 混淆行占比,主矩阵与 EOG 对照两侧) |
 | [by_subject/](by_subject/) | 每个比较的逐人 Macro-F1 与差值 |
 | [budget_curves_w3.png](budget_curves_w3.png) | 5/14/54 人 Macro-F1 与 N1 F1 曲线(3 seed 均值,竖线=seed 范围) |
-| [run_registry.csv](run_registry.csv) | 9 个 W3 ContraWR run(completed)+ 12 个复用 W2 run(reused);列同 reports/week2/run_registry.csv |
+| [run_registry.csv](run_registry.csv) | 21 个 W3 run(completed):9 ContraWR v02 + 9 CNN dual + 3 CNN eeg;列同 reports/week2/run_registry.csv |
 | [metrics_summary.csv](metrics_summary.csv) | 同口径指标汇总(列同 reports/week2/metrics_summary.csv) |
-| [resource_profile.csv](resource_profile.csv) | 资源记录(参数/耗时/显存/吞吐;列同 reports/week2/resource_profile.csv) |
+| [resource_profile.csv](resource_profile.csv) | 资源记录(参数/耗时/显存;列同 reports/week2/resource_profile.csv) |
 | [paired_comparison.csv](paired_comparison.csv) | 配对比较登记(comparison − reference,uncertainty_unit=subject) |
 | [a_w3_results.md](a_w3_results.md) | 结果叙述、种子波动与限制(汇总脚本产出后补写) |
 
-## run_id 约定(第三周 A)
+## run_id 约定(第三周 A,2026-11-09 修订)
 
-- 新训练:`W3_A_CONTRAWR_<budget>_sseed2024_seed<N>_v01`(modalities=dual;
-  model 名替代 W2 的 modality 槽位,因第三周同模态存在两个模型,须在 id 中区分)
-- 复用:沿用 W2 run_id(W2_A_EEGEOG_* / W2_A_EEG_*),status=reused,
-  reuse_check_path=reports/week3/a_w3_reuse_check.md
+- 选模协议(与 B 一致):训练侧按人 K=min(5,人数) 折留出选轮(fold_seed=0),
+  开发集只用于最终评估一次;开发集早停(patience=10)自本修订起停用。
+- ContraWR:`W3_A_CONTRAWR_<budget>_sseed2024_seed<N>_v02`(v01 为开发集早停口径,已废止)
+- CNN dual:`W3_A_EEGEOG_<budget>_sseed2024_seed<N>_v01`(W2 的 W2_A_EEGEOG_* 为开发集
+  早停口径,不复用)
+- CNN EEG-only(EOG 对照):`W3_A_EEG_<budget>_sseed2024_seed<N>_v01`
+- 全部 21 格为新训练,status=completed;无 reused 行
 
 ## 实验B 文件(B,2026-11-07 起)
 

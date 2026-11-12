@@ -46,26 +46,31 @@
 
 ---
 
-## 附录:A 交付状态(2026-11-08,分支 feat/a-week3-baselines 已并入)
+## 附录:A 交付状态(2026-11-09 修订:训练侧选轮口径 v02)
 
-实验A 已完成,结果与证据:
+实验A 已完成并按第三周选模协议(训练侧按人 5 折留出选轮,开发集只最终评估一次,
+与 B 的 27_b_w3_linear_probe.py 同款)全部重训,结果与证据:
 
 - 基线选择与核查:[reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md)
   (选定 ContraWR;SleepTransformer 只做协议与实现核查)
-- W2 CNN run 复用核查(主矩阵 CNN 侧 9 格 + EOG 对照 6 格):12/12 通过
-  [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)
-- 9 个 ContraWR run 六件套:Release
-  [a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108)
+- 21 个 run(ContraWR v02 9 格 + CNN dual 9 格 + CNN EEG-only 3 格)六件套:
+  Release [a-w3-baselines-v02-20261109](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-w3-baselines-v02-20261109);
+  旧口径 Release a-contrawr-w3-v01-20261108 与 W2 复用(开发集早停)均已废止,
+  W2 复用核查保留为 W2 核验记录
 - 18 格主矩阵、配对差、EOG 对照、N1/REM 错误去向、曲线、资源表:
   [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md) 与
   reports/week3/{a_w3_main_grid,a_w3_paired_deltas,a_w3_eog_contrast,
   a_w3_n1_rem_errors,run_registry,metrics_summary,resource_profile,
-  paired_comparison}.csv
-- 代码:scripts/{contrawr_model,train_contrawr_w3,a_w3_reuse_check,a_w3_results,
-  a_w3_benchmark}.py
+  paired_comparison}.csv;每 run 附 inner_cv.csv 与 oof_train.csv
+- 代码:scripts/{w3_epoch_selection,train_cnn_w3,train_contrawr_w3,
+  a_w3_reuse_check,a_w3_results,a_w3_benchmark}.py
 
-主要结论(8 人开发集,按受试者配对 CI):
-14 人预算两模型 Macro-F1 持平(0.7416 vs 0.7415),ContraWR 的 N1 F1 更高
-(0.399 vs 0.363);54 人预算 CNN 高 0.008 Macro-F1(N1 差 3 seed 配对 CI 均不含 0);
-5 人预算 CNN 明显更强。EOG 贡献(14 人):Macro-F1 +0.019~0.030(CI 均不含 0),
-REM F1 +0.077~0.114,N1 精度升召回降。
+主要结论(8 人开发集,3 seed 均值,按受试者配对 CI):
+训练侧选轮下 ContraWR 三档 Macro-F1 均不低于 CNN(5 人 0.697 vs 0.672、
+14 人 0.742 vs 0.705、54 人 0.768 vs 0.760),N1 F1 在 5/14 人档明显更高
+(14 人 seed0 +0.289、seed2 +0.122,配对 CI 不含 0);旧口径下 CNN 的占优
+部分来自在开发集上调轮次(5 人档 CNN 新口径 −0.046)。CNN 在 5/14 人档训练侧
+选轮后种子不稳(N1 F1 跨 seed 标准差 0.11-0.12,含病态 seed),低预算结论以
+种子汇总为准。EOG 贡献(14 人):REM F1 三 seed 一致为正(+0.088~+0.140),
+Macro-F1/N1 方向被 dual 侧 CNN 种子不稳干扰,无稳定结论。
+

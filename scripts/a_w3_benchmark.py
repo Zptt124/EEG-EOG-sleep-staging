@@ -71,10 +71,10 @@ def main():
 
     rows = []
 
-    # ---- SmallCNN dual(W2 复用权重) ----
-    cnn_dir = runs / "W2_A_EEGEOG_label100_sseed2024_seed0_v01"
+    # ---- SmallCNN dual(W3 训练侧选轮权重) ----
+    cnn_dir = runs / "W3_A_EEGEOG_label100_sseed2024_seed0_v01"
     if not cnn_dir.exists():
-        sys.exit(f"缺少 W2 CNN run: {cnn_dir}")
+        sys.exit(f"缺少 W3 CNN run: {cnn_dir}")
     cnn = SmallCNN(in_channels=2).to(device)
     ckpt = torch.load(cnn_dir / "best.ckpt", map_location=device, weights_only=True)
     cnn.load_state_dict(ckpt["state_dict"])
@@ -84,7 +84,7 @@ def main():
         cnn, Xva, device, bs,
         transform=lambda xb: apply_normalization(xb, norm))
     rows.append({
-        "model": "SmallCNN dual (W2)", "run_id": cnn_dir.name,
+        "model": "SmallCNN dual (W3)", "run_id": cnn_dir.name,
         "batch_size": bs, "device": device,
         "parameters": cnn_params,
         "val_epochs_per_second": eps,
@@ -94,11 +94,11 @@ def main():
     del cnn, ckpt
     torch.cuda.empty_cache()
 
-    # ---- ContraWR dual(W3 权重) ----
-    cw_dir = runs / "W3_A_CONTRAWR_label100_sseed2024_seed0_v01"
+    # ---- ContraWR dual(W3 v02 权重) ----
+    cw_dir = runs / "W3_A_CONTRAWR_label100_sseed2024_seed0_v02"
     if not cw_dir.exists():
         print(f"跳过 ContraWR 基准:缺少 {cw_dir}(label100 seed0 完成后再跑一次本脚本)")
-        rows.append({"model": "ContraWR dual (W3)", "run_id": "W3_A_CONTRAWR_label100_sseed2024_seed0_v01",
+        rows.append({"model": "ContraWR dual (W3 v02)", "run_id": cw_dir.name,
                      "batch_size": bs, "device": device, "parameters": "",
                      "val_epochs_per_second": "", "inference_peak_memory_mib": "",
                      "train_elapsed_seconds": ""})
