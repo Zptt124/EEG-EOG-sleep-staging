@@ -1,6 +1,19 @@
 # EEG–EOG 睡眠分期研究
 
-## 当前阶段：第三周 W3
+## 当前阶段 · Week 4（2026-11-14）
+
+本周验证小 EEGDM 的预训练停止点、LFT 的读出效率，以及同步 EEG 条件能否改善 EOG-only 睡眠分期。
+
+| 实验 | 本周任务 | 优先交接 |
+| --- | --- | --- |
+| A | 比较 1 秒与 2 秒 std pooling 的 LFT 耗时和分数，实现同窗 EEG 条件并训练 30k 步 | 第 2 天给 C 池化对照和推荐配置，第 3 天给 B 跨模态实现 |
+| B | 固定预训练验证名单和分段 MSE，训练错时 EEG 对照，评估生成质量并统一复评 | 第 1 天给 A、D held-out 名单与 MSE 脚本，第 6 天上午给 C、D 跨模态三组汇总 |
+| C | 定稿跨模态三组比较规则，筛查 linear / LFT × pretrained / random-init | 第 1 天给 A、B、D [跨模态三组对照规则](experiment3/week4/cross_modal_protocol.md)，第 6 天下午给 D 判读结论 |
+| D | 维护公共训练脚本，确定预训练停止点，筛查 self-conditioning | 第 2 天给 A、B 公共脚本，第 3 天给 A、B、C 共享的无 EEG 30k checkpoint |
+
+新一轮预训练从 54 人训练池中留出 8 名不在 14 人标签名单中的受试者做验证。下游沿用 5 人和 14 人预算，按人五折在训练侧选轮，全预算重训后在 8 人开发集最终评分。16 人测试集继续封存。跨模态三组使用相同的 30k 训练预算，下游统一只输入 EOG，主指标为 N1 AP 和 Macro-F1。
+
+## 第三周 W3
 
 [第三周工作安排](WEEK3.md) · [四天方案 PDF](docs/week3/work_plan_W3.pdf) · [交接登记](HANDOFF.md#第三周交接)
 
