@@ -24,17 +24,16 @@ mean 的 N1 损失主要在判定门槛（N1 AP 仅 −0.018）。t=10/25 的 Ma
 
 **2026-11-12 C 主对照补跑完成。** [训练侧五折结果](experiment3/week3/inner_cv_v01/README.md)提供三组 C1 的选轮曲线、折外与开发预测，以及与 B Release 中三个同 seed C0 的逐样本配对。
 
-**2026-11-08 A第三周交付(PR #15):** 实验A 基线比较完成。交付物:基线选择与核查
+**2026-11-09 A第三周交付 v02(训练侧选轮,PR 待开):** 实验A 基线比较按第三周选模协议重训完成。交付物:基线选择与核查
 [reports/week3/a_baseline_selection.md](reports/week3/a_baseline_selection.md);
-W2 复用核查 [reports/week3/a_w3_reuse_check.md](reports/week3/a_w3_reuse_check.md)(12/12 通过);
-9 个 ContraWR run 六件套已发布 Release
-[a-contrawr-w3-v01-20261108](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-contrawr-w3-v01-20261108);
+21 个 run 六件套(+inner_cv.csv/oof_train.csv)已发布 Release
+[a-w3-baselines-v02-20261109](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/a-w3-baselines-v02-20261109);
 18 格主矩阵/配对差/EOG 对照/错误去向/曲线/资源表见
 [reports/week3/a_w3_results.md](reports/week3/a_w3_results.md)。
 A → B:登记表 reports/week3/{run_registry,metrics_summary,resource_profile,paired_comparison}.csv
-与逐段预测(新 run 六件套内),请 B 按 sample_id 核对覆盖并汇总;第三周四档曲线 CNN
-部分含 5/14/54 三档(27 人 label50 沿用 W2)。
-
+与逐段预测(新 run 六件套内),请 B 按 sample_id 核对覆盖并汇总(此前的
+b_a_w3_registry.csv 为旧口径登记,请以 v02 为准更新);每 run 的 oof_train.csv
+可直接用于 N1 分数调整。
 **2026-11-02 C追加两项验证已完成：** [EEG-only多名单与按受试者留出：报告、完整预测和模型下载](experiment3/week2/ADDITIONAL_VALIDATION.md)。前者固定8人上平均+0.136pp，后者按折重训9个主干后平均−0.042pp，尚未确认稳定跨人适配收益；新增96份最终预测、216次内层拟合，全部本地审计通过。新结果独立于原W2全组登记，等待B独立复评；测试集封存。
 
 **C→B 特征下载补充（2026-10-31）：** [EEG/EOG 两份完整池化 NPZ](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-pooled-features-v01-20261031)已发布到 GitHub Release；各154124×2560、float32、未标准化，键为sample_id和x，附样本索引、SHA和B接口核验。EEG为原始冻结S0，EOG为C按D同协议本地重建。

@@ -44,14 +44,18 @@
 3. 标准化:上游无标准化;按协议"标准化只拟合本预算有标签者"扩展为
    **每 (谱图分量, 频率 bin) 标量 z-score**(4×129 个统计量,训练侧拟合,
    验证用同一统计;normalization.json 记录方法与拟合对象)。
-4. 训练规则与组内统一:种子在模型构造前设定、Adam、batch=128、上限 60 epoch、
-   验证 Macro-F1 早停 patience=10、cudnn 确定性;lr 保留上游文献值 2e-4
-   (CNN 为 1e-3,两者记录在 config.yaml/resource 表)。
+4. 训练规则与组内统一:种子在模型构造前设定、Adam、batch=128;lr 保留上游文献值
+   2e-4(CNN 为 1e-3,两者记录在 config.yaml/resource 表)。
+   **选轮(第三周协议,2026-11-09 修订):开发集只用于最终评估一次;轮次在训练侧
+   按受试者 K=min(5,人数) 折留出选择(fold_seed=0,与 B 27_b_w3_linear_probe.py
+   同款):每折固定训练 60 轮、逐轮对留出折预测,拼接 OOF 取 Macro-F1 最高轮次
+   E*(并列取最早),再在全部预算内训练者上同 seed 重训 E* 轮。** 早停
+   patience=10(开发集口径)自本修订起停用,v01 的 9 个 ContraWR run 已废止。
 5. 评估:一律 B 官方 `src/evaluation/evaluate.py --reference manifests/val_reference_v1.csv`。
 6. 自监督预训练**不跑**(第三周协议为监督基线比较;上游 SSL 分支仅记录;
    若日后复现 SSL,按论文值 100 epoch/lr 2e-4/T=2 而非仓库 argparse 默认)。
-7. 上限 60 epoch(上游 100)与早停 patience=10(上游无 Macro-F1 早停)为组内
-   统一训练规则的一部分,记录于 config.yaml。
+7. 上限 60 epoch(上游 100)与折内固定 60 轮扫描为组内统一训练规则的一部分,
+   记录于 config.yaml。
 
 ## 3. ST-Transformer / SleepTransformer(协议与实现核查,不运行)
 
@@ -89,7 +93,7 @@ L=21 序列需全组先定上下文规则)。
 | 标准化 | 每通道/每 bin 标量 z-score,训练侧拟合 | 无 | 每频 bin z-score,训练集拟合 |
 | 优化 | Adam lr=1e-3(CNN)/2e-4(ContraWR) | Adam 2e-4 | Adam 1e-4 |
 | 批大小 | 128 | 128 | 32 序列 |
-| 选模 | 8 人验证 Macro-F1,patience=10 | accuracy | 校验步早停 |
+| 选模 | 训练侧按人 5 折留出选轮,开发集只最终评估一次(第三周) | accuracy | 校验步早停 |
 | 种子 | 配对种子 0-2 | 1234 单种子 | 未报告多种子 |
 
 资源实测(本机 RTX 4060 Laptop 8GB,同设备同 batch=128)见
@@ -100,5 +104,9 @@ L=21 序列需全组先定上下文规则)。
 - [x] 核对现有 CNN 配置与结果(W2 48 run 全部官方评估通过)
 - [x] ContraWR 实现核查(上游 commit/许可/输入/预处理/划分)并完成 PyTorch 重实现
 - [x] ST-Transformer 实现与协议核查(TF1 死路 + L=21 上下文冲突,本轮不运行)
-- [ ] 9 个 ContraWR run(label10/25/100 × seed0-2)与资源记录
-- [ ] 18 格配对比较表、标签效率曲线、EOG 对照与逐段预测
+- [x] 2026-11-09 选模协议修订:训练侧按人 5 折留出选轮(与 B 一致),开发集只最终评估;
+  v01 9 个 ContraWR run(开发集早停)废止
+- [ ] 21 个新 run(CNN dual/eeg + ContraWR v02 × 5/14/54 人 × seed0-2)与资源记录
+- [ ] 18 格配对比较表、标签效率曲线、EOG 对照与逐段预测(新口径)
+- 注:W2 run 复用核查(a_w3_reuse_check.md)保留为 W2 交付的核验记录;第三周主矩阵
+  CNN 侧因选模口径不同不再复用 W2 run,改为 W3 新训练。

@@ -1,49 +1,49 @@
 comparison_id,side,seed,stage,support,to_W,to_N1,to_N2,to_N3,to_REM
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,ContraWR,0,N1,2623,0.2882,0.199,0.3633,0.0008,0.1487
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,ContraWR,0,REM,2271,0.0705,0.1048,0.1264,0.0,0.6984
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,CNN(复用W2),0,N1,2623,0.1445,0.5421,0.2375,0.0004,0.0755
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,CNN(复用W2),0,REM,2271,0.0299,0.2158,0.1,0.0,0.6543
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,ContraWR,1,N1,2623,0.2749,0.2749,0.2966,0.0008,0.1529
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,ContraWR,1,REM,2271,0.081,0.1229,0.1083,0.0004,0.6874
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,CNN(复用W2),1,N1,2623,0.2516,0.3584,0.2737,0.0011,0.1151
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,CNN(复用W2),1,REM,2271,0.0951,0.1123,0.1061,0.0,0.6865
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,ContraWR,2,N1,2623,0.2665,0.207,0.3229,0.0004,0.2032
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,ContraWR,2,REM,2271,0.0564,0.1105,0.0911,0.0,0.742
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,CNN(复用W2),2,N1,2623,0.3115,0.3317,0.2013,0.0004,0.1552
-W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,CNN(复用W2),2,REM,2271,0.0674,0.1559,0.0894,0.0,0.6874
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,ContraWR,0,N1,2623,0.2299,0.3828,0.2734,0.0004,0.1136
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,ContraWR,0,REM,2271,0.037,0.1347,0.092,0.0,0.7362
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,CNN(复用W2),0,N1,2623,0.3042,0.2734,0.3519,0.0004,0.0701
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,CNN(复用W2),0,REM,2271,0.1074,0.1008,0.1422,0.0,0.6495
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,ContraWR,1,N1,2623,0.2436,0.3629,0.2825,0.0,0.1109
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,ContraWR,1,REM,2271,0.0357,0.1211,0.0973,0.0,0.7459
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,CNN(复用W2),1,N1,2623,0.2714,0.3725,0.2913,0.0011,0.0637
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,CNN(复用W2),1,REM,2271,0.0718,0.1171,0.1162,0.0,0.6948
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,ContraWR,0,N1,2623,0.3233,0.2021,0.3526,0.0008,0.1212
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,ContraWR,0,REM,2271,0.1061,0.1365,0.1369,0.0,0.6204
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,CNN(W3 训练侧选轮),0,N1,2623,0.3805,0.252,0.22,0.0004,0.1472
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed0,CNN(W3 训练侧选轮),0,REM,2271,0.0674,0.0771,0.0841,0.0,0.7715
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,ContraWR,1,N1,2623,0.2875,0.2722,0.3,0.0011,0.1392
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,ContraWR,1,REM,2271,0.0779,0.1123,0.1167,0.0,0.6931
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,CNN(W3 训练侧选轮),1,N1,2623,0.337,0.0541,0.3332,0.0004,0.2753
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed1,CNN(W3 训练侧选轮),1,REM,2271,0.0524,0.007,0.1061,0.0,0.8344
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,ContraWR,2,N1,2623,0.2592,0.2139,0.3,0.0004,0.2265
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,ContraWR,2,REM,2271,0.074,0.1154,0.0806,0.0,0.7301
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,CNN(W3 训练侧选轮),2,N1,2623,0.3477,0.268,0.3404,0.0004,0.0435
+W3_CONTRAWR_dual_minus_CNN_dual_label10_seed2,CNN(W3 训练侧选轮),2,REM,2271,0.1409,0.1722,0.2492,0.0,0.4377
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,ContraWR,0,N1,2623,0.2429,0.4075,0.2512,0.0004,0.098
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,ContraWR,0,REM,2271,0.0317,0.1594,0.0797,0.0,0.7292
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,CNN(W3 训练侧选轮),0,N1,2623,0.456,0.0682,0.3725,0.0011,0.1022
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed0,CNN(W3 训练侧选轮),0,REM,2271,0.1088,0.0128,0.1726,0.0,0.7059
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,ContraWR,1,N1,2623,0.2638,0.3652,0.2863,0.0008,0.0839
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,ContraWR,1,REM,2271,0.0436,0.1387,0.0991,0.0,0.7186
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,CNN(W3 训练侧选轮),1,N1,2623,0.3244,0.3149,0.2718,0.0019,0.0869
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed1,CNN(W3 训练侧选轮),1,REM,2271,0.114,0.092,0.1083,0.0,0.6856
 W3_CONTRAWR_dual_minus_CNN_dual_label25_seed2,ContraWR,2,N1,2623,0.2368,0.3656,0.2894,0.0008,0.1075
 W3_CONTRAWR_dual_minus_CNN_dual_label25_seed2,ContraWR,2,REM,2271,0.0361,0.1088,0.0995,0.0,0.7556
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed2,CNN(复用W2),2,N1,2623,0.2127,0.2695,0.3763,0.0004,0.1411
-W3_CONTRAWR_dual_minus_CNN_dual_label25_seed2,CNN(复用W2),2,REM,2271,0.0264,0.0616,0.1281,0.0,0.7838
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,ContraWR,0,N1,2623,0.2272,0.3931,0.2936,0.0008,0.0854
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,ContraWR,0,REM,2271,0.0313,0.096,0.0872,0.0004,0.7851
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,CNN(复用W2),0,N1,2623,0.114,0.5379,0.2604,0.0011,0.0865
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,CNN(复用W2),0,REM,2271,0.0141,0.0951,0.0867,0.0,0.8041
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,ContraWR,1,N1,2623,0.2215,0.3839,0.2852,0.0004,0.109
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,ContraWR,1,REM,2271,0.026,0.0898,0.0889,0.0,0.7952
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,CNN(复用W2),1,N1,2623,0.1487,0.5021,0.2505,0.0004,0.0984
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,CNN(复用W2),1,REM,2271,0.0172,0.0841,0.0797,0.0,0.819
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,ContraWR,2,N1,2623,0.2246,0.4053,0.2734,0.0019,0.0949
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,ContraWR,2,REM,2271,0.0273,0.0894,0.0806,0.0,0.8027
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,CNN(复用W2),2,N1,2623,0.1575,0.5494,0.2345,0.0011,0.0576
-W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,CNN(复用W2),2,REM,2271,0.0242,0.1638,0.0982,0.0,0.7138
-W3_EOG_dual_minus_eeg_label25_seed0,dual,0,N1,2623,0.3042,0.2734,0.3519,0.0004,0.0701
-W3_EOG_dual_minus_eeg_label25_seed0,dual,0,REM,2271,0.1074,0.1008,0.1422,0.0,0.6495
-W3_EOG_dual_minus_eeg_label25_seed0,eeg,0,N1,2623,0.2059,0.4369,0.2421,0.0004,0.1148
-W3_EOG_dual_minus_eeg_label25_seed0,eeg,0,REM,2271,0.044,0.2329,0.1299,0.0,0.5931
-W3_EOG_dual_minus_eeg_label25_seed1,dual,1,N1,2623,0.2714,0.3725,0.2913,0.0011,0.0637
-W3_EOG_dual_minus_eeg_label25_seed1,dual,1,REM,2271,0.0718,0.1171,0.1162,0.0,0.6948
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed2,CNN(W3 训练侧选轮),2,N1,2623,0.403,0.1906,0.326,0.0004,0.0801
+W3_CONTRAWR_dual_minus_CNN_dual_label25_seed2,CNN(W3 训练侧选轮),2,REM,2271,0.1347,0.0528,0.1299,0.0,0.6825
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,ContraWR,0,N1,2623,0.2497,0.3458,0.2936,0.0,0.1109
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,ContraWR,0,REM,2271,0.033,0.0647,0.0929,0.0,0.8093
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,CNN(W3 训练侧选轮),0,N1,2623,0.2383,0.2711,0.2749,0.0011,0.2146
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed0,CNN(W3 训练侧选轮),0,REM,2271,0.0238,0.033,0.0515,0.0004,0.8912
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,ContraWR,1,N1,2623,0.2017,0.3995,0.3035,0.0004,0.0949
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,ContraWR,1,REM,2271,0.0233,0.0832,0.0991,0.0,0.7944
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,CNN(W3 训练侧选轮),1,N1,2623,0.1971,0.3473,0.3443,0.0011,0.1102
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed1,CNN(W3 训练侧选轮),1,REM,2271,0.0264,0.0484,0.0854,0.0,0.8397
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,ContraWR,2,N1,2623,0.2318,0.3599,0.2901,0.0008,0.1174
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,ContraWR,2,REM,2271,0.0282,0.0608,0.0964,0.0,0.8146
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,CNN(W3 训练侧选轮),2,N1,2623,0.2238,0.4472,0.2299,0.0023,0.0968
+W3_CONTRAWR_dual_minus_CNN_dual_label100_seed2,CNN(W3 训练侧选轮),2,REM,2271,0.0449,0.0722,0.0687,0.0,0.8142
+W3_EOG_dual_minus_eeg_label25_seed0,dual,0,N1,2623,0.456,0.0682,0.3725,0.0011,0.1022
+W3_EOG_dual_minus_eeg_label25_seed0,dual,0,REM,2271,0.1088,0.0128,0.1726,0.0,0.7059
+W3_EOG_dual_minus_eeg_label25_seed0,eeg,0,N1,2623,0.3351,0.2604,0.297,0.0015,0.106
+W3_EOG_dual_minus_eeg_label25_seed0,eeg,0,REM,2271,0.1158,0.1369,0.1559,0.0,0.5914
+W3_EOG_dual_minus_eeg_label25_seed1,dual,1,N1,2623,0.3244,0.3149,0.2718,0.0019,0.0869
+W3_EOG_dual_minus_eeg_label25_seed1,dual,1,REM,2271,0.114,0.092,0.1083,0.0,0.6856
 W3_EOG_dual_minus_eeg_label25_seed1,eeg,1,N1,2623,0.2013,0.3953,0.3183,0.0004,0.0846
 W3_EOG_dual_minus_eeg_label25_seed1,eeg,1,REM,2271,0.0449,0.2193,0.1893,0.0,0.5465
-W3_EOG_dual_minus_eeg_label25_seed2,dual,2,N1,2623,0.2127,0.2695,0.3763,0.0004,0.1411
-W3_EOG_dual_minus_eeg_label25_seed2,dual,2,REM,2271,0.0264,0.0616,0.1281,0.0,0.7838
-W3_EOG_dual_minus_eeg_label25_seed2,eeg,2,N1,2623,0.2448,0.3069,0.2814,0.0011,0.1658
-W3_EOG_dual_minus_eeg_label25_seed2,eeg,2,REM,2271,0.0542,0.111,0.1374,0.0,0.6975
+W3_EOG_dual_minus_eeg_label25_seed2,dual,2,N1,2623,0.403,0.1906,0.326,0.0004,0.0801
+W3_EOG_dual_minus_eeg_label25_seed2,dual,2,REM,2271,0.1347,0.0528,0.1299,0.0,0.6825
+W3_EOG_dual_minus_eeg_label25_seed2,eeg,2,N1,2623,0.3332,0.215,0.3317,0.0004,0.1197
+W3_EOG_dual_minus_eeg_label25_seed2,eeg,2,REM,2271,0.1616,0.1149,0.1753,0.0,0.5482
