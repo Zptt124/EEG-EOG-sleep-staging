@@ -1,0 +1,43 @@
+{
+  "run_name": "W3_D_pretrain_m64x12_bs108_seed0_v01",
+  "feature_tag": "step30000_ema_model",
+  "pooling": "std",
+  "modalities": [
+    "eeg",
+    "eog"
+  ],
+  "feature_dim": 1536,
+  "head": "Linear(D,5)",
+  "optimizer": "AdamW lr 1e-3 wd 1e-4",
+  "batch": 128,
+  "max_epochs": 50,
+  "early_stopping": "inner-val macro-F1 strictly better, patience 10",
+  "inner_train_subjects": [
+    "SC410",
+    "SC417",
+    "SC419",
+    "SC421",
+    "SC427",
+    "SC429",
+    "SC436",
+    "SC451",
+    "SC455",
+    "SC456",
+    "SC474"
+  ],
+  "inner_val_subjects": [
+    "SC403",
+    "SC412",
+    "SC415"
+  ],
+  "inner_seed": 0,
+  "standardization": "mean/std on inner-train samples only",
+  "head_seed": 0,
+  "best_inner_val_macro_f1": 0.7925410695134948,
+  "epochs_run": 28,
+  "seconds": 5.1837154290114995,
+  "n_inner_train": 25704,
+  "n_inner_val": 6606,
+  "n_val": 21186,
+  "label_list": "label_subsets_v2.csv sampling_seed 2024 label25 (14 subjects)"
+}

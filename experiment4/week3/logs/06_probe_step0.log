@@ -1,0 +1,6 @@
+inner train (11): ['SC410', 'SC417', 'SC419', 'SC421', 'SC427', 'SC429', 'SC436', 'SC451', 'SC455', 'SC456', 'SC474']
+inner val (3): ['SC403', 'SC412', 'SC415']
+step0_ema_model_std_eegeog_head0: epochs=23 inner_val=0.7520 | val macroF1=0.6997 N1-F1=0.2880 (7s)
+step0_ema_model_std_eegeog_head1: epochs=16 inner_val=0.7532 | val macroF1=0.6964 N1-F1=0.3120 (3s)
+step0_ema_model_std_eegeog_head2: epochs=20 inner_val=0.7565 | val macroF1=0.7021 N1-F1=0.3244 (4s)
+PROBE DONE

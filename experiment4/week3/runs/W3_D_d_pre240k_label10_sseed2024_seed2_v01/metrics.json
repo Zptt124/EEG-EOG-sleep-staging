@@ -1,0 +1,88 @@
+{
+  "accuracy": 0.794628528273388,
+  "macro_f1": 0.7264945240046545,
+  "per_class_f1": {
+    "W": 0.8904547530501729,
+    "N1": 0.3366167023554604,
+    "N2": 0.8503196690485144,
+    "N3": 0.8261700095510983,
+    "REM": 0.7289114860180265
+  },
+  "per_class_precision": {
+    "W": 0.866980053360437,
+    "N1": 0.3839765510503175,
+    "N2": 0.8252828811290911,
+    "N3": 0.8710976837865055,
+    "REM": 0.767023346303502
+  },
+  "per_class_recall": {
+    "W": 0.9152360515021459,
+    "N1": 0.29965688143347313,
+    "N2": 0.8769230769230769,
+    "N3": 0.7856494096276113,
+    "REM": 0.6944077498899164
+  },
+  "per_class_support": {
+    "W": 7456,
+    "N1": 2623,
+    "N2": 7735,
+    "N3": 1101,
+    "REM": 2271
+  },
+  "n1_precision": 0.3839765510503175,
+  "n1_recall": 0.29965688143347313,
+  "n1_f1": 0.3366167023554604,
+  "confusion_matrix": [
+    [
+      6824,
+      394,
+      107,
+      21,
+      110
+    ],
+    [
+      864,
+      786,
+      796,
+      3,
+      174
+    ],
+    [
+      87,
+      566,
+      6783,
+      104,
+      195
+    ],
+    [
+      2,
+      1,
+      233,
+      865,
+      0
+    ],
+    [
+      94,
+      300,
+      300,
+      0,
+      1577
+    ]
+  ],
+  "n_epochs": 21186,
+  "n_subjects": 8,
+  "class_order": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "evaluate_version": "v1",
+  "source": "<D_ROOT>/week3-1/exp_d_pretrain/runs_bprotocol/W3_D_d_pre240k_label10_sseed2024_seed2_v01/predictions_val.csv",
+  "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43",
+  "sample_set_reference": "~/repos/w3_main/manifests/val_reference_v1.csv",
+  "run_id": "W3_D_d_pre240k_label10_sseed2024_seed2_v01",
+  "selected_epoch": 24,
+  "oof_macro_f1_at_selected": 0.7136238347095999
+}

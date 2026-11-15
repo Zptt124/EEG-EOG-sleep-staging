@@ -1,0 +1,47 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+[ 1/43] SC4031 labeled_train n=952 elapsed=21s
+[ 2/43] SC4032 labeled_train n=911 elapsed=41s
+[ 3/43] SC4061 val n=843 elapsed=60s
+[ 4/43] SC4062 val n=1016 elapsed=83s
+[ 5/43] SC4091 val n=1132 elapsed=109s
+[ 6/43] SC4092 val n=1104 elapsed=134s
+[ 7/43] SC4101 labeled_train n=1104 elapsed=159s
+[ 8/43] SC4102 labeled_train n=1092 elapsed=184s
+[ 9/43] SC4121 labeled_train n=1052 elapsed=208s
+[10/43] SC4122 labeled_train n=977 elapsed=231s
+[11/43] SC4151 labeled_train n=952 elapsed=252s
+[12/43] SC4152 labeled_train n=1762 elapsed=293s
+[13/43] SC4171 labeled_train n=1002 elapsed=315s
+[14/43] SC4172 labeled_train n=1773 elapsed=356s
+[15/43] SC4191 labeled_train n=1535 elapsed=391s
+[16/43] SC4192 labeled_train n=1274 elapsed=420s
+[17/43] SC4211 labeled_train n=1578 elapsed=456s
+[18/43] SC4212 labeled_train n=808 elapsed=474s
+[19/43] SC4271 labeled_train n=1052 elapsed=498s
+[20/43] SC4272 labeled_train n=1090 elapsed=523s
+[21/43] SC4291 labeled_train n=1131 elapsed=549s
+[22/43] SC4292 labeled_train n=1605 elapsed=585s
+[23/43] SC4362 labeled_train n=824 elapsed=604s
+[24/43] SC4421 val n=785 elapsed=622s
+[25/43] SC4422 val n=884 elapsed=642s
+[26/43] SC4481 val n=2027 elapsed=689s
+[27/43] SC4482 val n=1910 elapsed=732s
+[28/43] SC4511 labeled_train n=1087 elapsed=757s
+[29/43] SC4512 labeled_train n=954 elapsed=779s
+[30/43] SC4551 labeled_train n=1047 elapsed=803s
+[31/43] SC4552 labeled_train n=1090 elapsed=827s
+[32/43] SC4561 labeled_train n=1237 elapsed=855s
+[33/43] SC4562 labeled_train n=1148 elapsed=882s
+[34/43] SC4621 val n=1445 elapsed=915s
+[35/43] SC4622 val n=1823 elapsed=957s
+[36/43] SC4711 val n=1413 elapsed=989s
+[37/43] SC4712 val n=1241 elapsed=1017s
+[38/43] SC4741 labeled_train n=2210 elapsed=1067s
+[39/43] SC4742 labeled_train n=1063 elapsed=1091s
+[40/43] SC4751 val n=2044 elapsed=1138s
+[41/43] SC4752 val n=1049 elapsed=1164s
+[42/43] SC4801 val n=1241 elapsed=1193s
+[43/43] SC4802 val n=1229 elapsed=1221s
+samples=53496 seconds=1221 peak_gpu=2229 MiB
+FEATURES DONE

@@ -1,0 +1,49 @@
+{
+  "experiment": "W3 experiment D: linear probe on frozen features (B week-3 protocol)",
+  "arm": "s1_pre030k",
+  "run_id": "W3_D_s1_pre030k_label10_sseed2024_seed1_v01",
+  "features": "D small backbone W3_D_pretrain_m64x12_bs108_seed1_v01 step30000_ema_model, eeg+eog, std pooling",
+  "feature_files": [
+    "~/week3-1/features/W3_D_pretrain_m64x12_bs108_seed1_v01/step30000_ema_model/eeg_std.npy",
+    "~/week3-1/features/W3_D_pretrain_m64x12_bs108_seed1_v01/step30000_ema_model/eog_std.npy"
+  ],
+  "feature_index": "~/week3-1/features/W3_D_pretrain_m64x12_bs108_seed1_v01/step30000_ema_model/index.csv",
+  "feature_dim": 1536,
+  "nominal_budget": "label10",
+  "labeled_subjects": 5,
+  "sampling_seed": 2024,
+  "downstream_seed": 1,
+  "train_samples": 11936,
+  "val_samples": 21186,
+  "head": "Linear(1536,5)",
+  "optimizer": "AdamW lr=1e-3 wd=1e-4",
+  "batch_size": 128,
+  "standardization": "fit on training-side subjects only (fold-train in inner CV, all budget subjects for final)",
+  "selection": "B 27_b_w3_linear_probe: subject-wise CV K=5 fold_seed=0, 50 epochs per fold, epoch=argmax pooled OOF macro-F1 (ties -> earliest)",
+  "folds": [
+    [
+      "SC421"
+    ],
+    [
+      "SC474"
+    ],
+    [
+      "SC456"
+    ],
+    [
+      "SC403"
+    ],
+    [
+      "SC412"
+    ]
+  ],
+  "selected_epoch": 34,
+  "dev_used_for": "final evaluation only",
+  "test_used": false,
+  "b_code_commit": "8d218342c6ad6c8afa649824c1a18ccd189f9d07",
+  "evaluate_version": "v1",
+  "val_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de",
+  "predictions_sha256": "9180af4840e4cfaf11b4e984c4bd6fb1c2afdbd7db931e84d2787303ca14fedc",
+  "final_updates": 3196,
+  "elapsed_seconds": 14.22
+}

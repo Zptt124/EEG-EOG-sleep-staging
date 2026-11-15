@@ -1,0 +1,90 @@
+{
+  "run_name": "W3_D_pretrain_m64x12_bs108_seed0_v01",
+  "random_tag": "step0_ema_model",
+  "pretrained_tag": "step120000_ema_model",
+  "feature_suffix": "std_eegeog",
+  "head_seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_dev_subjects": 8,
+  "caveat": "single pretraining run (pilot); 8 dev subjects reused across experiments; CI = subject bootstrap of seed-averaged per-subject deltas",
+  "results": {
+    "macro_f1": {
+      "random_mean": 0.6994000000000001,
+      "pretrained_mean": 0.7257666666666666,
+      "delta_mean_over_seeds": 0.026333333333333334,
+      "delta_sd_over_seeds": 0.007086842268128544,
+      "n_seeds_positive": 3,
+      "per_subject_delta_mean": 0.034562499999999996,
+      "per_subject_ci95": [
+        0.0049625,
+        0.06670062499999999
+      ],
+      "n_subjects_positive": 7
+    },
+    "n1_f1": {
+      "random_mean": 0.3081333333333333,
+      "pretrained_mean": 0.36200000000000004,
+      "delta_mean_over_seeds": 0.05386666666666667,
+      "delta_sd_over_seeds": 0.015344814542161571,
+      "n_seeds_positive": 3,
+      "per_subject_delta_mean": 0.029312500000000005,
+      "per_subject_ci95": [
+        -0.059637499999999996,
+        0.104025
+      ],
+      "n_subjects_positive": 5
+    },
+    "n1_precision": {
+      "random_mean": 0.45246666666666663,
+      "pretrained_mean": 0.44806666666666667,
+      "delta_mean_over_seeds": -0.004366666666666667,
+      "delta_sd_over_seeds": 0.026541351384835953,
+      "n_seeds_positive": 1
+    },
+    "n1_recall": {
+      "random_mean": 0.23433333333333337,
+      "pretrained_mean": 0.3088,
+      "delta_mean_over_seeds": 0.07446666666666667,
+      "delta_sd_over_seeds": 0.03232094264301914,
+      "n_seeds_positive": 3
+    },
+    "n1_ap": {
+      "random_mean": 0.36643333333333333,
+      "pretrained_mean": 0.38703333333333334,
+      "delta_mean_over_seeds": 0.020599999999999997,
+      "delta_sd_over_seeds": 0.01636429039097021,
+      "n_seeds_positive": 3
+    },
+    "rem_f1": {
+      "random_mean": 0.6434000000000001,
+      "pretrained_mean": 0.6889666666666666,
+      "delta_mean_over_seeds": 0.045533333333333335,
+      "delta_sd_over_seeds": 0.02088787527091574,
+      "n_seeds_positive": 3
+    },
+    "w_f1": {
+      "random_mean": 0.8811333333333334,
+      "pretrained_mean": 0.8927999999999999,
+      "delta_mean_over_seeds": 0.0117,
+      "delta_sd_over_seeds": 0.007916438593205913,
+      "n_seeds_positive": 3
+    },
+    "n2_f1": {
+      "random_mean": 0.8378,
+      "pretrained_mean": 0.8539333333333333,
+      "delta_mean_over_seeds": 0.0161,
+      "delta_sd_over_seeds": 0.014075510647930325,
+      "n_seeds_positive": 3
+    },
+    "n3_f1": {
+      "random_mean": 0.8266,
+      "pretrained_mean": 0.8311666666666667,
+      "delta_mean_over_seeds": 0.004533333333333333,
+      "delta_sd_over_seeds": 0.005076744363598913,
+      "n_seeds_positive": 3
+    }
+  }
+}

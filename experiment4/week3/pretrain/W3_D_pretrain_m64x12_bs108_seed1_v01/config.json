@@ -1,0 +1,58 @@
+{
+  "run_name": "W3_D_pretrain_m64x12_bs108_seed1_v01",
+  "config": "m64x12",
+  "model_kwargs": {
+    "in_channels": 1,
+    "d_model": 64,
+    "d_state": 64,
+    "n_layer": 12,
+    "n_ssm": null,
+    "kernel_init": "diag-lin",
+    "kernel_mode": "diag",
+    "bidirectional": true,
+    "d_cond": 256,
+    "d_cond_embed": 128,
+    "local_cond_ch": 0,
+    "n_class": 2,
+    "have_null_class": false,
+    "self_gated": false
+  },
+  "backbone_seed": 1,
+  "batch_size": 108,
+  "max_steps": 30000,
+  "milestones": [
+    0,
+    15000,
+    30000
+  ],
+  "primary_checkpoint": "step30000 EMA weights (fixed before training)",
+  "window_fraction": 1.0,
+  "sample_seed": 0,
+  "noise_scheduler": {
+    "num_train_timesteps": 50,
+    "beta_start": 0.0001,
+    "beta_end": 0.05,
+    "beta_schedule": "squaredcos_cap_v2",
+    "prediction_type": "v_prediction"
+  },
+  "timestep_sampling": "uniform integer in [0, 50) per sample",
+  "denoising_target": "v_prediction, MSE",
+  "ema": {
+    "beta": 0.999,
+    "update_after_step": 100,
+    "update_every": 10
+  },
+  "optimizer": {
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "lr_override": null,
+    "official_s4_param_groups": true
+  },
+  "grad_clip_norm": 1.0,
+  "precision": "float32 with TF32 matmul",
+  "conditioning": "modality id: 0=EEG Fpz-Cz, 1=EOG horizontal (n_class=2)",
+  "data": "train split only (54 subjects), signal only, labels never read",
+  "sampling": "each training epoch = random permutation of selected units; unit=(30s epoch, modality, 5s window)",
+  "team_main_commit": "fe0a9aaa264047575cdd5e1e15e2ada4462653d3",
+  "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969"
+}

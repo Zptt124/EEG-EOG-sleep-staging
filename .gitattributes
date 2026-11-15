@@ -9,3 +9,6 @@
 
 # Archived W3 predictions and provenance receipts bind exact bytes.
 /experiment3/week3/** -text
+
+# Archived D W3 predictions bind exact bytes.
+/experiment4/week3/** -text

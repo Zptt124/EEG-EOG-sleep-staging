@@ -1,0 +1,9 @@
+units: {'n_units_selected': 1595256, 'n_units_total': 1595256, 'fraction': 1.0, 'sample_seed': 0, 'n_eeg': 797628, 'n_eog': 797628, 'n_subjects': 54, 'steps_per_training_epoch': 14770, 'training_epochs_covered_at_max_steps': 16.24817584136966, 'cache_sha256': 'baa935f751d3483a7437eb87293d221368b716743cb4249a960ad12634c58c61'}
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+Optimizer group 0 | 145 tensors | weight_decay 0.0
+Optimizer group 1 | 12 tensors | weight_decay 0.0
+Optimizer group 2 | 48 tensors | weight_decay 0.0
+params: 992,961
+MILESTONE step 0: diag online 0.5417 ema 0.5417 -> ~/week3-1/runs/W3_D_pretrain_m64x12_bs108_seed0_v01/ckpt_step0.pt
+INIT ONLY DONE (rerun the same command without --init-only to start training)

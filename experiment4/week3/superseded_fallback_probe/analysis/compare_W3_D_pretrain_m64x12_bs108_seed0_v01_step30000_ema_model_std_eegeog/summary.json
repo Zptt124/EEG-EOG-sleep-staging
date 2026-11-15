@@ -1,0 +1,90 @@
+{
+  "run_name": "W3_D_pretrain_m64x12_bs108_seed0_v01",
+  "random_tag": "step0_ema_model",
+  "pretrained_tag": "step30000_ema_model",
+  "feature_suffix": "std_eegeog",
+  "head_seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_dev_subjects": 8,
+  "caveat": "single pretraining run (pilot); 8 dev subjects reused across experiments; CI = subject bootstrap of seed-averaged per-subject deltas",
+  "results": {
+    "macro_f1": {
+      "random_mean": 0.6994000000000001,
+      "pretrained_mean": 0.7391666666666667,
+      "delta_mean_over_seeds": 0.03976666666666667,
+      "delta_sd_over_seeds": 0.0004618802153517018,
+      "n_seeds_positive": 3,
+      "per_subject_delta_mean": 0.051337499999999994,
+      "per_subject_ci95": [
+        0.0188496875,
+        0.091025
+      ],
+      "n_subjects_positive": 7
+    },
+    "n1_f1": {
+      "random_mean": 0.3081333333333333,
+      "pretrained_mean": 0.4194,
+      "delta_mean_over_seeds": 0.11126666666666667,
+      "delta_sd_over_seeds": 0.036889339020011375,
+      "n_seeds_positive": 3,
+      "per_subject_delta_mean": 0.0859375,
+      "per_subject_ci95": [
+        0.018086875000000006,
+        0.16076250000000003
+      ],
+      "n_subjects_positive": 7
+    },
+    "n1_precision": {
+      "random_mean": 0.45246666666666663,
+      "pretrained_mean": 0.4403333333333333,
+      "delta_mean_over_seeds": -0.012133333333333335,
+      "delta_sd_over_seeds": 0.019750021097035147,
+      "n_seeds_positive": 1
+    },
+    "n1_recall": {
+      "random_mean": 0.23433333333333337,
+      "pretrained_mean": 0.4061666666666666,
+      "delta_mean_over_seeds": 0.17179999999999998,
+      "delta_sd_over_seeds": 0.067233101966219,
+      "n_seeds_positive": 3
+    },
+    "n1_ap": {
+      "random_mean": 0.36643333333333333,
+      "pretrained_mean": 0.3985666666666667,
+      "delta_mean_over_seeds": 0.03213333333333334,
+      "delta_sd_over_seeds": 0.016196398776682837,
+      "n_seeds_positive": 3
+    },
+    "rem_f1": {
+      "random_mean": 0.6434000000000001,
+      "pretrained_mean": 0.6945333333333333,
+      "delta_mean_over_seeds": 0.051133333333333336,
+      "delta_sd_over_seeds": 0.0067840499211999725,
+      "n_seeds_positive": 3
+    },
+    "w_f1": {
+      "random_mean": 0.8811333333333334,
+      "pretrained_mean": 0.8911666666666666,
+      "delta_mean_over_seeds": 0.010066666666666666,
+      "delta_sd_over_seeds": 0.003955165398985653,
+      "n_seeds_positive": 3
+    },
+    "n2_f1": {
+      "random_mean": 0.8378,
+      "pretrained_mean": 0.8512666666666666,
+      "delta_mean_over_seeds": 0.013433333333333332,
+      "delta_sd_over_seeds": 0.01268082542003214,
+      "n_seeds_positive": 3
+    },
+    "n3_f1": {
+      "random_mean": 0.8266,
+      "pretrained_mean": 0.8395,
+      "delta_mean_over_seeds": 0.012933333333333333,
+      "delta_sd_over_seeds": 0.01851602909193365,
+      "n_seeds_positive": 2
+    }
+  }
+}

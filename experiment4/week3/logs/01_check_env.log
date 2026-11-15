@@ -1,0 +1,16 @@
+python 3.11.17  torch 2.7.1+cu126  diffusers 0.33.1  scipy 1.15.3  numpy 1.26.4
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  total memory 8.0 GiB
+vendor EEGDM: ~/week1/C_experiment3/vendor/EEGDM
+manifest SHA256 OK (split_subjects.csv, label_subsets_v2.csv)
+train split: 54 subjects, 106 records
+example SC4001: keys=['epoch_index', 'labels', 'signal'] signal shape=(841, 2, 3000) dtype=float32
+  EEG ch0 |uV| p99 = 77.9, EOG ch1 |uV| p99 = 168.3
+label25 (14-subject) list: ['SC403', 'SC410', 'SC412', 'SC415', 'SC417', 'SC419', 'SC421', 'SC427', 'SC429', 'SC436', 'SC451', 'SC455', 'SC456', 'SC474']
+scheduler: DDPMScheduler T=50 prediction=v_prediction
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+model official_ref  params= 5,931,649  out=(4, 1, 1000)  finite=True  peak=3645 MiB
+model m96x16        params= 1,984,545  out=(4, 1, 1000)  finite=True  peak=1347 MiB
+model m64x16        params= 1,257,921  out=(4, 1, 1000)  finite=True  peak=918 MiB
+model m64x12        params=   992,961  out=(4, 1, 1000)  finite=True  peak=721 MiB
+CHECK PASSED

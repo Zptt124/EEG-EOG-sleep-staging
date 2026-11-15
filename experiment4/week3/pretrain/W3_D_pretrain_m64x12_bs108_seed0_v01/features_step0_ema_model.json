@@ -1,0 +1,46 @@
+{
+  "run_name": "W3_D_pretrain_m64x12_bs108_seed0_v01",
+  "step": 0,
+  "weights": "ema_model",
+  "checkpoint": "~/week3-1/runs/W3_D_pretrain_m64x12_bs108_seed0_v01/ckpt_step0.pt",
+  "checkpoint_sha256": "5ca8d0bf196c6d2bfdc43aa97a97df8c842a0fb36262d5f93da8163778a2baee",
+  "n_samples": 53496,
+  "n_labeled_train": 32310,
+  "n_val": 21186,
+  "readout": "diffusion_t=1, no noise, query=gate, all layers, per-second std/mean (200 pts), mean over 30 positions",
+  "dim_per_modality": 768,
+  "seconds": 1166.293705625,
+  "epochs_per_second": 45.868377529596856,
+  "peak_gpu_mib": 2228.82958984375,
+  "files": {
+    "eeg_std": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "922c2ed6220385ecb2f871fcfe581ee58f624a8ce56e1deb13d0535b62271369"
+    },
+    "eeg_mean": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "eb54d167cff3c78a54543df3c1d2b0f036a5d3056dc930a9fc380d71d0ff63dc"
+    },
+    "eog_std": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "ea838f5900fac774c1dbb431d8d5eca1a23fc281ddb11c29d88d8bdd1ce6194b"
+    },
+    "eog_mean": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "e2fc9cd8a17036575d2e8b93ec8f09f13f406512bfdc9583fd4ec88ecce0179b"
+    }
+  },
+  "index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e"
+}
