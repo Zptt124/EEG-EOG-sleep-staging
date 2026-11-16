@@ -1,0 +1,2 @@
+artifact,release_tag,url,sha256,bytes,contents
+w4_d_main_ckpt_0to30k_v01.zip,d-pretrain-w4-main30k-v01-20261117,https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/d-pretrain-w4-main30k-v01-20261117/w4_d_main_ckpt_0to30k_v01.zip,b17e8561136a0b249796364bfbbf1e79c6c3d62b7b25c08951e8412e543094d0,56664172,"ckpt_step*.pt of W4_D_main_m64x12_seed0_v01 (0/5k/10k/15k/20k/25k/30k; keys model, ema_model, model_kwargs, run_config) + checkpoints.csv + config.json; step 30000 ema_model = no-EEG 30k control"
