@@ -9,3 +9,7 @@
 
 # Archived W3 predictions and provenance receipts bind exact bytes.
 /experiment3/week3/** -text
+
+# W4 pretrain held-out manifests: SHA256 recorded in pretrain_val_w4_v01.json.
+/manifests/pretrain_*_w4_v*.csv text eol=lf
+/manifests/pretrain_val_w4_v*.json text eol=lf
