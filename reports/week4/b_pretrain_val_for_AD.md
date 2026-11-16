@@ -1,6 +1,14 @@
 # B → A、D：第四周预训练 held-out 名单与分段 MSE
 
-第四周第 1 天交付。新一轮小 EEGDM 预训练（D 主线、A 同窗 EEG、B 错时 EEG）都按这份名单划分训练池，用同一个脚本报告验证 MSE。
+第四周第 1 天交付。新一轮小 EEGDM 预训练（D 主线、A 同窗 EEG、B 错时 EEG）都按这份名单划分训练池。
+
+> **2026-11-16 更新：正式 val MSE 改用 D 的方案。**
+> - 每名 held-out 受试者、每个模态固定抽 128 个 5 秒窗（seed 20261114），每个窗在 10 个 t bucket（[0,5)…[45,50)）里各评一次，bucket 内的 t 和噪声都固定。EEG/EOG 分开报告。
+> - 停止指标：EMA 权重、无 EEG 条件下，t∈[5,25) 两个模态 MSE 的等权平均。
+> - 选这个方案，是因为它每个 bucket 有 1,024 次评估（下面 B 的版本只有 200 次），bucket 之间用同一批窗可以配对比较，还定义了停止指标。
+> - 窗清单、t 和噪声 SHA256 以 D 提交到公共训练脚本里的为准。
+> - 下面第 2、3 节是 B 的初版，不再作为正式指标。32 号脚本之后会改成读取 D 的清单，用来独立复算 D 报的 MSE。
+> - held-out 名单（第 1 节）不变。
 
 ## 1. held-out 名单（已锁定，`w4_v01`）
 
@@ -24,7 +32,7 @@ pool = {rec for r in csv.DictReader(open('manifests/pretrain_split_w4_v01.csv'))
         if r['pretrain_role'] == 'pretrain_train' for rec in r['record_ids'].split(';')}
 ```
 
-## 2. 固定验证窗
+## 2. 固定验证窗（B 初版，已由 D 的方案取代）
 
 [manifests/pretrain_val_windows_w4_v01.csv](../../manifests/pretrain_val_windows_w4_v01.csv) 共 4,000 行（每行一个窗×模态）：
 
@@ -33,7 +41,7 @@ pool = {rec for r in csv.DictReader(open('manifests/pretrain_split_w4_v01.csv'))
 - 预处理和第三周 D 的 `transform_uv` 一致：100→200 Hz `resample_poly(2,1)`，µV/100，再做官方 staged mu-law。变换后取 `[1000k, 1000(k+1))`。
 - 噪声不入库，由 `torch.Generator(cpu).manual_seed(20261117)` 按行序生成，脚本会核对 SHA256。
 
-## 3. 分段 MSE 脚本
+## 3. 分段 MSE 脚本（B 初版，将改为复算 D 的清单）
 
 [scripts/32_b_w4_pretrain_mse.py](../../scripts/32_b_w4_pretrain_mse.py)：v-prediction MSE，每 5 个扩散步一段（10 段），EEG/EOG 分开报告，另给全 t 平均。默认用 EMA 权重。可以一次传入多个 checkpoint 比较停止点。
 
