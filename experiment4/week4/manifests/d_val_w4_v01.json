@@ -1,0 +1,41 @@
+{
+  "version": "d_val_w4_v01",
+  "owner": "D",
+  "adopted_by_team": "2026-11-16 (B, PR #21)",
+  "heldout": {
+    "path": "pretrain_split_w4_v01.csv",
+    "sha256": "470c23f7d49b4de6a3a896243e379ffc3b7a637d64b3e70c813b1c03522dffa0",
+    "subjects": [
+      "SC414",
+      "SC416",
+      "SC431",
+      "SC450",
+      "SC457",
+      "SC463",
+      "SC467",
+      "SC477"
+    ],
+    "official_w4_v01": true
+  },
+  "selection": "for each held-out subject (sorted), for modality in (eeg, eog): np.random.default_rng(20261114) choice of 128 5-s windows without replacement from all windows of that subject, then sorted (one rng shared across subjects/modalities in this order)",
+  "t_rule": "t_b = 5*b + rng.integers(0, 5) for b = 0..9 (same rng, after selection)",
+  "noise": "torch.Generator(cpu).manual_seed(20261114); torch.randn((2048, 10, 1, 1000)), float32; noise[i, b] belongs to val_row i, bucket b",
+  "preprocessing": "same as W3 cache: 100->200 Hz resample_poly(2,1), uV/100, official staged_mu_law; window k = samples [1000k, 1000(k+1))",
+  "mse": "per (val_row, bucket): mean over 1000 samples of (v_pred - v)^2, v-prediction, DDPM 50 steps squaredcos_cap_v2; x_t = add_noise(x0, noise, t); main condition = no EEG condition, EMA weights",
+  "report": "{eeg,eog}_tLO_HI = mean over that modality's rows for bucket; {eeg,eog}_all = mean over all buckets",
+  "stop_metric": "mean over (eeg, eog) of mean over buckets [1, 2, 3, 4] (t in [5, 25))",
+  "n_rows": 2048,
+  "fingerprint": {
+    "n_windows": 2048,
+    "val_seed": 20261114,
+    "per_subject_per_modality": 128,
+    "bucket": 5,
+    "n_bucket": 10,
+    "units_sha256": "cb979d0b7b3cd4470dd54866f4a4d74a0d14ac555729fff163df6617f02260b9",
+    "t_sha256": "a2734ffba880c6ca439d4bec9f8e71e2b81d40b533990b3c5b6026c38a064cbb",
+    "noise_sha256": "3465eadc841288d1cebe5e4d5e046d90c19313088bbc7c454cec3720fde3a120",
+    "noise_recipe": "torch.Generator(cpu).manual_seed(20261114); torch.randn((2048, 10, 1, 1000)), float32"
+  },
+  "sha256_windows_csv": "e26c0182dbaf9c201e26474f9a1ec879c1f122ea6019334ec9de296e78009a7e",
+  "cache_sha256": "baa935f751d3483a7437eb87293d221368b716743cb4249a960ad12634c58c61"
+}
