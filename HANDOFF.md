@@ -4,6 +4,8 @@
 
 **2026-11-16 B → A、D（第 1 天）：** 预训练 held-out 名单 `w4_v01` 已锁定：SC414、SC416、SC431、SC450、SC457、SC463、SC467、SC477（不在任何标签预算名单中，5/14/27 人预算者全部留在预训练池；按编号分 8 层各抽 1 人）。预训练池剩 46 人、114,041 段。分段 MSE 脚本 `scripts/32_b_w4_pretrain_mse.py` 使用固定的 4,000 个窗×模态和固定噪声，每 5 个扩散步一段，EEG/EOG 分开报告，默认按空条件、用 EMA 权重评估。用法与核对见 [reports/week4/b_pretrain_val_for_AD.md](reports/week4/b_pretrain_val_for_AD.md)。
 
+**2026-11-16 B 跨模态工具：** 错时 EEG 配对（`scripts/33_b_w4_shift_pairs.py`，60–300 秒，逐窗确定，与窗清单范围无关）在 46 人训练池 684,246 个目标窗上覆盖率 100%，条件窗在后的占 50.0%。第四周探针 `34_b_w4_probe.py` 可只用 EOG，并在同一次运行里做训练侧 α 调整。三组复评 `35_b_w4_crossmodal_eval.py` 先逐行核对对齐，再报三个配对差。说明见 [reports/week4/b_crossmodal_tools.md](reports/week4/b_crossmodal_tools.md)。
+
 ## 第三周交接
 
 以[第三周工作安排](WEEK3.md)和[四天方案 PDF](docs/week3/work_plan_W3.pdf)为准。交付时记录配置、模型来源、run ID、样本索引与接收核验。
