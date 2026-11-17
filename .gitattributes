@@ -14,3 +14,4 @@
 /manifests/pretrain_*_w4_v*.csv text eol=lf
 /manifests/pretrain_val_w4_v*.json text eol=lf
 /reports/week4/b_shift_pairs/*.csv text eol=lf
+/reports/week4/d_val_recheck/* text eol=lf

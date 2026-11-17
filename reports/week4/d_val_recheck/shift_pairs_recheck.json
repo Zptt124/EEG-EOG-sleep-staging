@@ -1,0 +1,29 @@
+{
+ "index_check": {
+  "n_rows": 132938,
+  "n_records": 106,
+  "matches_d_epoch_index": true
+ },
+ "n_windows": 797628,
+ "n_paired": 797628,
+ "coverage": 1.0,
+ "rebuilt_npy_sha256": "2f446ba47673bf75db31a79ade98d4738f7aabe8ea6c3845c4e3a5c4ecb99ded",
+ "d_npy_sha256": "2f446ba47673bf75db31a79ade98d4738f7aabe8ea6c3845c4e3a5c4ecb99ded",
+ "npy_sha256_match": true,
+ "summary_counts_match": true,
+ "same_record": true,
+ "gap_in_60_300": true,
+ "gap_matches_returned": true,
+ "unpaired_have_no_candidate": true,
+ "n_negative_gap": 399131,
+ "n_positive_gap": 398497,
+ "n_candidates_min": 1,
+ "n_candidates_median": 98.0,
+ "rank_uniformity_chi2_20bins": {
+  "stat": 23.452556831003925,
+  "p": 0.21799594728632724
+ },
+ "rank_uniformity_ks_p": 0.9411375052883179,
+ "direction_binomial_p": 0.47846907620509027,
+ "note": "名次用随机化 PIT (r+U)/n（U 的 seed 0），均匀抽取时严格服从 U(0,1)"
+}
