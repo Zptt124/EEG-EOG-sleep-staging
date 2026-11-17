@@ -10,6 +10,7 @@
 | `src/w4d_model.py` | `build_model()`、`w4_forward()`：官方 Wavenet + 两个可选开关（self-conditioning、cross-modal） |
 | `src/w4d_train.py` | `Trainer`（训练一步、分模态 loss、断点状态）、`ValSet`（held-out 上的分段 val MSE） |
 | `src/01_pretrain.py` | 主脚本：训练、每 5k 步 val MSE + 存 ckpt、停止规则、断点续训 |
+| `src/04_extract_features.py` | 下游提特征（W3 配方；跨模态模型一律空条件；自动核对去掉 EEG 后 EOG 特征逐位不变）。用法见 HANDOFF 第 5 节 |
 | `src/03_export_val_manifest.py` | 导出 val MSE 的固定窗清单（`manifests/d_val_windows_w4_v01.csv` + `d_val_w4_v01.json`），供 B 独立复算 |
 | `src/00_build_pretrain_cache.py` | 组员在自己电脑上生成训练池缓存（54 人）；与 D 的缓存逐字节相同（已重建核对：SHA 一致） |
 | `src/02_build_shift_pairs.py` | 生成错时（shifted）EEG 条件的配对表（C 的规则：同记录、间隔 60–300 秒、固定 seed 均匀抽一个） |
@@ -89,7 +90,7 @@
   - npy 的 SHA256 为 `2f446ba4…`；完整配对清单（目标窗 ID、条件窗 ID、带正负号的间隔）在 `shift_pairs_60_300_v01.csv.gz`，摘要在 `manifests/shift_pairs_60_300_v01_summary.json`。
 - **登记**：`config.json` 记录名单 SHA、训练窗清单 SHA（清单本身是 big 目录下的 `train_units.npy`）、配对表 SHA；`checkpoints.csv` 记录每个 checkpoint 的 SHA256。
 - val 的主口径是**不给 EEG**（`eeg_cond=0`），这样三组和其他 run 可以直接比；给 EEG 的结果另记为 `eeg_cond=1`（只有 EOG 目标窗带条件，错时组按配对表取 EEG）。
-- 还没做、留到提特征脚本里落实：只给 EOG 和同时给 EEG 两种输入下，提出来的 EOG 特征要逐位一致（C 规则里的验收条件）。
+- C 规则里的验收条件（只给 EOG 和同时给 EEG 两种输入下，EOG 特征逐位一致）已在 `04_extract_features.py` 里落实，每次提特征时自动检查。
 
 ## 6. 用法
 

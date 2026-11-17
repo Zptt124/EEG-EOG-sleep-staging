@@ -72,9 +72,23 @@ python -u 01_pretrain.py --run-name W4_B_xmodal_shifted_30k_seed0_v01 \
 | `history.csv` | 训练 loss（含 `loss_eeg`、`loss_eog`）、速度 | B |
 | `checkpoints.csv` + `ckpt_step30000.pt` | 30k 权重（online + EMA）及 SHA256；下游用 EMA | 自己做 EOG-only probe，并交给 B、C |
 
-## 5. 下游提特征
+## 5. 下游提特征（`04_extract_features.py`）
 
-下游一律只输入 EOG、不给 EEG。这一步**不能**直接用官方的 `LatentActivityExtractor`：它不会经过跨模态模型新增的"有没有条件"那一项，提出来的特征会和训练时的空条件不一致。D 会另外提供 W4 的提特征脚本，用同一个前向入口、空条件，并按 C 的验收要求核对"只给 EOG"和"同时给 EEG"两种输入下的 EOG 特征是否一致。在那之前请先不要提特征。
+下游一律只输入 EOG、不给 EEG（空条件）。请用这个脚本提特征，**不要**直接用官方的 `LatentActivityExtractor`：它自己走一遍各层，不会经过跨模态模型的"无条件"flag 嵌入，提出来的特征和训练时的空条件不一致（训练后 flag 的权重不为 0，已核对）。
+
+```bash
+python -u 04_extract_features.py --ckpt $SLEEP_W4_BIG/runs/<run>/ckpt_step30000.pt --modalities eog
+```
+
+- 读出配方与第三周相同：t=1、不加噪、gate、12 层全取，每秒取 std 和 mean，在 30 个位置上取均值，每个模态 768 维。pooling 长度用 `--pool-sec` 设置，默认 1 秒；**三组必须用同一个值**（C 的规则）。
+- 提取的人：label25 的 14 人（含 label10 的 5 人）+ 8 个 dev；测试集不碰。
+- 输出格式与第三周相同（`eog_std.npy`、`eog_mean.npy`、`index.csv`），B 的 27 号 probe 脚本可以直接读。
+- **自动验收**（C 的要求）：每次都会把前 2 份记录的 EEG 通道换成 0，再提一遍 EOG 特征并逐位比对，不一致就报错退出。结果写在 `features_info.json` 的 `eog_only_verification` 里。
+- 已核对：
+  - 用第三周 30k 模型提的特征，与第三周的特征**逐位相同**；
+  - 同窗、错时、self-cond 三种模型的提特征路径，与训练时空条件的前向**逐位相同**；
+  - 去掉 EEG 后，EOG 特征逐位不变。
+- 速度：D 的 4060 上只提 EOG 约 100 段/秒，一个 checkpoint（14+8 人，约 5.3 万段）约 10 分钟；显存约 2.3 GB。注意：主实验训练占用约 6 GB，两者不能在同一张 8 GB 卡上同时跑。
 
 ## 6. 修改代码
 
