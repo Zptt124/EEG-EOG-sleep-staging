@@ -4,6 +4,10 @@
 
 **2026-11-16 B → A、D（第 1 天）：** 预训练 held-out 名单 `w4_v01` 已锁定：SC414、SC416、SC431、SC450、SC457、SC463、SC467、SC477（不在任何标签预算名单中，5/14/27 人预算者全部留在预训练池；按编号分 8 层各抽 1 人）。预训练池剩 46 人、114,041 段。分段 MSE 脚本 `scripts/32_b_w4_pretrain_mse.py` 使用固定的 4,000 个窗×模态和固定噪声，每 5 个扩散步一段，EEG/EOG 分开报告，默认按空条件、用 EMA 权重评估。用法与核对见 [reports/week4/b_pretrain_val_for_AD.md](reports/week4/b_pretrain_val_for_AD.md)。
 
+**2026-11-16 B 跨模态工具：** 错时 EEG 配对（`scripts/33_b_w4_shift_pairs.py`，60–300 秒，逐窗确定，与窗清单范围无关）在 46 人训练池 684,246 个目标窗上覆盖率 100%，条件窗在后的占 50.0%。第四周探针 `34_b_w4_probe.py` 可只用 EOG，并在同一次运行里做训练侧 α 调整。三组复评 `35_b_w4_crossmodal_eval.py` 先逐行核对对齐，再报三个配对差。说明见 [reports/week4/b_crossmodal_tools.md](reports/week4/b_crossmodal_tools.md)。
+
+**2026-11-17 B 核对 D 的公共预训练脚本（PR #23）：** B 用自己的代码按 D 的配方重建 val 集，窗、t、窗清单与 D 一致（噪声 SHA 因 x86/ARM 的 CPU 随机数实现不同而末位不同）。复算 D 主实验 0–30k 共 7 个 checkpoint 的 val MSE（EMA 与 online），stop_metric 最大差 5.8e-6，最佳步同为 30k。错时配对表重算后与 D 的 npy 逐字节一致，规则逐条核对通过（覆盖 100%、两向各半、候选内均匀）。三组对照以 D 的配对表为准。详见 [reports/week4/b_d_pretrain_recheck.md](reports/week4/b_d_pretrain_recheck.md)。
+
 ## 第三周交接
 
 以[第三周工作安排](WEEK3.md)和[四天方案 PDF](docs/week3/work_plan_W3.pdf)为准。交付时记录配置、模型来源、run ID、样本索引与接收核验。
