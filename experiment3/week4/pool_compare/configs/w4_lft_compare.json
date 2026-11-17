@@ -1,0 +1,16 @@
+{
+  "layers": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "lft_tokens_per_second": 4,
+  "batch_size": 32,
+  "blocks_per_group": 8,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "gradient_clip_norm": 3.0,
+  "epochs": 50,
+  "seeds": [0],
+  "budget": "label25",
+  "sampling_seed": 2024,
+  "loss": "unweighted cross entropy",
+  "precision": "bfloat16 autocast, float32 weights and optimizer state",
+  "window_note": "window_sec 由 37 号脚本运行时写入;1 秒=30 个时间位置,2 秒=15 个,pooled 特征同为 2560 维(线性头与窗口无关)"
+}
