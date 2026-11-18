@@ -9,7 +9,8 @@
 
 1. **C 交付的数字全部复现。** 12 个 run 都通过了下面这些核对：
    - 开发集参考核对、y_pred 等于概率 argmax、预测和 OOF 文件的 SHA256。
-   - OOF 只含 5 名训练者。
+   - OOF 只含 5 名训练者，五折按受试者划分、正好覆盖训练名单。
+   - 选轮：在 C 的逐轮曲线（每个 run 50 轮）上按「OOF Macro-F1 最高、并列取最早」重选，12 个 run 的 E* 都与 C 相同。曲线在 E* 处的值与 B 从 OOF 预测重算的值完全一致。
    - 原始 Macro-F1、N1 F1、N1 AP，选中轮的 OOF 分数，B 独立重选的 α 和 α 调整后的指标，与 C 的差都不超过 6e-17。
    - C 报的三个配对差，B 重算的点估计与 C 完全相同。B 的 bootstrap 用 1000 次、种子 0，C 用 2000 次，两边区间几乎一样。
 2. **预训练提高 Macro-F1，这一点在两种读出头下都稳定。** linear +3.2 个百分点 [+2.3, +4.3]，LFT +3.3 [+2.1, +4.3]，三个 head seed 方向都一致。
@@ -49,7 +50,7 @@ Macro-F1 均值与 C 报的一致：linear 66.98% / 70.18%，LFT 67.60% / 70.83%
 
 ## 核对范围
 
-- C 没有交逐轮的 OOF 曲线，所以 E* 本身无法独立重选。B 只核对了选中轮的 OOF Macro-F1 和 N1 F1 与 C 的 `training_side_summary.json` 一致。
+- 选轮曲线在 `screening/seed*/<arm>/inner_cv.csv`。只有 E* 那一轮有逐段 OOF 预测，所以 B 能独立重算 E* 处的曲线值；其他轮次的曲线值用的是 C 算的。
 - LFT 的训练过程（五折、全名单重训）B 没有重跑，只复评 C 交付的预测和 OOF。C 另交了独立核验脚本 `experiment3/week4/scripts/verify_fourcell.py`。
 
 ## 复现

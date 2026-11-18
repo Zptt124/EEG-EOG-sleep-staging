@@ -19,5 +19,5 @@
   "lft_pretrained-linear_pretrained:n1_f1": 0.0
  },
  "max_abs_point_diff_vs_c": 0.0,
- "note": "E* 只核对选中轮的 OOF 分数；C 未交逐轮曲线，无法独立重选 E*"
+ "note": "E* 在 C 的逐轮曲线上按规则重选；只有 E* 处有逐段 OOF 预测可独立重算，其余轮次曲线值来自 C"
 }

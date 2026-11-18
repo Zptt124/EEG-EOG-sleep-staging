@@ -6,7 +6,10 @@
      y_pred 是否等于概率 argmax；预测文件 SHA256 与 C 的 artifact_sha256.json 一致。
   2. B 的统一指标（29 号 run_metrics）：Macro-F1、各阶段 F1、N1 P/R/F1、N1 AP/AUROC、N1 去向。
   3. 训练侧 OOF（oof_train.csv）：受试者必须正好是该预算的训练名单、不含开发集；
-     E* 处的 OOF Macro-F1 / N1 F1 与 C 的 training_side_summary.json 比对（C 未交逐轮曲线，E* 本身无法重选）。
+     E* 处的 OOF Macro-F1 / N1 F1 与 C 的 training_side_summary.json 比对；
+     在 C 的逐轮曲线 screening/seed*/<arm>/inner_cv.csv 上按“OOF Macro-F1 最高、并列取最早”重选 E*，
+     曲线在 E* 处的值须等于 B 从 OOF 预测重算的值；五折按受试者划分且正好覆盖训练名单。
+     （只有 E* 处有逐段 OOF 预测，其余轮次的曲线值来自 C。）
   4. N1 α：B 用 28 号的网格与并列规则在 OOF 上独立重选，用于开发集；α 和调整后指标与 C 的 metrics.json 比对。
   5. 与 C 的 metrics.json 比对原始 Macro-F1、N1 F1、N1 AP。
 配对（同 budget 同 seed，seed 合并后按 8 名开发受试者 bootstrap 1000 次，29 号 paired）：
@@ -113,11 +116,23 @@ def main(argv=None):
         seed_key, arm = f"seed{r['seed']}", r['arm']
         ct = c_train['seeds'][seed_key]['arms'][arm]
         m['selected_epoch'] = ct['epoch']
+        # 选轮曲线（screening/seed*/<arm>/inner_cv.csv）：按“OOF Macro-F1 最高、并列取最早”重选
+        sdir = cdir / 'screening' / seed_key / arm
+        curve = pd.read_csv(sdir / 'inner_cv.csv')
+        best = curve['oof_macro_f1'].max()
+        e_b = int(curve.loc[curve['oof_macro_f1'] == best, 'epoch'].min())
+        sel = json.loads((sdir / 'selection.json').read_text(encoding='utf-8'))
+        folds = [set(f) for f in sel['folds']]
+        folds_ok = (set().union(*folds) == want and sum(len(f) for f in folds) == len(want)
+                    and set(oof.groupby('fold')['subject_id'].apply(lambda x: frozenset(x))) == {frozenset(f) for f in folds})
         chk = dict(run_id=r['run_id'],
                    reference_ok=True, y_pred_is_argmax=argmax_ok,
                    pred_sha256_match=(sha256_file(pred_path) == sha_c) if sha_c else None,
                    oof_subjects_ok=oof_subj == want and not (oof_subj & dev_subjects),
                    oof_sha256_match=sha256_file(run_dir / 'oof_train.csv') == cm.get('oof_sha256'),
+                   epoch_reselected=e_b, epoch_c=int(ct['epoch']), epoch_match=e_b == int(ct['epoch']) == int(sel['epoch']),
+                   folds_ok=bool(folds_ok), n_curve_epochs=len(curve),
+                   d_curve_at_estar=float(curve.loc[curve['epoch'] == e_b, 'oof_macro_f1'].iloc[0]) - oof_m['macro_f1'],
                    d_macro_f1=m['macro_f1'] - cm['macro_f1'], d_n1_f1=m['n1_f1'] - cm['n1_f1'],
                    d_n1_ap=m['n1_ap'] - cm['n1_ap'],
                    d_oof_macro_f1=oof_m['macro_f1'] - ct['oof_macro_f1'], d_oof_n1_f1=oof_m['n1_f1'] - ct['oof_n1_f1'],
@@ -126,6 +141,7 @@ def main(argv=None):
                    d_macro_f1_adjusted=adj_m['macro_f1'] - cm['adjusted']['macro_f1'])
         chk['all_match'] = bool(chk['y_pred_is_argmax'] and chk['pred_sha256_match'] is not False
                                 and chk['oof_subjects_ok'] and chk['oof_sha256_match']
+                                and chk['epoch_match'] and chk['folds_ok']
                                 and all(abs(chk[k]) < TOL for k in chk if k.startswith('d_'))
                                 and chk['alpha_rel_diff'] < 1e-9)
         metrics.append(m)
@@ -183,7 +199,7 @@ def main(argv=None):
                pairs=args.pairs, n_boot=E29.N_BOOT, boot_seed=0,
                paired_point_diff_vs_c=point_diff,
                max_abs_point_diff_vs_c=max((abs(v) for v in point_diff.values()), default=None),
-               note='E* 只核对选中轮的 OOF 分数；C 未交逐轮曲线，无法独立重选 E*')
+               note='E* 在 C 的逐轮曲线上按规则重选；只有 E* 处有逐段 OOF 预测可独立重算，其余轮次曲线值来自 C')
     (out / 'reeval_run.json').write_text(json.dumps(run, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
     print(json.dumps(run, indent=1, ensure_ascii=False))
 
