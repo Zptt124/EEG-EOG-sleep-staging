@@ -15,3 +15,4 @@
 /manifests/pretrain_val_w4_v*.json text eol=lf
 /reports/week4/b_shift_pairs/*.csv text eol=lf
 /reports/week4/d_val_recheck/* text eol=lf
+/reports/week4/xmodal_prelim/** text eol=lf
