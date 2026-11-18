@@ -87,3 +87,26 @@ C 机器上的记录一致(1863 段、吞吐 31–33 段/s、峰值显存逐项�
   预计 ~4.5 h,完成后补 EOG-only 探针(34 号)与三组复评。
 - 诊断图(完成):`experiment3/week4/pool_compare/diag/`——低频 MSC 同窗 0.394 vs
   错时 0.359(配对差 +0.035),高 EOG 振幅窗差距更大(+0.057);口径见 diag/README.md。
+
+## 跨模态 · 同窗 EEG 30k 完成(2026-11-19 01:47)
+
+- **checkpoint**:`experiment4/week4/big/runs/W4_A_xmodal_same_30k_seed0_v01/ckpt_step30000.pt`
+  EMA,SHA256 `ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70`;
+  Release `a-w4-xmodal-same-30k-v01-20261119`(zip 含运行小文件 + SHA256SUMS)。
+- **val(训练内,D 正式口径 2,048 窗)**:stop_metric 0.05407@30k(EEG 0.0525 / EOG 0.0556,t∈[5,25)),
+  全程单调下降,best=30k。注意:本机 Windows torch 的 CPU 噪声与团队登记(3465eadc…)不一致,
+  val_mse.csv 为本机噪声口径;跨组比较请以 B 32 号脚本用团队噪声复算为准。
+- **EOG-only 下游特征**:768 维(12 层×64,std t=1,空 EEG 条件),提取 43 记录/53,496 段 8.6 min;
+  zero-eeg 验收通过(NPZ SHA 与 EEG 置零重跑逐位一致 `c0930d41…`)。
+- **探针(B 34 号,训练侧五折 50 轮 OOF 选轮 + OOF 上选 α)**:
+
+| run | E* | 开发集 Macro-F1 | N1 AP | N1 F1 原始 | α | N1 F1 调整后 | 调整后 Macro-F1 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| xm_sync label10 seed0 | 44 | 0.5967 | 0.2475 | 0.1652 | 7.61 | 0.3062 | 0.5743 |
+| xm_sync label10 seed1 | 24 | 0.6013 | 0.234 | 0.177 | 6.73 | 0.305 | 0.5691 |
+| xm_sync label10 seed2 | 40 | 0.5915 | 0.240 | 0.141 | 9.04 | 0.304 | 0.5701 |
+| xm_sync label25 seed0 | 44 | 0.6404 | 0.310 | 0.254 | 5.54 | 0.376 | 0.6331 |
+
+对照 B 的官方 EEGDM EOG-only 冒烟参考(label10 seed0:Macro 0.583 / N1 AP 0.223 /
+N1 F1 0.193→0.308):W4 同窗 backbone 的 EOG-only 表征不输官方 TUEV 主干。
+三组配对(同窗−无 EEG、错时−无 EEG、同窗−错时)由 B 的 35 号脚本统一复评。
