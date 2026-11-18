@@ -1,56 +1,89 @@
-# A 第四周:1s/2s std pooling 对照 · 进行中快照(2026-11-17)
+# A 第四周:1s/2s std pooling 对照 · 结果(2026-11-18)
 
 协议:14 人预算(label25,sseed2024)+ 8 名验证者,53,496 段;LFT 训练侧按人五折选轮
 (与 C 第三周 inner_cv 一致,fold_seed=0,每折 50 轮,OOF Macro-F1 选 E*,全名单重训,
 开发集只最终评分一次)。两窗口只差时间位置数(1s=30,2s=15);pooled 特征同为 2560 维,
-线性头与窗口无关。
+线性头与窗口无关。本机 RTX 4060 Laptop;1s 与 2s 同机并行训练(公平口径)。
+
+## 结论一句话
+
+**训练侧 OOF 打平(差 0.0013),单 seed 开发集 2s 更高(+2.1pp Macro / +5.6pp N1,区间跨零),
+成本 2s 明显占优(每轮快 ~19%、显存 −45%、full 缓存减半)→ 推荐四格筛查用 2s std;
+1s 作为连续性备选完全可接受。**
 
 ## 特征提取(完成)
 
-提取入口 `scripts/36_a_w4_window_extract.py`(基于 B 26 号,仅窗口参数化)。
-2 秒口径:非重叠 2s 窗(400/400,官方 reducer 只在 L=6000 native 模式合法,15 位置)。
+入口 `scripts/36_a_w4_window_extract.py`(基于 B 26 号,仅窗口参数化)。
+2 秒口径:非重叠 2s 窗(window/stride=400/400,官方 reducer 只在 L=6000 native 模式合法,15 位置)。
 
-| 配置 | 记录/段数 | 耗时 | 峰值显存 | 吞吐 |
-| --- | --- | --- | --- | --- |
-| EEG 1s std t=1 | 43 / 53,496 | 27.6 min | 591 MB | 31–33 段/s |
-| EEG 2s std t=1 | 43 / 53,496 | 30.6 min | 591 MB | 28–33 段/s |
-| EOG 1s std t=1 | 43 / 53,496 | 32.4 min | 591 MB | 28–33 段/s |
-| EOG 2s std t=1 | 43 / 53,496 | 28.7 min | 591 MB | 28–33 段/s |
+| 配置 | 记录/段数 | 耗时 | 峰值显存 |
+| --- | --- | --- | --- |
+| EEG 1s std t=1 | 43 / 53,496 | 27.6 min | 591 MB |
+| EEG 2s std t=1 | 43 / 53,496 | 30.6 min | 591 MB |
+| EOG 1s std t=1 | 43 / 53,496 | 32.4 min | 591 MB |
+| EOG 2s std t=1 | 43 / 53,496 | 28.7 min | 591 MB |
 
-两窗口提取耗时基本一致(瓶颈在主干 5s 前向,窗口只改 reducer)。本机 RTX 4060 Laptop,
-冒烟结果与 B 在 C 机器上的记录一致(1863 段、吞吐、峰值显存逐项相同)。
+两窗口提取耗时基本一致(瓶颈在主干 5s 前向,窗口只改 reducer)。冒烟结果与 B 在
+C 机器上的记录一致(1863 段、吞吐 31–33 段/s、峰值显存逐项相同)。
 
-## LFT 对照(训练中)
+## LFT 对照(完成)
 
-入口 `scripts/37_a_w4_lft_compare.py`(基于 C inner_cv,仅 n_pool 参数化 + Windows 适配,
-fcntl 垫片在 `experiment3/week4/pool_compare/_compat/`)。1s 与 2s 同机并行,
-`experiment3/week4/pool_compare/runs/{lft_w1s,lft_w2s}_seed0_v01`。
+入口 `scripts/37_a_w4_lft_compare.py`(基于 C inner_cv,仅 n_pool 参数化 + Windows 适配)。
+结果目录 `experiment3/week4/pool_compare/runs/{lft_w1s,lft_w2s}_seed0_v01`
+(逐轮 history / 逐折 prediction / inner_cv 曲线 / oof_train / 开发集 11 列预测)。
+
+### 主表(seed 0)
+
+| 指标 | 1s | 2s | 差(2s−1s) |
+| --- | --- | --- | --- |
+| 选轮 E* | 16 | 15 | — |
+| **OOF Macro-F1(训练侧,选轮指标)** | 0.7222 | 0.7209 | −0.0013 |
+| OOF N1 F1 | 0.3796 | 0.3401 | −0.0395 |
+| 开发集 Macro-F1 | 0.7283 [0.6755, 0.7643] | 0.7497 [0.7002, 0.7826] | +0.0214 |
+| 开发集 N1 F1 | 0.3452 [0.2678, 0.4236] | 0.4012 [0.3153, 0.4909] | +0.0560 |
+| 开发集 acc | 0.8010 | 0.8082 | +0.0072 |
+
+开发集方括号为按受试者 bootstrap 95% 区间(2000 次,官方 evaluate.py)。两个区间的
+重叠很大——单 seed 下开发集差异不显著;OOF 的 0.0013 差在 32,310 段的噪声水平内。
+**结论:分数上两窗口无可靠差异。**
+
+### 交叉验证
+
+- 本机 1s 复现 C 第三周 1s:OOF 0.7222 vs 0.7204,E* 16 vs 16 一致;开发集
+  0.7283 vs 0.7403(torch 2.13 vs 2.7.1 数值差异,单 seed 噪声内)。
+- 1s fold1 首轮 loss 0.8165 vs C 的 0.8354——特征端到端口径一致(非逐位)。
+
+### 成本
 
 | 项 | 1s | 2s |
 | --- | --- | --- |
-| LFT 每轮耗时(同机并行,首 15 轮) | ~170 s | ~138 s |
+| 每轮(干净折) | 156–173 s | 128–137 s(快 ~19%) |
+| 全套净训练 | ~11.5 h(5 折+16 轮重训) | 10.1 h(5 折+15 轮重训) |
 | 峰值显存 | 916 MiB | 504 MiB |
-| 首轮 loss(fold1) | 0.8165 | 0.8270 |
-| 5 折 + 重训 ETA | ~13 h | ~11 h |
+| full 特征缓存(单模态 float16) | 8.2 GB | 4.1 GB |
 
-参考:C 机器 W3 的 1s 每折 50 轮 ≈ 3.2 h,seed0 OOF Macro-F1 0.7204(E*=16)。
-本机 1s fold1 首轮 loss 0.8165 vs C 的 0.8354(torch 2.13 vs 2.7.1 数值差异,口径可用)。
+注:1s 全套挂钟 29 h——fold5 两个 epoch 跨两次笔记本休眠(QPC 计入休眠时间,
+训练数值不受影响,loss 曲线连续);净计算 ~11.5 h。
 
-完成后补:inner_cv 曲线、选轮、OOF Macro-F1/N1、重训后开发集指标、逐折计时。
+## 给 C 的推荐
 
-## 跨模态前置(完成)
+- **推荐 2s std**:OOF 打平、开发集单 seed 更高、成本全面占优(每轮 −19%、显存 −45%)。
+  四格筛查(linear/LFT × pretrained/random-init)直接可用 `--window-sec 2` 特征;
+  linear 臂与窗口无关(2560 维),只有 LFT 臂受影响。
+- **前提**:与 C 的四格特征口径对齐——本对照的 2s = 非重叠窗 400/400(15 位置)。
+  若 C 用了别的切法,按 C 的口径重跑对照。
+- **备选**:若团队要维持 W3 连续性(下游探针/三组跨模态默认 t=1),1s 也完全可接受
+  ——OOF 无差异,只是成本高 ~19%。下游三组若改 2s,按 C 的规则三组一起锁定后再评分。
+- 命令:
+  - 提取:`python scripts/36_a_w4_window_extract.py --modality {eeg,eog} --window-sec {1,2} --reduce std --diffusion-t 1 --save-full --cache-kernels`
+  - LFT:`python scripts/37_a_w4_lft_compare.py --window-sec {1,2} --output experiment3/week4/pool_compare/runs/lft_w{1,2}s_seed0_v01`
 
-- D 公共预训练脚本 `experiment4/week4/`(来自 D 的 feat/d-week4-pretrain-script)。
-- 预训练缓存:`experiment4/week4/cache/pretrain_train_v01/`,SHA256 与团队基准
-  **逐字节一致**(signals `baa935f7…`,index `e3632bce…`)。本机需 numpy==1.26.4
-  (numpy 2.x 的 float32 ufunc 舍入不同);团队环境 = py3.11 + torch 2.7.1+cu126 +
+## 跨模态(进行中)
+
+- 预训练缓存与团队基准**逐字节一致**(signals `baa935f7…`;本机需 numpy==1.26.4,
+  numpy 2.x 的 float32 ufunc 舍入不同);团队环境 = py3.11 + torch 2.7.1+cu126 +
   numpy 1.26.4 + scipy 1.15.3 + lightning 2.5.1 + diffusers 0.33.1 + ema-pytorch 0.7.7。
-- B 的 held-out 名单(`manifests/pretrain_split_w4_v01.csv`,PR #21)与验证窗清单就位。
-- 待 LFT 完成后启动:`01_pretrain.py --cross-modal same_window --no-early-stop --max-steps 30000`。
-
-## 诊断图(完成)
-
-`experiment3/week4/pool_compare/diag/`:同窗 vs 错时 Fpz-Cz/EOG 相关性与 0.3–4 Hz
-magnitude-squared coherence(Welch nperseg=500,Δf=0.4 Hz),20,000 窗按受试者分层抽样。
-低频 MSC:同窗 0.394 vs 错时 0.359(配对差 +0.035);高 EOG 振幅窗差距更大(+0.057)。
-口径与图注见 `diag/README.md`。
+- D 公共脚本冒烟测试通过(same_window 0.54 s/step,val MSE 0.77→0.16);30k 全量
+  预计 ~4.5 h,完成后补 EOG-only 探针(34 号)与三组复评。
+- 诊断图(完成):`experiment3/week4/pool_compare/diag/`——低频 MSC 同窗 0.394 vs
+  错时 0.359(配对差 +0.035),高 EOG 振幅窗差距更大(+0.057);口径见 diag/README.md。
