@@ -1,0 +1,39 @@
+{
+  "source_url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/blob/15fd9f81943664f0864a088a84746d587da6b352/experiment3/week4/pool_compare/diag/window_metrics.csv",
+  "source_sha256": "d3995e4a81870ea7d7fce4114c73ea559a4370235ccb8d86c64f8bb1956ae736",
+  "windows": 20000,
+  "subjects": 46,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 0,
+  "estimand": "equal-weight participant mean of within-participant window means",
+  "pooled_window_delta": 0.03529702500101429,
+  "subject_paired_delta": {
+    "mean": 0.034138589786086755,
+    "lo": 0.03102239913208089,
+    "hi": 0.037281808357129076,
+    "positive_subjects": 46,
+    "subjects": 46
+  },
+  "high_rms_subject_delta": {
+    "mean": 0.058417147413389145,
+    "lo": 0.052364513950707896,
+    "hi": 0.06443600269182066,
+    "positive_subjects": 46,
+    "subjects": 46
+  },
+  "other_rms_subject_delta": {
+    "mean": 0.026583327023972484,
+    "lo": 0.023180250668570296,
+    "hi": 0.030145868529692595,
+    "positive_subjects": 46,
+    "subjects": 46
+  },
+  "high_minus_other": {
+    "mean": 0.031833820389416644,
+    "lo": 0.025065118047397757,
+    "hi": 0.03855729115749139,
+    "positive_subjects": 39,
+    "subjects": 46
+  },
+  "downstream_crossmodal_results_available": false
+}

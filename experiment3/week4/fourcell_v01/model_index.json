@@ -1,0 +1,77 @@
+{
+  "release": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-fourcell-w4-v01-20261119",
+  "models": [
+    {
+      "run_id": "W4_C_lft_random_init_label10_sseed2024_seed0_v01",
+      "archive_path": "runs/seed0_lft_random_init/final_head.pt",
+      "sha256": "3260946477bd7ba2c1337f7f3dee4e53899ea8c76e036013248962cd84285c1b",
+      "bytes": 4181024
+    },
+    {
+      "run_id": "W4_C_lft_pretrained_label10_sseed2024_seed0_v01",
+      "archive_path": "runs/seed0_lft_pretrained/final_head.pt",
+      "sha256": "1d9819343a0f648cf5dd28a347006a014438fcf7f66a174d94b4f25b32c7b2b8",
+      "bytes": 4181024
+    },
+    {
+      "run_id": "W4_C_linear_random_init_label10_sseed2024_seed0_v01",
+      "archive_path": "runs/seed0_linear_random_init/final_head.pt",
+      "sha256": "1e89f9619c730287eb3090780ea743630aa362525398ad34e816bc8581c6570d",
+      "bytes": 49853
+    },
+    {
+      "run_id": "W4_C_linear_pretrained_label10_sseed2024_seed0_v01",
+      "archive_path": "runs/seed0_linear_pretrained/final_head.pt",
+      "sha256": "155d214e15dbc79da2ad9a692f3e8533974dec960cf722052e62fb6a9bf2a6ec",
+      "bytes": 49725
+    },
+    {
+      "run_id": "W4_C_lft_random_init_label10_sseed2024_seed1_v01",
+      "archive_path": "runs/seed1_lft_random_init/final_head.pt",
+      "sha256": "7521cbf0d3399134e907eb06900c2478f1ad3e49b9528d0c68d4e40b1c4a258b",
+      "bytes": 4181024
+    },
+    {
+      "run_id": "W4_C_lft_pretrained_label10_sseed2024_seed1_v01",
+      "archive_path": "runs/seed1_lft_pretrained/final_head.pt",
+      "sha256": "a29625ebbd46dddb6fbe1d22bdeb420c69bbb1b321b5012cbc29ec29f179854a",
+      "bytes": 4181024
+    },
+    {
+      "run_id": "W4_C_linear_random_init_label10_sseed2024_seed1_v01",
+      "archive_path": "runs/seed1_linear_random_init/final_head.pt",
+      "sha256": "7adc0b58d4fde2157b51b04c4bf5263eff48a09bba4a7ca37035d090fa7cdafa",
+      "bytes": 49853
+    },
+    {
+      "run_id": "W4_C_linear_pretrained_label10_sseed2024_seed1_v01",
+      "archive_path": "runs/seed1_linear_pretrained/final_head.pt",
+      "sha256": "5f87d5f7c3ed66138fa2da876b9b7d2fad411b3a9cdd30dc4166c9970f18df96",
+      "bytes": 49725
+    },
+    {
+      "run_id": "W4_C_lft_random_init_label10_sseed2024_seed2_v01",
+      "archive_path": "runs/seed2_lft_random_init/final_head.pt",
+      "sha256": "14392a2f88cc61bf5afb905916eb6e54a1a2da437dd563c887ea2372d3dab75c",
+      "bytes": 4181024
+    },
+    {
+      "run_id": "W4_C_lft_pretrained_label10_sseed2024_seed2_v01",
+      "archive_path": "runs/seed2_lft_pretrained/final_head.pt",
+      "sha256": "3c7cb2ad6be539617db5e052d96915ff9aa06b8254cf2af7ab64defeb6a628d7",
+      "bytes": 4181024
+    },
+    {
+      "run_id": "W4_C_linear_random_init_label10_sseed2024_seed2_v01",
+      "archive_path": "runs/seed2_linear_random_init/final_head.pt",
+      "sha256": "7dabd427b558f52eaab69aa49b5bf82fbd8fd12d6fd9fca47681f380ad6493ca",
+      "bytes": 49853
+    },
+    {
+      "run_id": "W4_C_linear_pretrained_label10_sseed2024_seed2_v01",
+      "archive_path": "runs/seed2_linear_pretrained/final_head.pt",
+      "sha256": "53208e5e649d00e4f11ec0536fc0e845dafa71801c259d49952d23a3cbc7c396",
+      "bytes": 49725
+    }
+  ]
+}

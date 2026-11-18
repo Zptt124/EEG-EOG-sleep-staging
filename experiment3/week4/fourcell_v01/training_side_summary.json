@@ -1,0 +1,148 @@
+{
+  "seeds": {
+    "seed0": {
+      "arms": {
+        "lft_random_init": {
+          "epoch": 40,
+          "oof_macro_f1": 0.6279815181947208,
+          "oof_n1_f1": 0.25658113962012663,
+          "oof_n1_ap": 0.27124916475694827
+        },
+        "lft_pretrained": {
+          "epoch": 48,
+          "oof_macro_f1": 0.6876122615054678,
+          "oof_n1_f1": 0.32375366568914954,
+          "oof_n1_ap": 0.2923120089400808
+        },
+        "linear_random_init": {
+          "epoch": 47,
+          "oof_macro_f1": 0.6280802338825259,
+          "oof_n1_f1": 0.2540225950017117,
+          "oof_n1_ap": 0.2834582379750619
+        },
+        "linear_pretrained": {
+          "epoch": 36,
+          "oof_macro_f1": 0.6993294600722857,
+          "oof_n1_f1": 0.3043908880818752,
+          "oof_n1_ap": 0.3231156812287443
+        }
+      },
+      "pretrained_gain": {
+        "oof_macro_f1": {
+          "linear": 0.07124922618975982,
+          "lft": 0.059630743310747025,
+          "lft_minus_linear_gain": -0.011618482879012793
+        },
+        "oof_n1_f1": {
+          "linear": 0.050368293080163495,
+          "lft": 0.06717252606902291,
+          "lft_minus_linear_gain": 0.016804232988859413
+        },
+        "oof_n1_ap": {
+          "linear": 0.03965744325368237,
+          "lft": 0.021062844183132534,
+          "lft_minus_linear_gain": -0.018594599070549833
+        }
+      },
+      "dev_used": false,
+      "test_used": false
+    },
+    "seed1": {
+      "arms": {
+        "lft_random_init": {
+          "epoch": 18,
+          "oof_macro_f1": 0.6185882847786522,
+          "oof_n1_f1": 0.2693831352574986,
+          "oof_n1_ap": 0.25702108321987194
+        },
+        "lft_pretrained": {
+          "epoch": 23,
+          "oof_macro_f1": 0.6891263391650686,
+          "oof_n1_f1": 0.2940383059077421,
+          "oof_n1_ap": 0.2610727481043995
+        },
+        "linear_random_init": {
+          "epoch": 34,
+          "oof_macro_f1": 0.6259900821365891,
+          "oof_n1_f1": 0.29745127436281865,
+          "oof_n1_ap": 0.2743251354764081
+        },
+        "linear_pretrained": {
+          "epoch": 35,
+          "oof_macro_f1": 0.6925827029973706,
+          "oof_n1_f1": 0.23892726533929295,
+          "oof_n1_ap": 0.34180045009060045
+        }
+      },
+      "pretrained_gain": {
+        "oof_macro_f1": {
+          "linear": 0.06659262086078144,
+          "lft": 0.07053805438641636,
+          "lft_minus_linear_gain": 0.003945433525634923
+        },
+        "oof_n1_f1": {
+          "linear": -0.0585240090235257,
+          "lft": 0.02465517065024353,
+          "lft_minus_linear_gain": 0.08317917967376923
+        },
+        "oof_n1_ap": {
+          "linear": 0.06747531461419237,
+          "lft": 0.004051664884527573,
+          "lft_minus_linear_gain": -0.0634236497296648
+        }
+      },
+      "dev_used": false,
+      "test_used": false
+    },
+    "seed2": {
+      "arms": {
+        "lft_random_init": {
+          "epoch": 34,
+          "oof_macro_f1": 0.6246899424095138,
+          "oof_n1_f1": 0.24799762681696827,
+          "oof_n1_ap": 0.24176958067641818
+        },
+        "lft_pretrained": {
+          "epoch": 18,
+          "oof_macro_f1": 0.6878634416230216,
+          "oof_n1_f1": 0.27837921435199503,
+          "oof_n1_ap": 0.27751250154923823
+        },
+        "linear_random_init": {
+          "epoch": 47,
+          "oof_macro_f1": 0.6356888330801584,
+          "oof_n1_f1": 0.2881555686505598,
+          "oof_n1_ap": 0.2627525258099628
+        },
+        "linear_pretrained": {
+          "epoch": 37,
+          "oof_macro_f1": 0.702554062030514,
+          "oof_n1_f1": 0.3084677419354839,
+          "oof_n1_ap": 0.3236631170339056
+        }
+      },
+      "pretrained_gain": {
+        "oof_macro_f1": {
+          "linear": 0.06686522895035552,
+          "lft": 0.06317349921350779,
+          "lft_minus_linear_gain": -0.0036917297368477264
+        },
+        "oof_n1_f1": {
+          "linear": 0.020312173284924073,
+          "lft": 0.03038158753502676,
+          "lft_minus_linear_gain": 0.010069414250102687
+        },
+        "oof_n1_ap": {
+          "linear": 0.06091059122394282,
+          "lft": 0.03574292087282005,
+          "lft_minus_linear_gain": -0.025167670351122773
+        }
+      },
+      "dev_used": false,
+      "test_used": false
+    }
+  },
+  "dev_used": false,
+  "test_used": false,
+  "completed_at": "2026-11-18T10:00:13.332266+08:00"
+}

@@ -1,0 +1,140 @@
+{
+  "cache": {
+    "mode": "screening",
+    "archive_sha256": "56a506d04f6243c395f9fb5b557c70761f0f247c374c70d40dfc706b994d6122",
+    "backbone_run": "W3_D_pretrain_m64x12_bs108_seed0_v01",
+    "checkpoint_steps": {
+      "random_init": 0,
+      "pretrained": 30000
+    },
+    "split_sha256": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+    "label_subsets_sha256": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+    "budget": "label10",
+    "sampling_seed": 2024,
+    "records": [
+      [
+        "SC4031",
+        "SC403"
+      ],
+      [
+        "SC4032",
+        "SC403"
+      ],
+      [
+        "SC4121",
+        "SC412"
+      ],
+      [
+        "SC4122",
+        "SC412"
+      ],
+      [
+        "SC4211",
+        "SC421"
+      ],
+      [
+        "SC4212",
+        "SC421"
+      ],
+      [
+        "SC4561",
+        "SC456"
+      ],
+      [
+        "SC4562",
+        "SC456"
+      ],
+      [
+        "SC4741",
+        "SC474"
+      ],
+      [
+        "SC4742",
+        "SC474"
+      ]
+    ],
+    "diffusion_t": 1,
+    "query": "gate",
+    "layers": 12,
+    "hidden": 64,
+    "pooling_seconds": [
+      1,
+      2
+    ],
+    "weights": "ema_model",
+    "batch_size": 16,
+    "dev_used": false,
+    "test_used": false
+  },
+  "pooling": 1,
+  "head_seed": 0,
+  "folds": [
+    [
+      "SC421"
+    ],
+    [
+      "SC474"
+    ],
+    [
+      "SC456"
+    ],
+    [
+      "SC403"
+    ],
+    [
+      "SC412"
+    ]
+  ],
+  "epochs": 50,
+  "lft": {
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "feature_hidden": 64,
+    "feature_positions": 30,
+    "lft_tokens_per_second": 4,
+    "batch_size": 32,
+    "blocks_per_group": 8,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 3.0
+  },
+  "linear": "W3 B linear probe",
+  "linear_probe_sha256": "f30f65065533e647f74bc01dab91f21156796a4bf9bdf585f5c141d77d4a1b5e",
+  "evaluator_sha256": "3c645536d46dbd5dd8c531e75ddbde8dbf5432f441f7dea8ae76f3023d7ce35f",
+  "cache_sha256": {
+    "random_init/SC4031": "3bce17148125bbba92b26d0b45293db427935f434e9fb612f1c3581188c69f4c",
+    "random_init/SC4032": "ba4785c2479de02977106365020f66c7af532cecadb4f361992e7199a9b25cee",
+    "random_init/SC4121": "6db7c72dae638cd18edfa61841c0e1428529acb977e8ecbae11def994836bb0b",
+    "random_init/SC4122": "d7456bd7586b6a0347ab7e36a7c1cff449a1f8425dd078b7e165a6e986a84b47",
+    "random_init/SC4211": "74631954743dce1d902a079483fb3eff66c0413cc6c4d341712dac9df2045d60",
+    "random_init/SC4212": "633b0397bd3d09be99bd265fc12f55fd4b3aad72099334d1418a8931e610e760",
+    "random_init/SC4561": "e96656469ee54ce4ced54c3f7702cc39cde8ebf487a21f1aa36584cb2e79cd2f",
+    "random_init/SC4562": "7500bc7d8a3af4d7498cb0e6948373eb2493e956f22d19ae38c07dd513eb7290",
+    "random_init/SC4741": "af336f1b2523f6b0f60cc1b7e1e27c185e882b5df296ba442c0e3bf24e5e1d6f",
+    "random_init/SC4742": "9efa5108d77ea86a8f19c260980bb0e8baa97c362fd0a749edcd3945a247f2c7",
+    "pretrained/SC4031": "ccf7675b0e54e8c7d47a4b959a9028284cd55b79d9637625f749b047ed921c2a",
+    "pretrained/SC4032": "aa33d88e1109ff5aeef4faad001103859461ff9de39cb107440239f766572b98",
+    "pretrained/SC4121": "8c79b81b7db2ec40ac5ba51bc32caee8b19e381afc302b2c2dd667853bca1230",
+    "pretrained/SC4122": "d2e6b2c0eb9f8ea2e78baca5254ea54957f307e0fdfd41bde5fdddd2ff91aaa8",
+    "pretrained/SC4211": "3c9b397943bbc94557479c21ba164c08f09826e5d2d6f467d7c1ed339cc4f404",
+    "pretrained/SC4212": "1af0f6302ea834662aef9cfce8fced5da9448f447931765215a4caca6279bf6f",
+    "pretrained/SC4561": "de9a36483fe05ea1f299db9a5339789ac18b8b0dcdfd958fcf1dfe8d7ed3da35",
+    "pretrained/SC4562": "9618787bd51a58c08c94ae63529746d38e39230413bc83838c3f2d27a02e9a43",
+    "pretrained/SC4741": "0fb7cb487641d9ba89adf4018f2e495e4de18b8727bc30f2b962685672ad48ec",
+    "pretrained/SC4742": "10843a079992e0645c99958252d7ac0835076f37d5eab5b9acbf7af2481fe6f8"
+  },
+  "dev_used": false,
+  "test_used": false
+}

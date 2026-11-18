@@ -1,0 +1,28 @@
+{
+  "run_id": "W4_C_lft_random_init_label10_sseed2024_seed1_v01",
+  "budget": "label10",
+  "labeled_subjects": 5,
+  "training_samples": 11936,
+  "sampling_seed": 2024,
+  "head_seed": 1,
+  "backbone_seed": 0,
+  "backbone_steps": 0,
+  "backbone_source": "d-pretrain-w3-v01-20261112",
+  "weights": "ema_model",
+  "modalities": [
+    "EEG",
+    "EOG"
+  ],
+  "layers": 12,
+  "hidden": 64,
+  "diffusion_t": 1,
+  "pooling_seconds": 1,
+  "readout": "lft",
+  "selected_epoch": 18,
+  "alpha": 27.18785844003643,
+  "selection": "subject-wise five-fold, pooled OOF Macro-F1, earliest tie",
+  "configuration_lock_sha256": "29ff8ecf5164a4492f757dbc765dcf804414f3b0604c38ca5708f2655552d235",
+  "model_sha256": "7521cbf0d3399134e907eb06900c2478f1ad3e49b9528d0c68d4e40b1c4a258b",
+  "dev_used": true,
+  "test_used": false
+}

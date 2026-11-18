@@ -1,0 +1,11 @@
+{
+  "experiment3/scripts/evaluate_week4_c_final.py": "7a6405757edc4ca911baa15b54452084aac9834b59223b347f4940b4e2cc9c64",
+  "experiment3/scripts/extract_week4_c_screening.py": "a1922679eb577e56373036224530c421f1d75085e36b6062d75b658d5de0fdd6",
+  "experiment3/scripts/run_s0_s1_eeg_comparison.py": "7d36538f9307c9bad5fb6e1123a0eed1efec2687c6181d2d4880ab229f08cbb9",
+  "experiment3/scripts/run_week3_c_inner_cv.py": "5db156e6571ce7b2c4b887ed9898d2776d12a3a7dfc38a429de011cefd8a6991",
+  "experiment3/scripts/run_week3_c_readout.py": "11c2add86881eaf097a2e89b19411b1f152afa042b31d9430643eea10f9eb528",
+  "experiment3/scripts/run_week4_c_refit.py": "e24ce6fed3a709dd020493865f68629b1e77d625ac433974a61705cf24a1fe3c",
+  "experiment3/scripts/run_week4_c_screening.py": "b919130cab386e41dbfd4bd8e4e8ab357d2d5492d8bb9fe5cb1b146a2123ee5a",
+  "experiment3/scripts/validate_adapt_lock.py": "f13d99b67ece2227a43b3427a5bf5e684f58d49e5f0c2d9015319cc169d70f53",
+  "experiment3/week4/scripts/verify_fourcell.py": "3dcc16057973d9d394cca0aaa50c236d9d39f301fd4ce9b13bea1b8f53656527"
+}

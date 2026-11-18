@@ -9,3 +9,19 @@
 
 # Archived W3 predictions and provenance receipts bind exact bytes.
 /experiment3/week3/** -text
+
+# W4 C delivery is bound to exact prediction and audit bytes.
+/experiment3/week4/fourcell_v01/** -text
+/experiment3/week4/crossmodal_diagnostics_v01/** -text
+/reports/week4/c_eval_registry_w4.csv -text
+
+# Preserve the delivered W4 execution source bytes.
+/experiment3/scripts/evaluate_week4_c_final.py -text
+/experiment3/scripts/extract_week4_c_screening.py -text
+/experiment3/scripts/run_s0_s1_eeg_comparison.py -text
+/experiment3/scripts/run_week3_c_inner_cv.py -text
+/experiment3/scripts/run_week3_c_readout.py -text
+/experiment3/scripts/run_week4_c_refit.py -text
+/experiment3/scripts/run_week4_c_screening.py -text
+/experiment3/scripts/validate_adapt_lock.py -text
+/experiment3/week4/scripts/verify_fourcell.py -text
