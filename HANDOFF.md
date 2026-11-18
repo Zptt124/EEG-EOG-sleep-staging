@@ -8,6 +8,8 @@
 
 **2026-11-17 B 核对 D 的公共预训练脚本（PR #23）：** B 用自己的代码按 D 的配方重建 val 集，窗、t、窗清单与 D 一致（噪声 SHA 因 x86/ARM 的 CPU 随机数实现不同而末位不同）。复算 D 主实验 0–30k 共 7 个 checkpoint 的 val MSE（EMA 与 online），stop_metric 最大差 5.8e-6，最佳步同为 30k。错时配对表重算后与 D 的 npy 逐字节一致，规则逐条核对通过（覆盖 100%、两向各半、候选内均匀）。三组对照以 D 的配对表为准。详见 [reports/week4/b_d_pretrain_recheck.md](reports/week4/b_d_pretrain_recheck.md)。
 
+**2026-11-19 B 复评 C 第四周四格（PR #25）：** 12 个 run 的预测、OOF、原始指标、α 与调整后指标、三个配对差点估计全部复现。预训练的 Macro-F1 增益在 linear/LFT 都稳定（+3.2/+3.3 个百分点）；N1 上只有 linear 头有收益（N1 AP +0.050，α 调整后 N1 F1 +0.038，区间不含 0），LFT 的 N1 AP 与 α 调整后 N1 F1 都没有变化。预训练下 LFT 比 linear 的 N1 AP 低 −0.049 [−0.092, −0.014]，原始 N1 F1 的优势来自判定门槛。详见 [reports/week4/b_c_reeval_w4.md](reports/week4/b_c_reeval_w4.md)。
+
 ## 第三周交接
 
 以[第三周工作安排](WEEK3.md)和[四天方案 PDF](docs/week3/work_plan_W3.pdf)为准。交付时记录配置、模型来源、run ID、样本索引与接收核验。

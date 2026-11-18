@@ -1,0 +1,23 @@
+{
+ "registry": "reports/week4/c_eval_registry_w4.csv",
+ "n_runs": 12,
+ "n_all_match": 12,
+ "pairs": [
+  "linear_pretrained:linear_random_init",
+  "lft_pretrained:lft_random_init",
+  "lft_pretrained:linear_pretrained",
+  "lft_random_init:linear_random_init"
+ ],
+ "n_boot": 1000,
+ "boot_seed": 0,
+ "paired_point_diff_vs_c": {
+  "linear_pretrained-linear_random_init:macro_f1": 0.0,
+  "linear_pretrained-linear_random_init:n1_f1": 0.0,
+  "lft_pretrained-lft_random_init:macro_f1": 0.0,
+  "lft_pretrained-lft_random_init:n1_f1": 0.0,
+  "lft_pretrained-linear_pretrained:macro_f1": 0.0,
+  "lft_pretrained-linear_pretrained:n1_f1": 0.0
+ },
+ "max_abs_point_diff_vs_c": 0.0,
+ "note": "E* 只核对选中轮的 OOF 分数；C 未交逐轮曲线，无法独立重选 E*"
+}
