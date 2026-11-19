@@ -1,0 +1,24 @@
+{
+  "tag": "w4_xmodal_recheck",
+  "arms": {
+    "a_same030k_eog": "ckpt_step30000.pt step 30000 ema_model switches {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'same_window'}; eog std; pool 1 s",
+    "d_pre030k_eog": "ckpt_step30000.pt step 30000 ema_model switches {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'none'}; eog std; pool 1 s",
+    "b_shift030k_eog": "ckpt_step30000.pt step 30000 ema_model switches {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'shifted'}; eog std; pool 1 s"
+  },
+  "budgets": [
+    "label25",
+    "label10"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "pairs": [
+    "a_same030k_eog:d_pre030k_eog",
+    "b_shift030k_eog:d_pre030k_eog",
+    "a_same030k_eog:b_shift030k_eog"
+  ],
+  "b_code_commit": "ef8b4f78580dcd308ad78285583d4c4b2ded1009",
+  "minutes": 4.459329310316662
+}

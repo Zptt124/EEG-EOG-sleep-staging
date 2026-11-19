@@ -1,0 +1,102 @@
+{
+  "run_name": "W4_B_xmodal_shifted_30k_seed0_v01",
+  "config": "m64x12",
+  "model_kwargs": {
+    "in_channels": 1,
+    "d_model": 64,
+    "d_state": 64,
+    "n_layer": 12,
+    "n_ssm": null,
+    "kernel_init": "diag-lin",
+    "kernel_mode": "diag",
+    "bidirectional": true,
+    "d_cond": 256,
+    "d_cond_embed": 128,
+    "local_cond_ch": 0,
+    "n_class": 2,
+    "have_null_class": false,
+    "self_gated": false
+  },
+  "backbone_seed": 0,
+  "batch_size": 108,
+  "max_steps": 30000,
+  "lr_override": null,
+  "val_every": 5000,
+  "early_stop": null,
+  "self_cond": {
+    "layer": 0,
+    "pool": "mean",
+    "method": "arXiv 2505.10999 single-shot conditioning residual: cond_l += Linear0(pool(h_m)) * phi(t) for l > m"
+  },
+  "cross_modal": {
+    "mode": "shifted",
+    "cond_dropout": 0.2,
+    "condition_targets": "EOG target windows only; EEG targets always null",
+    "shift_pairs": {
+      "path": "shift_pairs_60_300_v01.npy",
+      "sha256": "2f446ba47673bf75db31a79ade98d4738f7aabe8ea6c3845c4e3a5c4ecb99ded",
+      "min_sec": 60,
+      "max_sec": 300,
+      "pair_seed": 20261114,
+      "n_no_candidate": 0
+    },
+    "protocol": "experiment3/week4/cross_modal_protocol.md (C, 2026-11-14)",
+    "eval_condition": "val main columns use NO EEG condition"
+  },
+  "heldout": {
+    "path": "pretrain_split_w4_v01.csv",
+    "sha256": "470c23f7d49b4de6a3a896243e379ffc3b7a637d64b3e70c813b1c03522dffa0",
+    "subjects": [
+      "SC414",
+      "SC416",
+      "SC431",
+      "SC450",
+      "SC457",
+      "SC463",
+      "SC467",
+      "SC477"
+    ],
+    "official_w4_v01": true
+  },
+  "n_train_subjects": 46,
+  "n_train_units": 1368492,
+  "train_units_sha256": "d710f5bbf6bdba55f934814fac1ef8494265b9a18cdb4145ede51f0efaf3940f",
+  "train_units_definition": "int64 little-endian array of unit ids u=(row*2+m)*6+k, sorted",
+  "smoke_small_val": false,
+  "val_set": {
+    "n_windows": 2048,
+    "val_seed": 20261114,
+    "per_subject_per_modality": 128,
+    "bucket": 5,
+    "n_bucket": 10,
+    "units_sha256": "cb979d0b7b3cd4470dd54866f4a4d74a0d14ac555729fff163df6617f02260b9",
+    "t_sha256": "a2734ffba880c6ca439d4bec9f8e71e2b81d40b533990b3c5b6026c38a064cbb",
+    "noise_sha256": "3465eadc841288d1cebe5e4d5e046d90c19313088bbc7c454cec3720fde3a120",
+    "noise_recipe": "torch.Generator(cpu).manual_seed(20261114); torch.randn((2048, 10, 1, 1000)), float32"
+  },
+  "noise_scheduler": {
+    "num_train_timesteps": 50,
+    "beta_start": 0.0001,
+    "beta_end": 0.05,
+    "beta_schedule": "squaredcos_cap_v2",
+    "prediction_type": "v_prediction"
+  },
+  "timestep_sampling": "uniform integer in [0, 50) per sample",
+  "denoising_target": "v_prediction, MSE",
+  "ema": {
+    "beta": 0.999,
+    "update_after_step": 100,
+    "update_every": 10
+  },
+  "optimizer": {
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "official_s4_param_groups": true
+  },
+  "grad_clip_norm": 1.0,
+  "precision": "float32 with TF32 matmul",
+  "conditioning": "modality id: 0=EEG Fpz-Cz, 1=EOG horizontal (n_class=2)",
+  "data": "train split minus held-out (46 subjects), signal only, labels never read",
+  "cache_sha256": "baa935f751d3483a7437eb87293d221368b716743cb4249a960ad12634c58c61",
+  "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969"
+}

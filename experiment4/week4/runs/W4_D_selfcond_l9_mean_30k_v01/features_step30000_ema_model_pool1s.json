@@ -1,0 +1,81 @@
+{
+  "checkpoint": "ckpt_step30000.pt",
+  "checkpoint_sha256": "453ecba128875418729a1927008057cd1abe709fc35dea7cbba1fba74a75b013",
+  "step": 30000,
+  "weights": "ema_model",
+  "switches": {
+    "self_cond_layer": 9,
+    "self_cond_pool": "mean",
+    "cross_modal": "none"
+  },
+  "run_config_name": "W4_D_selfcond_l9_mean_30k_v01",
+  "modalities": [
+    "eeg",
+    "eog"
+  ],
+  "n_samples": 53496,
+  "n_labeled_train": 32310,
+  "n_val": 21186,
+  "limit_records": 0,
+  "readout": "diffusion_t=1, no noise, query=gate, all 12 layers, per-1s std/mean, mean over 30 positions; cross-modal models: null EEG condition (flag 0)",
+  "pool_sec": 1,
+  "dim_per_modality": 768,
+  "eog_only_verification": [
+    {
+      "record_id": "SC4031",
+      "eog_identical_without_eeg": true
+    },
+    {
+      "record_id": "SC4032",
+      "eog_identical_without_eeg": true
+    }
+  ],
+  "seconds": 1239.1099260069896,
+  "epochs_per_second": 43.17292507888298,
+  "peak_gpu_mib": 2264.9794921875,
+  "files": {
+    "eeg_std": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "f10917dd4a5d07d2c310aa6f09a8b3ad908020b7ad7d7821018e238b87bb6586"
+    },
+    "eeg_mean": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "93e64fd985a7003101d1a7027783d160a0fc3ba3bc86fcdd58ad5c208a19518b"
+    },
+    "eeg_feedback": {
+      "shape": [
+        53496,
+        64
+      ],
+      "sha256": "a909212a71c0522b1ae1e4e08fba418088e29ce199e8c2c9a2a7981dea388afe"
+    },
+    "eog_std": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "53892f883815bafe348ec34c3cbb759eee7e167fb08222b8161690926dd84c67"
+    },
+    "eog_mean": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "62b659d7fd7ea3fecf49ee692fd0ec2b9ec3f71ad5930d5e57b2c98551451ffc"
+    },
+    "eog_feedback": {
+      "shape": [
+        53496,
+        64
+      ],
+      "sha256": "7c7e5778395bb22b34234fc0a49388a1cad791bac44604a5bc666b1d9624d638"
+    }
+  },
+  "index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e"
+}
