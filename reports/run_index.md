@@ -1,3 +1,20 @@
+## W4 运行记录（2026-11-19，分支 feat/a-week4-pooling-cv）
+
+同窗 EEG 条件 30k 小 EEGDM（m64x12）的 EOG-only 线性探针（B 34 号协议：训练侧五折 50 轮
+OOF 选轮 + OOF 选 α；开发集只最终评分一次）。权重 Release `a-w4-xmodal-same-30k-v01-20261119`。
+
+| run_id | 内容 | 状态 | E* | dev Macro-F1 | N1 AP | α | N1 F1(调整后) |
+|--------|------|------|----|--------------|-------|---|---------------|
+| `W4_A_xm_sync_label10_sseed2024_seed0_v01` | 同窗30k EOG-only 探针,label10 | 成功 | 44 | 0.5967 | 0.2475 | 7.61 | 0.3062 |
+| `W4_A_xm_sync_label10_sseed2024_seed1_v01` | 同上,下游 seed1 | 成功 | 24 | 0.6013 | 0.234 | 6.73 | 0.305 |
+| `W4_A_xm_sync_label10_sseed2024_seed2_v01` | 同上,下游 seed2 | 成功 | 40 | 0.5915 | 0.240 | 9.04 | 0.304 |
+| `W4_A_xm_sync_label25_sseed2024_seed0_v01` | 同窗30k EOG-only 探针,label25 | 成功 | 44 | 0.6404 | 0.310 | 5.54 | 0.376 |
+
+指标与 bootstrap 区间见各 run 目录 metrics.json（小文件归档于
+`experiment3/week4/pool_compare/probe_results/<run_id>/`）；完整 run 目录（含 README）在本地
+`runs/<run_id>/`。LFT 提速对照（1s/2s/3s/去classifier/downsampling）见
+`experiment3/week4/pool_compare/lft_results/` 与 `reports/week4/a_w4_pooling_compare.md`。
+
 # A 的运行索引(run index)
 
 负责人:A · 更新日期:2026-10-18 · 分支:`feat/a-data-baseline`
