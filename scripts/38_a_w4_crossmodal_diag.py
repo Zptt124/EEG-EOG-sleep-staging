@@ -22,16 +22,18 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import os
+
 import numpy as np
 import pandas as pd
 from scipy import signal
 
 REPO = Path(__file__).resolve().parents[1]
-DATA = Path("D:/sleepedf/processed")
+DATA = Path(os.environ.get("SLEEP_DATA", REPO.parent / "sleepedf/processed"))
+FS = 200
 OUT = REPO / "experiment3/week4/pool_compare/diag"
 SPLIT_CSV = REPO / "manifests/pretrain_split_w4_v01.csv"
 
-FS = 200
 NPERSEG = 500
 NOVERLAP = 250
 BAND_LO, BAND_HI = 0.3, 4.0

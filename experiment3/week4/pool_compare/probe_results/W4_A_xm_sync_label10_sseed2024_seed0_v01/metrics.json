@@ -79,9 +79,9 @@
     "REM"
   ],
   "evaluate_version": "v1",
-  "source": "D:\\EEG-EOG-sleep-staging\\runs\\W4_A_xm_sync_label10_sseed2024_seed0_v01\\predictions_val.csv",
+  "source": "runs/W4_A_xm_sync_label10_sseed2024_seed0_v01/predictions_val.csv",
   "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43",
-  "sample_set_reference": "D:\\EEG-EOG-sleep-staging\\manifests\\val_reference_v1.csv",
+  "sample_set_reference": "manifests/val_reference_v1.csv",
   "run_id": "W4_A_xm_sync_label10_sseed2024_seed0_v01",
   "selected_epoch": 44,
   "oof_macro_f1_at_selected": 0.5564541136192743,

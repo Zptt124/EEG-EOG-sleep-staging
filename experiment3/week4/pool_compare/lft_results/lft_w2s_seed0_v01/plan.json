@@ -154,15 +154,15 @@
     "eog_provenance": "local regeneration under prior D reference protocol",
     "window_seconds": 2,
     "input_sha256": {
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week3\\vendor\\experiment1-review\\manifests\\split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week3\\manifests\\week2_c_adaptation_v01\\label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
-      "D:\\EEG-EOG-sleep-staging\\src\\evaluation\\evaluate.py": "0a5bb7f358d4e09d0bdd6f9311b7532c479ce96f9e6927d4b2bbf9fb6732372c",
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week3\\vendor\\EEGDM\\model\\classifier.py": "7c1ae09755be985729b20bcc71358301880ad7769364ee31be77cef6fbd8fb3c",
-      "D:\\EEG-EOG-sleep-staging\\scripts\\a_w4_readout.py": "a49ba37e2a697a0d2486077573ea1e6952896627bfddf9dfd8599ccc3e7f8b23",
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week4\\pool_compare\\features\\eeg_std_t1_w2s_cond14_label25\\feature_index.csv": "44a2380c847164b9873635db069bdf73ad316d8ab7b4649c1b91902de3a45df4",
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week4\\pool_compare\\features\\eeg_std_t1_w2s_cond14_label25\\feature_config.json": "a5d07ecce412fd1e8887a5e802a86a6616d0f505fddf984babe6d12e56d25e4f",
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week4\\pool_compare\\features\\eog_std_t1_w2s_cond14_label25\\feature_index.csv": "44a2380c847164b9873635db069bdf73ad316d8ab7b4649c1b91902de3a45df4",
-      "D:\\EEG-EOG-sleep-staging\\experiment3\\week4\\pool_compare\\features\\eog_std_t1_w2s_cond14_label25\\feature_config.json": "16da7bc52a99127f1941cfb7701c05d9af091ff805dc539d514a029be7dac4c8"
+      "experiment3/week3/vendor/experiment1-review/manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+      "experiment3/week3/manifests/week2_c_adaptation_v01/label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+      "src/evaluation/evaluate.py": "0a5bb7f358d4e09d0bdd6f9311b7532c479ce96f9e6927d4b2bbf9fb6732372c",
+      "experiment3/week3/vendor/EEGDM/model/classifier.py": "7c1ae09755be985729b20bcc71358301880ad7769364ee31be77cef6fbd8fb3c",
+      "scripts/a_w4_readout.py": "a49ba37e2a697a0d2486077573ea1e6952896627bfddf9dfd8599ccc3e7f8b23",
+      "experiment3/week4/pool_compare/features/eeg_std_t1_w2s_cond14_label25/feature_index.csv": "44a2380c847164b9873635db069bdf73ad316d8ab7b4649c1b91902de3a45df4",
+      "experiment3/week4/pool_compare/features/eeg_std_t1_w2s_cond14_label25/feature_config.json": "a5d07ecce412fd1e8887a5e802a86a6616d0f505fddf984babe6d12e56d25e4f",
+      "experiment3/week4/pool_compare/features/eog_std_t1_w2s_cond14_label25/feature_index.csv": "44a2380c847164b9873635db069bdf73ad316d8ab7b4649c1b91902de3a45df4",
+      "experiment3/week4/pool_compare/features/eog_std_t1_w2s_cond14_label25/feature_config.json": "16da7bc52a99127f1941cfb7701c05d9af091ff805dc539d514a029be7dac4c8"
     },
     "development_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de"
   },
