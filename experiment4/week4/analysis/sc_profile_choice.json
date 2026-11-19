@@ -1,0 +1,9 @@
+{
+  "rule": "lowest online held-out stop_metric at step 2000 (ties -> shallower layer); paper (arXiv 2505.10999) picks the feedback depth by short profiling runs",
+  "candidates": {
+    "3": 0.064185,
+    "6": 0.064249,
+    "9": 0.063753
+  },
+  "chosen_layer": 9
+}

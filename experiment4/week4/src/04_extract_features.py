@@ -13,6 +13,7 @@
 只提取 probe 需要的人：label25 的 14 人（训练侧，含 label10 的 5 人）+ 8 个 dev；测试集不碰。
 输出：SLEEP_W4_BIG/features/<run>/step<N>_<weights>_pool<k>s/{eeg,eog}_{std,mean}.npy、index.csv、features_info.json、DONE
      格式与第三周 05_extract_features.py 相同（B 的 27 号 probe 脚本可直接读）。
+     self-cond 模型另存 {eeg,eog}_feedback.npy：第 m 层反馈特征 s_m（6 个 5 秒窗取平均），即论文里的表征。
 """
 import argparse
 import sys
@@ -49,7 +50,9 @@ def load_model(ckpt_path, weights):
 
 @torch.no_grad()
 def gate_activations(model, x, modality):
-    """x [B,1,6000]（单一模态的 30 秒段）-> gate [B, n_layer, 6000, d_model]。空 EEG 条件。
+    """x [B,1,6000]（单一模态的 30 秒段）-> (gate [B, n_layer, 6000, d_model], feedback [B, D] 或 None)。空 EEG 条件。
+
+    feedback：self-cond 模型第 m 层的池化反馈特征 s_m，在 6 个 5 秒窗上取平均（下游 probe 用）。
 
     与官方 LatentActivityExtractor(diffusion_t=1, query=['gate']) 的计算顺序相同，另外加上
     W4 的空条件 flag 嵌入（跨模态模型）和 self-cond 反馈（self-cond 模型）。
@@ -63,7 +66,7 @@ def gate_activations(model, x, modality):
     if model.cross_modal != 'none':                                         # 空条件分支
         cond = cond + model.xc_flag(torch.zeros(n, dtype=torch.long, device=x.device))[:, None, :]
     h = model.in_layer(rearrange(xw, 'B H L -> B L H'))
-    acts = []
+    acts, feedback = [], None
     for i, layer in enumerate(model.layers, start=1):
         h, _, q = layer(h, cond, None, query=['gate'], skip_skip=True)
         acts.append(q[0])
@@ -71,8 +74,9 @@ def gate_activations(model, x, modality):
             fb = pool_time(h, model.self_cond_pool)
             phi = model.sc_t_embed(model._t_embed_fn(t, model.d_embed))
             cond = cond + (model.sc_proj(fb) * phi)[:, None, :]
+            feedback = rearrange(fb, '(B f) D -> B f D', f=C.N_WIN).mean(dim=1)
     a = torch.stack(acts, dim=1)                                            # (B f) n L H
-    return rearrange(a, '(B f) n L H -> B n (f L) H', f=C.N_WIN)
+    return rearrange(a, '(B f) n L H -> B n (f L) H', f=C.N_WIN), feedback
 
 
 def pooled(a, pool_sec):
@@ -140,19 +144,22 @@ def main():
 
     def extract(sig_mod, mi):
         x_all = C.transform_uv(sig_mod)
-        S, M = [], []
+        S, M, F = [], [], []
         for b in range(0, len(x_all), args.batch_epochs):
             x = torch.from_numpy(x_all[b:b + args.batch_epochs, None, :]).cuda()
-            a = gate_activations(model, x, mi)
+            a, fb = gate_activations(model, x, mi)
             s, mu = pooled(a, args.pool_sec)
             if not torch.isfinite(s).all():
                 C.fail('Non-finite features')
             S.append(s.cpu().numpy())
             M.append(mu.cpu().numpy())
-        return np.concatenate(S), np.concatenate(M)
+            if fb is not None:
+                F.append(fb.cpu().numpy())
+        return np.concatenate(S), np.concatenate(M), (np.concatenate(F) if F else None)
 
     index, verify = [], []
-    feats = {f'{m}_{r}': [] for m in mods for r in ('std', 'mean')}
+    kinds = ('std', 'mean') + (('feedback',) if model.self_cond_layer else ())
+    feats = {f'{m}_{r}': [] for m in mods for r in kinds}
     torch.cuda.reset_peak_memory_stats()
     start = time.perf_counter()
     for i, rec in enumerate(todo):
@@ -161,13 +168,15 @@ def main():
             sig, lab, ep = z['signal'], z['labels'], z['epoch_index']
         for m in mods:
             mi = C.MODALITIES[m]
-            s, mu = extract(sig[:, mi, :], mi)                 # 只把这一模态的通道送进模型
+            s, mu, fb = extract(sig[:, mi, :], mi)             # 只把这一模态的通道送进模型
             feats[f'{m}_std'].append(s)
             feats[f'{m}_mean'].append(mu)
+            if fb is not None:
+                feats[f'{m}_feedback'].append(fb)
             if m == 'eog' and i < args.verify_eog_only:
                 sig0 = sig.copy()
                 sig0[:, C.MODALITIES['eeg'], :] = 0.0           # 没有 EEG 的输入环境
-                s0, mu0 = extract(sig0[:, mi, :], mi)
+                s0, mu0, _ = extract(sig0[:, mi, :], mi)
                 ok = bool(np.array_equal(s, s0) and np.array_equal(mu, mu0))
                 verify.append(dict(record_id=rec, eog_identical_without_eeg=ok))
                 if not ok:
@@ -193,7 +202,10 @@ def main():
                 peak_gpu_mib=torch.cuda.max_memory_allocated() / 2**20, files={})
     for k, v in feats.items():
         arr = np.concatenate(v).astype(np.float32)
-        if arr.shape != (len(index), n_layer * d_model):
+        if k.endswith('_feedback'):
+            if arr.shape[0] != len(index):
+                C.fail(f'Bad shape for {k}: {arr.shape}')
+        elif arr.shape != (len(index), n_layer * d_model):
             C.fail(f'Bad shape for {k}: {arr.shape}')
         np.save(out / f'{k}.npy', arr)
         info['files'][k] = dict(shape=list(arr.shape), sha256=C.sha256_file(out / f'{k}.npy'))

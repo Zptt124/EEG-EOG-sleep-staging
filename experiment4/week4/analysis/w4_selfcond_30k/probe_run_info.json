@@ -1,0 +1,23 @@
+{
+  "tag": "w4_selfcond_30k",
+  "arms": {
+    "d_pre030k": "ckpt_step30000.pt step 30000 ema_model switches {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'none'}; eeg+eog std; pool 1 s",
+    "sc030k": "ckpt_step30000.pt step 30000 ema_model switches {'self_cond_layer': 9, 'self_cond_pool': 'mean', 'cross_modal': 'none'}; eeg+eog std; pool 1 s",
+    "sc030k_fb": "ckpt_step30000.pt step 30000 ema_model switches {'self_cond_layer': 9, 'self_cond_pool': 'mean', 'cross_modal': 'none'}; eeg+eog feedback; pool 1 s"
+  },
+  "budgets": [
+    "label25",
+    "label10"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "pairs": [
+    "sc030k:d_pre030k",
+    "sc030k_fb:d_pre030k"
+  ],
+  "b_code_commit": "ef8b4f78580dcd308ad78285583d4c4b2ded1009",
+  "minutes": 7.024205224533322
+}
