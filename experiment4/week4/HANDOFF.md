@@ -94,6 +94,18 @@ python -u 04_extract_features.py --ckpt $SLEEP_W4_BIG/runs/<run>/ckpt_step30000.
 
 所有 pretraining 变体都用这一套脚本。需要改的地方，请先告诉 D，经 review 后统一改，不要各自改出不同的版本。
 
+## 6.1 重算 val MSE（`06_val_mse_ckpt.py`，11-19 新增）
+
+不同电脑用同一配方生成的 val 噪声，浮点末位可能不同（噪声 SHA256 不同，数值差约 1e-6）。需要逐位同口径时，用这个脚本在一台机器上统一重算：
+
+```bash
+python -u 06_val_mse_ckpt.py --ckpt <run>/ckpt_step30000.pt \
+    --heldout-csv ../../../manifests/pretrain_split_w4_v01.csv \
+    --out <out.csv> --check-csv <run 的 val_mse.csv>
+```
+
+模型开关从 checkpoint 里读；跨模态模型另算给 EEG 的结果。D 已核对：在训练用的同一台机器上重算，与训练时的 `val_mse.csv` 逐位相同。
+
 ## 7. 已知限制
 
 - val MSE 的全组口径就是这套脚本（B 于 11-16 确认）。固定窗清单在 `manifests/d_val_windows_w4_v01.csv`，供 B 的 32 号脚本独立复算。

@@ -67,4 +67,5 @@ EEG+EOG std 特征，dev Macro-F1（3 个 head seed 平均）：
 
 ## 文件
 
-- `d_summary.csv`：各 arm × 预算的均值与 min/max；`d_paired.csv`：配对比较；`d_n1_adjust.csv`：N1 α 调整；`d_eval_registry.csv`：预测表位置（逐 run 的预测表未入库）。
+- `d_summary.csv`：各 arm × 预算的均值与 min/max；`d_paired.csv`：配对比较；`d_n1_adjust.csv`：N1 α 调整；`d_eval_registry.csv`：预测表位置。逐 run 的文件（11 列预测表、OOF、配置、head 权重）在 Release `d-w4-probe-extras-v01-20261119` 的 `w4_d_probe_runs_v01.zip`。
+- `val_recompute/`：用 `src/06_val_mse_ckpt.py` 在 D 的电脑上、统一噪声下重算的同窗 / 错时 30k val MSE。
