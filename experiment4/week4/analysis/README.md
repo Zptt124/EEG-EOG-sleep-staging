@@ -43,6 +43,28 @@ EEG+EOG std 特征，dev Macro-F1（3 个 head seed 平均）：
 
 `b_shift030k_eog`（B 的错时组 30k，D 代跑）vs `d_pre030k_eog`（无 EEG 30k），同一套特征提取与 probe：Macro-F1 label25 +0.12 [−0.43, +0.67]、label10 −0.29 [−0.99, +0.78]；N1 AP 区间均含 0。三组正式汇总以 B 的结果为准。
 
+## 4. 三组 EOG-only 统一流程核对（`w4_xmodal_recheck/`，11-19 晚）
+
+三组 30k（EMA）的 EOG 特征全部用 `src/04_extract_features.py` 在 D 的 RTX 4060 Laptop 上提取，再用同一套 probe：
+- 无 EEG：`W4_D_main_m64x12_seed0_v01` step 30000；
+- 同窗：A 的 Release `a-w4-xmodal-same-30k-v01-20261119` 中的 `ckpt_step30000.pt`（SHA256 前缀 `ba81448a`，与 A 的 `checkpoints.csv` 一致），由 D 重新提取；
+- 错时：`W4_B_xmodal_shifted_30k_seed0_v01` step 30000（D 代跑）。
+
+三份特征的 EOG-only 验收（去掉 EEG 后逐位相同）都通过。
+
+| 对比 | 预算 | Macro-F1 | N1 F1 | N1 AP |
+|---|---|---|---|---|
+| 同窗 vs 无 EEG | label10 | −0.63 [−1.11, −0.07] | −2.38 [−3.49, −0.87] | +0.48 [−0.32, +1.50] |
+| 同窗 vs 无 EEG | label25 | +0.29 [−0.25, +0.85] | +0.93 [−0.03, +2.45] | +0.26 [−0.53, +1.94] |
+| 错时 vs 无 EEG | label10 | −0.29 [−0.99, +0.78] | −1.99 [−3.08, −0.40] | +0.48 [−0.45, +1.13] |
+| 错时 vs 无 EEG | label25 | +0.12 [−0.43, +0.67] | +1.59 [+0.47, +2.48] | −0.13 [−2.68, +1.24] |
+| 同窗 vs 错时 | label10 | −0.34 [−1.25, +0.16] | −0.39 [−1.09, +0.36] | +0.00 [−0.45, +0.80] |
+| 同窗 vs 错时 | label25 | +0.18 [−0.55, +0.91] | −0.66 [−1.43, +0.76] | +0.39 [−0.69, +2.95] |
+
+- 主指标 N1 AP 在所有比较中区间都含 0；N1 F1 在 label10 与 label25 方向相反；同窗与错时之间没有可测差别。
+- label10 的同窗 vs 无 EEG，Macro-F1 区间不含 0（方向为变差）。只有单个 backbone seed，不据此判断跨模态有害。
+- **关于 A 的原提取脚本**（`scripts/39_a_w4_eog_extract.py`）：它走官方 `LatentActivityExtractor`，没有加上训练后的空条件 flag 嵌入（30k 时 `xc_flag.weight` 范数 0.099，不为 0）。D 在同一 checkpoint、训练池随机 64 段 EOG 上测得，加与不加 flag 的 EOG std 特征相对 L2 差异平均 0.34%（0.27%–0.43%）。下游结果：C 用 A 原特征得到的同窗 vs 无 EEG 为 label10 −0.56、label25 +0.37，与本表的 −0.63、+0.29 相差不到 0.1 个百分点。影响可以忽略，不需要重提；之后统一用 04 号脚本。
+
 ## 文件
 
 - `d_summary.csv`：各 arm × 预算的均值与 min/max；`d_paired.csv`：配对比较；`d_n1_adjust.csv`：N1 α 调整；`d_eval_registry.csv`：预测表位置（逐 run 的预测表未入库）。
