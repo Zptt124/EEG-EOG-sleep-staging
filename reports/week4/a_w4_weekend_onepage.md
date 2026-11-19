@@ -31,7 +31,8 @@ LFT 提速:1s→2s 池化每轮快 ~19%、显存 −45%、分数打平,推荐 2s
 
 权重 Release `a-w4-xmodal-same-30k-v01-20261119`(SHA256 `ba81448a…`);训练:
 cond_dropout 0.2、B 的 8 人 held-out w4_v01、val 固定 2,048 窗,stop_metric 0.05407@30k
-(单调下降)。EOG-only 特征(768 维,EEG 条件置空)zero-eeg 逐位验收通过。
+(单调下降;D 06 号脚本按团队噪声重算与本机逐位一致,已闭合)。EOG-only 特征(768 维,
+EEG 条件置空)zero-eeg 逐位验收通过。
 
 | run | E* | dev Macro-F1 | N1 AP | N1 F1 原始 | α | N1 F1 调整后 |
 | --- | --- | --- | --- | --- | --- | --- |
