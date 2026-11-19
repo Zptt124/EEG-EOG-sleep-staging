@@ -1,0 +1,3 @@
+budget,seed,arms,n_epochs
+label10,0,xm_none xm_shift xm_sync,21186
+label25,0,xm_none xm_shift xm_sync,21186

@@ -13,6 +13,8 @@
 
 新一轮预训练从 54 人训练池中留出 8 名不在 14 人标签名单中的受试者做验证。下游沿用 5 人和 14 人预算，按人五折在训练侧选轮，全预算重训后在 8 人开发集最终评分。16 人测试集继续封存。跨模态三组使用相同的 30k 训练预算，下游统一只输入 EOG，主指标为 N1 AP 和 Macro-F1。
 
+**C Week 4 已完成。** [报告总入口](experiment3/week4/README.md)包含四格12个run、跨模态三组独立复评6个run，以及D三head seed补充结论。[18个C run的预测登记](reports/week4/c_eval_registry_w4_all.csv)供B统一复评。
+
 ## 第三周 W3
 
 [第三周工作安排](WEEK3.md) · [四天方案 PDF](docs/week3/work_plan_W3.pdf) · [交接登记](HANDOFF.md#第三周交接)

@@ -1,0 +1,6 @@
+# Completed crossmodal text results under experiment3's runs exclusion.
+!runs/
+!runs/*/
+!runs/*/*.csv
+!runs/*/*.yaml
+!runs/*/*.json

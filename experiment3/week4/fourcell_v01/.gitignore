@@ -1,0 +1,5 @@
+# Publish completed W4 text results under the experiment3 runs exclusion.
+!runs/
+!runs/*/
+!runs/*/*.csv
+!runs/*/*.json

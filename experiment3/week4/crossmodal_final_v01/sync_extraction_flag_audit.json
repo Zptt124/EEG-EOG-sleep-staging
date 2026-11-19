@@ -1,0 +1,19 @@
+{
+  "checkpoint_sha256": "ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70",
+  "record": "SC4031",
+  "samples": 8,
+  "shape": [
+    8,
+    768
+  ],
+  "null_flag_max_abs": 0.01885812357068062,
+  "null_flag_l2": 0.06536025553941727,
+  "null_flag_nonzero": 256,
+  "pooled_std_max_abs_difference": 0.002570405602455139,
+  "pooled_std_mean_abs_difference": 0.0001558317308081314,
+  "different_values": 6144,
+  "total_values": 6144,
+  "torch": "2.7.1+cu126",
+  "explanation": "A 39 uses official LatentActivityExtractor, which omits trained xc_flag[0]; D 04 includes it",
+  "source_a": "ee4bbd30013bd1c4256e257f082b9f54843279ed/scripts/39_a_w4_eog_extract.py"
+}

@@ -1,0 +1,29 @@
+{
+  "script": "scripts/35_b_w4_crossmodal_eval.py",
+  "arms": {
+    "sync": "xm_sync",
+    "shift": "xm_shift",
+    "none": "xm_none"
+  },
+  "registries": [
+    "experiment3/week4/crossmodal_final_v01/c_crossmodal_registry.csv"
+  ],
+  "n_runs": 6,
+  "alignment": [
+    {
+      "budget": "label10",
+      "seed": 0,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 0,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    }
+  ],
+  "val_reference_sha256": "0f71748d782e400a2c0c398db0d66b60fe81b59dfc7e32d439dc350e4adb66e2",
+  "bootstrap": "1000 次，按开发集受试者成对重采样，seed 合并，rng seed 0",
+  "code_commit": "unknown"
+}

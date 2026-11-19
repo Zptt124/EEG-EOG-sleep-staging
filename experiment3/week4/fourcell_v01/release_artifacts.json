@@ -1,0 +1,14 @@
+[
+  {
+    "name": "w4_c_fourcell_results_v01.zip",
+    "bytes": 17556688,
+    "sha256": "472376f23d14a0a7478fedd08e8df9d20d5065acc437d59e7ddb8245c6fa2fb2",
+    "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-fourcell-w4-v01-20261119/w4_c_fourcell_results_v01.zip"
+  },
+  {
+    "name": "w4_c_final_heads_v01.zip",
+    "bytes": 23094702,
+    "sha256": "37b0055d825fc90d1e9a36aed6a768cea586a753c27ca394adb1139dd7d19a77",
+    "url": "https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-fourcell-w4-v01-20261119/w4_c_final_heads_v01.zip"
+  }
+]

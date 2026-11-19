@@ -1,0 +1,18 @@
+{
+  "run_count": 6,
+  "completed_at": "2026-11-19T21:55:48.484070+08:00",
+  "protocol_lock_sha256": "a99f0e993305d30a43e284444680d4a64e6d34b228bf1bdffe86ab4b2ecffa44",
+  "test_used": false,
+  "validation_mse": "A recomputed with exact team windows, t and noise",
+  "report_sha256": "349ff78bde728a9ef487a2ffba275a11aab8a1355eebf485d30e9903ccdb54ca",
+  "additional_three_head_seed_summary": {
+    "source_commit": "dfc7220a67b9da8a58240f0dc6e8e3d214d94f15",
+    "head_seeds": [
+      0,
+      1,
+      2
+    ],
+    "raw_predictions_independently_verified": false,
+    "source_table_sha256": "bb322112881bce9550eca1ff093c5eefec80ea89d76be57827bd4a3e966ab786"
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "file": "d_metrics.csv",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/d_metrics.csv",
+    "sha256": "dca0b75dbe48372873ebd8ed1f4e7cd212f43a15390543ffd703b048ca5b4b6f"
+  },
+  {
+    "file": "d_summary.csv",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/d_summary.csv",
+    "sha256": "8a19dc6e5fd75728fd129cc5d1f925f6e13986523d702c5a69434d191b751578"
+  },
+  {
+    "file": "d_paired.csv",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/d_paired.csv",
+    "sha256": "bb322112881bce9550eca1ff093c5eefec80ea89d76be57827bd4a3e966ab786"
+  },
+  {
+    "file": "d_paired_by_subject.csv",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/d_paired_by_subject.csv",
+    "sha256": "f4521b6f8c6772cae3769e6a688fad50e69c98bd47aadb3c1a8f7d31188c528a"
+  },
+  {
+    "file": "d_n1_adjust.csv",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/d_n1_adjust.csv",
+    "sha256": "595441712c82fb5c0e70cd9248633efc367bccdea22ea3cfb753023663a6c7c8"
+  },
+  {
+    "file": "d_eval_registry.csv",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/d_eval_registry.csv",
+    "sha256": "a13a0444dbca79833fea03ac1c4302fc9e548f770b9d646a734eeda68a5c5e0a"
+  },
+  {
+    "file": "probe_run_info.json",
+    "url": "https://raw.githubusercontent.com/Zptt124/EEG-EOG-sleep-staging/dfc7220a67b9da8a58240f0dc6e8e3d214d94f15/experiment4/week4/analysis/w4_xmodal_recheck/probe_run_info.json",
+    "sha256": "938487671169e004367f389dcea3ea1586775d203fc89c462da78f405e29d3f5"
+  }
+]
