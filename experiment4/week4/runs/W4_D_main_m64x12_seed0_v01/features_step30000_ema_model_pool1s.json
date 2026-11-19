@@ -1,0 +1,67 @@
+{
+  "checkpoint": "ckpt_step30000.pt",
+  "checkpoint_sha256": "21c8514ea7761ef383d70b3e26ac19ea33ad0e7ccacfe690812ad359b0118e5b",
+  "step": 30000,
+  "weights": "ema_model",
+  "switches": {
+    "self_cond_layer": 0,
+    "self_cond_pool": "mean",
+    "cross_modal": "none"
+  },
+  "run_config_name": "W4_D_main_m64x12_seed0_v01",
+  "modalities": [
+    "eeg",
+    "eog"
+  ],
+  "n_samples": 53496,
+  "n_labeled_train": 32310,
+  "n_val": 21186,
+  "limit_records": 0,
+  "readout": "diffusion_t=1, no noise, query=gate, all 12 layers, per-1s std/mean, mean over 30 positions; cross-modal models: null EEG condition (flag 0)",
+  "pool_sec": 1,
+  "dim_per_modality": 768,
+  "eog_only_verification": [
+    {
+      "record_id": "SC4031",
+      "eog_identical_without_eeg": true
+    },
+    {
+      "record_id": "SC4032",
+      "eog_identical_without_eeg": true
+    }
+  ],
+  "seconds": 1215.2633708890062,
+  "epochs_per_second": 44.020087564118604,
+  "peak_gpu_mib": 2264.2890625,
+  "files": {
+    "eeg_std": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "ebe1c68d831f9cd8f0de35bf1745cfb5f1ead56fc5bf67b741ced4e2ae14419d"
+    },
+    "eeg_mean": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "668092940f3d1a3093112dc864766dc8c29fb1d2ef79980f21ab5405096de8fb"
+    },
+    "eog_std": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "cdd4a5a4853348a27fbf594125c3aedd94fa377d34eaa4b9fec5b1462f200c07"
+    },
+    "eog_mean": {
+      "shape": [
+        53496,
+        768
+      ],
+      "sha256": "1c69a68a5ac5d802a2cedb16bfd5c9fd77e68b0b8617d8706a29ad285cc38d81"
+    }
+  },
+  "index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e"
+}
