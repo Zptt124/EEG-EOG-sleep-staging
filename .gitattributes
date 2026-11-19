@@ -25,3 +25,9 @@
 /experiment3/scripts/run_week4_c_screening.py -text
 /experiment3/scripts/validate_adapt_lock.py -text
 /experiment3/week4/scripts/verify_fourcell.py -text
+
+# Crossmodal C report and prediction receipts bind exact bytes.
+/experiment3/week4/crossmodal_final_v01/** -text
+/reports/week4/c_crossmodal_registry_w4.csv -text
+/reports/week4/c_eval_registry_w4_all.csv -text
+/experiment3/week4/scripts/verify_crossmodal.py -text

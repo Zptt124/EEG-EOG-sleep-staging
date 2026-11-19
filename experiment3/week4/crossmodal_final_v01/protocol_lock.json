@@ -1,0 +1,21 @@
+{
+  "feature_pool_sec": 1,
+  "diffusion_t": 1,
+  "layers": 12,
+  "hidden": 64,
+  "head_seed": 0,
+  "budgets": [
+    "label10",
+    "label25"
+  ],
+  "modalities": [
+    "eog"
+  ],
+  "weights": "ema_model",
+  "d_source": "6590ec90a9fcc4ea6e1d7118556191f618117810",
+  "b_source": "cd9b238c4d2527ff5d0d1f38969b8ad6033a6d82",
+  "a_checkpoint_sha256": "ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70",
+  "a_features": "C re-extracts with D 04 on NVIDIA using empty EEG condition",
+  "other_features": "D published NVIDIA 04 pool1s features",
+  "test_used": false
+}

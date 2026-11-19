@@ -1,0 +1,55 @@
+{
+  "checkpoint_sha256": "ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70",
+  "weights": "ema_model",
+  "condition": "null EEG",
+  "validation_checks": {
+    "units_sha256_match": true,
+    "t_sha256_match": true,
+    "noise_sha256_match": true,
+    "windows_csv_sha256_match": true,
+    "windows_csv_rows_match": true,
+    "heldout_csv_sha256_match": true
+  },
+  "index_check": {
+    "n_rows": 132938,
+    "n_records": 106,
+    "matches_d_epoch_index": true
+  },
+  "windows": 2048,
+  "metrics": {
+    "eeg_t00_05": 0.20052473023315542,
+    "eeg_t05_10": 0.08490470547621953,
+    "eeg_t10_15": 0.052590870205676765,
+    "eeg_t15_20": 0.03955051981893121,
+    "eeg_t20_25": 0.032937915279035224,
+    "eeg_t25_30": 0.030064940069223667,
+    "eeg_t30_35": 0.029380681393377017,
+    "eeg_t35_40": 0.029481532088539097,
+    "eeg_t40_45": 0.031014532250992488,
+    "eeg_t45_50": 0.03089575020101165,
+    "eeg_all": 0.05613461770161621,
+    "eeg_t05_25": 0.05249600269496568,
+    "eog_t00_05": 0.2071301945252344,
+    "eog_t05_10": 0.08754327312817622,
+    "eog_t10_15": 0.05538816354692244,
+    "eog_t15_20": 0.0427654989111943,
+    "eog_t20_25": 0.036829752029461815,
+    "eog_t25_30": 0.03539567921484377,
+    "eog_t30_35": 0.03695649312203386,
+    "eog_t35_40": 0.04585103743897889,
+    "eog_t40_45": 0.06360910531407171,
+    "eog_t45_50": 0.09632312031340007,
+    "eog_all": 0.07077923175443175,
+    "eog_t05_25": 0.055631671903938695,
+    "stop_metric": 0.05406383729945219
+  },
+  "torch": "2.7.1+cu126",
+  "device": "cuda",
+  "switches": {
+    "self_cond_layer": 0,
+    "self_cond_pool": "mean",
+    "cross_modal": "same_window"
+  },
+  "source_b": "cd9b238c4d2527ff5d0d1f38969b8ad6033a6d82",
+  "source_d": "6590ec90a9fcc4ea6e1d7118556191f618117810"
+}
