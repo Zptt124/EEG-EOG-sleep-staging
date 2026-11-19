@@ -111,11 +111,12 @@ def stage_training_features(rows, positions, folder, sources):
     return staged, copies
 
 
-def fit_phase(config, seed, device, data, normalization, output, epochs, progress, n_pool, held=None):
+def fit_phase(config, seed, device, data, normalization, output, epochs, progress, n_pool, held=None,
+              no_classifier=False):
     """训练一折或最终重训,逐 epoch 落盘(与 C 的 fit_phase 相同,仅 build_heads 参数化)。"""
     output.mkdir(parents=True, exist_ok=True)
     checkpoint = output / "latest.pt"
-    model = a.w4_build_heads(config, seed, device, n_pool)["C1"]
+    model = a.w4_build_heads(config, seed, device, n_pool, no_classifier)["C1"]
     optimizer = c.optimizer_for(model, config)
     rng = np.random.default_rng(seed)
     if normalization.exists():
@@ -211,6 +212,7 @@ def run(args):
     c.require(config["budget"] == "label25" and config["layers"] == list(range(20))
               and b["MAX_EPOCHS"] == 50 and b["FOLD_SEED"] == 0, "Unexpected main experiment protocol")
     config.update(epochs=b["MAX_EPOCHS"], window_sec=args.window_sec,
+                  signal_rate=args.signal_rate, no_classifier=args.no_classifier,
                   checkpoint_selection="B subject-wise five-fold pooled OOF macro-F1; ties choose earliest",
                   normalization="per modality/layer/hidden shared across time; fitted on each fold's training subjects, then all 14 for the final refit")
     n_pool = a.n_positions(args.window_sec)
@@ -220,6 +222,7 @@ def run(args):
     output = args.output
     status = dict(budget="label25", seeds=config["seeds"], completed_seeds=[],
                   folds_per_seed=5, epochs_per_fold=50, window_sec=args.window_sec,
+                  signal_rate=args.signal_rate, no_classifier=args.no_classifier,
                   n_time_positions=n_pool, test_used=False)
     context = {}
 
@@ -231,11 +234,12 @@ def run(args):
 
     try:
         progress("checking_inputs")
-        sources = a.w4_sources(args.window_sec)
+        sources = a.w4_sources(args.window_sec, args.signal_rate)
         for folder in sources.values():
             if not (folder / "feature_index.csv").exists():
                 build_feature_index(folder)
-        rows, train, dev, audit = a.w4_inspect_inputs(dev_reference, sources, args.window_sec)
+        rows, train, dev, audit = a.w4_inspect_inputs(dev_reference, sources, args.window_sec,
+                                                      args.signal_rate)
         subject_ids = audit["labeled_subjects"]
         b_subjects, _ = b_common.selected_subjects(args.b_checkout / "manifests/label_subsets_v2.csv", "label25")
         c.require(set(b_subjects) == set(subject_ids), "B and C training subject lists differ")
@@ -269,7 +273,8 @@ def run(args):
         norm.mkdir(exist_ok=True)
         smoke_path = output / "smoke.json"
         if not smoke_path.exists():
-            c.write_json(smoke_path, a.w4_smoke(config, rows, train, device, staged, n_pool))
+            c.write_json(smoke_path, a.w4_smoke(config, rows, train, device, staged, n_pool,
+                                                args.no_classifier))
         for seed in config["seeds"]:
             seed_dir = output / f"seed{seed}_v01"
             seed_dir.mkdir(exist_ok=True)
@@ -287,7 +292,8 @@ def run(args):
                 held_data = a.W4CachedEpochs(rows, train[held_mask], config["layers"], staged, n_pool)
                 _, _, _, predictions, _ = fit_phase(
                     config, seed, device, fit_data, norm / f"fold{k + 1}.pt",
-                    seed_dir / f"fold{k + 1}", config["epochs"], progress, n_pool, held_data
+                    seed_dir / f"fold{k + 1}", config["epochs"], progress, n_pool, held_data,
+                    args.no_classifier
                 )
                 oof[:, held_mask] = predictions.numpy()
                 fold_index[held_mask] = k
@@ -298,7 +304,7 @@ def run(args):
             fit_data = a.W4CachedEpochs(rows, train, config["layers"], staged, n_pool)
             model, mean, std, _, history = fit_phase(
                 config, seed, device, fit_data, norm / "all14.pt", seed_dir / "refit",
-                selected["epoch"], progress, n_pool
+                selected["epoch"], progress, n_pool, no_classifier=args.no_classifier
             )
             save_checkpoint(seed_dir / "final_head.pt",
                             dict(model=model.state_dict(), mean=mean.cpu(), std=std.cpu(),
@@ -328,7 +334,11 @@ def run(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--window-sec", type=int, choices=[1, 2], required=True)
+    parser.add_argument("--window-sec", type=int, choices=[1, 2, 3], required=True)
+    parser.add_argument("--signal-rate", type=int, choices=[100, 200], default=200,
+                        help="100 = downsampling 变体特征(信号原生 100 Hz 进主干)")
+    parser.add_argument("--no-classifier", action="store_true",
+                        help="去掉 LFT 的 classifier module(decoder + 平均池化 + 单层 Linear)")
     parser.add_argument("--b-checkout", type=Path,
                         default=REPO / "experiment3/week4/pool_compare/b_checkout")
     parser.add_argument("--output", type=Path, required=True)

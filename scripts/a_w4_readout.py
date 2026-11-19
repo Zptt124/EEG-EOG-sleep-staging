@@ -20,11 +20,16 @@ import run_week3_c_readout as c  # noqa: E402  C 的 W3 readout 入口(冻结 EE
 W4_FEATURES = REPO / "experiment3/week4/pool_compare/features"
 
 
-def w4_sources(window_sec):
-    """第四周 1s/2s 特征目录(EEG/EOG 各一,含 feature_index.csv 与逐记录 npy)。"""
+def w4_sources(window_sec, signal_rate=200):
+    """第四周 1s/2s/3s 特征目录(EEG/EOG 各一,含 feature_index.csv 与逐记录 npy)。
+
+    signal_rate=100 时是 downsampling 变体目录:信号以原生 100 Hz 直接进入主干
+    (跳过 2× 重采样),window_points = 100 * window_sec,其余口径不变。
+    """
+    suffix = "" if signal_rate == 200 else f"_ds{signal_rate}"
     return {
-        "EEG": W4_FEATURES / f"eeg_std_t1_w{window_sec}s_cond14_label25",
-        "EOG": W4_FEATURES / f"eog_std_t1_w{window_sec}s_cond14_label25",
+        "EEG": W4_FEATURES / f"eeg_std_t1_w{window_sec}s{suffix}_cond14_label25",
+        "EOG": W4_FEATURES / f"eog_std_t1_w{window_sec}s{suffix}_cond14_label25",
     }
 
 
@@ -51,6 +56,37 @@ class W4CachedLFT(c.CachedLFT):
             have_pos_embed=True, pos_embed_dim="TPN", stack_struct="sfsfsfsf",
             num_heads=8, ff=4, final_act="pool", n_class=5,
         )
+
+
+class W4LFTNoClassifier(torch.nn.Module):
+    """W4CachedLFT 去掉 classifier module 的变体(提速方法②,只改这一项)。
+
+    与 CachedLFT 完全相同的 decoder(LFT tokenizer,20 层);原 TransformerClassifier
+    (sfsfsfsf 塔 + final_act="pool")替换为对 decoder 输出的 (T,P,N) 平均池化
+    + 单层 Linear(128,5)。官方 classifier 的 pool 口径即 mean over (T,P,N),
+    见 vendor/EEGDM/model/classifier.py final_act="pool"。
+    """
+
+    def __init__(self, n_layers, n_tokens, n_pool):
+        super().__init__()
+        self.decoder = c.LatentActivityDecoder(
+            d_model=128, d_kv_embed_factor=1, n_layer=n_layers, n_query=1,
+            n_pool=n_pool, pool_merge="share", multi_query_merge="seq",
+            ch_order=list(c.MODALITIES), have_ch_pos_embed=True,
+            cat_ch_pos_embed=False, ch_pos_emb_sym=None,
+            clst_dim="TP", clst_pos_embed_dim="", n_clst=n_tokens,
+            stack_struct="scf", num_heads=8, ff=4, have_crossnorm=False,
+            across_pool_stack_struct=None,
+        )
+        self.head = torch.nn.Linear(128, 5)
+
+    @staticmethod
+    def to_official_axes(x):
+        return W4CachedLFT.to_official_axes(x)
+
+    def forward(self, x):
+        y, _ = self.decoder(self.to_official_axes(x))  # B T P N H,T=1
+        return self.head(y.mean(dim=(1, 2, 3)))        # B 128 -> B 5
 
 
 class W4CachedEpochs(c.CachedEpochs):
@@ -82,15 +118,16 @@ class W4CachedEpochs(c.CachedEpochs):
             yield x, positions
 
 
-def w4_build_heads(config, seed, device, n_pool):
+def w4_build_heads(config, seed, device, n_pool, no_classifier=False):
     torch.manual_seed(seed)
     n_layers = len(config["layers"])
     linear = torch.nn.Sequential(torch.nn.Flatten(), torch.nn.Linear(2 * n_layers * 128, 5))
-    lft = W4CachedLFT(n_layers, config["lft_tokens_per_second"], n_pool)
+    lft = (W4LFTNoClassifier(n_layers, config["lft_tokens_per_second"], n_pool)
+           if no_classifier else W4CachedLFT(n_layers, config["lft_tokens_per_second"], n_pool))
     return {name: model.to(device) for name, model in (("C0", linear), ("C1", lft))}
 
 
-def w4_smoke(config, rows, train, device, sources, n_pool):
+def w4_smoke(config, rows, train, device, sources, n_pool, no_classifier=False):
     subset = W4CachedEpochs(rows, train, config["layers"], sources, n_pool)
     rng = np.random.default_rng(0)
     size = config["batch_size"]
@@ -103,7 +140,7 @@ def w4_smoke(config, rows, train, device, sources, n_pool):
         c.require(torch.equal(tokens[:, :, 0, :, 0, ch], x[:, ch]), "Cache axis mapping differs")
     out = dict(input_shape=list(x.shape), official_shape=list(tokens.shape),
                sample_ids=[subset.rows[i]["sample_id"] for i in positions[:size]], heads={})
-    for name, model in w4_build_heads(config, 0, device, n_pool).items():
+    for name, model in w4_build_heads(config, 0, device, n_pool, no_classifier).items():
         optimizer = c.optimizer_for(model, config)
         layer = next(model.parameters())
         initial = layer.detach().clone()
@@ -131,9 +168,10 @@ def w4_smoke(config, rows, train, device, sources, n_pool):
     return out
 
 
-def w4_inspect_inputs(dev_reference, sources, window_sec):
+def w4_inspect_inputs(dev_reference, sources, window_sec, signal_rate=200):
     """C.inspect_inputs 的窗口参数化版本;其余核验(索引对齐、开发集参考、形状)一致。"""
     npool = n_positions(window_sec)
+    points_per_sec = 200 if signal_rate == 200 else 100
     configs = {name: c.json.loads((path / "feature_config.json").read_text(encoding="utf-8"))
                for name, path in sources.items()}
     protocol = dict(
@@ -142,8 +180,11 @@ def w4_inspect_inputs(dev_reference, sources, window_sec):
         condition=14, diffusion_t=1, random_noise=False, query="gate",
         layers=list(range(20)), reduction="std, torch correction=1",
         axes=["sample", "layer", "time_window", "hidden"], feature_shape=[20, npool, 128],
-        storage_dtype="float16", internal_segments=6, continuous_30s_context=False,
-        target_fs=200, window_points=200 * window_sec, stride_points=200 * window_sec,
+        storage_dtype="float16",
+        internal_segments=6 if signal_rate == 200 else 3,
+        continuous_30s_context=False,
+        target_fs=signal_rate,
+        window_points=points_per_sec * window_sec, stride_points=points_per_sec * window_sec,
         window_seconds=window_sec,
     )
     for modality, cfg in configs.items():
@@ -187,8 +228,8 @@ def w4_inspect_inputs(dev_reference, sources, window_sec):
         labeled_subjects=sorted(subjects), labeled_epochs=len(train), dev_epochs=len(dev),
         feature_protocol=protocol, modality_order=c.MODALITIES, test_used=False,
         eog_provenance="local regeneration under prior D reference protocol",
-        window_seconds=window_sec,
-        input_sha256={str(p): c.sha(p) for p in [
+        window_seconds=window_sec, signal_rate=signal_rate,
+        input_sha256={str(p.relative_to(REPO)).replace("\\", "/"): c.sha(p) for p in [
             c.SPLIT, c.SUBSETS, REPO / "src/evaluation/evaluate.py",
             c.UPSTREAM / "model/classifier.py", Path(__file__),
             *(folder / file for folder in sources.values()

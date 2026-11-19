@@ -68,46 +68,72 @@ def checkpoint_timesteps():
 
 
 class Extractor(c.Extractor):
-    def __init__(self, condition, reduce, diffusion_t, window_sec):
+    def __init__(self, condition, reduce, diffusion_t, window_sec, signal_rate=200):
         super().__init__(condition)
-        w = 200 * window_sec
+        points_per_sec = 200 if signal_rate == 200 else 100
+        w = points_per_sec * window_sec
         self.window_sec = window_sec
+        self.signal_rate = signal_rate
         self.extractor = c.LatentActivityExtractor(self.model, diffusion_t=diffusion_t, query=["gate"],
                                                    use_cond=[condition]).eval().cuda()
         # 官方 reducer 断言 (L - window_size) % window_step == 0:
         # 1 秒窗在 1000/6000 上都成立;2 秒窗(400/400)只在 6000(native 模式,15 个位置)上成立。
         # 提取只用 native 模式,跳过不合法的 1000 档。
+        # signal_rate=100(downsampling 变体):信号以原生 100 Hz 进入主干,L=3000;
+        # window_points = 100 * window_sec,位置数公式 30 // window_sec 不变。
+        lengths = (1000, 6000) if signal_rate == 200 else (1000, 3000)
         self.reducers = {
             n: c.LatentActivityReducer(query=["gate"], reduce=[reduce], L=n,
                                        window_size=w, window_step=w).eval().cuda()
-            for n in (1000, 6000) if (n - w) % w == 0
+            for n in lengths if (n - w) % w == 0
         }
 
     @torch.inference_mode()
     def transformed(self, x, mode="native"):
         positions = 30 // self.window_sec
+        native_L = 6000 if self.signal_rate == 200 else 3000
         t = torch.from_numpy(x).cuda()
         if mode == "native":
-            y = self.reducers[6000](self.extractor((t, None)))[:, :, 0, :, 0, 0, :]
+            y = self.reducers[native_L](self.extractor((t, None)))[:, :, 0, :, 0, 0, :]
         elif mode == "explicit" and 1000 in self.reducers:
             y = torch.cat([self.reducers[1000](self.extractor((t[:, :, i:i + 1000], None)))
-                           [:, :, 0, :, 0, 0, :] for i in range(0, 6000, 1000)], dim=2)
+                           [:, :, 0, :, 0, 0, :] for i in range(0, native_L, 1000)], dim=2)
         else:
-            raise ValueError(f"mode={mode} 不支持窗口 {self.window_sec}s(2 秒窗口只用 native/6000)")
+            raise ValueError(f"mode={mode} 不支持窗口 {self.window_sec}s"
+                             f"(2 秒窗口只用 native/{native_L})")
         y = y.cpu().numpy()
         if y.shape != (len(x), 20, positions, 128) or not np.isfinite(y).all():
             raise ValueError('Invalid feature output')
         return y
 
+    def __call__(self, signal_uv, mode="native"):
+        """signal_rate=100 时跳过 2× 重采样(downsampling 变体,只改信号采样率一项)。"""
+        x = np.asarray(signal_uv, dtype=np.float32)
+        if x.ndim != 2 or x.shape[1] != 3000 or not np.isfinite(x).all():
+            raise ValueError('Expected finite (batch,3000) microvolt input')
+        if self.signal_rate == 100:
+            # 原生 100 Hz 直接进入主干(与 200 Hz 口径同用 staged mu-law,不做 resample_poly)
+            t = np.ascontiguousarray(c.staged_mu_law(x / 100)[:, None, :])
+        else:
+            t = c.transform(x)
+        return self.transformed(t, mode)
+
 
 def config(args, timesteps):
-    w = 200 * args.window_sec
+    w = (200 if args.signal_rate == 200 else 100) * args.window_sec
     positions = 30 // args.window_sec
     cfg = c.config(args.modality, args.condition)
+    if args.signal_rate == 200:
+        rate_fields = dict(target_fs=200, resampling="scipy.signal.resample_poly(up=2,down=1), default filter",
+                           length_points=6000, internal_segments=6)
+    else:
+        rate_fields = dict(target_fs=100, resampling="none (native 100 Hz input to backbone)",
+                           length_points=3000, internal_segments=3)
     cfg.update(version=VERSION, diffusion_t=args.diffusion_t, random_noise=False,
                reduction=f"{args.reduce}, torch" + (" correction=1" if args.reduce == "std" else ""),
                checkpoint_num_train_timesteps=timesteps, subjects=f"{args.budget}(sseed{SAMPLING_SEED}) + val",
                window_seconds=args.window_sec, window_points=w, stride_points=w,
+               signal_rate=args.signal_rate, **rate_fields,
                feature_shape=[20, positions, 128],
                pooled=f"float16 {args.window_sec}s-window -> float32 mean over {positions} time positions -> 2560",
                full_cache_saved=args.save_full, w4_script_sha256=sha256(__file__),
@@ -118,7 +144,9 @@ def config(args, timesteps):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--modality", choices=["eeg", "eog"], required=True)
-    p.add_argument("--window-sec", type=int, choices=[1, 2], required=True)
+    p.add_argument("--window-sec", type=int, choices=[1, 2, 3], required=True)
+    p.add_argument("--signal-rate", type=int, choices=[100, 200], default=200,
+                   help="100 = downsampling 变体:原生 100 Hz 直接进主干,跳过 2× 重采样")
     p.add_argument("--reduce", choices=["std", "mean"], required=True)
     p.add_argument("--diffusion-t", type=int, required=True)
     p.add_argument("--condition", type=int, choices=[10, 14, 18], default=14)
@@ -137,7 +165,9 @@ def main():
         if not 0 <= args.diffusion_t < n:
             raise ValueError(f"diffusion_t={args.diffusion_t} 超出 checkpoint 步数 {n}")
 
-    tag = f"{args.reduce}_t{args.diffusion_t}_w{args.window_sec}s_cond{args.condition}_{args.budget}"
+    tag = (f"{args.reduce}_t{args.diffusion_t}_w{args.window_sec}s"
+           f"{'' if args.signal_rate == 200 else f'_ds{args.signal_rate}'}"
+           f"_cond{args.condition}_{args.budget}")
     out = args.output or REPO / "experiment3/week4/pool_compare/features" / f"{args.modality}_{tag}"
     if args.record_limit:
         out = out.with_name(out.name + f"_smoke{args.record_limit}")
@@ -149,7 +179,7 @@ def main():
     cfgpath.write_text(json.dumps(cfg, indent=2, ensure_ascii=False), encoding="utf-8")
 
     torch.manual_seed(0)
-    extractor = Extractor(args.condition, args.reduce, args.diffusion_t, args.window_sec)
+    extractor = Extractor(args.condition, args.reduce, args.diffusion_t, args.window_sec, args.signal_rate)
     if args.cache_kernels:
         extractor.cache_frozen_kernels()
     subjects = allowed_subjects(args.budget)
