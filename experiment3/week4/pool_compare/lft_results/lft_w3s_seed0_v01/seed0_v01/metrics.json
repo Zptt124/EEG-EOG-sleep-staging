@@ -81,7 +81,7 @@
   "evaluate_version": "v1",
   "source": "experiment3\\week4\\pool_compare\\runs\\lft_w3s_seed0_v01\\seed0_v01\\predictions_val.csv",
   "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43",
-  "sample_set_reference": "D:\\EEG-EOG-sleep-staging\\manifests\\val_reference_v1.csv",
+  "sample_set_reference": "manifests/val_reference_v1.csv",
   "bootstrap_subjects": {
     "n_boot": 2000,
     "seed": 0,
