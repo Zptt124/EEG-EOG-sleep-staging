@@ -1,0 +1,25 @@
+# lft_w2s_ds100_seed0_v01
+
+- run_id：lft_w2s_ds100_seed0_v01
+- 负责人/日期：A（实验①）· 2026-11-21 登记（训练完成于 2026-11-20~21，提速方法②）
+- 状态：成功
+- 实验问题：LFT 提速方法②"信号 downsampling(原生 100Hz 进主干,跳过 2× 重采样,L=3000/fold=3)"——每次只改一项，相对 2s 推荐配置
+- Git提交号与未提交修改说明：37 号脚本在 1s/2s 主对照基础上新增 --signal-rate 100；分支 feat/a-week4-pooling-cv
+- 数据版本、划分版本、预处理版本：eeg/eog_std_t1_w2s_ds100_cond14_label25 特征（std t=1 cond14，官方 TUEV 主干冻结）；label25（14 人,sseed2024）+ 8 名验证者；43 记录/53,496 段
+- 输入模态、模型、权重来源与hash：EEG/EOG 双模态 pooled 特征 2560 维/模态（20 层×128）；W4CachedLFT(n_pool=15,与 2s 完全相同;仅特征来自 100Hz 输入)
+- 标签预算与实际有标签人数：label25（14 人,训练段 32,310）
+- 名单版本与SHA256；标准化拟合人员、参数文件与SHA256：subset_sha256 b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6；标准化只拟合折内训练者/全 14 人重训（normalization.pt 在 run 目录）
+- 训练种子/标签抽样种子：downstream_seed 0 / sampling_seed 2024
+- 适配种子、教师种子：NA（冻结表征 LFT）
+- S0/S1及适配权重选择规则、原始/EMA权重、特征版本与SHA256：ds100 特征 feature_config.json 见特征目录
+- 教师/监督编码器来源、预算与内折重训隔离证据：dev 与训练侧按人隔离（五折按受试者，fold_seed=0），开发集只最终评分一次
+- 上下文长度、边界/mask、窗口索引：30s 窗（200Hz L=6000 / 100Hz L=3000），窗口 2s，15 个时间位置
+- 完整命令、Python及依赖版本：`python scripts/37_a_w4_lft_compare.py --window-sec 2 --signal-rate 100 --output experiment3/week4/pool_compare/runs/lft_w2s_ds100_seed0_v01`；Python 3.13.2、torch 2.13.0+cu126（本机）
+- GPU、峰值显存、耗时：RTX 4060 Laptop；峰值显存 504 MiB；净训练 11.25h（268 轮）
+- 精度、确定性设置、可训练参数及实际更新数：bf16 autocast；参数 6.10M；final_updates —
+- 最佳权重选择规则：训练侧按人五折 pooled OOF Macro-F1（并列取最早），E*=19；OOF=0.7261
+- N1 与全类指标（开发集 21,186 段 / 8 人）：Macro-F1 0.7401 [0.6889,0.7735]；N1 F1 0.3705 [0.315,0.4321]（按人 bootstrap 2000）；acc 0.8066
+- 结果文件位置：runs/lft_w2s_ds100_seed0_v01/ 与归档 experiment3/week4/pool_compare/lft_results/lft_w2s_ds100_seed0_v01/
+- 依赖的其他run_id：无（特征来自官方 TUEV 主干冻结提取，见 pool_compare/features/）
+- 初步观察与限制：提取 2.2× 快(~12 vs ~28 min/组);LFT 每轮不变;分数不降
+- 失败时最后成功步骤、报错与下一步：训练中因笔记本睡眠/显存竞争中断 1–2 次，均从逐 epoch 断点续训（数值不受影响；计时已排除污染轮次）

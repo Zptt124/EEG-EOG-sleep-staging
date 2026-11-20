@@ -15,6 +15,19 @@ OOF 选轮 + OOF 选 α；开发集只最终评分一次）。权重 Release `a-
 `runs/<run_id>/`。LFT 提速对照（1s/2s/3s/去classifier/downsampling）见
 `experiment3/week4/pool_compare/lft_results/` 与 `reports/week4/a_w4_pooling_compare.md`。
 
+### W4 LFT 提速对照 run（2026-11-21 完成，seed0）
+
+| run_id | 内容 | E* | OOF Macro | dev Macro | dev N1 F1 | 单独每轮 |
+|--------|------|----|-----------|-----------|-----------|----------|
+| `lft_w1s_seed0_v01` | 1s std LFT(基线) | 16 | 0.7222 | 0.7283 | 0.3452 | 109 s |
+| `lft_w2s_seed0_v01` | 2s std LFT(推荐) | 15 | 0.7209 | 0.7497 | 0.4012 | 106 s |
+| `lft_w3s_seed0_v01` | 3s std LFT(提速②) | 16 | 0.7254 | 0.7384 | 0.3758 | 100 s |
+| `lft_w2s_nocls_seed0_v01` | 2s 去 classifier(提速②) | 9 | 0.7206 | 0.7524 | 0.4167 | 91 s |
+| `lft_w2s_ds100_seed0_v01` | 2s 信号 100Hz(提速②) | 19 | 0.7261 | 0.7401 | 0.3705 | 103 s |
+
+小文件归档于 `experiment3/week4/pool_compare/lft_results/<run_id>/`；单独校准数据
+`experiment3/week4/pool_compare/timing_calibration.json`（脚本 40 号）。
+
 # A 的运行索引(run index)
 
 负责人:A · 更新日期:2026-10-18 · 分支:`feat/a-data-baseline`

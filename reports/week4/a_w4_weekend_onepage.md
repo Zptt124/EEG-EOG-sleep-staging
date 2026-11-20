@@ -12,20 +12,21 @@ LFT 提速:1s→2s 池化每轮快 ~19%、显存 −45%、分数打平,推荐 2s
 
 ## 1 · LFT 提速计时表与推荐配置
 
-入口:`scripts/36_a_w4_window_extract.py` + `scripts/37_a_w4_lft_compare.py`。
+入口:`scripts/36_a_w4_window_extract.py` + `scripts/37_a_w4_lft_compare.py` +
+`scripts/40_a_w4_timing_calib.py`(单独校准)。
 
-| 配置 | 位置数 | 提取耗时 | LFT 每轮 | 全套净训练 | 峰值显存 | OOF Macro-F1 | dev Macro-F1 |
+| 配置 | 位置数 | OOF Macro | dev Macro | dev N1 F1 | 每轮·单独校准 | 峰值显存 | 提取(单独) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1s std | 30 | 27.6–32.4 min/组 | 156–173 s | ~11.5 h | 916 MiB | 0.7222 | 0.7283 |
-| 2s std(推荐) | 15 | 28.7–30.6 min/组 | 128–137 s(−19%) | 10.1 h | 504 MiB | 0.7209 | 0.7497 |
-| 3s std(提速②) | 10 | 待补 | 待补 | 待补 | 待补 | 待补 | 待补 |
-| 2s 去 classifier(提速②) | 15 | 同 2s | 待补 | 待补 | 待补 | 待补 | 待补 |
-| 2s signal 100Hz(提速②) | 15 | ~15 min/组(冒烟 73–76 段/s,2.2×) | 待补 | 待补 | 待补 | 待补 | 待补 |
+| 1s std | 30 | 0.7222 | 0.7283 | 0.3452 | 109 s | 920 MiB | ~28 min/组 |
+| 2s std(推荐) | 15 | 0.7209 | 0.7497 | 0.4012 | 106 s | 502 MiB | ~29 min/组 |
+| 3s std(提速②) | 10 | **0.7254** | 0.7384 | 0.3758 | 100 s | 369 MiB | ~28 min/组 |
+| 2s 去 classifier(提速②) | 15 | 0.7206 | **0.7524** | **0.4167** | **91 s** | 490 MiB | 同 2s |
+| 2s 信号 100Hz(提速②) | 15 | 0.7261 | 0.7401 | 0.3705 | 103 s | 502 MiB | **~12 min/组** |
 
-- 推荐配置:`--window-sec 2 --reduce std --diffusion-t 1`(2s = 非重叠 400/400,15 位置,
-  pooled 同为 2560 维,linear 臂与窗口无关)。1s 复现 C 第三周(OOF 0.7222 vs 0.7204)。
-- 提速方法②(更长 pooling/去 classifier/downsampling)为计划中的低优先级项,11-19 起补,
-  结果随表更新(commit 见分支 feat/a-week4-pooling-cv)。
+- 推荐配置:`--window-sec 2 --reduce std --diffusion-t 1`;在意成本可加 `--no-classifier`
+  (每轮 −14%,分数打平);在意提取成本可用 `--signal-rate 100`(2.2×,分数不降)。
+- 并行实测值(主对照 2 并行、提速② 3 并行)见主报告;跨配置比较以单独校准为准。
+  此前"2s 快 19%"为并行口径,单独口径仅 ~3%(每轮耗时由特征 IO 主导)。
 
 ## 2 · 同窗 EEG 30k 的 EOG-only 结果
 
@@ -51,8 +52,9 @@ window_metrics.csv,供 B 复算):低频 MSC 同窗 0.394 vs 错时 0.359(配对�
 
 ## 待办与风险
 
-- 提速方法②三个变体跑完后补计时表(11-19 夜起 GPU/CPU 并行)。
 - PR #24 仍为 DRAFT:cross-modal 实现经 D 的文件式 review(PR #23 review_A_xmodal_same_v01.md
   "训练实现通过")后,待团队确认合并路径(PR #21/#22/#23 均 OPEN,main 尚无 experiment4/week4)。
 - B 的正式三组汇总(35 号脚本)截至 11-19 上午未出;D 的 PR #23 已有三组交叉核对数值
   (analysis/w4_xmodal_recheck/),A 的同窗结果已由 C/D 独立复评(PR #25)。
+- 提速方法②三个 run 的 dev 分数为单 seed;若下周要进入正式配置选择,按统一协议补
+  seed 后以训练侧五折为准。
