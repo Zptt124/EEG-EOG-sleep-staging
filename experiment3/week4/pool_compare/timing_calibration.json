@@ -1,0 +1,94 @@
+{
+  "device": "cuda",
+  "torch": "2.13.0+cu126",
+  "batch_size": 32,
+  "timed_epochs": 2,
+  "note": "GPU 独占、同一 label25 训练数据、seed0;第 1 轮预热不计时",
+  "configs": {
+    "1s": {
+      "normalization_seconds": 21.2,
+      "timed_epochs": [
+        {
+          "epoch": 1,
+          "seconds": 110.277,
+          "peak_allocated_mib": 920.1
+        },
+        {
+          "epoch": 2,
+          "seconds": 107.625,
+          "peak_allocated_mib": 920.1
+        }
+      ],
+      "parameters": 6116229,
+      "n_time_positions": 30
+    },
+    "2s": {
+      "normalization_seconds": 10.3,
+      "timed_epochs": [
+        {
+          "epoch": 1,
+          "seconds": 105.241,
+          "peak_allocated_mib": 502.0
+        },
+        {
+          "epoch": 2,
+          "seconds": 105.76,
+          "peak_allocated_mib": 501.7
+        }
+      ],
+      "parameters": 6100869,
+      "n_time_positions": 15
+    },
+    "3s": {
+      "normalization_seconds": 6.7,
+      "timed_epochs": [
+        {
+          "epoch": 1,
+          "seconds": 98.784,
+          "peak_allocated_mib": 368.8
+        },
+        {
+          "epoch": 2,
+          "seconds": 102.051,
+          "peak_allocated_mib": 368.8
+        }
+      ],
+      "parameters": 6095749,
+      "n_time_positions": 10
+    },
+    "2s_nocls": {
+      "normalization_seconds": 5.8,
+      "timed_epochs": [
+        {
+          "epoch": 1,
+          "seconds": 92.82,
+          "peak_allocated_mib": 489.8
+        },
+        {
+          "epoch": 2,
+          "seconds": 89.785,
+          "peak_allocated_mib": 489.5
+        }
+      ],
+      "parameters": 5300101,
+      "n_time_positions": 15
+    },
+    "2s_ds100": {
+      "normalization_seconds": 10.3,
+      "timed_epochs": [
+        {
+          "epoch": 1,
+          "seconds": 100.772,
+          "peak_allocated_mib": 502.0
+        },
+        {
+          "epoch": 2,
+          "seconds": 104.854,
+          "peak_allocated_mib": 501.7
+        }
+      ],
+      "parameters": 6100869,
+      "n_time_positions": 15
+    }
+  }
+}

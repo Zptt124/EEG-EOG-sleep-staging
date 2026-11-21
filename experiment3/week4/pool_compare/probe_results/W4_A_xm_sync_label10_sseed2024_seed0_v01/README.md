@@ -1,0 +1,26 @@
+# W4_A_xm_sync_label10_sseed2024_seed0_v01
+
+- run_id：W4_A_xm_sync_label10_sseed2024_seed0_v01
+- 负责人/日期：A（实验①）· 2026-11-19（W4 第 6 天登记；训练完成于 2026-11-19 01:47 前后）
+- 状态：成功
+- 实验问题：同窗 EEG 条件 30k 小 EEGDM（m64x12）的 EOG-only 表征能否不输官方 EEGDM EOG-only？（跨模态三组对比中的「同窗 EEG」臂）
+- Git提交号与未提交修改说明：code_commit 9e6cade7ec4bbd0fc407e34c0d45d7daa407507f；归档于分支 feat/a-week4-pooling-cv（commit 79eb7ac7 交付、ee4bbd30 归档）
+- 数据版本、划分版本、预处理版本：A 的 154 个 NPZ（signal(n,2,3000)µV）；B 名单 label_subsets_v2.csv（sseed2024）；划分 manifests/split_subjects.csv；8 人 dev = 原 val 16 人中的固定 8 人（val_reference_v1.csv，SHA 9ad48c0d…）
+- 输入模态、模型、权重来源与hash：推理只给 EOG 原始信号（EEG 条件置空，zero-eeg 逐位验收通过）。特征 768 维（12 层×64，std t=1，全部 12 层），来自同窗 EEG 30k checkpoint（m64x12 xmodal same_window，cond_dropout 0.2，step 30000 EMA），权重 SHA ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70（Release a-w4-xmodal-same-30k-v01-20261119）
+- 标签预算与实际有标签人数：label10（5 人，训练段 11,936）
+- 未标注信号人数、名单位置、标签隐藏方式：本 run 为线性读出（冻结表征），不涉及
+- 名单版本与SHA256；标准化拟合人员、参数文件与SHA256：subset_sha256 b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6；标准化只拟合训练侧（折内训练者/全预算受试者），normalization.npz 在 run 目录
+- 训练种子/标签抽样种子：downstream_seed 0 / sampling_seed 2024
+- 适配种子、教师种子：NA（冻结表征线性读出）
+- S0/S1及适配权重选择规则、原始/EMA权重、特征版本与SHA256：特征 = EOG-only 768 维，NPZ SHA c0930d411a74ab3251057c70f62dcce48be82a9b39022d625f7e3bc7b1d62fab；index SHA bae5a6e514ee4a09f25b2cbea97fe411ca6ac102954114a484f110976bbfa017
+- 教师/监督编码器来源、预算与内折重训隔离证据：同窗 30k 预训练只使用 46 人训练池（8 人 held-out 除外），held-out 名单 pretrain_split_w4_v01.csv（official_w4_v01，SHA 470c23f7…）；下游 8 人 dev 与 held-out 无关（dev 来自原 val 划分，held-out 来自训练池）——探针训练侧从不接触 dev 标签
+- 上下文长度、边界/mask、窗口索引与共同中心样本SHA256：30s 窗、200Hz（L=6000）；特征提取窗口 t=1、std、12 层；样本索引 53,496 段（43 记录）
+- 完整命令、Python及依赖版本：提取 scripts/39_a_w4_eog_extract.py（zero-eeg 验收）；探针 B 34 号脚本（训练侧五折 50 轮 OOF 选轮 + OOF 选 α）；Python 3.13.2、torch 2.13.0+cu126（本机）
+- GPU、峰值显存、耗时、缓存大小：特征提取 GPU 8.6 min（43 记录）；探针 CPU（Linear head），elapsed_seconds 11.15 s
+- 精度、确定性设置、吞吐、可训练参数及实际更新数：Linear(768,5) head；final_updates 4136
+- 最佳权重选择规则：训练侧按人五折 pooled OOF Macro-F1（并列取最早），E*=44；α 在 OOF 上网格选取（logspace(-1,1.5,801)）
+- N1 与全类指标（开发集 21,186 段 / 8 人，只最终评分一次）：Macro-F1 0.5967；N1 AP 0.2475；N1 F1 原始 0.1652；α=7.60764 调整后 N1 F1 0.3062，调整后 Macro-F1 0.5743（区间见 metrics.json 按受试者 bootstrap 2000）
+- 结果文件位置：runs/W4_A_xm_sync_label10_sseed2024_seed0_v01/（config.yaml、metrics.json、predictions_val.csv、predictions_val_n1adj.csv、inner_cv.csv、oof_train.csv、by_subject.csv、normalization.npz、final_head.pt）；归档 experiment3/week4/pool_compare/probe_results/W4_A_xm_sync_label10_sseed2024_seed0_v01/
+- 依赖的其他run_id：预训练 W4_A_xmodal_same_30k_seed0_v01（Release a-w4-xmodal-same-30k-v01-20261119）
+- 初步观察与限制：label25 开发集 Macro 0.6404 为四 run 最高；label10 三 seed 0.5915–0.6013。与 B 的官方 EEGDM EOG-only 冒烟参考（label10 seed0：Macro 0.583 / N1 AP 0.223 / N1 F1 0.193→0.308）相比不输。注意：A 原始探针特征用官方 LatentActivityExtractor 提取（绕过训练后空条件嵌入 xc_flag[0]），D 评为影响 <0.1pp；C 已用 D 04 号正确前向重提特征并重跑探针（判读不变，PR #25）。三组配对复评以 B 35 号脚本/D 交叉核对为准
+- 失败时最后成功步骤、报错与下一步：无

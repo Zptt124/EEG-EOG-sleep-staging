@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4421",
+  "split": "val",
+  "n_samples": 785,
+  "seconds": 27.70175609999569,
+  "samples_per_second": 28.337553661448997,
+  "peak_gpu_mb": 579.20361328125,
+  "batch_size": 4,
+  "cache_frozen_kernels": true
+}

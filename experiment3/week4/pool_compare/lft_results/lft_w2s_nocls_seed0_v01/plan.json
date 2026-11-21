@@ -1,0 +1,178 @@
+{
+  "config": {
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "lft_tokens_per_second": 4,
+    "batch_size": 32,
+    "blocks_per_group": 8,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 3.0,
+    "epochs": 50,
+    "seeds": [
+      0
+    ],
+    "budget": "label25",
+    "sampling_seed": 2024,
+    "loss": "unweighted cross entropy",
+    "precision": "bfloat16 autocast, float32 weights and optimizer state",
+    "window_note": "window_sec 由 37 号脚本运行时写入;1 秒=30 个时间位置,2 秒=15 个,pooled 特征同为 2560 维(线性头与窗口无关)",
+    "window_sec": 2,
+    "signal_rate": 200,
+    "no_classifier": true,
+    "checkpoint_selection": "B subject-wise five-fold pooled OOF macro-F1; ties choose earliest",
+    "normalization": "per modality/layer/hidden shared across time; fitted on each fold's training subjects, then all 14 for the final refit"
+  },
+  "folds": [
+    [
+      "SC403",
+      "SC412",
+      "SC415"
+    ],
+    [
+      "SC417",
+      "SC419",
+      "SC427"
+    ],
+    [
+      "SC451",
+      "SC455",
+      "SC474"
+    ],
+    [
+      "SC421",
+      "SC436",
+      "SC456"
+    ],
+    [
+      "SC410",
+      "SC429"
+    ]
+  ],
+  "input_audit": {
+    "samples": 53496,
+    "records": 43,
+    "split_counts": {
+      "train": 32310,
+      "val": 21186
+    },
+    "split_subject_counts": {
+      "train": 54,
+      "test": 16,
+      "val": 8
+    },
+    "labeled_subjects": [
+      "SC403",
+      "SC410",
+      "SC412",
+      "SC415",
+      "SC417",
+      "SC419",
+      "SC421",
+      "SC427",
+      "SC429",
+      "SC436",
+      "SC451",
+      "SC455",
+      "SC456",
+      "SC474"
+    ],
+    "labeled_epochs": 32310,
+    "dev_epochs": 21186,
+    "feature_protocol": {
+      "upstream_commit": "003b5a2a016b2f02788ea5693d8b7cd00b6bd969",
+      "checkpoint_sha256": "0fe2d385d074834f3c22d9458798da49b2e5a58bd817284f130aae8814f5c1ef",
+      "condition": 14,
+      "diffusion_t": 1,
+      "random_noise": false,
+      "query": "gate",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "reduction": "std, torch correction=1",
+      "axes": [
+        "sample",
+        "layer",
+        "time_window",
+        "hidden"
+      ],
+      "feature_shape": [
+        20,
+        15,
+        128
+      ],
+      "storage_dtype": "float16",
+      "internal_segments": 6,
+      "continuous_30s_context": false,
+      "target_fs": 200,
+      "window_points": 400,
+      "stride_points": 400,
+      "window_seconds": 2
+    },
+    "modality_order": [
+      "EEG",
+      "EOG"
+    ],
+    "test_used": false,
+    "eog_provenance": "local regeneration under prior D reference protocol",
+    "window_seconds": 2,
+    "signal_rate": 200,
+    "input_sha256": {
+      "experiment3/week3/vendor/experiment1-review/manifests/split_subjects.csv": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f",
+      "experiment3/week3/manifests/week2_c_adaptation_v01/label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+      "src/evaluation/evaluate.py": "0a5bb7f358d4e09d0bdd6f9311b7532c479ce96f9e6927d4b2bbf9fb6732372c",
+      "experiment3/week3/vendor/EEGDM/model/classifier.py": "7c1ae09755be985729b20bcc71358301880ad7769364ee31be77cef6fbd8fb3c",
+      "scripts/a_w4_readout.py": "a5d420888bec3423c30a103828b9c54b3dcb0da88fb7b1b22397bdd8f6e86d0d",
+      "experiment3/week4/pool_compare/features/eeg_std_t1_w2s_cond14_label25/feature_index.csv": "44a2380c847164b9873635db069bdf73ad316d8ab7b4649c1b91902de3a45df4",
+      "experiment3/week4/pool_compare/features/eeg_std_t1_w2s_cond14_label25/feature_config.json": "a5d07ecce412fd1e8887a5e802a86a6616d0f505fddf984babe6d12e56d25e4f",
+      "experiment3/week4/pool_compare/features/eog_std_t1_w2s_cond14_label25/feature_index.csv": "44a2380c847164b9873635db069bdf73ad316d8ab7b4649c1b91902de3a45df4",
+      "experiment3/week4/pool_compare/features/eog_std_t1_w2s_cond14_label25/feature_config.json": "16da7bc52a99127f1941cfb7701c05d9af091ff805dc539d514a029be7dac4c8"
+    },
+    "development_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de"
+  },
+  "b_probe_sha256": "47c5e135583d892bd45eb2d5a5085d754ff739273e428de5c0581873a0de531e",
+  "b_probe_sha256_note": "CRLF variant of C's pin c7e8ce01…, identical content (line endings only)",
+  "b_evaluator_sha256": "0a5bb7f358d4e09d0bdd6f9311b7532c479ce96f9e6927d4b2bbf9fb6732372c",
+  "cv_runner_sha256": "f01df154c80b7d906962256fee09139df9656f20c2f758369c63f5e09096ce82",
+  "staged_features": null,
+  "w4_readout_sha256": "a5d420888bec3423c30a103828b9c54b3dcb0da88fb7b1b22397bdd8f6e86d0d"
+}

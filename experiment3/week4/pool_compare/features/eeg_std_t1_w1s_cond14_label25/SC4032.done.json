@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4032",
+  "split": "train",
+  "n_samples": 911,
+  "seconds": 27.872531100001652,
+  "samples_per_second": 32.6845092299474,
+  "peak_gpu_mb": 579.20361328125,
+  "batch_size": 4,
+  "cache_frozen_kernels": true
+}

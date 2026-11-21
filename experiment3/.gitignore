@@ -12,3 +12,11 @@ __pycache__/
 # W2 evidence snapshot has its own binary exclusions.
 !week2/
 !week2/**
+
+# W4 pool_compare 特征目录:只收小文件索引/配置/计时/摘要(大 NPZ/npy 由根规则排除)
+!week4/pool_compare/features/
+!week4/pool_compare/features/*/
+!week4/pool_compare/features/*/*.json
+!week4/pool_compare/features/*/*.csv
+!week4/pool_compare/features/*/SHA256SUMS.txt
+!week4/pool_compare/features/*/README.md

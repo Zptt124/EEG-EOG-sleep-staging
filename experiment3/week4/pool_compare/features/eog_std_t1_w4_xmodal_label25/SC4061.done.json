@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4061",
+  "split": "val",
+  "n_samples": 843,
+  "seconds": 8.419436800002586,
+  "samples_per_second": 100.12546207363194,
+  "peak_gpu_mb": 223.6337890625,
+  "batch_size": 4,
+  "zero_eeg": false
+}
