@@ -10,6 +10,8 @@
 
 **2026-11-19 B 复评 C 第四周四格（PR #25）：** 12 个 run 的预测、OOF、原始指标、α 与调整后指标、三个配对差点估计全部复现。预训练的 Macro-F1 增益在 linear/LFT 都稳定（+3.2/+3.3 个百分点）；N1 上只有 linear 头有收益（N1 AP +0.050，α 调整后 N1 F1 +0.038，区间不含 0），LFT 的 N1 AP 与 α 调整后 N1 F1 都没有变化。预训练下 LFT 比 linear 的 N1 AP 低 −0.049 [−0.092, −0.014]，原始 N1 F1 的优势来自判定门槛。详见 [reports/week4/b_c_reeval_w4.md](reports/week4/b_c_reeval_w4.md)。
 
+**2026-11-21 B 跨模态三组正式汇总与复评：** C 的 6 个跨模态 run 复评 6/6 一致，D 的 18 个三 head seed run 从 Release 下载逐段预测后复评 18/18 一致（此前 C 只引用了 D 的配对表）。B 用 D 发布的三组特征自己重跑 18 个探针，结果与 D 逐项相同。B 新增 α 调整后的配对差：原始 N1 F1 上三个区间不含 0 的差（5 人档同窗/错时−无 EEG、14 人档错时−无 EEG），经训练侧门槛校正后全部跨 0，N1 AP 六个区间也都跨 0，结论仍是未确认稳定跨模态收益。Mac 初步结果与正式结果只差 1 段预测。错时、同窗两组 30k 的 val MSE（空条件与给 EEG 条件）复算与交付值相差 ≤ 7.4e-6；给 EEG 条件后 EOG 去噪误差同窗降 0.7%、错时降 0.1%。同窗特征包的 index.csv 是 LF 换行，与 features_info 登记的 CRLF 版本 SHA 不同，内容一致。详见 [reports/week4/b_xmodal_final.md](reports/week4/b_xmodal_final.md)。
+
 ## 第三周交接
 
 以[第三周工作安排](WEEK3.md)和[四天方案 PDF](docs/week3/work_plan_W3.pdf)为准。交付时记录配置、模型来源、run ID、样本索引与接收核验。
