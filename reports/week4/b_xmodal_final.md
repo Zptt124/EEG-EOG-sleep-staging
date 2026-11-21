@@ -51,7 +51,7 @@ C 的 config 里登记的 `val_reference_sha256` 是 `0f71748d…`，B 这边是
 
 **探针**：34 号，`--modalities eog`，3 组 × 2 个预算 × head seed 0/1/2。18 个 run 的 E*、α 和全部指标与 D 的 18 个逐项相同（39 号自检 18/18，配对表与 D 最大差 3.5e-7）。
 
-完整 run 目录（含 OOF、预测、final.ckpt）打包为 `w4_b_xmodal_formal_runs_v01.zip`。各文件的 SHA 见 [b_crossmodal/artifact_sha256.txt](b_crossmodal/artifact_sha256.txt)，小文件已入库到 [b_crossmodal/runs/](b_crossmodal/runs/)。
+完整 run 目录（含 OOF、预测、final.ckpt）打包为 `w4_b_xmodal_formal_runs_v01.zip`，发布在 Release [b-w4-xmodal-formal-v01-20261121](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-w4-xmodal-formal-v01-20261121)。各文件的 SHA 见 [b_crossmodal/artifact_sha256.txt](b_crossmodal/artifact_sha256.txt)，小文件已入库到 [b_crossmodal/runs/](b_crossmodal/runs/)。
 
 ### 3.1 绝对分数（三个 head seed 的均值，%）
 
