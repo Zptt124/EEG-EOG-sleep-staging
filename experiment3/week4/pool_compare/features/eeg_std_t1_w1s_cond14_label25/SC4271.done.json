@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4271",
+  "split": "train",
+  "n_samples": 1052,
+  "seconds": 31.321065700001782,
+  "samples_per_second": 33.58761831657408,
+  "peak_gpu_mb": 579.20361328125,
+  "batch_size": 4,
+  "cache_frozen_kernels": true
+}

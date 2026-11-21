@@ -1,0 +1,49 @@
+{
+  "version": "W4_A_eog_xmodal_v01",
+  "checkpoint": "D:\\EEG-EOG-sleep-staging\\experiment4\\week4\\big\\runs\\W4_A_xmodal_same_30k_seed0_v01\\ckpt_step30000.pt",
+  "checkpoint_sha256": "ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70",
+  "model": "m64x12 xmodal same_window EMA step30000",
+  "modality": "eog",
+  "condition": "modality id 1 (EOG); empty EEG condition (official forward equivalence)",
+  "diffusion_t": 1,
+  "random_noise": false,
+  "query": "gate",
+  "layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "reduction": "std, torch correction=1",
+  "window_points": 200,
+  "stride_points": 200,
+  "length_points": 6000,
+  "axes": [
+    "sample",
+    "layer",
+    "time_window",
+    "hidden"
+  ],
+  "feature_shape": [
+    12,
+    30,
+    64
+  ],
+  "pooled_dim": 768,
+  "storage_dtype": "float16",
+  "internal_segments": 6,
+  "continuous_30s_context": false,
+  "target_fs": 200,
+  "subjects": "label25(sseed2024) + val",
+  "zero_eeg": true,
+  "run_config": "experiment4\\week4\\runs\\W4_A_xmodal_same_30k_seed0_v01\\config.json",
+  "script_sha256": "6c02f31fddbab01d7f2b202d60bec331e9d029334bf231ee22b19b1e875d2b70"
+}

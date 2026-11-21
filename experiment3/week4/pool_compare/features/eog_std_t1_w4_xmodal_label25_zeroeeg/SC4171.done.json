@@ -1,0 +1,10 @@
+{
+  "record_id": "SC4171",
+  "split": "train",
+  "n_samples": 1002,
+  "seconds": 9.467465199995786,
+  "samples_per_second": 105.83614292032951,
+  "peak_gpu_mb": 223.6337890625,
+  "batch_size": 4,
+  "zero_eeg": true
+}
