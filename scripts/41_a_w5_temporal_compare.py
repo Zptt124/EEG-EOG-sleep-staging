@@ -152,6 +152,7 @@ def main(argv=None):
 
     x_tr = arm_matrix(train)
     x_va = arm_matrix(val)
+    del seq  # 窗口矩阵已物化到训练/验证张量,释放以控制内存
     y_tr = np.array([int(r['y_true']) for r in train])
     subj = np.array([r['subject_id'] for r in train])
     torch.set_num_threads(args.threads)
