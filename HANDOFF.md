@@ -1,5 +1,11 @@
 # 阶段交接登记
 
+## 第五周交接
+
+以 [W5 实验安排](WEEK5.md)和[时间安排 PDF](docs/week5/work_plan_W5.pdf)为准。A 和 B 自行取用已有发布资产。若 C 缺 self-cond 30k 权重或分层特征，D 在开工时将现成资产放入共用目录一次。
+
+11 月 27 日（周五），四人各在[共用结果表](WEEK5.md#周五结果登记)登记一行，附结果链接和一句结论。A 从同一张表汇总汇报草稿。
+
 ## 第四周交接
 
 **2026-11-16 B → A、D（第 1 天）：** 预训练 held-out 名单 `w4_v01` 已锁定：SC414、SC416、SC431、SC450、SC457、SC463、SC467、SC477（不在任何标签预算名单中，5/14/27 人预算者全部留在预训练池；按编号分 8 层各抽 1 人）。预训练池剩 46 人、114,041 段。分段 MSE 脚本 `scripts/32_b_w4_pretrain_mse.py` 使用固定的 4,000 个窗×模态和固定噪声，每 5 个扩散步一段，EEG/EOG 分开报告，默认按空条件、用 EMA 权重评估。用法与核对见 [reports/week4/b_pretrain_val_for_AD.md](reports/week4/b_pretrain_val_for_AD.md)。
