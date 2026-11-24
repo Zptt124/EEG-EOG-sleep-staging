@@ -1,0 +1,60 @@
+{
+  "source": "w4_d_selfcond30k_feat_pool1s_v01.zip",
+  "source_sha256": "7a1f8cdf2ebb68a6d8294570d83dd4d3662baa8d57cf5b3b2006f98e892af348",
+  "checkpoint_sha256": "453ecba128875418729a1927008057cd1abe709fc35dea7cbba1fba74a75b013",
+  "source_run": "W4_D_selfcond_l9_mean_30k_v01",
+  "source_index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e",
+  "counts": {
+    "train": 32310,
+    "val": 21186
+  },
+  "layers": {
+    "selfcond30k_all12": [
+      1,
+      12
+    ],
+    "selfcond30k_last3": [
+      10,
+      12
+    ]
+  },
+  "columns_per_layer": 64,
+  "preprocessing": "diffusion_t=1, no noise, query=gate, all 12 layers, per-1s std/mean, mean over 30 positions; cross-modal models: null EEG condition (flag 0)",
+  "prepared_sha256": {
+    "index.csv": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e",
+    "source_features_info.json": "9b40945f85d44437db39f2c5b07cfe13d9378342e349a75908ba7aaf3ec8f001",
+    "selfcond30k_all12_eeg.npz": "3f2f63456ebd6fd3b33db3176fafd406d7909a1e92cf8a1f34a7242025410e38",
+    "selfcond30k_last3_eeg.npz": "79a00f501b759d8f5ed76bff59be57de27849b45001c68888180bd81eac7117a",
+    "selfcond30k_all12_eog.npz": "f2c1c6be6b51ef9b4183111481e7bafec1db7611a36a7d93d13f067a3b7dfbff",
+    "selfcond30k_last3_eog.npz": "a83f623cf5014249b53c2c1679f84ee7868ffd6b07598cb30336503f84247ea5"
+  },
+  "cache_write_observations": {
+    "selfcond30k_all12_eeg.npz": {
+      "seconds": 1.8702375379999978,
+      "bytes": 166694042
+    },
+    "selfcond30k_last3_eeg.npz": {
+      "seconds": 0.48434791900000107,
+      "bytes": 43439258
+    },
+    "selfcond30k_all12_eog.npz": {
+      "seconds": 1.9241426799999992,
+      "bytes": 166694042
+    },
+    "selfcond30k_last3_eog.npz": {
+      "seconds": 0.47624035200000137,
+      "bytes": 43439258
+    }
+  },
+  "test_used": false,
+  "protocol_file_sha256": {
+    "34_b_w4_probe.py": "a82b1c052d79677e96d7aeac282836f44524273597e07030b65495596f5980a5",
+    "27_b_w3_linear_probe.py": "f30f65065533e647f74bc01dab91f21156796a4bf9bdf585f5c141d77d4a1b5e",
+    "28_b_n1_score_adjust.py": "11d98077d5e8381aebe04a1da816765b9cbf396499869321ee2719492dc2e4ba",
+    "29_b_w3_evaluate.py": "7a0e4b044b627970c705584723735a52d0524d2edf66cbcec00c423ded8af6f0",
+    "w2_common.py": "0b7618214c145f771e131f6b339fda303e6da49e7afdce51688f67fa927e960e",
+    "evaluate.py": "3c645536d46dbd5dd8c531e75ddbde8dbf5432f441f7dea8ae76f3023d7ce35f",
+    "label_subsets_v2.csv": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6",
+    "val_reference_v1.csv": "0f71748d782e400a2c0c398db0d66b60fe81b59dfc7e32d439dc350e4adb66e2"
+  }
+}

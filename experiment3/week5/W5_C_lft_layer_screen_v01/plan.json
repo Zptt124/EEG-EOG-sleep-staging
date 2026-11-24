@@ -1,0 +1,91 @@
+{
+  "backbone": "W3_D_pretrain_m64x12_bs108_seed0_v01",
+  "step": 30000,
+  "archive_sha256": "56a506d04f6243c395f9fb5b557c70761f0f247c374c70d40dfc706b994d6122",
+  "budget": "label10",
+  "head_seed": 0,
+  "cap_epochs": 2,
+  "folds": [
+    [
+      "SC421"
+    ],
+    [
+      "SC474"
+    ],
+    [
+      "SC456"
+    ],
+    [
+      "SC403"
+    ],
+    [
+      "SC412"
+    ]
+  ],
+  "configs": {
+    "all12": {
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "feature_hidden": 64,
+      "feature_positions": 30,
+      "lft_tokens_per_second": 4,
+      "batch_size": 32,
+      "blocks_per_group": 8,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.0001,
+      "gradient_clip_norm": 3.0
+    },
+    "last3": {
+      "layers": [
+        9,
+        10,
+        11
+      ],
+      "feature_hidden": 64,
+      "feature_positions": 30,
+      "lft_tokens_per_second": 4,
+      "batch_size": 32,
+      "blocks_per_group": 8,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.0001,
+      "gradient_clip_norm": 3.0
+    }
+  },
+  "training_cache_sha256": {
+    "screening_1s_seed0/staged/pretrained/EEG/SC4031.npy": "5fc1a6ffe4e6a5bde5be782973a612cd0ea1f6e5f9931fe1c2efc3e7e602eeea",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4031.npy": "e80b26d20b33cb43dc1a093a67ef83a3da8383e20053708b37f277c2cfee1509",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4032.npy": "efff73d6f7ecce5651b19807ba11c72ab09aaedadaba6ddd8b43b0e56f31ea7e",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4032.npy": "67842934de4fe86fb2723494d2ec2f3368ce6f7b14319d2b4938b2b63f4c44e1",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4121.npy": "ae7a177f13af436fbaa1e42996b5280e4e90158d995c57f54f9f77b5fe9e06d0",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4121.npy": "070b4e4fb934dad550791e6699a1eb4560cfca61ef4b3deae137efaa6d21b3bf",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4122.npy": "4921ca97463c953930931b97f7d17c084818f9d0af7c20cab43746bde42febc4",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4122.npy": "eba2a0c581b4f5e686983d5b230613aa85938581cd60db07162367d5f27ca0c4",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4211.npy": "3b9046a4c1cef719eb5f880500008138f5d285a3ed9836873a5dd11fb01127ef",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4211.npy": "4d5323ef65012d4c4eb705ca81f7dec7c99a2a82984429151bed6238aebffd5b",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4212.npy": "6f403bb9d1ebf6894bd43d0301e01b520a2948a7e28295a126b3fb3612818f3f",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4212.npy": "a6fb8c92a2b42d67160a08e8d26c9ef3cfe9068d1e74239971747b20eeb19789",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4561.npy": "7b0ca31ddeb170fe2af733aab0c031e4d04f1ef2edaede329125f63e0b5a7246",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4561.npy": "50df5a05eae0c8504b37dfe3a1665d6c61e0671d96ebc35c1323577337472446",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4562.npy": "9a1e57e9e6a9be6fdfd99c3a4d44ab991462826f940138983ecb8eb50ca9c114",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4562.npy": "bf3e558fcb29f00f1d69ce4362480c601909ed0ee5f14e5e22c0f630a9ac3c05",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4741.npy": "badc34ff22b5dbaf0936e840a4a96035d3164987c854519e37439e04e51acea0",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4741.npy": "d8d197df272fda94b4862b3a4762c409d8ddacfdc0971f8e95d7cf956cafd878",
+    "screening_1s_seed0/staged/pretrained/EEG/SC4742.npy": "4641345fd561791e96ac03e31a8b838cfb9936a641d02a25c5335384f184c565",
+    "screening_1s_seed0/staged/pretrained/EOG/SC4742.npy": "8b2e45127f882105c5549a16bd9800c6dd3025ad1b1d845a9218e3d447bd4565"
+  },
+  "dev_used_for": "final evaluation only",
+  "test_used": false,
+  "full_layer_oof_source": "W4 exact early epochs from intact fold checkpoints"
+}

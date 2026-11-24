@@ -1,0 +1,23 @@
+{
+  "runs": 24,
+  "reused_plain_runs": 12,
+  "new_selfcond_runs": 12,
+  "dev_rows_per_run": 21186,
+  "dev_subjects": 8,
+  "head_seeds": [
+    0,
+    1,
+    2
+  ],
+  "backbone_seeds": [
+    0
+  ],
+  "index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e",
+  "identities_aligned": true,
+  "oof_folds_aligned": true,
+  "test_used": false,
+  "source_receipts": {
+    "plain": "9072c803208fbd1c3abfb848e11124d4c130bf013887b0e10698d33b883cb013",
+    "selfcond": "7a1f8cdf2ebb68a6d8294570d83dd4d3662baa8d57cf5b3b2006f98e892af348"
+  }
+}
