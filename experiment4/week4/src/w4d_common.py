@@ -45,6 +45,7 @@ MODALITIES = {'eeg': 0, 'eog': 1}   # NPZ signal 的通道顺序 = 模态条件�
 MOD_NAMES = ('eeg', 'eog')
 WIN = 1000                          # 5 秒 @ 200 Hz
 N_WIN = 6                           # 每个 30 秒段切 6 个 5 秒窗
+WINDOW_SECS = {5: (WIN, N_WIN), 30: (6000, 1)}   # W5：预训练窗口长度 -> (窗长点数, 每段窗数)；30 秒 = 整段不切
 N_HELDOUT = 8
 
 # ---------------- 模型配置（与第三周相同） ----------------
@@ -246,7 +247,11 @@ class TrainPool:
     W4 起缓存仍是全部 54 人；held-out 的 8 人在这里按受试者过滤，不重建缓存。
     """
 
-    def __init__(self, load_to_ram=True, verify_sha=False):
+    def __init__(self, load_to_ram=True, verify_sha=False, window_sec=5):
+        if window_sec not in WINDOW_SECS:
+            fail(f'window_sec must be one of {sorted(WINDOW_SECS)}, got {window_sec}')
+        self.window_sec = window_sec
+        self.win, self.n_win = WINDOW_SECS[window_sec]   # 5 秒：u = (row*2+m)*6+k；30 秒：u = row*2+m（k 恒为 0）
         cfg_path = CACHE_DIR / 'cache_manifest.json'
         if not cfg_path.exists():
             fail(f'Pretrain cache not found: {cfg_path} (run 00_build_pretrain_cache.py or set SLEEP_PRETRAIN_CACHE)')
@@ -265,10 +270,19 @@ class TrainPool:
         self.subject = np.array([r['subject_id'] for r in self.index])
         self.record = np.array([r['record_id'] for r in self.index])
         self.n_rows = arr.shape[0]
-        self.n_units = self.n_rows * 2 * N_WIN
+        self.n_units = self.n_rows * 2 * self.n_win
+
+    def with_window(self, window_sec):
+        """同一份内存里的信号，换一种窗口长度来看（例如 30 秒训练时仍用 5 秒标准 val 集）。"""
+        import copy
+        v = copy.copy(self)                                   # 浅拷贝：signals 数组共用，不多占内存
+        v.window_sec = window_sec
+        v.win, v.n_win = WINDOW_SECS[window_sec]
+        v.n_units = v.n_rows * 2 * v.n_win
+        return v
 
     def unit_subject(self):
-        return np.repeat(self.subject, 2 * N_WIN)
+        return np.repeat(self.subject, 2 * self.n_win)
 
     def train_units(self, heldout):
         """训练用单元：剔除 held-out 受试者之后的全部单元。"""
@@ -276,15 +290,17 @@ class TrainPool:
         if keep.all() or (~keep).sum() == 0:
             fail('Held-out filtering removed nothing')
         rows = np.nonzero(keep)[0]
-        return (rows[:, None] * 2 * N_WIN + np.arange(2 * N_WIN)[None, :]).reshape(-1).astype(np.int64)
+        nw = self.n_win
+        return (rows[:, None] * 2 * nw + np.arange(2 * nw)[None, :]).reshape(-1).astype(np.int64)
 
     def gather(self, units):
-        """units -> (x float32 [B,1,1000], cond int64 [B,1])"""
+        """units -> (x float32 [B,1,win], cond int64 [B,1])；win = 1000（5 秒）或 6000（连续 30 秒）"""
         units = np.asarray(units, dtype=np.int64)
-        k = units % N_WIN
-        m = (units // N_WIN) % 2
-        row = units // (2 * N_WIN)
-        x = self.signals[row, m].reshape(len(units), N_WIN, WIN)[np.arange(len(units)), k]
+        nw = self.n_win
+        k = units % nw
+        m = (units // nw) % 2
+        row = units // (2 * nw)
+        x = self.signals[row, m].reshape(len(units), nw, self.win)[np.arange(len(units)), k]
         return x.astype(np.float32)[:, None, :], m[:, None]
 
     def window_start_sec(self):
@@ -298,6 +314,8 @@ class TrainPool:
         same_window：同一记录、起止时间完全一致的 Fpz-Cz 窗（同一 30 秒段同一 5 秒窗）。
         shifted：查错时配对表 pairs（见 02_build_shift_pairs.py）；没有候选的窗 valid=False（置空条件）。
         """
+        if self.n_win != N_WIN:
+            fail('Cross-modal EEG conditions are only defined for 5 s windows')
         units = np.asarray(units, dtype=np.int64)
         w = (units // (2 * N_WIN)) * N_WIN + units % N_WIN          # 窗位置（与模态无关）
         if mode == 'same_window':

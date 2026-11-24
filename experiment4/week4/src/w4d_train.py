@@ -36,14 +36,16 @@ class ValSet:
             if len(rows) == 0:
                 C.fail(f'Held-out subject {s} not found in cache')
             for m in (0, 1):
-                cand = (rows[:, None] * 2 * C.N_WIN + m * C.N_WIN + np.arange(C.N_WIN)[None, :]).reshape(-1)
+                nw = pool.n_win                                  # 5 秒 = 6；连续 30 秒 = 1
+                cand = (rows[:, None] * 2 * nw + m * nw + np.arange(nw)[None, :]).reshape(-1)
                 units.append(np.sort(rng.choice(cand, size=per_subject, replace=False)))
         self.units = np.concatenate(units)
         n = len(self.units)
         t = np.arange(N_BUCKET)[None, :] * BUCKET + rng.integers(0, BUCKET, size=(n, N_BUCKET))
         x, m = pool.gather(self.units)
         g = torch.Generator().manual_seed(VAL_SEED)
-        noise = torch.randn((n, N_BUCKET, 1, C.WIN), generator=g)
+        noise = torch.randn((n, N_BUCKET, 1, pool.win), generator=g)
+        self.win = pool.win
         self.device = device
         self.x = torch.from_numpy(x).to(device)
         self.m = torch.from_numpy(m).to(device)
@@ -64,7 +66,9 @@ class ValSet:
                                 t_sha256=sha(t.astype('<i8')),                         # [n, 10] int64
                                 noise_sha256=sha(noise.numpy().astype('<f4')),         # [n, 10, 1, 1000] float32
                                 noise_recipe=f'torch.Generator(cpu).manual_seed({VAL_SEED}); '
-                                             f'torch.randn(({n}, {N_BUCKET}, 1, {C.WIN})), float32')
+                                             f'torch.randn(({n}, {N_BUCKET}, 1, {pool.win})), float32')
+        if pool.window_sec != 5:   # 5 秒的指纹保持原样（与 W4 各 run 的 config.json 逐字相同）
+            self.fingerprint['window_sec'] = pool.window_sec
 
     @torch.no_grad()
     def evaluate(self, net, sch, with_eeg_cond=False, batch=512):
@@ -72,6 +76,7 @@ class ValSet:
         False = 空条件（只给 EOG，这是主口径，所有 run 可比）；True = 给 EEG 条件（仅 EOG 目标窗）。"""
         was = net.training
         net.eval()
+        batch = max(1, batch * 1000 // self.win)   # 30 秒窗每个样本长 6 倍，按信号量缩小 batch；5 秒时不变
         idx_w = torch.arange(self.n, device=self.device).repeat_interleave(N_BUCKET)
         idx_b = torch.arange(N_BUCKET, device=self.device).repeat(self.n)
         out = torch.empty(self.n * N_BUCKET, device=self.device)

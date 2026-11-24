@@ -45,11 +45,12 @@ def load_model(ckpt_path, weights):
     model = build_model(cfg, 0, **opts)
     model.load_state_dict(ck[weights], strict=True)
     model.requires_grad_(False).eval()
+    model.window_sec = int(rc.get('window_sec') or 5)   # W5：按训练时的窗口长度读出（30 秒模型整段送入）
     return model, ck, opts
 
 
 @torch.no_grad()
-def gate_activations(model, x, modality):
+def gate_activations(model, x, modality, diffusion_t=DIFFUSION_T):
     """x [B,1,6000]（单一模态的 30 秒段）-> (gate [B, n_layer, 6000, d_model], feedback [B, D] 或 None)。空 EEG 条件。
 
     feedback：self-cond 模型第 m 层的池化反馈特征 s_m，在 6 个 5 秒窗上取平均（下游 probe 用）。
@@ -58,9 +59,10 @@ def gate_activations(model, x, modality):
     W4 的空条件 flag 嵌入（跨模态模型）和 self-cond 反馈（self-cond 模型）。
     """
     B = x.shape[0]
-    xw = rearrange(x, 'B C (f L) -> (B f) C L', f=C.N_WIN)                 # 折成 6 个 5 秒窗
+    nw = C.WINDOW_SECS[getattr(model, 'window_sec', 5)][1]                 # 5 秒模型 = 6；连续 30 秒模型 = 1
+    xw = rearrange(x, 'B C (f L) -> (B f) C L', f=nw)                      # 折成 6 个 5 秒窗（30 秒模型不折）
     n = xw.shape[0]
-    t = torch.full((n, 1), DIFFUSION_T, dtype=torch.long, device=x.device)
+    t = torch.full((n, 1), diffusion_t, dtype=torch.long, device=x.device)
     cls = torch.full((n, 1), modality, dtype=torch.long, device=x.device)
     cond = model.calc_cond(t, cls)
     if model.cross_modal != 'none':                                         # 空条件分支
@@ -74,9 +76,9 @@ def gate_activations(model, x, modality):
             fb = pool_time(h, model.self_cond_pool)
             phi = model.sc_t_embed(model._t_embed_fn(t, model.d_embed))
             cond = cond + (model.sc_proj(fb) * phi)[:, None, :]
-            feedback = rearrange(fb, '(B f) D -> B f D', f=C.N_WIN).mean(dim=1)
+            feedback = rearrange(fb, '(B f) D -> B f D', f=nw).mean(dim=1)
     a = torch.stack(acts, dim=1)                                            # (B f) n L H
-    return rearrange(a, '(B f) n L H -> B n (f L) H', f=C.N_WIN), feedback
+    return rearrange(a, '(B f) n L H -> B n (f L) H', f=nw), feedback
 
 
 def pooled(a, pool_sec):
@@ -96,6 +98,8 @@ def main():
     g.add_argument('--ckpt', help='explicit checkpoint path (e.g. a teammate run or a W3 checkpoint)')
     p.add_argument('--step', type=int, help='checkpoint step for --run-name')
     p.add_argument('--weights', choices=['ema_model', 'model'], default='ema_model')
+    p.add_argument('--diffusion-t', type=int, default=DIFFUSION_T,
+                   help='timestep fed to the model without noise (team readout = 1; other values = diagnostics only)')
     p.add_argument('--pool-sec', type=int, default=1, choices=[1, 2, 3, 5],
                    help='pooling window in seconds (W3 = 1); must be agreed by all three groups')
     p.add_argument('--modalities', default='eeg,eog', help='comma list; EOG-only downstream needs eog')
@@ -126,9 +130,10 @@ def main():
     model = model.cuda()
     n_layer, d_model = len(model.layers), model.d_model
     step = ck.get('step')
-    print(f'checkpoint {ckpt_path.name} step {step} weights {args.weights} switches {opts}', flush=True)
+    print(f'checkpoint {ckpt_path.name} step {step} weights {args.weights} switches {opts} '
+          f'window_sec {model.window_sec}', flush=True)
 
-    tag = f'step{step}_{args.weights}_pool{args.pool_sec}s'
+    tag = f'step{step}_{args.weights}_pool{args.pool_sec}s' + (f'_t{args.diffusion_t}' if args.diffusion_t != DIFFUSION_T else '')
     if args.limit_records:
         tag += f'_TEST{args.limit_records}rec'
     out = C.BIG / 'features' / name / tag
@@ -147,7 +152,7 @@ def main():
         S, M, F = [], [], []
         for b in range(0, len(x_all), args.batch_epochs):
             x = torch.from_numpy(x_all[b:b + args.batch_epochs, None, :]).cuda()
-            a, fb = gate_activations(model, x, mi)
+            a, fb = gate_activations(model, x, mi, args.diffusion_t)
             s, mu = pooled(a, args.pool_sec)
             if not torch.isfinite(s).all():
                 C.fail('Non-finite features')
@@ -194,11 +199,12 @@ def main():
                 modalities=mods, n_samples=len(index),
                 n_labeled_train=sum(r['role'] == 'labeled_train' for r in index),
                 n_val=sum(r['role'] == 'val' for r in index), limit_records=args.limit_records,
-                readout=f'diffusion_t={DIFFUSION_T}, no noise, query=gate, all {n_layer} layers, '
+                readout=f'diffusion_t={args.diffusion_t}, no noise, query=gate, all {n_layer} layers, '
                         f'per-{args.pool_sec}s std/mean, mean over {30 // args.pool_sec} positions; '
                         'cross-modal models: null EEG condition (flag 0)',
                 pool_sec=args.pool_sec, dim_per_modality=n_layer * d_model,
-                eog_only_verification=verify, seconds=elapsed, epochs_per_second=len(index) / elapsed,
+                eog_only_verification=verify, seconds=elapsed,
+                **({'window_sec': model.window_sec} if model.window_sec != 5 else {}), epochs_per_second=len(index) / elapsed,
                 peak_gpu_mib=torch.cuda.max_memory_allocated() / 2**20, files={})
     for k, v in feats.items():
         arr = np.concatenate(v).astype(np.float32)

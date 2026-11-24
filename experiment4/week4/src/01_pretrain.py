@@ -12,6 +12,8 @@
   新方法筛查（固定 30k）用 --no-early-stop --max-steps 30000。
 - 开关：--self-cond-layer/--self-cond-pool（self-conditioning），--cross-modal/--cond-dropout/--shift-pairs（跨模态，
   按 C 的规则 experiment3/week4/cross_modal_protocol.md：错时 60–300 秒配对表、dropout 默认 0.2）。
+- W5：--window-sec 30 让 backbone 直接吃连续 30 秒段（不切 5 秒窗；模型尺寸、标准化、noise schedule 不变）。
+  停止规则仍看 5 秒标准 val 集（全组可比），另把连续 30 秒 val 集写到 val_mse_30s.csv。暂不支持与 --cross-modal 同用。
 - 登记：config.json 记录训练窗清单 SHA、名单 SHA、配对表 SHA；checkpoints.csv 记录每个 checkpoint 的 SHA256。
 - 断点续训：每 --save-every 步写 latest.pt；中断后用同一条命令重跑即可续上。
 
@@ -94,6 +96,8 @@ def main():
     p.add_argument('--cond-dropout', type=float, default=None,
                    help='per-window prob. of dropping the EEG condition (default 0.2 with --cross-modal)')
     p.add_argument('--shift-pairs', default=str(C.PAIRS_NPY), help='shift-pair table for --cross-modal shifted')
+    p.add_argument('--window-sec', type=int, default=5, choices=sorted(C.WINDOW_SECS),
+                   help='pretraining window: 5 = six 5 s windows per epoch (W4 default); 30 = whole 30 s epoch (W5)')
     p.add_argument('--smoke-small-val', action='store_true',
                    help='SMOKE TEST ONLY: 16 windows per subject per modality instead of 128')
     p.add_argument('--allow-shared-gpu', action='store_true')
@@ -110,6 +114,8 @@ def main():
             args.cond_dropout = 0.2   # C 的规则默认值
         if not (0 < args.cond_dropout < 1):
             C.fail('--cross-modal requires 0 < --cond-dropout < 1 (team rule 5)')
+    if args.window_sec != 5 and args.cross_modal != 'none':
+        C.fail('--window-sec 30 is only implemented without --cross-modal')
     if args.smoke_small_val:
         print('WARNING: --smoke-small-val is for smoke tests only; val MSE is NOT comparable with real runs',
               flush=True)
@@ -127,7 +133,7 @@ def main():
         print(f'Run already finished: {(small / "stop_decision.json").read_text()}', flush=True)
         return
 
-    pool = C.TrainPool(load_to_ram=True)
+    pool = C.TrainPool(load_to_ram=True, window_sec=args.window_sec)
     units = pool.train_units(heldout)
     n_train_subj = len(set(pool.unit_subject()[units]))
     import hashlib
@@ -137,8 +143,13 @@ def main():
     pairs, pairs_info = None, None
     if args.cross_modal == 'shifted':
         pairs, pairs_info = C.load_shift_pairs(pool, args.shift_pairs)
-    val = ValSet(pool, heldout, cross_modal=args.cross_modal, pairs=pairs,
+    # 停止规则 / 全组可比的 val MSE 一律用 5 秒标准 val 集（30 秒模型也在同一批 5 秒窗上评）
+    val = ValSet(pool.with_window(5), heldout, cross_modal=args.cross_modal, pairs=pairs,
                  per_subject=(16 if args.smoke_small_val else 128))
+    # 30 秒模型另评一份连续 30 秒的 val 集（每人每模态 32 段，只看 EMA），写到 val_mse_30s.csv，不参与停止规则
+    val30 = None
+    if args.window_sec == 30:
+        val30 = ValSet(pool, heldout, per_subject=(4 if args.smoke_small_val else 32))
 
     cfg = dict(run_name=args.run_name, config=args.config, model_kwargs=C.model_kwargs(args.config),
                backbone_seed=args.seed, batch_size=args.batch_size, max_steps=args.max_steps,
@@ -166,6 +177,12 @@ def main():
                conditioning='modality id: 0=EEG Fpz-Cz, 1=EOG horizontal (n_class=2)',
                data=f'train split minus held-out ({n_train_subj} subjects), signal only, labels never read',
                cache_sha256=pool.cfg['sha256_signals'], upstream_commit=C.UPSTREAM_COMMIT)
+    if args.window_sec != 5:   # 5 秒 run 的 config.json 保持与 W4 逐字相同
+        cfg.update(window_sec=args.window_sec,
+                   train_units_definition='int64 little-endian array of unit ids u=row*2+m (whole 30 s epoch), sorted',
+                   val_set_note='val_mse.csv = standard 5 s val set (team-comparable, used by the stop rule); '
+                                'val_mse_30s.csv = continuous 30 s val set, EMA only',
+                   val_set_30s=val30.fingerprint)
     cfg_path = small / 'config.json'
     if cfg_path.exists():
         old = json.loads(cfg_path.read_text(encoding='utf-8'))
@@ -205,6 +222,15 @@ def main():
                 print(f'VAL step {tr.step}: stop_metric {summ["stop_metric"]:.5f} '
                       f'(eeg t5-25 {summ["eeg_t05_25"]:.5f}, eog t5-25 {summ["eog_t05_25"]:.5f}; '
                       f'eeg all {summ["eeg_all"]:.5f}, eog all {summ["eog_all"]:.5f})', flush=True)
+        if val30 is not None:
+            v30_csv = small / 'val_mse_30s.csv'
+            if str(tr.step) not in {r['step'] for r in read_val_rows(v30_csv)}:
+                summ = val30.summarize(val30.evaluate(tr.ema.ema_model, tr.sch))
+                C.append_csv(v30_csv, dict(step=tr.step, weights='ema', eeg_cond=0,
+                                           **{k: round(v, 6) for k, v in summ.items()},
+                                           wall_time=time.strftime('%Y-%m-%d %H:%M:%S')))
+                print(f'VAL30 step {tr.step}: stop_metric {summ["stop_metric"]:.5f} '
+                      f'(eeg t5-25 {summ["eeg_t05_25"]:.5f}, eog t5-25 {summ["eog_t05_25"]:.5f})', flush=True)
         ck = big / f'ckpt_step{tr.step}.pt'
         if not ck.exists():
             tmp = big / f'ckpt_step{tr.step}.tmp.pt'
