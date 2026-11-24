@@ -75,6 +75,18 @@ def adjusted_metrics(pred_path):
     return dict(n1_alpha=a['alpha'], n1_f1_adjusted=a['n1_f1_adjusted'], macro_f1_adjusted=a['macro_f1_adjusted'])
 
 
+def adjusted_frame(df, alpha):
+    """按 28 号口径重算调整后预测:p_N1 *= alpha,y_pred = argmax(修改后概率)。
+
+    n1adj CSV 与官方校验器不兼容(y_pred 与未修改的概率列不一致),故这里
+    现场重算;N1 AP 不受影响(p_N1 单调变换)。"""
+    cols = [c for c in df.columns if c.startswith('p_')]
+    p = df[cols].to_numpy()
+    j = cols.index('p_N1')
+    p[:, j] = p[:, j] * alpha
+    return df.assign(y_pred=p.argmax(1), p_N1=p[:, j])
+
+
 def check_alignment(reg, preds):
     done = []
     for (budget, seed), g in reg.groupby(['budget', 'seed']):
@@ -178,8 +190,10 @@ def main(argv=None):
         if suffix:
             preds_use = {}
             for run_id in preds:
-                n1adj = resolve(reg[reg.run_id == run_id]['predictions'].iloc[0]).parent / 'predictions_val_n1adj.csv'
-                preds_use[run_id] = ev.load_predictions(n1adj)
+                alpha = adjusted_metrics(reg[reg.run_id == run_id]['predictions'].iloc[0]).get('n1_alpha')
+                if alpha is None:
+                    raise ValueError(f'{run_id} 缺 α')
+                preds_use[run_id] = adjusted_frame(preds[run_id], alpha)
         prow, psub = [], []
         for c, r in pairs:
             p, s = paired_for(reg, preds_use, dict(cat=args.cat_arm, single=args.single_arm, bgru=args.bgru_arm)[c],

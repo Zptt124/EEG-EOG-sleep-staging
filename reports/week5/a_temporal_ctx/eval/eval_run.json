@@ -1,0 +1,38 @@
+{
+  "script": "scripts/42_a_w5_temporal_paired.py",
+  "arms": {
+    "single": "tctx_single",
+    "cat": "tctx_cat",
+    "bgru": "tctx_bgru"
+  },
+  "n_runs": 12,
+  "alignment": [
+    {
+      "budget": "label10",
+      "seed": 0,
+      "arms": "tctx_bgru tctx_cat tctx_single",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label10",
+      "seed": 1,
+      "arms": "tctx_bgru tctx_cat tctx_single",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label10",
+      "seed": 2,
+      "arms": "tctx_bgru tctx_cat tctx_single",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 0,
+      "arms": "tctx_bgru tctx_cat tctx_single",
+      "n_epochs": 21186
+    }
+  ],
+  "val_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de",
+  "bootstrap": "1000 次,按开发集受试者成对重采样,seed 合并,rng seed 0",
+  "code_commit": "400f82953d3a935f38489d563f6fc423d68b828b+dirty"
+}

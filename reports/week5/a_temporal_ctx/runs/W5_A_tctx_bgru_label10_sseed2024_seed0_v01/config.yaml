@@ -1,0 +1,72 @@
+experiment: W5 temporal context 读出(冻结表征)
+group: A
+arm: tctx_bgru
+run_id: W5_A_tctx_bgru_label10_sseed2024_seed0_v01
+nominal_budget: label10
+labeled_subjects: 5
+sampling_seed: 2024
+downstream_seed: 0
+subset_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+train_samples: 11936
+val_samples: 21186
+feature_dims:
+  epoch: 1536
+  window: 5
+head: BiGRU(64,bidir,1层)取中心时刻 + Linear(128,5)
+optimizer: AdamW lr=1e-3 wd=1e-4
+batch_size: 128
+standardization: fit on training-side subjects only (fold-train in inner CV, all budget
+  subjects for final); windowed arms fit on unfolded [N*5,1536] (same mean/std per
+  position)
+selection: inner subject-wise CV on budget subjects, K=5, fold_seed=0, fixed 50 epochs
+  per fold, epoch = argmax pooled OOF macro-F1 (ties -> earliest)
+n1_adjust: alpha grid logspace(-1,1.5,801) on pooled OOF at E*; alpha=27.7811
+window:
+  offsets:
+  - -2
+  - -1
+  - 0
+  - 1
+  - 2
+  rule: same subject, same record; missing/boundary -> nearest available epoch (position
+    clamping on available sequence)
+  predict: center epoch only
+folds:
+- - SC421
+- - SC474
+- - SC456
+- - SC403
+- - SC412
+selected_epoch: 42
+dev_used_for: final evaluation only
+sources:
+  eeg_std.npy:
+    path: experiment3\week5\temporal\features\W4_D_main_m64x12_seed0_v01\step30000_ema_model_pool1s\eeg_std.npy
+    sha256: ebe1c68d831f9cd8f0de35bf1745cfb5f1ead56fc5bf67b741ced4e2ae14419d
+  eog_std.npy:
+    path: experiment3\week5\temporal\features\W4_D_main_m64x12_seed0_v01\step30000_ema_model_pool1s\eog_std.npy
+    sha256: cdd4a5a4853348a27fbf594125c3aedd94fa377d34eaa4b9fec5b1462f200c07
+  index.csv:
+    path: experiment3\week5\temporal\features\W4_D_main_m64x12_seed0_v01\step30000_ema_model_pool1s\index.csv
+    sha256: d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e
+  features_info.json:
+    path: experiment3\week5\temporal\features\W4_D_main_m64x12_seed0_v01\step30000_ema_model_pool1s\features_info.json
+    sha256: 81a843e197659eb7700fb5608b7b9a81e59e64c7d3273ea8fc669f5a25d611e7
+backbone:
+  checkpoint: ckpt_step30000.pt
+  checkpoint_sha256: 21c8514ea7761ef383d70b3e26ac19ea33ad0e7ccacfe690812ad359b0118e5b
+  step: 30000
+  weights: ema_model
+  switches:
+    self_cond_layer: 0
+    self_cond_pool: mean
+    cross_modal: none
+torch: 2.13.0+cu126
+device: cpu
+test_used: false
+code_commit: 400f82953d3a935f38489d563f6fc423d68b828b
+evaluate_version: v1
+val_reference_sha256: 9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de
+predictions_sha256: dcd9b9e0b891a076985d11b8336853fcd6f1c36cf440f0657ce4bebf308b0901
+final_updates: 3948
+elapsed_seconds: 435.41
