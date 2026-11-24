@@ -9,3 +9,6 @@
 
 # Archived W3 predictions and provenance receipts bind exact bytes.
 /experiment3/week3/** -text
+
+# W4 D common pretraining script: manifests and SHA receipts bind exact bytes.
+/experiment4/week4/** -text

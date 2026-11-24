@@ -1,0 +1,6 @@
+window_sec,batch,signal_sec_per_step,status,sec_per_step,peak_gpu_mib,signal_hours_per_gpu_hour,hours_for_30k_steps,hours_for_same_signal_as_5s_30k
+5,108,540,ok,0.4539,5907,1189.6,3.78,3.78
+30,12,360,ok,0.4906,6187,733.8,4.09,6.13
+30,9,270,ok,0.4152,5380,650.4,3.46,6.92
+30,6,180,ok,0.3423,4583,525.8,2.85,8.56
+30,4,120,ok,0.2813,4051,426.6,2.34,10.55

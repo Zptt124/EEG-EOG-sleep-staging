@@ -1,0 +1,10 @@
+{
+  "reason": "reached max steps",
+  "stopped_at_step": 240000,
+  "best_step": 240000,
+  "best_stop_metric": 0.051456,
+  "evals_since_best": 0,
+  "best_checkpoint_sha256": "2748322ac8c0814f2539c0b267387376709614958c4b675b2039b3369d82d030",
+  "early_stop": true,
+  "wall_time": "2026-11-19 03:26:00"
+}

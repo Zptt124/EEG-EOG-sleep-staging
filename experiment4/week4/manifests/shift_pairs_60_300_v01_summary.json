@@ -1,0 +1,38 @@
+{
+  "rule": "same record, |start gap| in [60, 300] s, both directions, uniform over candidate 5-s windows",
+  "pair_seed": 20261114,
+  "min_sec": 60,
+  "max_sec": 300,
+  "n_windows": 797628,
+  "n_paired": 797628,
+  "n_no_candidate": 0,
+  "coverage": 1.0,
+  "n_negative_gap": 399131,
+  "n_positive_gap": 398497,
+  "gap_abs_mean": 179.76052119534418,
+  "gap_abs_median": 180.0,
+  "n_at_boundary_60": 16338,
+  "n_at_boundary_300": 16281,
+  "abs_gap_hist_edges_sec": [
+    60,
+    120,
+    180,
+    240,
+    301
+  ],
+  "hist_counts_negative": [
+    98280,
+    97970,
+    97318,
+    105563
+  ],
+  "hist_counts_positive": [
+    97450,
+    98156,
+    97761,
+    105130
+  ],
+  "cache_sha256": "baa935f751d3483a7437eb87293d221368b716743cb4249a960ad12634c58c61",
+  "sha256_npy": "2f446ba47673bf75db31a79ade98d4738f7aabe8ea6c3845c4e3a5c4ecb99ded",
+  "sha256_csv_gz": "6028010b052d274af84f19b7a60b0f382a3822e17d4f46edd8c1fec10f29b06b"
+}
