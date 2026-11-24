@@ -91,7 +91,7 @@
 
 - 12 个新 run 的小文件（config、metrics、inner_cv、by_subject、labeled_subjects）：[b_xmodal_seeds/runs/](b_xmodal_seeds/runs/)
 - 逐段预测、OOF、final.ckpt、normalization 的 SHA256：[b_xmodal_seeds/artifact_sha256.txt](b_xmodal_seeds/artifact_sha256.txt)
-- 完整 run 目录打包为 `w5_b_xmodal_seed34_runs_v01.zip`（26 MB，SHA256 `860d3916…`），**待发布到 Release**
+- 完整 run 目录打包为 `w5_b_xmodal_seed34_runs_v01.zip`（26 MB，SHA256 `860d3916…`），发布在 Release [b-w5-xmodal-seeds-v01-20261124](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-w5-xmodal-seeds-v01-20261124)
 - 30 个 run 的登记表：[b_xmodal_seeds/registry_seed0-4.csv](b_xmodal_seeds/registry_seed0-4.csv)。seed 0–2 的完整 run 见 W4 Release [b-w4-xmodal-formal-v01-20261121](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-w4-xmodal-formal-v01-20261121)
 
 ## 复现
