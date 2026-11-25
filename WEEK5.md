@@ -53,5 +53,5 @@ A 和 B 自行取用已发布特征。若 C 本地缺 self-cond 30k 权重或可
 | --- | --- | --- | --- | --- |
 | A | 单 epoch／拼接／BiGRU | 待登记 | 待登记 | 待登记 |
 | B | 同窗／错时／无 EEG，固定主干补 head seed（12/12 完成，合计 seed 0–4） | ΔN1 AP 六格全跨 0（5 人档同窗−无 EEG +0.56 [−0.27, +1.72]）；调整后 ΔN1 F1 六格全跨 0；5 人档同窗−无 EEG ΔMacro-F1 −0.78 [−1.23, −0.30]，5/5 seed 为负；head seed SD：Macro-F1 约 0.5、N1 AP 约 0.7 | 补到 5 个 head seed 后判读不变，未确认稳定跨模态收益；原始 N1 F1 的差来自门槛 | [B 报告](reports/week5/b_xmodal_seeds.md) |
-| C | 普通／self-cond × 全层／后 3 层 | 待登记 | 待登记 | 待登记 |
+| C | 普通／self-cond × 全层／后 3 层 | 24 组 probe。普通后三层 Macro-F1 为 0.7137／0.7389（5／14 人）；缓存 333.39 → 86.88 MB。 | 默认用普通 30k 第 10–12 层；节省缓存与分类头开销，backbone 前向基本相同。 | [C 周报与数据](experiment3/week5/README.md) |
 | D | 5 秒／30 秒预训练输入 | 待登记 | 待登记 | 待登记 |

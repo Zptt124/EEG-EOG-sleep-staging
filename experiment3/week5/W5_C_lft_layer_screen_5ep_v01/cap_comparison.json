@@ -1,0 +1,13 @@
+{
+  "gap_cap2": -0.05229265971388619,
+  "gap_cap5": -0.016743584360690678,
+  "change_in_gap": 0.035549075353195514,
+  "change_gap_lo": -0.011819922008984556,
+  "change_gap_hi": 0.08874162055962269,
+  "dev_subjects": 8,
+  "dev_rows": 21186,
+  "n_boot": 1000,
+  "reused_first_two_oof_epochs_exactly": true,
+  "resumed_refit_history_exactly": true,
+  "test_used": false
+}

@@ -1,0 +1,2 @@
+comparison,reference,budget,seeds,n_subjects,delta_macro_f1,delta_macro_f1_lo,delta_macro_f1_hi,delta_macro_f1_frac_boot_pos,delta_n1_f1,delta_n1_f1_lo,delta_n1_f1_hi,delta_n1_f1_frac_boot_pos,delta_n1_ap,delta_n1_ap_lo,delta_n1_ap_hi,delta_n1_ap_frac_boot_pos,per_seed_delta_macro_f1,per_seed_delta_n1_f1
+last3,all12,label10,0,8,-0.016743584360690678,-0.04941711439093831,0.01595477451415322,0.186,0.08726371324796517,0.018358436290789062,0.15756124990003276,0.995,0.01117023980955606,-0.05847968717195688,0.03485958276368027,0.687,-0.0167,+0.0873

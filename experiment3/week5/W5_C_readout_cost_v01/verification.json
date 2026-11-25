@@ -1,0 +1,17 @@
+{
+  "checkpoint_sha256": "21c8514ea7761ef383d70b3e26ac19ea33ad0e7ccacfe690812ad359b0118e5b",
+  "model": "W4_D_main_m64x12_seed0_v01",
+  "source_code_sha256": "428957627322a4cd6b56425ea134b76c4a10566ce213400ea9553de4592cd855",
+  "index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.7.1+cu126",
+  "tf32": true,
+  "batch": 8,
+  "dev_subjects": 8,
+  "unique_epochs": 128,
+  "gpu_rounds": 4,
+  "disk_rounds": 3,
+  "max_abs_feature_error": 0.0001704096794128418,
+  "late_slice_equal": true,
+  "test_used": false
+}
