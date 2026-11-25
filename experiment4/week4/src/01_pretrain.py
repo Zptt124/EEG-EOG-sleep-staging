@@ -96,6 +96,10 @@ def main():
     p.add_argument('--cond-dropout', type=float, default=None,
                    help='per-window prob. of dropping the EEG condition (default 0.2 with --cross-modal)')
     p.add_argument('--shift-pairs', default=str(C.PAIRS_NPY), help='shift-pair table for --cross-modal shifted')
+    p.add_argument('--t-sampling', default='uniform', choices=['uniform', 'logitnormal'],
+                   help='training timestep distribution: uniform (W4 default) or logitnormal (W6 screening)')
+    p.add_argument('--t-logit-mean', type=float, default=-0.5, help='logitnormal: mean of u (t = floor(sigmoid(u)*50))')
+    p.add_argument('--t-logit-std', type=float, default=1.0, help='logitnormal: std of u')
     p.add_argument('--window-sec', type=int, default=5, choices=sorted(C.WINDOW_SECS),
                    help='pretraining window: 5 = six 5 s windows per epoch (W4 default); 30 = whole 30 s epoch (W5)')
     p.add_argument('--smoke-small-val', action='store_true',
@@ -177,6 +181,10 @@ def main():
                conditioning='modality id: 0=EEG Fpz-Cz, 1=EOG horizontal (n_class=2)',
                data=f'train split minus held-out ({n_train_subj} subjects), signal only, labels never read',
                cache_sha256=pool.cfg['sha256_signals'], upstream_commit=C.UPSTREAM_COMMIT)
+    if args.t_sampling != 'uniform':   # 均匀抽样时 config.json 保持与 W4 逐字相同
+        cfg.update(timestep_sampling=f'logit-normal: t = floor(sigmoid(u) * 50), u ~ N({args.t_logit_mean}, '
+                                     f'{args.t_logit_std}^2), clamped to [0, 49]; val set unchanged (10 fixed buckets)',
+                   t_sampling=dict(mode=args.t_sampling, logit_mean=args.t_logit_mean, logit_std=args.t_logit_std))
     if args.window_sec != 5:   # 5 秒 run 的 config.json 保持与 W4 逐字相同
         cfg.update(window_sec=args.window_sec,
                    train_units_definition='int64 little-endian array of unit ids u=row*2+m (whole 30 s epoch), sorted',
@@ -194,7 +202,8 @@ def main():
 
     tr = Trainer(args.config, pool, units, args.batch_size, args.seed, lr=args.lr,
                  self_cond_layer=args.self_cond_layer, self_cond_pool=args.self_cond_pool,
-                 cross_modal=args.cross_modal, cond_dropout=args.cond_dropout, pairs=pairs)
+                 cross_modal=args.cross_modal, cond_dropout=args.cond_dropout, pairs=pairs,
+                 t_sampling=args.t_sampling, t_logit_mean=args.t_logit_mean, t_logit_std=args.t_logit_std)
     print(f'params: {C.count_params(tr.model):,}', flush=True)
     latest = big / 'latest.pt'
     if latest.exists():

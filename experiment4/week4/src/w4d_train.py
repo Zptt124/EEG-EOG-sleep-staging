@@ -111,8 +111,12 @@ class ValSet:
 
 class Trainer:
     def __init__(self, cfg_name, pool, units, batch_size, seed, lr=None, device='cuda',
-                 self_cond_layer=0, self_cond_pool='mean', cross_modal='none', cond_dropout=0.0, pairs=None):
+                 self_cond_layer=0, self_cond_pool='mean', cross_modal='none', cond_dropout=0.0, pairs=None,
+                 t_sampling='uniform', t_logit_mean=-0.5, t_logit_std=1.0):
         from ema_pytorch import EMA
+        if t_sampling not in ('uniform', 'logitnormal'):
+            C.fail(f'Unknown t_sampling {t_sampling}')
+        self.t_sampling, self.t_logit_mean, self.t_logit_std = t_sampling, t_logit_mean, t_logit_std
         self.cfg_name, self.pool, self.units = cfg_name, pool, np.asarray(units, dtype=np.int64)
         self.batch_size, self.seed, self.device = batch_size, seed, device
         self.cross_modal, self.cond_dropout, self.pairs = cross_modal, cond_dropout, pairs
@@ -139,6 +143,15 @@ class Trainer:
         self.pos += self.batch_size
         return u
 
+    def sample_t(self, bs):
+        """训练用的 diffusion timestep。uniform = 官方 / W4 做法（与原代码逐位相同）；
+        logitnormal（W6 筛查）= t = floor(sigmoid(u) * 50)，u ~ N(mean, std)，默认 mean -0.5、std 1，
+        约 65% 的样本落在 t∈[5,25)（均匀抽样为 40%），t<5 约 4%，t≥25 约 31%；val 集仍按 10 段固定 t 评估。"""
+        if self.t_sampling == 'uniform':
+            return torch.randint(0, T_STEPS, (bs, 1), device=self.device)
+        u = torch.randn((bs, 1), device=self.device) * self.t_logit_std + self.t_logit_mean
+        return (torch.sigmoid(u) * T_STEPS).long().clamp_(0, T_STEPS - 1)
+
     def train_step(self):
         units = self.next_units()
         x, m = self.pool.gather(units)
@@ -152,7 +165,7 @@ class Trainer:
             xc, mask = torch.from_numpy(xc).to(self.device), mask.float()
         bs = x0.shape[0]
         noise = torch.randn_like(x0)
-        t = torch.randint(0, T_STEPS, (bs, 1), device=self.device)
+        t = self.sample_t(bs)
         xt = self.sch.add_noise(x0, noise, t)
         target = self.sch.get_velocity(x0, noise, t)
         pred = w4_forward(self.model, xt, t, m, condition_eeg=xc, condition_mask=mask)
