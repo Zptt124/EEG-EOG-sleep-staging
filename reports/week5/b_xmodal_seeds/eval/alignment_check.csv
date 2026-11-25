@@ -1,0 +1,11 @@
+budget,seed,arms,n_epochs
+label10,0,xm_none xm_shift xm_sync,21186
+label10,1,xm_none xm_shift xm_sync,21186
+label10,2,xm_none xm_shift xm_sync,21186
+label10,3,xm_none xm_shift xm_sync,21186
+label10,4,xm_none xm_shift xm_sync,21186
+label25,0,xm_none xm_shift xm_sync,21186
+label25,1,xm_none xm_shift xm_sync,21186
+label25,2,xm_none xm_shift xm_sync,21186
+label25,3,xm_none xm_shift xm_sync,21186
+label25,4,xm_none xm_shift xm_sync,21186

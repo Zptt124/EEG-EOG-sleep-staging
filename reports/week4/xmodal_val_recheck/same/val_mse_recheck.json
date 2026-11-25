@@ -1,0 +1,40 @@
+{
+ "run": "W4_A_xmodal_same_30k_seed0_v01",
+ "rule": "D d_val_w4_v01 (rebuilt independently by B)",
+ "index_check": {
+  "n_rows": 132938,
+  "n_records": 106,
+  "matches_d_epoch_index": true
+ },
+ "val_check": {
+  "units_sha256_match": true,
+  "t_sha256_match": true,
+  "noise_sha256_match": false,
+  "windows_csv_sha256_match": true,
+  "windows_csv_rows_match": true,
+  "heldout_csv_sha256_match": true
+ },
+ "cross_modal": "same_window",
+ "self_cond_layer": 0,
+ "shift_pairs_check": null,
+ "checkpoints": [
+  {
+   "step": 30000,
+   "file": "ckpt_step30000.pt",
+   "sha256": "ba81448a1ff6e08402173bd76d784fd05f6e8948161f97ae0c2024dbcdb0fd70"
+  }
+ ],
+ "variants": [
+  "ema/eeg_cond=0",
+  "ema/eeg_cond=1"
+ ],
+ "forward": "D w4_forward (cross_modal=same_window, self_cond_layer=0)；带开关的结构不在官方代码里",
+ "x0": "NPZ -> transform -> float16 round",
+ "eeg_condition": "EOG target windows only; condition windows rebuilt by B from NPZ",
+ "max_abs_diff": 7.377215452492036e-06,
+ "max_rel_diff": 4.2767843517631936e-05,
+ "device": "cpu",
+ "torch": "2.14.1",
+ "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+ "seconds": 538.1
+}

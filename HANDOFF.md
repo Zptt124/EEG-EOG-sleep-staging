@@ -6,6 +6,20 @@
 
 11 月 27 日（周五），四人各在[共用结果表](WEEK5.md#周五结果登记)登记一行，附结果链接和一句结论。A 从同一张表汇总汇报草稿。
 
+**2026-11-24 B 跨模态补 head seed（12/12 完成）：** 用 W4 同一份三组 EOG 特征（SHA 与 W4 登记一致）和 34 号探针，在 5 人和 14 人档补 seed 3、4。试跑重算 W4 的 seed 0，预测逐字节一致。30 个 run 经 39 号复评自检 30/30 通过。合并 seed 0–4 后，N1 AP 和 α 调整后 N1 F1 的六个配对区间仍全部跨 0，W4 判读不变。详见 [reports/week5/b_xmodal_seeds.md](reports/week5/b_xmodal_seeds.md)。完整 run 包见 Release [b-w5-xmodal-seeds-v01-20261124](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-w5-xmodal-seeds-v01-20261124)。
+
+## 第四周交接
+
+**2026-11-16 B → A、D（第 1 天）：** 预训练 held-out 名单 `w4_v01` 已锁定：SC414、SC416、SC431、SC450、SC457、SC463、SC467、SC477（不在任何标签预算名单中，5/14/27 人预算者全部留在预训练池；按编号分 8 层各抽 1 人）。预训练池剩 46 人、114,041 段。分段 MSE 脚本 `scripts/32_b_w4_pretrain_mse.py` 使用固定的 4,000 个窗×模态和固定噪声，每 5 个扩散步一段，EEG/EOG 分开报告，默认按空条件、用 EMA 权重评估。用法与核对见 [reports/week4/b_pretrain_val_for_AD.md](reports/week4/b_pretrain_val_for_AD.md)。
+
+**2026-11-16 B 跨模态工具：** 错时 EEG 配对（`scripts/33_b_w4_shift_pairs.py`，60–300 秒，逐窗确定，与窗清单范围无关）在 46 人训练池 684,246 个目标窗上覆盖率 100%，条件窗在后的占 50.0%。第四周探针 `34_b_w4_probe.py` 可只用 EOG，并在同一次运行里做训练侧 α 调整。三组复评 `35_b_w4_crossmodal_eval.py` 先逐行核对对齐，再报三个配对差。说明见 [reports/week4/b_crossmodal_tools.md](reports/week4/b_crossmodal_tools.md)。
+
+**2026-11-17 B 核对 D 的公共预训练脚本（PR #23）：** B 用自己的代码按 D 的配方重建 val 集，窗、t、窗清单与 D 一致（噪声 SHA 因 x86/ARM 的 CPU 随机数实现不同而末位不同）。复算 D 主实验 0–30k 共 7 个 checkpoint 的 val MSE（EMA 与 online），stop_metric 最大差 5.8e-6，最佳步同为 30k。错时配对表重算后与 D 的 npy 逐字节一致，规则逐条核对通过（覆盖 100%、两向各半、候选内均匀）。三组对照以 D 的配对表为准。详见 [reports/week4/b_d_pretrain_recheck.md](reports/week4/b_d_pretrain_recheck.md)。
+
+**2026-11-19 B 复评 C 第四周四格（PR #25）：** 12 个 run 的预测、OOF、原始指标、α 与调整后指标、三个配对差点估计全部复现。预训练的 Macro-F1 增益在 linear/LFT 都稳定（+3.2/+3.3 个百分点）；N1 上只有 linear 头有收益（N1 AP +0.050，α 调整后 N1 F1 +0.038，区间不含 0），LFT 的 N1 AP 与 α 调整后 N1 F1 都没有变化。预训练下 LFT 比 linear 的 N1 AP 低 −0.049 [−0.092, −0.014]，原始 N1 F1 的优势来自判定门槛。详见 [reports/week4/b_c_reeval_w4.md](reports/week4/b_c_reeval_w4.md)。
+
+**2026-11-21 B 跨模态三组正式汇总与复评：** C 的 6 个跨模态 run 复评 6/6 一致，D 的 18 个三 head seed run 从 Release 下载逐段预测后复评 18/18 一致（此前 C 只引用了 D 的配对表）。B 用 D 发布的三组特征自己重跑 18 个探针，结果与 D 逐项相同。B 新增 α 调整后的配对差：原始 N1 F1 上三个区间不含 0 的差（5 人档同窗/错时−无 EEG、14 人档错时−无 EEG），经训练侧门槛校正后全部跨 0，N1 AP 六个区间也都跨 0，结论仍是未确认稳定跨模态收益。Mac 初步结果与正式结果只差 1 段预测。错时、同窗两组 30k 的 val MSE（空条件与给 EEG 条件）复算与交付值相差 ≤ 7.4e-6；给 EEG 条件后 EOG 去噪误差同窗降 0.7%、错时降 0.1%。同窗特征包的 index.csv 是 LF 换行，与 features_info 登记的 CRLF 版本 SHA 不同，内容一致。详见 [reports/week4/b_xmodal_final.md](reports/week4/b_xmodal_final.md)。
+
 ## 第三周交接
 
 以[第三周工作安排](WEEK3.md)和[四天方案 PDF](docs/week3/work_plan_W3.pdf)为准。交付时记录配置、模型来源、run ID、样本索引与接收核验。

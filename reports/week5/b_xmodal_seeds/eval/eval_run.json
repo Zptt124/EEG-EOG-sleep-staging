@@ -1,0 +1,77 @@
+{
+  "script": "scripts/35_b_w4_crossmodal_eval.py",
+  "arms": {
+    "sync": "xm_sync",
+    "shift": "xm_shift",
+    "none": "xm_none"
+  },
+  "registries": [
+    "reports/week5/b_xmodal_seeds/registry_seed0-4.csv"
+  ],
+  "n_runs": 30,
+  "alignment": [
+    {
+      "budget": "label10",
+      "seed": 0,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label10",
+      "seed": 1,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label10",
+      "seed": 2,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label10",
+      "seed": 3,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label10",
+      "seed": 4,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 0,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 1,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 2,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 3,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    },
+    {
+      "budget": "label25",
+      "seed": 4,
+      "arms": "xm_none xm_shift xm_sync",
+      "n_epochs": 21186
+    }
+  ],
+  "val_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de",
+  "bootstrap": "1000 次，按开发集受试者成对重采样，seed 合并，rng seed 0",
+  "code_commit": "538449380baf9f7c3e65c4af0931c6a8176d13c3"
+}

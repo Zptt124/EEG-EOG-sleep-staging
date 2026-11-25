@@ -1,0 +1,87 @@
+{
+ "reference": "held-out 8 subjects (pretrain_split_w4_v01), D val units, split A/B per subject",
+ "n_real_a": 512,
+ "generated": [
+  {
+   "file": "gen_step5000.npz",
+   "step": 5000,
+   "ckpt_sha256": "01dfe21ba200ff8cb4c8ec14fe413c26aa1dc7440b74c738446d71986ad15ef8",
+   "mps_cpu_max_abs_diff": 2.0503997802734375e-05
+  },
+  {
+   "file": "gen_step10000.npz",
+   "step": 10000,
+   "ckpt_sha256": "da8a23cb393a47a661f6d044c5be3ea51d7509385fb4fd61b6419e97631ee7a8",
+   "mps_cpu_max_abs_diff": 1.7762184143066406e-05
+  },
+  {
+   "file": "gen_step15000.npz",
+   "step": 15000,
+   "ckpt_sha256": "540eab4562b2311069de6e134b8cc60f5f4353cda9fc5e55f2a97f7c91b78310",
+   "mps_cpu_max_abs_diff": 2.110004425048828e-05
+  },
+  {
+   "file": "gen_step20000.npz",
+   "step": 20000,
+   "ckpt_sha256": "c3bb16648d8572766e0214c960e6e4adfe6bedc64c0065d2739571eb53546b8d",
+   "mps_cpu_max_abs_diff": 1.946091651916504e-05
+  },
+  {
+   "file": "gen_step30000.npz",
+   "step": 30000,
+   "ckpt_sha256": "21c8514ea7761ef383d70b3e26ac19ea33ad0e7ccacfe690812ad359b0118e5b",
+   "mps_cpu_max_abs_diff": 4.6133995056152344e-05
+  },
+  {
+   "file": "gen_step60000.npz",
+   "step": 60000,
+   "ckpt_sha256": "c5b84c53e49cab79a4fccaf1630c5afa6ae4115f46386549a9b6315baf321b60",
+   "mps_cpu_max_abs_diff": 0.00011774897575378418
+  },
+  {
+   "file": "gen_step120000.npz",
+   "step": 120000,
+   "ckpt_sha256": "145305b55567e5b53e73e21bced5de05b514d26d9def1dbddfd7b9e44621faa2",
+   "mps_cpu_max_abs_diff": 3.0279159545898438e-05
+  },
+  {
+   "file": "gen_step180000.npz",
+   "step": 180000,
+   "ckpt_sha256": "a600455aaca4e2b16bd4928c1625d922d20489d283aecc4cd7dee19038fd2a4a",
+   "mps_cpu_max_abs_diff": 2.0742416381835938e-05
+  },
+  {
+   "file": "gen_step240000.npz",
+   "step": 240000,
+   "ckpt_sha256": "2748322ac8c0814f2539c0b267387376709614958c4b675b2039b3369d82d030",
+   "mps_cpu_max_abs_diff": 2.586841583251953e-05
+  }
+ ],
+ "sampler": "DDPM ancestral, 50 steps, v-prediction, clip_sample=False, EMA weights, no condition",
+ "gen_seed": 20261122,
+ "fidnet": {
+  "train_records": 90,
+  "n_windows": 114041,
+  "class_counts": [
+   37794,
+   12187,
+   40338,
+   7940,
+   15782
+  ],
+  "eeg": {
+   "heldout_balanced_acc": 0.5265715028633363,
+   "heldout_macro_f1": 0.50664674740505
+  },
+  "eog": {
+   "heldout_balanced_acc": 0.5351758020244572,
+   "heldout_macro_f1": 0.5050091532690855
+  },
+  "epochs": 4,
+  "arch": "4×(Conv7-BN-ReLU-Pool) 32/64/96/128 → GAP(128) → Linear(5)",
+  "input": "model domain (µV/100 staged mu-law), 5 s @ 200 Hz",
+  "class_weight": "inverse frequency"
+ },
+ "torch": "2.14.1",
+ "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+}
