@@ -1,0 +1,44 @@
+{
+ "run": "W4_B_xmodal_shifted_30k_seed0_v01",
+ "rule": "D d_val_w4_v01 (rebuilt independently by B)",
+ "index_check": {
+  "n_rows": 132938,
+  "n_records": 106,
+  "matches_d_epoch_index": true
+ },
+ "val_check": {
+  "units_sha256_match": true,
+  "t_sha256_match": true,
+  "noise_sha256_match": false,
+  "windows_csv_sha256_match": true,
+  "windows_csv_rows_match": true,
+  "heldout_csv_sha256_match": true
+ },
+ "cross_modal": "shifted",
+ "self_cond_layer": 0,
+ "shift_pairs_check": {
+  "rebuilt_npy_sha256": "2f446ba47673bf75db31a79ade98d4738f7aabe8ea6c3845c4e3a5c4ecb99ded",
+  "run_config_sha256": "2f446ba47673bf75db31a79ade98d4738f7aabe8ea6c3845c4e3a5c4ecb99ded",
+  "match": true
+ },
+ "checkpoints": [
+  {
+   "step": 30000,
+   "file": "ckpt_step30000.pt",
+   "sha256": "cf17e3bd751de178eb5e89112b42a595e7160f35d64f7c0c36153823b9ff5eca"
+  }
+ ],
+ "variants": [
+  "ema/eeg_cond=0",
+  "ema/eeg_cond=1"
+ ],
+ "forward": "D w4_forward (cross_modal=shifted, self_cond_layer=0)；带开关的结构不在官方代码里",
+ "x0": "NPZ -> transform -> float16 round",
+ "eeg_condition": "EOG target windows only; condition windows rebuilt by B from NPZ",
+ "max_abs_diff": 4.977627872021495e-06,
+ "max_rel_diff": 5.513375491368547e-05,
+ "device": "cpu",
+ "torch": "2.14.1",
+ "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+ "seconds": 541.2
+}

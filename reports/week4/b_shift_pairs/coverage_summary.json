@@ -1,0 +1,77 @@
+{
+  "version": "w4_v01",
+  "owner": "B",
+  "seed": 20261118,
+  "gap_sec": [
+    60,
+    300
+  ],
+  "gap_inclusive": true,
+  "offset_sign": "条件窗起点 − 目标窗起点（秒）",
+  "sampler": "splitmix64(window_key ^ splitmix64(seed))，逐窗确定",
+  "validity": "条件窗所在 30 秒段存在于 A 的预处理 NPZ；不读睡眠标签",
+  "inputs": {
+    "pretrain_split_w4_v01.csv": "470c23f7d49b4de6a3a896243e379ffc3b7a637d64b3e70c813b1c03522dffa0",
+    "pretrain_val_windows_w4_v01.csv": "ae1bfe4866e50175f43142c50ee5afc32e083efa1e30870d16b764dcbe0dab8b"
+  },
+  "pretrain_pool": {
+    "table": "shift_pairs_pretrain_pool_w4_v01.csv",
+    "n_targets": 684246,
+    "n_paired": 684246,
+    "n_null_no_candidate": 0,
+    "coverage": 1.0,
+    "n_candidates": {
+      "min": 1,
+      "p1": 74.0,
+      "median": 98.0,
+      "max": 98,
+      "full_both_sides": 98
+    },
+    "one_sided": {
+      "only_before": 1128,
+      "only_after": 1128,
+      "reduced_candidates": 19338
+    },
+    "offset": {
+      "frac_condition_after": 0.5001066867763932,
+      "mean_abs_sec": 179.83501547688988,
+      "min": -300,
+      "max": 300,
+      "median_abs_sec": 180.0,
+      "at_boundary_abs60": 14009,
+      "at_boundary_abs300": 13748
+    }
+  },
+  "val_windows": {
+    "table": "shift_pairs_val_windows_w4_v01.csv",
+    "n_targets": 2000,
+    "n_paired": 2000,
+    "n_null_no_candidate": 0,
+    "coverage": 1.0,
+    "n_candidates": {
+      "min": 49,
+      "p1": 89.0,
+      "median": 98.0,
+      "max": 98,
+      "full_both_sides": 98
+    },
+    "one_sided": {
+      "only_before": 1,
+      "only_after": 2,
+      "reduced_candidates": 49
+    },
+    "offset": {
+      "frac_condition_after": 0.508,
+      "mean_abs_sec": 179.0625,
+      "min": -300,
+      "max": 300,
+      "median_abs_sec": 180.0,
+      "at_boundary_abs60": 45,
+      "at_boundary_abs300": 32
+    }
+  },
+  "files": {
+    "shift_pairs_pretrain_pool_w4_v01.csv": "565a9298a797dae04adbe4e44a743a24b7b250f8723d1efca5bc335c96661b25",
+    "shift_pairs_val_windows_w4_v01.csv": "8c87f5d196121febf35cdf601135a274f5c080018e2ce367b0b12fb782f972f9"
+  }
+}
