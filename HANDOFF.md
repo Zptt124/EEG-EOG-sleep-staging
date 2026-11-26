@@ -8,6 +8,8 @@
 
 **2026-11-24 B 跨模态补 head seed（12/12 完成）：** 用 W4 同一份三组 EOG 特征（SHA 与 W4 登记一致）和 34 号探针，在 5 人和 14 人档补 seed 3、4。试跑重算 W4 的 seed 0，预测逐字节一致。30 个 run 经 39 号复评自检 30/30 通过。合并 seed 0–4 后，N1 AP 和 α 调整后 N1 F1 的六个配对区间仍全部跨 0，W4 判读不变。详见 [reports/week5/b_xmodal_seeds.md](reports/week5/b_xmodal_seeds.md)。完整 run 包见 Release [b-w5-xmodal-seeds-v01-20261124](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/b-w5-xmodal-seeds-v01-20261124)。
 
+**2026-11-25 B 复评 A temporal context（PR #28）与 D 连续 30 秒（PR #27）：** A 的 12 个 run 用 43 号（复用 39 号流程）复评 12/12 一致，配对差与 A 的表最大差 2.8e-7；B 用 34 号在同一份特征上重跑 single 臂 label10 seed0，y_pred 逐段相同。待 A 处理：WEEK5.md 与 main 冲突，`paired_adjusted.csv` 的 label10 N1 AP 列，训练侧 OOF 方向与 dev 相反（5 人档 BiGRU OOF 0.703 < single 0.710），metrics.json 中的盘符路径。D 的汇总表与代码核对无误，5 秒基线与 A、B 逐 seed 相同；30 秒 probe 预测、run 小文件和 α 调整表未交，暂不能逐段复评；合并顺序 #23 → #27。详见 [reports/week5/b_review_a_d_w5.md](reports/week5/b_review_a_d_w5.md)。
+
 ## 第四周交接
 
 **2026-11-16 B → A、D（第 1 天）：** 预训练 held-out 名单 `w4_v01` 已锁定：SC414、SC416、SC431、SC450、SC457、SC463、SC467、SC477（不在任何标签预算名单中，5/14/27 人预算者全部留在预训练池；按编号分 8 层各抽 1 人）。预训练池剩 46 人、114,041 段。分段 MSE 脚本 `scripts/32_b_w4_pretrain_mse.py` 使用固定的 4,000 个窗×模态和固定噪声，每 5 个扩散步一段，EEG/EOG 分开报告，默认按空条件、用 EMA 权重评估。用法与核对见 [reports/week4/b_pretrain_val_for_AD.md](reports/week4/b_pretrain_val_for_AD.md)。
