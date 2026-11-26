@@ -1,0 +1,81 @@
+{
+ "script": "scripts/45_b_t1_contiguous_segments.py",
+ "rule": "same record; gap = consecutive epoch_index difference > 1; start/end inclusive",
+ "sources": {
+  "rosters": {
+   "path": "manifests/temporal_rosters_t1_v01.csv",
+   "sha256": "924161c2188e983647debccd1e1442f5db02d70189d9b94ad25e02dbc29b1072"
+  },
+  "split_subjects": {
+   "path": "manifests/split_subjects.csv",
+   "sha256": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f"
+  },
+  "pretrain_split": {
+   "path": "manifests/pretrain_split_w4_v01.csv",
+   "sha256": "470c23f7d49b4de6a3a896243e379ffc3b7a637d64b3e70c813b1c03522dffa0"
+  },
+  "npz": "data/processed/<record>.npz (epoch_index only; labels not read; test not opened)"
+ },
+ "summary": {
+  "dev8": {
+   "subjects": 8,
+   "records": 16,
+   "segments": 38,
+   "gaps": 22,
+   "records_with_gap": 2,
+   "epochs": 21186,
+   "seg_len_min": 10,
+   "seg_len_median": 172.0,
+   "seg_len_max": 2044,
+   "segments_shorter_than_5": 0,
+   "epochs_in_segments_shorter_than_5": 0
+  },
+  "heldout8": {
+   "subjects": 8,
+   "records": 16,
+   "segments": 29,
+   "gaps": 13,
+   "records_with_gap": 3,
+   "epochs": 18897,
+   "seg_len_min": 6,
+   "seg_len_median": 670.0,
+   "seg_len_max": 1968,
+   "segments_shorter_than_5": 0,
+   "epochs_in_segments_shorter_than_5": 0
+  },
+  "orig14": {
+   "subjects": 14,
+   "records": 27,
+   "segments": 57,
+   "gaps": 30,
+   "records_with_gap": 11,
+   "epochs": 32310,
+   "seg_len_min": 7,
+   "seg_len_median": 546.0,
+   "seg_len_max": 1535,
+   "segments_shorter_than_5": 0,
+   "epochs_in_segments_shorter_than_5": 0
+  },
+  "pretrain32": {
+   "subjects": 32,
+   "records": 63,
+   "segments": 122,
+   "gaps": 59,
+   "records_with_gap": 21,
+   "epochs": 81731,
+   "seg_len_min": 1,
+   "seg_len_median": 582.0,
+   "seg_len_max": 2667,
+   "segments_shorter_than_5": 5,
+   "epochs_in_segments_shorter_than_5": 11
+  }
+ },
+ "feature_index_check": {
+  "features_dir": "cache/w4_xmodal_dl/w4_d_main30k_feat_pool1s_v01/W4_D_main_m64x12_seed0_v01/step30000_ema_model_pool1s",
+  "records": 43,
+  "n_rows": 53496,
+  "index_sha256": "d7c0e4db60b69d3f2a7aacf2e5b97416e3688c6b189b637b31438e4ea873d08e",
+  "mismatched_records": {}
+ },
+ "output_sha256": "1128cfba9b593f13d79bdfb7dffc88a994658886d1bc6f081b523cea24776d16"
+}
