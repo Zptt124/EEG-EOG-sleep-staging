@@ -1,0 +1,13 @@
+run_id,y_pred_is_argmax,pred_sha256_match,pred_sha256_config_match,epoch_reselected,epoch_reported,epoch_match,n_curve_epochs,folds_ok,alpha_source,oof_subjects_ok,oof_folds_match_config,d_curve_at_estar,d_oof_n1_f1_raw,d_oof_n1_f1_adjusted,n1adj_file_match,alpha_b,alpha_reported,alpha_rel_diff,d_macro_f1,d_n1_f1,d_n1_ap,d_n1_auroc,d_n1_f1_adjusted,d_macro_f1_adjusted,alpha_from_table,all_match
+W4_A_w6_base_l10_label10_sseed2024_seed0_v01,True,,True,50,50,True,50,True,B_reselected,True,True,0,0,0,True,16.1,16.1,0,0,0,-5.55e-17,0,0,0,False,True
+W4_A_w6_base_l10_label10_sseed2024_seed1_v01,True,,True,50,50,True,50,True,B_reselected,True,True,0,0,0,True,28,28,0,0,0,0,0,0,0,False,True
+W4_A_w6_base_l10_label10_sseed2024_seed2_v01,True,,True,47,47,True,50,True,B_reselected,True,True,0,0,0,True,18,18,0,0,0,-5.55e-17,0,0,0,False,True
+W4_A_w6_base_l10_label25_sseed2024_seed0_v01,True,,True,50,50,True,50,True,B_reselected,True,True,0,0,0,True,3.95,3.95,0,0,0,5.55e-17,0,0,0,False,True
+W4_A_w6_base_l10_label25_sseed2024_seed1_v01,True,,True,46,46,True,50,True,B_reselected,True,True,0,0,0,True,3.7,3.7,0,0,0,0,0,0,0,False,True
+W4_A_w6_base_l10_label25_sseed2024_seed2_v01,True,,True,48,48,True,50,True,B_reselected,True,True,0,0,0,True,4.73,4.73,0,0,0,-5.55e-17,0,0,0,False,True
+W4_A_w6_tlogit_l10_label10_sseed2024_seed0_v01,True,,True,29,29,True,50,True,B_reselected,True,True,0,0,0,True,12.1,12.1,0,0,0,0,0,0,0,False,True
+W4_A_w6_tlogit_l10_label10_sseed2024_seed1_v01,True,,True,41,41,True,50,True,B_reselected,True,True,0,0,0,True,13.8,13.8,0,0,0,0,0,0,0,False,True
+W4_A_w6_tlogit_l10_label10_sseed2024_seed2_v01,True,,True,47,47,True,50,True,B_reselected,True,True,0,0,0,True,14.3,14.3,0,0,0,0,0,0,0,False,True
+W4_A_w6_tlogit_l10_label25_sseed2024_seed0_v01,True,,True,50,50,True,50,True,B_reselected,True,True,0,0,0,True,4.31,4.31,0,0,0,0,0,0,0,False,True
+W4_A_w6_tlogit_l10_label25_sseed2024_seed1_v01,True,,True,26,26,True,50,True,B_reselected,True,True,0,0,0,True,3.7,3.7,0,0,0,5.55e-17,0,0,0,False,True
+W4_A_w6_tlogit_l10_label25_sseed2024_seed2_v01,True,,True,39,39,True,50,True,B_reselected,True,True,0,0,0,True,3.76,3.76,1.18e-16,0,0,5.55e-17,0,0,0,False,True

@@ -1,0 +1,7 @@
+budget,seed,arms,n_epochs
+label10,0,w6_base_l10 w6_tlogit_l10,21186
+label10,1,w6_base_l10 w6_tlogit_l10,21186
+label10,2,w6_base_l10 w6_tlogit_l10,21186
+label25,0,w6_base_l10 w6_tlogit_l10,21186
+label25,1,w6_base_l10 w6_tlogit_l10,21186
+label25,2,w6_base_l10 w6_tlogit_l10,21186
