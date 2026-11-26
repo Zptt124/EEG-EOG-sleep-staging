@@ -3,7 +3,7 @@
 ## 1. 02、08 原人另一夜拟合（第 7 天任务）
 
 用 C 的 `train_other_night.py`（第一周 trainer 不变），D 共享缓存（回执 `392122c6…`），seed 0、30 轮、1,800 段、450 次更新。
-小文件见 [b_other_night/](b_other_night/)（head.pt、normalization.npz、config、loss、开发分数）；逐段预测另行上传。
+config、loss、开发分数见 [b_other_night/](b_other_night/)；head.pt、normalization.npz 与逐段预测在 Release `b-budget-week2-other-night-v01-20261127`（zip SHA-256 `251920fb…`）。
 
 入口复现核对：B 在本机重拟 C 的 03，标准化参数逐位相同，头权重最大差 4.5e-8，dev8 / pool36 逐段 argmax 全同，
 Macro-F1 与 C 完全一致。

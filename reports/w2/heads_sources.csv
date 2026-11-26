@@ -19,8 +19,8 @@ roster,arm,source,path_in_source
 09,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,09/paired/deepen
 10,add_people,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,10/paired/add_people
 10,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,10/paired/deepen
-02,other_night,B 本机拟合（runs/w2，另行上传）,02/other_night
-08,other_night,B 本机拟合（runs/w2，另行上传）,08/other_night
+02,other_night,B b-budget-week2-other-night-v01-20261127 / b_budget_week2_other_night_v01.zip,02/other_night
+08,other_night,B b-budget-week2-other-night-v01-20261127 / b_budget_week2_other_night_v01.zip,08/other_night
 03,other_night,C c-budget-week2-results-v01-20261127 / C_week2_matching_and_results_20261127.zip,03/other_night
 10,other_night,C c-budget-week2-results-v01-20261127 / C_week2_matching_and_results_20261127.zip,10/other_night
 04,other_night,D d-budget-week2-other-night-v01-20261127 / d_budget_week2_other_night_v01.zip,04/other_night
