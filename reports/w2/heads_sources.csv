@@ -1,0 +1,27 @@
+roster,arm,source,path_in_source
+01,add_people,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,01/paired/add_people
+01,deepen,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,01/paired/deepen
+02,add_people,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,02/paired/add_people
+02,deepen,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,02/paired/deepen
+03,add_people,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,03/paired/add_people
+03,deepen,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,03/paired/deepen
+04,add_people,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,04/paired/add_people
+04,deepen,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,04/paired/deepen
+05,add_people,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,05/paired/add_people
+05,deepen,C c-budget-week2-results-v01-20261127 / C_week1_heads_for_B_20261127.zip,05/paired/deepen
+06,add_people,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,06/paired/add_people
+06,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,06/paired/deepen
+07,add_people,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,07/paired/add_people
+07,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,07/paired/deepen
+08,add_people,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,08/paired/add_people
+08,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,08/paired/deepen
+09,add_people,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,09/paired/add_people
+09,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,09/paired/deepen
+10,add_people,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,10/paired/add_people
+10,deepen,D d-budget-week1-results-v01-20261126 / d_budget_week1_results_v01.zip,10/paired/deepen
+02,other_night,B 本机拟合（runs/w2，另行上传）,02/other_night
+08,other_night,B 本机拟合（runs/w2，另行上传）,08/other_night
+03,other_night,C c-budget-week2-results-v01-20261127 / C_week2_matching_and_results_20261127.zip,03/other_night
+10,other_night,C c-budget-week2-results-v01-20261127 / C_week2_matching_and_results_20261127.zip,10/other_night
+04,other_night,D d-budget-week2-other-night-v01-20261127 / d_budget_week2_other_night_v01.zip,04/other_night
+06,other_night,D d-budget-week2-other-night-v01-20261127 / d_budget_week2_other_night_v01.zip,06/other_night
