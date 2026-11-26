@@ -1,0 +1,22 @@
+{
+  "pool36": {
+    "macro_f1": {
+      "base": 0.5045404388673552,
+      "add_people": 0.54776354254799,
+      "deepen": 0.5185935287512333
+    },
+    "add_people_gain_pp": 4.322310368063476,
+    "deepen_gain_pp": 1.40530898838781,
+    "add_people_minus_deepen_pp": 2.9170013796756655
+  },
+  "dev8": {
+    "macro_f1": {
+      "base": 0.5245940610932125,
+      "add_people": 0.5733307185918627,
+      "deepen": 0.5450617501715982
+    },
+    "add_people_gain_pp": 4.873665749865019,
+    "deepen_gain_pp": 2.04676890783857,
+    "add_people_minus_deepen_pp": 2.8268968420264495
+  }
+}

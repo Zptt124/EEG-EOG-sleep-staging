@@ -1,0 +1,20 @@
+{
+  "roster": "09",
+  "arm": "base",
+  "feature_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
+  "plan_sha256": "7dc9dcaaeec41c635d9409f5b32f7c3083c6d90494c136fa2185f662cbd5996d",
+  "code": {
+    "train.py": "d7582d7219e267b48adb7f4550e5fbde807c65c04d027708d221f28b85060c37",
+    "protocol.py": "7a487d7bdabf258992648247772dc884e08ecdf67c0c5fdc7f76fd6fef6d00d0",
+    "plan.py": "751f6cb9529b118190557db786c945fa9adef66ec31a05d0a591ac0eb6015afd"
+  },
+  "seed": 0,
+  "epochs": 30,
+  "train_samples": 1200,
+  "updates": 300,
+  "batch": 128,
+  "drop_last": false,
+  "torch": "2.7.1+cu126",
+  "numpy": "1.26.4",
+  "python": "3.11.17"
+}
