@@ -1,0 +1,5 @@
+roster,cohort,same_night_pct,other_night_pct,new_people_pct,night_gain_pp,new_people_minus_other_night_pp,new_people_minus_same_night_pp,old_arm_source
+04,pool36,51.89,53.78,55.01,+1.89,+1.23,+3.12,C week1 paired_macro_f1.csv
+04,dev8,56.12,61.24,63.60,+5.11,+2.36,+7.47,C week1 paired_macro_f1.csv
+06,pool36,57.03,57.21,59.06,+0.19,+1.85,+2.03,D week1 summary.json
+06,dev8,65.68,64.68,64.94,-0.99,+0.25,-0.74,D week1 summary.json
