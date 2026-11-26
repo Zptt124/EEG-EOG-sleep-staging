@@ -1,0 +1,329 @@
+{
+  "group": "C",
+  "rosters": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05"
+  ],
+  "fit_count": 15,
+  "prediction_files": 30,
+  "feature_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
+  "plan_sha256": "7dc9dcaaeec41c635d9409f5b32f7c3083c6d90494c136fa2185f662cbd5996d",
+  "source_code": {
+    "train.py": "d7582d7219e267b48adb7f4550e5fbde807c65c04d027708d221f28b85060c37",
+    "protocol.py": "7a487d7bdabf258992648247772dc884e08ecdf67c0c5fdc7f76fd6fef6d00d0",
+    "plan.py": "751f6cb9529b118190557db786c945fa9adef66ec31a05d0a591ac0eb6015afd"
+  },
+  "files": {
+    "README.md": {
+      "sha256": "b30a65b62c5f7d68d1025b2a789c583fe18560089b51c62d841a18db693f9708",
+      "bytes": 6308
+    },
+    "01/loss_review/base/loss.csv": {
+      "sha256": "1cab7ce5234104e87097df2f38bc8ad850b03b31b91849e32285e2dc43a2dfd8",
+      "bytes": 824
+    },
+    "01/loss_review/base/config.json": {
+      "sha256": "7309228f0e9f35fb89dc2b3d42200947c0604d351cffd4d33917d0bd38c5113e",
+      "bytes": 666
+    },
+    "01/loss_review/summary.json": {
+      "sha256": "8697edf4bc4d5f8f8205bb7949b93eae6563d6ad26c0c06cc1368a45dde9ec9a",
+      "bytes": 219
+    },
+    "epoch_lock.json": {
+      "sha256": "0b51b4223475ebcce099eda41171b03d665dd1c935d17842dbfccb3ddbea1a64",
+      "bytes": 1331
+    },
+    "audit/higher_budget_capacity.csv": {
+      "sha256": "09a08f0dc66afc69a52d2f6e90b6eaca9393e91e685d6ad4db578c724755a8bb",
+      "bytes": 225
+    },
+    "audit/leave_one_subject_out_C.csv": {
+      "sha256": "f0dffaf8b4ad82362b5253bb85b9d26160564d4b66976b5862542b69f75bfd99",
+      "bytes": 2048
+    },
+    "audit/paired_macro_f1.csv": {
+      "sha256": "4faa298c9b3718ad7f6fe19fd4f0db9cbb6a5cbbe46afdf5924ae780e3a2a1a6",
+      "bytes": 1433
+    },
+    "audit/pool36_subject_appearances.csv": {
+      "sha256": "3c91204fe0d3b19f2d7b8ef21efce4e9fa1d0826632ac888845732ce4c1e3889",
+      "bytes": 403
+    },
+    "audit/predicted_stage_f1.csv": {
+      "sha256": "e252ab3af213ce78a03e4f399f659e3971a359ae88179d74fd1c87451058acbf",
+      "bytes": 7394
+    },
+    "audit/roster01_training_loss.png": {
+      "sha256": "46765afbbfcc24e0528f43dc422b816296abfb871db9745628fb7cb686d7b760",
+      "bytes": 51717
+    },
+    "audit/selected_stage_by_night_third.csv": {
+      "sha256": "05e2def130b198821f94c967a425e61ae12c2eb293a2e5cd2aee1bc2c03fc9dd",
+      "bytes": 1559
+    },
+    "01/paired/summary.json": {
+      "sha256": "da3dcec02b26db155db12ec285f6e7250cf407ed0ccc0f73179026b87e872abb",
+      "bytes": 589
+    },
+    "01/paired/base/config.json": {
+      "sha256": "7309228f0e9f35fb89dc2b3d42200947c0604d351cffd4d33917d0bd38c5113e",
+      "bytes": 666
+    },
+    "01/paired/base/loss.csv": {
+      "sha256": "1cab7ce5234104e87097df2f38bc8ad850b03b31b91849e32285e2dc43a2dfd8",
+      "bytes": 824
+    },
+    "01/paired/base/predictions_pool36.csv": {
+      "sha256": "ff40581ba76221eeab56726ae5c26aac77054133bd548cfd7889f0a4690e096b",
+      "bytes": 12308155
+    },
+    "01/paired/base/predictions_dev8.csv": {
+      "sha256": "1ff566305b85682e1ba8ab87164de136e4af0f640251c512be281e55c52942b7",
+      "bytes": 2910484
+    },
+    "01/paired/add_people/config.json": {
+      "sha256": "5ca13cb77a973ebaf8b0bf8606be0f15c6ac5156b1b8290c699886484cc6e1d3",
+      "bytes": 672
+    },
+    "01/paired/add_people/loss.csv": {
+      "sha256": "d059daaea992f0ac3b20063e8dd8ad925ca19af2f80f00fcbd82b328ef158369",
+      "bytes": 826
+    },
+    "01/paired/add_people/predictions_pool36.csv": {
+      "sha256": "7c9e58e6fb91a0cb8f40cc8ffedf7c994187dc88a1d2dcec833f0a7ee6ae8113",
+      "bytes": 12294147
+    },
+    "01/paired/add_people/predictions_dev8.csv": {
+      "sha256": "bf5964c1ee15bab64195a4e8e9511856ebf63fc8a3d7e277453dff25865cbd8e",
+      "bytes": 2907944
+    },
+    "01/paired/deepen/config.json": {
+      "sha256": "af9dd0d5c44a9d34a005c66adf1bf98d1f2cb673bf6c675a2122dc53a6227dab",
+      "bytes": 668
+    },
+    "01/paired/deepen/loss.csv": {
+      "sha256": "5dbf443e7fece7d675240df164f8ba0b4f1575b7326c50b26cd0e277e97dfe28",
+      "bytes": 826
+    },
+    "01/paired/deepen/predictions_pool36.csv": {
+      "sha256": "591d0ecaf717bf7a1f9b4073b9e71ffdc7f3d1b5a25540338d43294f7872f56c",
+      "bytes": 12317988
+    },
+    "01/paired/deepen/predictions_dev8.csv": {
+      "sha256": "6c1aeefbf3930efaa021c04848df8aba78d40402641aa087299238dbcb19071c",
+      "bytes": 2911421
+    },
+    "02/paired/summary.json": {
+      "sha256": "19e10d548eb479e045d398e5dc7a99f3678692969ca5d909153de4f7cac04742",
+      "bytes": 586
+    },
+    "02/paired/base/config.json": {
+      "sha256": "8bdff27b3661de3734f08f701ad9100b0e636760f48ed112493a134e7f961728",
+      "bytes": 666
+    },
+    "02/paired/base/loss.csv": {
+      "sha256": "1b9c62531968170d2531b600e023bd4fb5411e8bad354cd316dbbd9235d1dd0a",
+      "bytes": 829
+    },
+    "02/paired/base/predictions_pool36.csv": {
+      "sha256": "00787d271b25dc5145eeb9e24d5a2fc211993c1bb3cddbbf8b839e9fd64883d0",
+      "bytes": 12940458
+    },
+    "02/paired/base/predictions_dev8.csv": {
+      "sha256": "a322be66cec1c1d99223bf42f787cc9599bc60c21ba9c6e6f73c315bfffc0012",
+      "bytes": 2907881
+    },
+    "02/paired/add_people/config.json": {
+      "sha256": "0d21820d743c8bd86bdfc1a20fc2a7ad6930fd32787de89f84d1c0f19e5fd192",
+      "bytes": 672
+    },
+    "02/paired/add_people/loss.csv": {
+      "sha256": "d20263940168b83f2a0b4fb60c6ca900be795a9e444d0ca70cbbb7a56d168361",
+      "bytes": 830
+    },
+    "02/paired/add_people/predictions_pool36.csv": {
+      "sha256": "dd478584720fe6cae24e2c58d24e2d7152b89fff31424ddf5179e8c13d5373cf",
+      "bytes": 12908001
+    },
+    "02/paired/add_people/predictions_dev8.csv": {
+      "sha256": "76999ef969b4512358640c1db9db40fa4d90ad5cf7c4b16b5f81e2dc05986554",
+      "bytes": 2904942
+    },
+    "02/paired/deepen/config.json": {
+      "sha256": "cc2069f9fda37c09cb1b6060ebaba306b8bf0004db9fc03727e1442cf379f928",
+      "bytes": 668
+    },
+    "02/paired/deepen/loss.csv": {
+      "sha256": "ab34305ba9dfc4904d46fa7a85e58fe13cf6e5b3988efafd387f43ac1a7b65ae",
+      "bytes": 825
+    },
+    "02/paired/deepen/predictions_pool36.csv": {
+      "sha256": "24b7f12370777d248a911992e1b9064c380834cafdc3eb4e00a05b70a2f999ce",
+      "bytes": 12936628
+    },
+    "02/paired/deepen/predictions_dev8.csv": {
+      "sha256": "0cd4fdcf69e5ee3b3af7e6edbf1023b42b3609e98789e6fbdff51fb544552675",
+      "bytes": 2907567
+    },
+    "03/paired/summary.json": {
+      "sha256": "b7300047a5e647faedcbddccb7a7e4915b7f90514a03aad6b62cd703254c6f5d",
+      "bytes": 584
+    },
+    "03/paired/base/config.json": {
+      "sha256": "ef1b447cf7324ca03ba9eb6799ce651565578dc2e79b3597be90286c7622a385",
+      "bytes": 666
+    },
+    "03/paired/base/loss.csv": {
+      "sha256": "92ef9d592e8912056f1827d5441a888d06504d9ccb7bf911e881b17219bfd4f1",
+      "bytes": 831
+    },
+    "03/paired/base/predictions_pool36.csv": {
+      "sha256": "d5729867e9591d8d37fc37728af95723f337313e4b258de36711be85bcdc3c11",
+      "bytes": 12032136
+    },
+    "03/paired/base/predictions_dev8.csv": {
+      "sha256": "12faf7c6339491e75fa9e07d3be5e27a53c22ff71915c928730457afd26b0f6e",
+      "bytes": 2903200
+    },
+    "03/paired/add_people/config.json": {
+      "sha256": "7bfec61180296ebafc85b718c06af21a6ff65638ea83b2102ac98d3c379accf1",
+      "bytes": 672
+    },
+    "03/paired/add_people/loss.csv": {
+      "sha256": "b3f4fe625bdef1d353ee4fb45993c92b360deceaaf9df25ccf516eb165bf56d6",
+      "bytes": 830
+    },
+    "03/paired/add_people/predictions_pool36.csv": {
+      "sha256": "ca33ce9d1819a8d102310ed68ed19f28ba84ac684ccc8713b03da855291c82aa",
+      "bytes": 11997699
+    },
+    "03/paired/add_people/predictions_dev8.csv": {
+      "sha256": "fca047324bad6ffa11b019e8b3e5728fe02aec53ea42ef2c05595c73abeb8d1b",
+      "bytes": 2899460
+    },
+    "03/paired/deepen/config.json": {
+      "sha256": "e800f823efef7e0ca3deaf31f587162ce19c86fbcca73599ee49a6cf32016fba",
+      "bytes": 668
+    },
+    "03/paired/deepen/loss.csv": {
+      "sha256": "cb7b5b9368b3a5bd410140372b0a153a8141797702c7a15baf0193d13303233e",
+      "bytes": 828
+    },
+    "03/paired/deepen/predictions_pool36.csv": {
+      "sha256": "01d9b56acd0a6f460a3c18a1bd978b46a1bf9b044cf48eb37e0eb7174c13a2b2",
+      "bytes": 12059576
+    },
+    "03/paired/deepen/predictions_dev8.csv": {
+      "sha256": "3faad7873fb668286c595e1da2566071a901a6cf5b27666ffbc5a8bdd2b0acd0",
+      "bytes": 2909412
+    },
+    "04/paired/summary.json": {
+      "sha256": "75235592496f32f109d9e34b716b39ae4b115a3e5c19ccc2b22861f9304342d3",
+      "bytes": 584
+    },
+    "04/paired/base/config.json": {
+      "sha256": "e9ebe0a095a3e355975dd39e5f58d7516a8691b348a9ba2098ba1dbd70df0374",
+      "bytes": 666
+    },
+    "04/paired/base/loss.csv": {
+      "sha256": "98056f4f32c4aa99832c0cc5d9f6f7c07817b0f5775c6589f79d580ea47bb506",
+      "bytes": 830
+    },
+    "04/paired/base/predictions_pool36.csv": {
+      "sha256": "1c31b7d03c413ab1aa93288df9a0325f0ac8c44c021ac3e0cf694913d019c15e",
+      "bytes": 12237021
+    },
+    "04/paired/base/predictions_dev8.csv": {
+      "sha256": "b5f833d3980d8894bbc73b84e8a7e5ae7ee539ed6bc8ff99c71e05bd7b554f9d",
+      "bytes": 2921582
+    },
+    "04/paired/add_people/config.json": {
+      "sha256": "479857dfe9e60e5ac639620a0c9d4e71c33a35a3d0b21e18c0fdebd78c727e9c",
+      "bytes": 672
+    },
+    "04/paired/add_people/loss.csv": {
+      "sha256": "a96339fca6d19630cfd74e91be5a68886cdd5d417d602ffc1e9f39c44da844f7",
+      "bytes": 831
+    },
+    "04/paired/add_people/predictions_pool36.csv": {
+      "sha256": "6bfe3cc2719caa70e714527cd640dcffaa5044ff23cccb4352c9f68a20b8e2f4",
+      "bytes": 12188359
+    },
+    "04/paired/add_people/predictions_dev8.csv": {
+      "sha256": "fccd7e1a18e06b65ddfd06d657f0a746b829b7dccac03e064d1745542166b79d",
+      "bytes": 2908572
+    },
+    "04/paired/deepen/config.json": {
+      "sha256": "ad0d591441de745d3afb6f0a5312067e0f1d5f095e5520791f966ece07182542",
+      "bytes": 668
+    },
+    "04/paired/deepen/loss.csv": {
+      "sha256": "32105d3af74dea9895d072d2614fc7b616af2d2ec83c612f2f6d09254cd65f20",
+      "bytes": 832
+    },
+    "04/paired/deepen/predictions_pool36.csv": {
+      "sha256": "a2396a8640588315a12d6c7d2df4200ba8ecf804575ec9686843ca43f85e765a",
+      "bytes": 12248215
+    },
+    "04/paired/deepen/predictions_dev8.csv": {
+      "sha256": "44caa36de671261821aa97d073be217e792a5859a7ded96a744cf137147d7c79",
+      "bytes": 2925521
+    },
+    "05/paired/summary.json": {
+      "sha256": "8682d29e2dacd5dea85a87f7ee784c3949f8db99705de1716320477cb08e3cfd",
+      "bytes": 587
+    },
+    "05/paired/base/config.json": {
+      "sha256": "ce0166e7fa01eef51bdc3ebb56bc9141ef337ab60df0c367c9e9fba1e32ac841",
+      "bytes": 666
+    },
+    "05/paired/base/loss.csv": {
+      "sha256": "32ce670f3bbe65b1feffea5c8c9ec73d838b5daa943cc3225f219a7b5707fabb",
+      "bytes": 819
+    },
+    "05/paired/base/predictions_pool36.csv": {
+      "sha256": "a1491a4576bf1db9c07d01c31cf20e4c310a51e3509c7916ec1d649eb2b76ffa",
+      "bytes": 12278763
+    },
+    "05/paired/base/predictions_dev8.csv": {
+      "sha256": "534316cc84a915375326feb1b3a1476da12d4ab78f2d2978de8b7e2475c67e8c",
+      "bytes": 2909206
+    },
+    "05/paired/add_people/config.json": {
+      "sha256": "9f90943bda32360feb64253034464efcda5c5685b0c13f395824f5a584f24c6d",
+      "bytes": 672
+    },
+    "05/paired/add_people/loss.csv": {
+      "sha256": "bc9296e6a44e774347d10c7a8dc7ee53f10c6d0320765fa0cf9a04d18258415c",
+      "bytes": 814
+    },
+    "05/paired/add_people/predictions_pool36.csv": {
+      "sha256": "a55a81a989ea5cfc36183051a3347d192bac2b25cb5b8d0d98e9025af51f2352",
+      "bytes": 12230976
+    },
+    "05/paired/add_people/predictions_dev8.csv": {
+      "sha256": "dc5c0f48c95d30f885c6d0bddcc3e9a8661aff413397c272913d49619507d7b1",
+      "bytes": 2895259
+    },
+    "05/paired/deepen/config.json": {
+      "sha256": "0165b0a7420b36df8564d47ebf6e9c6dd25343c2f068241661e9e222d8c52f23",
+      "bytes": 668
+    },
+    "05/paired/deepen/loss.csv": {
+      "sha256": "a6b8457451394f32176bccc6d0effc4e39069cce4b5de4118c29632586932087",
+      "bytes": 822
+    },
+    "05/paired/deepen/predictions_pool36.csv": {
+      "sha256": "a5432ba1fb5a1f3d78b56ffd80a6abfc4cd12ac6f02207df41eb262a76ecf9ed",
+      "bytes": 12259561
+    },
+    "05/paired/deepen/predictions_dev8.csv": {
+      "sha256": "6d7533bb81bf9b7b48f0076d0abe1a5506054fe36cec82d40ee7b529901cfe67",
+      "bytes": 2906720
+    }
+  }
+}
