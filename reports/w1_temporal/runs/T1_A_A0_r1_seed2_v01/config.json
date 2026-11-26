@@ -1,0 +1,73 @@
+{
+ "run_id": "T1_A_A0_r1_seed2_v01",
+ "cond": "A0",
+ "roster": "1",
+ "seed": 2,
+ "sets": {
+  "label": [
+   "SC403",
+   "SC412",
+   "SC421",
+   "SC456",
+   "SC474"
+  ],
+  "eval9": [
+   "SC410",
+   "SC415",
+   "SC417",
+   "SC419",
+   "SC427",
+   "SC429",
+   "SC436",
+   "SC451",
+   "SC455"
+  ],
+  "dev8": [
+   "SC406",
+   "SC409",
+   "SC442",
+   "SC448",
+   "SC462",
+   "SC471",
+   "SC475",
+   "SC480"
+  ]
+ },
+ "features": {
+  "feat_dir": "cache\\w1_temporal\\w6_d_main30k_l10_12_v01\\W6_D_main30k_l10_12_v01",
+  "index_sha256": "1ac6de0ae3dd13ab8ce2344f45aceac7049a9571ebfd27db3776b52ce7fac19b",
+  "files": {
+   "eeg_std.npy": "b7953b8f44c434e69111dfda043a1ca24d4a32acb61fa540dfd38dc8c799c928",
+   "eog_std.npy": "6869cb5c0beecc44c26246d85902dd338b8bba39afbe6c8a5f705130a03a13dc"
+  },
+  "features_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf"
+ },
+ "norm": {
+  "mode": "pretrain32",
+  "path": "runs/T1_A_A1_pretrain_seed0_v01/norm_stats.npz",
+  "sha256": "2a71748ec225a2151b0d90fc94521bdd664b7552080fbb4de748c85bc23c985c"
+ },
+ "segments": {
+  "path": "D:\\EEG-EOG-sleep-staging\\manifests\\contiguous_segments_t1_v01.csv",
+  "sha256": "1128cfba9b593f13d79bdfb7dffc88a994658886d1bc6f081b523cea24776d16"
+ },
+ "rosters": {
+  "path": "D:\\EEG-EOG-sleep-staging\\manifests\\temporal_rosters_t1_v01.csv",
+  "sha256": "924161c2188e983647debccd1e1442f5db02d70189d9b94ad25e02dbc29b1072"
+ },
+ "init": null,
+ "model": "BiGRU(385->64, bidir, 1 layer) center -> Linear(128,5); input = 384 feat + mask flag",
+ "window": "center ±2; same record, epoch_index±k within contiguous segment; missing -> 0 + mask=1",
+ "optimizer": "AdamW lr=1e-3 wd=1e-4",
+ "batch_size": 128,
+ "epochs": 30,
+ "updates": 2820,
+ "train_epochs": 11936,
+ "train_missing_positions": 108,
+ "threads": 4,
+ "torch": "2.13.0+cu126",
+ "code_commit": "67e3f254fc96d377906c314fa142ed3dd8cf591b",
+ "elapsed_seconds": 11.9,
+ "dry_run": false,
+ "test_used": false
+}
