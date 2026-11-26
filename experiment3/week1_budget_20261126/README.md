@@ -4,6 +4,8 @@
 
 [下载交接包](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/download/c-budget-week1-v01-20261126/c_budget_week1_handoff_v01.zip) · [下载校验值](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-v01-20261126) · [06 号名单](rosters/06/blocks.csv)
 
+正式拟合和复评材料见 [01–05 结果报告](results/README.md) 及 [结果发布页](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-results-v01-20261126)。
+
 ## 名单与选块
 
 先生成 06，再生成 01 和其余名单。名单、评分对象和源文件 SHA-256 均登记在 `rosters/`。源文件来自组内 W4 无分期标签的逐段索引、组内受试者划分、W4 预训练划分及固定 dev 样本参考。选块只读取训练池索引的受试者、记录号和原始 epoch 序号。

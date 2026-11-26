@@ -15,6 +15,8 @@
 
 两条线共用 W4 30k 冻结 EMA 的 384 维 EEG/EOG 特征。预算线从 1,200 段增至 1,800 段，分别评估 36 人和固定 dev 8 人。时序线固定 dev 8 人主评，另报告 9 人和合并 17 人。16 人测试集继续封存。
 
+**C 正式结果已发布。** 01–05 共 15 次拟合。36 人主评中，加人 − 加深平均 +1.88 pp，5/5 份同向。固定 dev 8 人平均 +2.05 pp，4/5 份同向。[C 结果报告](experiment3/week1_budget_20261126/results/README.md) · [完整预测与复评文件](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-results-v01-20261126)
+
 ## 第五周 W5（2026-11-23 至 2026-11-27）
 
 [W5 实验安排](WEEK5.md) · [时间安排 PDF](docs/week5/work_plan_W5.pdf) · [交接登记](HANDOFF.md#第五周交接) · [周五结果登记](WEEK5.md#周五结果登记)

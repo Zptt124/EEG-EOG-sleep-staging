@@ -4,8 +4,9 @@
 
 | 交付方 → 接收方 | 产物 | 状态 |
 | --- | --- | --- |
-| C → D | [06 号名单](experiment3/week1_budget_20261126/rosters/06/blocks.csv)、[共用训练器与运行说明](experiment3/week1_budget_20261126/README.md)、[交接 ZIP 和 SHA-256](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-v01-20261126) | 01、06 已用模拟特征验证三组更新步数和两套评分导出。待用共享特征跑 01 起点 loss 后锁定轮数。 |
-| D → 全组 | 连续记录小包，随后交训练池 54 人与固定 dev 8 人的完整 384 维索引化缓存及 SHA-256 | 正式拟合依赖同一份新版缓存。 |
+| C → D | [06 号名单](experiment3/week1_budget_20261126/rosters/06/blocks.csv)、[共用训练器与运行说明](experiment3/week1_budget_20261126/README.md)、[交接 ZIP 和 SHA-256](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-v01-20261126) | 训练器及名单已发布。C 用组内共享缓存完成 01 起点 loss 检查，评分前锁定 30 轮。 |
+| D → 全组 | [连续记录小包、完整 384 维缓存与 SHA-256](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/d-w6-shared-cache-v01-20261126) | C 已验收全量缓存并用于 01–05。 |
+| C → B | [01–05 正式结果](experiment3/week1_budget_20261126/results/README.md)、[30 份逐段预测及训练记录](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-results-v01-20261126) | 15 次拟合及两套评分已经本地复算。交 B 合并 06–10 复评。 |
 
 ## 第五周交接
 
