@@ -1,0 +1,17 @@
+comparison,reference,budget,subject_id,n1_support,delta_macro_f1,delta_n1_f1,delta_n1_recall,delta_n1_precision,contrast
+w6_tlogit_all,w6_base_all,label10,SC406,146,-0.0303492,-0.0306406,0.100457,-0.0390613,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC409,100,-0.0282383,-0.0267383,0.04,-0.0178159,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC442,193,-0.0167952,-0.0370978,0.0103627,-0.0449688,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC448,445,-0.0145511,-0.0226815,0.0779026,-0.0738395,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC462,623,-0.0260159,0.000818608,0.0759765,-0.00915918,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC471,464,-0.0842625,-0.0171015,0.0632184,-0.0205886,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC475,245,-0.0241137,-0.0301873,-0.029932,-0.0221336,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label10,SC480,407,-0.0295869,-0.00756589,0.0548731,-0.0170134,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC406,146,-0.0138314,-0.015807,0.0821918,-0.0884218,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC409,100,-0.00492834,-0.00599525,0.0266667,-0.00927034,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC442,193,0.00127511,-0.0187604,0,-0.0273177,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC448,445,-0.0127404,-0.0411242,-0.058427,-0.0271585,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC462,623,-0.0283622,-0.00105692,0.0759765,-0.0314673,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC471,464,-0.0518386,0.00497282,0.0395115,-0.009046,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC475,245,-0.00787439,-0.0160771,-0.00408163,-0.0162429,tlogit_all-base_all
+w6_tlogit_all,w6_base_all,label25,SC480,407,0.0101649,0.0168463,0.031122,0.0101837,tlogit_all-base_all

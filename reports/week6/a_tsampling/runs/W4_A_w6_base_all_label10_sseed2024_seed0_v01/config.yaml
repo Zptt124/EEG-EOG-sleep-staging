@@ -1,0 +1,53 @@
+experiment: W4 线性读出（冻结表征）
+group: A
+arm: w6_base_all
+run_id: W4_A_w6_base_all_label10_sseed2024_seed0_v01
+modalities:
+- eeg
+- eog
+nominal_budget: label10
+labeled_subjects: 5
+sampling_seed: 2024
+downstream_seed: 0
+subset_sha256: b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6
+train_samples: 11936
+val_samples: 21186
+feature_dims:
+  eeg: 768
+  eog: 768
+head: Linear(1536,5)
+optimizer: AdamW lr=1e-3 wd=1e-4
+batch_size: 128
+standardization: fit on training-side subjects only (fold-train in inner CV, all budget
+  subjects for final)
+selection: inner subject-wise CV on budget subjects, K=5, fold_seed=0, fixed 50 epochs
+  per fold, epoch = argmax pooled OOF macro-F1 (ties -> earliest)
+n1_adjust: alpha grid logspace(-1,1.5,801) on pooled OOF at E*; alpha=6.21942
+folds:
+- - SC421
+- - SC474
+- - SC456
+- - SC403
+- - SC412
+selected_epoch: 36
+dev_used_for: final evaluation only
+sources:
+  eeg:
+    path: cache/w6_tlogit/base/eeg_std.npz
+    sha256: 1ae7e5a6a57f80bc0157316951feae168d564d18f8b92f27e05347a223157144
+  eog:
+    path: cache/w6_tlogit/base/eog_std.npz
+    sha256: 330df3642c59c89416cdbd0206422d8ec0445e04ff6263fa3b1aa8b047465f7e
+index:
+  path: cache/w6_tlogit/base/sample_index.csv
+  sha256: 98e008a1e545d65c1b2b7ef8356ab04cf6bd38f5e670d5427c34c208a5c108c7
+feature_config: null
+torch: 2.13.0+cu126
+device: cpu
+test_used: false
+code_commit: a6afbb199d73ec5a396d22228bb34fecc84f3c85
+evaluate_version: v1
+val_reference_sha256: 9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de
+predictions_sha256: 42d816aaccc934d50cb7ef74649aa4de7f6dc33caf023ab9c95cad8f89f0e6af
+final_updates: 3384
+elapsed_seconds: 18.87

@@ -1,0 +1,3 @@
+comparison,reference,budget,seeds,n_subjects,delta_macro_f1,delta_macro_f1_lo,delta_macro_f1_hi,delta_macro_f1_frac_boot_pos,delta_n1_f1,delta_n1_f1_lo,delta_n1_f1_hi,delta_n1_f1_frac_boot_pos,delta_n1_ap,delta_n1_ap_lo,delta_n1_ap_hi,delta_n1_ap_frac_boot_pos,per_seed_delta_macro_f1,per_seed_delta_n1_f1,contrast
+w6_tlogit_l10,w6_base_l10,label10,0 1 2,8,-0.0220222,-0.0465559,-0.0046134,0.002,-0.103751,-0.203969,-0.0212789,0.002,-0.0507682,-0.15424,0.0292278,0.187,-0.0339 -0.0173 -0.0149,-0.1273 -0.0920 -0.0926,tlogit_l10-base_l10
+w6_tlogit_l10,w6_base_l10,label25,0 1 2,8,-0.0166441,-0.03686,0.00489981,0.083,-0.0721859,-0.147467,-0.00938081,0.007,-0.0235977,-0.099498,0.0336621,0.284,-0.0156 -0.0169 -0.0175,-0.0630 -0.0825 -0.0710,tlogit_l10-base_l10

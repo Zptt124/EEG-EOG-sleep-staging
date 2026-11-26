@@ -1,0 +1,6 @@
+{
+  "script": "inline paired (E29.paired)",
+  "bootstrap": "1000 次,按开发集受试者成对重采样,seed 合并,rng seed 0",
+  "n_runs": 24,
+  "val_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de"
+}

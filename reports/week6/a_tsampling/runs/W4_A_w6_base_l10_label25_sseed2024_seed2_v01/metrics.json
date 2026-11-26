@@ -1,0 +1,102 @@
+{
+  "accuracy": 0.7985462097611631,
+  "macro_f1": 0.7387470946662054,
+  "per_class_f1": {
+    "W": 0.8983819646604834,
+    "N1": 0.417980151780502,
+    "N2": 0.8513013483850737,
+    "N3": 0.8232069438099588,
+    "REM": 0.7028650646950092
+  },
+  "per_class_precision": {
+    "W": 0.9070403280929596,
+    "N1": 0.42686804451510335,
+    "N2": 0.8266747868453106,
+    "N3": 0.828125,
+    "REM": 0.7394263490520175
+  },
+  "per_class_recall": {
+    "W": 0.889887339055794,
+    "N1": 0.40945482272207395,
+    "N2": 0.8774402068519715,
+    "N3": 0.818346957311535,
+    "REM": 0.6697490092470277
+  },
+  "per_class_support": {
+    "W": 7456,
+    "N1": 2623,
+    "N2": 7735,
+    "N3": 1101,
+    "REM": 2271
+  },
+  "n1_precision": 0.42686804451510335,
+  "n1_recall": 0.40945482272207395,
+  "n1_f1": 0.417980151780502,
+  "confusion_matrix": [
+    [
+      6635,
+      628,
+      88,
+      12,
+      93
+    ],
+    [
+      512,
+      1074,
+      838,
+      2,
+      197
+    ],
+    [
+      84,
+      445,
+      6787,
+      173,
+      246
+    ],
+    [
+      3,
+      1,
+      196,
+      901,
+      0
+    ],
+    [
+      81,
+      368,
+      301,
+      0,
+      1521
+    ]
+  ],
+  "n_epochs": 21186,
+  "n_subjects": 8,
+  "class_order": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "evaluate_version": "v1",
+  "source": "D:\\EEG-EOG-sleep-staging\\runs\\W4_A_w6_base_l10_label25_sseed2024_seed2_v01\\predictions_val.csv",
+  "sample_set_sha256": "2768885c5cddc3ea540f5da8b6c1a487b9bda9e096e6fca48b4acd34cc1ccf43",
+  "sample_set_reference": "D:\\EEG-EOG-sleep-staging\\manifests\\val_reference_v1.csv",
+  "run_id": "W4_A_w6_base_l10_label25_sseed2024_seed2_v01",
+  "selected_epoch": 48,
+  "oof_macro_f1_at_selected": 0.7178524277585685,
+  "n1_ap": 0.38745220501129274,
+  "n1_auroc": 0.8440132333967586,
+  "n1_adjust": {
+    "alpha": 4.731512589614805,
+    "oof_n1_f1_raw": 0.3361416535770384,
+    "oof_n1_f1_adjusted": 0.3969932264992566,
+    "n1_f1_raw": 0.417980151780502,
+    "n1_f1_adjusted": 0.43185267631286045,
+    "n1_precision_adjusted": 0.29393939393939394,
+    "n1_recall_adjusted": 0.8135722455203965,
+    "macro_f1_raw": 0.7387470946662054,
+    "macro_f1_adjusted": 0.6851538820909593,
+    "selection": "alpha 只在训练侧 OOF（E* 轮）上选，开发集只应用一次"
+  }
+}
