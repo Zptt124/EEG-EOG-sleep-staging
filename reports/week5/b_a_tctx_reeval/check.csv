@@ -1,0 +1,13 @@
+run_id,y_pred_is_argmax,pred_sha256_match,pred_sha256_config_match,epoch_reselected,epoch_reported,epoch_match,n_curve_epochs,folds_ok,alpha_source,oof_subjects_ok,oof_folds_match_config,d_curve_at_estar,d_oof_n1_f1_raw,d_oof_n1_f1_adjusted,n1adj_file_match,alpha_b,alpha_reported,alpha_rel_diff,d_macro_f1,d_n1_f1,d_n1_ap,d_n1_auroc,d_n1_f1_adjusted,d_macro_f1_adjusted,alpha_from_table,all_match
+W5_A_tctx_bgru_label10_sseed2024_seed0_v01,True,,True,42,42,True,50,True,B_reselected,True,True,0,0,0,True,27.8,27.8,0,0,0,-5.55e-17,0,0,0,False,True
+W5_A_tctx_bgru_label10_sseed2024_seed1_v01,True,,True,30,30,True,50,True,B_reselected,True,True,0,0,0,True,22.2,22.2,0,0,0,0,0,0,0,False,True
+W5_A_tctx_bgru_label10_sseed2024_seed2_v01,True,,True,23,23,True,50,True,B_reselected,True,True,0,0,0,True,8.12,8.12,0,0,0,5.55e-17,0,0,0,False,True
+W5_A_tctx_bgru_label25_sseed2024_seed0_v01,True,,True,15,15,True,50,True,B_reselected,True,True,0,0,0,True,6.93,6.93,0,0,0,0,0,0,0,False,True
+W5_A_tctx_cat_label10_sseed2024_seed0_v01,True,,True,38,38,True,50,True,B_reselected,True,True,0,0,0,True,16.1,16.1,0,0,0,0,0,0,0,False,True
+W5_A_tctx_cat_label10_sseed2024_seed1_v01,True,,True,23,23,True,50,True,B_reselected,True,True,0,0,0,True,6.78,6.78,0,0,0,5.55e-17,0,0,0,False,True
+W5_A_tctx_cat_label10_sseed2024_seed2_v01,True,,True,32,32,True,50,True,B_reselected,True,True,0,0,0,True,27.2,27.2,0,0,0,-5.55e-17,0,0,0,False,True
+W5_A_tctx_cat_label25_sseed2024_seed0_v01,True,,True,21,21,True,50,True,B_reselected,True,True,0,0,0,True,1.07,1.07,0,0,0,-5.55e-17,0,0,0,False,True
+W5_A_tctx_single_label10_sseed2024_seed0_v01,True,,True,36,36,True,50,True,B_reselected,True,True,0,0,0,True,6.22,6.22,0,0,0,0,0,0,0,False,True
+W5_A_tctx_single_label10_sseed2024_seed1_v01,True,,True,36,36,True,50,True,B_reselected,True,True,0,0,0,True,9.65,9.65,0,0,0,-5.55e-17,0,0,0,False,True
+W5_A_tctx_single_label10_sseed2024_seed2_v01,True,,True,28,28,True,50,True,B_reselected,True,True,0,0,0,True,12.3,12.3,0,0,0,0,0,0,0,False,True
+W5_A_tctx_single_label25_sseed2024_seed0_v01,True,,True,37,37,True,50,True,B_reselected,True,True,0,0,0,True,4.16,4.16,0,0,0,5.55e-17,0,0,0,False,True

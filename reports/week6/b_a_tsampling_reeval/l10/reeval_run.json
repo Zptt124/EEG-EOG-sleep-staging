@@ -1,0 +1,75 @@
+{
+ "script": "scripts/49_b_paired_reeval.py（复用 39 号流程）",
+ "registry": "eval/registry.csv（按 arm 过滤，路径分隔符转为 /）",
+ "n_runs": 12,
+ "n_all_match": 12,
+ "alignment": [
+  {
+   "budget": "label10",
+   "seed": 0,
+   "arms": "w6_base_l10 w6_tlogit_l10",
+   "n_epochs": 21186
+  },
+  {
+   "budget": "label10",
+   "seed": 1,
+   "arms": "w6_base_l10 w6_tlogit_l10",
+   "n_epochs": 21186
+  },
+  {
+   "budget": "label10",
+   "seed": 2,
+   "arms": "w6_base_l10 w6_tlogit_l10",
+   "n_epochs": 21186
+  },
+  {
+   "budget": "label25",
+   "seed": 0,
+   "arms": "w6_base_l10 w6_tlogit_l10",
+   "n_epochs": 21186
+  },
+  {
+   "budget": "label25",
+   "seed": 1,
+   "arms": "w6_base_l10 w6_tlogit_l10",
+   "n_epochs": 21186
+  },
+  {
+   "budget": "label25",
+   "seed": 2,
+   "arms": "w6_base_l10 w6_tlogit_l10",
+   "n_epochs": 21186
+  }
+ ],
+ "bootstrap": "1000 次，按开发集受试者成对重采样，seed 合并，rng seed 0",
+ "val_reference_sha256": "9ad48c0d036ce8f34803f7cb0ba34adf4a2509598276ca69ba2d39c7bedf44de",
+ "code_commit": "5ed0558cb5fc43a509cf135d0be03befb0f29667",
+ "ref_paired": "eval/paired_l10.csv",
+ "max_abs_diff_vs_ref_paired": 4.165795773197756e-07,
+ "diff_vs_ref_paired": {
+  "tlogit_l10-base_l10:label10:delta_macro_f1": 1.4171822056152639e-08,
+  "tlogit_l10-base_l10:label10:delta_macro_f1_lo": 1.1456249796037987e-08,
+  "tlogit_l10-base_l10:label10:delta_macro_f1_hi": -2.9225523763207195e-09,
+  "tlogit_l10-base_l10:label10:delta_macro_f1_frac_boot_pos": 0.0,
+  "tlogit_l10-base_l10:label10:delta_n1_f1": -4.165795773197756e-07,
+  "tlogit_l10-base_l10:label10:delta_n1_f1_lo": -2.6887038204193026e-07,
+  "tlogit_l10-base_l10:label10:delta_n1_f1_hi": 2.8222452978787782e-08,
+  "tlogit_l10-base_l10:label10:delta_n1_f1_frac_boot_pos": 0.0,
+  "tlogit_l10-base_l10:label10:delta_n1_ap": -5.854638648883359e-09,
+  "tlogit_l10-base_l10:label10:delta_n1_ap_lo": -2.809432676220691e-07,
+  "tlogit_l10-base_l10:label10:delta_n1_ap_hi": 4.4974889007454166e-08,
+  "tlogit_l10-base_l10:label10:delta_n1_ap_frac_boot_pos": 0.0,
+  "tlogit_l10-base_l10:label25:delta_macro_f1": -4.434775154743553e-09,
+  "tlogit_l10-base_l10:label25:delta_macro_f1_lo": 1.1295307279779454e-08,
+  "tlogit_l10-base_l10:label25:delta_macro_f1_hi": -4.554560696472254e-09,
+  "tlogit_l10-base_l10:label25:delta_macro_f1_frac_boot_pos": 0.0,
+  "tlogit_l10-base_l10:label25:delta_n1_f1": 3.678304719145764e-08,
+  "tlogit_l10-base_l10:label25:delta_n1_f1_lo": -1.1654662354643186e-07,
+  "tlogit_l10-base_l10:label25:delta_n1_f1_hi": 4.9450655809774036e-09,
+  "tlogit_l10-base_l10:label25:delta_n1_f1_frac_boot_pos": 0.0,
+  "tlogit_l10-base_l10:label25:delta_n1_ap": 3.618441407615691e-08,
+  "tlogit_l10-base_l10:label25:delta_n1_ap_lo": 3.756504524110582e-08,
+  "tlogit_l10-base_l10:label25:delta_n1_ap_hi": 1.262492915765634e-09,
+  "tlogit_l10-base_l10:label25:delta_n1_ap_frac_boot_pos": 0.0
+ }
+}

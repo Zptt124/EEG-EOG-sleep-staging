@@ -1,0 +1,5 @@
+budget,seed,arms,n_epochs
+label10,0,tctx_bgru tctx_cat tctx_single,21186
+label10,1,tctx_bgru tctx_cat tctx_single,21186
+label10,2,tctx_bgru tctx_cat tctx_single,21186
+label25,0,tctx_bgru tctx_cat tctx_single,21186
