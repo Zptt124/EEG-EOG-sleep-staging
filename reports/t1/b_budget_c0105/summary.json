@@ -1,0 +1,100 @@
+{
+ "script": "scripts/48_b_t1_budget_tables.py",
+ "rosters": [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05"
+ ],
+ "runs": {
+  "01": "c_budget_week1_results_v01.zip:01/paired",
+  "02": "c_budget_week1_results_v01.zip:02/paired",
+  "03": "c_budget_week1_results_v01.zip:03/paired",
+  "04": "c_budget_week1_results_v01.zip:04/paired",
+  "05": "c_budget_week1_results_v01.zip:05/paired"
+ },
+ "n_all_ok": 5,
+ "fingerprints_identical": {
+  "feature_info_sha256": true,
+  "plan_sha256": true,
+  "code": true,
+  "seed_epochs": true
+ },
+ "feature_info_sha256": [
+  "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf"
+ ],
+ "bootstrap": "1000 次 Poisson(1) 受试者权重，同一受试者跨名单共用，rng seed 0",
+ "cohorts": {
+  "pool36": {
+   "universe_subjects": 46,
+   "mean_pp": {
+    "add_minus_deepen": 1.8802,
+    "add_gain": 3.6848,
+    "deepen_gain": 1.8046
+   },
+   "mean_ci_pp": {
+    "add_minus_deepen": [
+     1.1018,
+     2.6116
+    ],
+    "add_gain": [
+     2.7518,
+     4.6407
+    ],
+    "deepen_gain": [
+     1.296,
+     2.3284
+    ]
+   },
+   "add_minus_deepen": {
+    "n_positive": 5,
+    "n_negative": 0,
+    "max_pp": 3.1222,
+    "min_pp": 0.6476,
+    "loso_min_pp": 1.6936,
+    "loso_max_pp": 2.0258,
+    "loso_sign_stable": true
+   }
+  },
+  "dev8": {
+   "universe_subjects": 8,
+   "mean_pp": {
+    "add_minus_deepen": 2.0524,
+    "add_gain": 4.0348,
+    "deepen_gain": 1.9824
+   },
+   "mean_ci_pp": {
+    "add_minus_deepen": [
+     0.5884,
+     3.6906
+    ],
+    "add_gain": [
+     2.4763,
+     5.9929
+    ],
+    "deepen_gain": [
+     1.1056,
+     2.849
+    ]
+   },
+   "add_minus_deepen": {
+    "n_positive": 4,
+    "n_negative": 1,
+    "max_pp": 7.4734,
+    "min_pp": -2.6766,
+    "loso_min_pp": 1.6175,
+    "loso_max_pp": 2.4992,
+    "loso_sign_stable": true
+   }
+  }
+ },
+ "retest_signal": {
+  "abs_mean_ge_1pp": true,
+  "same_direction_ge_7_of_10": false,
+  "same_direction_count": 5,
+  "loso_sign_stable": true,
+  "dev8_direction_agrees": true,
+  "verdict": "未达到复验参考信号"
+ }
+}

@@ -1,0 +1,6 @@
+roster,updates_base,updates_add_people,updates_deepen,updates_ok,pool36_keys_identical,pool36_argmax_ok,pool36_subjects_ok,pool36_n_subjects,pool36_d_macro_base,pool36_d_macro_add_people,pool36_d_macro_deepen,pool36_d_add_minus_deepen_pp,pool36_d_add_gain_pp,pool36_d_deepen_gain_pp,dev8_keys_identical,dev8_argmax_ok,dev8_subjects_ok,dev8_n_subjects,dev8_truth_ok,dev8_d_macro_base,dev8_d_macro_add_people,dev8_d_macro_deepen,dev8_d_add_minus_deepen_pp,dev8_d_add_gain_pp,dev8_d_deepen_gain_pp,all_ok
+01,300,450,450,True,True,True,True,36,0.0,0.0,0.0,0.0,0.0,0.0,True,True,True,8,True,0.0,0.0,0.0,0.0,0.0,0.0,True
+02,300,450,450,True,True,True,True,36,0.0,0.0,0.0,0.0,0.0,0.0,True,True,True,8,True,0.0,0.0,0.0,0.0,0.0,0.0,True
+03,300,450,450,True,True,True,True,36,0.0,0.0,0.0,0.0,0.0,0.0,True,True,True,8,True,0.0,0.0,0.0,0.0,0.0,0.0,True
+04,300,450,450,True,True,True,True,36,0.0,0.0,0.0,0.0,0.0,0.0,True,True,True,8,True,0.0,0.0,0.0,0.0,0.0,0.0,True
+05,300,450,450,True,True,True,True,36,0.0,0.0,0.0,0.0,0.0,0.0,True,True,True,8,True,0.0,0.0,0.0,0.0,0.0,0.0,True
