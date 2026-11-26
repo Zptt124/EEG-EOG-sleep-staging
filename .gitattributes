@@ -21,3 +21,6 @@
 # Budget roster receipts bind exact CSV bytes.
 /experiment3/week1_budget_20261126/** -text
 /experiment3/week1_budget_20261126/rosters/**/*.csv whitespace=cr-at-eol
+
+# Preserve the byte hashes of the week-two match plan and trainer.
+/experiment3/week2_budget_20261127/** -text whitespace=cr-at-eol

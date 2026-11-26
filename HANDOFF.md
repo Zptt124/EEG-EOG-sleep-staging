@@ -1,5 +1,12 @@
 # 阶段交接登记
 
+## 新一轮第 2 周交接
+
+| 交付方 → 接收方 | 产物 | 状态 |
+| --- | --- | --- |
+| C → A、B、D | [九份匹配名单与共用训练入口](experiment3/week2_budget_20261127/README.md) | 01–04、06–10 均已冻结和复核。 |
+| C → B | [03、10 新头、开发预测及 01–05 十套旧头和原标准化](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week2-results-v01-20261127) | C 两次新拟合已完成，旧头已在 dev8 重放。待 B 组织预留评分。 |
+
 ## 新一轮第 1 周交接
 
 | 交付方 → 接收方 | 产物 | 状态 |

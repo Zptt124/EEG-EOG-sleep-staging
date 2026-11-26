@@ -1,0 +1,67 @@
+{
+  "generation_order": [
+    "01",
+    "04",
+    "02",
+    "03",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10"
+  ],
+  "roster_seed_rule": "20261127 + roster number",
+  "excluded": {
+    "05": {
+      "subject_id": "SC452",
+      "available_record_ids": [
+        "SC4522"
+      ],
+      "retained_in_table_one": true
+    }
+  },
+  "first_week_plan_sha256": "7dc9dcaaeec41c635d9409f5b32f7c3083c6d90494c136fa2185f662cbd5996d",
+  "epoch_index_sha256": "e3632bce543a90b64c19dc1f1884c2f56a85eed7ce13062f6ce15f70239baa24",
+  "planner_sha256": "37a2452b211bbfee7101c4b659953a0277e341fbf1aa2c4fb884752dc4404aaf",
+  "first_week_candidate_algorithm_sha256": "751f6cb9529b118190557db786c945fa9adef66ec31a05d0a591ac0eb6015afd",
+  "head_seed": 0,
+  "epochs": 30,
+  "locks": {
+    "01/evaluation_subjects.csv": "ce2c46c5e37c0fd45f2d76aabd43261be5d3acad254f3d0fd1591feb081a2e50",
+    "01/matched_blocks.csv": "63dc19bcf1df59408fd1188e5975fc56e6d6e186ea52c59f0548deb410443160",
+    "01/training_blocks.csv": "94c5274db6b9739d85eaf053d98568b6a67e5cefcbd90c454fb91fc15838b370",
+    "01/training_epochs.csv": "14e67512fdf6f0933ca84bb5fdcec8c2bdac926259c37dd727dff6668dde7f40",
+    "02/evaluation_subjects.csv": "0361ca3598ae3f5e26087c71dc9390dfb4094b662a65c4a2b5db11b243f43027",
+    "02/matched_blocks.csv": "ea22e64cda06b3143c9c540b8a7562543c3dc812f1a52c938e6b6eac89292d29",
+    "02/training_blocks.csv": "377d1cdb4ec2247876cbef5b66368da73345180a9c8aa55abe3c428b7ee3df57",
+    "02/training_epochs.csv": "37a8558cec047add3289ad351d241377c07ccb7f6f4b32b17d14114a428e6228",
+    "03/evaluation_subjects.csv": "fe23281dc75defc81f97f29c7180393cdac87a2dc2fa6181bf1af3ab4ba1d13c",
+    "03/matched_blocks.csv": "793e94de89356314113021732f76ae695e5ed0a6fc7488bb039f7a240e64a38a",
+    "03/training_blocks.csv": "a70ad746e114a4cfdc62e74f65d0ca99eda1864f01b4d6875e0317f88ca93ff5",
+    "03/training_epochs.csv": "07f952d9a1f1ccd22a30ef92d5800f845554f342802b953d9d54f38ec7f32d41",
+    "04/evaluation_subjects.csv": "a2e1c618ee8973d43d65d7765f08edc16089ad4133512ad14e55c4889df2b678",
+    "04/matched_blocks.csv": "dbc1d33f095ff0231019457fcd25a7db247e680e8a7e758997a616cc5c4c0a49",
+    "04/training_blocks.csv": "0981bf6e186e095610e89d078911524584cb1f0c01d2b15c51ea71bdf6169107",
+    "04/training_epochs.csv": "dac5351f941bf2cb388e5a0e9005b64ca8179024d8d369006dc19ecc6afb4647",
+    "06/evaluation_subjects.csv": "abfabd07e873e226d386a79f69d05275a4fb9960afac9d1c4769620e7b63ed34",
+    "06/matched_blocks.csv": "551fd383289d4d65b9722dac5e1a530fc40486f1ef15731b31372a7b3a0f820a",
+    "06/training_blocks.csv": "74fe0cbb25134523f94315f82a3fbca8c4aa4129f9655104c468f5bc381596e7",
+    "06/training_epochs.csv": "a991567d2ba6571bbdaadb958b24490c410bf8acf6a56c4ab70551afa9ef6a88",
+    "07/evaluation_subjects.csv": "c981539218262e36e421679d186a6e8b3d00b96b5860103af5dac43b078a08e6",
+    "07/matched_blocks.csv": "8738f5003be867f98833670a38611addbbe457ef8079b11a88bdc0022cf565dd",
+    "07/training_blocks.csv": "ff5f104f54d03ae5d4c4d760c43e67a782bb9ef9de410b0a99e83a98450d2563",
+    "07/training_epochs.csv": "6dbad30dfe5182bd8885f7595f8ec4a424088fa8a5aedb6e9978d3a74b4e4557",
+    "08/evaluation_subjects.csv": "0a01944a814316265ed363cb927b88fe0caf86935036ac7871bba44e8c9020ca",
+    "08/matched_blocks.csv": "04962cc9acf3b8867c6cc4c7a6e0417927c644ab7b26440a82c9a5c72243871c",
+    "08/training_blocks.csv": "40da7f90c494223b64766b9219a06cea24174cc95db4533fceebe2f7a2a81cab",
+    "08/training_epochs.csv": "b742f204754b721fa38ed63e7c5025c1c18d3858340d8fd13b94155f791a92cd",
+    "09/evaluation_subjects.csv": "38646f4d60ac4e7e03d1108b6a3792ac80ed2fa48846a6bb93bf96a73fb9bfde",
+    "09/matched_blocks.csv": "9cac630409f20c31dad19932320607e24c61a3060548a01694dedbde348e8878",
+    "09/training_blocks.csv": "57283c0c2e518f042f6572e98d9a0ee320446d5bc0da562d79999a9269dfeb20",
+    "09/training_epochs.csv": "ae40808a5b2cdbd287ad12e2c3352362fe35e714fb7e6a04791092c143b7586f",
+    "10/evaluation_subjects.csv": "333758a1e7a7176b3f769752798c4f3e2b891e37db0759d6322bc4d5a837814e",
+    "10/matched_blocks.csv": "c732967e58c02236a06923f454a277d6e8e271fc8f11c6403c38b6690092d6ef",
+    "10/training_blocks.csv": "f4decb798ee1f7ddc5fe27e242e5208094480938d91a349f811c69ead17e0115",
+    "10/training_epochs.csv": "ac039b88eb42f2d0e6876bf17bec91f0b4eb4b557c59d74a2304611d964ba90d"
+  }
+}

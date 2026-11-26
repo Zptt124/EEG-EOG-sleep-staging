@@ -1,0 +1,10 @@
+roster,shared_base_epochs,total_fit_epochs,matched_blocks,other_nights,earlier_blocks,later_blocks,status
+01,1200,1800,10,5,4,6,pass
+02,1200,1800,10,5,2,8,pass
+03,1200,1800,10,5,6,4,pass
+04,1200,1800,10,5,6,4,pass
+06,1200,1800,10,5,6,4,pass
+07,1200,1800,10,5,2,8,pass
+08,1200,1800,10,5,2,8,pass
+09,1200,1800,10,5,2,8,pass
+10,1200,1800,10,5,6,4,pass
