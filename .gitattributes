@@ -17,3 +17,7 @@
 /reports/week4/d_val_recheck/* text eol=lf
 /reports/week4/xmodal_prelim/** text eol=lf
 /reports/week4/c_reeval/* text eol=lf
+
+# Budget roster receipts bind exact CSV bytes.
+/experiment3/week1_budget_20261126/** -text
+/experiment3/week1_budget_20261126/rosters/**/*.csv whitespace=cr-at-eol

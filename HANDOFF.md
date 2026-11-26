@@ -1,5 +1,12 @@
 # 阶段交接登记
 
+## 新一轮第 1 周交接
+
+| 交付方 → 接收方 | 产物 | 状态 |
+| --- | --- | --- |
+| C → D | [06 号名单](experiment3/week1_budget_20261126/rosters/06/blocks.csv)、[共用训练器与运行说明](experiment3/week1_budget_20261126/README.md)、[交接 ZIP 和 SHA-256](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/c-budget-week1-v01-20261126) | 01、06 已用模拟特征验证三组更新步数和两套评分导出。待用共享特征跑 01 起点 loss 后锁定轮数。 |
+| D → 全组 | 连续记录小包，随后交训练池 54 人与固定 dev 8 人的完整 384 维索引化缓存及 SHA-256 | 正式拟合依赖同一份新版缓存。 |
+
 ## 第五周交接
 
 以 [W5 实验安排](WEEK5.md)和[时间安排 PDF](docs/week5/work_plan_W5.pdf)为准。A 和 B 自行取用已有发布资产。若 C 缺 self-cond 30k 权重或分层特征，D 在开工时将现成资产放入共用目录一次。
