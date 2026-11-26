@@ -1,0 +1,91 @@
+{
+  "rosters": {
+    "label_r1": [
+      "SC403",
+      "SC412",
+      "SC421",
+      "SC456",
+      "SC474"
+    ],
+    "label_r2": [
+      "SC417",
+      "SC419",
+      "SC436",
+      "SC451",
+      "SC455"
+    ],
+    "label_overlap": [],
+    "pretrain32_disjoint": true
+  },
+  "predictions": "coverage, keys, labels, probabilities and argmax all consistent with the D cache",
+  "compare_with_A_max_abs_diff": {
+    "summary.csv | n1_ap": {
+      "n": 12,
+      "max_abs_diff": 0.0004
+    },
+    "summary.csv | macro_f1": {
+      "n": 12,
+      "max_abs_diff": 0.0004
+    },
+    "summary.csv | n1_f1": {
+      "n": 12,
+      "max_abs_diff": 0.0005
+    },
+    "paired_dev8.csv | n1_ap_pooled": {
+      "n": 4,
+      "max_abs_diff": 0.0005
+    },
+    "paired_dev8.csv | n1_ap": {
+      "n": 8,
+      "max_abs_diff": 0.1701
+    },
+    "paired_dev8.csv | macro_f1_pooled": {
+      "n": 4,
+      "max_abs_diff": 0.0004
+    },
+    "paired_dev8.csv | macro_f1": {
+      "n": 8,
+      "max_abs_diff": 0.0688
+    },
+    "paired_dev8.csv | n1_f1_pooled": {
+      "n": 4,
+      "max_abs_diff": 0.0004
+    },
+    "paired_dev8.csv | n1_f1": {
+      "n": 8,
+      "max_abs_diff": 0.1614
+    },
+    "short_n1.csv/record_consecutive | n_short": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/record_consecutive | recall": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/record_consecutive | to_W": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/record_consecutive | to_N2": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/b_segments | n_short": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/b_segments | recall": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/b_segments | to_W": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    },
+    "short_n1.csv/b_segments | to_N2": {
+      "n": 36,
+      "max_abs_diff": 0.0
+    }
+  }
+}
