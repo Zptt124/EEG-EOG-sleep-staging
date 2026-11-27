@@ -1,0 +1,52 @@
+{
+  "primary": "add_people_minus_deepen",
+  "practical_pp": 1,
+  "folds": 4,
+  "rosters_per_fold": 8,
+  "draws": 5,
+  "block_epochs": 60,
+  "base_epochs": 1200,
+  "added_epochs": 600,
+  "head_seed": 0,
+  "head_epochs": 30,
+  "fold_and_roster_seed": 20261128,
+  "bootstrap_seed": 0,
+  "n_bootstrap": 10000,
+  "metric": "per-fold pooled five-class Macro-F1, fold-equal paired average",
+  "input": "Ying OSF gx36m; same-amplifier Days 1 and 2; documented missing Day 2 for 004 and 020",
+  "encoding": "F4-A1 and EOG-R minus EOG-L; 500 -> 100 -> 200 Hz; frozen W4 30k EMA",
+  "target": "3-expert majority; Expert 1 on ties; complete annotation-aligned 30 s epochs; omit author NotScored epochs and use common annotation prefix on SLP010 Day 1",
+  "time_matching": "same pair of night thirds across all arms; newcomer matched to other_night day",
+  "boot": "resample held-out people, rosters and paired block draws within fixed folds; conditional on observed cohort",
+  "decision": "external_support if mean >= 1 pp, lower bound > 0 and >= 3 of 4 fold means positive; below_practical_target if upper bound < 1; otherwise inconclusive",
+  "evaluation_folds": [
+    [
+      "SLP001",
+      "SLP008",
+      "SLP009",
+      "SLP011",
+      "SLP014"
+    ],
+    [
+      "SLP003",
+      "SLP006",
+      "SLP010",
+      "SLP018",
+      "SLP019"
+    ],
+    [
+      "SLP004",
+      "SLP005",
+      "SLP007",
+      "SLP016",
+      "SLP017"
+    ],
+    [
+      "SLP002",
+      "SLP012",
+      "SLP013",
+      "SLP015",
+      "SLP020"
+    ]
+  ]
+}

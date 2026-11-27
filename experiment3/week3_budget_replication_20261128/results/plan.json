@@ -1,0 +1,680 @@
+{
+  "n_rosters": 30,
+  "draws_per_roster": 5,
+  "block_epochs": 60,
+  "head_epochs": 30,
+  "primary_head_seed": 0,
+  "extra_head_seeds": [
+    1,
+    2
+  ],
+  "extra_seed_rosters": [
+    1,
+    2,
+    3
+  ],
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 0,
+  "thresholds_pp": {
+    "positive": 0,
+    "practical": 1
+  },
+  "selection_seed": 20261127,
+  "roster_seed": 20261128,
+  "feature_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
+  "source_sha256": {
+    "run.py": "f438c63a98a517f06a56b7d05f97318b44bae98ed3ee9aca5433e10384e2b15d",
+    "train.py": "d7582d7219e267b48adb7f4550e5fbde807c65c04d027708d221f28b85060c37",
+    "plan.py": "751f6cb9529b118190557db786c945fa9adef66ec31a05d0a591ac0eb6015afd"
+  },
+  "python": "3.11.17",
+  "torch": "2.7.1+cu126",
+  "numpy": "1.26.4",
+  "version_notes": "Sleep-EDF historical label-trimmed cache; targets unseen by block sampler. Independent block draws with replacement between replicates.",
+  "dev8": [
+    "SC406",
+    "SC409",
+    "SC442",
+    "SC448",
+    "SC462",
+    "SC471",
+    "SC475",
+    "SC480"
+  ],
+  "pretrain_eval8": [
+    "SC402",
+    "SC417",
+    "SC418",
+    "SC427",
+    "SC429",
+    "SC430",
+    "SC456",
+    "SC465"
+  ],
+  "roster_people": [
+    {
+      "roster": 1,
+      "base": [
+        "SC470",
+        "SC415",
+        "SC412",
+        "SC400",
+        "SC455"
+      ],
+      "new": [
+        "SC459",
+        "SC453",
+        "SC410",
+        "SC435",
+        "SC452"
+      ]
+    },
+    {
+      "roster": 2,
+      "base": [
+        "SC434",
+        "SC449",
+        "SC412",
+        "SC425",
+        "SC459"
+      ],
+      "new": [
+        "SC435",
+        "SC421",
+        "SC444",
+        "SC428",
+        "SC482"
+      ]
+    },
+    {
+      "roster": 3,
+      "base": [
+        "SC444",
+        "SC408",
+        "SC443",
+        "SC422",
+        "SC440"
+      ],
+      "new": [
+        "SC481",
+        "SC441",
+        "SC410",
+        "SC451",
+        "SC435"
+      ]
+    },
+    {
+      "roster": 4,
+      "base": [
+        "SC419",
+        "SC449",
+        "SC412",
+        "SC459",
+        "SC401"
+      ],
+      "new": [
+        "SC441",
+        "SC408",
+        "SC476",
+        "SC425",
+        "SC482"
+      ]
+    },
+    {
+      "roster": 5,
+      "base": [
+        "SC473",
+        "SC434",
+        "SC400",
+        "SC423",
+        "SC403"
+      ],
+      "new": [
+        "SC415",
+        "SC436",
+        "SC455",
+        "SC472",
+        "SC451"
+      ]
+    },
+    {
+      "roster": 6,
+      "base": [
+        "SC403",
+        "SC440",
+        "SC435",
+        "SC455",
+        "SC432"
+      ],
+      "new": [
+        "SC451",
+        "SC436",
+        "SC474",
+        "SC452",
+        "SC400"
+      ]
+    },
+    {
+      "roster": 7,
+      "base": [
+        "SC401",
+        "SC432",
+        "SC473",
+        "SC482",
+        "SC400"
+      ],
+      "new": [
+        "SC423",
+        "SC422",
+        "SC472",
+        "SC428",
+        "SC459"
+      ]
+    },
+    {
+      "roster": 8,
+      "base": [
+        "SC412",
+        "SC449",
+        "SC422",
+        "SC473",
+        "SC425"
+      ],
+      "new": [
+        "SC400",
+        "SC452",
+        "SC451",
+        "SC482",
+        "SC481"
+      ]
+    },
+    {
+      "roster": 9,
+      "base": [
+        "SC470",
+        "SC481",
+        "SC411",
+        "SC476",
+        "SC474"
+      ],
+      "new": [
+        "SC403",
+        "SC461",
+        "SC451",
+        "SC400",
+        "SC401"
+      ]
+    },
+    {
+      "roster": 10,
+      "base": [
+        "SC461",
+        "SC428",
+        "SC466",
+        "SC415",
+        "SC421"
+      ],
+      "new": [
+        "SC482",
+        "SC419",
+        "SC444",
+        "SC408",
+        "SC410"
+      ]
+    },
+    {
+      "roster": 11,
+      "base": [
+        "SC425",
+        "SC410",
+        "SC415",
+        "SC428",
+        "SC453"
+      ],
+      "new": [
+        "SC444",
+        "SC401",
+        "SC419",
+        "SC472",
+        "SC400"
+      ]
+    },
+    {
+      "roster": 12,
+      "base": [
+        "SC408",
+        "SC425",
+        "SC415",
+        "SC434",
+        "SC461"
+      ],
+      "new": [
+        "SC401",
+        "SC470",
+        "SC466",
+        "SC449",
+        "SC481"
+      ]
+    },
+    {
+      "roster": 13,
+      "base": [
+        "SC451",
+        "SC425",
+        "SC482",
+        "SC423",
+        "SC410"
+      ],
+      "new": [
+        "SC444",
+        "SC452",
+        "SC415",
+        "SC403",
+        "SC436"
+      ]
+    },
+    {
+      "roster": 14,
+      "base": [
+        "SC472",
+        "SC400",
+        "SC449",
+        "SC421",
+        "SC432"
+      ],
+      "new": [
+        "SC435",
+        "SC436",
+        "SC423",
+        "SC440",
+        "SC434"
+      ]
+    },
+    {
+      "roster": 15,
+      "base": [
+        "SC422",
+        "SC403",
+        "SC434",
+        "SC423",
+        "SC408"
+      ],
+      "new": [
+        "SC472",
+        "SC411",
+        "SC481",
+        "SC410",
+        "SC419"
+      ]
+    },
+    {
+      "roster": 16,
+      "base": [
+        "SC415",
+        "SC443",
+        "SC432",
+        "SC449",
+        "SC453"
+      ],
+      "new": [
+        "SC408",
+        "SC459",
+        "SC441",
+        "SC472",
+        "SC411"
+      ]
+    },
+    {
+      "roster": 17,
+      "base": [
+        "SC412",
+        "SC466",
+        "SC482",
+        "SC444",
+        "SC433"
+      ],
+      "new": [
+        "SC459",
+        "SC473",
+        "SC474",
+        "SC400",
+        "SC408"
+      ]
+    },
+    {
+      "roster": 18,
+      "base": [
+        "SC440",
+        "SC411",
+        "SC449",
+        "SC421",
+        "SC481"
+      ],
+      "new": [
+        "SC472",
+        "SC436",
+        "SC432",
+        "SC466",
+        "SC403"
+      ]
+    },
+    {
+      "roster": 19,
+      "base": [
+        "SC444",
+        "SC459",
+        "SC415",
+        "SC443",
+        "SC403"
+      ],
+      "new": [
+        "SC449",
+        "SC419",
+        "SC461",
+        "SC476",
+        "SC422"
+      ]
+    },
+    {
+      "roster": 20,
+      "base": [
+        "SC476",
+        "SC444",
+        "SC451",
+        "SC474",
+        "SC425"
+      ],
+      "new": [
+        "SC459",
+        "SC434",
+        "SC428",
+        "SC440",
+        "SC435"
+      ]
+    },
+    {
+      "roster": 21,
+      "base": [
+        "SC451",
+        "SC482",
+        "SC440",
+        "SC473",
+        "SC425"
+      ],
+      "new": [
+        "SC433",
+        "SC470",
+        "SC466",
+        "SC410",
+        "SC481"
+      ]
+    },
+    {
+      "roster": 22,
+      "base": [
+        "SC470",
+        "SC400",
+        "SC481",
+        "SC423",
+        "SC451"
+      ],
+      "new": [
+        "SC425",
+        "SC419",
+        "SC459",
+        "SC433",
+        "SC422"
+      ]
+    },
+    {
+      "roster": 23,
+      "base": [
+        "SC440",
+        "SC482",
+        "SC473",
+        "SC451",
+        "SC443"
+      ],
+      "new": [
+        "SC423",
+        "SC461",
+        "SC412",
+        "SC434",
+        "SC400"
+      ]
+    },
+    {
+      "roster": 24,
+      "base": [
+        "SC444",
+        "SC401",
+        "SC435",
+        "SC474",
+        "SC408"
+      ],
+      "new": [
+        "SC461",
+        "SC466",
+        "SC482",
+        "SC433",
+        "SC432"
+      ]
+    },
+    {
+      "roster": 25,
+      "base": [
+        "SC482",
+        "SC423",
+        "SC441",
+        "SC408",
+        "SC411"
+      ],
+      "new": [
+        "SC410",
+        "SC443",
+        "SC444",
+        "SC435",
+        "SC401"
+      ]
+    },
+    {
+      "roster": 26,
+      "base": [
+        "SC411",
+        "SC473",
+        "SC421",
+        "SC461",
+        "SC444"
+      ],
+      "new": [
+        "SC449",
+        "SC401",
+        "SC435",
+        "SC415",
+        "SC408"
+      ]
+    },
+    {
+      "roster": 27,
+      "base": [
+        "SC403",
+        "SC451",
+        "SC459",
+        "SC411",
+        "SC432"
+      ],
+      "new": [
+        "SC466",
+        "SC423",
+        "SC428",
+        "SC433",
+        "SC453"
+      ]
+    },
+    {
+      "roster": 28,
+      "base": [
+        "SC423",
+        "SC408",
+        "SC419",
+        "SC440",
+        "SC433"
+      ],
+      "new": [
+        "SC455",
+        "SC436",
+        "SC481",
+        "SC443",
+        "SC425"
+      ]
+    },
+    {
+      "roster": 29,
+      "base": [
+        "SC451",
+        "SC470",
+        "SC428",
+        "SC455",
+        "SC415"
+      ],
+      "new": [
+        "SC481",
+        "SC433",
+        "SC482",
+        "SC459",
+        "SC422"
+      ]
+    },
+    {
+      "roster": 30,
+      "base": [
+        "SC455",
+        "SC415",
+        "SC481",
+        "SC459",
+        "SC474"
+      ],
+      "new": [
+        "SC470",
+        "SC403",
+        "SC461",
+        "SC440",
+        "SC422"
+      ]
+    }
+  ],
+  "low_overlap": [
+    1,
+    3,
+    13,
+    4,
+    9,
+    10
+  ],
+  "overlap": {
+    "base": {
+      "shared_mean": 0.6804597701149425,
+      "shared_max": 4,
+      "jaccard_mean": 0.08014960773581464
+    },
+    "all_training": {
+      "shared_mean": 2.6160919540229886,
+      "shared_max": 6,
+      "jaccard_mean": 0.1562624444817249
+    },
+    "low_base": {
+      "shared_mean": 0.2,
+      "shared_max": 1,
+      "jaccard_mean": 0.02222222222222222
+    },
+    "low_all": {
+      "shared_mean": 2.3333333333333335,
+      "shared_max": 4,
+      "jaccard_mean": 0.13390092879256968
+    },
+    "base_frequency": {
+      "SC470": 4,
+      "SC415": 8,
+      "SC412": 5,
+      "SC400": 5,
+      "SC455": 4,
+      "SC434": 4,
+      "SC449": 6,
+      "SC425": 7,
+      "SC459": 5,
+      "SC444": 6,
+      "SC408": 6,
+      "SC443": 4,
+      "SC422": 3,
+      "SC440": 6,
+      "SC419": 2,
+      "SC401": 3,
+      "SC473": 6,
+      "SC423": 6,
+      "SC403": 5,
+      "SC435": 2,
+      "SC432": 5,
+      "SC482": 6,
+      "SC481": 4,
+      "SC411": 5,
+      "SC476": 2,
+      "SC474": 4,
+      "SC461": 3,
+      "SC428": 3,
+      "SC466": 2,
+      "SC421": 4,
+      "SC410": 2,
+      "SC453": 2,
+      "SC451": 7,
+      "SC472": 1,
+      "SC433": 2,
+      "SC441": 1
+    },
+    "newcomer_frequency": {
+      "SC459": 7,
+      "SC453": 2,
+      "SC410": 6,
+      "SC435": 7,
+      "SC452": 4,
+      "SC421": 1,
+      "SC444": 5,
+      "SC428": 4,
+      "SC482": 6,
+      "SC481": 7,
+      "SC441": 3,
+      "SC451": 5,
+      "SC408": 5,
+      "SC476": 2,
+      "SC425": 3,
+      "SC415": 3,
+      "SC436": 6,
+      "SC455": 2,
+      "SC472": 6,
+      "SC474": 2,
+      "SC400": 6,
+      "SC423": 4,
+      "SC422": 5,
+      "SC403": 4,
+      "SC461": 5,
+      "SC401": 5,
+      "SC419": 5,
+      "SC470": 3,
+      "SC466": 5,
+      "SC449": 3,
+      "SC440": 3,
+      "SC434": 3,
+      "SC411": 2,
+      "SC473": 1,
+      "SC432": 2,
+      "SC433": 5,
+      "SC412": 1,
+      "SC443": 2
+    }
+  },
+  "eligible_n": 38,
+  "eligible_two_nights": 36,
+  "locked_files": {
+    "blocks.csv": "a468a741a5a382f1cd10257bf3707f93689465cf6a85f536ebfa28aadcbf4016",
+    "candidate_blocks.csv": "58dc29ed3e5b3a2af9757139068871a79b683d68560afd1e65ad548054c8fa0f"
+  }
+}

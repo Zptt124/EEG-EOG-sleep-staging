@@ -24,3 +24,7 @@
 
 # Preserve the byte hashes of the week-two match plan and trainer.
 /experiment3/week2_budget_20261127/** -text whitespace=cr-at-eol
+
+# Frozen protocols include byte-level hashes.
+/experiment3/week3_budget_replication_20261128/** -text whitespace=cr-at-eol,-blank-at-eof
+/experiment3/week4_budget_external_ying/** -text whitespace=cr-at-eol,-blank-at-eof
