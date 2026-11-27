@@ -1,0 +1,15 @@
+{
+  "script": "scripts/50_a_w2_recompute.py",
+  "sources": "week1 C/D 结果包 + week2 A/B/C/D 交付",
+  "conditions": [
+    "base",
+    "deepen",
+    "add_people",
+    "other_night"
+  ],
+  "groups": [
+    "pool36",
+    "dev8"
+  ],
+  "note": "Macro 为五类等权(官方 evaluate v1);N1 AP 用 p_N1;05 无另一夜"
+}

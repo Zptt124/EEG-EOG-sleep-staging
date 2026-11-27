@@ -1,0 +1,31 @@
+{
+  "roster": "07",
+  "arm": "other_night",
+  "feature_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
+  "first_week_plan_sha256": "7dc9dcaaeec41c635d9409f5b32f7c3083c6d90494c136fa2185f662cbd5996d",
+  "match_plan_sha256": "5ede49bf7dfc9db22ab14f08b1a45caca4d0ad8f0a6d51f53167164386706e42",
+  "training_epochs_sha256": "6dbad30dfe5182bd8885f7595f8ec4a424088fa8a5aedb6e9978d3a74b4e4557",
+  "matched_blocks_sha256": "8738f5003be867f98833670a38611addbbe457ef8079b11a88bdc0022cf565dd",
+  "code": {
+    "train.py": "d7582d7219e267b48adb7f4550e5fbde807c65c04d027708d221f28b85060c37",
+    "protocol.py": "7a487d7bdabf258992648247772dc884e08ecdf67c0c5fdc7f76fd6fef6d00d0",
+    "plan.py": "751f6cb9529b118190557db786c945fa9adef66ec31a05d0a591ac0eb6015afd"
+  },
+  "entrypoint_sha256": "ca0bbdd4368599534aab37bee0d0bd3e370cbaa36419a5d5bc50e99b3e3f2ea6",
+  "seed": 0,
+  "epochs": 30,
+  "batch": 128,
+  "drop_last": false,
+  "train_samples": 1800,
+  "updates": 450,
+  "development_scoring": [
+    "pool36",
+    "dev8"
+  ],
+  "held_out_scored": false,
+  "weights_sha256": "1a80737c886a1368c66279dea7c17182136b545ed8c9db239fc381f8c6732348",
+  "normalization_sha256": "5f4cddd1c4bab02f284ac18c675ab8585500be2a8fbc20e3177df9dab1507a9f",
+  "torch": "2.13.0+cu126",
+  "numpy": "2.2.4",
+  "python": "3.13.2"
+}
