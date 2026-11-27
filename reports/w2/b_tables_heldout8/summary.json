@@ -1,0 +1,126 @@
+{
+ "script": "scripts/52_b_w2_paired_tables.py",
+ "cohort": "heldout8",
+ "subjects": [
+  "SC414",
+  "SC416",
+  "SC431",
+  "SC450",
+  "SC457",
+  "SC463",
+  "SC467",
+  "SC477"
+ ],
+ "scoring_manifest_sha256": "f22a0e3e8134d5089774d76158d0a533b83af9a369f28c91f8643fc0d78d5806",
+ "all_checks_ok": true,
+ "bootstrap": "1000 次 Poisson(1) 受试者权重，跨名单共用，rng seed 0",
+ "band_pp": 1.0,
+ "meaningful_pp": 1.0,
+ "tables": {
+  "table1": {
+   "status": "complete",
+   "rosters": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10"
+   ],
+   "contrasts": {
+    "add_minus_deepen": {
+     "mean_pp": 0.8731,
+     "ci95": [
+      -0.031,
+      1.6885
+     ],
+     "positive": 6,
+     "negative": 4,
+     "n_rosters": 10,
+     "max": {
+      "roster": "07",
+      "pp": 5.8014
+     },
+     "min": {
+      "roster": "08",
+      "pp": -5.1552
+     },
+     "loso_range": [
+      0.5496,
+      1.0684
+     ],
+     "loso_sign_stable": true,
+     "verdict": "不确定（区间跨 0 且超出等效带）"
+    }
+   }
+  },
+  "table2": {
+   "status": "complete",
+   "rosters": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10"
+   ],
+   "contrasts": {
+    "other_minus_deepen": {
+     "mean_pp": 1.5729,
+     "ci95": [
+      0.5948,
+      2.2603
+     ],
+     "positive": 6,
+     "negative": 3,
+     "n_rosters": 9,
+     "max": {
+      "roster": "03",
+      "pp": 6.5865
+     },
+     "min": {
+      "roster": "08",
+      "pp": -3.3513
+     },
+     "loso_range": [
+      1.1414,
+      1.8116
+     ],
+     "loso_sign_stable": true,
+     "verdict": "正向且达到 1 pp"
+    },
+    "add_minus_other": {
+     "mean_pp": -0.1656,
+     "ci95": [
+      -1.1685,
+      0.7878
+     ],
+     "positive": 4,
+     "negative": 5,
+     "n_rosters": 9,
+     "max": {
+      "roster": "02",
+      "pp": 5.1613
+     },
+     "min": {
+      "roster": "03",
+      "pp": -5.2036
+     },
+     "loso_range": [
+      -0.387,
+      0.3872
+     ],
+     "loso_sign_stable": false,
+     "verdict": "不确定（区间跨 0 且超出等效带）"
+    }
+   }
+  }
+ }
+}

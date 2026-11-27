@@ -33,6 +33,11 @@
    "normalization.npz_sha256": "f60d5e6daf60ebc156d888d4cd7c87bb5d204b6a57ceb075ac8d159a8d7bb4ac",
    "predictions_sha256": "13fa6c930a27cebf99343c37eb87bb41f77bf9c33200380fb54f8b468ab1df14"
   },
+  "01/other_night": {
+   "head.pt_sha256": "e9b8e68ea3a7b2c6ee44c800926dc1efefbd28380f5cb0993ce8804926e006dc",
+   "normalization.npz_sha256": "d004761e0b0ee6455806fb6d2cedbb6fda71bf566e5c49d436aa1cce2f7a46e1",
+   "predictions_sha256": "c6213315e2873dfc04502510f40a6e757b28422a5631d098f8bf0c106338ccbf"
+  },
   "02/add_people": {
    "head.pt_sha256": "f621641ba17cac3be96e457cacba0dad27d203d05d8d489b3c0fc3373cd0361d",
    "normalization.npz_sha256": "e21c3d6149e4d3903ddee8999b381420665977a57dbc4f961dd943f1eeec298d",
@@ -113,6 +118,11 @@
    "normalization.npz_sha256": "d8630249de4fa0dcec330d5cb930a667e0bc96701a70a897eb432c7928dcda55",
    "predictions_sha256": "207aec2a134caa27d47bace54e4c72630880c9cd8fc26e8a367d2095fe7c8c4b"
   },
+  "07/other_night": {
+   "head.pt_sha256": "1a80737c886a1368c66279dea7c17182136b545ed8c9db239fc381f8c6732348",
+   "normalization.npz_sha256": "5f4cddd1c4bab02f284ac18c675ab8585500be2a8fbc20e3177df9dab1507a9f",
+   "predictions_sha256": "4aa453755d2685665fbb86086b459dba62a447b5173d887d1adaf4084db0502b"
+  },
   "08/add_people": {
    "head.pt_sha256": "f3ca5d87943bff876531689e5fea0bc2aff76adfaa32cfa460385c27cd87d995",
    "normalization.npz_sha256": "d30df1a4fe4d91819c5004a90b77af9e8fc63f5341500906f73ece57ab9ccd4d",
@@ -137,6 +147,11 @@
    "head.pt_sha256": "7bd05b4139ffe6f5c1e831b3b5752d2d2710b2dfec5ac95a44a16ebd26b453d9",
    "normalization.npz_sha256": "3cf6d6b52a7881984f904c05db94108aadf5e121fa8d9c42f8044742d80f9d1a",
    "predictions_sha256": "00bbca232a38e3802390379960dc5294efb8d1e24cf7b872c1f61689abdcb06a"
+  },
+  "09/other_night": {
+   "head.pt_sha256": "fd01331738c36b891294624aab6685edc11cfa1f56d7a6e2e2b2872d6f33e460",
+   "normalization.npz_sha256": "dff81e88587f804e2f74567d96793c49d293d5427b6c9152cd17f92d6a9aa5ce",
+   "predictions_sha256": "eb94c40b59b4e553514638ad349eba527d7c64043471426f5af4424029d258f0"
   },
   "10/add_people": {
    "head.pt_sha256": "29c00c98e7be8288ea297c9a88121f8d5d18be843fd30db42508d26df46880c3",

@@ -25,3 +25,6 @@ roster,arm,keys_identical,argmax_exact,max_abs_probability_diff
 10,other_night,True,True,2.771615982000153e-06
 04,other_night,True,True,2.0265579223632812e-06
 06,other_night,True,True,2.1457672119140625e-06
+01,other_night,True,True,2.384185791071136e-06
+07,other_night,True,True,1.609325408991058e-06
+09,other_night,True,True,1.311302185114105e-06

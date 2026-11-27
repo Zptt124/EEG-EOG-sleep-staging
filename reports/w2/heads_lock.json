@@ -1,6 +1,6 @@
 {
- "locked": false,
- "note": "第 8 天 9 个新头齐备并经核对后，把 locked 改为 true 再用于 heldout8",
+ "locked": true,
+ "note": "2026-11-27 29 个头齐备，dev8 回放全部逐段一致后锁定",
  "feature_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
  "heads": {
   "01/add_people": {
@@ -10,6 +10,10 @@
   "01/deepen": {
    "head.pt": "d3dd342397140ec29409fae6a315fa66bb6df84411a27b03f16e91f52850e799",
    "normalization.npz": "f60d5e6daf60ebc156d888d4cd7c87bb5d204b6a57ceb075ac8d159a8d7bb4ac"
+  },
+  "01/other_night": {
+   "head.pt": "e9b8e68ea3a7b2c6ee44c800926dc1efefbd28380f5cb0993ce8804926e006dc",
+   "normalization.npz": "d004761e0b0ee6455806fb6d2cedbb6fda71bf566e5c49d436aa1cce2f7a46e1"
   },
   "02/add_people": {
    "head.pt": "f621641ba17cac3be96e457cacba0dad27d203d05d8d489b3c0fc3373cd0361d",
@@ -75,6 +79,10 @@
    "head.pt": "f85cdd55fed7d88694ab780de110a8494fe070f6dbf6895c0cc0d8d5f54e01a6",
    "normalization.npz": "d8630249de4fa0dcec330d5cb930a667e0bc96701a70a897eb432c7928dcda55"
   },
+  "07/other_night": {
+   "head.pt": "1a80737c886a1368c66279dea7c17182136b545ed8c9db239fc381f8c6732348",
+   "normalization.npz": "5f4cddd1c4bab02f284ac18c675ab8585500be2a8fbc20e3177df9dab1507a9f"
+  },
   "08/add_people": {
    "head.pt": "f3ca5d87943bff876531689e5fea0bc2aff76adfaa32cfa460385c27cd87d995",
    "normalization.npz": "d30df1a4fe4d91819c5004a90b77af9e8fc63f5341500906f73ece57ab9ccd4d"
@@ -95,6 +103,10 @@
    "head.pt": "7bd05b4139ffe6f5c1e831b3b5752d2d2710b2dfec5ac95a44a16ebd26b453d9",
    "normalization.npz": "3cf6d6b52a7881984f904c05db94108aadf5e121fa8d9c42f8044742d80f9d1a"
   },
+  "09/other_night": {
+   "head.pt": "fd01331738c36b891294624aab6685edc11cfa1f56d7a6e2e2b2872d6f33e460",
+   "normalization.npz": "dff81e88587f804e2f74567d96793c49d293d5427b6c9152cd17f92d6a9aa5ce"
+  },
   "10/add_people": {
    "head.pt": "29c00c98e7be8288ea297c9a88121f8d5d18be843fd30db42508d26df46880c3",
    "normalization.npz": "f526480e8085a8c7106d7d8f4aaa89e78c66de6eafa7c33cad38a031824713fb"
@@ -108,10 +120,6 @@
    "normalization.npz": "7ed5ab9fedc7fe500bef1ee3d84e9d4e148ab6a0349d61b2698224be754f605c"
   }
  },
- "complete": false,
- "missing": [
-  "01/other_night",
-  "07/other_night",
-  "09/other_night"
- ]
+ "complete": true,
+ "missing": []
 }
