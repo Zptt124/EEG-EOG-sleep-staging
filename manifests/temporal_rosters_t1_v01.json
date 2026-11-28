@@ -1,0 +1,113 @@
+{
+ "script": "scripts/44_b_t1_temporal_rosters.py",
+ "status": "draft: rule pending alignment with A",
+ "rule": {
+  "orig14": "label_subsets_v2 label25=1 (sampling_rank 1-14)",
+  "roster_1": "sampling_rank 1-5 (= existing label10)",
+  "roster_2": "sampling_rank 6-10 (disjoint from roster 1)",
+  "eval9": "orig14 minus the roster",
+  "eval17": "eval9 + dev8",
+  "pretrain32": "train54 - orig14 - W4 heldout8"
+ },
+ "sources": {
+  "label_subsets": {
+   "path": "manifests/label_subsets_v2.csv",
+   "sha256": "b343f5026b7f291ad2e1f89a78ccf2876e87473bc53b0a994329f49b8cb22ed6"
+  },
+  "split_subjects": {
+   "path": "manifests/split_subjects.csv",
+   "sha256": "1420db02a89907c0bf4ca66316718b711b0fcb682d61d96965ffb9a96423c10f"
+  },
+  "pretrain_split": {
+   "path": "manifests/pretrain_split_w4_v01.csv",
+   "sha256": "470c23f7d49b4de6a3a896243e379ffc3b7a637d64b3e70c813b1c03522dffa0"
+  }
+ },
+ "rosters": {
+  "1": {
+   "label": [
+    "SC456",
+    "SC421",
+    "SC474",
+    "SC412",
+    "SC403"
+   ],
+   "eval9": [
+    "SC417",
+    "SC419",
+    "SC436",
+    "SC455",
+    "SC451",
+    "SC429",
+    "SC415",
+    "SC410",
+    "SC427"
+   ]
+  },
+  "2": {
+   "label": [
+    "SC417",
+    "SC419",
+    "SC436",
+    "SC455",
+    "SC451"
+   ],
+   "eval9": [
+    "SC456",
+    "SC421",
+    "SC474",
+    "SC412",
+    "SC403",
+    "SC429",
+    "SC415",
+    "SC410",
+    "SC427"
+   ]
+  }
+ },
+ "dev8": [
+  "SC406",
+  "SC409",
+  "SC442",
+  "SC448",
+  "SC462",
+  "SC471",
+  "SC475",
+  "SC480"
+ ],
+ "pretrain32": [
+  "SC400",
+  "SC401",
+  "SC402",
+  "SC408",
+  "SC411",
+  "SC418",
+  "SC422",
+  "SC423",
+  "SC425",
+  "SC428",
+  "SC430",
+  "SC432",
+  "SC433",
+  "SC434",
+  "SC435",
+  "SC440",
+  "SC441",
+  "SC443",
+  "SC444",
+  "SC449",
+  "SC452",
+  "SC453",
+  "SC459",
+  "SC461",
+  "SC465",
+  "SC466",
+  "SC470",
+  "SC472",
+  "SC473",
+  "SC476",
+  "SC481",
+  "SC482"
+ ],
+ "output_sha256": "924161c2188e983647debccd1e1442f5db02d70189d9b94ad25e02dbc29b1072"
+}

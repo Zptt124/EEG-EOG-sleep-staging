@@ -1,0 +1,80 @@
+{
+ "run_id": "T1_A_A1_pretrain_seed0_v01",
+ "cond": "A1",
+ "subjects_role": "pretrain32",
+ "subjects": [
+  "SC400",
+  "SC401",
+  "SC402",
+  "SC408",
+  "SC411",
+  "SC418",
+  "SC422",
+  "SC423",
+  "SC425",
+  "SC428",
+  "SC430",
+  "SC432",
+  "SC433",
+  "SC434",
+  "SC435",
+  "SC440",
+  "SC441",
+  "SC443",
+  "SC444",
+  "SC449",
+  "SC452",
+  "SC453",
+  "SC459",
+  "SC461",
+  "SC465",
+  "SC466",
+  "SC470",
+  "SC472",
+  "SC473",
+  "SC476",
+  "SC481",
+  "SC482"
+ ],
+ "n_epochs_data": 81731,
+ "features": {
+  "feat_dir": "cache\\w1_temporal\\w6_d_main30k_l10_12_v01\\W6_D_main30k_l10_12_v01",
+  "index_sha256": "1ac6de0ae3dd13ab8ce2344f45aceac7049a9571ebfd27db3776b52ce7fac19b",
+  "files": {
+   "eeg_std.npy": "b7953b8f44c434e69111dfda043a1ca24d4a32acb61fa540dfd38dc8c799c928",
+   "eog_std.npy": "6869cb5c0beecc44c26246d85902dd338b8bba39afbe6c8a5f705130a03a13dc"
+  },
+  "features_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf"
+ },
+ "segments": {
+  "path": "D:\\EEG-EOG-sleep-staging\\manifests\\contiguous_segments_t1_v01.csv",
+  "sha256": "1128cfba9b593f13d79bdfb7dffc88a994658886d1bc6f081b523cea24776d16"
+ },
+ "rosters": {
+  "path": "D:\\EEG-EOG-sleep-staging\\manifests\\temporal_rosters_t1_v01.csv",
+  "sha256": "924161c2188e983647debccd1e1442f5db02d70189d9b94ad25e02dbc29b1072"
+ },
+ "permute_seed": null,
+ "neighbor_check": {
+  "missing_positions": 730,
+  "plus1_truly_adjacent": 1.0
+ },
+ "objective": "mask center (0 + flag), MSE to standardized 384-d center feature",
+ "model": "BiGRU(385->64, bidir, 1 layer) center -> Linear(128,384)",
+ "optimizer": "AdamW lr=1e-3 wd=1e-4",
+ "batch_size": 128,
+ "epochs": 20,
+ "updates": 12780,
+ "seed": 0,
+ "threads": 4,
+ "torch": "2.13.0+cu126",
+ "code_commit": "67e3f254fc96d377906c314fa142ed3dd8cf591b",
+ "elapsed_seconds": 55.0,
+ "labels_read": false,
+ "test_used": false,
+ "sha256": {
+  "gru_state.pt": "27f562dfa81adfb208b8f4e4f054398caa6950192389bfa33432049311467ad7",
+  "norm_stats.npz": "2a71748ec225a2151b0d90fc94521bdd664b7552080fbb4de748c85bc23c985c",
+  "neighbors.npy": "a7f3c9020ba5af960087de8db06942e0b895fd57562f8d5aee854f48ecdea5c2"
+ }
+}

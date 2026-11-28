@@ -1,0 +1,110 @@
+{
+ "script": "scripts/48_b_t1_budget_tables.py",
+ "rosters": [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10"
+ ],
+ "runs": {
+  "01": "cache\\w1_budget\\c01_05\\x\\01\\paired",
+  "02": "cache\\w1_budget\\c01_05\\x\\02\\paired",
+  "03": "cache\\w1_budget\\c01_05\\x\\03\\paired",
+  "04": "cache\\w1_budget\\c01_05\\x\\04\\paired",
+  "05": "cache\\w1_budget\\c01_05\\x\\05\\paired",
+  "06": "cache\\w1_budget\\d06_10\\x\\d_budget_week1_results_v01\\06\\paired",
+  "07": "cache\\w1_budget\\d06_10\\x\\d_budget_week1_results_v01\\07\\paired",
+  "08": "cache\\w1_budget\\d06_10\\x\\d_budget_week1_results_v01\\08\\paired",
+  "09": "cache\\w1_budget\\d06_10\\x\\d_budget_week1_results_v01\\09\\paired",
+  "10": "cache\\w1_budget\\d06_10\\x\\d_budget_week1_results_v01\\10\\paired"
+ },
+ "n_all_ok": 10,
+ "fingerprints_identical": {
+  "feature_info_sha256": true,
+  "plan_sha256": true,
+  "code": true,
+  "seed_epochs": true
+ },
+ "feature_info_sha256": [
+  "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf"
+ ],
+ "bootstrap": "1000 次 Poisson(1) 受试者权重，同一受试者跨名单共用，rng seed 0",
+ "cohorts": {
+  "pool36": {
+   "universe_subjects": 46,
+   "mean_pp": {
+    "add_minus_deepen": 1.5839,
+    "add_gain": 3.6599,
+    "deepen_gain": 2.076
+   },
+   "mean_ci_pp": {
+    "add_minus_deepen": [
+     0.952,
+     2.1902
+    ],
+    "add_gain": [
+     3.0747,
+     4.3441
+    ],
+    "deepen_gain": [
+     1.591,
+     2.5951
+    ]
+   },
+   "add_minus_deepen": {
+    "n_positive": 8,
+    "n_negative": 2,
+    "max_pp": 3.1222,
+    "min_pp": -0.3624,
+    "loso_min_pp": 1.4633,
+    "loso_max_pp": 1.7381,
+    "loso_sign_stable": true
+   }
+  },
+  "dev8": {
+   "universe_subjects": 8,
+   "mean_pp": {
+    "add_minus_deepen": 1.0551,
+    "add_gain": 3.8492,
+    "deepen_gain": 2.7941
+   },
+   "mean_ci_pp": {
+    "add_minus_deepen": [
+     0.296,
+     1.7407
+    ],
+    "add_gain": [
+     2.9598,
+     4.8246
+    ],
+    "deepen_gain": [
+     2.0448,
+     3.5769
+    ]
+   },
+   "add_minus_deepen": {
+    "n_positive": 7,
+    "n_negative": 3,
+    "max_pp": 7.4734,
+    "min_pp": -2.6766,
+    "loso_min_pp": 0.8235,
+    "loso_max_pp": 1.2234,
+    "loso_sign_stable": true
+   }
+  }
+ },
+ "retest_signal": {
+  "abs_mean_ge_1pp": true,
+  "same_direction_ge_7_of_10": true,
+  "same_direction_count": 8,
+  "loso_sign_stable": true,
+  "dev8_direction_agrees": true,
+  "verdict": "达到复验参考信号"
+ }
+}
