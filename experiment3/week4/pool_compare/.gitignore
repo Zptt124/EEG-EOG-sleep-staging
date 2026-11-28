@@ -1,0 +1,10 @@
+# W4 A 池化对照工作区(本机路径,不随仓库分发)
+
+# 本机 junction / 引用目录
+b_checkout/
+
+# C 的 inner_cv 参考副本(内容与 experiment3/week3/scripts/ 的官方版一致,本机跑 37 号用)
+run_week3_c_inner_cv.py
+
+# 运行锁与断点大文件
+runs/**/run.lock

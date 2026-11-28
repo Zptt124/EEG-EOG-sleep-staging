@@ -1,0 +1,16 @@
+{
+  "budget": "label25",
+  "seeds": [
+    0
+  ],
+  "completed_seeds": [
+    0
+  ],
+  "folds_per_seed": 5,
+  "epochs_per_fold": 50,
+  "window_sec": 1,
+  "n_time_positions": 30,
+  "test_used": false,
+  "stage": "complete",
+  "updated_at": "2026-11-18T17:58:41+08:00"
+}
