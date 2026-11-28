@@ -1,0 +1,109 @@
+{
+  "joint_lock_sha256": "9936df179ec383aef359ce37d6724d06ce68428e1c30c800926c1aee6ee99e45",
+  "required_agreement": 0.999,
+  "d_prediction_archives": {
+    "bigru": "49a46b1cc4710e695a55b71a632edf8f5ba81190f13a9f351842689af3c83d8f",
+    "linear": "3b9e154a19a2b7a920142751e2f529ceba73687ba1776c884d172a6e34f3f523"
+  },
+  "experiment_D": {
+    "units": [
+      {
+        "model": "bigru",
+        "unit": "01_01_coverage_k1_seed0",
+        "disagreements": 0,
+        "centers": 41498,
+        "agreement": 1.0,
+        "macro_f1_C_minus_D_pp": 0.0
+      },
+      {
+        "model": "bigru",
+        "unit": "01_01_disagreement_k1_seed0",
+        "disagreements": 0,
+        "centers": 41498,
+        "agreement": 1.0,
+        "macro_f1_C_minus_D_pp": 0.0
+      },
+      {
+        "model": "bigru",
+        "unit": "01_06_random_k1_seed0",
+        "disagreements": 0,
+        "centers": 41498,
+        "agreement": 1.0,
+        "macro_f1_C_minus_D_pp": 0.0
+      },
+      {
+        "model": "linear",
+        "unit": "01_01_coverage_linear",
+        "disagreements": 0,
+        "centers": 41498,
+        "agreement": 1.0,
+        "macro_f1_C_minus_D_pp": 0.0
+      },
+      {
+        "model": "linear",
+        "unit": "01_01_disagreement_linear",
+        "disagreements": 0,
+        "centers": 41498,
+        "agreement": 1.0,
+        "macro_f1_C_minus_D_pp": 0.0
+      },
+      {
+        "model": "linear",
+        "unit": "01_06_random_linear",
+        "disagreements": 0,
+        "centers": 41498,
+        "agreement": 1.0,
+        "macro_f1_C_minus_D_pp": 0.0
+      }
+    ],
+    "passing": 6
+  },
+  "shared_K1": {
+    "units": 260,
+    "prediction_identical_units": 260,
+    "prediction_disagreement_count": 0
+  },
+  "experiment_C_D_receipt": {
+    "replay": {
+      "units": [
+        {
+          "unit": "01_01_add_people_k5_seed0",
+          "eval_centers": 41498,
+          "disagreements": 0,
+          "agreement": 1.0,
+          "macro_f1_diff_pp": 0.0,
+          "passes": true
+        },
+        {
+          "unit": "01_01_random_k5_seed0",
+          "eval_centers": 41498,
+          "disagreements": 0,
+          "agreement": 1.0,
+          "macro_f1_diff_pp": 0.0,
+          "passes": true
+        }
+      ],
+      "all_pass": true,
+      "torch": "2.7.1+cu126",
+      "environment": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+    },
+    "independent_recompute": {
+      "contrast": "K5 - K1 (P/R equal weight)",
+      "mean_pp": 0.6944097177200141,
+      "ci95_pp": [
+        -0.016305681237793905,
+        1.3919654047040653
+      ],
+      "head_means_pp": [
+        64.92309359843432,
+        65.6175033161544
+      ],
+      "policy_effects_pp": [
+        0.6597792478995111,
+        0.7290401875405172
+      ],
+      "repetitions": 10000,
+      "seed": 20261129
+    }
+  }
+}

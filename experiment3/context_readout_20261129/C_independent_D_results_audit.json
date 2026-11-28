@@ -1,0 +1,252 @@
+{
+  "d_git_commit": "f087c1f30e2df73be4af68662c3945974628b5f6",
+  "joint_lock_sha256": "9936df179ec383aef359ce37d6724d06ce68428e1c30c800926c1aee6ee99e45",
+  "d_counts_sha256": "9595be7d25017f00c14cfbcf9f3863fbd57e7e6006e46df70610720594f5daae",
+  "shared_K1_units_counts_identical": 260,
+  "primary": {
+    "mean_pp": 1.5332785371330677,
+    "ci95_pp": [
+      0.5902807501102326,
+      2.527158598231514
+    ],
+    "decision": "follow_up",
+    "sensitivity_multi_membership_ci95_pp": [
+      0.8554637160062473,
+      2.225099216882021
+    ],
+    "leave_one_anchor_subject": [
+      {
+        "subject_id": "SC400",
+        "rosters": 21,
+        "mean_pp": 1.7203272658322526
+      },
+      {
+        "subject_id": "SC401",
+        "rosters": 24,
+        "mean_pp": 1.418581325341422
+      },
+      {
+        "subject_id": "SC403",
+        "rosters": 22,
+        "mean_pp": 1.4421351593389307
+      },
+      {
+        "subject_id": "SC408",
+        "rosters": 21,
+        "mean_pp": 1.5603218868214683
+      },
+      {
+        "subject_id": "SC410",
+        "rosters": 24,
+        "mean_pp": 1.5734972783318024
+      },
+      {
+        "subject_id": "SC411",
+        "rosters": 22,
+        "mean_pp": 1.3317350397217507
+      },
+      {
+        "subject_id": "SC412",
+        "rosters": 22,
+        "mean_pp": 1.5022130793924253
+      },
+      {
+        "subject_id": "SC415",
+        "rosters": 18,
+        "mean_pp": 1.5996884879076716
+      },
+      {
+        "subject_id": "SC419",
+        "rosters": 25,
+        "mean_pp": 1.5863337518201177
+      },
+      {
+        "subject_id": "SC421",
+        "rosters": 22,
+        "mean_pp": 1.757650017079998
+      },
+      {
+        "subject_id": "SC422",
+        "rosters": 23,
+        "mean_pp": 1.5435649658894561
+      },
+      {
+        "subject_id": "SC423",
+        "rosters": 21,
+        "mean_pp": 1.8690573020339347
+      },
+      {
+        "subject_id": "SC425",
+        "rosters": 19,
+        "mean_pp": 1.3391227356110298
+      },
+      {
+        "subject_id": "SC428",
+        "rosters": 23,
+        "mean_pp": 1.5825709603174654
+      },
+      {
+        "subject_id": "SC432",
+        "rosters": 22,
+        "mean_pp": 1.4177802363858698
+      },
+      {
+        "subject_id": "SC433",
+        "rosters": 24,
+        "mean_pp": 1.5952330196229323
+      },
+      {
+        "subject_id": "SC434",
+        "rosters": 22,
+        "mean_pp": 1.5090133271477142
+      },
+      {
+        "subject_id": "SC435",
+        "rosters": 25,
+        "mean_pp": 1.4936564373915002
+      },
+      {
+        "subject_id": "SC440",
+        "rosters": 22,
+        "mean_pp": 1.6717964088000423
+      },
+      {
+        "subject_id": "SC443",
+        "rosters": 23,
+        "mean_pp": 1.6120507517681077
+      },
+      {
+        "subject_id": "SC444",
+        "rosters": 20,
+        "mean_pp": 1.2923913134480403
+      },
+      {
+        "subject_id": "SC449",
+        "rosters": 21,
+        "mean_pp": 1.738399563634538
+      },
+      {
+        "subject_id": "SC451",
+        "rosters": 20,
+        "mean_pp": 1.4163594114696414
+      },
+      {
+        "subject_id": "SC453",
+        "rosters": 24,
+        "mean_pp": 1.4773729126558575
+      },
+      {
+        "subject_id": "SC455",
+        "rosters": 23,
+        "mean_pp": 1.4631120487617304
+      },
+      {
+        "subject_id": "SC459",
+        "rosters": 22,
+        "mean_pp": 1.3385655872466675
+      },
+      {
+        "subject_id": "SC461",
+        "rosters": 23,
+        "mean_pp": 1.5074173177243468
+      },
+      {
+        "subject_id": "SC466",
+        "rosters": 24,
+        "mean_pp": 1.6883677393224346
+      },
+      {
+        "subject_id": "SC470",
+        "rosters": 22,
+        "mean_pp": 1.6380826778637891
+      },
+      {
+        "subject_id": "SC472",
+        "rosters": 25,
+        "mean_pp": 1.6336710090957598
+      },
+      {
+        "subject_id": "SC473",
+        "rosters": 21,
+        "mean_pp": 1.205188371960637
+      },
+      {
+        "subject_id": "SC474",
+        "rosters": 22,
+        "mean_pp": 1.3718753892955806
+      },
+      {
+        "subject_id": "SC476",
+        "rosters": 24,
+        "mean_pp": 1.471102152513515
+      },
+      {
+        "subject_id": "SC481",
+        "rosters": 22,
+        "mean_pp": 1.7318353895356418
+      },
+      {
+        "subject_id": "SC482",
+        "rosters": 22,
+        "mean_pp": 1.5174827910711757
+      }
+    ],
+    "repetitions": 10000,
+    "seed": 0,
+    "leave_one_range_pp": [
+      1.205188371960637,
+      1.8690573020339347
+    ],
+    "roster_effects_pp": [
+      1.2914747097930537,
+      2.1872837130321217,
+      1.0457220077983123,
+      1.1576339213963749,
+      3.2954591265933844,
+      1.9650444714486497,
+      1.2447853865318976,
+      -2.028335102831246,
+      3.173616911991747,
+      1.969549863026242,
+      -1.0723096264952523,
+      -0.9765332619342445,
+      1.3524812707553031,
+      1.234675149727424,
+      1.3727513245525684,
+      -1.0516189431394907,
+      0.507677517267544,
+      3.314004918603493,
+      2.884719737243187,
+      -1.0296651128661132,
+      2.5238310306722496,
+      5.253428897604779,
+      5.120475750584054,
+      0.2068981699568134,
+      2.320828068997558,
+      2.6013620651493445
+    ],
+    "head_means_pp": [
+      [
+        64.74541367778293,
+        66.27869221491605
+      ]
+    ],
+    "subcohort_effects_pp": [
+      1.5823009616701142,
+      1.5935867510693025
+    ],
+    "policy_means_pp": [
+      1.5332785371330675
+    ]
+  },
+  "matched_exploratory": {
+    "mean_pp": 1.0925125715986561,
+    "ci95_pp": [
+      0.33913288626932786,
+      1.917362911100443
+    ],
+    "preregistered": false,
+    "deviation": "script and seed written after the primary V-R result; single run",
+    "mean_shared_blocks_out_of_10": 0.9461538461538461
+  }
+}
