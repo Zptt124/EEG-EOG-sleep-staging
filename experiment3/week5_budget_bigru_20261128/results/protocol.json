@@ -1,0 +1,25 @@
+{
+  "primary": "new_minus_deepen",
+  "rule": "advance if mean >= 1 pp, lower > 0 and six low-overlap roster mean > 0; below practical target if upper < 1 pp; otherwise inconclusive",
+  "fit_counts": {
+    "primary": 450,
+    "seed_sensitivity": 90
+  },
+  "head": "Team ContextHead, projection 128 / ReLU / dropout 0.2 / BiGRU 64x2 / center readout",
+  "window": "previous, center, next in same person/night and adjacent epoch; center padding at gaps",
+  "supervision": "center epochs in exact prior masks only; unlabelled neighbours supply features only",
+  "standardization": "fit per arm on labelled center epochs only",
+  "optimizer": "CUDA fused AdamW, lr 0.001, weight decay 0.0001, batch 128, 30 fixed epochs",
+  "analysis": "same 10000 paired bootstrap and low-overlap subset as the linear comparison",
+  "inputs_sha256": {
+    "plan.json": "1839497af434871d9032a9d575785d06d8f22ff279f9617857a834a12d16a176",
+    "blocks.csv": "a468a741a5a382f1cd10257bf3707f93689465cf6a85f536ebfa28aadcbf4016",
+    "evaluation_index.npz": "2ba2bcb8c4883f0af9dad658ed95ab49e53efe706c9924987b928e802f1a93a5"
+  },
+  "feature_receipt_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
+  "source_sha256": {
+    "run.py": "f438c63a98a517f06a56b7d05f97318b44bae98ed3ee9aca5433e10384e2b15d",
+    "13_context_head.py": "afd946879386d64686c51832b57ee985aa8f062bafd7c8eeb1eebe23698d78cf"
+  },
+  "torch": "2.7.1+cu126"
+}

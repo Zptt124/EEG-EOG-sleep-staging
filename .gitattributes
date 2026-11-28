@@ -28,3 +28,5 @@
 # Frozen protocols include byte-level hashes.
 /experiment3/week3_budget_replication_20261128/** -text whitespace=cr-at-eol,-blank-at-eof
 /experiment3/week4_budget_external_ying/** -text whitespace=cr-at-eol,-blank-at-eof
+/experiment3/week5_budget_bigru_20261128/** -text whitespace=cr-at-eol,-blank-at-eof
+/experiment3/week6_budget_extension_20261128/** -text whitespace=cr-at-eol,-blank-at-eof
