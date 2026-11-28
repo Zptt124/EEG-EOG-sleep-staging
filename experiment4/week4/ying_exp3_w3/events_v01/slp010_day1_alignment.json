@@ -1,0 +1,21 @@
+{
+  "night": "SLP010_Day1",
+  "edf_start": "01.05.22 23.19.00",
+  "duration_s": 32626.0,
+  "complete_30s_epochs": 1087,
+  "expert_csv_epochs": [
+    1082,
+    1087,
+    1087
+  ],
+  "expert_txt_first_start": [
+    "0",
+    "0",
+    "0"
+  ],
+  "expert_txt_last_end": [
+    "32460",
+    "32610",
+    "32610"
+  ]
+}
