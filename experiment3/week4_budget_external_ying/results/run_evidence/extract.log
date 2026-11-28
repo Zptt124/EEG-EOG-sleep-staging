@@ -1,0 +1,75 @@
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+W4 30k EMA loaded {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'none'}
+1/38 SLP001_Day1 epochs=1137 seconds=29.1 total=29
+2/38 SLP001_Day2 epochs=1018 seconds=24.7 total=54
+Traceback (most recent call last):
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 139, in <module>
+    main()
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 125, in main
+    result, labels, x = extract(model, archive, actual[key], Path(work) / "signal.edf", args.batch)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 57, in extract
+    result, labels = label_rows(archive, member)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 47, in label_rows
+    from_intervals[lo//30:hi//30] = STAGES[stage]
+                                    ~~~~~~^^^^^^^
+KeyError: 'NotScored'
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+W4 30k EMA loaded {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'none'}
+3/38 SLP002_Day1 epochs=1046 seconds=25.6 total=26
+4/38 SLP002_Day2 epochs=986 seconds=23.2 total=49
+5/38 SLP003_Day1 epochs=1186 seconds=27.2 total=76
+6/38 SLP003_Day2 epochs=1079 seconds=25.4 total=101
+7/38 SLP004_Day1 epochs=799 seconds=18.4 total=120
+8/38 SLP005_Day1 epochs=1088 seconds=25.6 total=146
+9/38 SLP005_Day2 epochs=1061 seconds=24.7 total=170
+10/38 SLP006_Day1 epochs=1142 seconds=26.4 total=197
+11/38 SLP006_Day2 epochs=1042 seconds=24.2 total=221
+12/38 SLP007_Day1 epochs=998 seconds=23.2 total=244
+13/38 SLP007_Day2 epochs=1094 seconds=25.1 total=269
+14/38 SLP008_Day1 epochs=964 seconds=22.1 total=291
+15/38 SLP008_Day2 epochs=1052 seconds=24.3 total=316
+16/38 SLP009_Day1 epochs=1242 seconds=28.9 total=345
+17/38 SLP009_Day2 epochs=1150 seconds=26.5 total=371
+Traceback (most recent call last):
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 144, in <module>
+    last_progress = time.monotonic()
+
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 130, in main
+    if completed == expected:
+                              
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 59, in extract
+    consensus = np.where(b == c, b, a)
+                     ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Develop/SK EEG-EOG/experiment3/week4_budget_external_ying/extract.py", line 53, in label_rows
+    # SLP010 Day 1 has an Expert 1 file five epochs shorter at its tail.
+                ^^^^^^^^^^^^^^^^^^^^^^
+ValueError: operands could not be broadcast together with shapes (1087,) (1087,) (1082,) 
+CUDA extension for structured kernels (Cauchy and Vandermonde multiplication) not found. Install by going to extensions/kernels/ and running `python setup.py install`, for improved speed and memory efficiency. Note that the kernel changed for state-spaces 4.0 and must be recompiled.
+Falling back on slow Cauchy and Vandermonde kernel. Install at least one of pykeops or the CUDA extension for better speed and memory efficiency.
+W4 30k EMA loaded {'self_cond_layer': 0, 'self_cond_pool': 'mean', 'cross_modal': 'none'}
+18/38 SLP010_Day1 epochs=1082 seconds=26.7 total=27
+19/38 SLP010_Day2 epochs=1082 seconds=25.0 total=52
+20/38 SLP011_Day1 epochs=1022 seconds=23.5 total=75
+21/38 SLP011_Day2 epochs=1078 seconds=24.7 total=100
+22/38 SLP012_Day1 epochs=1099 seconds=25.3 total=125
+23/38 SLP012_Day2 epochs=1099 seconds=25.3 total=151
+24/38 SLP013_Day1 epochs=1122 seconds=25.4 total=176
+25/38 SLP013_Day2 epochs=1118 seconds=25.5 total=201
+26/38 SLP014_Day1 epochs=519 seconds=11.6 total=213
+27/38 SLP014_Day2 epochs=976 seconds=22.2 total=235
+28/38 SLP015_Day1 epochs=1061 seconds=24.1 total=259
+29/38 SLP015_Day2 epochs=1037 seconds=23.6 total=283
+30/38 SLP016_Day1 epochs=1188 seconds=27.5 total=310
+31/38 SLP016_Day2 epochs=1213 seconds=28.1 total=339
+32/38 SLP017_Day1 epochs=1060 seconds=24.5 total=363
+33/38 SLP017_Day2 epochs=1071 seconds=24.6 total=388
+34/38 SLP018_Day1 epochs=1092 seconds=25.0 total=413
+35/38 SLP018_Day2 epochs=1037 seconds=23.5 total=436
+36/38 SLP019_Day1 epochs=1219 seconds=28.2 total=465
+37/38 SLP019_Day2 epochs=1293 seconds=29.6 total=494
+38/38 SLP020_Day1 epochs=769 seconds=17.4 total=511
+Done: 38 recordings
