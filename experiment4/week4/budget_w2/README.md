@@ -72,3 +72,11 @@ python experiment3/week2_budget_20261127/train_other_night.py --plan experiment3
 ```
 
 预留 8 人和封存测试 16 人均未评分。
+
+## 11-28 更新：第 8–10 天
+
+- `03_independent_dev_recompute.py`：9 份名单的开发集复算。共 58 项，与各成员自报分数全部一致。结果在 `out/dev_recompute_*.csv`。
+- `04_independent_heldout_tables.py`：在预留 8 人上独立推理 29 个头，并重算表一、表二。逐段预测与 A/B 提交的 29/29 份一致，逐名单差和均值与 B 完全相同。结果在 `out/heldout_*.csv`。
+- 签出和一页选题决定见 [`D_signoff_and_decision_20261128.md`](D_signoff_and_decision_20261128.md)。
+
+**更正**：11-27 早上根据 6/9 份名单的开发集写的初步判断（"换夜平均没有收益"）作废，以签出文件为准。
