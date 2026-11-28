@@ -71,10 +71,16 @@ def evaluate(conf, members, paired, seed=0, repetitions=10000):
         keep = membership[:, i] == 0
         leave_one.append(dict(subject_id=person, rosters=int(keep.sum()),
                               mean_pp=float(roster_effects[keep].mean()) if keep.any() else None))
+    leave_values = [row["mean_pp"] for row in leave_one if row["mean_pp"] is not None]
     return dict(mean_pp=point, ci95_pp=interval, decision=decision(point, interval),
                 sensitivity_multi_membership_ci95_pp=np.percentile(clustered, [2.5, 97.5]).tolist(),
                 leave_one_anchor_subject=leave_one, repetitions=repetitions, seed=seed,
+                leave_one_range_pp=[min(leave_values), max(leave_values)] if leave_values else None,
                 roster_effects_pp=roster_effects.tolist(),
+                head_means_pp=base.mean(axis=(0, 2)).tolist(),
+                subcohort_effects_pp=[float((s[..., 1] - s[..., 0]).mean())
+                                      for cohort in (slice(0, 8), slice(8, 16))
+                                      for s in (macro(conf[..., cohort, :, :].sum(axis=-3)),)],
                 policy_means_pp=(base[..., 1] - base[..., 0]).mean(axis=(0, 2)).tolist())
 
 

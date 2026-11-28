@@ -4,6 +4,10 @@
   "primary_C": "K5 minus K1, condition A, equal weight between add_people and random",
   "primary_D": "V minus R, K1 BiGRU fixed, with ten draws per roster",
   "tau_pp": 1,
+  "experiment_D": {
+    "U_head_bootstrap": "Fit five linear heads using head seeds 0 through 4. Within each roster, sample 20 of its 20 labeled anchor blocks with replacement for each head. Preserve repeated blocks' multiplicity and use their scored center labels only.",
+    "historical_RP": "When K1 is refitted, rerun the condition A R/P draws 1 through 5 under this physical-neighbor rule. Use those same fits for the shared unit keys in both experiments."
+  },
   "neighbor_rule": {
     "key": ["record_id", "physical_epoch_index"],
     "epoch_seconds": 30,

@@ -22,6 +22,8 @@ python experiment3/context_readout_20261129/train_bigru.py \
 
 `D_blocks.csv` 每块一行，需要 `roster,draw,strategy,record_id,first_epoch`，可附 `last_epoch`（含末端）。标签表需要 `record_id,epoch_index,y_true`，W/N1/N2/N3/REM 为 0/1/2/3/4，不可评分为 -1。缺行清单可按 W4 30k EMA、原本 5 秒编码与 1 秒标准差池化补提，再用 `--supplement` 提供带 `feature_record,feature_epoch,x` 的 NPZ，`x` 为 384 维 float32，EEG 在前。
 
+U 的五个线性头分别按起点的 20 个已标块做有放回 bootstrap。重复抽中的块保留训练权重，仍只用可评分的起点中心。双方签出前核对 U 的重抽种子和 D 的选块散列。
+
 ## C 的正式训练和出分
 
 在双方签出后使用下面命令。可用一个或多个 `--variant` 先跑 K1/K5。默认覆盖 K1、K5、K10、K5+B 与 K1/K5 的 seed 1、2。每个单元保存模型、逐开发评估者的 5×5 混淆计数、概率和预测，`--csv` 同步导出标准 11 列预测表。D 使用相同入口，并设置 `--experiment D`。
@@ -38,4 +40,4 @@ python experiment3/context_readout_20261129/train_bigru.py \
 
 ## 归档基线
 
-旧 K1 训练按物理位置取邻段，评估从共享索引取邻段，缺位时复制中心。此次统一为训练和评估使用同一物理规则。历史条件 A 的 260 个单元只归档了预测和混淆计数，统一评估需要重新拟合 K1。`legacy_replay.json` 保存 C 机按旧规则复跑的 6 个单元。`prepare.py` 和 `replay_legacy.py` 依赖 C 工作区的原始实验脚本及数据，用于追溯缓存构建及复跑过程。D 使用本目录的输入构建和训练脚本即可。
+旧 K1 训练按物理位置取邻段，评估从共享索引取邻段，缺位时复制中心。此次统一为训练和评估使用同一物理规则。历史条件 A 的 260 个单元只归档了预测和混淆计数，统一评估需要重新拟合 K1。实验二沿用的 R/P 第 1–5 次使用同一批新版 K1 拟合，两边按名单、重复、选块和输入散列对齐。`legacy_replay.json` 保存 C 机按旧规则复跑的 6 个单元。`prepare.py` 和 `replay_legacy.py` 依赖 C 工作区的原始实验脚本及数据，用于追溯缓存构建及复跑过程。D 使用本目录的输入构建和训练脚本即可。
