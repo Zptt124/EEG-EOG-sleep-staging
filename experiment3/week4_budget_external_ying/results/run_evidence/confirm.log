@@ -1,0 +1,86 @@
+Fold 1/4 roster 1/8 complete, 10s
+Fold 1/4 roster 2/8 complete, 15s
+Fold 1/4 roster 3/8 complete, 20s
+Fold 1/4 roster 4/8 complete, 25s
+Fold 1/4 roster 5/8 complete, 30s
+Fold 1/4 roster 6/8 complete, 36s
+Fold 1/4 roster 7/8 complete, 41s
+Fold 1/4 roster 8/8 complete, 46s
+Fold 2/4 roster 1/8 complete, 51s
+Fold 2/4 roster 2/8 complete, 57s
+Fold 2/4 roster 3/8 complete, 62s
+Fold 2/4 roster 4/8 complete, 67s
+Fold 2/4 roster 5/8 complete, 73s
+Fold 2/4 roster 6/8 complete, 78s
+Fold 2/4 roster 7/8 complete, 83s
+Fold 2/4 roster 8/8 complete, 89s
+Fold 3/4 roster 1/8 complete, 94s
+Fold 3/4 roster 2/8 complete, 99s
+Fold 3/4 roster 3/8 complete, 104s
+Fold 3/4 roster 4/8 complete, 110s
+Fold 3/4 roster 5/8 complete, 115s
+Fold 3/4 roster 6/8 complete, 120s
+Fold 3/4 roster 7/8 complete, 125s
+Fold 3/4 roster 8/8 complete, 130s
+Fold 4/4 roster 1/8 complete, 136s
+Fold 4/4 roster 2/8 complete, 141s
+Fold 4/4 roster 3/8 complete, 146s
+Fold 4/4 roster 4/8 complete, 151s
+Fold 4/4 roster 5/8 complete, 156s
+Fold 4/4 roster 6/8 complete, 161s
+Fold 4/4 roster 7/8 complete, 167s
+Fold 4/4 roster 8/8 complete, 172s
+{
+  "decision": "external_support",
+  "n_fit": 480,
+  "cohort_epoch_count": 39505,
+  "arm_f1": {
+    "deepen": 64.25361381167002,
+    "other_night": 64.71962115908607,
+    "add_people": 66.03938858933245
+  },
+  "contrasts": {
+    "other_night_minus_deepen": {
+      "mean_pp": 0.4660073474160568,
+      "95_interval_pp": [
+        -0.4334989003109054,
+        1.4682079716414325
+      ],
+      "fold_means_pp": [
+        0.6171718733683365,
+        1.1049109079149206,
+        -0.9556294561782286,
+        1.0975760645591988
+      ],
+      "positive_rosters": 18
+    },
+    "add_people_minus_other_night": {
+      "mean_pp": 1.3197674302463787,
+      "95_interval_pp": [
+        0.14791991348685915,
+        2.5656960777540134
+      ],
+      "fold_means_pp": [
+        0.9618643035613227,
+        0.4342312900626798,
+        2.4580057121831844,
+        1.4249684151783275
+      ],
+      "positive_rosters": 25
+    },
+    "add_people_minus_deepen": {
+      "mean_pp": 1.7857747776624353,
+      "95_interval_pp": [
+        0.5849001583124364,
+        3.072185552165262
+      ],
+      "fold_means_pp": [
+        1.5790361769296593,
+        1.5391421979776003,
+        1.502376256004956,
+        2.5225444797375265
+      ],
+      "positive_rosters": 24
+    }
+  }
+}

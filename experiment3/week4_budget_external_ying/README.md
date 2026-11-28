@@ -10,6 +10,8 @@ Ying 以与专家标注对齐后的记录长度为基准，将每晚等分为三
 
 ## 结果与复算
 
+B 核对协议修订时间线所需的三版原件、文件系统时间、终端记录摘录、原始日志和实际运行版提取器，见 [C → B 原始运行证据](results/run_evidence/README.md)。
+
 归档含 [冻结协议](results/protocol.json)、[配对块](results/blocks.csv)、[输入指纹](results/data_lock.json)、[汇总](results/summary.json) 以及各折按评估者汇总的混淆计数。两份协议快照保留对齐和训练资格核查前的版本。运行下列命令复算两个队列的点估计、区间与判读，使用 Python 3.11、NumPy、PyTorch、scikit-learn 即可。
 
 ```bash
