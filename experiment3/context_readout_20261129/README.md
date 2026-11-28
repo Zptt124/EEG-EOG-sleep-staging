@@ -24,6 +24,18 @@ python experiment3/context_readout_20261129/train_bigru.py \
 
 U 的五个线性头分别按起点的 20 个已标块做有放回 bootstrap。重复抽中的块保留训练权重，仍只用可评分的起点中心。双方签出前核对 U 的重抽种子和 D 的选块散列。
 
+### 实验二复用 R/P 第 1–5 次
+
+C 已交付 260 个共用 K1 拟合。使用 `import_shared_k1.py` 导入 D 的 BiGRU 输出目录，然后把同一目录传给 `train_bigru.py --experiment D`。导入器核验共同锁、缓存等价回执、模型和归档，保留 C 的原拟合缓存散列。D 训练入口会从剩余 806 个单元继续。已另行拟合的文件需先由 D 核对，导入器会保留它们。[共用 K1 Release](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/cd-context-c-k1-20261129)
+
+```bash
+python experiment3/context_readout_20261129/import_shared_k1.py \
+  --archive c_1_seed0_fits.zip --archive-sha256 "$C_K1_ARCHIVE_SHA256" \
+  --input-audit experiment3/context_readout_20261129/shared_k1_input_audit.json \
+  --lock experiment3/context_readout_20261129/C_D_signed.json \
+  --d-cache cd_context_D_k1_input.npz --output D_bigru
+```
+
 ## C 的正式训练和出分
 
 在双方签出后使用下面命令。可用一个或多个 `--variant` 先跑 K1/K5。默认覆盖 K1、K5、K10、K5+B 与 K1/K5 的 seed 1、2。每个单元保存模型、逐开发评估者的 5×5 混淆计数、概率和预测，`--csv` 同步导出标准 11 列预测表。D 使用相同入口，并设置 `--experiment D`。
