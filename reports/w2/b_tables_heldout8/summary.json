@@ -38,6 +38,10 @@
       -0.031,
       1.6885
      ],
+     "ci95_rosters_people": [
+      -1.8109,
+      3.3247
+     ],
      "positive": 6,
      "negative": 4,
      "n_rosters": 10,
@@ -78,6 +82,10 @@
       0.5948,
       2.2603
      ],
+     "ci95_rosters_people": [
+      -1.0006,
+      3.8142
+     ],
      "positive": 6,
      "negative": 3,
      "n_rosters": 9,
@@ -101,6 +109,10 @@
      "ci95": [
       -1.1685,
       0.7878
+     ],
+     "ci95_rosters_people": [
+      -2.4945,
+      2.3381
      ],
      "positive": 4,
      "negative": 5,
