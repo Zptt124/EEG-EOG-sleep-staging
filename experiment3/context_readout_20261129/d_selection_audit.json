@@ -1,0 +1,38 @@
+{
+  "status": "selections_verified_pending_joint_signoff",
+  "git_commit": "f3d79db2e2bd759c26ce0ae9fa35f335fdc31769",
+  "selection_lock_sha256": "9bf5884d49b8bc7f4f268005edbb8d4fc2d8133286517a1f2b3e61f4511edd05",
+  "selections_D": "e8597867156cb01e401a2b65e1ec87ee84597f9ce6a31cb8f9579f1c422bbe17",
+  "files_verified": {
+    "D_blocks.csv": "e8597867156cb01e401a2b65e1ec87ee84597f9ce6a31cb8f9579f1c422bbe17",
+    "composition.csv": "9bef3eb3775039b763ba5ee403c33260002d2839ba19d3a337609fb59c84e0d3",
+    "v_trace.csv": "b9b567fa73e009670863201ed1b4855cb0ca61558a209f69fdd14191b6a1fb48",
+    "u_scores.csv": "11f9c2c3223872f004644ceb7972c4c6ab2b4833943ee3fb128d6b66b914ca70"
+  },
+  "c_reference_hash_match": {
+    "candidate_blocks.csv": "exact",
+    "anchor_blocks.csv": "line_endings_only",
+    "mixed_quotas.csv": "line_endings_only",
+    "condition_A_RP_draws_1_5.csv": "line_endings_only"
+  },
+  "rosters": 26,
+  "units": 1066,
+  "blocks": 10660,
+  "historical_RP_units": 260,
+  "verified_checks": [
+    "same condition A candidate",
+    "record and source alignment",
+    "night-third quotas",
+    "600 distinct epochs per unit",
+    "no anchor overlap",
+    "R/P historical blocks equal"
+  ],
+  "d_selection_seeds": {
+    "rp_shared_order": 2026112903,
+    "v_targets": 2026112921,
+    "v_top3": 2026112922,
+    "u_bootstrap": 2026112923,
+    "u_top3": 2026112924
+  },
+  "accessed_new_scores": false
+}

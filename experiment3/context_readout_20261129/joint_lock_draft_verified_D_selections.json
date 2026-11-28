@@ -1,0 +1,26 @@
+{
+  "status": "draft",
+  "approved_by": {},
+  "tau_pp": 1,
+  "sha256": {
+    "protocol": "c6fe33d09be7a985b4e83de4a9983255869ef794ee10d26d2f0913220216350d",
+    "physical_neighbor_rule": "a913c875c6fdb95d51cf277d69b200b027ea36644c3ed02511faecb590415f7b",
+    "rosters": "1aa887edb49bef1da5840b12053a8b97337832ab7ea61ed63e0f5f94631bc64b",
+    "seeds": "780e12cc862623ecb649ffb253b0ddc68f7aae9251b27e2310eb1cd125214111",
+    "evaluation_index": "2ba2bcb8c4883f0af9dad658ed95ab49e53efe706c9924987b928e802f1a93a5",
+    "selections_C": "539104f6ff9c57be0bd1dca988dfce4b2f63ffab1a3134647c235a3420353713",
+    "cache_C": "4993959e040b95a4bbd38f95bbf6f1b27ecd90bbfd88fa4e4ae75b2e6a170f37",
+    "analysis.py": "39f7723a98392036ce9147abfc88c34315778520cfbfa9a811b47174e1d3cda4",
+    "train_bigru.py": "1109e3af3d7db4bd110a1e8b5f12ba58e9627fdc326715b98893aadfdd2f0cb7",
+    "13_context_head.py": "afd946879386d64686c51832b57ee985aa8f062bafd7c8eeb1eebe23698d78cf",
+    "selections_D": "e8597867156cb01e401a2b65e1ec87ee84597f9ce6a31cb8f9579f1c422bbe17"
+  },
+  "pending": [
+    "D cache SHA-256 and source",
+    "two signoff records for the final inputs"
+  ],
+  "d_selection_provenance": {
+    "git_commit": "f3d79db2e2bd759c26ce0ae9fa35f335fdc31769",
+    "lock_sha256": "9bf5884d49b8bc7f4f268005edbb8d4fc2d8133286517a1f2b3e61f4511edd05"
+  }
+}
