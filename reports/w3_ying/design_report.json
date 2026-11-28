@@ -1,0 +1,115 @@
+{
+ "folds_match_c_protocol": true,
+ "folds": [
+  [
+   "SLP001",
+   "SLP008",
+   "SLP009",
+   "SLP011",
+   "SLP014"
+  ],
+  [
+   "SLP003",
+   "SLP006",
+   "SLP010",
+   "SLP018",
+   "SLP019"
+  ],
+  [
+   "SLP004",
+   "SLP005",
+   "SLP007",
+   "SLP016",
+   "SLP017"
+  ],
+  [
+   "SLP002",
+   "SLP012",
+   "SLP013",
+   "SLP015",
+   "SLP020"
+  ]
+ ],
+ "n_nights": 38,
+ "n_epochs_all": 40321,
+ "n_epochs_scored": 39505,
+ "blocks_sha256_b": "592f70cfbc9fdc80a2952a5b17a4f4a43f2a043abc77701e4e530b810ef5ead9",
+ "blocks_sha256_c": "18485b782a6372e5d3205fadc5a9288ab851878a17292534a141ef0b6f0de8e0",
+ "blocks_identical": true,
+ "eligible_training_pool_by_fold": {
+  "1": [
+   "SLP002",
+   "SLP003",
+   "SLP005",
+   "SLP006",
+   "SLP007",
+   "SLP012",
+   "SLP013",
+   "SLP015",
+   "SLP016",
+   "SLP017",
+   "SLP018",
+   "SLP019"
+  ],
+  "2": [
+   "SLP001",
+   "SLP002",
+   "SLP005",
+   "SLP007",
+   "SLP008",
+   "SLP009",
+   "SLP011",
+   "SLP012",
+   "SLP013",
+   "SLP014",
+   "SLP015",
+   "SLP016",
+   "SLP017"
+  ],
+  "3": [
+   "SLP001",
+   "SLP002",
+   "SLP003",
+   "SLP006",
+   "SLP008",
+   "SLP009",
+   "SLP011",
+   "SLP012",
+   "SLP013",
+   "SLP014",
+   "SLP015",
+   "SLP018",
+   "SLP019"
+  ],
+  "4": [
+   "SLP001",
+   "SLP003",
+   "SLP005",
+   "SLP006",
+   "SLP007",
+   "SLP008",
+   "SLP009",
+   "SLP011",
+   "SLP014",
+   "SLP016",
+   "SLP017",
+   "SLP018",
+   "SLP019"
+  ]
+ },
+ "c_blocks_header": [
+  "fold",
+  "roster",
+  "draw",
+  "arm",
+  "subject",
+  "record",
+  "start",
+  "third"
+ ],
+ "c_blocks_audit_issues": [],
+ "c_blocks_audit_n_issues": 0,
+ "n_block_rows": 5440,
+ "folds_disjoint_cover_20": true,
+ "training_subjects_in_eval_fold": 0
+}

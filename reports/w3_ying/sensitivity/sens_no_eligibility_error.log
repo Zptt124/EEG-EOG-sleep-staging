@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/jolin/EEG-EOG-sleep-staging/scripts/56_b_w3_ying_confirm.py", line 372, in <module>
+    main()
+    ~~~~^^
+  File "/Users/jolin/EEG-EOG-sleep-staging/scripts/56_b_w3_ying_confirm.py", line 313, in main
+    rows, plans, elig = design(recs, fl)
+                        ~~~~~~^^^^^^^^^^
+  File "/Users/jolin/EEG-EOG-sleep-staging/scripts/56_b_w3_ying_confirm.py", line 125, in design
+    raise RuntimeError("no matched thirds")
+RuntimeError: no matched thirds

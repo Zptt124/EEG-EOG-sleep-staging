@@ -1,0 +1,3058 @@
+[
+ {
+  "night": "SLP001_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1137,
+   1137,
+   1137
+  ],
+  "consensus_epochs": 1137,
+  "edf_seconds": 34112.0,
+  "edf_full_epochs": 1137,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1137,
+  "stage_counts": {
+   "Wake": 105,
+   "NREM1": 49,
+   "NREM2": 542,
+   "NREM3": 160,
+   "REM": 281
+  },
+  "ties_resolved_by_e1": 22,
+  "edf_startdate": "01.04.22",
+  "edf_starttime": "23.18.00",
+  "edf_recording_field": "Startdate 01-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "bde4a8b5a69b98e1bf39ddcd8692f3f6a4480ccad4e9475068ce374fc5168cb2",
+    "txt": "11781afcb3733a2ee002b3b50671e385124a776c608e67ecff1bedcd85749a15"
+   },
+   "E2": {
+    "csv": "cc800ae76693f92abddb37975caa24ebebf98b9fd49b7520892662c070bc830a",
+    "txt": "bdbdcfa531261caf524d1f429f2626bb09533d41ec0c96692c2815951e0e219b"
+   },
+   "E3": {
+    "csv": "abb39e223d4024be785ca9b1d30bb63c323f584cafe16f7c001c930618e57a12",
+    "txt": "9d9f2ca77f4db64a86890ea95f8514aee6631ef528c7c4617c3e01c680cfef64"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP001_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1018,
+   1018,
+   1018
+  ],
+  "consensus_epochs": 1018,
+  "edf_seconds": 30563.0,
+  "edf_full_epochs": 1018,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1018,
+  "stage_counts": {
+   "Wake": 85,
+   "NREM1": 49,
+   "NREM2": 419,
+   "NREM3": 195,
+   "REM": 270
+  },
+  "ties_resolved_by_e1": 13,
+  "edf_startdate": "02.04.22",
+  "edf_starttime": "23.32.00",
+  "edf_recording_field": "Startdate 02-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "4d2cd843dd246f16a1410a2abb01892c684f0a7e007a698f13dfa6e5f764d4b2",
+    "txt": "1a60d8817c53889a1cf48e703d04a2aaca15c8c6f0944f12e95d65026e905acf"
+   },
+   "E2": {
+    "csv": "7e6e1278db5ef824ddd4bc5a270b613aca19dc1b34ae5bb401e2c140fbcae233",
+    "txt": "d994997d99c3a9fa2b4f1cb80b9a9484e360f3f5862947267f9f1df23959f4aa"
+   },
+   "E3": {
+    "csv": "d9c8a4c3de5e66d03700ffc939aed37facba559c41404acc0423a0a3a3936eb1",
+    "txt": "347802b03f3f5036fff82ddaf590c1719a7e138dfd7a5d327a24db5bc7ba30e1"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP002_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1046,
+   1046,
+   1046
+  ],
+  "consensus_epochs": 1046,
+  "edf_seconds": 31387.0,
+  "edf_full_epochs": 1046,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 94,
+  "n_scored": 952,
+  "stage_counts": {
+   "Wake": 47,
+   "NREM1": 102,
+   "NREM2": 458,
+   "NREM3": 93,
+   "REM": 252
+  },
+  "ties_resolved_by_e1": 14,
+  "edf_startdate": "06.04.22",
+  "edf_starttime": "23.23.00",
+  "edf_recording_field": "Startdate 06-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "391fb8d3550082a612cbae1283f694fe0b9df72b65933cae93260472b921a164",
+    "txt": "69835526d987f76d96100205cc90eae8f0e5c701d24727f6012b2dbdd96031b0"
+   },
+   "E2": {
+    "csv": "36ea806c039aa3df1bc3bcb202d52f841b1d4f9958f911024deae7f96cc6a8a5",
+    "txt": "31bab877f0a658c9bd63ee60d67a732a34cba57641cf36e7dcae9dce0428e5fc"
+   },
+   "E3": {
+    "csv": "bdc6f73dae1077174f8ceed5f1fa42a171cd487cb508f142cdae133aa0a2ec75",
+    "txt": "58155a6b43af41ded4e40abb42d733c2e89ff615476fdacff0fcd00072fb0989"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP002_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   986,
+   986,
+   986
+  ],
+  "consensus_epochs": 986,
+  "edf_seconds": 29609.0,
+  "edf_full_epochs": 986,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 100,
+  "n_scored": 886,
+  "stage_counts": {
+   "Wake": 68,
+   "NREM1": 43,
+   "NREM2": 434,
+   "NREM3": 74,
+   "REM": 267
+  },
+  "ties_resolved_by_e1": 9,
+  "edf_startdate": "07.04.22",
+  "edf_starttime": "23.29.00",
+  "edf_recording_field": "Startdate 07-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "0ca050ddfc95a7bf67da6adebd158328ff1cb57fee0c6bdf9a35e3748543df04",
+    "txt": "7ebbd93bc0bbc918dda8b8804b2aa5a6c0dc656bca551e8e4038a55fd8422316"
+   },
+   "E2": {
+    "csv": "3ce131b0480ed3c3465cf5b342a9f345971d8a643ca918a8101e7ed3fc1d944f",
+    "txt": "b1899c06a6052b7180149fe334848de9f56a86f2f2666d9569e4f335a0cae54a"
+   },
+   "E3": {
+    "csv": "d21e921c40dc38c9eabafdbbf787c6e1a8b794c9f2a6aaf57bef34c67f1f2ea6",
+    "txt": "f6cc5f0e8ee9555ef1f980322738575e2dc45dc15e2405cb14f2090413072d7a"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP003_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1186,
+   1186,
+   1186
+  ],
+  "consensus_epochs": 1186,
+  "edf_seconds": 35580.0,
+  "edf_full_epochs": 1186,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 78,
+  "n_scored": 1108,
+  "stage_counts": {
+   "Wake": 135,
+   "NREM1": 130,
+   "NREM2": 408,
+   "NREM3": 220,
+   "REM": 215
+  },
+  "ties_resolved_by_e1": 15,
+  "edf_startdate": "10.04.22",
+  "edf_starttime": "23.28.00",
+  "edf_recording_field": "Startdate 10-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "b8a90883261a523200a11f5d4d3bf182177a5565f7650c0dd30ada222546dab5",
+    "txt": "c57a4248f34443761246a0a1baa9e7de9ae08ce0a3ff4795b95eaebead2d860e"
+   },
+   "E2": {
+    "csv": "88cdc4e4f011d0990f237a483809b0cb03afdd5bd18c3190f000465746f1c2fb",
+    "txt": "a5d02a04c78e9cad13ba21ab6796f62d14b86e423d24618c81d3d047d81e77ec"
+   },
+   "E3": {
+    "csv": "151bc0d84191e1f49060cac8f10b25a44bbf548a29f893861d69281612213793",
+    "txt": "48a65e4346e283eb88cb0aa0c0604e58d7ac30beccc6010ca65fccaad7a87fb4"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP003_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1079,
+   1079,
+   1079
+  ],
+  "consensus_epochs": 1079,
+  "edf_seconds": 32397.0,
+  "edf_full_epochs": 1079,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1079,
+  "stage_counts": {
+   "Wake": 118,
+   "NREM1": 102,
+   "NREM2": 474,
+   "NREM3": 167,
+   "REM": 218
+  },
+  "ties_resolved_by_e1": 11,
+  "edf_startdate": "11.04.22",
+  "edf_starttime": "23.21.00",
+  "edf_recording_field": "Startdate 11-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "6ba6a1a0ca83780e89d352c38cd1c95f6bfab3746b038b683a82331ac7c67d70",
+    "txt": "fc80100c3a5a8d8613534ffaf6b66cd76f5fa5fe31f702a7b4cbed7cb5320efe"
+   },
+   "E2": {
+    "csv": "54d0cca77a19e0ab622a0b5a81ab7f70e015b7b12a0ec68aa98e0766314e6536",
+    "txt": "2d557789f82953ec4c3aa05f4f4f42da2a4926b847137dbacf3948c37e90779b"
+   },
+   "E3": {
+    "csv": "6d09dbd7f3d5cfc22dc2d2c298738b46fef91db00687f3d58a2f30cdf60e83d7",
+    "txt": "39b6465cb94851ed656c87244cfa5564f2a89a3f86340139d82aff8f7e26e4d7"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP004_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   3
+  ],
+  "expert_epochs": [
+   799,
+   799,
+   799
+  ],
+  "consensus_epochs": 799,
+  "edf_seconds": 23980.0,
+  "edf_full_epochs": 799,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 799,
+  "stage_counts": {
+   "Wake": 160,
+   "NREM1": 57,
+   "NREM2": 323,
+   "NREM3": 141,
+   "REM": 118
+  },
+  "ties_resolved_by_e1": 13,
+  "edf_startdate": "22.04.22",
+  "edf_starttime": "23.23.00",
+  "edf_recording_field": "Startdate 22-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "63466f55ca71eef83dd957ee1f5b0a0723288d0e45d761682f967ab142880999",
+    "txt": "be18a4cc45b21a224f1a56a4376a87e0bb1cc361dbfb0dc58505a503478aceed"
+   },
+   "E2": {
+    "csv": "188b804239e2ebae28e4afe9fea3ce387875f16e55684368e261ef27bb3a5c80",
+    "txt": "836ac354adbb1b6975cade20dfb2d4d0b38494a30c70279cc24dbba691e86df4"
+   },
+   "E3": {
+    "csv": "2c88c57cd4eee9b49b4e8ebb5c7351ad050e310c00ae6db6ab2864b974c00088",
+    "txt": "410041228bc675b0813325ce06697ac46a93cd35f371af7ac5133440d6612e76"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP004_Day2",
+  "status": "missing",
+  "missing_marked_no_data": true,
+  "available_days": [
+   1,
+   3
+  ]
+ },
+ {
+  "night": "SLP005_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1088,
+   1088,
+   1088
+  ],
+  "consensus_epochs": 1088,
+  "edf_seconds": 32644.0,
+  "edf_full_epochs": 1088,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 88,
+  "n_scored": 1000,
+  "stage_counts": {
+   "Wake": 31,
+   "NREM1": 42,
+   "NREM2": 450,
+   "NREM3": 174,
+   "REM": 303
+  },
+  "ties_resolved_by_e1": 9,
+  "edf_startdate": "08.04.22",
+  "edf_starttime": "23.36.00",
+  "edf_recording_field": "Startdate 08-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "34fdceb6b5fa45716482b9ee29328b4baec98b69f0a9ee9aa803048f44a526cc",
+    "txt": "fdc7c8284cec73f05d117de0bc1199da25cbd60c08767ed8e27d687fea68f766"
+   },
+   "E2": {
+    "csv": "b65ebe5046e88b71fd50aa65fa7087543dbb4139be6baf3c4e86346744a8bfdf",
+    "txt": "ced19368e040b16a4304411d0beb9c1a16d8c5c7cda8ef0eae6f14c281a2c32d"
+   },
+   "E3": {
+    "csv": "261144bd8a5b6867ee2dc9a3485272fe6533bf4a9a6f8d8e14e627c490262bcb",
+    "txt": "4b83e488a701d0dcda4e02de595d0ca3e28a34b95919a43cd4cce360432dc47e"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP005_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1061,
+   1061,
+   1061
+  ],
+  "consensus_epochs": 1061,
+  "edf_seconds": 31833.0,
+  "edf_full_epochs": 1061,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1061,
+  "stage_counts": {
+   "Wake": 593,
+   "NREM1": 57,
+   "NREM2": 221,
+   "NREM3": 140,
+   "REM": 50
+  },
+  "ties_resolved_by_e1": 5,
+  "edf_startdate": "12.04.22",
+  "edf_starttime": "23.38.00",
+  "edf_recording_field": "Startdate 12-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "e591271faa322ba4dcee6b8372aa03af03131d06e4dd6ce2de6ef638fdc36ba7",
+    "txt": "f4daa200f18523261442b3a8b542ba9336fc4e11268041af2078fc73ea59b7a5"
+   },
+   "E2": {
+    "csv": "ba4d79ca22d3fdc2b17153efc699dff7ed41e4c6bae16005e4b20af6629ad4b0",
+    "txt": "1019773f1c356f5f67cf2b96acfbc3aee7ede85f6f6b454fa781ae37ba05efb8"
+   },
+   "E3": {
+    "csv": "c4775d6b70cf1860fd0a30a878d9f4c40ac1bea44ecc1dad2863141c21934f69",
+    "txt": "50a8bc2d34d9a64442bfaf25f3907009bc95ed06943e38d9d45bd3f7f9b724c1"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP006_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1142,
+   1142,
+   1142
+  ],
+  "consensus_epochs": 1142,
+  "edf_seconds": 34278.0,
+  "edf_full_epochs": 1142,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1142,
+  "stage_counts": {
+   "Wake": 206,
+   "NREM1": 102,
+   "NREM2": 493,
+   "NREM3": 171,
+   "REM": 170
+  },
+  "ties_resolved_by_e1": 11,
+  "edf_startdate": "24.04.22",
+  "edf_starttime": "23.17.00",
+  "edf_recording_field": "Startdate 24-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "49cc2b9c79674acf2f4b8419d853931216c5cbb742d8d535fe7bc71c127b2905",
+    "txt": "559e9fa4141af7dc0ff15ca8c8ca6d34c4884f90fbd68c327023d4750ec53855"
+   },
+   "E2": {
+    "csv": "2d7fb9a93a4337efdb29f1e672a4abedd356c93962b7108520c06031d0ecf8e3",
+    "txt": "48e9728c30c9836d3fdf5d6046856837d3009f5743eb66c84e3b51cadb989ddd"
+   },
+   "E3": {
+    "csv": "479b3ebaf465a3da7291149a4160e2d3477dd0bf04ad9e3c7838bdb57c560973",
+    "txt": "df215f363708b816f73867fb6deced6022173c86cad5621ec13bd101d81912f1"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP006_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1042,
+   1042,
+   1042
+  ],
+  "consensus_epochs": 1042,
+  "edf_seconds": 31266.0,
+  "edf_full_epochs": 1042,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1042,
+  "stage_counts": {
+   "Wake": 127,
+   "NREM1": 74,
+   "NREM2": 438,
+   "NREM3": 234,
+   "REM": 169
+  },
+  "ties_resolved_by_e1": 17,
+  "edf_startdate": "25.04.22",
+  "edf_starttime": "23.20.00",
+  "edf_recording_field": "Startdate 25-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "be844249ed22fbbe37e9b0220da97952d37082cba46c57da23eed013dd562b0b",
+    "txt": "a6da1ed72918cd6b7a5b02b312e0dab89e0ae483606d20790a859186e3110fe0"
+   },
+   "E2": {
+    "csv": "2fbaa55a95e9b6a34e5d408cc8bdbee641fb6c9e3ecf9a7ca6dd7190d284d033",
+    "txt": "a32335807d5b5cd55c8393ac63a6ac2c06fea752a57ee5071c15b79fea4621d6"
+   },
+   "E3": {
+    "csv": "85db3e30ae58e5aba5c81a3ca15a867e555476ef5b172845a939d4681afa3cd3",
+    "txt": "9f8b804312057e590e3def9d273ea9960d27dcda81830e1563931b8f8e6211d0"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP007_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   998,
+   998,
+   998
+  ],
+  "consensus_epochs": 998,
+  "edf_seconds": 29966.0,
+  "edf_full_epochs": 998,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 998,
+  "stage_counts": {
+   "Wake": 35,
+   "NREM1": 54,
+   "NREM2": 521,
+   "NREM3": 98,
+   "REM": 290
+  },
+  "ties_resolved_by_e1": 33,
+  "edf_startdate": "19.04.22",
+  "edf_starttime": "00.04.00",
+  "edf_recording_field": "Startdate 19-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "1b89d0f026d0b616e62d38e953946657d91fda248e23e6321ba042cf47e75dc9",
+    "txt": "ced16ee25004f7c5713c6830bd4e9c1ae6024b3bc97208ec0748fca45d3dfb91"
+   },
+   "E2": {
+    "csv": "85ff7d651cc4122e8f0de87dd9f1d044f59af82e10ad78c45de67b5c1b6683ba",
+    "txt": "81f708e6c3a8c6adc4b788d81b8ff1c561647c88dcad661479040f76ab5e6f69"
+   },
+   "E3": {
+    "csv": "3cea3779b7e7a2f44194d138925109cca03fdda3fbffedde8270bc3f1787a8ef",
+    "txt": "8f422e1ccfdfa459cbe971f0a8006f58276bda65936dab6ae69f0c09718ea36d"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP007_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1094,
+   1094,
+   1094
+  ],
+  "consensus_epochs": 1094,
+  "edf_seconds": 32828.0,
+  "edf_full_epochs": 1094,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1094,
+  "stage_counts": {
+   "Wake": 151,
+   "NREM1": 118,
+   "NREM2": 535,
+   "NREM3": 76,
+   "REM": 214
+  },
+  "ties_resolved_by_e1": 21,
+  "edf_startdate": "26.04.22",
+  "edf_starttime": "23.14.00",
+  "edf_recording_field": "Startdate 26-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "748469826d01eb3110905db53ec82941ce92e94c50395a44a842c52c36fd2f86",
+    "txt": "e44d880cbfc72653730e528c5451986f7144a5a187f4bb15138cb5fbbeabcf30"
+   },
+   "E2": {
+    "csv": "d6ca82d57b211acc88367d5495ceb0ff4ce0e565d28b0c4ef06b9717582af15f",
+    "txt": "28a0b3c98363fb94f80fca4c0026a39e4ec65c62a0ae5c9e355bec93f2754866"
+   },
+   "E3": {
+    "csv": "139867213f10e7fed7e86d40978a672a5599edabd2294c58414e97465fc63c3e",
+    "txt": "3c478843b26c9739e814aae2af6511551a5b26b42f075964c8dbfc3eadee4207"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP008_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   964,
+   964,
+   964
+  ],
+  "consensus_epochs": 964,
+  "edf_seconds": 28940.0,
+  "edf_full_epochs": 964,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 1,
+  "n_scored": 963,
+  "stage_counts": {
+   "Wake": 209,
+   "NREM1": 80,
+   "NREM2": 342,
+   "NREM3": 202,
+   "REM": 130
+  },
+  "ties_resolved_by_e1": 40,
+  "edf_startdate": "21.04.22",
+  "edf_starttime": "00.06.00",
+  "edf_recording_field": "Startdate 21-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "c31212d4af00801d01f4711b2495c8544e0ca55345444db2fcc4487e1f70455d",
+    "txt": "38905fc661a2bded1248acca852d6643d10a64efc2bc80f64bdbaf0bf49c001d"
+   },
+   "E2": {
+    "csv": "3cbda8197ab9a7147fb694280356d65afe9ddeaa434f754ca56f894bde4d3999",
+    "txt": "0c16fcb11346e638eff0e79e392d5cb596b40e9542dfa3f30bc3bd8e65a71111"
+   },
+   "E3": {
+    "csv": "141c5aa57e04d47e34f7b11a5fb44ad72fd3c3f14a9d01f518992a61c615f591",
+    "txt": "cbb1bb0b67513397822fc971d13f9ca7245a2d12cb1c1ce920731939794bf952"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP008_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1052,
+   1052,
+   1052
+  ],
+  "consensus_epochs": 1052,
+  "edf_seconds": 31573.0,
+  "edf_full_epochs": 1052,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1052,
+  "stage_counts": {
+   "Wake": 317,
+   "NREM1": 75,
+   "NREM2": 360,
+   "NREM3": 145,
+   "REM": 155
+  },
+  "ties_resolved_by_e1": 7,
+  "edf_startdate": "21.04.22",
+  "edf_starttime": "23.20.00",
+  "edf_recording_field": "Startdate 21-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "fef6e40c2a8389912caec6c416c6876da58cfa98dfc53469e56be243a2bab3aa",
+    "txt": "e7fb19bfba1ff368ff38102a0e8ee478ad8bc4b5ce1fd76828d0137e35f98a19"
+   },
+   "E2": {
+    "csv": "1b597afa9f9f661ed78d2676b9db8706f64186dec1bcbeaf5f46c7a4f6bfe39a",
+    "txt": "9858748cd653b17dcfb185d24d05acf3ff59d95d356363c327e37b04ebc7b2e9"
+   },
+   "E3": {
+    "csv": "321df1f1da6b16a4296772430604553d0599feb69f0e2aa45034dfe9b07a9288",
+    "txt": "065efb83ff354d1de4c17f4562795fe4aea3b2ac84fb5f9e4951bbd1e6f4468d"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP009_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1242,
+   1242,
+   1242
+  ],
+  "consensus_epochs": 1242,
+  "edf_seconds": 37277.0,
+  "edf_full_epochs": 1242,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1242,
+  "stage_counts": {
+   "Wake": 85,
+   "NREM1": 48,
+   "NREM2": 442,
+   "NREM3": 356,
+   "REM": 311
+  },
+  "ties_resolved_by_e1": 16,
+  "edf_startdate": "15.04.22",
+  "edf_starttime": "23.34.00",
+  "edf_recording_field": "Startdate 15-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "0e743da287344f250736b338f3ced6b525808abb88544300d590ccf0353ff431",
+    "txt": "47bfed428819c826be1385f0f6049759af8ad01931a719d3ce7d593e5147e45b"
+   },
+   "E2": {
+    "csv": "a8a5a9fcd84044ee920c8e651b1f16d79a2d81f4ef01518c20bb88c7b1361ece",
+    "txt": "1e8a80a0c096bd81180707e6e305f7a0e04fd77754a05266d02a4c26b7dcec75"
+   },
+   "E3": {
+    "csv": "369a8006353ed1929e2924e1dcd90378e424c297d76d29097f3f377b2db8ed0e",
+    "txt": "fd21097669863ac8429b56ac8d7ad01c72b91c9bbf4b7fbfbd1042951622d193"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP009_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1150,
+   1150,
+   1150
+  ],
+  "consensus_epochs": 1150,
+  "edf_seconds": 34525.0,
+  "edf_full_epochs": 1150,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1150,
+  "stage_counts": {
+   "Wake": 159,
+   "NREM1": 57,
+   "NREM2": 413,
+   "NREM3": 273,
+   "REM": 248
+  },
+  "ties_resolved_by_e1": 26,
+  "edf_startdate": "16.04.22",
+  "edf_starttime": "23.23.00",
+  "edf_recording_field": "Startdate 16-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "eb254044c5199f289e877281e2e985d42fe009c18fe6c6f62350e7c49029e0d1",
+    "txt": "2430c8dc18ec263d9c7ad947a353b55329375e4600898d9b15a96eb1099e0cf8"
+   },
+   "E2": {
+    "csv": "d9d7bf3903fd7a7a1f4e14a374237954c04967753fa5876b8ce523b0901d8231",
+    "txt": "f9843183c1cfa2871353f485d5f47685d51b3598eb99fa773e75f7099d5be19a"
+   },
+   "E3": {
+    "csv": "d82414142752331c4b48be94b60af6c0bd2220b479b34bacd81b900edb49125d",
+    "txt": "58bc8f99e0a847d2d2fbe55cd35f09823061eda0e1bd4a7241bd46b3fbf694b7"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP010_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1082,
+   1087,
+   1087
+  ],
+  "consensus_epochs": 1082,
+  "edf_seconds": 32626.0,
+  "edf_full_epochs": 1087,
+  "edf_minus_label_epochs": 5,
+  "expert_len_spread": 5,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 269,
+  "n_scored": 813,
+  "stage_counts": {
+   "Wake": 81,
+   "NREM1": 54,
+   "NREM2": 459,
+   "NREM3": 144,
+   "REM": 75
+  },
+  "ties_resolved_by_e1": 213,
+  "edf_startdate": "01.05.22",
+  "edf_starttime": "23.19.00",
+  "edf_recording_field": "Startdate 01-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "3a9236974e3cca12892eaaa0ee14440c16293d9ccc1224b48fa3a391254308c8",
+    "txt": "9ab0f02d22acb4fc755ed9a7fb4200de820e6293262c3996f9ecb5813160098c"
+   },
+   "E2": {
+    "csv": "2c220d299f6a8f101cb76ff08666f92366271fffc147f079737dca6b8f39011f",
+    "txt": "04fc8062528922abe5e83a3ef4e02410f3b622c0b1ac145b3d918761117eeef5"
+   },
+   "E3": {
+    "csv": "b2596f42504f095295b7fe1e8f7c1d9616a2c3b5074dd4f8ac4ec494404155ce",
+    "txt": "9eb3493cd82a89f5f91c71ff7bda41222cbc660532de0f9a3616d12091235579"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP010_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1082,
+   1082,
+   1082
+  ],
+  "consensus_epochs": 1082,
+  "edf_seconds": 32473.0,
+  "edf_full_epochs": 1082,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1082,
+  "stage_counts": {
+   "Wake": 139,
+   "NREM1": 97,
+   "NREM2": 480,
+   "NREM3": 210,
+   "REM": 156
+  },
+  "ties_resolved_by_e1": 21,
+  "edf_startdate": "02.05.22",
+  "edf_starttime": "23.30.00",
+  "edf_recording_field": "Startdate 02-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "022b010edede650b9525ccdcfa86b19fc57f46bf5fe6fb4b55ddfb755d8b82a8",
+    "txt": "0e45a45f4788f6723e2116e10fddce41dad1d84f623845fbb1a46a979dcae072"
+   },
+   "E2": {
+    "csv": "a85d3ac7487749120211692c0683d76bd347e0bfc7ebf0b75ccac3019b17998b",
+    "txt": "b0c74c8eb529d117453f8a5ba8eb511c2111d0fc11be1e3c1bbfe10dc472f35b"
+   },
+   "E3": {
+    "csv": "dc29d6da0f967dd92f0a9a31c39bbf3afb1cdf8f357df671aac64b823fc0c912",
+    "txt": "20269457fbe9e0e36ba32a8866558a6017ce1f8dd63130991bd4931167d5fed6"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP011_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1022,
+   1022,
+   1022
+  ],
+  "consensus_epochs": 1022,
+  "edf_seconds": 30672.0,
+  "edf_full_epochs": 1022,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1022,
+  "stage_counts": {
+   "Wake": 78,
+   "NREM1": 96,
+   "NREM2": 484,
+   "NREM3": 221,
+   "REM": 143
+  },
+  "ties_resolved_by_e1": 23,
+  "edf_startdate": "29.04.22",
+  "edf_starttime": "23.29.00",
+  "edf_recording_field": "Startdate 29-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "090a15c60269cbc0cbf9b26a7a3872631ff7ab75f5c985ef559a3c61874ad070",
+    "txt": "7c9c43c2f621656abcff647225038cf931b8b1ad0864e6a442882525133df3af"
+   },
+   "E2": {
+    "csv": "0e665ba0a6bde8edeca5893e862b60ad1dd1869ad1ed1f5d0c0c36a3a400e95a",
+    "txt": "5632df3cfff8ad9cdd0531381caab9dfeb83195e5ee0418482af3109579f34f2"
+   },
+   "E3": {
+    "csv": "ad9b1d1bdc2363e92cc4ce7f2424c350ff93776d893557c2ddc7fca2b626be68",
+    "txt": "0c846953a93c3bb8133bdb19682566c1050813377420477107c67a46ecd90b95"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP011_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1078,
+   1078,
+   1078
+  ],
+  "consensus_epochs": 1078,
+  "edf_seconds": 32368.0,
+  "edf_full_epochs": 1078,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1078,
+  "stage_counts": {
+   "Wake": 140,
+   "NREM1": 136,
+   "NREM2": 529,
+   "NREM3": 115,
+   "REM": 158
+  },
+  "ties_resolved_by_e1": 30,
+  "edf_startdate": "30.04.22",
+  "edf_starttime": "23.23.00",
+  "edf_recording_field": "Startdate 30-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "961734723f772489957ffbdcfc8d857e0ac94666780a594f67aae44a389d0025",
+    "txt": "e99f93529e43cb0bad2502684b5a5d26c4e36d19892ed185ec28641b6c145de8"
+   },
+   "E2": {
+    "csv": "4587fac41b939ad1fe3b0c1b43ec4c2c5959199ad660af5e109c754cad4250e9",
+    "txt": "0d0cc93fffa0a2bad0499ba98fee3b4a75b2a058c44fe473e8da724af6bd7692"
+   },
+   "E3": {
+    "csv": "f624796e7f6f9550b33afe09919c5ea926eb5b1d548fbe99e4d608464b8faf82",
+    "txt": "9a85eb71e52cf0429a802c0891342b96c5ca850d56306d41909eb4d172c597d1"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP012_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1099,
+   1099,
+   1099
+  ],
+  "consensus_epochs": 1099,
+  "edf_seconds": 32986.0,
+  "edf_full_epochs": 1099,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1099,
+  "stage_counts": {
+   "Wake": 303,
+   "NREM1": 158,
+   "NREM2": 374,
+   "NREM3": 120,
+   "REM": 144
+  },
+  "ties_resolved_by_e1": 25,
+  "edf_startdate": "27.04.22",
+  "edf_starttime": "23.21.00",
+  "edf_recording_field": "Startdate 27-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "f12e7238e0efc58107d3258842dfcf065fc0f510c16d2fc7628d92a00052bf71",
+    "txt": "f9f89674ea5e5ee9a2bc9c59637cd4c052f82ad02b12edc8e50c8cfcbab019ca"
+   },
+   "E2": {
+    "csv": "417e4894e919ce010243f86b741fed069b73f3441ad53dfb20c3073741ca0a0a",
+    "txt": "5eaa0868bc6c96920a23651cd22b749bc6943000c79c3375422f33d79995e560"
+   },
+   "E3": {
+    "csv": "5f3085f70cd3da73efaf532a55ad43b09099c7ce23df36d1a78775cb2624305e",
+    "txt": "856d14a28d8528719bd0ee85538e2bf17689d0d638f579c861c178c4e29f65c7"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP012_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1099,
+   1099,
+   1099
+  ],
+  "consensus_epochs": 1099,
+  "edf_seconds": 32988.0,
+  "edf_full_epochs": 1099,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1099,
+  "stage_counts": {
+   "Wake": 222,
+   "NREM1": 90,
+   "NREM2": 458,
+   "NREM3": 92,
+   "REM": 237
+  },
+  "ties_resolved_by_e1": 25,
+  "edf_startdate": "28.04.22",
+  "edf_starttime": "23.15.00",
+  "edf_recording_field": "Startdate 28-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "f1d6f81b216807e1633d8bf565cdbbebb86f722d552d921d95c912715dce15bd",
+    "txt": "267a9dce34ac36bb1ea65571853a3f576dcb09214c2bb19a27deaf3521c90b41"
+   },
+   "E2": {
+    "csv": "a25942aa70ca9a0a2142d91ad81f1f5880363c1dc8d82c7435748e5ec9109a3d",
+    "txt": "2079f4a80a9fbd1e04d38367d9f3f2f7730fcc8e228f4b117795e4bd302a8585"
+   },
+   "E3": {
+    "csv": "359e014933f5d775ef3ee774cc784024c47421e564b667558a9b59753b440b83",
+    "txt": "4738c1e49710b53e1aba0f0cd480903e66a285716ac2b04395bdf9f8cc735342"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP013_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1122,
+   1122,
+   1122
+  ],
+  "consensus_epochs": 1122,
+  "edf_seconds": 33677.0,
+  "edf_full_epochs": 1122,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   "Wake\t33660\t33660",
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1122,
+  "stage_counts": {
+   "Wake": 172,
+   "NREM1": 128,
+   "NREM2": 386,
+   "NREM3": 212,
+   "REM": 224
+  },
+  "ties_resolved_by_e1": 5,
+  "edf_startdate": "14.04.22",
+  "edf_starttime": "23.29.00",
+  "edf_recording_field": "Startdate 14-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "77429b70b9dd4612f38063214822d67d7ee667c16f60c41fc7d8c2fae2909eb1",
+    "txt": "436d5118fcdc4339041fcf35b51bbdafe561bac1eeb6d275d8d56c99ea386332"
+   },
+   "E2": {
+    "csv": "c77408d22a6fe5fa52052195babfb5786132657f82a693720384841372d6ae90",
+    "txt": "372e215af8ffdcbadbc96c751929bc067736e27ba8367744fcac8be95de9136a"
+   },
+   "E3": {
+    "csv": "13baf7541a6c0c2686c5c8129c34867bf9a24dccd07fc85578db5d247a69cdaf",
+    "txt": "afa355fd1152bea70403f87b19230ea06aab90eadfb8e1d86997641b8ddb0b43"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP013_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1118,
+   1118,
+   1118
+  ],
+  "consensus_epochs": 1118,
+  "edf_seconds": 33544.0,
+  "edf_full_epochs": 1118,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1118,
+  "stage_counts": {
+   "Wake": 57,
+   "NREM1": 73,
+   "NREM2": 502,
+   "NREM3": 224,
+   "REM": 262
+  },
+  "ties_resolved_by_e1": 11,
+  "edf_startdate": "19.04.22",
+  "edf_starttime": "23.20.00",
+  "edf_recording_field": "Startdate 19-APR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "4bd198e0edb64ec58be302f4c666d8f16f3e3de020230dd829146704b4414744",
+    "txt": "d5cd763e8ffe8d34216fd000c61fa2d070ec09d7587f15b7ea0674c672bbbccb"
+   },
+   "E2": {
+    "csv": "a08f0cf08cd5e744e599dd48e20cfe4f00775154a893688f710227e18669fcd0",
+    "txt": "c34328f8c1b68025d2adec6ec012838e7771955c3fee31c342b714fd19315334"
+   },
+   "E3": {
+    "csv": "171ee2a0f647a81fab115397adaa5d7bfb50ddc87a735ff9dece4e2ea7ccfad7",
+    "txt": "63fdd18c834971be92749128af464e7f1bb277cc95bc29aebacc3fca7973f233"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP014_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   519,
+   519,
+   519
+  ],
+  "consensus_epochs": 519,
+  "edf_seconds": 15573.0,
+  "edf_full_epochs": 519,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 78,
+  "n_scored": 441,
+  "stage_counts": {
+   "Wake": 20,
+   "NREM1": 30,
+   "NREM2": 232,
+   "NREM3": 98,
+   "REM": 61
+  },
+  "ties_resolved_by_e1": 9,
+  "edf_startdate": "30.03.22",
+  "edf_starttime": "23.41.00",
+  "edf_recording_field": "Startdate 30-MAR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "d4ff0ecd32d1ac4e118af6af8efa0f2325c51b840be0d888af1d3fd9b3f99a8a",
+    "txt": "2226d316a14941a3dbceec7eff1e2136d5ddcb28d5823e6d7be3811b9dae4767"
+   },
+   "E2": {
+    "csv": "0ff64ad2007d12e0d12aab9b0db6fbffb7293b22d6ca3adf12c287a35970fe79",
+    "txt": "8742f0b5569080019cb93f6dc39f28b4da510bfffb95814683f9397b045c5a8c"
+   },
+   "E3": {
+    "csv": "b7f6d98af8929c64afd2c0c5efb0187ebf663a2771b1b2b671f111304e39ec5f",
+    "txt": "f9430ad8e090af52a16f8fedc1feaf92e79515a5f93c73b5223fec3901737e9b"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP014_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   976,
+   976,
+   976
+  ],
+  "consensus_epochs": 976,
+  "edf_seconds": 29295.0,
+  "edf_full_epochs": 976,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 108,
+  "n_scored": 868,
+  "stage_counts": {
+   "Wake": 66,
+   "NREM1": 101,
+   "NREM2": 373,
+   "NREM3": 162,
+   "REM": 166
+  },
+  "ties_resolved_by_e1": 10,
+  "edf_startdate": "31.03.22",
+  "edf_starttime": "23.21.00",
+  "edf_recording_field": "Startdate 31-MAR-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "acec0983f2cb9c140c839368b46d5e98635ba651813c8cff016ca5ce164f5212",
+    "txt": "8a769deae7450f4249e90173f802f65bd68966d460a7985a8fbe74b8e8422c45"
+   },
+   "E2": {
+    "csv": "c520af3c038ed54b5134fb2a28c4f767b09a71086a6b96b1fdb3b6f05f9160fb",
+    "txt": "036714f49efb52354c9cbff3122711d9d69bdea30a093d8cbfcae1bcf54109da"
+   },
+   "E3": {
+    "csv": "eeb7cd23de1b869e774a5dc8099bd69a89ad8b4eb83d43f3a3edbbb444fbf0aa",
+    "txt": "eef623b094177212e7aca2b5465c450a46ec2ef8afb4107983512288c3a50d69"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP015_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1061,
+   1061,
+   1061
+  ],
+  "consensus_epochs": 1061,
+  "edf_seconds": 31857.0,
+  "edf_full_epochs": 1061,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1061,
+  "stage_counts": {
+   "Wake": 112,
+   "NREM1": 104,
+   "NREM2": 399,
+   "NREM3": 214,
+   "REM": 232
+  },
+  "ties_resolved_by_e1": 12,
+  "edf_startdate": "05.05.22",
+  "edf_starttime": "23.20.00",
+  "edf_recording_field": "Startdate 05-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "d498943b068a5895a7f97f0273457ebba96a04b0ed9ca919b4fb061db1aa4ac4",
+    "txt": "8c4e0c1559497db0c55d71361f789837e26c3eec6baba54c0a66876c61b36648"
+   },
+   "E2": {
+    "csv": "42117ccd472cb6331101378eaf880799c80e016763ea6c0865dfc4f8a8d52aaf",
+    "txt": "462fa32cf02c6a8f549e8e4ae75b5a905199acc52a66efc1269c7a0423c5e4c2"
+   },
+   "E3": {
+    "csv": "c23b6a16320f53ae7b7110a9185602386ab8bb821963aa04abe126fac48192e2",
+    "txt": "361f41866ead7763cf0c49bb1a551d1ca0794e3f8a79e3b486a9cf8d6b84da09"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP015_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1037,
+   1037,
+   1037
+  ],
+  "consensus_epochs": 1037,
+  "edf_seconds": 31110.0,
+  "edf_full_epochs": 1037,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1037,
+  "stage_counts": {
+   "Wake": 190,
+   "NREM1": 85,
+   "NREM2": 353,
+   "NREM3": 209,
+   "REM": 200
+  },
+  "ties_resolved_by_e1": 14,
+  "edf_startdate": "06.05.22",
+  "edf_starttime": "23.23.00",
+  "edf_recording_field": "Startdate 06-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "999a8fa67f20d5d65e408e118d3c9f848f77cecfba0757318e5fe675f39e60f4",
+    "txt": "869f9d08ead37007f15b565533a711b357430e22b0498c0c1abfd5ff48fc3a64"
+   },
+   "E2": {
+    "csv": "f629489d69cbeae1820c23365a5a57c7745f4a5e9b3749b868f9d72aec67ffbf",
+    "txt": "0e21b8488278b19c323c487f146bb853ba4c2522fd800b3194e7d9f0a9b40866"
+   },
+   "E3": {
+    "csv": "83973a385c63150caac43b7143066eea95c07258ac796a535f1a39e716777833",
+    "txt": "382151798050941140fa6b94a1b7a1c986a7199c2caf69d711e9fa56aea833fe"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP016_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1188,
+   1188,
+   1188
+  ],
+  "consensus_epochs": 1188,
+  "edf_seconds": 35648.0,
+  "edf_full_epochs": 1188,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1188,
+  "stage_counts": {
+   "Wake": 97,
+   "NREM1": 40,
+   "NREM2": 667,
+   "NREM3": 211,
+   "REM": 173
+  },
+  "ties_resolved_by_e1": 9,
+  "edf_startdate": "09.05.22",
+  "edf_starttime": "23.21.00",
+  "edf_recording_field": "Startdate 09-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "615cdbf0b6a041656d6005416219f9d3acad80cdaaeba5a833a8159207dee69f",
+    "txt": "3f6f6aa2fdef1fd78b1e6e8997f91e671661e55bd237480862acc4900a23f946"
+   },
+   "E2": {
+    "csv": "faec33915256c115e181a1901c38924473786ac4125f86b46572c5e03a451e2d",
+    "txt": "5379d6795f33aed57a8d4bd93b166aeed91251ef98a1171542b82ac28a3c25a8"
+   },
+   "E3": {
+    "csv": "7bd7a87900d1eed60e421e18b9f5124ad7c867213f21f51c0e10ba188cac8ace",
+    "txt": "64b2c278e67ed4888d73ea572a06bfd22a18dc6d491d40a65218827e7032550c"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP016_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1213,
+   1213,
+   1213
+  ],
+  "consensus_epochs": 1213,
+  "edf_seconds": 36393.0,
+  "edf_full_epochs": 1213,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1213,
+  "stage_counts": {
+   "Wake": 98,
+   "NREM1": 46,
+   "NREM2": 698,
+   "NREM3": 180,
+   "REM": 191
+  },
+  "ties_resolved_by_e1": 17,
+  "edf_startdate": "10.05.22",
+  "edf_starttime": "23.14.00",
+  "edf_recording_field": "Startdate 10-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "659f735a4bafdf2230afa42e440fa0987fd16513cd08f4b06279b3be29939e80",
+    "txt": "41380670d2dc07fbf499c6b3b1e745e01df306eaed2b8215e60e99458d5fe56d"
+   },
+   "E2": {
+    "csv": "790560b464caf610ced0629c268ccbe940038507faaca7bae5d11ff74dfb24d3",
+    "txt": "c46b190c9341c294968b055dad11c97908a855ce8b078ee9d460b316d318b4de"
+   },
+   "E3": {
+    "csv": "be757d725bcd6d0acbe0113f41553ecf7174a118d47bbb710207c6d0cc764a18",
+    "txt": "09a2605b52e64c50b2c5694e905f8c0abfef3e8913ce55556e6f736c445ef1e3"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP017_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1060,
+   1060,
+   1060
+  ],
+  "consensus_epochs": 1060,
+  "edf_seconds": 31828.0,
+  "edf_full_epochs": 1060,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1060,
+  "stage_counts": {
+   "Wake": 154,
+   "NREM1": 26,
+   "NREM2": 420,
+   "NREM3": 194,
+   "REM": 266
+  },
+  "ties_resolved_by_e1": 5,
+  "edf_startdate": "15.05.22",
+  "edf_starttime": "23.23.00",
+  "edf_recording_field": "Startdate 15-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "7a5e9fe4560ca78da4b75d8fdcc95345c08f0919965f857269a1bb6254fc187a",
+    "txt": "7253d3c5b61af1c5b3ee751953849fea8a82c78cc37c71ae1f40c4fa4a0099e4"
+   },
+   "E2": {
+    "csv": "8f4e3428db220bede155396137dbd954be5519855b117902b06487863ec99124",
+    "txt": "248bfce4bb257d7cb9c371d9d1035bed1928669ac2d884e5680d1c5cfeba75db"
+   },
+   "E3": {
+    "csv": "97577ec3b9238a61f8c85ae4590eb37bb6e2efc6b78b844df7e948bf79434755",
+    "txt": "4686cf2d193f9f550b8d53911c013afdbbf591f4f8c45d726bd371852e9d9623"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP017_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1071,
+   1071,
+   1071
+  ],
+  "consensus_epochs": 1071,
+  "edf_seconds": 32139.0,
+  "edf_full_epochs": 1071,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1071,
+  "stage_counts": {
+   "Wake": 73,
+   "NREM1": 31,
+   "NREM2": 517,
+   "NREM3": 177,
+   "REM": 273
+  },
+  "ties_resolved_by_e1": 8,
+  "edf_startdate": "16.05.22",
+  "edf_starttime": "23.31.00",
+  "edf_recording_field": "Startdate 16-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "654cc43666ba042b590281e720d712f4d09398092c648494357240c9b4408770",
+    "txt": "adca2ea8c041a45ce781ee08f1dec2c5396bd2761a4d60f5e121469f3cb442d4"
+   },
+   "E2": {
+    "csv": "4f63e2c7c5653a461e0759894d3d80287e70c8feb060e4e1f3611bbcad3066f1",
+    "txt": "567634c596f3d18de596d80051516114193532e2d02b250193e7f2114bfb9607"
+   },
+   "E3": {
+    "csv": "cea63e98d566faaced1aa7229756f8f5b77455ff695af01ab6e761b6f7bef24f",
+    "txt": "34aaf97de465acf9c5163840041aff64e88cf58f61e37b35a273449ced0899e1"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP018_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1092,
+   1092,
+   1092
+  ],
+  "consensus_epochs": 1092,
+  "edf_seconds": 32785.0,
+  "edf_full_epochs": 1092,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1092,
+  "stage_counts": {
+   "Wake": 97,
+   "NREM1": 60,
+   "NREM2": 607,
+   "NREM3": 68,
+   "REM": 260
+  },
+  "ties_resolved_by_e1": 4,
+  "edf_startdate": "07.05.22",
+  "edf_starttime": "23.20.00",
+  "edf_recording_field": "Startdate 07-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "b8583c3d849e311d8606544ef631540577ce73182ae17005ed9e3eceb7666d46",
+    "txt": "928c34ddf50e38d45bd204f1259c83bf306f5b4a9496e33434c208d1c381e856"
+   },
+   "E2": {
+    "csv": "61006c6ea48d5d98381740b51caf315dbf00dabcd7569a920948fde0ee2e0348",
+    "txt": "4cb4a7283f4e66cec886f1482fe0d2c5a456b428d1d4f4d1f566330be8b7317d"
+   },
+   "E3": {
+    "csv": "dc4f0041c82e1bd4459efa96298f40323e5b83cd42b03f6ec6592021a32d2143",
+    "txt": "0f78be6fa9ff84f0850993ccb430ff0a5c8f56295c6aed70acab85b390031cfb"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP018_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1037,
+   1037,
+   1037
+  ],
+  "consensus_epochs": 1037,
+  "edf_seconds": 31126.0,
+  "edf_full_epochs": 1037,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1037,
+  "stage_counts": {
+   "Wake": 265,
+   "NREM1": 67,
+   "NREM2": 460,
+   "NREM3": 65,
+   "REM": 180
+  },
+  "ties_resolved_by_e1": 6,
+  "edf_startdate": "08.05.22",
+  "edf_starttime": "23.32.00",
+  "edf_recording_field": "Startdate 08-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "1225bb8d5c9c5ff61f9569c194e100d7d6b060fab50b0f0b4b11cc28853bd86e",
+    "txt": "d0713742ee6ce154d932981600fb047b70acf62801b298e9dc3d1aecea47074f"
+   },
+   "E2": {
+    "csv": "c6e1a4e1720bab8c273ae3271d16b9037a67c639f0e2850c1f743258876b35be",
+    "txt": "9f1e1327d95dbcb7327b5ae90d27e9978d14a6fccd4dd62395466b7ab4c296b7"
+   },
+   "E3": {
+    "csv": "7983fc3af0e5461cc646e4d9703d57f6008ad2de454ef9f97253fc549fe2b111",
+    "txt": "1172799581ffb82bf5cf92ad26d71031ccfbb6a460dc066f5511e563eea3429b"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP019_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1219,
+   1219,
+   1219
+  ],
+  "consensus_epochs": 1219,
+  "edf_seconds": 36570.0,
+  "edf_full_epochs": 1219,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1219,
+  "stage_counts": {
+   "Wake": 148,
+   "NREM1": 72,
+   "NREM2": 544,
+   "NREM3": 184,
+   "REM": 271
+  },
+  "ties_resolved_by_e1": 9,
+  "edf_startdate": "13.05.22",
+  "edf_starttime": "23.25.00",
+  "edf_recording_field": "Startdate 13-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "841f82622d0a47018a0374ba8619063beed3ca337fa9e282e2e20f08c72ed3da",
+    "txt": "32bc9f48c373473b31b526a2a676b7b87396121cd4bf322b91340b081091381c"
+   },
+   "E2": {
+    "csv": "1dfff0815c643cebc063ac7807105d8cf4929e31d455e489553a5b815e185615",
+    "txt": "8b4115caa2a080909eadd55dd169c586bd26d3bb384460a0e558da04e642ce03"
+   },
+   "E3": {
+    "csv": "354bd5d34c2287eb9475a876ff893a680b1d156d728fa9825ff37c25a295fe9d",
+    "txt": "b98c283cbb12c60d559dc3acc884971b655874a1a1aac4f3e18f89d389a0977c"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP019_Day2",
+  "status": "used",
+  "available_days": [
+   1,
+   2,
+   3
+  ],
+  "expert_epochs": [
+   1293,
+   1293,
+   1293
+  ],
+  "consensus_epochs": 1293,
+  "edf_seconds": 38792.0,
+  "edf_full_epochs": 1293,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 1293,
+  "stage_counts": {
+   "Wake": 95,
+   "NREM1": 92,
+   "NREM2": 670,
+   "NREM3": 151,
+   "REM": 285
+  },
+  "ties_resolved_by_e1": 15,
+  "edf_startdate": "15.05.22",
+  "edf_starttime": "00.05.00",
+  "edf_recording_field": "Startdate 15-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "9a521e743027bb349f6cf4e20ecee2100c425315da043f2cd00cdfbcf37f0c66",
+    "txt": "54b58bf05a89d5f857b27c8f6f3cd584f8d7ecd5c5d0bc748fd82afef6a762b2"
+   },
+   "E2": {
+    "csv": "ceb80e7af87284fa089b24e6901f7ed6f2baa6e5a949066d0f6673a7e4fb8d64",
+    "txt": "a1914a86f374025511b1748528d6b16829dc6f4056c84113c52a45d6f139ef4b"
+   },
+   "E3": {
+    "csv": "e05673c8c3046e450a4282b788e7519ef166f160e11244ace844b6b4a4d2902a",
+    "txt": "be56fdb46e7e6a5a3c1195329529cbc73a4f77dbea582afafdb2b6b56dd4c6e9"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP020_Day1",
+  "status": "used",
+  "available_days": [
+   1,
+   3
+  ],
+  "expert_epochs": [
+   769,
+   769,
+   769
+  ],
+  "consensus_epochs": 769,
+  "edf_seconds": 23089.0,
+  "edf_full_epochs": 769,
+  "edf_minus_label_epochs": 0,
+  "expert_len_spread": 0,
+  "tail_zero_length_intervals": [
+   null,
+   null,
+   null
+  ],
+  "n_notscored": 0,
+  "n_scored": 769,
+  "stage_counts": {
+   "Wake": 218,
+   "NREM1": 34,
+   "NREM2": 326,
+   "NREM3": 113,
+   "REM": 78
+  },
+  "ties_resolved_by_e1": 66,
+  "edf_startdate": "04.05.22",
+  "edf_starttime": "23.15.00",
+  "edf_recording_field": "Startdate 04-MAY-2022 X X X",
+  "edf_labels": [
+   "C4-A1",
+   "F4-A1",
+   "FT8-A1",
+   "O2-A1",
+   "P4-A1",
+   "EMG",
+   "EOG-R",
+   "EOG-L",
+   "EDF Annotations"
+  ],
+  "edf_units": [
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   "uV",
+   ""
+  ],
+  "edf_fs": [
+   57.0,
+   500.0
+  ],
+  "label_sha256": {
+   "E1": {
+    "csv": "9204921adb321279a9a9b411bf24ccb93c5702bf6e300a0378f8ad625c00be8d",
+    "txt": "e099e8918708f0322d2b36ad116bcb705ffa59bdcabf3006c747a31c40a94113"
+   },
+   "E2": {
+    "csv": "7f5ecb9802a9ae5f26fb735291688bd1377729a3361560786577fe5413b76338",
+    "txt": "453abac3e87761b1af6fcad27ecc8ce46a4ff1f46522812346427567ca504c08"
+   },
+   "E3": {
+    "csv": "4341c9dc935b5a44d26d63b2dd659b6b5b1aa27feeef52e734e6d597f6090e48",
+    "txt": "ee8f1ad5cafb1f1f4d21a0dd3816359a1a3f85c204c2e9f05993302f75dd820e"
+   }
+  },
+  "unit_F4-A1": "uV",
+  "unit_EOG-R": "uV",
+  "unit_EOG-L": "uV"
+ },
+ {
+  "night": "SLP020_Day2",
+  "status": "missing",
+  "missing_marked_no_data": true,
+  "available_days": [
+   1,
+   3
+  ]
+ }
+]

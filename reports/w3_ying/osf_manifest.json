@@ -1,0 +1,276 @@
+{
+  "node": "gx36m",
+  "retrieved_utc": "2026-11-28T08:33:17Z",
+  "files": [
+    {
+      "name": "Code availability.zip",
+      "size": 8875,
+      "sha256": "b374516801eed2b657b5c5c8a6abbca18d5adaf1c8f7c1b09dd30d18afa01231",
+      "md5": "e6d04e8980cd2ba3ae5de75089e5b925",
+      "osf_date_created": "2024-11-25T09:13:44.817562Z",
+      "osf_date_modified": "2024-11-25T09:13:44.817562",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "Details information for subjects by Expert1.xlsx",
+      "size": 16851,
+      "sha256": "9a1f19d487876a41f5dad9ac10ad3ae6991616f6f307218d28015ead1a9d566c",
+      "md5": "e723126b95f5218d950fe4febcc80600",
+      "osf_date_created": "2024-11-25T09:12:42.842145Z",
+      "osf_date_modified": "2024-11-25T09:12:42.842145",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "Details information for subjects by Expert2.xlsx",
+      "size": 16760,
+      "sha256": "b013856228f317329084e306d03b8f959d4467f97698ad116ed3b9c8ebb16c5b",
+      "md5": "f7e94ff02afeaf24613646eac12c5fb0",
+      "osf_date_created": "2024-11-25T09:12:42.752654Z",
+      "osf_date_modified": "2024-11-25T09:12:42.752654",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "Details information for subjects by Expert3.xlsx",
+      "size": 16860,
+      "sha256": "7d108eb250c469fbbbcfb9a5318f8816920b758f9b1c6574533f980ec2c0c7ea",
+      "md5": "cfa44bd103333a50ca1cd04d4cc0a147",
+      "osf_date_created": "2024-11-25T09:12:49.275068Z",
+      "osf_date_modified": "2024-11-25T09:12:49.275068",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "Readme.txt",
+      "size": 3473,
+      "sha256": "64d6140dc30980a3ef26a864842485eecc921062fe32c3d73659e9291a8a5cf7",
+      "md5": "fbb889c2f0162582aff72b4016b2fa5a",
+      "osf_date_created": "2024-11-27T07:28:17.798484Z",
+      "osf_date_modified": "2024-11-27T07:28:17.798484",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP001.zip",
+      "size": 256554043,
+      "sha256": "eb6d25200f2185b7f8a5e704558196d7bb3b6f511f6f690e4074440eb98566b7",
+      "md5": "cd5c60c85b5735985bb232a58431eadc",
+      "osf_date_created": "2024-11-25T09:10:13.434147Z",
+      "osf_date_modified": "2024-11-25T09:10:13.434147",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP002.zip",
+      "size": 183426373,
+      "sha256": "a7bb1061dccc0d287fdd517ca4628245427c0fd13728d5f8feea25dbac29cf0a",
+      "md5": "0a527eb22e1d7e13f630140ea6a01cf2",
+      "osf_date_created": "2024-11-25T09:09:29.940089Z",
+      "osf_date_modified": "2024-11-25T09:09:29.940089",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP003.zip",
+      "size": 220693252,
+      "sha256": "56f7ccadf2747d69a0ed0a8b9cd44a13e741d30ca67520e4703dfd931690c1d3",
+      "md5": "e7641c31a49ce87e0f084e088aabdcb8",
+      "osf_date_created": "2024-11-25T09:11:45.016682Z",
+      "osf_date_modified": "2024-11-25T09:11:45.016682",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP004.zip",
+      "size": 91404554,
+      "sha256": "5265ff2723431c0890fcc38678cb013aa42106cc39c42e7c4d1bb66973f8bfb7",
+      "md5": "417ac1f8d529567b0bf61502fc37e4ca",
+      "osf_date_created": "2024-11-25T09:11:19.492343Z",
+      "osf_date_modified": "2024-11-25T09:11:19.492343",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP005.zip",
+      "size": 127885753,
+      "sha256": "fc1b86e85a7e74f24369b2dd7467fb89b8e861ea4805edcf5bba422ad67c87ab",
+      "md5": "eb70affc0c3995a168f75b411579d016",
+      "osf_date_created": "2024-11-25T09:12:13.711858Z",
+      "osf_date_modified": "2024-11-25T09:12:13.711858",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP006.zip",
+      "size": 224211588,
+      "sha256": "62081590a244abe1437132dd9e888e5fcdf098178107c56437cb68ca1b64386e",
+      "md5": "ebb643f203dad1e61042ba82a1430ce2",
+      "osf_date_created": "2024-11-25T10:43:50.922929Z",
+      "osf_date_modified": "2024-11-25T10:43:50.922929",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP007.zip",
+      "size": 200924091,
+      "sha256": "2322b242d196c16e61afb28a1d77948401db33af5532804ac35cff6b50176101",
+      "md5": "510b1a4de05f28d3318228ca3bd908cf",
+      "osf_date_created": "2024-11-25T10:43:44.405149Z",
+      "osf_date_modified": "2024-11-25T10:43:44.405149",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP008.zip",
+      "size": 216651712,
+      "sha256": "c81b87c9aa715661781fc6c2120474dd0459285cb228aba9f955a200b5246bb5",
+      "md5": "200db8c6220e64383fe1ca948cb5f721",
+      "osf_date_created": "2024-11-25T10:45:21.337562Z",
+      "osf_date_modified": "2024-11-25T10:45:21.337562",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP009.zip",
+      "size": 255800729,
+      "sha256": "a95a650f8a2e396a37b16454300c070c0057ce162748a5a5ea0a754c4d5a932a",
+      "md5": "2d0f8d31502926d35284488e10f01339",
+      "osf_date_created": "2024-11-25T10:45:43.946259Z",
+      "osf_date_modified": "2024-11-25T10:45:43.946259",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP010.zip",
+      "size": 183619309,
+      "sha256": "0f1507ddc5c2780c685efb4b2567750e946c508d89f23d1048bdce742dea3c3a",
+      "md5": "28968418293e7f8e5054aa6f5fd720ba",
+      "osf_date_created": "2024-11-25T10:46:19.141197Z",
+      "osf_date_modified": "2024-11-25T10:46:19.141197",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP011.zip",
+      "size": 174613614,
+      "sha256": "dae4ea7baf59df56884738d783713768005edde9284e8343734678b7248ed1eb",
+      "md5": "4af5861cb9537495e4bcaccdc711f330",
+      "osf_date_created": "2024-11-25T10:50:36.548903Z",
+      "osf_date_modified": "2024-11-25T10:50:36.548903",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP012.zip",
+      "size": 197481711,
+      "sha256": "c64f7950e0953c2827e903911dae4f538b7376d6fcbb6483f88feeff45028347",
+      "md5": "0166158516435791ecf7578ef5342d1e",
+      "osf_date_created": "2024-11-25T10:50:36.950202Z",
+      "osf_date_modified": "2024-11-25T10:50:36.950202",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP013.zip",
+      "size": 196637333,
+      "sha256": "c941de8ee1dec10d57bfdaa14a929b778e779b4ea1ba2f7f200c2712f4429b63",
+      "md5": "397d196dd801204c7ad118482c5a33e1",
+      "osf_date_created": "2024-11-25T10:51:36.514466Z",
+      "osf_date_modified": "2024-11-25T10:51:36.514466",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP014.zip",
+      "size": 197483810,
+      "sha256": "26b156db75348034dcf2235709b4aebe137cf1f93749ee9be27cf30464153562",
+      "md5": "32af6ce08ffa69b37b677487153469a8",
+      "osf_date_created": "2024-11-25T10:51:37.256154Z",
+      "osf_date_modified": "2024-11-25T10:51:37.256154",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP015.zip",
+      "size": 159953591,
+      "sha256": "4dac5990fba26922bb5cf546b8384e1782bbdd10de363e22b2d537e0eb4dc2b9",
+      "md5": "5cf16a1c44d01904e4efa2ad57bdbfb5",
+      "osf_date_created": "2024-11-25T10:52:07.183440Z",
+      "osf_date_modified": "2024-11-25T10:52:07.183440",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP016.zip",
+      "size": 260851032,
+      "sha256": "f9b7a90d4be9ea27c6bb493404eb3b58f9ad69e6b3ce8ce7f37823849e240d74",
+      "md5": "4c5671d8a7b39122f853a3ec0a296f33",
+      "osf_date_created": "2024-11-25T10:55:00.207787Z",
+      "osf_date_modified": "2024-11-25T10:55:00.207787",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP017.zip",
+      "size": 255811696,
+      "sha256": "70416b83ce3b7dc53d2b3592a45bf2864b815ca663c59b260599e7b96a0ad47c",
+      "md5": "8d18d40374a79d034e94dfcb5a4647fd",
+      "osf_date_created": "2024-11-25T10:55:00.457679Z",
+      "osf_date_modified": "2024-11-25T10:55:00.457679",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP018.zip",
+      "size": 181989010,
+      "sha256": "ce7f8e01479eea8f70859fb7dc464e5a06caa234cb35cfd0616405cc2bd72dc9",
+      "md5": "7a36f204f6f15c7dd9bb237bee227103",
+      "osf_date_created": "2024-11-25T10:57:27.644784Z",
+      "osf_date_modified": "2024-11-25T10:57:27.644784",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP019.zip",
+      "size": 270771648,
+      "sha256": "b9aa39f7153f910abb574e355894f732232f4625d537d8ccf3728343e78a8e49",
+      "md5": "77b73314a6022f77d90aa9934ac8baa2",
+      "osf_date_created": "2024-11-25T10:58:24.542178Z",
+      "osf_date_modified": "2024-11-25T10:58:24.542178",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "SLP020.zip",
+      "size": 89124153,
+      "sha256": "833581528f82e1727ae09663dd57e6c44cfb0b2d3f29b29f9f8b06a05dc9e08a",
+      "md5": "8d706652448e02834139649d7a4d73af",
+      "osf_date_created": "2024-11-25T10:58:27.985225Z",
+      "osf_date_modified": "2024-11-25T10:58:27.985225",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "Sleep macrostructure parameters normality tests and significance p-values.xlsx",
+      "size": 10427,
+      "sha256": "c1da904be00c3f76b3df4c790fc375991de294fbcb072601535a11799bce4417",
+      "md5": "ed0f798d2488c4bd5e8888b6916cbfec",
+      "osf_date_created": "2025-04-16T10:54:31.511718Z",
+      "osf_date_modified": "2025-04-16T10:54:31.511718",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    },
+    {
+      "name": "Spindle and slow wave features description.xlsx",
+      "size": 10578,
+      "sha256": "ee302e4d37078d24bf50fa11082f945fc8807233ae93d86ece8f43dc7f14243a",
+      "md5": "98476e8a4aa01f62a5928f15ce695b92",
+      "osf_date_created": "2024-11-27T07:29:35.204468Z",
+      "osf_date_modified": "2024-11-27T07:29:35.204468",
+      "osf_version": 1,
+      "local_sha256_verified": true
+    }
+  ]
+}
