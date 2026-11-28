@@ -1,0 +1,570 @@
+{
+  "primary": {
+    "contrast": "bigru: coverage - random",
+    "mean_pp": 1.5332785371330677,
+    "ci95_pp": [
+      0.5902807501102326,
+      2.527158598231514
+    ],
+    "decision": "follow_up",
+    "sensitivity_multi_membership_ci95_pp": [
+      0.8554637160062473,
+      2.225099216882021
+    ],
+    "leave_one_anchor_subject": [
+      {
+        "subject_id": "SC400",
+        "rosters": 21,
+        "mean_pp": 1.7203272658322526
+      },
+      {
+        "subject_id": "SC401",
+        "rosters": 24,
+        "mean_pp": 1.418581325341422
+      },
+      {
+        "subject_id": "SC403",
+        "rosters": 22,
+        "mean_pp": 1.4421351593389307
+      },
+      {
+        "subject_id": "SC408",
+        "rosters": 21,
+        "mean_pp": 1.5603218868214683
+      },
+      {
+        "subject_id": "SC410",
+        "rosters": 24,
+        "mean_pp": 1.5734972783318024
+      },
+      {
+        "subject_id": "SC411",
+        "rosters": 22,
+        "mean_pp": 1.3317350397217507
+      },
+      {
+        "subject_id": "SC412",
+        "rosters": 22,
+        "mean_pp": 1.5022130793924253
+      },
+      {
+        "subject_id": "SC415",
+        "rosters": 18,
+        "mean_pp": 1.5996884879076716
+      },
+      {
+        "subject_id": "SC419",
+        "rosters": 25,
+        "mean_pp": 1.5863337518201177
+      },
+      {
+        "subject_id": "SC421",
+        "rosters": 22,
+        "mean_pp": 1.757650017079998
+      },
+      {
+        "subject_id": "SC422",
+        "rosters": 23,
+        "mean_pp": 1.5435649658894561
+      },
+      {
+        "subject_id": "SC423",
+        "rosters": 21,
+        "mean_pp": 1.8690573020339347
+      },
+      {
+        "subject_id": "SC425",
+        "rosters": 19,
+        "mean_pp": 1.3391227356110298
+      },
+      {
+        "subject_id": "SC428",
+        "rosters": 23,
+        "mean_pp": 1.5825709603174654
+      },
+      {
+        "subject_id": "SC432",
+        "rosters": 22,
+        "mean_pp": 1.4177802363858698
+      },
+      {
+        "subject_id": "SC433",
+        "rosters": 24,
+        "mean_pp": 1.5952330196229323
+      },
+      {
+        "subject_id": "SC434",
+        "rosters": 22,
+        "mean_pp": 1.5090133271477142
+      },
+      {
+        "subject_id": "SC435",
+        "rosters": 25,
+        "mean_pp": 1.4936564373915002
+      },
+      {
+        "subject_id": "SC440",
+        "rosters": 22,
+        "mean_pp": 1.6717964088000423
+      },
+      {
+        "subject_id": "SC443",
+        "rosters": 23,
+        "mean_pp": 1.6120507517681077
+      },
+      {
+        "subject_id": "SC444",
+        "rosters": 20,
+        "mean_pp": 1.2923913134480403
+      },
+      {
+        "subject_id": "SC449",
+        "rosters": 21,
+        "mean_pp": 1.738399563634538
+      },
+      {
+        "subject_id": "SC451",
+        "rosters": 20,
+        "mean_pp": 1.4163594114696414
+      },
+      {
+        "subject_id": "SC453",
+        "rosters": 24,
+        "mean_pp": 1.4773729126558575
+      },
+      {
+        "subject_id": "SC455",
+        "rosters": 23,
+        "mean_pp": 1.4631120487617304
+      },
+      {
+        "subject_id": "SC459",
+        "rosters": 22,
+        "mean_pp": 1.3385655872466675
+      },
+      {
+        "subject_id": "SC461",
+        "rosters": 23,
+        "mean_pp": 1.5074173177243468
+      },
+      {
+        "subject_id": "SC466",
+        "rosters": 24,
+        "mean_pp": 1.6883677393224346
+      },
+      {
+        "subject_id": "SC470",
+        "rosters": 22,
+        "mean_pp": 1.6380826778637891
+      },
+      {
+        "subject_id": "SC472",
+        "rosters": 25,
+        "mean_pp": 1.6336710090957598
+      },
+      {
+        "subject_id": "SC473",
+        "rosters": 21,
+        "mean_pp": 1.205188371960637
+      },
+      {
+        "subject_id": "SC474",
+        "rosters": 22,
+        "mean_pp": 1.3718753892955806
+      },
+      {
+        "subject_id": "SC476",
+        "rosters": 24,
+        "mean_pp": 1.471102152513515
+      },
+      {
+        "subject_id": "SC481",
+        "rosters": 22,
+        "mean_pp": 1.7318353895356418
+      },
+      {
+        "subject_id": "SC482",
+        "rosters": 22,
+        "mean_pp": 1.5174827910711757
+      }
+    ],
+    "repetitions": 10000,
+    "seed": 0,
+    "leave_one_range_pp": [
+      1.205188371960637,
+      1.8690573020339347
+    ],
+    "roster_effects_pp": [
+      1.2914747097930537,
+      2.1872837130321217,
+      1.0457220077983123,
+      1.1576339213963749,
+      3.2954591265933844,
+      1.9650444714486497,
+      1.2447853865318976,
+      -2.028335102831246,
+      3.173616911991747,
+      1.969549863026242,
+      -1.0723096264952523,
+      -0.9765332619342445,
+      1.3524812707553031,
+      1.234675149727424,
+      1.3727513245525684,
+      -1.0516189431394907,
+      0.507677517267544,
+      3.314004918603493,
+      2.884719737243187,
+      -1.0296651128661132,
+      2.5238310306722496,
+      5.253428897604779,
+      5.120475750584054,
+      0.2068981699568134,
+      2.320828068997558,
+      2.6013620651493445
+    ],
+    "head_means_pp": [
+      [
+        64.74541367778293,
+        66.27869221491605
+      ]
+    ],
+    "subcohort_effects_pp": [
+      1.5823009616701142,
+      1.5935867510693025
+    ],
+    "policy_means_pp": [
+      1.5332785371330675
+    ]
+  },
+  "explanatory": {
+    "bigru: coverage - add_people": {
+      "mean_pp": 1.2510765281713165,
+      "ci95_pp": [
+        0.2931445083902199,
+        2.254348486141576
+      ],
+      "decision": "follow_up",
+      "sensitivity_multi_membership_ci95_pp": [
+        0.6096731786390813,
+        1.8820484459686369
+      ],
+      "leave_one_range_pp": [
+        0.8784798357603314,
+        1.4689483329459774
+      ],
+      "subcohort_effects_pp": [
+        1.1207146523692608,
+        1.402041518430989
+      ]
+    },
+    "bigru: disagreement - random": {
+      "mean_pp": -0.7527336593454174,
+      "ci95_pp": [
+        -2.133996820205942,
+        0.5478013993016911
+      ],
+      "decision": "positive_1_pp_excluded",
+      "sensitivity_multi_membership_ci95_pp": [
+        -1.6417957057862584,
+        0.17236896050098757
+      ],
+      "leave_one_range_pp": [
+        -1.2246027045240957,
+        -0.32534292897080036
+      ],
+      "subcohort_effects_pp": [
+        -1.3937077107594278,
+        -0.17988950739934767
+      ]
+    },
+    "bigru: add_people - random": {
+      "mean_pp": 0.2822020089617512,
+      "ci95_pp": [
+        -0.4562826322940945,
+        1.0187456357573141
+      ],
+      "decision": "magnitude_unresolved",
+      "sensitivity_multi_membership_ci95_pp": [
+        -0.24613936934459527,
+        0.8322833933013872
+      ],
+      "leave_one_range_pp": [
+        0.015159083330192365,
+        0.47644483988538594
+      ],
+      "subcohort_effects_pp": [
+        0.46158630930085337,
+        0.19154523263831363
+      ]
+    },
+    "bigru: coverage_det - random": {
+      "mean_pp": 1.6932406116354097,
+      "ci95_pp": [
+        0.4750753411965447,
+        2.897047321912831
+      ],
+      "decision": "follow_up",
+      "sensitivity_multi_membership_ci95_pp": [
+        0.9409377076554535,
+        2.451231910754378
+      ],
+      "leave_one_range_pp": [
+        1.3503267892861432,
+        2.0586045875592025
+      ],
+      "subcohort_effects_pp": [
+        1.673170851879631,
+        1.8362210197609403
+      ]
+    },
+    "linear: coverage - random": {
+      "mean_pp": 2.202767471699107,
+      "ci95_pp": [
+        1.4070460556493303,
+        3.0402738111990204
+      ],
+      "decision": "at_least_1_pp",
+      "sensitivity_multi_membership_ci95_pp": [
+        1.6033397893291361,
+        2.8324306543595217
+      ],
+      "leave_one_range_pp": [
+        1.985568728941208,
+        2.529128347563942
+      ],
+      "subcohort_effects_pp": [
+        2.2574589807868604,
+        2.2255657892965566
+      ]
+    },
+    "linear: coverage - add_people": {
+      "mean_pp": 1.8067819359533106,
+      "ci95_pp": [
+        0.9398861829117175,
+        2.809687706436582
+      ],
+      "decision": "follow_up",
+      "sensitivity_multi_membership_ci95_pp": [
+        1.23402875981066,
+        2.427805451387495
+      ],
+      "leave_one_range_pp": [
+        1.4422562585379648,
+        2.12283332364036
+      ],
+      "subcohort_effects_pp": [
+        1.8861662727812822,
+        1.7781032776725516
+      ]
+    },
+    "linear: disagreement - random": {
+      "mean_pp": -0.20842749220119247,
+      "ci95_pp": [
+        -1.1945186004632673,
+        0.8078686733241253
+      ],
+      "decision": "positive_1_pp_excluded",
+      "sensitivity_multi_membership_ci95_pp": [
+        -0.809553267146485,
+        0.43559380380835283
+      ],
+      "leave_one_range_pp": [
+        -0.5149225395982927,
+        0.13071022777899088
+      ],
+      "subcohort_effects_pp": [
+        -0.6035387495861573,
+        0.17737859255423025
+      ]
+    },
+    "linear: add_people - random": {
+      "mean_pp": 0.39598553574579637,
+      "ci95_pp": [
+        -0.5091826430126299,
+        1.2298012971500432
+      ],
+      "decision": "magnitude_unresolved",
+      "sensitivity_multi_membership_ci95_pp": [
+        -0.17005317516980278,
+        0.9716436616942999
+      ],
+      "leave_one_range_pp": [
+        0.013840598866460834,
+        0.7653855253171767
+      ],
+      "subcohort_effects_pp": [
+        0.37129270800557834,
+        0.44746251162400474
+      ]
+    },
+    "linear: coverage_det - random": {
+      "mean_pp": 2.660144028720339,
+      "ci95_pp": [
+        1.5865288746308386,
+        3.80348654754452
+      ],
+      "decision": "at_least_1_pp",
+      "sensitivity_multi_membership_ci95_pp": [
+        1.9024706755944143,
+        3.443044899424054
+      ],
+      "leave_one_range_pp": [
+        2.342635082293588,
+        3.0422428660733547
+      ],
+      "subcohort_effects_pp": [
+        2.735333043425104,
+        2.732564420882093
+      ]
+    }
+  },
+  "arms": {
+    "bigru/random": {
+      "macro_f1_pp": 64.74541367778293,
+      "per_stage_f1_pp": {
+        "W": 85.261,
+        "N1": 31.356,
+        "N2": 77.035,
+        "N3": 74.712,
+        "REM": 55.364
+      },
+      "mean_effective_additions": 598.8423076923077
+    },
+    "bigru/add_people": {
+      "macro_f1_pp": 65.02761568674468,
+      "per_stage_f1_pp": {
+        "W": 85.335,
+        "N1": 30.988,
+        "N2": 77.356,
+        "N3": 75.168,
+        "REM": 56.291
+      },
+      "mean_effective_additions": 598.5807692307692
+    },
+    "bigru/coverage": {
+      "macro_f1_pp": 66.278692214916,
+      "per_stage_f1_pp": {
+        "W": 85.746,
+        "N1": 32.734,
+        "N2": 78.03,
+        "N3": 76.398,
+        "REM": 58.486
+      },
+      "mean_effective_additions": 596.3153846153846
+    },
+    "bigru/disagreement": {
+      "macro_f1_pp": 63.992680018437525,
+      "per_stage_f1_pp": {
+        "W": 84.757,
+        "N1": 30.257,
+        "N2": 76.542,
+        "N3": 74.747,
+        "REM": 53.66
+      },
+      "mean_effective_additions": 595.8038461538462
+    },
+    "bigru/coverage_det": {
+      "macro_f1_pp": 66.43865428941835,
+      "per_stage_f1_pp": {
+        "W": 86.024,
+        "N1": 33.059,
+        "N2": 77.26,
+        "N3": 76.69,
+        "REM": 59.161
+      },
+      "mean_effective_additions": 596.3461538461538
+    },
+    "linear/random": {
+      "macro_f1_pp": 60.72873505749425,
+      "per_stage_f1_pp": {
+        "W": 84.259,
+        "N1": 24.693,
+        "N2": 77.323,
+        "N3": 66.267,
+        "REM": 51.102
+      },
+      "mean_effective_additions": 598.8423076923077
+    },
+    "linear/add_people": {
+      "macro_f1_pp": 61.12472059324004,
+      "per_stage_f1_pp": {
+        "W": 84.405,
+        "N1": 24.662,
+        "N2": 77.889,
+        "N3": 67.029,
+        "REM": 51.638
+      },
+      "mean_effective_additions": 598.5807692307692
+    },
+    "linear/coverage": {
+      "macro_f1_pp": 62.93150252919335,
+      "per_stage_f1_pp": {
+        "W": 84.917,
+        "N1": 25.692,
+        "N2": 78.78,
+        "N3": 70.466,
+        "REM": 54.802
+      },
+      "mean_effective_additions": 596.3153846153846
+    },
+    "linear/disagreement": {
+      "macro_f1_pp": 60.52030756529306,
+      "per_stage_f1_pp": {
+        "W": 84.404,
+        "N1": 24.016,
+        "N2": 77.548,
+        "N3": 66.984,
+        "REM": 49.65
+      },
+      "mean_effective_additions": 595.8038461538462
+    },
+    "linear/coverage_det": {
+      "macro_f1_pp": 63.38887908621459,
+      "per_stage_f1_pp": {
+        "W": 85.181,
+        "N1": 26.961,
+        "N2": 78.522,
+        "N3": 71.806,
+        "REM": 54.474
+      },
+      "mean_effective_additions": 596.3461538461538
+    }
+  },
+  "composition_means": {
+    "add_people": {
+      "same_night_blocks": 0.0,
+      "other_night_blocks": 0.0,
+      "new_person_blocks": 10.0,
+      "subjects": 5.0,
+      "nights": 5.0
+    },
+    "random": {
+      "same_night_blocks": 2.442,
+      "other_night_blocks": 3.777,
+      "new_person_blocks": 3.781,
+      "subjects": 6.608,
+      "nights": 7.669
+    },
+    "coverage": {
+      "same_night_blocks": 0.712,
+      "other_night_blocks": 3.538,
+      "new_person_blocks": 5.75,
+      "subjects": 7.492,
+      "nights": 7.788
+    },
+    "coverage_det": {
+      "same_night_blocks": 0.731,
+      "other_night_blocks": 3.769,
+      "new_person_blocks": 5.5,
+      "subjects": 7.692,
+      "nights": 7.962
+    },
+    "disagreement": {
+      "same_night_blocks": 1.431,
+      "other_night_blocks": 2.265,
+      "new_person_blocks": 6.304,
+      "subjects": 3.927,
+      "nights": 4.135
+    }
+  }
+}

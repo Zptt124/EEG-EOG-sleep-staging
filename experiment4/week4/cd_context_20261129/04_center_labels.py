@@ -32,13 +32,21 @@ def main():
     ap = argparse.ArgumentParser()
     for n in ("lock-dir", "anchor", "cache", "manifest", "preprocess", "raw", "out"):
         ap.add_argument(f"--{n}", type=Path, required=True)
+    ap.add_argument("--extra-blocks", type=Path)
+    ap.add_argument("--extra-sha256")
     a = ap.parse_args()
     lock = json.loads((a.lock_dir / "lock.json").read_text())
     blocks = a.lock_dir / "D_blocks.csv"
     if sha(blocks) != lock["outputs"]["D_blocks.csv"]:
         fail("D_blocks.csv differs from lock.json")
+    if a.extra_blocks:  # 来源匹配对照等锁定后追加的块表（--extra-blocks + --extra-sha256）
+        if sha(a.extra_blocks) != a.extra_sha256:
+            fail("extra blocks differ from the supplied SHA-256")
+        blocks_list = [blocks, a.extra_blocks]
+    else:
+        blocks_list = [blocks]
     need = set()
-    for r in rd(a.anchor) + rd(blocks):
+    for r in rd(a.anchor) + [x for bl in blocks_list for x in rd(bl)]:
         f0 = int(r["first_epoch"])
         need.update((r["record_id"], e) for e in range(f0, f0 + 60))
     cache = {}

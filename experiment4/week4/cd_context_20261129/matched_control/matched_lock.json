@@ -1,0 +1,10 @@
+{
+  "seed": 2026112925,
+  "disclosure": "script and seed written after the primary V-R result; single run",
+  "d_blocks_sha256": "e8597867156cb01e401a2b65e1ec87ee84597f9ce6a31cb8f9579f1c422bbe17",
+  "matched_blocks_sha256": "fe4a556dd6710e082904f58aea6af7ee9f9a0176a8e778bdc8b139e2f8879b40",
+  "code_sha256": "f2e43c9b23242d03b2a8b3ab01ab35c6f8fea194063a50780187f24c50b16721",
+  "units": 260,
+  "mean_overlap_with_V": 0.9461538461538461,
+  "mean_cells_without_choice": 0.0
+}

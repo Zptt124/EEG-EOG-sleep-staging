@@ -1,0 +1,64 @@
+{
+  "status": "jointly_approved",
+  "approved_by": {
+    "D": {
+      "member": "D",
+      "approved": true,
+      "time": "2026-11-29T01:55+08:00",
+      "reviewed": [
+        "protocol.json",
+        "train_bigru.py",
+        "make_d_input.py",
+        "analysis.py",
+        "13_context_head.py (CRLF bytes; identical to main's LF file except line endings)"
+      ],
+      "accepted": [
+        "physical neighbor rule",
+        "bootstrap methods (primary, membership sensitivity, leave-one-out)",
+        "tau_pp = 1",
+        "primary_C = K5 - K1 (P/R equal weight)",
+        "primary_D = coverage(V) - random(R), BiGRU K1, 10 draws",
+        "U heads by anchor-block bootstrap",
+        "R/P draws 1-5 refit under the physical rule and shared"
+      ],
+      "d_inputs": {
+        "selections_D_commit": "f3d79db",
+        "cache_D_release": "d-cd-context-input-v01-20261129",
+        "cross_check": "D supplemental features vs C physical_context: 5,606 overlapping rows, max abs 1.68e-4 (within atol 2e-4 / rtol 5e-3)"
+      },
+      "accessed_new_scores": false
+    },
+    "C": {
+      "member": "C",
+      "approved": true,
+      "time": "2026-11-29T01:29:07+08:00",
+      "record": "C explicitly confirmed the D-approved common lock in the active Codex conversation.",
+      "reviewed_D_commit": "823f52f6262d6ee6dfe7f3c6456371d70116ac99",
+      "D_approval_file_sha256": "c8eac72b7528ba976b1eeb057dfed316273a7b698c18eea89f673b5429716b25",
+      "verified_shared_K1_inputs": {
+        "input_C_sha256": "4993959e040b95a4bbd38f95bbf6f1b27ecd90bbfd88fa4e4ae75b2e6a170f37",
+        "input_D_sha256": "524b7cf2e54db01b403eabfcdb43c4616d6fdaaeb0faeac6607856347ac81386",
+        "shared_feature_keys_exact": 114103,
+        "historical_RP_units_exact": 260,
+        "evaluation_centers_exact": 41498,
+        "new_scores_read": false
+      },
+      "accessed_new_scores": false
+    }
+  },
+  "tau_pp": 1,
+  "sha256": {
+    "protocol": "c6fe33d09be7a985b4e83de4a9983255869ef794ee10d26d2f0913220216350d",
+    "physical_neighbor_rule": "a913c875c6fdb95d51cf277d69b200b027ea36644c3ed02511faecb590415f7b",
+    "rosters": "1aa887edb49bef1da5840b12053a8b97337832ab7ea61ed63e0f5f94631bc64b",
+    "seeds": "780e12cc862623ecb649ffb253b0ddc68f7aae9251b27e2310eb1cd125214111",
+    "evaluation_index": "2ba2bcb8c4883f0af9dad658ed95ab49e53efe706c9924987b928e802f1a93a5",
+    "selections_C": "539104f6ff9c57be0bd1dca988dfce4b2f63ffab1a3134647c235a3420353713",
+    "cache_C": "4993959e040b95a4bbd38f95bbf6f1b27ecd90bbfd88fa4e4ae75b2e6a170f37",
+    "analysis.py": "39f7723a98392036ce9147abfc88c34315778520cfbfa9a811b47174e1d3cda4",
+    "train_bigru.py": "1109e3af3d7db4bd110a1e8b5f12ba58e9627fdc326715b98893aadfdd2f0cb7",
+    "13_context_head.py": "afd946879386d64686c51832b57ee985aa8f062bafd7c8eeb1eebe23698d78cf",
+    "selections_D": "e8597867156cb01e401a2b65e1ec87ee84597f9ce6a31cb8f9579f1c422bbe17",
+    "cache_D": "524b7cf2e54db01b403eabfcdb43c4616d6fdaaeb0faeac6607856347ac81386"
+  }
+}
