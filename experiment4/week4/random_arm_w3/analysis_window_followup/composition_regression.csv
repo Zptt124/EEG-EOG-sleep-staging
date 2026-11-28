@@ -1,0 +1,31 @@
+contrast,model,term,coef,ci95_lo,ci95_hi
+new_minus_deepen,window_only,intercept,1.6435,0.7371,2.5815
+new_minus_deepen,window_only,window_lights_minus_old,-1.0977,-1.8169,-0.341
+new_minus_deepen,plus_W_N2_REM,intercept,1.5759,0.7422,2.378
+new_minus_deepen,plus_W_N2_REM,window_lights_minus_old,-0.8249,-1.5727,-0.1261
+new_minus_deepen,plus_W_N2_REM,d_W_share_pp,-0.0737,-0.1431,-0.0096
+new_minus_deepen,plus_W_N2_REM,d_N2_share_pp,-0.0943,-0.1613,-0.0211
+new_minus_deepen,plus_W_N2_REM,d_REM_share_pp,-0.016,-0.0728,0.0427
+new_minus_deepen,plus_all_but_N1,intercept,1.6125,0.839,2.3704
+new_minus_deepen,plus_all_but_N1,window_lights_minus_old,-0.84,-1.6003,-0.1864
+new_minus_deepen,plus_all_but_N1,d_W_share_pp,-0.0042,-0.0992,0.0797
+new_minus_deepen,plus_all_but_N1,d_N2_share_pp,-0.0239,-0.1196,0.0699
+new_minus_deepen,plus_all_but_N1,d_N3_share_pp,0.1133,0.0101,0.2212
+new_minus_deepen,plus_all_but_N1,d_REM_share_pp,0.0502,-0.0477,0.1475
+new_minus_deepen,mean_share_diff,old,W:-2.59 N1:+0.59 N2:+1.19 N3:+0.13 REM:+0.68,,
+new_minus_deepen,mean_share_diff,lights_off,W:-2.34 N1:+0.79 N2:+4.54 N3:+0.27 REM:-3.15,,
+new_minus_random,window_only,intercept,1.6728,0.8711,2.5607
+new_minus_random,window_only,window_lights_minus_old,-1.3168,-1.9697,-0.6892
+new_minus_random,plus_W_N2_REM,intercept,1.5146,0.7335,2.3509
+new_minus_random,plus_W_N2_REM,window_lights_minus_old,-1.223,-1.8559,-0.6716
+new_minus_random,plus_W_N2_REM,d_W_share_pp,-0.0751,-0.1188,-0.0298
+new_minus_random,plus_W_N2_REM,d_N2_share_pp,-0.0596,-0.1058,-0.0159
+new_minus_random,plus_W_N2_REM,d_REM_share_pp,-0.0293,-0.093,0.0368
+new_minus_random,plus_all_but_N1,intercept,1.4738,0.718,2.2798
+new_minus_random,plus_all_but_N1,window_lights_minus_old,-1.2209,-1.8523,-0.6775
+new_minus_random,plus_all_but_N1,d_W_share_pp,-0.0352,-0.0838,0.0085
+new_minus_random,plus_all_but_N1,d_N2_share_pp,-0.0203,-0.078,0.0266
+new_minus_random,plus_all_but_N1,d_N3_share_pp,0.0659,-0.0289,0.1567
+new_minus_random,plus_all_but_N1,d_REM_share_pp,0.0122,-0.0585,0.0782
+new_minus_random,mean_share_diff,old,W:-6.09 N1:-0.55 N2:+4.13 N3:+0.70 REM:+1.82,,
+new_minus_random,mean_share_diff,lights_off,W:-2.63 N1:-0.07 N2:+2.86 N3:+1.28 REM:-1.28,,
