@@ -2,6 +2,8 @@
 
 外部队列来自 [Ying 等的多夜睡眠库](https://doi.org/10.1038/s41597-025-05202-6) 及其 [OSF 归档](https://osf.io/gx36m/)。纳入 20 位健康青年的前两夜，共 38 夜、39,505 个评估用 epoch。每个评估折内训练和评价分类头时按人隔离，冻结表示沿用在 Sleep-EDF 上训练的 W4 30k EMA。4 个固定评估折，每折 8 份训练名单，每名单 5 次配对抽样、三臂共 480 次拟合。
 
+协议中的 `same-amplifier Days 1 and 2` 指放大器型号。Ying 等报告前两晚均使用 ICSMS（成都，中国），第三晚使用 actiCHamp（Brain Products，德国）。出处为数据论文 Methods 的 “Data recording equipment” 段，PDF 第 2 页表 1 下方。[Ying 等，Scientific Data 12, 946 (2025)](https://www.nature.com/articles/s41597-025-05202-6.pdf#page=2)
+
 主比较「新人新夜 − 原人原夜」为 **+1.79 个 Macro-F1 百分点**，95% 配对区间为 **[+0.58, +3.07]**。4 折均值同向，32 份名单中 24 份同向。按外部预设规则，点估计至少 +1、区间下限大于 0、至少 3/4 折方向为正，结果达到推进门槛。区间仍包含小于 +1 的效应。完整三组比较见 [并列表](../week3_budget_replication_20261128/README.md)。
 
 ## 窗口与候选块
