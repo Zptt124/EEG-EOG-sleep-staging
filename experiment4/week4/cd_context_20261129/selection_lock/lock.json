@@ -1,0 +1,65 @@
+{
+  "purpose": "C/D context experiment 2026-11-29, experiment 2 selections (label-blind for candidate blocks)",
+  "seeds": {
+    "rp_shared_order": 2026112903,
+    "v_targets": 2026112921,
+    "v_top3": 2026112922,
+    "u_bootstrap": 2026112923,
+    "u_top3": 2026112924
+  },
+  "draws": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "top_k": 3,
+  "n_target_max": 10000,
+  "head_epochs": 30,
+  "heads": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "strategies": [
+    "add_people",
+    "coverage",
+    "coverage_det",
+    "disagreement",
+    "random"
+  ],
+  "n_rows": 10660,
+  "inputs": {
+    "candidate_blocks.csv": "4ba164f47a45c0797a362227de034e82936076f46c6a17627aaeb40378ea3647",
+    "anchor_blocks.csv": "98741003f1284789adde10f336e52aa0aa23df20c865706359ee66d849308f9f",
+    "mixed_quotas.csv": "882cb9291043329b0836d5dde107d6226a92c69bcb243e2f1ceb2af600c03dcb",
+    "condition_A_RP_draws_1_5.csv": "c94f3c008b9d67efa400a6e4680056d1fe1991b75af54221b275f0bb24e605e5"
+  },
+  "feature_info_sha256": "392122c602030d8dcfa903a8d5a5f55fd582f0e09dc6d086248c86bac4267bdf",
+  "code_sha256": {
+    "02_lock_selections.py": "bd4427c96eada72f869fcfd08eb7d3ca7b521b3702ce997f7709917d41b2f131",
+    "train.py": "d7582d7219e267b48adb7f4550e5fbde807c65c04d027708d221f28b85060c37"
+  },
+  "outputs": {
+    "D_blocks.csv": "e8597867156cb01e401a2b65e1ec87ee84597f9ce6a31cb8f9579f1c422bbe17",
+    "composition.csv": "9bef3eb3775039b763ba5ee403c33260002d2839ba19d3a337609fb59c84e0d3",
+    "v_trace.csv": "b9b567fa73e009670863201ed1b4855cb0ca61558a209f69fdd14191b6a1fb48",
+    "u_scores.csv": "11f9c2c3223872f004644ceb7972c4c6ab2b4833943ee3fb128d6b66b914ca70"
+  },
+  "checks": [
+    "10 blocks per unit",
+    "night-third quotas",
+    "condition A only",
+    "no anchor overlap",
+    "R/P draws 1-5 equal to C handoff",
+    "candidate labels never read"
+  ]
+}

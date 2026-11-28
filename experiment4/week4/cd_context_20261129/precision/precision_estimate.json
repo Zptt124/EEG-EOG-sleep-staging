@@ -1,0 +1,28 @@
+{
+  "primary_linear": {
+    "within_roster_sd_P": 1.863,
+    "within_roster_sd_R": 2.06,
+    "between_roster_sd_tau": 2.408,
+    "draws_5": {
+      "half_width_pp": 1.041,
+      "mde_80pct_pp": 1.488
+    },
+    "draws_10": {
+      "half_width_pp": 0.985,
+      "mde_80pct_pp": 1.407
+    }
+  },
+  "bigru_ab": {
+    "within_roster_sd_P": 2.019,
+    "within_roster_sd_R": 2.591,
+    "between_roster_sd_tau": 1.019,
+    "draws_5": {
+      "half_width_pp": 0.687,
+      "mde_80pct_pp": 0.982
+    },
+    "draws_10": {
+      "half_width_pp": 0.559,
+      "mde_80pct_pp": 0.799
+    }
+  }
+}
