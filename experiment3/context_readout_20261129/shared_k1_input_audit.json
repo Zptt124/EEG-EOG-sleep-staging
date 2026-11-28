@@ -1,0 +1,8 @@
+{
+  "input_C_sha256": "4993959e040b95a4bbd38f95bbf6f1b27ecd90bbfd88fa4e4ae75b2e6a170f37",
+  "input_D_sha256": "524b7cf2e54db01b403eabfcdb43c4616d6fdaaeb0faeac6607856347ac81386",
+  "shared_feature_keys_exact": 114103,
+  "historical_RP_units_exact": 260,
+  "evaluation_centers_exact": 41498,
+  "new_scores_read": false
+}
