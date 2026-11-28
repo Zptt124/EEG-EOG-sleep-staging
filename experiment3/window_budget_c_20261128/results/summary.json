@@ -1,0 +1,59 @@
+{
+  "protocol_sha256": "d7bb26b34e43a636298df00ffbe7794e364d9b88f1242a6bf7333505992b0cea",
+  "evaluation_epochs": 41498,
+  "evaluation_people": 16,
+  "fits": 390,
+  "supplemental_epochs": 6198,
+  "replayed_features": 219,
+  "max_abs_replay_error": 0.0002655982971191406,
+  "exact_600": {
+    "rosters": 19,
+    "draw_pairs": 43,
+    "old_newcomer_minus_original_night": {
+      "mean_pp": 1.7777626536902165,
+      "interval_95_pp": [
+        0.07790064084136088,
+        3.4934187602226037
+      ]
+    },
+    "lights_off_newcomer_minus_original_night": {
+      "mean_pp": 0.2414380359251445,
+      "interval_95_pp": [
+        -1.395864297004798,
+        1.7804615854166497
+      ]
+    },
+    "paired_difference_of_differences": {
+      "mean_pp": -1.5363246177650718,
+      "interval_95_pp": [
+        -3.196851289553923,
+        0.02862818707567479
+      ]
+    }
+  },
+  "fixed_600_attempts": {
+    "rosters": 26,
+    "draw_pairs": 130,
+    "old_newcomer_minus_original_night": {
+      "mean_pp": 1.6435246246917439,
+      "interval_95_pp": [
+        0.49698263151778266,
+        2.8267874658217407
+      ]
+    },
+    "lights_off_newcomer_minus_original_night": {
+      "mean_pp": 0.5458423112666084,
+      "interval_95_pp": [
+        -0.671658141906981,
+        1.7939463423527302
+      ]
+    },
+    "paired_difference_of_differences": {
+      "mean_pp": -1.0976823134251352,
+      "interval_95_pp": [
+        -2.096782995949506,
+        -0.11963825518918952
+      ]
+    }
+  }
+}
