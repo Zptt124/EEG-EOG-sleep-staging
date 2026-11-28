@@ -57,3 +57,13 @@ P 和 R 共用排序，相关性高于 V 和 R，所以 V − R 的实际区间�
 - 共同签出文件 `C_D_signed.json`。D 这边的 `selections_D` 已在上面给出；`cache_D` 等输入组装完成后补上。
 
 D 同意 `protocol.json` 中的邻段规则、重抽方法、τ = 1 和两个主比较，也同意 C 已写入的两条补充（U 臂 bootstrap；K1 重训时 R/P 第 1–5 次一并重跑）。
+
+## 6. 更新（01:55）：D 的输入缓存与签出记录
+
+- C 的 Release `cd-context-readout-preflight-20261129` 已下载并核对 SHA-256。
+- `make_d_input.py` 报告缺 10 个物理邻段，`07_extract_keys.py` 已按同一 checkpoint 补提。最终 D 输入：1,066 个单元，**cache_D = `524b7cf2e54db01b403eabfcdb43c4616d6fdaaeb0faeac6607856347ac81386`**，放在 Release [`d-cd-context-input-v01-20261129`](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/d-cd-context-input-v01-20261129)（含补提特征、中心标签，下载后已核对）。
+- 中心标签共 80,130 段，其中 209 段不可评分；与缓存重叠的 62,599 段逐段一致。
+- 跨机核对：D 补提的特征与 C 的 `physical_context.npz` 有 5,606 段重叠，最大绝对差 1.68e-4，在容差内。
+- 计时：BiGRU K1 每单元约 4.8 秒（RTX 4060），1,066 个单元约 85 分钟。
+- `13_context_head.py`：签出草稿里的 `afd94687…` 是 CRLF 换行版本；仓库 main 上是 LF 版本（`518e69df…`），两者内容相同、只差换行。D 本地使用 CRLF 副本，以便通过 `train_bigru.py` 的散列检查。
+- **D 已签出**：`joint_lock_D_approved.json` 在 C 的草稿基础上补上 `cache_D`，并写入 D 的批准记录。C 加上自己的记录后，这个文件就是 `C_D_signed.json`，双方逐字节使用同一份。
