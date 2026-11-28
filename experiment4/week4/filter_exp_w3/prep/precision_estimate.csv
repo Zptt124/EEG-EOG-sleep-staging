@@ -1,0 +1,6 @@
+rho,se_diff_pp,ci95_halfwidth_pp,mde80_pp,power_delta_0_5,power_delta_1_0,note
+0.501,0.445,0.872,1.246,0.201,0.613,historical cross-window design
+0.7,0.345,0.676,0.966,0.305,0.826,assumed
+0.8,0.282,0.552,0.789,0.427,0.944,assumed
+0.9,0.199,0.39,0.558,0.709,0.999,assumed
+0.95,0.141,0.276,0.394,0.944,1.0,assumed

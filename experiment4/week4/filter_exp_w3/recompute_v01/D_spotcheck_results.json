@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.11.17",
+    "numpy": "1.26.4",
+    "torch": "2.7.1+cu126",
+    "cpu_threads": 4
+  },
+  "results": [
+    {
+      "unit": "A_add_people_r01_d1",
+      "evaluation_epochs": 41498,
+      "disagreements": 0,
+      "prediction_match_rate": 1.0,
+      "macro_f1_diff_pp": 0.0,
+      "passes": true
+    },
+    {
+      "unit": "A_random_r01_d1",
+      "evaluation_epochs": 41498,
+      "disagreements": 0,
+      "prediction_match_rate": 1.0,
+      "macro_f1_diff_pp": 0.0,
+      "passes": true
+    },
+    {
+      "unit": "B_add_people_r01_d1",
+      "evaluation_epochs": 41498,
+      "disagreements": 0,
+      "prediction_match_rate": 1.0,
+      "macro_f1_diff_pp": 0.0,
+      "passes": true
+    },
+    {
+      "unit": "B_random_r01_d1",
+      "evaluation_epochs": 41498,
+      "disagreements": 0,
+      "prediction_match_rate": 1.0,
+      "macro_f1_diff_pp": 0.0,
+      "passes": true
+    },
+    {
+      "unit": "C_add_people_r01_d1",
+      "evaluation_epochs": 41498,
+      "disagreements": 0,
+      "prediction_match_rate": 1.0,
+      "macro_f1_diff_pp": 0.0,
+      "passes": true
+    },
+    {
+      "unit": "C_random_r01_d1",
+      "evaluation_epochs": 41498,
+      "disagreements": 0,
+      "prediction_match_rate": 1.0,
+      "macro_f1_diff_pp": 0.0,
+      "passes": true
+    }
+  ]
+}

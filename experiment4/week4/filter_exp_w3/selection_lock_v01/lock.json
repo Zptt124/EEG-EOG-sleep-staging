@@ -1,0 +1,71 @@
+{
+  "seed": 2026112903,
+  "rng": "numpy.random.default_rng([seed, roster, draw, k]).random(n_unique_blocks_in_roster) over block_id-sorted keys; k=0 condition-C retention priority, k=1 shared selection priority; smaller first, ties by block_id",
+  "draws": 5,
+  "rosters": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "primary_strategies": [
+    "add_people",
+    "random"
+  ],
+  "primary_fit_units": 780,
+  "handoff_json_sha256": "31e785f43ca1bdedc415eac3585e90811fd62456f77634b817573487e8903dbb",
+  "handoff_files": {
+    "candidate_blocks.csv": "4ba164f47a45c0797a362227de034e82936076f46c6a17627aaeb40378ea3647",
+    "cell_capacity.csv": "bf583f972f7478279d97dc7ad7c9c311ac298c4de30a24ff4740b06af56c8193",
+    "mixed_quotas.csv": "718220a946376594e975a1ee762b747060c20a15879b7b31783a2c2953ec66a5",
+    "roster_feasibility.csv": "e672f154b5a118195a4f1580cf51a6785e9e0371b8326da74127ee5bbaaf2107",
+    "anchor_blocks.csv": "e39791a74b5d5ac2bec32df57aa4230e739e4405d49f213331b7f4e9e43ca01e",
+    "sleep_boundaries.csv": "71cd2a29d5b5b1dfeb84f9a45bc3d6eff3f0fa772d7c7025bdd2066cab5728ce",
+    "existing_feature_index.csv": "0ead7bf282abbe1cf7530edd00c7faa8ef41e43ed14ef18c6f021ef6b7c66316"
+  },
+  "script_sha256": "2c9416ad13583b3e9feaea6d2e7f21a8deb51e3dc054867a8d14e689f89d6930",
+  "numpy": "1.26.4",
+  "labels_of_new_epochs_read": false,
+  "epochs_needed": 71160,
+  "epochs_by_cache_source": {
+    "shared": 64570,
+    "missing": 459,
+    "supplement": 6131
+  },
+  "files": {
+    "priorities.csv": "9380f157c32ff867c535ba27d1825a1b7e8d877b10001d812b84f7f396b9fd88",
+    "c_pools.csv": "7bacac0948f956980500c8a05d940e8f99a8729d9140a1b13881ada6bb909805",
+    "selections.csv": "ebd1b366e158b71c8d6030c00cebf26216e12aeb1b9116bbeef0f775c5afa19b",
+    "random_source_composition.csv": "e745a561056db1cf71b79e50f6b1d29e55a8683b329fcfa8583c3f065813abd7",
+    "feasibility.csv": "98dad20ec15f7954eb69f52be890eaf548f5ac2c5648d7de5c20f4c241ddd06e",
+    "epochs_needed.csv": "902ec3bebfbddb5090c9a993d328b031de941a60a86de57bb886398bc13facbe",
+    "spotcheck_units.csv": "cd876918eff562305a0182e0df26a347f2219786ec27471385bbae2a56ad2ac4"
+  }
+}
