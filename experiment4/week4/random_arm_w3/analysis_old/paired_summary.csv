@@ -1,0 +1,10 @@
+window,analysis,cohort,contrast,rosters,draw_pairs,mean_pp,ci95_lo,ci95_hi,positive_rosters
+old,all_draws,combined,new_minus_random,30,150,1.4782,0.5408,2.5055,22/30
+old,all_draws,combined,random_minus_deepen,30,150,0.0483,-0.7498,0.8272,13/30
+old,all_draws,combined,random_minus_other_night,30,150,-0.3922,-1.4562,0.6066,16/30
+old,all_draws,dev8,new_minus_random,30,150,1.648,0.4636,2.961,21/30
+old,all_draws,dev8,random_minus_deepen,30,150,0.1559,-0.7457,1.0465,16/30
+old,all_draws,dev8,random_minus_other_night,30,150,-0.3612,-1.5681,0.7063,15/30
+old,all_draws,pretrain_eval8,new_minus_random,30,150,1.4175,0.4423,2.5165,20/30
+old,all_draws,pretrain_eval8,random_minus_deepen,30,150,-0.041,-1.0107,0.8931,17/30
+old,all_draws,pretrain_eval8,random_minus_other_night,30,150,-0.4055,-1.6183,0.7916,15/30

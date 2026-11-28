@@ -1,0 +1,6 @@
+window,statistic,mean,min,max
+lights_off,people,6.454,4,9
+lights_off,nights,7.515,6,10
+lights_off,from_deepen,2.423,0,5
+lights_off,from_other_night,3.908,0,8
+lights_off,from_add_people,3.669,1,7
