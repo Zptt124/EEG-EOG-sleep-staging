@@ -1,0 +1,13 @@
+contrast,analysis,quantity,rosters,draw_pairs,mean_pp,ci95_lo,ci95_hi,positive_rosters
+new_minus_deepen,fixed_600_attempts,old_window,26,130,1.6435,0.5091,2.8037,17/26
+new_minus_deepen,fixed_600_attempts,lights_off_window,26,130,0.5458,-0.6644,1.7767,15/26
+new_minus_deepen,fixed_600_attempts,lights_minus_old,26,130,-1.0977,-2.1139,-0.1151,6/26
+new_minus_deepen,exact_600,old_window,23,56,1.8856,0.3829,3.3528,15/23
+new_minus_deepen,exact_600,lights_off_window,23,56,0.373,-1.1348,1.9314,12/23
+new_minus_deepen,exact_600,lights_minus_old,23,56,-1.5125,-2.9604,-0.1179,5/23
+new_minus_random,fixed_600_attempts,old_window,26,130,1.6728,0.6716,2.8072,19/26
+new_minus_random,fixed_600_attempts,lights_off_window,26,130,0.356,-0.5007,1.2449,14/26
+new_minus_random,fixed_600_attempts,lights_minus_old,26,130,-1.3168,-2.3444,-0.3757,6/26
+new_minus_random,exact_600,old_window,23,65,1.7603,0.6658,3.048,17/23
+new_minus_random,exact_600,lights_off_window,23,65,0.141,-0.9327,1.2341,11/23
+new_minus_random,exact_600,lights_minus_old,23,65,-1.6193,-3.0437,-0.2951,5/23

@@ -63,3 +63,13 @@
 日志：`week4/logs/51–56`。
 
 `fits_*/*.npz` 和 `supplement_lights_off/*.npz` 不进 git（仓库忽略 .npz），放在 Release [`d-random-arm-v01-20261128`](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/d-random-arm-v01-20261128)，SHA-256 记录在 `registry/artifact_index_D.csv`。
+
+## 11-28 晚：窗口追问（与 C 分工）
+
+C 负责睡眠期构成、无法评分比例和 Ying 窗口说明；D 负责共同 26 份名单上的逐阶段 F1、跨窗口配对区间和扩跑精度估计。脚本 `05_window_followup.py`，结果在 `analysis_window_followup/`，说明见 [`window_followup_D_20261128.md`](window_followup_D_20261128.md)。
+
+主要结果：
+- 新人 − 随机，关灯窗口 − 旧窗口：−1.32 [−2.34, −0.38]。
+- 新人 − 原人原夜，关灯窗口 − 旧窗口：−1.10 [−2.11, −0.12]，与 C 一致。
+- 差距缩小主要是因为原人原夜组和随机组在关灯窗口下变好了，新人组本身基本没变。
+- 把每份名单的抽块次数从 5 加到 20，区间收窄有限，不建议扩跑。

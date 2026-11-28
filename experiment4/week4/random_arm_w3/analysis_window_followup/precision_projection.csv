@@ -1,0 +1,5 @@
+draws_per_roster,projected_var,ci95_halfwidth_pp,projected_ci_if_mean_unchanged,optimistic_halfwidth_pp,optimistic_ci_if_mean_unchanged
+5,0.19914,0.875,"[-0.52, +1.23]",0.875,"[-0.52, +1.23]"
+10,0.17712,0.825,"[-0.47, +1.18]",0.772,"[-0.42, +1.13]"
+20,0.16611,0.799,"[-0.44, +1.15]",0.715,"[-0.36, +1.07]"
+50,0.1595,0.783,"[-0.43, +1.14]",0.679,"[-0.32, +1.03]"

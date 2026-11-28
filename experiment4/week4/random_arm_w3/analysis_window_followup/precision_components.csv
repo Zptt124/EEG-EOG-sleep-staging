@@ -1,0 +1,6 @@
+component,variance,note
+bootstrap_total,0.19914,"roster+draw+evaluator resampling, 5 draws"
+evaluator_only,0.01604,rosters and draws fixed
+draw_only,0.04404,within-roster draw resampling only
+within_roster_draw_var_per_draw,7.2155,pooled var of draw-level deltas
+between_roster_var,1.52991,var(roster means) - within/5
