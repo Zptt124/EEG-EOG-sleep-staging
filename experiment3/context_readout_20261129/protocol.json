@@ -1,0 +1,39 @@
+{
+  "status": "draft_for_joint_C_D_review",
+  "dataset": "Sleep-EDF Expanded v1.0.0, sleep-cassette development subset",
+  "primary_C": "K5 minus K1, condition A, equal weight between add_people and random",
+  "primary_D": "V minus R, K1 BiGRU fixed, with ten draws per roster",
+  "tau_pp": 1,
+  "neighbor_rule": {
+    "key": ["record_id", "physical_epoch_index"],
+    "epoch_seconds": 30,
+    "offsets": {"K1": [-1, 1], "K5": [-5, 5], "K10": [-10, 10]},
+    "physical_epoch_count": "floor(EDF signal duration / 30 s)",
+    "boundary": "Clamp to epoch 0 or last full PSG epoch. Complete missing in-range features from the frozen W4 checkpoint.",
+    "center_labels": "Use only locked anchor or selected scorable centers for supervised loss.",
+    "neighbor_labels": "Neighbors only supply frozen features."
+  },
+  "head": {
+    "weights": "W4 step30000 ema_model frozen 384-D EEG/EOG feature cache",
+    "projection": 128,
+    "bidirectional_gru_hidden_per_direction": 64,
+    "dropout": 0.2,
+    "center_standardization": "Mean and population standard deviation on supervised centers for each fitted unit",
+    "weight_decay": 0.0001,
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "epochs": 30,
+    "seed": 0,
+    "sensitivity_seeds": [1, 2],
+    "balanced_sampler": "Uniform over present stages and then uniform over their supervised centers, with replacement, for n samples per epoch"
+  },
+  "analysis": {
+    "evaluation": "Frozen 41,498 centers, historical order of two eight-person subcohorts",
+    "macro_f1": "Five-class Macro-F1 after pooling drawn participants' counts; equal roster weight",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 0,
+    "bootstrap_C": "Common roster, both subcohort subject draws, and same sampled repeat across policies and heads",
+    "bootstrap_D": "Common roster and subcohort subject draws, independent within-roster repeat draws per arm",
+    "membership_sensitivity": "Independent Exp(1) weights for anchor participants; each roster receives the mean of its 5 participant weights, normalized across rosters. Draw counts and evaluation subjects as in the primary bootstrap. Leave one anchor participant's rosters out at a time."
+  }
+}

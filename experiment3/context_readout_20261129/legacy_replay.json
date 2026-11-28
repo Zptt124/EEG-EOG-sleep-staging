@@ -1,0 +1,76 @@
+{
+  "archive_sha256": "a98f35de1baed50612b944949c74f804dd8491ece0741bb42fa864648f584523",
+  "protocol_sha256": "8104f106e208f2c91c5f429ff319df0b0e332f83ee59e82c956af14f6587ebe7",
+  "supplemental_train_epochs": 99,
+  "python": "3.11.17",
+  "torch": "2.7.1+cu126",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "results": [
+    {
+      "roster": 1,
+      "draw": 1,
+      "strategy": "add_people",
+      "supervised": 1799,
+      "eval_centers": 41498,
+      "disagreements": 0,
+      "agreement": 1.0,
+      "counts_equal": true,
+      "seconds": 3.4798097260000134
+    },
+    {
+      "roster": 1,
+      "draw": 1,
+      "strategy": "random",
+      "supervised": 1798,
+      "eval_centers": 41498,
+      "disagreements": 0,
+      "agreement": 1.0,
+      "counts_equal": true,
+      "seconds": 3.7174759890000075
+    },
+    {
+      "roster": 1,
+      "draw": 2,
+      "strategy": "add_people",
+      "supervised": 1800,
+      "eval_centers": 41498,
+      "disagreements": 0,
+      "agreement": 1.0,
+      "counts_equal": true,
+      "seconds": 3.0399129689999995
+    },
+    {
+      "roster": 1,
+      "draw": 2,
+      "strategy": "random",
+      "supervised": 1800,
+      "eval_centers": 41498,
+      "disagreements": 0,
+      "agreement": 1.0,
+      "counts_equal": true,
+      "seconds": 2.9447427389999916
+    },
+    {
+      "roster": 1,
+      "draw": 3,
+      "strategy": "add_people",
+      "supervised": 1800,
+      "eval_centers": 41498,
+      "disagreements": 0,
+      "agreement": 1.0,
+      "counts_equal": true,
+      "seconds": 2.7783834130000002
+    },
+    {
+      "roster": 1,
+      "draw": 3,
+      "strategy": "random",
+      "supervised": 1800,
+      "eval_centers": 41498,
+      "disagreements": 0,
+      "agreement": 1.0,
+      "counts_equal": true,
+      "seconds": 2.5415660570000114
+    }
+  ]
+}
