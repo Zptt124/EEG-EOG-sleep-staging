@@ -23,6 +23,12 @@ Sleep-EDF 开发复验完成 26 份可配对名单、130 次配对抽块和 390 
 
 [窗口规则](results/protocol.json) 保存规则和文件散列，[可用名单](results/paired_rosters.csv) 给出原名单号和退出原因。[候选块](results/candidate_blocks.csv) 的坐标为 `record_id`、`first_epoch`、`last_epoch`，边界含首尾，另有名单、受试者、分配方式和时段字段。使用 `paired_roster=1` 的候选及[共同起点](results/anchor_blocks.csv)。[冻结选块](results/selected_blocks.csv) 给出每名单五次追加抽块。
 
+## 四组抽到的睡眠阶段
+
+两种窗口均使用共同的 26 份名单和每名单 5 次抽块。按每次尝试标注的 600 段计算 W、N1、N2、N3、REM 和无法评分段的比例。工作簿收录 8 行汇总和 1,040 行逐次明细，可按窗口、名单号和抽块序号与 D 的评分归档对接。随机组选块来自 D 分支，关灯窗口的补提标签来自对应 Release。[阶段构成工作簿](results/stage_composition.xlsx) · [D 分支抽块清单](https://github.com/Zptt124/EEG-EOG-sleep-staging/tree/7df91959fd589746574e8ebc2fa170a47f2238dd/experiment4/week4/random_arm_w3) · [D 补提标签与拟合归档](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/d-random-arm-v01-20261128)
+
+换用关灯窗口后，新人组相对原人原夜组的 N2 占比差从 +1.19 扩大到 +4.54 个百分点，REM 从 +0.68 变为 −3.15 个百分点。新人组相对混合随机组的 W 占比差从 −6.09 收窄到 −2.63 个百分点，N2 从 +4.13 收窄到 +2.86 个百分点，REM 从 +1.82 变为 −1.28 个百分点。
+
 ## 复算
 
 从仓库根目录运行下列命令，使用 Python 3.11、NumPy、PyTorch 和 scikit-learn。复算校验锁定文件、历史混淆计数、逐次得分和两种口径的配对区间。完整输出见[汇总](results/summary.json)、[逐拟合评分](results/scores.csv)、[逐次配对差](results/paired_deltas.csv)和[混淆计数](results/paired_confusions.npz)。

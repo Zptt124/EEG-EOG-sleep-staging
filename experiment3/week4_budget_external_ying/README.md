@@ -4,6 +4,10 @@
 
 主比较「新人新夜 − 原人原夜」为 **+1.79 个 Macro-F1 百分点**，95% 配对区间为 **[+0.58, +3.07]**。4 折均值同向，32 份名单中 24 份同向。按外部预设规则，点估计至少 +1、区间下限大于 0、至少 3/4 折方向为正，结果达到推进门槛。区间仍包含小于 +1 的效应。完整三组比较见 [并列表](../week3_budget_replication_20261128/README.md)。
 
+## 窗口与候选块
+
+Ying 以与专家标注对齐后的记录长度为基准，将每晚等分为三个时段，并按块中点归入相应时段。抽样前，只保留块内 60 个连续的 30 秒片段全部可评分的候选块。**+1.79 个 Macro-F1 百分点**支持在这一筛选条件下「新人新夜优于原人原夜」。关灯窗口下「新人是否优于混合随机」应依据实验 D 的直接比较。[对齐代码](extract.py#L47-L73) · [抽块代码](confirm.py#L47-L70) · [实验 D 关灯窗口对照](https://github.com/Zptt124/EEG-EOG-sleep-staging/tree/7df91959fd589746574e8ebc2fa170a47f2238dd/experiment4/week4/random_arm_w3)
+
 ## 结果与复算
 
 归档含 [冻结协议](results/protocol.json)、[配对块](results/blocks.csv)、[输入指纹](results/data_lock.json)、[汇总](results/summary.json) 以及各折按评估者汇总的混淆计数。两份协议快照保留对齐和训练资格核查前的版本。运行下列命令复算两个队列的点估计、区间与判读，使用 Python 3.11、NumPy、PyTorch、scikit-learn 即可。
