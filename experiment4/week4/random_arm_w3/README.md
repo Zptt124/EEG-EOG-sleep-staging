@@ -61,3 +61,5 @@
 | `04_paired_analysis.py` | 配对差、区间、逐名单结果、覆盖统计 → `analysis_*/` |
 
 日志：`week4/logs/51–56`。
+
+`fits_*/*.npz` 和 `supplement_lights_off/*.npz` 不进 git（仓库忽略 .npz），放在 Release [`d-random-arm-v01-20261128`](https://github.com/Zptt124/EEG-EOG-sleep-staging/releases/tag/d-random-arm-v01-20261128)，SHA-256 记录在 `registry/artifact_index_D.csv`。
